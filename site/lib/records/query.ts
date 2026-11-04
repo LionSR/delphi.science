@@ -129,9 +129,12 @@ function date(s: string, end: boolean): string | null {
 }
 
 // The rules of taxonomy.py (is_code, division_of), read from the JSON its build writes.
-const divisionOf = (c: string) =>
+export const divisionOf = (c: string) =>
 	taxonomy.divisions.find((d) => d.prefixes.some((p) => c === p || c.startsWith(p + '.') || c.startsWith(p + '-')))?.key ?? 'other';
 const isSubjectCode = (c: string) => /^[a-z]+(?:-[a-z]+)?(?:\.[A-Za-z-]+)?$/.test(c) && (c in taxonomy.names || divisionOf(c) !== 'other');
+
+// The fields an unknown one is told to use instead.
+const FIELDS = [...Object.keys(TEXT).filter(Boolean), ...Object.keys(EXACT), 'cat', 'domain', 'is', 'published'].sort();
 
 class Compiler {
 	params: unknown[] = [];
@@ -180,8 +183,7 @@ class Compiler {
 			const conds = [lo && `r.published >= ${this.p(lo)}::date`, hi && `r.published <= ${this.p(hi)}::date`].filter(Boolean);
 			return `(${conds.join(' AND ') || 'true'})`;
 		}
-		const fields = [...new Set([...Object.keys(TEXT).filter(Boolean), ...Object.keys(EXACT), 'cat', 'domain', 'is', 'published'])].sort();
-		throw new QueryError(`unknown field ${f}:`, `Use one of: ${fields.map((x) => x + ':').join(', ')}.`);
+		throw new QueryError(`unknown field ${f}:`, `Use one of: ${FIELDS.map((x) => x + ':').join(', ')}.`);
 	}
 }
 
@@ -204,18 +206,20 @@ function decode(cursor?: string | null): { offset: number; total?: number } {
 	throw new QueryError('the cursor is not valid', 'Pass next_cursor from the previous reply unchanged.');
 }
 
+/** s cut to at most n characters at a word boundary, with an ellipsis if cut. */
+export const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…');
+
 export function compact(rec: Record<string, unknown>) {
 	const out: Record<string, unknown> = {};
 	for (const k of COMPACT) {
 		const v = rec[k];
 		if (v !== undefined && v !== null && v !== '' && v !== false && !(Array.isArray(v) && v.length === 0)) out[k] = v;
 	}
-	const s = typeof rec.summary === 'string' ? rec.summary : '';
-	if (s) out.summary = s.length <= 240 ? s : s.slice(0, 239).replace(/\s+\S*$/, '') + '…';
+	if (typeof rec.summary === 'string' && rec.summary) out.summary = truncate(rec.summary, 240);
 	return out;
 }
 
-export interface SearchOptions {
+interface SearchOptions {
 	limit?: number;
 	cursor?: string | null;
 	sort?: string;
@@ -331,3 +335,7 @@ export async function get(db: Db, id: string) {
 		`SELECT ${SERVED} AS record FROM open_index.records r WHERE r.id = $1`, [id])).rows;
 	return rows[0]?.record ?? null;
 }
+
+/** How many records each source has, most first. */
+export const sourceCounts = async (d: Db) => (await d.query<{ source: string; n: number }>(
+	'SELECT source, count(*)::int AS n FROM open_index.records GROUP BY source ORDER BY n DESC')).rows;

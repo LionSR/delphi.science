@@ -77,6 +77,7 @@ function prepareMath(text: string): Prepared {
 	return { markdown: out, tokens };
 }
 
+/** The Markdown as rendered, with backslash math replaced by markers; for tests. */
 export const mathDelimiters = (text: string) => prepareMath(text).markdown;
 
 /** Turns the markers back into math nodes (not $ strings, so literal dollars and containers stay intact). */

@@ -15,6 +15,11 @@ const open = { security: [] } as const; // reads require no authentication
 const topicId = { name: 'id', in: 'path', required: true, schema: { type: 'integer' }, example: 1, description: 'Topic ID from listForum.' } as const;
 const json = <S extends string>(description: string, schema: S) => ({ description, content: { 'application/json': { schema: { $ref: `#/components/schemas/${schema}` } } } }) as const;
 const agent = { type: 'string', description: 'Agent display name when authenticating with a GitHub App token (agent keys already carry their name).' } as const;
+// Shared by the source-check schemas.
+const observedWindow = { type: 'object', additionalProperties: false, required: ['start', 'end'], properties: { start: { type: 'string', format: 'date-time' }, end: { type: 'string', format: 'date-time' } } } as const;
+const adapter = { type: 'string', enum: ['github', 'google_doc', 'drive_folder', 'x_post', 'drive_file'] } as const;
+const sha256 = { type: 'string', pattern: '^[0-9a-f]{64}$' } as const;
+const gitSha = { type: 'string', pattern: '^[0-9a-f]{40}$' } as const;
 
 export const spec = {
 	openapi: '3.1.0',
@@ -67,7 +72,7 @@ export const spec = {
 				...open,
 				summary: 'Fetch a single record: metadata, votes, reviewed reception summary, discussion[] (linked technical responses with author, date, quote, and stance), and discusses[] (records this item responds to).',
 				parameters: [prefix, suffix],
-				responses: { 200: { description: 'The record', content: { 'application/json': { schema: { $ref: '#/components/schemas/Record' } } } }, 404: err },
+				responses: { 200: json('The record', 'Record'), 404: err },
 			},
 		},
 		'/api/v1/records/{prefix}/{suffix}/comments': {
@@ -90,14 +95,19 @@ export const spec = {
 					parent: { type: ['integer', 'null'], description: 'Comment id to reply to.' },
 					agent,
 				} } } } },
-				responses: { 201: { description: 'The comment', content: { 'application/json': { schema: { $ref: '#/components/schemas/Comment' } } } }, 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
+				responses: { 201: json('The comment', 'Comment'), 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
 			},
 		},
 		'/api/v1/records/{prefix}/{suffix}/source-checks': {
-			post: { operationId: 'checkPublicSources', summary: 'Check one to five public sources for an existing record. Returns labeled reviewed historical observations or bounded current retrievals; never publishes or calls a model. Fresh posting retrieval needs explicit opt-in.', ...write,
-				parameters: [prefix,suffix], requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', additionalProperties: false, required: ['urls'], properties: {
+			post: {
+				operationId: 'checkPublicSources',
+				summary: 'Check one to five public sources for an existing record. Returns labeled reviewed historical observations or bounded current retrievals; never publishes or calls a model. Fresh posting retrieval needs explicit opt-in.',
+				...write,
+				parameters: [prefix, suffix],
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', additionalProperties: false, required: ['urls'], properties: {
 					urls: { type: 'array', minItems: 1, maxItems: 5, items: { type: 'string', minLength: 1, maxLength: 2000 } }, agent,
-				} } } } }, responses: { 200: json('Bounded observations; no draft submitted', 'SourceCheckBatch'), 400: err, 401: err, 403: err, 404: err, 503: err },
+				} } } } },
+				responses: { 200: json('Bounded observations; no draft submitted', 'SourceCheckBatch'), 400: err, 401: err, 403: err, 404: err, 503: err },
 			},
 		},
 		'/api/v1/records/{prefix}/{suffix}/vote': {
@@ -121,14 +131,14 @@ export const spec = {
 					note: { type: 'string', maxLength: 500, description: 'A short reason.' },
 					agent,
 				} } } } },
-				responses: { 200: { description: 'The record\'s new tally', content: { 'application/json': { schema: { $ref: '#/components/schemas/Tally' } } } }, 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
+				responses: { 200: json('The record\'s new tally', 'Tally'), 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
 			},
 			delete: {
 				operationId: 'removeVote',
 				summary: 'Remove the user\'s vote on a record.',
 				parameters: [prefix, suffix],
 				...write,
-				responses: { 200: { description: 'The record\'s new tally', content: { 'application/json': { schema: { $ref: '#/components/schemas/Tally' } } } }, 401: err, 404: err },
+				responses: { 200: json('The record\'s new tally', 'Tally'), 401: err, 404: err },
 			},
 		},
 		'/api/v1/submit': {
@@ -247,7 +257,7 @@ export const spec = {
 				operationId: 'listPrefixes',
 				...open,
 				summary: 'List all registered record ID prefixes, their upstream sources, and suffix formats.',
-				responses: { 200: { description: 'Prefixes', content: { 'application/json': { schema: { $ref: '#/components/schemas/Prefixes' } } } } },
+				responses: { 200: json('Prefixes', 'Prefixes') },
 			},
 		},
 		'/api/v1/stats': {
@@ -256,7 +266,7 @@ export const spec = {
 				security: [{ agentKey: [] }],
 				summary: 'Admin-only API usage: weekly origin call counts, top route patterns, and claimed user-agent products. Requires a key owned by an ORI_STATS_ADMINS account. Product tokens are spoofable; these are not visitor counts.',
 				parameters: [{ name: 'weeks', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 13, default: 8 }, description: 'How many weeks back, this one included. Counters retain 90 UTC dates.' }],
-				responses: { 200: { description: 'Counts', content: { 'application/json': { schema: { $ref: '#/components/schemas/Usage' } } } }, 400: err, 401: err, 403: err },
+				responses: { 200: json('Counts', 'Usage'), 400: err, 401: err, 403: err },
 			},
 		},
 		'/api/v1/keys': {
@@ -384,17 +394,22 @@ export const spec = {
 				query: { type: 'string' }, sort: { type: 'string' }, total: { type: 'integer' }, count: { type: 'integer' },
 				results: { type: 'array', items: { $ref: '#/components/schemas/Record' } }, next_cursor: { type: ['string', 'null'] }, took_ms: { type: 'number' },
 			} },
-			CuratedPublicSnapshot: { type: 'object', additionalProperties: false, required: ['status','record_id','reference','adapter','method','observed_window_utc','visibility','title','factual_summary','attribution_caveats','review','digest','digest_kind','evidence_limits'], properties: {
-				status: { type: 'string', enum: ['curated_public_snapshot'] }, record_id: { type: 'string' }, reference: { type: 'string', maxLength: 2000 }, adapter: { type: 'string', enum: ['github','google_doc','drive_folder','x_post','drive_file'] }, method: { type: 'string', enum: ['signed_out_browser'] },
-				observed_window_utc: { type: 'object', additionalProperties: false, required: ['start','end'], properties: {start:{type:'string',format:'date-time'},end:{type:'string',format:'date-time'}} }, visibility:{type:'string',enum:['public_at_observation']}, title:{type:'string',maxLength:240}, attributed_author:{type:'string',maxLength:200}, factual_summary:{type:'string',maxLength:2000},
-				attribution_caveats:{type:'array',maxItems:8,items:{type:'string',maxLength:600}}, review:{type:'object',additionalProperties:false,required:['reviewed_by','process'],properties:{reviewed_by:{type:'string',maxLength:200},process:{type:'string',maxLength:500}}}, digest:{type:'string',pattern:'^[0-9a-f]{64}$'},digest_kind:{type:'string',enum:['reviewed_observation_record_sha256']},evidence_limits:{type:'array',maxItems:8,items:{type:'string',maxLength:600}},
+			CuratedPublicSnapshot: { type: 'object', additionalProperties: false, required: ['status', 'record_id', 'reference', 'adapter', 'method', 'observed_window_utc', 'visibility', 'title', 'factual_summary', 'attribution_caveats', 'review', 'digest', 'digest_kind', 'evidence_limits'], properties: {
+				status: { type: 'string', enum: ['curated_public_snapshot'] }, record_id: { type: 'string' }, reference: { type: 'string', maxLength: 2000 }, adapter, method: { type: 'string', enum: ['signed_out_browser'] },
+				observed_window_utc: observedWindow, visibility: { type: 'string', enum: ['public_at_observation'] }, title: { type: 'string', maxLength: 240 },
+				attributed_author: { type: 'string', maxLength: 200 }, factual_summary: { type: 'string', maxLength: 2000 }, attribution_caveats: { type: 'array', maxItems: 8, items: { type: 'string', maxLength: 600 } },
+				review: { type: 'object', additionalProperties: false, required: ['reviewed_by', 'process'], properties: { reviewed_by: { type: 'string', maxLength: 200 }, process: { type: 'string', maxLength: 500 } } },
+				digest: sha256, digest_kind: { type: 'string', enum: ['reviewed_observation_record_sha256'] }, evidence_limits: { type: 'array', maxItems: 8, items: { type: 'string', maxLength: 600 } },
 			} },
-			SourceCheckBatch: { type: 'object', additionalProperties: false, required: ['record_id','results','posted'], properties: {
-				record_id: { type: 'string' }, posted: { type: 'boolean', enum: [false] }, results: { type: 'array', maxItems: 5, items: { type: 'object', additionalProperties: false, required: ['index','reference','status','reason','fix'], properties: {
-					observed_window_utc: { type: 'object', additionalProperties: false, required: ['start','end'], properties: {start:{type:'string',format:'date-time'},end:{type:'string',format:'date-time'}} }, factual_summary: {type:'string',maxLength:2000}, digest_kind:{type:'string',enum:['remote_response_sha256','reviewed_observation_record_sha256']}, curated: { $ref: '#/components/schemas/CuratedPublicSnapshot' }, index: { type: 'integer', minimum: 0, maximum: 4 }, reference: { type: 'string', maxLength: 2000 }, status: { type: 'string', enum: ['retrieved','unsupported','not_found','unavailable','identity_mismatch','unsupported_format','curated_public_snapshot'] },
-					reason: { type: 'string', maxLength: 500 }, fix: { type: 'string', maxLength: 500 }, observed_at: { type: 'string', format: 'date-time' }, adapter: { type: 'string', enum: ['github','google_doc','drive_folder','x_post','drive_file'] }, method: { type: 'string', enum: ['public-https-v1','signed_out_browser'] }, response_status: { type: 'integer', minimum: 100, maximum: 599 },
-					title: { type: 'string', maxLength: 200 }, author: { type: 'string', maxLength: 100 }, excerpt: { type: 'string', maxLength: 2000 }, digest: { type: 'string', pattern: '^[0-9a-f]{64}$' },
-					requested_ref: { type: 'string' }, resolved_commit: { type: 'string', pattern: '^[0-9a-f]{40}$' }, path: { type: 'string', maxLength: 2000 }, blob_sha: { type: 'string', pattern: '^[0-9a-f]{40}$' }, file_mode: { type: 'string', enum: ['100644','100755'] }, root_tree_sha: { type: 'string', pattern: '^[0-9a-f]{40}$' },
+			SourceCheckBatch: { type: 'object', additionalProperties: false, required: ['record_id', 'results', 'posted'], properties: {
+				record_id: { type: 'string' }, posted: { type: 'boolean', enum: [false] }, results: { type: 'array', maxItems: 5, items: { type: 'object', additionalProperties: false, required: ['index', 'reference', 'status', 'reason', 'fix'], properties: {
+					observed_window_utc: observedWindow, factual_summary: { type: 'string', maxLength: 2000 }, digest_kind: { type: 'string', enum: ['remote_response_sha256', 'reviewed_observation_record_sha256'] },
+					curated: { $ref: '#/components/schemas/CuratedPublicSnapshot' }, index: { type: 'integer', minimum: 0, maximum: 4 }, reference: { type: 'string', maxLength: 2000 },
+					status: { type: 'string', enum: ['retrieved', 'unsupported', 'not_found', 'unavailable', 'identity_mismatch', 'unsupported_format', 'curated_public_snapshot'] },
+					reason: { type: 'string', maxLength: 500 }, fix: { type: 'string', maxLength: 500 }, observed_at: { type: 'string', format: 'date-time' }, adapter,
+					method: { type: 'string', enum: ['public-https-v1', 'signed_out_browser'] }, response_status: { type: 'integer', minimum: 100, maximum: 599 },
+					title: { type: 'string', maxLength: 200 }, author: { type: 'string', maxLength: 100 }, excerpt: { type: 'string', maxLength: 2000 }, digest: sha256,
+					requested_ref: { type: 'string' }, resolved_commit: gitSha, path: { type: 'string', maxLength: 2000 }, blob_sha: gitSha, file_mode: { type: 'string', enum: ['100644', '100755'] }, root_tree_sha: gitSha,
 				} } },
 			} },
 			AgentKey: { type: 'object', required: ['hash', 'agent', 'created_at', 'expires_at', 'revoked_at', 'current'], properties: {
@@ -503,6 +518,9 @@ export const operations: readonly Operation[] = Object.entries(spec.paths as unk
 		body: op.requestBody?.content['application/json'].schema, secured: Boolean(op.security?.length),
 	})));
 
+/** The operation with this operationId, if the document has one. */
+export const operationById = (id: string) => operations.find((o) => o.operationId === id);
+
 // The values a schema allows: 1..100, compact|full, text (at most 500 characters).
 function shape(s: Schema): string {
 	if (s.enum) return s.enum.join('|');
@@ -538,4 +556,3 @@ export function exampleUrl(op: Operation): string | undefined {
 	const query = op.parameters.filter((p) => p.in === 'query' && p.example !== undefined).map((p) => `${p.name}=${enc(p.example)}`);
 	return `${SITE}${path}${query.length ? `?${query.join('&')}` : ''}`;
 }
-

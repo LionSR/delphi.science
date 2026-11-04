@@ -3,7 +3,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js';
 import * as z from 'zod';
-import { spec } from './openapi.ts';
+import { operationById, spec } from './openapi.ts';
 import { compact, get, parse, search, SORTS } from '../records/query.ts';
 import { QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
@@ -26,8 +26,8 @@ const links = (rec: Record<string, unknown>) => (Array.isArray(rec.discussion) ?
 // The same date the responded sort uses.
 const when = (l: Record<string, unknown>) => String(l.date || l.added || '');
 const newest = (rec: Record<string, unknown>) => {
-	const l = links(rec).reduce<Record<string, unknown> | undefined>((a, l) => (!a || when(l) > when(a) ? l : a), undefined);
-	return l && response(l);
+	const latest = links(rec).reduce<Record<string, unknown> | undefined>((a, l) => (!a || when(l) > when(a) ? l : a), undefined);
+	return latest && response(latest);
 };
 
 /** A record with its site page in place of links. */
@@ -40,9 +40,8 @@ type Fields = 'compact' | 'full';
 type SearchArgs = { q?: string; sort?: (typeof SORTS)[number]; limit?: number; cursor?: string; fields?: Fields };
 
 // `query` is the old name for q, still accepted.
-async function searchRecords(db: Db, { q, sort, limit, cursor, fields, ...rest }: SearchArgs & { query?: unknown }) {
-	const query = q ?? (typeof rest.query === 'string' ? rest.query : '');
-	const res = await search(db, query, { sort, limit, cursor, fields });
+async function searchRecords(db: Db, { q, query, sort, limit, cursor, fields }: SearchArgs & { query?: unknown }) {
+	const res = await search(db, q ?? (typeof query === 'string' ? query : ''), { sort, limit, cursor, fields });
 	return { query: res.query, sort: res.sort, total: res.total, count: res.count, results: res.results.map(shown), next_cursor: res.next_cursor };
 }
 
@@ -74,11 +73,10 @@ const inline = (s: unknown): any => {
 	if (typeof ref === 'string') return inline(components[ref.replace('#/components/schemas/', '')]);
 	return Object.fromEntries(Object.entries(s).map(([k, v]) => [k, inline(v)]));
 };
-const operation = (id: string): Json =>
-	Object.values(spec.paths as Record<string, Record<string, Json>>).flatMap((p) => Object.values(p)).find((o) => o.operationId === id)!;
+const op = (id: string) => operationById(id)!;
 /** An operation's parameters as the properties of one object: each its schema, with the parameter's description. */
 const parameters = (id: string): Record<string, Json> =>
-	Object.fromEntries((operation(id).parameters as Json[]).map((p) => [p.name, { ...inline(p.schema), ...(p.description ? { description: p.description } : {}) }]));
+	Object.fromEntries(op(id).parameters.map((p) => [p.name, { ...inline(p.schema), ...(p.description ? { description: p.description } : {}) }]));
 
 /** A zod schema for validation that reports the original JSON Schema in tools/list. */
 function schema(json: Json, s: z.ZodType = z.fromJSONSchema(json as z.core.JSONSchema.JSONSchema)): z.ZodType {
@@ -150,12 +148,12 @@ const COVERS = `Covers records indexed in ${NAME} (AI-generated research release
 const TOOLS = {
 	search_records: {
 		title: 'Search records',
-		description: `${operation('searchRecords').summary} Returns one page of records with page URL and discussed response count; pass fields=full or call get_record for full discussion[] items. ${COVERS} An empty q lists records newest first.`,
+		description: `${op('searchRecords').summary} Returns one page of records with page URL and discussed response count; pass fields=full or call get_record for full discussion[] items. ${COVERS} An empty q lists records newest first.`,
 		inputSchema: schema(SEARCH_IN), outputSchema: schema(SEARCH_OUT),
 	},
 	get_record: {
 		title: 'Get a record',
-		description: `${operation('getRecord').summary} Accepts a record ID from search_records. Response quote fields contain short verbatim excerpts; open url for the full text. An empty discussion[] means no responses have been linked in the index yet.`,
+		description: `${op('getRecord').summary} Accepts a record ID from search_records. Response quote fields contain short verbatim excerpts; open url for the full text. An empty discussion[] means no responses have been linked in the index yet.`,
 		// Hand-built so a bad id gets a readable error.
 		inputSchema: schema(GET_IN, z.object({ id: z.string().min(3).max(300).regex(ID, 'a record id is <prefix>/<suffix>, e.g. arxiv/2610.20058; use an id search_records returns') })),
 		outputSchema: schema(GET_OUT),
@@ -167,7 +165,7 @@ const TOOLS = {
 	},
 };
 
-export function server(db: () => Promise<Db>): McpServer {
+function server(db: () => Promise<Db>): McpServer {
 	const s = new McpServer({ name: 'open-research-index', title: NAME, version: '1.0.0', websiteUrl: SITE }, { instructions: INSTRUCTIONS });
 	const register = <A>(name: keyof typeof TOOLS, work: (db: Db, args: A) => Promise<Record<string, unknown>>) => {
 		const { inputSchema, ...t } = TOOLS[name];

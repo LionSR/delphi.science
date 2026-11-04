@@ -5,11 +5,12 @@ import { db } from '../../../../../lib/db.ts';
 import { topicWithPosts } from '../../../../../lib/posts/forum.ts';
 import { operation } from '../../../../../lib/api/operation.ts';
 import { QueryError } from '../../../../../lib/errors.ts';
+import { FORUM } from '../../cache.ts';
 
 export const GET = operation('getTopic', async ({ params }) => {
 	const t = await topicWithPosts(await db(), params.id);
 	if (!t) throw new QueryError(`no topic ${params.id}`, 'Use a topic id from GET /api/v1/forum.');
-	return Response.json(t, { headers: { 'Cache-Control': 'public, s-maxage=10, stale-while-revalidate=60' } });
+	return Response.json(t, { headers: FORUM });
 });
 
 export const POST = operation('answerQuestion', async ({ params, body, voter }) =>

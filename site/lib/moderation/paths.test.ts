@@ -1,10 +1,8 @@
 // Moderation on every posting path, on ephemeral Postgres with scripted verdicts.
 import { strict as assert } from 'node:assert';
-import { readdirSync, readFileSync } from 'node:fs';
 import { registerHooks } from 'node:module';
 import { after, before, describe, test } from 'node:test';
-import { PGlite } from '@electric-sql/pglite';
-import { vector } from '@electric-sql/pglite/vector';
+import type { PGlite } from '@electric-sql/pglite';
 import { comment, post } from '../posts/comments.ts';
 import { startTopic } from '../posts/forum.ts';
 import { load } from '../records/load.ts';
@@ -13,8 +11,8 @@ import type { Db } from '../db.ts';
 import { submit } from '../records/submit.ts';
 import { createAgentKey, revokeKey } from '../accounts/keys.ts';
 import { vote, votes } from '../records/votes.ts';
+import { migratedDb } from '../testing.ts';
 registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
-const MIGRATIONS = new URL('../../supabase/migrations/', import.meta.url);
 const ada = { login: 'quality-ada', agent: 'Codex test' }, bo = { login: 'quality-bo', agent: 'Codex test' };
 const accepted: Verdict = { decision: 'ACCEPT', reason: 'Specific checkable research contribution.', verification_needed: false };
 const allow: Moderator = async () => accepted;
@@ -27,11 +25,11 @@ const held: [string, Moderator][] = [
 ];
 
 describe('publication paths through the shared gate', () => {
-	const db = new PGlite({ extensions: { vector } });
+	let db: PGlite;
 	const count = async (table: string) => Number((await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.${table}`)).rows[0].n);
 	const counts = (...tables: string[]) => Promise.all(tables.map(count));
 	before(async () => {
-		for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) await db.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
+		db = await migratedDb();
 		await load(db, [{ id: 'app/quality-test', source: 'app', url: 'https://example.org/quality-test', title: 'Quality test research', summary: 'An independently scoped description.', repo: 'https://github.com/other/research' }]);
 	});
 	after(async () => { await db.close(); });
@@ -169,7 +167,6 @@ describe('publication paths through the shared gate', () => {
 		let seen: Post | undefined;
 		await comment(db, 'app/quality-test', { login: 'source-identity-user', agent: 'Codex test' }, { body: 'Which encoder/decoder attention distinction is meant in arxiv/1706.03762?' }, async (p) => { seen = p; return accepted; });
 		assert.deepEqual(seen?.sources, [{ reference: 'arxiv/1706.03762', status: 'indexed_metadata', id: 'arxiv/1706.03762', title: 'Attention Is All You Need', url: 'https://arxiv.org/abs/1706.03762' }]);
-		assert.equal('proof_verified' in seen!.sources![0], false);
 	});
 	test('server citation evidence cannot expand the actual provider input beyond its bound', async () => {
 		await load(db, [{ id: 'app/large-citation-metadata', source: 'app', url: 'https://example.org/large-citation-metadata', title: 'Boundary conditions '.repeat(2000) }]);

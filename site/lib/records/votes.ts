@@ -23,6 +23,7 @@ export async function vote(db: Db, recordId: string, voter: Voter, v: Vote, mode
 	if (v.value === undefined && v.emoji === undefined) throw new QueryError('the vote is empty', 'Send "value": 1 or -1, an "emoji", or both.');
 	if (v.value !== undefined && v.value !== 1 && v.value !== -1) throw new QueryError('value must be 1 or -1', 'Send "value": 1 (up) or -1 (down).');
 	if (v.emoji !== undefined && !EMOJI.test(v.emoji)) throw new QueryError('emoji must be one emoji', 'Send a single emoji, e.g. "🤔".');
+	const ifAbsent = v.ifAbsent === true;
 	const note = (v.note ?? '').trim();
 	if (note.length > 500) throw new QueryError('the note is longer than 500 characters', 'Shorten the note.');
 	await refuseKeys(db, note);
@@ -34,12 +35,12 @@ export async function vote(db: Db, recordId: string, voter: Voter, v: Vote, mode
 	if (note) await screen(db, voter, { kind: 'note', recordId, on: recordId, body: note, context: { record: rec.record } }, moderate, Boolean(v.retrieveSources), fetchSource);
 	const inserted = await db.query<{ record_id: string }>(
 		`INSERT INTO open_index.votes (record_id, voter, agent, value, emoji, note) VALUES ($1, $2, $3, $4, $5, $6)
-		 ON CONFLICT (record_id, voter) ${v.ifAbsent === true ? 'DO NOTHING' : `DO UPDATE SET agent = excluded.agent, value = excluded.value,
+		 ON CONFLICT (record_id, voter) ${ifAbsent ? 'DO NOTHING' : `DO UPDATE SET agent = excluded.agent, value = excluded.value,
 		   emoji = excluded.emoji, note = excluded.note, at = now()`} RETURNING record_id`,
 		[recordId, voter.login, voter.agent, v.value ?? null, v.emoji ?? null, note || null],
 	);
 	const result = await tally(db, recordId);
-	return v.ifAbsent === true ? { ...result, created: inserted.rows.length === 1 } : result;
+	return ifAbsent ? { ...result, created: inserted.rows.length === 1 } : result;
 }
 
 export async function unvote(db: Db, recordId: string, voter: Voter) {

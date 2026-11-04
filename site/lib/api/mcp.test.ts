@@ -1,20 +1,17 @@
 // The MCP tools' schemas follow the OpenAPI document, and their real results fit them (objects closed).
 // Needs a build: python3 index.py build.
 import { strict as assert } from 'node:assert';
-import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { before, describe, test } from 'node:test';
-import { PGlite } from '@electric-sql/pglite';
-import { vector } from '@electric-sql/pglite/vector';
+import type { PGlite } from '@electric-sql/pglite';
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { load, type Item } from '../records/load.ts';
 import { handle } from './mcp.ts';
-import { spec } from './openapi.ts';
+import { operationById, spec } from './openapi.ts';
 import { closed } from './schema.ts';
 import type { Db } from '../db.ts';
-
-const MIGRATIONS = new URL('../../supabase/migrations/', import.meta.url);
-const INDEX = new URL('../../../dist/index.json', import.meta.url);
+import { BUILD, migratedDb } from '../testing.ts';
 
 type Json = Record<string, any>;
 type Tool = { name: string; description: string; inputSchema: Json; outputSchema: Json };
@@ -32,7 +29,7 @@ const components = spec.components.schemas as Record<string, Json>;
 const inline = (s: unknown): any => Array.isArray(s) ? s.map(inline) : !s || typeof s !== 'object' ? s
 	: typeof (s as Json).$ref === 'string' ? inline(components[(s as Json).$ref.split('/').pop()])
 		: Object.fromEntries(Object.entries(s).map(([k, v]) => [k, inline(v)]));
-const operation = (id: string): Json => Object.values(spec.paths as Record<string, Record<string, Json>>).flatMap(Object.values).find((o) => o.operationId === id)!;
+const operation = (id: string) => operationById(id)!;
 const param = (p: Json) => ({ ...p.schema, ...(p.description ? { description: p.description } : {}) });
 const without = (o: Json, ...keys: string[]) => Object.fromEntries(Object.entries(o).filter(([k]) => !keys.includes(k)));
 
@@ -47,7 +44,7 @@ const problems = (schema: Json, data: unknown) => {
 describe('the MCP tools follow the OpenAPI document', () => {
 	test('search_records takes searchRecords\' query parameters, but format', async () => {
 		const { search_records: t } = await listTools();
-		const params = (operation('searchRecords').parameters as Json[]).filter((p) => p.name !== 'format');
+		const params = operation('searchRecords').parameters.filter((p) => p.name !== 'format');
 		assert.deepEqual(Object.keys(t.inputSchema.properties).sort(), params.map((p) => p.name).sort());
 		// The same type, enum, limits, default and description, length caps included.
 		for (const p of params) assert.deepEqual(t.inputSchema.properties[p.name], param(p), p.name);
@@ -64,7 +61,7 @@ describe('the MCP tools follow the OpenAPI document', () => {
 	test('get_record takes getRecord\'s path parameters as one id', async () => {
 		const { get_record: t } = await listTools();
 		assert.deepEqual(t.inputSchema.required, ['id']);
-		for (const p of operation('getRecord').parameters as Json[]) assert.ok(t.inputSchema.properties.id.description.includes(p.description), p.name);
+		for (const p of operation('getRecord').parameters) assert.ok(t.inputSchema.properties.id.description.includes(p.description), p.name);
 		assert.ok(t.description.startsWith(operation('getRecord').summary));
 	});
 
@@ -86,14 +83,14 @@ describe('the MCP tools follow the OpenAPI document', () => {
 	});
 });
 
-describe('what the tools return fits their output schemas, closed', { skip: !existsSync(INDEX) && 'build the index first' }, () => {
-	const pg = new PGlite({ extensions: { vector } });
+describe('what the tools return fits their output schemas, closed', { skip: !existsSync(BUILD) && 'build the index first' }, () => {
+	let pg: PGlite;
 	let tools: Record<string, Tool> = {};
 	let discussed = '';
 	before(async () => {
-		for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) await pg.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
+		pg = await migratedDb();
 		// Every discussed record and a few hundred others, as in openapi.test.ts.
-		const all: Item[] = JSON.parse(readFileSync(INDEX, 'utf8')).items;
+		const all: Item[] = JSON.parse(readFileSync(BUILD, 'utf8')).items;
 		const items = [...all.filter((i) => (i.discussion as unknown[] | undefined)?.length), ...all.filter((i) => !i.discussion).slice(0, 300)];
 		await load(pg, items);
 		discussed = items.find((i) => (i.discussion as unknown[]).length > 2)!.id as string;

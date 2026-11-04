@@ -4,8 +4,7 @@ import { strict as assert } from 'node:assert';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { registerHooks } from 'node:module';
 import { after, before, describe, test } from 'node:test';
-import { PGlite } from '@electric-sql/pglite';
-import { vector } from '@electric-sql/pglite/vector';
+import type { PGlite } from '@electric-sql/pglite';
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { load, type Item } from '../records/load.ts';
@@ -13,13 +12,12 @@ import { spec } from './openapi.ts';
 import { closed } from './schema.ts';
 import { approveDevice } from '../accounts/device.ts';
 import { createAgentKey } from '../accounts/keys.ts';
+import { BUILD, migratedDb } from '../testing.ts';
 
 // Next's bundler resolves next/server for the routes; plain Node needs the file named.
 registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
 
 const API = new URL('../../app/api/v1/', import.meta.url);
-const MIGRATIONS = new URL('../../supabase/migrations/', import.meta.url);
-const INDEX = new URL('../../../dist/index.json', import.meta.url);
 const UNDOCUMENTED = ['/api/v1', '/api/v1/openapi.json']; // the API's own guides, not operations
 const METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'];
 
@@ -35,21 +33,14 @@ function routes(dir = API, at = '/api/v1'): [string, URL][] {
 	});
 }
 
-
 describe('the OpenAPI document', () => {
-	test('documents every API route with its methods, and nothing else', async () => {
+	test('documents every API route and method and nothing else, each served by operation() under its id and usage name from the document', async () => {
 		const found = routes().filter(([p]) => !UNDOCUMENTED.includes(p));
 		assert.deepEqual(found.map(([p]) => p).sort(), Object.keys(paths).sort());
 		for (const [p, file] of found) {
-			const exported = Object.keys(await import(file.href)).filter((m) => METHODS.includes(m)).sort();
-			assert.deepEqual(exported, Object.keys(paths[p]).map((m) => m.toUpperCase()).sort(), p);
-		}
-	});
-
-	test('every operation is served by operation(), which takes its name, checks and usage count from the document', async () => {
-		for (const [p, file] of routes().filter(([p]) => !UNDOCUMENTED.includes(p))) {
-			assert.doesNotMatch(readFileSync(file, 'utf8'), /\bcounted\(/, `${p} counts itself instead of through operation()`);
 			const mod = await import(file.href);
+			assert.deepEqual(Object.keys(mod).filter((m) => METHODS.includes(m)).sort(), Object.keys(paths[p]).map((m) => m.toUpperCase()).sort(), p);
+			assert.doesNotMatch(readFileSync(file, 'utf8'), /\bcounted\(/, `${p} counts itself instead of through operation()`);
 			for (const [m, op] of Object.entries(paths[p] as unknown as Record<string, { operationId: string }>)) {
 				const handler = mod[m.toUpperCase()] as { operationId?: string; endpoint?: string };
 				assert.equal(handler.operationId, op.operationId, `${m} ${p}`);
@@ -75,17 +66,19 @@ describe('the OpenAPI document', () => {
 	});
 });
 
-describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index first' }, () => {
-	const pg = new PGlite({ extensions: { vector } });
+describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index first' }, () => {
+	let pg: PGlite;
 	const ajv = addFormats(new Ajv2020({ strict: false, allErrors: true }));
 	ajv.addSchema({ $id: 'spec', components: closed(spec.components) });
 	const seen = new Set<string>();
 	let key = '';
-	const savedAdmins = process.env.ORI_STATS_ADMINS;
-	after(() => { if (savedAdmins === undefined) delete process.env.ORI_STATS_ADMINS; else process.env.ORI_STATS_ADMINS = savedAdmins; });
-	let discussed = '';
-	const priorFetch = globalThis.fetch, priorKey = process.env.DEEPSEEK_API_KEY;
+	let discussed = '', record = ''; // a record with several responses, and its path under /api/v1/records
 	let moderationMode: 'accept' | 'reject' | 'review' | 'unavailable' = 'accept';
+	const priorFetch = globalThis.fetch, priorEnv = { ORI_STATS_ADMINS: process.env.ORI_STATS_ADMINS, DEEPSEEK_API_KEY: process.env.DEEPSEEK_API_KEY };
+	after(() => {
+		globalThis.fetch = priorFetch;
+		for (const [name, value] of Object.entries(priorEnv)) if (value === undefined) delete process.env[name]; else process.env[name] = value;
+	});
 
 	before(async () => {
 		// Fake the moderation model's API.
@@ -98,12 +91,14 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 				: moderationMode === 'review' ? { decision: 'REVIEW_NEEDED', verification_needed: true, reason: 'A source needs independent checking.', fix: 'Supply a verifiable source or independent argument.' }
 				: { decision: 'ACCEPT', verification_needed: false, reason: 'Private schema fixture.', fix: '' }) } }] });
 		}) as typeof fetch;
-		for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) await pg.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
+		pg = await migratedDb();
 		// Every discussed record and a few hundred others: enough for each field to appear, quick to load.
-		const all: Item[] = JSON.parse(readFileSync(INDEX, 'utf8')).items;
+		const all: Item[] = JSON.parse(readFileSync(BUILD, 'utf8')).items;
 		const items = [...all.filter((i) => (i.discussion as unknown[] | undefined)?.length), ...all.filter((i) => !i.discussion).slice(0, 300)];
 		await load(pg, items);
 		discussed = items.find((i) => (i.discussion as unknown[]).length > 2)!.id as string;
+		const [prefix, suffix] = discussed.split('/');
+		record = `/api/v1/records/${prefix}/${encodeURIComponent(suffix)}`;
 		// A stance on each kind of link and a reviewed reception, so those fields are served and checked too.
 		const rec = items.find((i) => i.id === discussed)!;
 		const links = (rec.discussion as { url: string }[]).map((d, n) => ({ ...d, stance: n ? 'confirms' : 'questions' }));
@@ -114,7 +109,6 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		key = await createAgentKey(pg, 'someone', 'Test agent');
 		process.env.ORI_STATS_ADMINS = 'someone';
 	});
-	after(() => { globalThis.fetch = priorFetch; if (priorKey === undefined) delete process.env.DEEPSEEK_API_KEY; else process.env.DEEPSEEK_API_KEY = priorKey; });
 
 	// Calls the route as Next does and checks the answer against the document's response for its status.
 	async function call(method: string, path: string, opts: { query?: string; body?: unknown; auth?: boolean | string; params?: Record<string, string>; headers?: Record<string,string> } = {}) {
@@ -160,24 +154,22 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	});
 
 	test('records, with stances and a reception, and an unknown id', async () => {
-		const [p, s] = discussed.split('/');
-		await call('GET', `/api/v1/records/${p}/${encodeURIComponent(s)}`);
+		await call('GET', record);
 		assert.equal((await call('GET', '/api/v1/records/nope/nothing')).status, 404);
 	});
 
 	test('comments and votes, read and written with an agent key', async () => {
-		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}`;
-		assert.equal((await call('POST', `${at}/comments`, { body: { body: 'A first reading.' } })).status, 401);
-		const c = JSON.parse((await call('POST', `${at}/comments`, { body: { body: 'A first reading.', review: true }, auth: true })).text);
-		await call('POST', `${at}/comments`, { body: { body: 'A reply.', parent: c.id }, auth: true });
-		assert.equal((await call('POST', `${at}/comments`, { body: { body: '' }, auth: true })).status, 400);
-		await call('GET', `${at}/comments`);
-		await call('POST', `${at}/vote`, { body: { value: 1, emoji: '🤔', note: 'Worth checking.' }, auth: true });
-		assert.equal((await call('POST', `${at}/vote`, { body: { value: 7 }, auth: true })).status, 400);
-		await call('GET', `${at}/vote`);
-		await call('DELETE', `${at}/vote`, { auth: true });
-		assert.equal((await call('DELETE', `${at}/vote`)).status, 401);
-		assert.equal((await call('POST', `${at}/vote`, { body: { value: 1 } })).status, 401);
+		assert.equal((await call('POST', `${record}/comments`, { body: { body: 'A first reading.' } })).status, 401);
+		const c = JSON.parse((await call('POST', `${record}/comments`, { body: { body: 'A first reading.', review: true }, auth: true })).text);
+		await call('POST', `${record}/comments`, { body: { body: 'A reply.', parent: c.id }, auth: true });
+		assert.equal((await call('POST', `${record}/comments`, { body: { body: '' }, auth: true })).status, 400);
+		await call('GET', `${record}/comments`);
+		await call('POST', `${record}/vote`, { body: { value: 1, emoji: '🤔', note: 'Worth checking.' }, auth: true });
+		assert.equal((await call('POST', `${record}/vote`, { body: { value: 7 }, auth: true })).status, 400);
+		await call('GET', `${record}/vote`);
+		await call('DELETE', `${record}/vote`, { auth: true });
+		assert.equal((await call('DELETE', `${record}/vote`)).status, 401);
+		assert.equal((await call('POST', `${record}/vote`, { body: { value: 1 } })).status, 401);
 		for (const [method, path, body] of [['POST', 'comments', { body: 'Hello.' }], ['POST', 'vote', { value: 1 }], ['DELETE', 'vote', undefined]] as const) {
 			assert.equal((await call(method, `/api/v1/records/nope/nothing/${path}`, { body, auth: true })).status, 404, `${method} ${path}`);
 		}
@@ -204,7 +196,6 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	});
 
 	test('a request the document does not allow is a 400 that says what to send', async () => {
-		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}`;
 		const error = async (method: string, path: string, opts: Parameters<typeof call>[2]) => {
 			const r = await call(method, path, opts);
 			assert.equal(r.status, 400, `${method} ${path} ${opts?.query ?? JSON.stringify(opts?.body)}`);
@@ -224,21 +215,21 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		assert.match((await error('POST', '/api/v1/keys/token', { body: {} })).message, /^the body needs "device_code"$/);
 		assert.match((await error('POST', '/api/v1/keys/device', { body: { agent: 5 } })).message, /^"agent" must be a string$/);
 		assert.equal((await error('POST', '/api/v1/keys/device', { body: ['Test agent'] })).code, 'bad_body');
-		assert.match((await error('POST', `${at}/comments`, { body: { body: 'x'.repeat(4001) }, auth: true })).message, /^"body" is longer than 4000 characters$/);
-		assert.match((await error('POST', `${at}/comments`, { body: { body: 'Hi.', review: 'yes' }, auth: true })).message, /^"review" must be a boolean$/);
-		assert.deepEqual(await error('POST', `${at}/vote`, { body: { note: 'Why not.' }, auth: true }),
+		assert.match((await error('POST', `${record}/comments`, { body: { body: 'x'.repeat(4001) }, auth: true })).message, /^"body" is longer than 4000 characters$/);
+		assert.match((await error('POST', `${record}/comments`, { body: { body: 'Hi.', review: 'yes' }, auth: true })).message, /^"review" must be a boolean$/);
+		assert.deepEqual(await error('POST', `${record}/vote`, { body: { note: 'Why not.' }, auth: true }),
 			{ code: 'bad_request', message: 'the body needs "value" or "emoji"', fix: 'Send value, emoji, or both.' });
-		assert.match((await error('POST', `${at}/vote`, { body: { value: 1, note: 'x'.repeat(501) }, auth: true })).message, /^"note" is longer than 500 characters$/);
+		assert.match((await error('POST', `${record}/vote`, { body: { value: 1, note: 'x'.repeat(501) }, auth: true })).message, /^"note" is longer than 500 characters$/);
 		// The domain's own checks still answer after the document's.
 		assert.match((await error('POST', '/api/v1/keys/device', { body: { agent: '   ' } })).message, /needs a name/);
-		assert.match((await error('POST', `${at}/vote`, { body: { emoji: 'no' }, auth: true })).message, /one emoji/);
+		assert.match((await error('POST', `${record}/vote`, { body: { emoji: 'no' }, auth: true })).message, /one emoji/);
 	});
 
 	test('query strings are read as the declared types, with their defaults', async () => {
 		assert.equal(JSON.parse((await call('GET', '/api/v1/search', { query: 'limit=3' })).text).count, 3);
 		assert.equal(JSON.parse((await call('GET', '/api/v1/search')).text).count, 20);
 		assert.equal(JSON.parse((await call('GET', '/api/v1/stats', { auth: true })).text).weeks, 8);
-		assert.equal((await call('POST', `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}/comments`, { body: { body: 'A reply to nothing.', parent: null }, auth: true })).status, 201);
+		assert.equal((await call('POST', `${record}/comments`, { body: { body: 'A reply to nothing.', parent: null }, auth: true })).status, 201);
 	});
 
 	test('/api/v1 and /llms.txt list the operations from the document', async () => {
@@ -300,8 +291,7 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	});
 
 	test('a person\'s activity, by tab and page, for agents as for /u/<login>', async () => {
-		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}`;
-		await call('POST', `${at}/vote`, { body: { value: 1, emoji: '🤔' }, auth: true });
+		await call('POST', `${record}/vote`, { body: { value: 1, emoji: '🤔' }, auth: true });
 		const all = JSON.parse((await call('GET', '/api/v1/users/Someone', { query: 'limit=1' })).text);
 		assert.equal(all.login, 'someone');
 		assert.equal(all.posts.length, 1);
@@ -325,8 +315,7 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	});
 
 	test('posting feedback: every prose path documents revision, verification hold and service failure', async () => {
-		const t = JSON.parse((await call('POST', '/api/v1/forum', { body: { title: 'Which endpoint convention is used?', body: 'For an open chain, which terms remain after telescoping?'  }, auth: true })).text);
-		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}`;
+		const t = JSON.parse((await call('POST', '/api/v1/forum', { body: { title: 'Which endpoint convention is used?', body: 'For an open chain, which terms remain after telescoping?' }, auth: true })).text);
 		const normalFetch = globalThis.fetch;
 		globalThis.fetch = (async (url, init) => {
 			if (String(url).includes('id_list=2601.99999')) return new Response(`<feed xmlns="http://www.w3.org/2005/Atom"><entry><id>http://arxiv.org/abs/2601.99999v1</id><published>2026-01-01</published><title>Finite-chain boundary computations</title><summary>A reproducible scoped computation.</summary><author><name>Offline Author</name></author></entry></feed>`);
@@ -336,11 +325,11 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 			for (const mode of ['reject', 'review', 'unavailable'] as const) {
 				moderationMode = mode;
 				for (const [path, body] of [
-					[`${at}/comments`, { body: 'Which boundary conditions are assumed for the displayed calculation?'  }],
-					[`${at}/vote`, { value: 1, note: 'The endpoint terms depend on the boundary convention.'  }],
+					[`${record}/comments`, { body: 'Which boundary conditions are assumed for the displayed calculation?' }],
+					[`${record}/vote`, { value: 1, note: 'The endpoint terms depend on the boundary convention.' }],
 					['/api/v1/submit', { url: 'arXiv:2601.99999' }],
-					['/api/v1/forum', { title: 'How are the boundary terms normalized?', body: 'Which boundary conditions are assumed for the displayed calculation?'  }],
-					[`/api/v1/forum/${t.id}`, { body: 'Which boundary conditions are assumed for the displayed calculation?'  }],
+					['/api/v1/forum', { title: 'How are the boundary terms normalized?', body: 'Which boundary conditions are assumed for the displayed calculation?' }],
+					[`/api/v1/forum/${t.id}`, { body: 'Which boundary conditions are assumed for the displayed calculation?' }],
 				] as const) {
 					const r = await call('POST', path, { body, auth: true });
 					assert.equal(r.status, mode === 'reject' ? 422 : mode === 'review' ? 409 : 503, path);
@@ -353,22 +342,26 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	});
 
 	test('public source checks document auth, same-origin, strict URL bodies and unavailable audit storage', async () => {
-		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}/source-checks`;
-		assert.equal((await call('POST', at, {body:{urls:['https://example.org/source']}})).status,401);
-		assert.equal((await call('POST', at, {auth:true,body:{urls:[]}})).status,400);
-		assert.equal((await call('POST','/api/v1/records/nope/nothing/source-checks',{auth:true,body:{urls:['https://example.org/source']}})).status,404);
-		assert.equal((await call('POST',at,{auth:true,body:{urls:['https://example.org/source']}})).status,200);
-		assert.equal((await call('POST',at,{auth:true,headers:{Origin:'https://another.example.org'},body:{urls:['https://example.org/source']}})).status,403);
-		const recordAt=at.replace('/source-checks','');
-		assert.equal((await call('POST',`${recordAt}/comments`,{auth:true,headers:{Origin:'https://another.example.org'},body:{body:'Which boundary convention is used?',retrieve_sources:true}})).status,403);
-		assert.equal((await call('POST',`${recordAt}/vote`,{auth:true,headers:{Origin:'https://another.example.org'},body:{value:1,note:'Which boundary convention is used?',retrieve_sources:true}})).status,403);
-		(globalThis as {openIndexDb?:Promise<unknown>}).openIndexDb=Promise.resolve({query:pg.query.bind(pg)});
-		try{assert.equal((await call('POST',at,{auth:true,body:{urls:['https://example.org/source']}})).status,503);}
-		finally{(globalThis as {openIndexDb?:Promise<unknown>}).openIndexDb=Promise.resolve(pg);}
+		const at = `${record}/source-checks`, urls = ['https://example.org/source'], elsewhere = { Origin: 'https://another.example.org' };
+		assert.equal((await call('POST', at, { body: { urls } })).status, 401);
+		assert.equal((await call('POST', at, { auth: true, body: { urls: [] } })).status, 400);
+		assert.equal((await call('POST', '/api/v1/records/nope/nothing/source-checks', { auth: true, body: { urls } })).status, 404);
+		assert.equal((await call('POST', at, { auth: true, body: { urls } })).status, 200);
+		assert.equal((await call('POST', at, { auth: true, headers: elsewhere, body: { urls } })).status, 403);
+		assert.equal((await call('POST', `${record}/comments`, { auth: true, headers: elsewhere, body: { body: 'Which boundary convention is used?', retrieve_sources: true } })).status, 403);
+		assert.equal((await call('POST', `${record}/vote`, { auth: true, headers: elsewhere, body: { value: 1, note: 'Which boundary convention is used?', retrieve_sources: true } })).status, 403);
+		// A database without transactions cannot keep the audit trail.
+		const cache = globalThis as { openIndexDb?: Promise<unknown> };
+		cache.openIndexDb = Promise.resolve({ query: pg.query.bind(pg) });
+		try {
+			assert.equal((await call('POST', at, { auth: true, body: { urls } })).status, 503);
+		} finally {
+			cache.openIndexDb = Promise.resolve(pg);
+		}
 	});
 
 	test('post editing responses preserve the original through refusal and conflicts', async () => {
-		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}/comments`;
+		const at = `${record}/comments`;
 		const made = JSON.parse((await call('POST', at, { auth: true, body: { body: 'The finite chain retains its endpoint terms.' } })).text);
 		const p = JSON.parse((await call('GET', at)).text).find((p: { id: number }) => p.id === made.id);
 		const path = `/api/v1/posts/${p.id}`, body = { body: 'The corrected chain has periodic boundaries.', revision: p.revision };

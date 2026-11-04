@@ -5,12 +5,15 @@ import { QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
 import { refuseKeys, type Voter } from '../accounts/keys.ts';
 
-export type Topic = { id: number; title: string; voter: string; agent: string; at: string; last_at: string;
+type Topic = { id: number; title: string; voter: string; agent: string; at: string; last_at: string;
 	score: number; answers: number; accepted_id: number | null };
+
+/** A title as stored: trimmed, with each run of whitespace made one space. */
+export const topicTitle = (title: string) => (title ?? '').trim().replace(/\s+/g, ' ');
 
 /** Asks a question; its body is the first post. Returns the question in full. */
 export async function startTopic(db: Db, voter: Voter, t: { title: string; body: string }, moderate?: Moderator) {
-	const title = (t.title ?? '').trim().replace(/\s+/g, ' ');
+	const title = topicTitle(t.title);
 	if (!title) throw new QueryError('the topic needs a title', 'Send "title" and "body".');
 	if (title.length > 200) throw new QueryError('the title is longer than 200 characters', 'Shorten the title; put the rest in the body.');
 	if (!(t.body ?? '').trim()) throw new QueryError('the topic needs a body', 'Send "body": the question or what you want to discuss, with what is known and the records involved.');
@@ -22,7 +25,8 @@ export async function startTopic(db: Db, voter: Voter, t: { title: string; body:
 const TOPIC = `SELECT t.id::int, t.title, t.voter, t.agent, t.at, t.last_at, t.accepted_id::int, t.score, t.answers_count AS answers
 	FROM open_index.topics t`;
 
-// A cursor holds the last row's (last_at, id), or an offset into search results.
+// A page holds 1 to 100 rows. A cursor holds the last row's (last_at, id), or an offset into search results.
+const pageSize = (limit: number | undefined, fallback: number) => Math.max(1, Math.min(Math.trunc(limit ?? fallback), 100));
 const encode = (o: object) => Buffer.from(JSON.stringify(o)).toString('base64url');
 function decode(cursor?: string | null): { at?: string; id?: number; o?: number } {
 	if (!cursor) return {};
@@ -35,7 +39,7 @@ function decode(cursor?: string | null): { at?: string; id?: number; o?: number 
 
 /** One page of questions: the latest activity first, or with q, the best matches of the words in titles and posts. */
 export async function topics(db: Db, opts: { q?: string; cursor?: string | null; limit?: number } = {}) {
-	const limit = Math.max(1, Math.min(Math.trunc(opts.limit ?? 50), 100));
+	const limit = pageSize(opts.limit, 50);
 	const c = decode(opts.cursor);
 	const q = (opts.q ?? '').trim();
 	if (q) {
@@ -105,13 +109,13 @@ export async function accept(db: Db, topicId: number, postId: number, voter: Vot
 	return { topic: topicId, accepted_id: next };
 }
 
-export type Activity = { id: number; voter: string; agent: string; body: string; review: boolean; at: string;
+type Activity = { id: number; voter: string; agent: string; body: string; review: boolean; at: string;
 	record_id: string | null; topic_id: number | null; title: string };
 
 /** All posts with the title they were posted under: newest first, or with since (a post id), the later ones oldest first. */
 export async function activity(db: Db, opts: { since?: number; limit?: number } = {}) {
-	const limit = Math.max(1, Math.min(Math.trunc(opts.limit ?? 30), 100));
-	const since = opts.since !== undefined && Number.isSafeInteger(opts.since) ? opts.since : undefined;
+	const limit = pageSize(opts.limit, 30);
+	const since = Number.isSafeInteger(opts.since) ? opts.since : undefined;
 	const posts = (await db.query<Activity>(
 		`SELECT c.id::int, c.voter, c.agent, c.body, c.review, c.at, c.record_id, c.topic_id::int, coalesce(t.title, r.title) AS title
 		 FROM open_index.comments c LEFT JOIN open_index.topics t ON t.id = c.topic_id LEFT JOIN open_index.records r ON r.id = c.record_id

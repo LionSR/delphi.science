@@ -1,9 +1,8 @@
 // Search and votes on PGlite with the migrations. Needs a build: python3 index.py build.
 import { strict as assert } from 'node:assert';
-import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { before, describe, test } from 'node:test';
-import { PGlite } from '@electric-sql/pglite';
-import { vector } from '@electric-sql/pglite/vector';
+import type { PGlite } from '@electric-sql/pglite';
 import { compile, get, IS, parse, QUERY_FIELDS, search, SORT_HELP, SORTS } from './query.ts';
 import { QueryError } from '../errors.ts';
 import { load, type Item } from './load.ts';
@@ -13,13 +12,11 @@ import { comment as actualComment, comments } from '../posts/comments.ts';
 import { approveDevice, denyDevice, pendingDevice, redeemDevice, startDevice } from '../accounts/device.ts';
 import { handle as mcp } from '../api/mcp.ts';
 import { fileCount, MAX_URLS, sitemapFile, sitemapFiles } from './sitemap.ts';
+import { BUILD, migratedDb } from '../testing.ts';
 
 const yes = async () => ({ decision: 'ACCEPT' as const, reason: 'Test fixture only.', verification_needed: false });
 const comment: typeof actualComment = (db, id, voter, c, moderate = yes) => actualComment(db, id, voter, c, moderate);
 const vote: typeof actualVote = (db, id, voter, v, moderate = yes) => actualVote(db, id, voter, v, moderate);
-
-const MIGRATIONS = new URL('../../supabase/migrations/', import.meta.url);
-const INDEX = new URL('../../../dist/index.json', import.meta.url);
 
 describe('query syntax', () => {
 	test('parses arXiv-style operators', () => {
@@ -49,12 +46,12 @@ describe('query syntax', () => {
 	});
 });
 
-describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' }, () => {
-	const db = new PGlite({ extensions: { vector } });
+describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' }, () => {
+	let db: PGlite;
 	let items: Item[] = [];
 	before(async () => {
-		for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) await db.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
-		items = JSON.parse(readFileSync(INDEX, 'utf8')).items;
+		db = await migratedDb();
+		items = JSON.parse(readFileSync(BUILD, 'utf8')).items;
 		assert.equal(await load(db, items), items.length);
 	});
 	// Sets a record's links (record.discussion), as index.py discuss does; pair queries two palomar records.
@@ -128,8 +125,8 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		const own = items.find((it) => it.source === 'app')!;
 		const owner = String(own.repo).split('/')[3];
 		await assert.rejects(vote(db, own.id, { login: owner, agent: '' }, { value: 1 }), /own repository/);
-		const added = (await db.query<{ n: number }>("SELECT count(*)::int n FROM open_index.changes WHERE kind = 'updated'")).rows[0].n;
-		assert.equal(added, 0, 'votes are not content changes');
+		const updated = (await db.query<{ n: number }>("SELECT count(*)::int n FROM open_index.changes WHERE kind = 'updated'")).rows[0].n;
+		assert.equal(updated, 0, 'votes are not content changes');
 	});
 
 	test('posts and articles about a record count like upvotes and show as discussed', async () => {

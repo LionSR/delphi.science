@@ -6,28 +6,26 @@
 import { Ajv2020, type ErrorObject, type ValidateFunction } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { ApiError, counted, handle, voter } from './caller.ts';
-import { operations, spec, type Operation, type Parameter, type Schema } from './openapi.ts';
-import type { FromSchema } from './schema.ts';
+import { operationById, spec, type Operation, type Parameter, type Schema } from './openapi.ts';
+import type { FromSchema, Simplify } from './schema.ts';
 import type { Voter } from '../accounts/keys.ts';
 
 // ---- Types read from the document ----
 
 type Paths = typeof spec.paths;
 type Ops = { [P in keyof Paths]: { [M in keyof Paths[P]]: Paths[P][M] }[keyof Paths[P]] }[keyof Paths];
-export type OperationId = Ops extends { operationId: infer I } ? I : never;
+type OperationId = Ops extends { operationId: infer I } ? I : never;
 type Op<I> = Extract<Ops, { operationId: I }>;
-
-type Simplify<T> = { [K in keyof T]: T[K] } & {};
 
 type ParamsIn<O, In> = O extends { parameters: readonly (infer X)[] } ? Extract<X, { in: In }> : never;
 type HasValue<X> = X extends { required: true } ? true : X extends { schema: { default: unknown } } ? true : false;
 type ParamObject<X> = Simplify<{ [K in X as HasValue<K> extends true ? K extends { name: infer N extends string } ? N : never : never]: K extends { schema: infer S } ? FromSchema<S> : never }
 	& { [K in X as HasValue<K> extends true ? never : K extends { name: infer N extends string } ? N : never]?: K extends { schema: infer S } ? FromSchema<S> : never }>;
 type BodyOf<O> = O extends { requestBody: { content: { 'application/json': { schema: infer S } } } } ? FromSchema<S> : undefined;
-type VoterOf<O> = O extends { security: readonly [unknown, ...unknown[]] } ? Voter & { via: 'key' | 'github' } : undefined;
+type VoterOf<O> = O extends { security: readonly [unknown, ...unknown[]] } ? Voter : undefined;
 
 /** What a handler gets: the request's parameters and body, checked against the operation and typed from it. */
-export type Input<I extends OperationId> = {
+type Input<I extends OperationId> = {
 	params: ParamObject<ParamsIn<Op<I>, 'path'>>;
 	query: ParamObject<ParamsIn<Op<I>, 'query'>>;
 	body: BodyOf<Op<I>>;
@@ -48,6 +46,8 @@ const asObject = (ps: readonly Parameter[]): Schema => ({
 
 const list = (xs: readonly unknown[]) => xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} or ${xs.at(-1)}`;
 const article = (type: string) => /^[aeiou]/.test(type) ? `an ${type}` : `a ${type}`;
+// The types a schema takes, in words: "an integer", "a string or a null".
+const types = (s: Schema) => list([s.type ?? 'value'].flat().map(String).map(article));
 const range = (s: Schema) => s.minimum !== undefined && s.maximum !== undefined ? `from ${s.minimum} to ${s.maximum}`
 	: s.minimum !== undefined ? `at least ${s.minimum}` : s.maximum !== undefined ? `at most ${s.maximum}` : '';
 const badBody = () => new ApiError(400, 'bad_body', 'send a JSON object', 'Set Content-Type: application/json and send {...}.');
@@ -65,8 +65,7 @@ function problem(e: ErrorObject, where: 'path' | 'query' | 'body'): ApiError {
 		if (x.enum) return list(x.enum.map((v) => JSON.stringify(v)));
 		const length = x.maxLength !== undefined ? ` of ${x.minLength ? `${x.minLength} to ${x.maxLength}` : `at most ${x.maxLength}`} characters`
 			: x.minLength ? ` of at least ${x.minLength} characters` : '';
-		const types = list([x.type ?? 'value'].flat().map(String).map(article));
-		return `${types}${range(x) ? ` ${range(x)}` : ''}${length}${x.default !== undefined ? ` (default ${JSON.stringify(x.default)})` : ''}`;
+		return `${types(x)}${range(x) ? ` ${range(x)}` : ''}${length}${x.default !== undefined ? ` (default ${JSON.stringify(x.default)})` : ''}`;
 	};
 	const send = (f: string, x: Schema) => `Send ${name(f)}: ${takes(x)}.${about(x)}`;
 
@@ -83,11 +82,12 @@ function problem(e: ErrorObject, where: 'path' | 'query' | 'body'): ApiError {
 		// As the query parser words it: unknown sort "hot" / Use sort=relevance, sort=newest, …
 		return bad(`unknown ${field} ${JSON.stringify(e.data)}`, `Use ${(s.enum ?? []).map((v) => `${field}=${v}${v === s.default ? ' (default)' : ''}`).join(', ')}.`);
 	}
+	const inRange = () => `${name(field)} must be ${range(s)}`;
 	const messages: Record<string, () => string> = {
 		enum: () => `${name(field)} must be ${takes(s)}`,
-		type: () => `${name(field)} must be ${list([s.type ?? 'value'].flat().map(String).map(article))}`,
-		minimum: () => `${name(field)} must be ${range(s)}`,
-		maximum: () => `${name(field)} must be ${range(s)}`,
+		type: () => `${name(field)} must be ${types(s)}`,
+		minimum: inRange,
+		maximum: inRange,
 		minLength: () => (s.minLength === 1 ? `${name(field)} is empty` : `${name(field)} is shorter than ${s.minLength} characters`),
 		maxLength: () => `${name(field)} is longer than ${s.maxLength} characters`,
 	};
@@ -104,13 +104,12 @@ function check<T>(validate: ValidateFunction | undefined, data: T, where: 'path'
 
 /** The checks for one operation, compiled once. */
 function checks(op: Operation) {
-	const ps = (at: string) => op.parameters.filter((p) => p.in === at);
-	const compile = (ajv: Ajv2020, s: Schema) => ajv.compile(s as object);
+	const path = op.parameters.filter((p) => p.in === 'path'), query = op.parameters.filter((p) => p.in === 'query');
 	return {
-		path: ps('path').length ? compile(strings, asObject(ps('path'))) : undefined,
-		query: ps('query').length ? compile(strings, asObject(ps('query'))) : undefined,
-		names: ps('query').map((p) => p.name),
-		body: op.body ? compile(json, op.body) : undefined,
+		path: path.length ? strings.compile(asObject(path)) : undefined,
+		query: query.length ? strings.compile(asObject(query)) : undefined,
+		names: query.map((p) => p.name),
+		body: op.body ? json.compile(op.body) : undefined,
 	};
 }
 
@@ -122,7 +121,7 @@ type Ctx = { params?: Promise<Record<string, string>> };
  * {"error": {code, message, fix}} (lib/api/caller.ts handle).
  */
 export function operation<I extends OperationId>(id: I, run: (input: Input<I>) => Response | Promise<Response>) {
-	const op = operations.find((o) => o.operationId === id);
+	const op = operationById(id);
 	if (!op) throw new Error(`no operation ${id} in lib/api/openapi.ts`);
 	const endpoint = `${op.method} ${op.path}`;
 	const c = checks(op);

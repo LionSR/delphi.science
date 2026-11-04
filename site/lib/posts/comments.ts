@@ -1,7 +1,7 @@
 // Comments and reviews on records, and forum posts. Each post is moderated before it is stored; records it
 // names by id or URL become its mentions.
 import type { SourceRetriever } from '../moderation/source-checks.ts';
-import { screen, type Moderator } from '../moderation/moderate.ts';
+import { screen, type Moderator, type Post as ModeratedPost } from '../moderation/moderate.ts';
 import { QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
 import { refuseKeys, type Voter } from '../accounts/keys.ts';
@@ -10,21 +10,29 @@ const ID = /\b[a-z][a-z0-9-]*\/[^\s<>"'()[\]{},;/]+/g;
 const URL_ = /https?:\/\/[^\s<>"'()[\]{}]+/g;
 
 /** Where a post goes: the thread on a record, or a forum topic. */
-export type Place = { record: string } | { topic: number };
+type Place = { record: string } | { topic: number };
+type NewPost = { body: string; review?: boolean; parent?: number; retrieveSources?: boolean };
+
+/** Where moderation is told a post is, for new posts and edits alike. */
+export const moderationPlace = (recordId: string | null) => recordId ? { recordId, on: `the record ${recordId}` } : { on: 'a forum topic' };
+
+/** Trims a body and refuses one that is empty, over 4,000 characters or carrying an agent key. */
+async function checkBody(db: Db, text: string) {
+	const body = (text ?? '').trim();
+	if (!body) throw new QueryError('the comment is empty', 'Send "body" with the text.');
+	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
+	await refuseKeys(db, body);
+	return body;
+}
 
 /** Posts a comment (or a review) and links the records it mentions. Returns the comment with its mentions. */
-type Draft = { body: string; review?: boolean; parent?: number; retrieveSources?: boolean };
-
-export const comment = (db: Db, recordId: string, voter: Voter, c: Draft, moderate?: Moderator, fetchSource?: SourceRetriever) =>
+export const comment = (db: Db, recordId: string, voter: Voter, c: NewPost, moderate?: Moderator, fetchSource?: SourceRetriever) =>
 	post(db, { record: recordId }, voter, c, moderate, fetchSource);
 
 const firstBody = async (db: Db, sql: string, params: unknown[]) => (await db.query<{ body: string }>(sql, params)).rows[0]?.body;
 
-export async function post(db: Db, place: Place, voter: Voter, c: Draft, moderate?: Moderator, fetchSource?: SourceRetriever) {
-	const body = (c.body ?? '').trim();
-	if (!body) throw new QueryError('the comment is empty', 'Send "body" with the text.');
-	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
-	await refuseKeys(db, body);
+export async function post(db: Db, place: Place, voter: Voter, c: NewPost, moderate?: Moderator, fetchSource?: SourceRetriever) {
+	const body = await checkBody(db, c.body);
 	const onRecord = 'record' in place;
 	const [column, value] = onRecord ? ['record_id', place.record] : ['topic_id', place.topic];
 	const target = !onRecord && !Number.isSafeInteger(place.topic) ? undefined : (await db.query<{ title: string; posts: number; record?: unknown }>(
@@ -35,7 +43,7 @@ export async function post(db: Db, place: Place, voter: Voter, c: Draft, moderat
 		throw new QueryError(`no topic ${place.topic}`, 'Use a topic id from GET /api/v1/forum.');
 	}
 
-	const context: { record?: unknown; question?: string; parent?: string; previous?: string[] } = {};
+	const context: NonNullable<ModeratedPost['context']> = {};
 	if (onRecord) context.record = target.record;
 	else context.question = await firstBody(db, 'SELECT body FROM open_index.comments WHERE topic_id = $1 AND parent_id IS NULL ORDER BY id LIMIT 1', [place.topic]);
 	if (c.parent !== undefined) {
@@ -45,21 +53,15 @@ export async function post(db: Db, place: Place, voter: Voter, c: Draft, moderat
 	context.previous = (await db.query<{ body: string }>(`SELECT body FROM open_index.comments WHERE ${column} = $1 ORDER BY id DESC LIMIT 4`, [value])).rows.map((p) => p.body);
 
 	const kind = onRecord ? (c.review ? 'review' : 'comment') : c.parent !== undefined ? 'comment' : Number(target.posts) ? 'answer' : 'question';
-	await screen(db, voter, {
-		kind,
-		...(onRecord ? { recordId: place.record } : {}),
-		on: onRecord ? `the record ${place.record}` : 'a forum topic',
-		title: target.title, body, context,
-	}, moderate, Boolean(c.retrieveSources), fetchSource);
+	await screen(db, voter, { kind, ...moderationPlace(onRecord ? place.record : null), title: target.title, body, context },
+		moderate, Boolean(c.retrieveSources), fetchSource);
 	return storePost(db, place, voter, { ...c, body });
 }
 
 /** Moderates a question before its topic row exists. */
 export async function startQuestion(db: Db, voter: Voter, title: string, text: string, moderate?: Moderator) {
-	const body = text.trim();
-	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
-	await refuseKeys(db, body);
-	await screen(db, voter, { kind: 'question', on: 'a forum topic', title, body }, moderate);
+	const body = await checkBody(db, text);
+	await screen(db, voter, { kind: 'question', ...moderationPlace(null), title, body }, moderate);
 	const id = Number((await db.query<{ id: number }>('INSERT INTO open_index.topics (title, voter, agent) VALUES ($1, $2, $3) RETURNING id',
 		[title, voter.login, voter.agent])).rows[0].id);
 	try {
@@ -71,7 +73,7 @@ export async function startQuestion(db: Db, voter: Voter, title: string, text: s
 	return id;
 }
 
-async function storePost(db: Db, place: Place, voter: Voter, c: Draft) {
+async function storePost(db: Db, place: Place, voter: Voter, c: NewPost) {
 	const { body } = c;
 	const recordId = 'record' in place ? place.record : null;
 	const { rows } = await db.query<{ id: number; at: string }>(

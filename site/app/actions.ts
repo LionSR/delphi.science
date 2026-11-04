@@ -17,10 +17,9 @@ import { requireSourceCheckOrigin } from '../lib/moderation/source-check-origin.
 import { recordPath } from '../lib/view.ts';
 import { myVotes, unvote, vote } from '../lib/records/votes.ts';
 import { revokeAgentKey, revokeKey } from '../lib/accounts/keys.ts';
+import { signedIn } from './sign-in.ts';
 
 const KINDS: PostInput['kind'][] = ['question', 'answer', 'comment', 'record', 'submission'];
-
-const signedIn = async (back: string) => (await me()) ?? redirect(`/auth/github?next=${encodeURIComponent(back)}`);
 
 // Runs a form action and redirects back, with a QueryError's message as ?notice=.
 async function thenBack(back: string, act: () => Promise<unknown>) {

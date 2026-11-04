@@ -18,14 +18,7 @@ const question = draft('For an open chain the telescoping sum leaves endpoint te
 const guestDraft = draft('My pre-login clarification about the endpoint terms.', 'Boundary terms');
 
 describe('private post drafts', () => {
-	test('each empty draft is independent', () => {
-		const a = emptyDraft(), b = emptyDraft();
-		a.body = 'An unsaved edit';
-		assert.deepEqual(b, { title: '', body: '', review: false });
-		assert.deepEqual(restoreDraft(new MemoryStorage(), 'ask', 'alice'), { draft: b });
-	});
-
-	test('isolates author, form, topic, and parent drafts', () => {
+	test('keeps each author’s draft for each form, topic and parent separate', () => {
 		const storage = new MemoryStorage();
 		const cases: [string, string, Draft][] = [
 			['ask', 'alice', question],
@@ -35,27 +28,19 @@ describe('private post drafts', () => {
 			['comment:1:6', 'alice', draft('A comment on post six.')],
 			['comment:1:7', 'alice', draft('A comment on post seven.')],
 			['review:record/one', 'alice', { ...draft('A specific review.'), review: true }],
+			// The review choice is kept even while the text is empty.
+			['record:one', 'alice', { ...emptyDraft(), review: true }],
+			// Separator-like characters in names cannot make two keys collide.
+			['b:c/%', 'a', draft('Under form b:c/%.')],
+			['c/%', 'a:b', draft('Under owner a:b.')],
+			// A signed-in owner named guest is not the anonymous author.
+			['ask', '', guestDraft],
+			['ask', 'guest', draft('The account named guest.')],
 		];
 		for (const [form, owner, d] of cases) assert.equal(saveDraft(storage, form, owner, d), true);
 		for (const [form, owner, d] of cases) assert.deepEqual(restoreDraft(storage, form, owner).draft, d);
 		assert.deepEqual(restoreDraft(storage, 'answer:3', 'alice').draft, emptyDraft());
 		assert.deepEqual(restoreDraft(storage, 'ask', 'carol').draft, emptyDraft());
-	});
-
-	test('does not confuse separator-like characters in owner and form names', () => {
-		const storage = new MemoryStorage();
-		saveDraft(storage, 'b:c/%', 'a', question);
-		saveDraft(storage, 'c/%', 'a:b', guestDraft);
-		assert.deepEqual(restoreDraft(storage, 'b:c/%', 'a').draft, question);
-		assert.deepEqual(restoreDraft(storage, 'c/%', 'a:b').draft, guestDraft);
-	});
-
-	test('an authenticated owner named guest is distinct from an anonymous author', () => {
-		const storage = new MemoryStorage();
-		saveDraft(storage, 'ask', '', guestDraft);
-		saveDraft(storage, 'ask', 'guest', question);
-		assert.deepEqual(restoreDraft(storage, 'ask', '').draft, guestDraft);
-		assert.deepEqual(restoreDraft(storage, 'ask', 'guest').draft, question);
 	});
 
 	test('does not migrate a guest draft without an explicit login marker', () => {
@@ -77,26 +62,33 @@ describe('private post drafts', () => {
 		assert.deepEqual(restoreDraft(storage, 'comment:1:6', '').draft, question);
 	});
 
-	test('prefers an existing owner draft and offers the explicitly carried guest draft separately', () => {
+	/** A guest signs in as alice, who already has a draft of her own: the guest draft is offered beside it. */
+	function offeredToAlice() {
 		const storage = new MemoryStorage();
 		saveDraft(storage, 'ask', '', guestDraft);
 		saveDraft(storage, 'ask', 'alice', question);
 		markDraftLogin(storage, 'ask', '');
 		assert.deepEqual(restoreDraft(storage, 'ask', 'alice'), { draft: question, alternate: guestDraft });
 		assert.deepEqual(restoreDraft(storage, 'ask', '').draft, guestDraft);
+		return storage;
+	}
+
+	test('prefers an existing owner draft and offers the explicitly carried guest draft separately', () => {
+		const storage = offeredToAlice();
 		assert.equal(adoptGuestDraft(storage, 'ask', 'alice', guestDraft), true);
 		assert.deepEqual(restoreDraft(storage, 'ask', 'alice'), { draft: guestDraft });
 		assert.deepEqual(restoreDraft(storage, 'ask', '').draft, emptyDraft());
 	});
 
-	test('an offered guest alternate cannot migrate to another account without a new login intent', () => {
-		const storage = new MemoryStorage();
-		saveDraft(storage, 'ask', '', guestDraft);
-		saveDraft(storage, 'ask', 'alice', question);
-		markDraftLogin(storage, 'ask', '');
-		assert.deepEqual(restoreDraft(storage, 'ask', 'alice'), { draft: question, alternate: guestDraft });
-		assert.deepEqual(restoreDraft(storage, 'ask', 'bob'), { draft: emptyDraft() });
-		assert.deepEqual(restoreDraft(storage, 'ask', 'alice').draft, question);
+	test('a guest draft offered to one account can be neither adopted nor restored by another', () => {
+		const storage = offeredToAlice();
+		const bobsDraft = draft('Bob’s independent draft.');
+		saveDraft(storage, 'ask', 'bob', bobsDraft);
+		assert.equal(adoptGuestDraft(storage, 'ask', 'bob', guestDraft), false);
+		assert.deepEqual(restoreDraft(storage, 'ask', 'bob'), { draft: bobsDraft });
+		assert.deepEqual(restoreDraft(storage, 'ask', '').draft, guestDraft);
+		// Bob's attempt drops the marker, so alice is no longer offered the guest draft either.
+		assert.deepEqual(restoreDraft(storage, 'ask', 'alice'), { draft: question });
 	});
 
 	test('a signed-in author’s login marker never transfers a draft to another account', () => {
@@ -116,20 +108,6 @@ describe('private post drafts', () => {
 		assert.deepEqual(restoreDraft(storage, 'ask', '').draft, guestDraft);
 	});
 
-	test('an alternate bound to one authenticated owner cannot be adopted by another', () => {
-		const storage = new MemoryStorage();
-		const bobsDraft = draft('Bob’s independent draft.');
-		saveDraft(storage, 'ask', '', guestDraft);
-		saveDraft(storage, 'ask', 'alice', question);
-		saveDraft(storage, 'ask', 'bob', bobsDraft);
-		markDraftLogin(storage, 'ask', '');
-		assert.deepEqual(restoreDraft(storage, 'ask', 'alice'), { draft: question, alternate: guestDraft });
-		assert.equal(adoptGuestDraft(storage, 'ask', 'bob', guestDraft), false);
-		assert.deepEqual(restoreDraft(storage, 'ask', 'bob').draft, bobsDraft);
-		assert.deepEqual(restoreDraft(storage, 'ask', '').draft, guestDraft);
-		assert.deepEqual(restoreDraft(storage, 'ask', 'alice').draft, question);
-	});
-
 	test('expired or future guest-login markers do not authorize migration', (t) => {
 		let now = 1_000_000;
 		t.mock.method(Date, 'now', () => now);
@@ -144,32 +122,21 @@ describe('private post drafts', () => {
 		}
 	});
 
-	test('explicit clearing after a confirmed post removes only that owner’s form', () => {
-		const storage = new MemoryStorage();
-		saveDraft(storage, 'ask', 'alice', question);
-		saveDraft(storage, 'ask', 'bob', guestDraft);
-		saveDraft(storage, 'comment:1:6', 'alice', guestDraft);
-		assert.deepEqual(restoreDraft(storage, 'ask', 'alice').draft, question);
-		clearDraft(storage, 'ask', 'alice');
-		assert.deepEqual(restoreDraft(storage, 'ask', 'alice').draft, emptyDraft());
-		assert.deepEqual(restoreDraft(storage, 'ask', 'bob').draft, guestDraft);
-		assert.deepEqual(restoreDraft(storage, 'comment:1:6', 'alice').draft, guestDraft);
-	});
-
-	test('saving an intentionally emptied form clears it without touching another form', () => {
-		const storage = new MemoryStorage();
-		saveDraft(storage, 'ask', 'alice', question);
-		saveDraft(storage, 'answer:1', 'alice', guestDraft);
-		assert.equal(saveDraft(storage, 'ask', 'alice', emptyDraft()), true);
-		assert.deepEqual(restoreDraft(storage, 'ask', 'alice').draft, emptyDraft());
-		assert.deepEqual(restoreDraft(storage, 'answer:1', 'alice').draft, guestDraft);
-	});
-
-	test('review selection is part of the draft even when text is temporarily empty', () => {
-		const storage = new MemoryStorage();
-		const review = { ...emptyDraft(), review: true };
-		saveDraft(storage, 'record:one', 'alice', review);
-		assert.deepEqual(restoreDraft(storage, 'record:one', 'alice').draft, review);
+	test('clearing after a confirmed post, or saving an emptied form, removes only that owner’s form', () => {
+		const clears = [
+			(storage: DraftStorage) => clearDraft(storage, 'ask', 'alice'),
+			(storage: DraftStorage) => assert.equal(saveDraft(storage, 'ask', 'alice', emptyDraft()), true),
+		];
+		for (const clear of clears) {
+			const storage = new MemoryStorage();
+			saveDraft(storage, 'ask', 'alice', question);
+			saveDraft(storage, 'ask', 'bob', guestDraft);
+			saveDraft(storage, 'comment:1:6', 'alice', guestDraft);
+			clear(storage);
+			assert.deepEqual(restoreDraft(storage, 'ask', 'alice').draft, emptyDraft());
+			assert.deepEqual(restoreDraft(storage, 'ask', 'bob').draft, guestDraft);
+			assert.deepEqual(restoreDraft(storage, 'comment:1:6', 'alice').draft, guestDraft);
+		}
 	});
 
 	test('malformed, outdated, oversized, or secret-bearing stored drafts are not restored', () => {

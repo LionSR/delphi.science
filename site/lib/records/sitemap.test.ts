@@ -9,15 +9,10 @@ describe('sitemap', () => {
 		assert.ok(RECORDS_PER_FILE + PAGES.length <= MAX_URLS);
 		assert.deepEqual([fileCount(0), fileCount(RECORDS_PER_FILE), fileCount(RECORDS_PER_FILE + 1)], [1, 1, 2]);
 	});
-	test('the index lists each numbered file', () => {
-		const xml = sitemapIndex('https://x.org', 2);
-		assert.match(xml, /^<\?xml version="1.0" encoding="UTF-8"\?>\n<sitemapindex xmlns="http:\/\/www.sitemaps.org\/schemas\/sitemap\/0.9">/);
-		assert.deepEqual([...xml.matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => m[1]), ['https://x.org/sitemap/0.xml', 'https://x.org/sitemap/1.xml']);
-		assert.ok(xml.trimEnd().endsWith('</sitemapindex>'));
-	});
-	test('a file gives each URL its lastmod, and escapes the URL', () => {
-		const xml = urlset([{ loc: 'https://x.org' }, { loc: 'https://x.org/r/a/b?c=1&d=2', lastmod: '2026-10-25T00:00:00.000Z' }]);
-		assert.match(xml, /<url><loc>https:\/\/x.org<\/loc><\/url>/);
-		assert.match(xml, /<url><loc>https:\/\/x.org\/r\/a\/b\?c=1&amp;d=2<\/loc><lastmod>2026-10-25T00:00:00.000Z<\/lastmod><\/url>/);
+	test('the index lists each numbered file; a file gives each URL its lastmod, escaped', () => {
+		assert.match(sitemapIndex('https://x.org', 2),
+			/<sitemapindex [^>]*>\n<sitemap><loc>https:\/\/x.org\/sitemap\/0.xml<\/loc><\/sitemap>\n<sitemap><loc>https:\/\/x.org\/sitemap\/1.xml<\/loc><\/sitemap>\n<\/sitemapindex>\n$/);
+		assert.match(urlset([{ loc: 'https://x.org' }, { loc: 'https://x.org/r/a/b?c=1&d=2', lastmod: '2026-10-25T00:00:00.000Z' }]),
+			/<urlset [^>]*>\n<url><loc>https:\/\/x.org<\/loc><\/url>\n<url><loc>https:\/\/x.org\/r\/a\/b\?c=1&amp;d=2<\/loc><lastmod>2026-10-25T00:00:00.000Z<\/lastmod><\/url>\n<\/urlset>\n$/);
 	});
 });

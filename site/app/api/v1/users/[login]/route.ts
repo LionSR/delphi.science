@@ -8,8 +8,7 @@ import { profile, ProfileUnavailable } from '../../../../../lib/accounts/profile
 export const GET = operation('getUserActivity', async ({ params, query }) => {
 	try {
 		const d = await db();
-		const page = await profile(d, params.login, { tab: query.tab, cursor: query.cursor, limit: query.limit });
-		const { login, ...rest } = page;
+		const { login, ...rest } = await profile(d, params.login, { tab: query.tab, cursor: query.cursor, limit: query.limit });
 		return Response.json({ login, ...await publicName(d, login), ...rest });
 	} catch (e) {
 		if (e instanceof ProfileUnavailable) throw new ApiError(503, 'unavailable', e.message, e.fix);

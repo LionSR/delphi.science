@@ -22,16 +22,16 @@ export type ProfilePost = {
 	record_id?: string; topic_id?: number; parent?: number; permalink: string;
 };
 export type ProfileVote = { record_id: string; title: string; agent: string; value: 1 | -1 | null; emoji: string | null; note: string | null; at: string; permalink: string };
-export type ProfileActivity = { login: string; posts: ProfilePost[]; next_cursor: string | null };
-export type ProfileVotes = { login: string; votes: ProfileVote[]; next_cursor: string | null };
-export type ProfileCounts = Record<Exclude<Tab, 'all'>, number>;
+type ProfileActivity = { login: string; posts: ProfilePost[]; next_cursor: string | null };
+type ProfileVotes = { login: string; votes: ProfileVote[]; next_cursor: string | null };
+type ProfileCounts = Record<Exclude<Tab, 'all'>, number>;
 /** A profile page: the counts, then the tab's posts, or its votes on the votes tab. */
 export type Profile = { login: string; tab: Tab; counts: ProfileCounts; posts?: ProfilePost[]; votes?: ProfileVote[]; next_cursor: string | null };
 type Row = {
 	id: string; kind: PostKind; voter: string; agent: string; body: string; at: string | Date; title: string;
 	record_id: string | null; topic_id: string | null; parent: string | null;
 };
-type VoteRow = { record_id: string; title: string; agent: string; value: number | null; emoji: string | null; note: string | null; at: string | Date; at_key: string };
+type VoteRow = { record_id: string; title: string; agent: string; value: 1 | -1 | null; emoji: string | null; note: string | null; at: string | Date; at_key: string };
 
 const badLogin = () => new QueryError('Use a valid GitHub login.', 'Use 1–39 ASCII letters/digits or single internal hyphens; account paths and display names are not handles.');
 const badCursor = () => new QueryError('The public-activity cursor is invalid for this handle.', 'Pass this handle’s next_cursor unchanged, or start from its first page.');
@@ -66,27 +66,15 @@ const postCursor = (p: Record<string, unknown>): p is { before: number } => Numb
 const voteCursor = (p: Record<string, unknown>): p is { at: string; record: string } =>
 	typeof p.at === 'string' && typeof p.record === 'string' && /^\d{4}-\d\d-\d\d [\d:.]+[+-]\d\d(:\d\d)?$/.test(p.at);
 
-function id(value: string | number): number {
-	const n = Number(value);
-	if (!Number.isSafeInteger(n) || n < 1) throw unavailable();
-	return n;
-}
-
-function toPost(row: Row, login: string): ProfilePost {
-	const postId = id(row.id);
-	const topic = row.topic_id === null ? undefined : id(row.topic_id);
-	const parent = row.parent === null ? undefined : id(row.parent);
-	const at = row.at instanceof Date ? row.at : new Date(row.at);
-	const valid = (POST_KINDS as readonly string[]).includes(row.kind) && typeof row.voter === 'string' && row.voter.toLowerCase() === login
-		&& typeof row.agent === 'string' && typeof row.body === 'string' && typeof row.title === 'string'
-		&& Number.isFinite(at.getTime());
-	if (!valid) throw unavailable();
+// The listed fields only. Ids are read as text and shown as numbers.
+function toPost(row: Row): ProfilePost {
+	const id = Number(row.id), topic = row.topic_id === null ? undefined : Number(row.topic_id);
 	return {
-		id: postId, kind: row.kind, voter: row.voter, agent: row.agent, body: row.body, at: at.toISOString(), title: row.title,
+		id, kind: row.kind, voter: row.voter, agent: row.agent, body: row.body, at: new Date(row.at).toISOString(), title: row.title,
 		...(row.record_id === null ? {} : { record_id: row.record_id }),
 		...(topic === undefined ? {} : { topic_id: topic }),
-		...(parent === undefined ? {} : { parent }),
-		permalink: row.record_id === null ? `/forum/${topic}#p${postId}` : `${recordPath(row.record_id)}#p${postId}`,
+		...(row.parent === null ? {} : { parent: Number(row.parent) }),
+		permalink: row.record_id === null ? `/forum/${topic}#p${id}` : `${recordPath(row.record_id)}#p${id}`,
 	};
 }
 
@@ -109,7 +97,7 @@ const VOTES = `FROM open_index.votes v JOIN open_index.records r ON r.id = v.rec
 
 function checkLimit(limit: number) {
 	if (!Number.isSafeInteger(limit) || limit < 1 || limit > MAX_PROFILE_LIMIT) {
-		throw new QueryError(`Activity limit must be from 1 to ${MAX_PROFILE_LIMIT}.`, 'Use a whole-number limit, or omit it for 20 public posts.');
+		throw new QueryError(`Activity limit must be from 1 to ${MAX_PROFILE_LIMIT}.`, `Use a whole-number limit, or omit it for ${DEFAULT_PROFILE_LIMIT} public posts.`);
 	}
 }
 
@@ -125,7 +113,7 @@ export async function profileActivity(db: Db, handle: unknown, options: { limit?
 		const rows = (await db.query<Row>(`SELECT * FROM (${ACTIVITY}) a
 			WHERE ($2::bigint IS NULL OR a.pid < $2::bigint) AND ($4::text[] IS NULL OR a.kind = ANY($4::text[]))
 			ORDER BY a.pid DESC LIMIT $3`, [login, before ?? null, limit + 1, kinds])).rows;
-		const posts = rows.slice(0, limit).map((row) => toPost(row, login));
+		const posts = rows.slice(0, limit).map(toPost);
 		return { login, posts, next_cursor: rows.length > limit ? encode(login, { before: posts.at(-1)!.id }) : null };
 	} catch {
 		throw unavailable();
@@ -161,8 +149,8 @@ export async function profileVotes(db: Db, handle: unknown, options: { limit?: n
 				AND ($2::timestamptz IS NULL OR (v.at, v.record_id) < ($2::timestamptz, $3::text))
 			ORDER BY v.at DESC, v.record_id DESC LIMIT $4`, [login, after?.at ?? null, after?.record ?? null, limit + 1])).rows;
 		const votes = rows.slice(0, limit).map((v): ProfileVote => ({
-			record_id: v.record_id, title: v.title, agent: v.agent, value: v.value === 1 || v.value === -1 ? v.value : null,
-			emoji: v.emoji, note: v.note, at: new Date(v.at).toISOString(), permalink: recordPath(v.record_id),
+			record_id: v.record_id, title: v.title, agent: v.agent, value: v.value, emoji: v.emoji, note: v.note,
+			at: new Date(v.at).toISOString(), permalink: recordPath(v.record_id),
 		}));
 		const last = rows[limit - 1];
 		return { login, votes, next_cursor: rows.length > limit ? encode(login, { at: last.at_key, record: last.record_id }) : null };

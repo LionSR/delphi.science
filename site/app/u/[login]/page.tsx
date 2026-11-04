@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { db } from '../../../lib/db.ts';
 import { MAX_AFFILIATION, MAX_NAME, ownName, publicName } from '../../../lib/accounts/people.ts';
-import { normalizeProfileLogin, profile, TABS, type Profile, type Tab } from '../../../lib/accounts/profile.ts';
+import { normalizeProfileLogin, profile, TABS, type Tab } from '../../../lib/accounts/profile.ts';
 import { ProfileView } from '../../../lib/accounts/profile-view.ts';
 import { me } from '../../../lib/accounts/session.ts';
 import { savePublicName } from '../../actions.ts';
@@ -30,13 +30,8 @@ export default async function Profile({ params, searchParams }: Context) {
 	const tab: Tab = (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
 	const d = await db();
 	const who = await publicName(d, login);
-	let page: Profile | null = null;
-	try {
-		if (Array.isArray(cursor)) throw new Error('Repeated cursor');
-		page = await profile(d, login, { tab, cursor });
-	} catch {
-		page = null;
-	}
+	// A repeated or unreadable cursor, like any failure to load, shows "temporarily unavailable" with a retry link.
+	const page = Array.isArray(cursor) ? null : await profile(d, login, { tab, cursor }).catch(() => null);
 	const owner = (await me())?.login.toLowerCase() === login.toLowerCase();
 	const own = owner ? await ownName(d, login).catch(() => null) : null;
 	const editor = own ? (

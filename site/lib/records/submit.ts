@@ -15,7 +15,8 @@ export const MAX_PER_DAY = 20;
 
 const SEND = 'Send "url": an arXiv id or URL, a DOI, a Zenodo link, a GitHub repository, or a public HTTPS research webpage without query parameters.';
 
-export type Submitted = { status: 'listed' | 'already_listed'; id: string; message: string; record?: Record<string, unknown> };
+type Submitted = { status: 'listed' | 'already_listed'; id: string; message: string; record?: Record<string, unknown> };
+const alreadyListed = (id: string): Submitted => ({ status: 'already_listed', id, message: `already listed as ${id}` });
 
 // An entry by id (including harmful ones, which have no record), or a record by id, URL or repository.
 async function listed(db: Db, id: string, url: string) {
@@ -42,7 +43,7 @@ export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof
 	await refuseKeys(db, url);
 	const hit = detect(url);
 	const known = await listed(db, hit ? `${hit.source.name}/${hit.key}` : '', url);
-	if (known) return { status: 'already_listed', id: known, message: `already listed as ${known}` };
+	if (known) return alreadyListed(known);
 	if (!hit) throw new QueryError('the site cannot read this link', SEND);
 
 	const day = today();
@@ -64,7 +65,7 @@ export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof
 	const again = await listed(db, item.id, item.url); // the same record by another link
 	if (again) {
 		await finishAttempt(db, audit, false, 'Already listed');
-		return { status: 'already_listed', id: again, message: `already listed as ${again}` };
+		return alreadyListed(again);
 	}
 	// Moderate before writing the entry: the daily build would publish it.
 	await screen(db, voter, { kind: 'submission', on: item.id, title: String(item.title), body: JSON.stringify(found), context: { record: item } }, moderate, false, undefined, audit);
@@ -77,7 +78,7 @@ export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof
 		const { rows } = await tx.query('INSERT INTO open_index.entries (id, entry) VALUES ($1, $2) ON CONFLICT (id) DO NOTHING RETURNING id', [item.id, entry]);
 		return { inserted: rows.length > 0, id: item.id };
 	});
-	if (!stored.inserted) return { status: 'already_listed', id: stored.id, message: `already listed as ${stored.id}` };
+	if (!stored.inserted) return alreadyListed(stored.id);
 	// If this fails, the next build lists the record from its entry.
 	await db.query(`INSERT INTO open_index.records (${COLUMNS.join(', ')}) VALUES (${COLUMNS.map((_, i) => `$${i + 1}`).join(', ')})
 		ON CONFLICT (id) DO NOTHING`, await row(item));

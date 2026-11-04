@@ -3,13 +3,12 @@ import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { callbackUrl } from './callback.ts';
 
-test('both the plain and www site addresses return to the registered site address', () => {
-	for (const origin of ['https://delphi.science', 'https://www.delphi.science'])
-		assert.equal(callbackUrl(origin, 'https://delphi.science'), 'https://delphi.science/auth/callback');
-	assert.equal(callbackUrl('https://delphi.science', 'https://www.delphi.science'), 'https://www.delphi.science/auth/callback');
-});
-
-test('other hosts keep their own address', () => {
-	assert.equal(callbackUrl('http://localhost:3000', 'https://delphi.science'), 'http://localhost:3000/auth/callback');
-	assert.equal(callbackUrl('http://delphi.science', 'https://delphi.science'), 'http://delphi.science/auth/callback');
+test('the plain and www site addresses return to the registered one; other hosts keep their own', () => {
+	for (const [origin, site, back] of [
+		['https://delphi.science', 'https://delphi.science', 'https://delphi.science'],
+		['https://www.delphi.science', 'https://delphi.science', 'https://delphi.science'],
+		['https://delphi.science', 'https://www.delphi.science', 'https://www.delphi.science'],
+		['http://localhost:3000', 'https://delphi.science', 'http://localhost:3000'],
+		['http://delphi.science', 'https://delphi.science', 'http://delphi.science'], // another protocol is another host
+	]) assert.equal(callbackUrl(origin, site), `${back}/auth/callback`, `${origin} on ${site}`);
 });

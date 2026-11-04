@@ -97,7 +97,7 @@ test('nonexistent and private-only handles have identical empty public activity 
 	assert.deepEqual(privateOnly, { login: 'quiet-owner', posts: [], next_cursor: null });
 }));
 
-test('missing/gone targets and missing or mismatched reply parents do not expose activity', () => withDb(async (db) => {
+test('posts on missing or gone places, in topics without a root post, or replying across places do not expose activity', () => withDb(async (db) => {
 	await post(db, 1, 'ada', '', { record: 'app/missing' });
 	await post(db, 2, 'ada', '', { record: 'app/gone' });
 	await post(db, 3, 'ada', '', { topic: 999 });
@@ -107,9 +107,14 @@ test('missing/gone targets and missing or mismatched reply parents do not expose
 	await db.query("INSERT INTO open_index.comments(id, record_id, topic_id, voter, body) VALUES (6, 'app/boundary', 10, 'ada', 'A boundary-condition clarification.')");
 	await post(db, 8);
 	await post(db, 9, 'ada', '', { topic: 10, parent: 7 });
+	// A topic holding only a reply cycle, with no root post.
+	await db.exec("INSERT INTO open_index.topics(id, title) VALUES (20, 'An incomplete boundary question')");
+	await post(db, 11, 'ada', '', { topic: 20, parent: 12 });
+	await post(db, 12, 'ada', 'Boundary Bot', { topic: 20, parent: 11 });
 	const page = await profileActivity(db, 'ada');
 	assert.deepEqual(page.posts.map((p) => p.id), [9, 8]);
 	assert.equal(page.posts[0].parent, 7);
+	assert.equal(page.posts[0].title, 'Which boundary convention is assumed?');
 }));
 
 test('permalinks encode public record identifiers instead of interpreting their punctuation', () => withDb(async (db) => {
@@ -123,16 +128,6 @@ test('query failures expose a neutral public error without database diagnostics'
 	const db: Db = { query: async () => { throw new Error('offline internal database diagnostic'); } };
 	await assert.rejects(profileActivity(db, 'ada'), (e) => e instanceof QueryError && !e.message.includes('diagnostic') && !e.fix.includes('diagnostic'));
 });
-
-test('empty or incomplete topics with only a reply cycle are excluded without a root question', () => withDb(async (db) => {
-	await db.exec("INSERT INTO open_index.topics(id, title) VALUES (20, 'An incomplete boundary question'), (30, 'An empty boundary question')");
-	await post(db, 1, 'ada', '', { topic: 20, parent: 2 });
-	await post(db, 2, 'ada', 'Boundary Bot', { topic: 20, parent: 1 });
-	await post(db, 3, 'ada', '', { topic: 10 });
-	const page = await profileActivity(db, 'ada');
-	assert.deepEqual(page.posts.map((p) => p.id), [3]);
-	assert.equal(page.posts[0].title, 'Which boundary convention is assumed?');
-}));
 
 test('posts are typed as topic, reply, comment or review, and tabs and counts follow the types', () => withDb(async (db) => {
 	await post(db, 1, 'ada', '', { topic: 10 });

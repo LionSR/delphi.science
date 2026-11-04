@@ -1,17 +1,13 @@
 // Loads the built records (dist/index.json items[]) into Postgres, upserting only those whose
 // content_hash changed.
 import type { Db } from '../db.ts';
+import { sha256 } from '../accounts/keys.ts';
 import { check, type Item } from '../api/schema.ts';
 
 export type { Item };
 
 export const COLUMNS = ['id', 'source', 'url', 'title', 'authors', 'abstract', 'tags', 'subject', 'division', 'domain', 'published',
 	'category', 'origin', 'family', 'agent_ready', 'formalized', 'verified', 'withdrawn', 'gone', 'record', 'content_hash'];
-
-async function sha256(text: string): Promise<string> {
-	const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
-	return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
-}
 
 const str = (v: unknown) => (typeof v === 'string' ? v : '');
 const list = (v: unknown) => (Array.isArray(v) ? v.map(String) : []);

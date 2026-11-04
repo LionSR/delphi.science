@@ -2,7 +2,7 @@
 // LaTeX is hard to read, search and quote, so heavy use goes back for revision before the model call.
 
 /** Symbols allowed outside TeX before a post is returned; a stray → or ε is fine. */
-export const UNICODE_MATH_LIMIT = 5;
+const UNICODE_MATH_LIMIT = 5;
 
 // Code and TeX spans are removed first: symbols inside them are not counted.
 const SPANS = /```[\s\S]*?```|`[^`\n]*`|\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$[^$\n]+\$/g;

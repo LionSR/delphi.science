@@ -3,6 +3,8 @@ import type { Db } from '../db.ts';
 import { QueryError } from '../errors.ts';
 
 export type Voter = { login: string; agent: string };
+/** A signed-in person: a voter with agent '', and their GitHub display name. */
+export type Person = Voter & { name: string };
 
 const hex = (bytes: Uint8Array) => [...bytes].map((b) => b.toString(16).padStart(2, '0')).join('');
 
@@ -32,24 +34,18 @@ export function profileName(value: unknown): string {
 	return [...value.normalize('NFC').replace(/[\p{Cc}\s]+/gu, ' ').trim()].slice(0, 100).join('');
 }
 
-/** A new session key. Stores the display name when the agent_keys.name column exists. */
-export async function createSession(db: Db, login: string, name: unknown = '') {
-	const display = profileName(name);
-	const hasName = display && await db.query<{ present: boolean }>(`SELECT EXISTS (
-		SELECT 1 FROM information_schema.columns WHERE table_schema='open_index' AND table_name='agent_keys' AND column_name='name'
-	) AS present`).then((r) => r.rows[0]?.present === true, () => false);
-	return newKey(db, login, '', hasName ? display : undefined);
+/** A new session key, with the person's GitHub display name. */
+export async function createSession(db: Db, login: string, name: unknown = ''): Promise<string> {
+	return newKey(db, login, '', profileName(name));
 }
 
-async function newKey(db: Db, login: string, agent: string, name?: string) {
+async function newKey(db: Db, login: string, agent: string, name = '') {
 	const key = `oik_${hex(crypto.getRandomValues(new Uint8Array(24)))}`;
-	const hash = await sha256(key);
-	if (name === undefined) await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent) VALUES ($1, $2, $3)', [hash, login, agent]);
-	else await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent, name) VALUES ($1, $2, $3, $4)', [hash, login, agent, name]);
+	await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent, name) VALUES ($1, $2, $3, $4)', [await sha256(key), login, agent, name]);
 	return key;
 }
 
-/** Revokes a key: by the key itself (signing out) or, for its owner, by its hash (the /keys page). */
+/** Revokes one of `login`'s keys, sessions included: by the key itself (signing out) or by its hash. */
 export async function revokeKey(db: Db, login: string, by: { key?: string; hash?: string }) {
 	const hash = by.key ? await sha256(by.key) : by.hash;
 	await db.query('UPDATE open_index.agent_keys SET revoked_at = now() WHERE key_hash = $1 AND login = $2 AND revoked_at IS NULL', [hash, login]);
@@ -68,18 +64,16 @@ export async function revokeAgentKey(db: Db, login: string, hash: string): Promi
 		WHERE key_hash = $1 AND login = $2 AND agent <> '' AND revoked_at IS NULL RETURNING key_hash`, [hash, login])).rows.length === 1;
 }
 
-/** Who an agent key belongs to, or null if it is unknown or revoked. */
+/** Who a key belongs to (agent '' for a session), or null if it is unknown, revoked or expired. */
 export async function voterFromKey(db: Db, key: string): Promise<Voter | null> {
 	const rows = (await db.query<Voter>('SELECT login, agent FROM open_index.agent_keys WHERE key_hash = $1 AND revoked_at IS NULL AND expires_at > now()', [await sha256(key)])).rows;
 	return rows[0] ?? null;
 }
 
-export type Person = Voter & { name: string };
-
-/** The person behind an active session key (agent keys do not count), or null. */
+/** The person behind an active session key (agent keys do not count), or null. A blank name falls back to the login. */
 export async function personFromSession(db: Db, key: string): Promise<Person | null> {
-	const person = (await db.query<Person>(`SELECT k.login, k.agent, coalesce(nullif(trim(to_jsonb(k)->>'name'), ''), k.login) AS name
-		FROM open_index.agent_keys k WHERE k.key_hash=$1 AND k.agent='' AND k.revoked_at IS NULL AND k.expires_at > now()`, [await sha256(key)])).rows[0];
+	const person = (await db.query<Person>(`SELECT login, agent, name FROM open_index.agent_keys
+		WHERE key_hash = $1 AND agent = '' AND revoked_at IS NULL AND expires_at > now()`, [await sha256(key)])).rows[0];
 	return person ? { ...person, name: profileName(person.name) || person.login } : null;
 }
 

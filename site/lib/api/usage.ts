@@ -4,7 +4,7 @@
 import type { Db } from '../db.ts';
 import { operations } from './openapi.ts';
 
-export type Kind = 'ai' | 'search' | 'bot' | 'tool' | 'browser' | 'other';
+type Kind = 'ai' | 'search' | 'bot' | 'tool' | 'browser' | 'other';
 
 // AI assistants, crawlers and search engines, found anywhere in the user agent (often inside a
 // browser-like one: "Mozilla/5.0 … compatible; ChatGPT-User/1.0; +https://openai.com/bot").
@@ -26,7 +26,7 @@ export const CLIENTS = [...KINDS.keys(), ...TOOLS, 'browser', 'none', 'other'];
 export const ENDPOINTS = [...operations.filter((o) => !['checkPublicSources', 'editPost'].includes(o.operationId)).map((o) => `${o.method} ${o.path}`),
 	'GET /api/v1', 'GET /api/v1/openapi.json', 'GET /llms.txt', 'POST /mcp',
 	'GET /id/{prefix}/{suffix}', 'GET /sitemap.xml', 'GET /sitemap/{file}'];
-export const RETENTION_DAYS = 90;
+const RETENTION_DAYS = 90;
 
 // Collection and retention cleanup are each off unless enabled by environment variable.
 export const collectionEnabled = (env = process.env) => env.ORI_USAGE_ANALYTICS_ENABLED === 'true' && env.VERCEL_ENV !== 'preview';
@@ -49,11 +49,7 @@ export function client(ua: string | null | undefined): string {
 
 /** What sort of client a name from client() is. */
 export function kind(name: string): Kind {
-	const k = KINDS.get(name);
-	if (k) return k;
-	if (name === 'browser') return 'browser';
-	if (name === 'none' || name === 'other') return 'other';
-	return TOOLS.includes(name) ? 'tool' : 'other';
+	return KINDS.get(name) ?? (name === 'browser' ? 'browser' : TOOLS.includes(name) ? 'tool' : 'other');
 }
 
 /** Retain today and the previous 89 UTC dates. Also run daily, even when there is no traffic. */
@@ -64,8 +60,7 @@ export async function pruneUsage(db: Db) {
 
 /** Counts one call: today's (UTC) row for this endpoint and client goes up by one. */
 export async function countCall(db: Db, endpoint: string, name: string) {
-	if (!collectionEnabled()) return;
-	if (!ENDPOINTS.includes(endpoint)) return;
+	if (!collectionEnabled() || !ENDPOINTS.includes(endpoint)) return;
 	const safeClient = CLIENTS.includes(name) ? name : 'other';
 	await pruneUsage(db);
 	await db.query(

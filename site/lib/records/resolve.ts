@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { publicWebTarget, readPublicWeb, RetrievalError, type SourceTransport } from '../moderation/source-fetch.ts';
 import taxonomy from './taxonomy.json' with { type: 'json' };
 import { check, type Entry, type Item } from '../api/schema.ts';
+import { divisionOf, truncate } from './query.ts';
 
 export class NotFound extends Error {}
 // Mostly-pseudoscience venues (sources.py BLOCKED_HOSTS).
@@ -25,8 +26,9 @@ const DAILY = [
 	/^(?:https?:\/\/)?github\.com\/[\w.-]+\/[\w.-]+\/blob\/[^/]+\/(?:[\w./-]+?\/)?formalization\.yaml$/i,
 ];
 
-type Fetcher = typeof fetch;
-type Source = { name: string; patterns: RegExp[]; key?: (m: RegExpMatchArray) => string; read: (key: string, get: Get) => Promise<Entry> };
+// read gets the key, a fetch for the source's API, and the link with a transport for public web pages.
+type Source = { name: string; patterns: RegExp[]; key?: (m: RegExpMatchArray) => string;
+	read: (key: string, get: Get, link: string, transport?: SourceTransport) => Promise<Entry> };
 type Get = (url: string, accept?: string) => Promise<Response>;
 
 // ---- Text cleanup, as in sources.py ----
@@ -38,17 +40,9 @@ const clean = (text: unknown) =>
 			? String.fromCodePoint(e[1].toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10))
 			: ENTITIES[e.toLowerCase()] ?? m)
 		.replace(/\s+/g, ' ').trim();
-export function trim(text: unknown, n = SUMMARY_CHARS) {
-	const t = clean(text);
-	return t.length <= n ? t : t.slice(0, n - 1).replace(/\s+\S*$/, '') + '…';
-}
+const summarize = (text: unknown) => truncate(clean(text), SUMMARY_CHARS);
 const isoDate = (text: unknown) => String(text ?? '').match(/(\d{4})[-/](\d{2})[-/](\d{2})/)?.slice(1).join('-') ?? '';
-const SUBJECTS = taxonomy.names as Record<string, string>;
-function subject(domain: string) {
-	if (!(domain in SUBJECTS)) return {};
-	const division = taxonomy.divisions.find((d) => d.prefixes.some((p) => domain === p || domain.startsWith(`${p}.`) || domain.startsWith(`${p}-`)))?.key ?? 'other';
-	return { subject: domain, division };
-}
+const subject = (domain: string) => (domain in taxonomy.names ? { subject: domain, division: divisionOf(domain) } : {});
 
 // Drops missing fields (index.py _drop_empty).
 function dropEmpty<T extends Record<string, unknown>>(o: T): T {
@@ -91,7 +85,7 @@ const SOURCES: Source[] = [
 			const domain = e.match(/<arxiv:primary_category[^>]*term="([^"]+)"/)?.[1] ?? '';
 			return entry('arxiv', id, {
 				url: `https://arxiv.org/abs/${id}`, title: clean(xml(e, 'title')[0]),
-				authors: xml(e, 'author').map((a) => clean(xml(a, 'name')[0])).filter(Boolean), summary: trim(xml(e, 'summary')[0]), domain,
+				authors: xml(e, 'author').map((a) => clean(xml(a, 'name')[0])).filter(Boolean), summary: summarize(xml(e, 'summary')[0]), domain,
 				tags: [...e.matchAll(/<category[^>]*term="([^"]+)"/g)].map((m) => m[1]), published: isoDate(xml(e, 'published')[0]),
 			});
 		},
@@ -104,7 +98,7 @@ const SOURCES: Source[] = [
 			const m = d.metadata ?? {};
 			return entry('zenodo', String(d.id), {
 				url: d.links?.self_html ?? `https://zenodo.org/records/${d.id}`, title: clean(m.title),
-				authors: (m.creators ?? []).map((c: { name?: string }) => clean(c.name)).filter(Boolean), summary: trim(m.description),
+				authors: (m.creators ?? []).map((c: { name?: string }) => clean(c.name)).filter(Boolean), summary: summarize(m.description),
 				tags: m.keywords ?? [], domain: m.resource_type?.type ?? '', published: isoDate(m.publication_date),
 			});
 		},
@@ -120,7 +114,7 @@ const SOURCES: Source[] = [
 				.then(async (r) => new Set<string>((await r.json()).map((f: { name: string }) => f.name)), () => new Set<string>());
 			return entry('github', d.full_name.replace('/', '__'), {
 				url: d.html_url, repo: d.html_url, title: String(d.name).replace(/[-_]/g, ' '), authors: [d.owner?.login],
-				summary: trim(d.description), tags: d.topics ?? [], published: isoDate(d.created_at), stars: d.stargazers_count ?? 0,
+				summary: summarize(d.description), tags: d.topics ?? [], published: isoDate(d.created_at), stars: d.stargazers_count ?? 0,
 				agent_ready: files.has('AGENTS.md') || files.has('CLAUDE.md'),
 			});
 		},
@@ -136,12 +130,28 @@ const SOURCES: Source[] = [
 			return entry('doi', key, {
 				url: `https://doi.org/${doi}`, title: clean(Array.isArray(d.title) ? d.title[0] : d.title),
 				authors: (d.author ?? []).map((a: { given?: string; family?: string; literal?: string }) => clean(`${a.given ?? ''} ${a.family ?? ''}`) || clean(a.literal)),
-				summary: trim(d.abstract), domain: d.type ?? '',
+				summary: summarize(d.abstract), domain: d.type ?? '',
 				published: parts.length === 3 ? parts.map((p) => String(p).padStart(2, '0')).join('-') : '',
 			});
 		},
 	},
 ];
+
+// Any other public HTTPS page, keyed by its canonical URL (sources.py Web).
+const WEB: Source = {
+	name: 'web',
+	patterns: [],
+	async read(_key, _get, link, transport) {
+		try {
+			const e = await readPublicWeb(link.trim(), transport);
+			check('Entry', e, `web/${e.key}`);
+			return e;
+		} catch (error) {
+			if (error instanceof RetrievalError && error.status === 'not_found') throw new NotFound(link);
+			throw error;
+		}
+	},
+};
 
 /** The record id a link would have, if the site reads its source; null if it does not. */
 export function detect(link: string): { source: Source; key: string } | null {
@@ -155,10 +165,7 @@ export function detect(link: string): { source: Source; key: string } | null {
 	}
 	try {
 		const { canonical } = publicWebTarget(url);
-		return {
-			source: { name: 'web', patterns: [], read: async () => readPublicWeb(canonical) },
-			key: createHash('sha1').update(canonical).digest('hex').slice(0, 12),
-		};
+		return { source: WEB, key: createHash('sha1').update(canonical).digest('hex').slice(0, 12) };
 	} catch { return null; }
 }
 
@@ -166,19 +173,9 @@ export function detect(link: string): { source: Source; key: string } | null {
 export const looksLikeLink = (link: string) => /^\S{1,2000}$/.test(link.trim());
 
 /** Reads the record's entry from its source. Throws NotFound when it does not exist or is not public. */
-export async function resolve(link: string, fetcher: Fetcher = fetch, webTransport?: SourceTransport): Promise<Entry | null> {
+export async function resolve(link: string, fetcher: typeof fetch = fetch, webTransport?: SourceTransport): Promise<Entry | null> {
 	const hit = detect(link);
 	if (!hit) return null;
-	if (hit.source.name === 'web') {
-		try {
-			const e = await readPublicWeb(link.trim(), webTransport);
-			check('Entry', e, `web/${e.key}`);
-			return e;
-		} catch (error) {
-			if (error instanceof RetrievalError && error.status === 'not_found') throw new NotFound(link);
-			throw error;
-		}
-	}
 	const get: Get = async (url, accept) => {
 		const headers: Record<string, string> = { 'User-Agent': USER_AGENT, ...(accept ? { Accept: accept } : {}) };
 		if (url.startsWith('https://api.github.com/') && process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
@@ -187,5 +184,5 @@ export async function resolve(link: string, fetcher: Fetcher = fetch, webTranspo
 		if (!r.ok) throw new Error(`HTTP ${r.status} from ${new URL(url).host}`);
 		return r;
 	};
-	return hit.source.read(hit.key, get);
+	return hit.source.read(hit.key, get, link, webTransport);
 }

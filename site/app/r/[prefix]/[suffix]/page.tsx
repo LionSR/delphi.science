@@ -19,6 +19,7 @@ import { EditPost } from '../../../edit-post.tsx';
 export const dynamic = 'force-dynamic';
 
 const record = cache(async (id: string) => get(await db(), id));
+const apiPath = (id: string) => `/api/v1/records/${idPath(id)}`;
 
 const Stance = ({ stance }: { stance?: string }) => (stance ? <span className={`stance ${stance}`} title={STANCES[stance]}>{stance}</span> : null);
 
@@ -35,7 +36,7 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	return {
 		// A reviewed reception summary describes a discussed record better than its abstract.
 		title: String(r.title), description: reception(r)?.text ?? (String(r.summary ?? '').slice(0, 300) || undefined),
-		alternates: { canonical: recordPath(id), types: { 'application/json': `/api/v1/records/${idPath(id)}` } },
+		alternates: { canonical: recordPath(id), types: { 'application/json': apiPath(id) } },
 		other: cite,
 	};
 }
@@ -48,8 +49,10 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const thread = await comments(d, id);
 	const { notice } = await ctx.searchParams;
 	const voters = await votes(d, id);
-	const names = await publicNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter), ...(reception(r)?.reviewed_by ? [String(reception(r)!.reviewed_by)] : [])]);
+	const stands = reception(r);
+	const names = await publicNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter), ...(stands?.reviewed_by ? [String(stands.reviewed_by)] : [])]);
 	const who = await me();
+	const owner = who?.login ?? '';
 	const mine = who ? (await myVotes(d, who.login, [id])).get(id) : undefined;
 	const back = recordPath(id);
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
@@ -57,13 +60,12 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string; stance?: string }[];
 	// Records whose discussion links this one, set at build time.
 	const discusses = (Array.isArray(r.discusses) ? r.discusses : []) as { id: string; title: string }[];
-	const stands = reception(r);
 	// Label for a reception link: its author, site, or host.
 	const cite = (url: string) => {
 		const l = links.find((x) => x.url === url);
 		return l?.author || l?.site || url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
 	};
-	const api = `/api/v1/records/${idPath(id)}`;
+	const api = apiPath(id);
 	const ld = {
 		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${recordPath(id)}`,
 		sameAs: r.url, datePublished: r.published, abstract: r.summary, about: r.subject, keywords: r.tags,
@@ -136,11 +138,11 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
 					</p>
 					<Markdown text={c.body} postId={c.id} />
-					{who?.login === c.voter && <EditPost key={who.login} id={c.id} owner={who.login} body={c.body} revision={c.revision} />}
+					{owner === c.voter && <EditPost key={owner} id={c.id} owner={owner} body={c.body} revision={c.revision} />}
 				</div>
 			))}
 
-			<PostForm kind="record" owner={who?.login ?? ''} record={id} back={back} rows={4} label="Comment" button="Post"
+			<PostForm kind="record" owner={owner} record={id} back={back} rows={4} label="Comment" button="Post"
 				placeholder="Comment, or review the paper. Name other records by id to mention them." />
 
 			{links.length > 0 && (

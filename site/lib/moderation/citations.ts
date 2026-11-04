@@ -2,7 +2,7 @@
 // Nothing is fetched here; a citation that is not indexed or curated stays unresolved.
 import prefixes from '../records/prefixes.json' with { type: 'json' };
 import { lookupCuratedPublicSource, type CuratedPublicSnapshot } from './curated-sources.ts';
-import { type PublicEvidence } from './source-checks.ts';
+import type { PublicEvidence } from './source-checks.ts';
 import type { Db } from '../db.ts';
 
 export type SourceEvidence = { reference: string; status: 'indexed_metadata' | 'unresolved'; id?: string; title?: string; url?: string; check_status?: string; reason?: string; fix?: string } | PublicEvidence | CuratedPublicSnapshot;
@@ -27,22 +27,26 @@ function references(text: string): string[] {
 
 /** The record ID a reference would have in the index, or '' for a URL that is not arXiv or doi.org. */
 function recordId(reference: string): string {
-	const arxiv = reference.match(/^(?:arxiv(?::\s*|\/)|https?:\/\/(?:www\.)?arxiv\.org\/(?:abs|pdf)\/)(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?$/i);
 	const doi = reference.match(/^(?:https?:\/\/doi\.org\/)?(10\.\d{4,9}\/\S+)$/i);
 	if (doi) return `doi/${doi[1].replaceAll('/', '__')}`;
+	const arxiv = reference.match(/^(?:arxiv(?::\s*|\/)|https?:\/\/(?:www\.)?arxiv\.org\/(?:abs|pdf)\/)(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?$/i);
 	if (arxiv) return `arxiv/${arxiv[1]}`;
 	return /^https?:/i.test(reference) ? '' : reference.replace(/^([^/]+)\//, (_, prefix: string) => `${prefix.toLowerCase()}/`);
 }
 
-export async function citationEvidence(db: Db, text: string, context?: { record: string; allowCurated: boolean }): Promise<SourceEvidence[]> {
+/**
+ * Evidence for each reference cited in `text`: indexed record metadata, else a reviewed observation for
+ * `curatedRecord` (omitted when a fresh check was requested), else unresolved. More than twelve is one unresolved entry.
+ */
+export async function citationEvidence(db: Db, text: string, curatedRecord?: string): Promise<SourceEvidence[]> {
 	const refs = references(text);
 	if (refs.length > 12) return [{ reference: 'reference count', status: 'unresolved' }];
 	const evidence: SourceEvidence[] = [];
 	for (const reference of refs) {
 		const rec = (await db.query<{ id: string; title: string; url: string }>(
 			'SELECT id, title, url FROM open_index.records WHERE NOT gone AND (id = $1 OR url = $2) LIMIT 1', [recordId(reference), reference])).rows[0];
-		const curated = context?.allowCurated ? lookupCuratedPublicSource(context.record, reference) : undefined;
-		evidence.push(rec ? { reference, status: 'indexed_metadata', ...rec } : curated ?? { reference, status: 'unresolved' });
+		evidence.push(rec ? { reference, status: 'indexed_metadata', ...rec }
+			: (curatedRecord ? lookupCuratedPublicSource(curatedRecord, reference) : undefined) ?? { reference, status: 'unresolved' });
 	}
 	return evidence;
 }

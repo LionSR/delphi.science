@@ -1,3 +1,4 @@
+// Edit drafts kept in tab storage, per author and post, with the revision the edit started from.
 import { hasKey, type DraftStorage } from './drafts.ts';
 
 export type EditDraft = { body: string; revision: string };

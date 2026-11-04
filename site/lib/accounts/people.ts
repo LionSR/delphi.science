@@ -16,18 +16,19 @@ export function profileAffiliation(value: unknown): string {
 }
 
 /** Public names keyed by each login as given (GitHub logins ignore case). Logins with nothing to show are left out,
- *  and a name that only repeats the login is dropped. An unmigrated database shows no names. */
+ *  and a name that only repeats the login is dropped. Names are cosmetic, so a failed lookup shows none. */
 export async function publicNames(db: Db, logins: string[]): Promise<Map<string, PublicName>> {
+	const names = new Map<string, PublicName>();
 	const lower = [...new Set(logins.map((l) => l.toLowerCase()))];
-	if (!lower.length) return new Map();
+	if (!lower.length) return names;
 	const rows = await db.query<{ login: string; name: string; affiliation: string }>(
 		'SELECT login, name, affiliation FROM open_index.people WHERE login = ANY($1)', [lower]).then((r) => r.rows, () => []);
-	const found = new Map(rows.map((r) => [r.login, r]));
-	return new Map(logins.flatMap((login) => {
-		const r = found.get(login.toLowerCase());
-		const shown = r && { name: r.name.toLowerCase() === login.toLowerCase() ? '' : r.name, affiliation: r.affiliation };
-		return shown && (shown.name || shown.affiliation) ? [[login, shown] as [string, PublicName]] : [];
-	}));
+	const found = new Map(rows.map((r) => [r.login, { name: r.name.toLowerCase() === r.login ? '' : r.name, affiliation: r.affiliation }]));
+	for (const login of logins) {
+		const shown = found.get(login.toLowerCase());
+		if (shown && (shown.name || shown.affiliation)) names.set(login, shown);
+	}
+	return names;
 }
 
 /** One person's public name, or empty parts when none is known. */
@@ -44,7 +45,7 @@ export async function rememberGitHubProfile(db: Db, login: string, github: { nam
 }
 
 /** What a person has stored, as they and their agents see it: unlike publicName, a name equal to the login is kept. */
-export type OwnName = PublicName & { login: string; edited: boolean };
+type OwnName = PublicName & { login: string; edited: boolean };
 
 /** The person's own name and affiliation, for their profile form and their agents. */
 export async function ownName(db: Db, login: string): Promise<OwnName> {

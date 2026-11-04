@@ -1,16 +1,15 @@
 // /keys/approve?code=WDJB-MJHT: approve or deny an agent's device code.
-import { redirect } from 'next/navigation';
 import { db } from '../../../lib/db.ts';
 import { pendingDevice } from '../../../lib/accounts/device.ts';
-import { me } from '../../../lib/accounts/session.ts';
 import { approve, deny } from '../../actions.ts';
+import { signedIn } from '../../sign-in.ts';
 
 export const dynamic = 'force-dynamic';
 
 export default async function Approve({ searchParams }: { searchParams: Promise<{ code?: string; notice?: string }> }) {
 	const { code = '', notice } = await searchParams;
 	const back = `/keys/approve${code ? `?code=${encodeURIComponent(code)}` : ''}`;
-	const who = (await me()) ?? redirect(`/auth/github?next=${encodeURIComponent(back)}`);
+	const who = await signedIn(back);
 	const pending = code ? await pendingDevice(await db(), code) : null;
 	return (
 		<article>

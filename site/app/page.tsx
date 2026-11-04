@@ -1,7 +1,7 @@
 // The list: newest first, or a search in the API's syntax, with links to each subject division.
 import { db } from '../lib/db.ts';
 import { QueryError } from '../lib/errors.ts';
-import { search } from '../lib/records/query.ts';
+import { search, sourceCounts } from '../lib/records/query.ts';
 import taxonomy from '../lib/records/taxonomy.json' with { type: 'json' };
 import { me } from '../lib/accounts/session.ts';
 import { date, recordPath, source, tally, tex } from '../lib/view.ts';
@@ -25,8 +25,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 		if (!(e instanceof QueryError)) throw e;
 		error = `${e.message}. ${e.fix}`;
 	}
-	const sources = (await d.query<{ source: string; n: number }>(
-		'SELECT source, count(*)::int AS n FROM open_index.records GROUP BY source ORDER BY n DESC')).rows;
+	const sources = await sourceCounts(d);
 	const who = await me();
 	const mine = who && res ? await myVotes(d, who.login, res.results.map((r) => String(r.id))) : new Map();
 	const here = `/?${new URLSearchParams({ q, sort, ...(cursor ? { cursor } : {}) })}`;

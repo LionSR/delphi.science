@@ -7,7 +7,8 @@ import { spec } from './openapi.ts';
 // ---- Types ----
 
 type Schemas = typeof spec.components.schemas;
-type Simplify<T> = { [K in keyof T]: T[K] } & {};
+/** An intersection written out as one object type, so editors show its fields. */
+export type Simplify<T> = { [K in keyof T]: T[K] } & {};
 type FromType<T, S> = T extends 'string' ? string : T extends 'integer' | 'number' ? number : T extends 'boolean' ? boolean
 	: T extends 'null' ? null : T extends 'array' ? (S extends { items: infer I } ? FromSchema<I>[] : unknown[])
 	: T extends 'object' ? ObjectOf<S> : unknown;
@@ -41,12 +42,10 @@ export function closed(s: unknown): unknown {
 // Strict, so an unknown keyword (a typo in a schema) fails.
 const ajv = addFormats(new Ajv2020({ allErrors: true, allowUnionTypes: true })).addVocabulary(['components']);
 ajv.addSchema({ $id: 'spec', components: closed(spec.components) });
-const validators = new Map<string, ReturnType<typeof ajv.compile>>();
 
 /** Throws, naming each problem, unless value fits the document's schema `name`; then TypeScript knows its type. */
 export function check<N extends keyof Schemas & string>(name: N, value: unknown, at: string): asserts value is FromSchema<Schemas[N]> {
-	let validate = validators.get(name);
-	if (!validate) validators.set(name, (validate = ajv.getSchema(`spec#/components/schemas/${name}`)!));
+	const validate = ajv.getSchema(`spec#/components/schemas/${name}`)!; // compiled on first use, then cached by ajv
 	if (validate(value)) return;
 	const found = [...new Set(validate.errors!.map((e) => `${at}${e.instancePath.replace(/\/\d+/g, '[]').replaceAll('/', '.')}: ${
 		e.params.additionalProperty ? `${e.params.additionalProperty} is not in the schema` : e.message}`))];

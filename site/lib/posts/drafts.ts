@@ -69,17 +69,15 @@ export function restoreDraft(storage: DraftStorage, form: string, owner: string)
 					return { draft: own ?? guest ?? emptyDraft() };
 				}
 			}
-			if (marker.toOwner !== owner) {
-				storage.removeItem(loginKey(form));
-				return { draft: own ?? emptyDraft() };
-			}
-			if (guest && own) return { draft: own, alternate: guest };
-			if (guest) {
+			// Beside the owner's own draft the guest draft is only offered, and the marker kept so the owner can adopt it.
+			if (marker.toOwner === owner && guest) {
+				if (own) return { draft: own, alternate: guest };
 				if (saveDraft(storage, form, owner, guest)) storage.removeItem(key(form, ''));
 				storage.removeItem(loginKey(form));
 				return { draft: guest };
 			}
 		}
+		// Any other marker is dropped: one claimed by another account, set by a signed-in author, or with no guest draft left.
 		if (owner) storage.removeItem(loginKey(form));
 	} catch { /* storage problems never block composing */ }
 	return { draft: own ?? emptyDraft() };

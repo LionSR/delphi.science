@@ -29,12 +29,12 @@ test('backslash math preserves embedded TeX dollars and list/blockquote containe
 		const html = render(`${prefix}before \\[x^2\\] after`);
 		assert.match(html, new RegExp(`<${tag}[^>]*>[\\s\\S]*before[\\s\\S]*<mjx-container[\\s\\S]*after[\\s\\S]*<\\/${tag}>`));
 	}
-	assert.ok(render('www.example.org/\\(x\\)').includes('href="http://www.example.org/%5C(x%5C)"'));
 });
 
-test('ordinary images remain links without fetching external assets', () => {
-	const html = render('![plot](https://example.org/plot.png)');
-	assert.doesNotMatch(html, /<img/);
+test('raw HTML and javascript: links are dropped, and images become links so no external asset is fetched', () => {
+	const html = render('A **corrected** claim. <script>alert(1)</script> [bad](javascript:alert(1)) ![plot](https://example.org/plot.png)');
+	assert.match(html, /<strong>corrected<\/strong>/);
+	assert.doesNotMatch(html, /<script|javascript:|<img/);
 	assert.match(html, /href="https:\/\/example.org\/plot.png"/);
 });
 

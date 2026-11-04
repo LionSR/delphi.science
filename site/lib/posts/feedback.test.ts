@@ -1,16 +1,14 @@
 // Post feedback classification, offline and on real PGlite posting paths.
 import { strict as assert } from 'node:assert';
-import { readFileSync, readdirSync } from 'node:fs';
 import { registerHooks } from 'node:module';
 import { test } from 'node:test';
-import { PGlite } from '@electric-sql/pglite';
-import { vector } from '@electric-sql/pglite/vector';
 import { type Moderator } from '../moderation/moderate.ts';
 import { ModerationError, postFeedback, holdFeedbackText } from './feedback.ts';
 import { submitPostForm, type PostInput } from './form-submit.ts';
 import { createAgentKey } from '../accounts/keys.ts';
 import { load } from '../records/load.ts';
 import type { Db } from '../db.ts';
+import { migratedDb } from '../testing.ts';
 
 registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
 const accept: Moderator = async () => ({ decision: 'ACCEPT', verification_needed: false, reason: 'Self-contained scoped argument.', fix: '' });
@@ -26,10 +24,8 @@ test('an unexpected posting error gives generic feedback and hides the error tex
 });
 
 test('refusal/service failure expose reason+fix and create no public rows; revision then acceptance is retry-safe', async () => {
-	const pg = new PGlite({ extensions: { vector } });
+	const pg = await migratedDb();
 	try {
-		const dir = new URL('../../supabase/migrations/', import.meta.url);
-		for (const name of readdirSync(dir).filter((f) => f.endsWith('.sql')).sort()) await pg.exec(readFileSync(new URL(name, dir), 'utf8'));
 		await load(pg, [{ id: 'arxiv/1706.03762', source: 'arxiv', url: 'https://arxiv.org/abs/1706.03762', title: 'An indexed paper' }]);
 		let publicWrites = 0;
 		const d: Db = { transaction: (f) => pg.transaction(f), query: async (sql, params) => {
@@ -79,11 +75,9 @@ test('refusal/service failure expose reason+fix and create no public rows; revis
 });
 
 test('actual forum API distinguishes 422 refusal from 503 unavailable and preserves its documented error shape', async () => {
-	const pg = new PGlite({ extensions: { vector } });
+	const pg = await migratedDb();
 	const priorFetch = globalThis.fetch, priorKey = process.env.DEEPSEEK_API_KEY;
 	try {
-		const dir = new URL('../../supabase/migrations/', import.meta.url);
-		for (const name of readdirSync(dir).filter((f) => f.endsWith('.sql')).sort()) await pg.exec(readFileSync(new URL(name, dir), 'utf8'));
 		(globalThis as { openIndexDb?: Promise<unknown> }).openIndexDb = Promise.resolve(pg);
 		const key = await createAgentKey(pg, user.login, user.agent);
 		process.env.DEEPSEEK_API_KEY = 'offline-provider-fixture';
@@ -107,10 +101,10 @@ test('actual forum API distinguishes 422 refusal from 503 unavailable and preser
 	} finally { globalThis.fetch = priorFetch; if (priorKey === undefined) delete process.env.DEEPSEEK_API_KEY; else process.env.DEEPSEEK_API_KEY = priorKey; delete (globalThis as { openIndexDb?: unknown }).openIndexDb; await pg.close(); }
 });
 
-
 test('ordinary hold feedback is one concise actionable explanation, without verification machinery', () => {
- const source=holdFeedbackText({code:'moderation_review_needed',message:'not posted: REVIEW_NEEDED: A cited source remains unresolved: https://example.org/public (unindexed/unrequested). Missing material is not proof a claim is false.',fix:'Detailed API guidance remains separate.'});
- assert.ok(source.length<250);assert.doesNotMatch(source,/unindexed|https:|batch|retrieve_sources|Check public sources/);
- const proof=holdFeedbackText({code:'moderation_review_needed',message:'not posted: REVIEW_NEEDED: The claimed bound needs an independent check.',fix:'Supply scoped evidence.'});
- assert.match(proof,/claimed bound needs an independent check/);
+	const held = (message: string) => holdFeedbackText({ code: 'moderation_review_needed', message, fix: 'Detailed API guidance remains separate.' });
+	const source = held('not posted: REVIEW_NEEDED: A cited source remains unresolved: https://example.org/public (unindexed/unrequested). Missing material is not proof a claim is false.');
+	assert.ok(source.length < 250);
+	assert.doesNotMatch(source, /unindexed|https:|batch|retrieve_sources|Check public sources/);
+	assert.match(held('not posted: REVIEW_NEEDED: The claimed bound needs an independent check.'), /^The claimed bound needs an independent check\./);
 });

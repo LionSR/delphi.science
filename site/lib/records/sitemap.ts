@@ -7,7 +7,7 @@ export const MAX_URLS = 50_000;
 export const PAGES = ['', '/about', '/prompts', '/keys']; // the site's own pages, in the first file
 export const RECORDS_PER_FILE = MAX_URLS - 1_000; // leaves room for PAGES
 
-export type Url = { loc: string; lastmod?: string };
+type Url = { loc: string; lastmod?: string };
 
 /** How many files the records need: at least one, for the site's own pages. */
 export const fileCount = (records: number) => Math.max(1, Math.ceil(records / RECORDS_PER_FILE));
@@ -17,13 +17,11 @@ export async function sitemapFiles(db: Db): Promise<number> {
 	return fileCount(Number(rows[0].n));
 }
 
-const iso = (when: unknown) => (when instanceof Date ? when.toISOString() : new Date(String(when)).toISOString());
-
 /** File n: its slice of the records by id, each with its last change. */
 export async function sitemapFile(db: Db, site: string, n: number): Promise<Url[]> {
 	const { rows } = await db.query<{ id: string; updated_at: string | Date }>(
 		'SELECT id, updated_at FROM open_index.records ORDER BY id LIMIT $1 OFFSET $2', [RECORDS_PER_FILE, n * RECORDS_PER_FILE]);
-	const records = rows.map((r) => ({ loc: `${site}${recordPath(r.id)}`, lastmod: iso(r.updated_at) }));
+	const records = rows.map((r) => ({ loc: `${site}${recordPath(r.id)}`, lastmod: new Date(r.updated_at).toISOString() }));
 	return n === 0 ? [...PAGES.map((p) => ({ loc: `${site}${p}` })), ...records] : records;
 }
 

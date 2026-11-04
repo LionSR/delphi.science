@@ -89,7 +89,6 @@ async function resolveModerator(db: Db): Promise<{ moderate: Moderator; unavaila
 	if (key?.trim()) return { moderate: deepseek(key), unavailable: false };
 	return { unavailable: true, moderate: async () => ({ decision: 'REVIEW_NEEDED', reason: 'Automated quality review is not configured. Try again later.', verification_needed: false }) };
 }
-export async function moderator(db: Db): Promise<Moderator> { return (await resolveModerator(db)).moderate; }
 
 /** Any failure becomes a hold. Injected moderators may omit `fix`; the provider path requires it. */
 async function checkedVerdict(moderate: Moderator, post: Post): Promise<{ value: Verdict; unavailable: boolean }> {
@@ -104,6 +103,7 @@ async function checkedVerdict(moderate: Moderator, post: Post): Promise<{ value:
 	}
 }
 
+/** The moderator's verdict on `post`, or a hold if it fails or answers invalidly. */
 export async function verdict(moderate: Moderator, post: Post): Promise<Verdict> { return (await checkedVerdict(moderate, post)).value; }
 
 const refused = (v: Verdict, unavailable = false) => new ModerationError(
@@ -120,18 +120,20 @@ async function assess(db: Db, post: Post, moderate: Moderator | undefined, retri
 	if (JSON.stringify(post).length > MAX_CONTEXT_CHARS) {
 		return { value: { decision: 'REVIEW_NEEDED', reason: 'The source context is too large for a bounded quality check. Ask for a smaller verified record.', verification_needed: false } };
 	}
-	const notation = post.kind === 'submission' ? null : notationVerdict(`${post.title ?? ''}\n${post.body}`);
+	// Submissions carry upstream metadata, so the notation and citation checks are for discussion only.
+	const text = `${post.title ?? ''}\n${post.body}`;
+	const notation = post.kind === 'submission' ? null : notationVerdict(text);
 	if (notation) return { value: notation };
-	let sources = post.kind === 'submission' ? []
-		: await citationEvidence(db, `${post.title ?? ''}\n${post.body}`, post.recordId ? { record: post.recordId, allowCurated: !retrieveSources } : undefined);
+	// Reviewed observations stand in for a source only when no fresh check was requested.
+	let sources = post.kind === 'submission' ? [] : await citationEvidence(db, text, retrieveSources ? undefined : post.recordId);
 	let checkedSources: CheckBatch | undefined;
 	const unresolved = sources.filter((s) => s.status === 'unresolved');
-	if (retrieveSources && post.recordId && ['comment', 'review', 'note'].includes(post.kind) && unresolved.length && unresolved.length <= 12) {
+	if (retrieveSources && post.recordId && ['comment', 'review', 'note'].includes(post.kind) && unresolved.length) {
 		checkedSources = await collectPublicSources(post.recordId, unresolved.map((s) => s.reference), fetchSource);
-		const observed = checkedSources.results.values();
+		const results = checkedSources.results.values();
 		sources = sources.map((s) => {
 			if (s.status !== 'unresolved') return s;
-			const result = observed.next().value!;
+			const result = results.next().value!;
 			return publicEvidence(result) ?? { reference: result.reference, status: 'unresolved' as const, check_status: result.status, reason: result.reason, fix: result.fix };
 		});
 	}

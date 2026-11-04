@@ -1,6 +1,6 @@
 // The publish path for the site's post forms. A retry returns the author's identical existing post.
 import { comment, post } from './comments.ts';
-import { startTopic } from './forum.ts';
+import { startTopic, topicTitle } from './forum.ts';
 import type { Moderator } from '../moderation/moderate.ts';
 import { QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
@@ -20,7 +20,7 @@ export async function submitPostForm(db: Db, who: Voter, input: PostInput, moder
 		return recordPath(result.id);
 	}
 	if (input.kind === 'question') {
-		const title = input.title.trim().replace(/\s+/g, ' ');
+		const title = topicTitle(input.title);
 		if (!title || title.length > 200) throw new QueryError('The title needs 1–200 characters.', 'State the research question in one line.');
 		const existing = (await db.query<{ id: number }>(
 			`SELECT t.id::int FROM open_index.topics t JOIN open_index.comments c ON c.topic_id=t.id

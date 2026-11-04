@@ -622,6 +622,13 @@ class Described(Entries):
         self.cmd("discuss", "web/k", self.PDF, "--author", "B. Person")
         self.assertEqual(index.pick(self.read()["discussion"][0], ("title", "author", "added")), {"title": "Comments", "author": "B. Person", "added": "2026-10-21"})
 
+    def test_a_corrected_author_survives_a_recheck_of_a_page_that_names_someone_else(self) -> None:
+        post = "https://blog.example/guest-post"  # the window title names the blog, not the guest who wrote the post
+        S.discussion_link = lambda url: {"kind": "web", "url": url, "title": "Guest post | Blog", "author": "Blog", "text": "now"}
+        self.entry("k", [{"kind": "web", "url": post, "title": "Guest post | Blog", "author": "A. Guest", "text": "then", "added": "2026-10-21"}])
+        self.cmd("discuss", "--recheck")
+        self.assertEqual(index.pick(self.read()["discussion"][0], ("author", "text", "added")), {"author": "A. Guest", "text": "now", "added": "2026-10-21"})
+
 
 class Stance(Entries):
     """A person labels what each response does; only support counts as an upvote, refutes or questions mark it disputed."""

@@ -2,9 +2,18 @@
 // loaded with the last local build.
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import type { Db } from './query.ts';
+
+/** Anything that runs a parameterized query: PGlite's db.query, or postgres.js via sql.unsafe. */
+export type Db = {
+	query<T = Record<string, unknown>>(sql: string, params?: unknown[]): Promise<{ rows: T[] }>;
+	transaction?<T>(run: (tx: Db) => Promise<T>): Promise<T>;
+};
 
 const MIGRATIONS = 'supabase/migrations';
+
+/** The .sql files in `dir`, in the order they apply. */
+export const migrations = (dir: string) => readdirSync(dir).filter((f) => f.endsWith('.sql')).sort()
+	.map((name) => ({ name, sql: readFileSync(join(dir, name), 'utf8') }));
 const BUILD = '../dist/index.json';
 
 async function open(): Promise<Db> {
@@ -21,10 +30,9 @@ async function open(): Promise<Db> {
 	}
 	const { PGlite } = await import('@electric-sql/pglite');
 	const { vector } = await import('@electric-sql/pglite/vector');
-	const { load } = await import('./load.ts');
+	const { load } = await import('./records/load.ts');
 	const pg = new PGlite({ extensions: { vector } });
-	const dir = join(process.cwd(), MIGRATIONS);
-	for (const f of readdirSync(dir).filter((f) => f.endsWith('.sql')).sort()) await pg.exec(readFileSync(join(dir, f), 'utf8'));
+	for (const m of migrations(join(process.cwd(), MIGRATIONS))) await pg.exec(m.sql);
 	await load(pg, JSON.parse(readFileSync(join(process.cwd(), BUILD), 'utf8')).items);
 	return pg;
 }

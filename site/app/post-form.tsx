@@ -3,15 +3,18 @@
 import { useActionState, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { sendPost } from './actions.ts';
-import { adoptGuestDraft, clearDraft, emptyDraft, markDraftLogin, restoreDraft, saveDraft, type Draft } from '../lib/post-drafts.ts';
-import { holdFeedbackText, type PostFormState } from '../lib/post-feedback.ts';
-import copy from '../lib/post-copy.json';
+import { adoptGuestDraft, clearDraft, emptyDraft, markDraftLogin, restoreDraft, saveDraft, type Draft } from '#lib/posts/drafts.ts';
+import type { PostFormState } from '#lib/posts/feedback.ts';
+import type { PostInput } from '#lib/posts/form-submit.ts';
+import copy from '#lib/posts/copy.json';
+import { PostFeedbackText } from './post-feedback.tsx';
+import { MAX_BODY } from '#lib/posts/limits.ts';
 
-type Props = { kind: 'question' | 'answer' | 'comment' | 'record' | 'submission'; owner: string; topic?: number; parent?: number; record?: string;
+type Props = { kind: PostInput['kind']; owner: string; topic?: number; parent?: number; record?: string;
 	back: string; label: string; placeholder: string; button: string; rows?: number };
 const initial: PostFormState = { status: 'idle' };
+// A held post (moderation_review_needed) shows its reason instead of a title.
 const TITLES: Record<string, string> = {
-	moderation_review_needed: copy.reviewTitle,
 	moderation_rejected: copy.revisionTitle,
 	moderation_unavailable: copy.unavailableTitle,
 	posting_unconfirmed: copy.serverTitle,
@@ -58,7 +61,6 @@ function Composer({ kind, owner, topic, parent, record, back, label, placeholder
 		} catch { /* keep current form */ }
 	};
 	const feedback = result.feedback;
-	const title = (feedback && TITLES[feedback.code]) ?? copy.validationTitle;
 	return (
 		<form action={action} className="comment-form tex2jax_ignore" onSubmit={(event) => {
 			if (pending) { event.preventDefault(); return; }
@@ -72,13 +74,13 @@ function Composer({ kind, owner, topic, parent, record, back, label, placeholder
 				{kind === 'question' && <input name="title" required maxLength={200} placeholder="The question or topic, in one line" aria-label="Title" className="grow"
 					value={draft.title} onChange={(e) => setDraft({ ...draft, title: e.target.value })} />}
 				{kind === 'submission' ? <input name="body" required maxLength={2000} placeholder={placeholder} aria-label={label} className="grow"
-					value={draft.body} onChange={(e) => setDraft({ ...draft, body: e.target.value })} /> : <textarea name="body" rows={rows} maxLength={4000} required placeholder={placeholder} aria-label={label}
+					value={draft.body} onChange={(e) => setDraft({ ...draft, body: e.target.value })} /> : <textarea name="body" rows={rows} maxLength={MAX_BODY} required placeholder={placeholder} aria-label={label}
 					value={draft.body} onChange={(e) => setDraft({ ...draft, body: e.target.value })} />}
 				{kind === 'record' && <label><input type="checkbox" name="review" checked={draft.review} onChange={(e) => setDraft({ ...draft, review: e.target.checked })} /> This is a review</label>}
 				{kind !== 'submission' && <p className="count">{copy.syntaxHelp}</p>}
 
 				{feedback && result.status === 'failed' && <div className="post-feedback" role="alert">
-					{feedback.code === 'moderation_review_needed' ? <p>{holdFeedbackText(feedback)} <a href="/support" target="_blank" rel="noopener noreferrer">Contact Support</a></p> : <><strong>{title}</strong><p>{feedback.message}</p><p>{feedback.fix}</p></>}
+					<PostFeedbackText feedback={feedback} title={TITLES[feedback.code] ?? copy.validationTitle} />
 					{feedback.code === 'sign_in' && <a href={login} onClick={rememberLogin}>Sign in with GitHub</a>}
 				</div>}
 				{alternate && <button type="button" onClick={() => {

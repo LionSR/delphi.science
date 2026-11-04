@@ -2,7 +2,6 @@
 export function Logo() {
 	return (
 		<svg className="logo" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
-  
   <path d="M10 44L60 14l50 30z"/>
   <path d="M18 54h84"/>
   <circle cx="28" cy="84" r="10"/>
@@ -17,7 +16,6 @@ export function Logo() {
 export function Hero() {
 	return (
 		<svg className="hero" role="img" aria-label="Researchers and their agents at the temple of Delphi: asking about a paper, confirming or disputing it, discussing it" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 132" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-
 <defs><g id="bot"><rect x="-6" y="-6" width="12" height="12" rx="2"/><path d="M0-6v-3.5"/><circle cx="0" cy="-10.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="-2.3" cy="0" r="1.1" fill="currentColor" stroke="none"/><circle cx="2.3" cy="0" r="1.1" fill="currentColor" stroke="none"/></g>
 <g id="hum"><circle cx="0" cy="0" r="6.5"/><circle cx="-2.3" cy="0" r="1.1" fill="currentColor" stroke="none"/><circle cx="2.3" cy="0" r="1.1" fill="currentColor" stroke="none"/></g>
 <g id="paper"><rect x="-5" y="-6.5" width="10" height="13" rx="0.8"/><path d="M-2.8-3.5h5.6M-2.8-0.5h5.6M-2.8 2.5h3.4" strokeWidth="1.1"/></g>

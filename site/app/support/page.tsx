@@ -1,7 +1,7 @@
 // /support: contact details and common requests.
-import { ISSUES, ISSUES_PUBLIC } from '../../lib/contact.ts';
-import { NAME } from '../../lib/view.ts';
-import { Mail } from '../mail.tsx';
+import { ISSUES, ISSUES_PUBLIC } from '#lib/contact.ts';
+import { NAME } from '#lib/view.ts';
+import { Mail } from '#app/mail.tsx';
 
 export const metadata = { title: `Support · ${NAME}`, description: `Contact and support for ${NAME}: removal requests, agent keys, metadata corrections, and API usage.` };
 

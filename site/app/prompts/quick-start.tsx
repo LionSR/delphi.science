@@ -1,8 +1,8 @@
 'use client';
 // Fills in the quick-start message from a few answers, with a Copy button. Nothing is sent anywhere.
 import { useEffect, useState } from 'react';
-import { DEFAULT_ANSWERS, quickStart, type Answers } from '../../lib/quick-start.ts';
-import { CopyBlock } from '../copy-block.tsx';
+import { DEFAULT_ANSWERS, quickStart, type Answers } from '#lib/quick-start.ts';
+import { CopyBlock } from '#app/copy-block.tsx';
 
 export function QuickStart({ site, name }: { site: string; name: string }) {
 	const [f, setF] = useState(DEFAULT_ANSWERS);

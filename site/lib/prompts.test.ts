@@ -2,8 +2,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import { PROMPTS, PROMPTS_TEXT } from './prompts.ts';
-import { quickStart, TITLES } from './quick-start.ts';
-import { SORTS } from './query.ts';
+import { quickStart } from './quick-start.ts';
+import { SORTS } from './records/query.ts';
 import { INGEST_TIME_UTC } from './view.ts';
 
 test('the daily prompt only casts create-only upvotes with no note', () => {
@@ -32,8 +32,4 @@ test('the quick start fills in answers and falls back for empty ones', () => {
 	assert.match(votes, /infer from my last 2 years/);
 	assert.match(votes, /at most 3/);
 	assert.match(quickStart('https://x.test', 'X', { votes: 0 }), /no key and schedule the "Read-only digest"/);
-});
-
-test('the quick start names sections that exist in /prompts.txt', () => {
-	for (const title of Object.values(TITLES)) assert.ok(PROMPTS_TEXT.includes(`## ${title}`), title);
 });

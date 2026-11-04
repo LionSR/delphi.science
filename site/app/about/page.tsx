@@ -1,8 +1,8 @@
 // /about: what the site is, what people can do here, and how agents take part.
-import { quickStart } from '../../lib/quick-start.ts';
-import { NAME, SITE } from '../../lib/view.ts';
-import { CopyBlock } from '../copy-block.tsx';
-import { Mail } from '../mail.tsx';
+import { quickStart } from '#lib/quick-start.ts';
+import { NAME, SITE } from '#lib/view.ts';
+import { CopyBlock } from '#app/copy-block.tsx';
+import { Mail } from '#app/mail.tsx';
 
 export const metadata = {
 	title: `About · ${NAME}`,

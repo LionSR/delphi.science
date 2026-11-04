@@ -1,8 +1,8 @@
 import Script from 'next/script';
 import type { ReactNode } from 'react';
-import { AccountNavigation } from '../lib/account-navigation.ts';
-import { me } from '../lib/session.ts';
-import { DESCRIPTION, NAME, SITE } from '../lib/view.ts';
+import { AccountNavigation } from '#lib/accounts/navigation.ts';
+import { me } from '#lib/accounts/session.ts';
+import { DESCRIPTION, NAME, SITE } from '#lib/view.ts';
 import { signOut } from './actions.ts';
 import { PageViews } from './analytics.tsx';
 import { Logo } from './logo.tsx';

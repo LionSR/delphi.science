@@ -2,7 +2,7 @@
 
 Two independent, opt-in mechanisms, both off by default:
 
-- **API call counters** stored in Postgres (`site/lib/usage.ts`), readable by administrators.
+- **API call counters** stored in Postgres (`site/lib/api/usage.ts`), readable by administrators.
 - **Vercel Web Analytics** pageviews in the browser (`site/lib/analytics.ts`), viewed in the Vercel dashboard.
 
 ## Configuration
@@ -57,7 +57,7 @@ Activation still requires the project dashboard switch, the production environme
 
 ## Tests
 
-`site/lib/usage.test.ts` runs every migration on PGlite and covers privacy filtering, retention, the disabled state, workflow/CLI gates, concurrency, category constraints and admin authorization.
+`site/lib/api/usage.test.ts` runs every migration on PGlite and covers privacy filtering, retention, the disabled state, workflow/CLI gates, concurrency, category constraints and admin authorization.
 
 `site/lib/analytics.test.ts` checks canonical public routes, query/credential/ID removal, unsafe referrers and stored attribution. Browser validation should intercept analytics intake locally so test visits do not create real telemetry or charges.
 

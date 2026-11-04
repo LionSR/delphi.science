@@ -56,4 +56,4 @@ def problems(value: Any, schema: dict[str, Any], at: str) -> list[str]:
 def check(value: Any, name: str, at: str) -> None:
     """Raises ValueError, naming every problem, when value does not fit the document's schema `name`."""
     if found := problems(value, {"$ref": f"#/components/schemas/{name}"}, at):
-        raise ValueError(f"{at} does not fit the {name} schema (site/lib/openapi.ts):\n  " + "\n  ".join(found[:20]))
+        raise ValueError(f"{at} does not fit the {name} schema (site/lib/api/openapi.ts):\n  " + "\n  ".join(found[:20]))

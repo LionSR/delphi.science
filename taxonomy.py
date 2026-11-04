@@ -74,8 +74,8 @@ FROM_NAME = {
 }
 
 CODE = re.compile(r"^(?:[a-z]+(?:-[a-z]+)?)(?:\.[A-Za-z-]+)?$")
-# The site's search (site/lib/query.ts) reads these rules from this file.
-JSON_PATH = Path(__file__).resolve().parent / "site" / "lib" / "taxonomy.json"
+# The site's search (site/lib/records/query.ts) reads these rules from this file.
+JSON_PATH = Path(__file__).resolve().parent / "site" / "lib" / "records" / "taxonomy.json"
 
 
 def division_of(code: str) -> str:
@@ -106,7 +106,7 @@ def as_json() -> dict:
 
 
 def write_json() -> None:
-    """Writes the rules for the site's cat: search (site/lib/query.ts), if they changed."""
+    """Writes the rules for the site's cat: search (site/lib/records/query.ts), if they changed."""
     text = json.dumps(as_json(), indent=1, ensure_ascii=False) + "\n"
     if not JSON_PATH.exists() or JSON_PATH.read_text() != text:
         JSON_PATH.write_text(text)

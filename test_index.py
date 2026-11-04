@@ -105,11 +105,11 @@ class BoundedWeb(unittest.TestCase):
     def test_web_bridge_starts_without_npm_packages_on_a_clean_runner(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
             clean = Path(raw)
-            for file in ["scripts/read-web.ts", "lib/public-source-fetch.ts"]:
+            for file in ["scripts/read-web.ts", "lib/moderation/source-fetch.ts"]:
                 target = clean / "site" / file
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(SITE / file, target)
-            (clean / "site/package.json").write_text('{"type":"module"}')
+            (clean / "site/package.json").write_text('{"type":"module","imports":{"#lib/*":"./lib/*"}}')
             result = subprocess.run(["node", "--experimental-strip-types", "site/scripts/read-web.ts"], cwd=clean,
                                     input='{"url":"https://127.0.0.1/private"}', text=True, capture_output=True, timeout=12)
             self.assertEqual(result.returncode, 0, result.stderr)
@@ -622,6 +622,13 @@ class Described(Entries):
         self.cmd("discuss", "web/k", self.PDF, "--author", "B. Person")
         self.assertEqual(index.pick(self.read()["discussion"][0], ("title", "author", "added")), {"title": "Comments", "author": "B. Person", "added": "2026-10-21"})
 
+    def test_a_corrected_author_survives_a_recheck_of_a_page_that_names_someone_else(self) -> None:
+        post = "https://blog.example/guest-post"  # the window title names the blog, not the guest who wrote the post
+        S.discussion_link = lambda url: {"kind": "web", "url": url, "title": "Guest post | Blog", "author": "Blog", "text": "now"}
+        self.entry("k", [{"kind": "web", "url": post, "title": "Guest post | Blog", "author": "A. Guest", "text": "then", "added": "2026-10-21"}])
+        self.cmd("discuss", "--recheck")
+        self.assertEqual(index.pick(self.read()["discussion"][0], ("author", "text", "added")), {"author": "A. Guest", "text": "now", "added": "2026-10-21"})
+
 
 class Stance(Entries):
     """A person labels what each response does; only support counts as an upvote, refutes or questions mark it disputed."""
@@ -695,7 +702,7 @@ class Stance(Entries):
 
 
 class StanceCopies(unittest.TestCase):
-    """The migration's generated columns and the stance prompt must match site/lib/stances.json."""
+    """The migration's generated columns and the stance prompt must match site/lib/records/stances.json."""
 
     ROOT = Path(__file__).resolve().parent
 
@@ -812,7 +819,7 @@ class RecordShape(unittest.TestCase):
     def check(self, items: list[dict]) -> None:
         record = {"$ref": "#/components/schemas/Record"}
         found = [p for it in items for p in S_.problems(it, record, it.get("id", "?"))]
-        self.assertFalse(found, "index.py serves records that do not fit the API's Record schema (fix site/lib/openapi.ts, then run "
+        self.assertFalse(found, "index.py serves records that do not fit the API's Record schema (fix site/lib/api/openapi.ts, then run "
                                 "npm run openapi in site/):\n" + "\n".join(found[:20]))
 
     def test_built_items_fit_the_record_schema(self) -> None:

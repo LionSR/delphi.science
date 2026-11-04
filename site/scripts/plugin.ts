@@ -8,7 +8,7 @@ import { execFileSync } from 'node:child_process';
 import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SITE } from '../lib/view.ts';
+import { SITE } from '#lib/view.ts';
 
 const FILES = ['plugin.json', 'mcp.json', 'assets/icon.png'];
 const path = (rel: string) => fileURLToPath(new URL(rel, import.meta.url));

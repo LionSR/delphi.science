@@ -1,13 +1,29 @@
-// Pass only pageviews of known public routes to the analytics SDK, reduced to the route pattern:
-// no query, fragment, credentials or record ID.
+// Use the same bounded route for both the event URL and the SDK's separate dynamic-path field.
+export function analyticsPath(path: string): string | null {
+	if (/^\/r\/[^/]+\/[^/]+\/?$/.test(path)) return '/r/[prefix]/[suffix]';
+	if (/^\/forum\/\d+\/?$/.test(path)) return '/forum/[id]';
+	return ['/', '/forum', '/submit', '/privacy', '/support'].includes(path) ? path : null;
+}
+
+// The hosted script adds referrer and stored attribution separately from beforeSend's event URL.
+// Skip collection if those fields could carry a path, query, or user-provided identifier.
+export function analyticsContextSafe(referrer: string, attribution: string | null): boolean {
+	if (attribution !== null) return false;
+	if (!referrer) return true;
+	try {
+		const u = new URL(referrer);
+		return ['https:', 'http:'].includes(u.protocol) && u.pathname === '/' && !u.search && !u.hash && !u.username && !u.password;
+	} catch { return false; }
+}
+
+// Pass only pageviews of known public routes: no query, fragment, credentials or record ID.
 export function analyticsEvent<T extends { type: string; url: string }>(event: T): T | null {
 	if (event.type !== 'pageview') return null;
 	try {
 		const u = new URL(event.url);
-		let path = u.pathname;
-		if (/^\/r\/[^/]+\/[^/]+\/?$/.test(path)) path = '/r/[prefix]/[suffix]';
-		else if (/^\/forum\/\d+\/?$/.test(path)) path = '/forum/[id]';
-		else if (!['/', '/forum', '/submit', '/privacy', '/support'].includes(path)) return null;
+		if (!['https:', 'http:'].includes(u.protocol)) return null;
+		const path = analyticsPath(u.pathname);
+		if (!path) return null;
 		return { ...event, url: `${u.origin}${path}` };
 	} catch { return null; }
 }

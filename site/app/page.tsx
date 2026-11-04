@@ -9,13 +9,11 @@ import { myVotes } from '#lib/records/votes.ts';
 import { Hero } from './logo.tsx';
 import { Vote } from './vote.tsx';
 import { HomeOrder } from './home-order.ts';
-import { Pager, pageParam } from './pager.ts';
+import { Pager, PAGE_SIZE, pageHref, pageOffset, pageParam } from './pager.ts';
 
 export const dynamic = 'force-dynamic';
 
 type Params = Promise<{ q?: string; sort?: string; page?: string; notice?: string }>;
-
-const PAGE = 50;
 
 export default async function Home({ searchParams }: { searchParams: Params }) {
 	const { q = '', sort = q ? 'relevance' : 'week', page: rawPage, notice } = await searchParams;
@@ -23,7 +21,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	const d = await db();
 	// A query the caller can fix is shown with its fix; the source counts and the session read alongside.
 	const [found, sources, who] = await Promise.all([
-		search(d, q, { sort, offset: (page - 1) * PAGE, limit: PAGE }).then((res) => ({ res, error: '' }), (e) => {
+		search(d, q, { sort, offset: pageOffset(page), limit: PAGE_SIZE }).then((res) => ({ res, error: '' }), (e) => {
 			if (!(e instanceof QueryError)) throw e;
 			return { res: null, error: `${e.message}. ${e.fix}` };
 		}),
@@ -31,8 +29,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	]);
 	const { res, error } = found;
 	const mine = who && res ? await myVotes(d, who.login, res.results.map((r) => String(r.id))) : new Map();
-	const pageHref = (p: number) => `/?${new URLSearchParams({ q, sort, ...(p > 1 ? { page: String(p) } : {}) })}`;
-	const here = pageHref(page);
+	const here = pageHref('/', { q, sort }, page);
 	return (
 		<>
 			<section className="welcome">
@@ -82,7 +79,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 					</li>
 				))}
 			</ol>
-			{res && <Pager page={page} total={res.total} size={PAGE} href={pageHref} />}
+			{res && <Pager page={page} total={res.total} path="/" params={{ q, sort }} />}
 		</>
 	);
 }

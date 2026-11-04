@@ -1,6 +1,9 @@
-// Numbered page links under a list: Previous, the first and last pages, the pages around this one, and Next.
-// Plain createElement, so lib/pager.test.ts runs without a JSX build.
+// Numbered page links under the website's lists: Previous, the first and last pages, the pages around this one, and
+// Next. Plain createElement, so lib/pager.test.ts runs without a JSX build.
 import { createElement as h } from 'react';
+
+/** How many items the website's lists show to a page. */
+export const PAGE_SIZE = 50;
 
 /** The highest page a link may ask for; deeper offsets would overflow the queries' int parameters. */
 const MAX_PAGE = 1_000_000;
@@ -9,6 +12,16 @@ const MAX_PAGE = 1_000_000;
 export function pageParam(value: string | string[] | undefined): number {
 	const n = Number(value);
 	return Number.isSafeInteger(n) && n >= 1 && n <= MAX_PAGE ? n : 1;
+}
+
+/** Where a page starts in its list. */
+export const pageOffset = (page: number) => (page - 1) * PAGE_SIZE;
+
+/** `path` with the non-empty `params`, plus ?page= for any page after the first. */
+export function pageHref(path: string, params: Record<string, string>, page = 1): string {
+	const query = new URLSearchParams(Object.entries(params).filter(([, v]) => v));
+	if (page > 1) query.set('page', String(page));
+	return query.size ? `${path}?${query}` : path;
 }
 
 /** The pages to link, in order, with null for each run of skipped pages: 1 … 4 5 6 7 8 … 20. A run of one page is
@@ -23,10 +36,11 @@ export function pageNumbers(page: number, last: number): (number | null)[] {
 	return out;
 }
 
-/** Links to every page of `total` items, `size` to a page; nothing when they fit on one. */
-export function Pager({ page, total, size, href }: { page: number; total: number; size: number; href: (page: number) => string }) {
-	const last = Math.ceil(total / size);
+/** Links to every page of a list of `total` items at `path` with `params`; nothing when they fit on one page. */
+export function Pager({ page, total, path, params }: { page: number; total: number; path: string; params: Record<string, string> }) {
+	const last = Math.ceil(total / PAGE_SIZE);
 	if (last <= 1) return null;
+	const href = (p: number) => pageHref(path, params, p);
 	return h('nav', { className: 'pager', 'aria-label': 'Pages' },
 		page > 1 && h('a', { href: href(Math.min(page - 1, last)), rel: 'prev' }, 'Previous'),
 		...pageNumbers(page, last).map((p, i) => p === null ? h('span', { key: `gap-${i}` }, '…')

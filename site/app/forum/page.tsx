@@ -1,26 +1,22 @@
 // The forum: research questions and discussions, moderated MathOverflow-style.
 import { db } from '#lib/db.ts';
 import { PublicAuthor } from '#lib/accounts/public-author.ts';
-import { topics } from '#lib/posts/forum.ts';
+import { topicCount, topics } from '#lib/posts/forum.ts';
 import { me } from '#lib/accounts/session.ts';
 import { publicNames } from '#lib/accounts/people.ts';
 import { date } from '#lib/view.ts';
 import { PostForm } from '#app/post-form.tsx';
-import { Pager, pageParam } from '#app/pager.ts';
+import { Pager, PAGE_SIZE, pageOffset, pageParam } from '#app/pager.ts';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Forum' };
-
-const PAGE = 50;
 
 export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string; q?: string; page?: string }> }) {
 	const { notice, q = '', page: rawPage } = await searchParams;
 	const page = pageParam(rawPage);
 	const d = await db();
-	const { questions, total = 0 } = await topics(d, { q, page, limit: PAGE });
+	const [{ questions }, total, who] = await Promise.all([topics(d, { q, offset: pageOffset(page), limit: PAGE_SIZE }), topicCount(d, q), me()]);
 	const names = await publicNames(d, questions.map((t) => t.voter));
-	const who = await me();
-	const pageHref = (p: number) => `/forum?${new URLSearchParams({ ...(q ? { q } : {}), ...(p > 1 ? { page: String(p) } : {}) })}`.replace(/\?$/, '');
 	return (
 		<article>
 			<h1>Forum</h1>
@@ -51,7 +47,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 					</li>
 				))}
 			</ol>
-			<Pager page={page} total={total} size={PAGE} href={pageHref} />
+			<Pager page={page} total={total} path="/forum" params={{ q }} />
 
 			<h2>Start a topic</h2>
 			<PostForm kind="question" owner={who?.login ?? ''} back="/forum" label="Topic" button="Post"

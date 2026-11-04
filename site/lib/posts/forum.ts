@@ -45,30 +45,31 @@ const MATCHES = `WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq
 	best AS (SELECT id, max(rank) AS rank FROM hits GROUP BY id)`;
 
 /** One page of questions: the latest activity first, or with q, the best matches of the words in titles and posts.
- * The API follows next_cursor; the website asks for a numbered page, which also counts the topics (total). */
-export async function topics(db: Db, opts: { q?: string; cursor?: string | null; limit?: number; page?: number } = {}) {
+ * The page starts after the cursor, or without one at `offset` (a numbered page). */
+export async function topics(db: Db, opts: { q?: string; cursor?: string | null; offset?: number; limit?: number } = {}) {
 	const limit = pageSize(opts.limit, 50);
 	const c = decode(opts.cursor);
 	const q = (opts.q ?? '').trim();
-	const params: unknown[] = q ? [q] : [];
-	let from = TOPIC, order = 't.last_at DESC, t.id DESC', offset = 0;
+	const offset = opts.cursor ? Math.max(0, Number(c.o) || 0) : opts.offset ?? 0;
 	if (q) {
-		from = `${MATCHES} ${TOPIC} JOIN best ON best.id = t.id`;
-		order = `best.rank DESC, ${order}`;
+		const rows = (await db.query<Topic>(
+			`${MATCHES} ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $2 OFFSET $3`,
+			[q, limit + 1, offset])).rows;
+		return { questions: rows.slice(0, limit), next_cursor: rows.length > limit ? encode({ o: offset + limit }) : null };
 	}
-	if (opts.page) offset = (opts.page - 1) * limit;
-	else if (q) offset = Math.max(0, Number(c.o) || 0);
-	else if (c.at && Number.isSafeInteger(c.id)) {
-		from += ' WHERE (t.last_at, t.id) < ($1::timestamptz, $2)';
-		params.push(c.at, c.id);
-	}
-	const [rows, total] = await Promise.all([
-		db.query<Topic>(`${from} ORDER BY ${order} LIMIT $${params.length + 1} OFFSET $${params.length + 2}`, [...params, limit + 1, offset]),
-		opts.page ? db.query<{ n: number }>(q ? `${MATCHES} SELECT count(*)::int AS n FROM best` : 'SELECT count(*)::int AS n FROM open_index.topics', q ? [q] : []) : null,
-	]).then(([r, n]) => [r.rows, n?.rows[0].n] as const);
+	const after = c.at && Number.isSafeInteger(c.id) ? 'WHERE (t.last_at, t.id) < ($3::timestamptz, $4)' : '';
+	const rows = (await db.query<Topic>(`${TOPIC} ${after} ORDER BY t.last_at DESC, t.id DESC LIMIT $1 OFFSET $2`,
+		[limit + 1, offset, ...(after ? [c.at, c.id] : [])])).rows;
 	const last = rows[limit - 1];
-	return { questions: rows.slice(0, limit), total,
-		next_cursor: rows.length <= limit ? null : q ? encode({ o: offset + limit }) : encode({ at: new Date(last.last_at).toISOString(), id: last.id }) };
+	return { questions: rows.slice(0, limit),
+		next_cursor: rows.length > limit ? encode({ at: new Date(last.last_at).toISOString(), id: last.id }) : null };
+}
+
+/** How many questions there are, or with q, how many match. */
+export async function topicCount(db: Db, q = ''): Promise<number> {
+	q = q.trim();
+	const sql = q ? `${MATCHES} SELECT count(*)::int AS n FROM best` : 'SELECT count(*)::int AS n FROM open_index.topics';
+	return (await db.query<{ n: number }>(sql, q ? [q] : [])).rows[0].n;
 }
 
 /** One question, without its posts, or null. */

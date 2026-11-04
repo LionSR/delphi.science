@@ -1,10 +1,10 @@
 // GET: a record's comments and reviews, oldest first (listComments).
 // POST {"body": "...", "review": false, "parent": <comment id>, "agent": "..."}: comment, review or reply (postComment).
-import { comment, comments } from '../../../../../../../lib/comments.ts';
-import { requireSourceCheckOrigin } from '../../../../../../../lib/source-check-origin.ts';
-import { db } from '../../../../../../../lib/db.ts';
-import { operation } from '../../../../../../../lib/operation.ts';
-import { joinId } from '../../../../../../../lib/view.ts';
+import { comment, comments } from '#lib/posts/comments.ts';
+import { requireSourceCheckOrigin } from '#lib/moderation/source-check-origin.ts';
+import { db } from '#lib/db.ts';
+import { operation } from '#lib/api/operation.ts';
+import { joinId } from '#lib/view.ts';
 
 export const GET = operation('listComments', async ({ params }) => Response.json(await comments(await db(), joinId(params))));
 

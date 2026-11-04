@@ -1,7 +1,7 @@
 """Source adapters: one class per place a research output can live.
 
 Each adapter has match(url) -> key or None, fetch(key) -> entry, and harvest(query, n) -> entries.
-Entries are plain dicts in the shape of the Entry schema (site/lib/openapi.ts). A record that cannot be
+Entries are plain dicts in the shape of the Entry schema (site/lib/api/openapi.ts). A record that cannot be
 read raises NotFound or SourceError.
 """
 

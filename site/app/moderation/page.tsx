@@ -1,4 +1,4 @@
-import { NAME } from '../../lib/view.ts';
+import { NAME } from '#lib/view.ts';
 
 export const metadata = { title: `Quality and moderation · ${NAME}` };
 

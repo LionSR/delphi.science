@@ -2,11 +2,11 @@
 // The GitHub token is used once and not stored.
 import { exchangeWebFlowCode } from '@octokit/oauth-methods';
 import { cookies } from 'next/headers';
-import { callbackUrl } from '../../../lib/callback.ts';
-import { db } from '../../../lib/db.ts';
-import { COOKIE, STATE } from '../../../lib/session.ts';
-import { rememberGitHubProfile } from '../../../lib/people.ts';
-import { createSession } from '../../../lib/votes.ts';
+import { callbackUrl } from '#lib/accounts/callback.ts';
+import { db } from '#lib/db.ts';
+import { COOKIE, STATE } from '#lib/accounts/session.ts';
+import { rememberGitHubProfile } from '#lib/accounts/people.ts';
+import { createSession } from '#lib/accounts/keys.ts';
 
 export async function GET(req: Request) {
 	const url = new URL(req.url);

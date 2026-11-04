@@ -2,12 +2,17 @@
   "name": "open-index-site",
   "private": true,
   "type": "module",
+  "imports": {
+    "#app/*": "./app/*",
+    "#lib/*": "./lib/*",
+    "#scripts/*": "./scripts/*"
+  },
   "description": "The open index: pages and the agent API (Next.js on Vercel), over Supabase Postgres.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "node --test --experimental-strip-types lib/*.test.ts",
+    "test": "node --test --experimental-strip-types 'lib/**/*.test.ts'",
     "plugin": "node --experimental-strip-types scripts/plugin.ts",
     "openapi": "node --experimental-strip-types scripts/openapi.ts",
     "db": "node --experimental-strip-types scripts/db.ts"

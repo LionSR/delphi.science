@@ -3,8 +3,10 @@
 import { useRef, useState, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { savePostEdit } from './actions.ts';
-import { clearEditDraft, readEditDraft, writeEditDraft, type EditDraft } from '../lib/edit-drafts.ts';
-import { holdFeedbackText, type PostFeedback } from '../lib/post-feedback.ts';
+import { clearEditDraft, readEditDraft, writeEditDraft, type EditDraft } from '#lib/posts/edit-drafts.ts';
+import type { PostFeedback } from '#lib/posts/feedback.ts';
+import { PostFeedbackText } from './post-feedback.tsx';
+import { MAX_BODY } from '#lib/posts/limits.ts';
 
 // sessionStorage can be unavailable; the draft then lives only in component state.
 function stored<T>(use: () => T): T | undefined {
@@ -60,10 +62,8 @@ export function EditPost({ id, owner, body, revision }: { id: number; owner: str
 	if (!editing) return <button className="link" onClick={open}>Edit</button>;
 	return <form className="comment-form tex2jax_ignore" onSubmit={save}>
 		<fieldset disabled={pending}>
-			<textarea autoFocus aria-label="Edit post" required maxLength={4000} rows={6} value={draft.body} onChange={e => remember({ ...draft, body: e.target.value })} />
-			{feedback && <div role="alert">{feedback.code === 'moderation_review_needed'
-				? <p>{holdFeedbackText(feedback)} <a href="/support" target="_blank" rel="noopener noreferrer">Contact Support</a></p>
-				: <><p>{feedback.message}</p><p>{feedback.fix}</p></>}</div>}
+			<textarea autoFocus aria-label="Edit post" required maxLength={MAX_BODY} rows={6} value={draft.body} onChange={e => remember({ ...draft, body: e.target.value })} />
+			{feedback && <div role="alert"><PostFeedbackText feedback={feedback} /></div>}
 			{draft.revision !== revision && <p role="status">The post has changed since this draft. Cancel to start again from the current text.</p>}
 			<div className="edit-actions">
 				<button disabled={pending}>{pending ? 'Saving…' : 'Save'}</button>

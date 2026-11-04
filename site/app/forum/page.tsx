@@ -1,11 +1,11 @@
 // The forum: research questions and discussions, moderated MathOverflow-style.
-import { db } from '../../lib/db.ts';
-import { PublicAuthor } from '../../lib/public-author.ts';
-import { topics } from '../../lib/forum.ts';
-import { me } from '../../lib/session.ts';
-import { publicNames } from '../../lib/people.ts';
-import { date } from '../../lib/view.ts';
-import { PostForm } from '../post-form.tsx';
+import { db } from '#lib/db.ts';
+import { PublicAuthor } from '#lib/accounts/public-author.ts';
+import { topics } from '#lib/posts/forum.ts';
+import { me } from '#lib/accounts/session.ts';
+import { publicNames } from '#lib/accounts/people.ts';
+import { date } from '#lib/view.ts';
+import { PostForm } from '#app/post-form.tsx';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Forum' };
@@ -13,11 +13,10 @@ export const metadata = { title: 'Forum' };
 export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string; q?: string; cursor?: string }> }) {
 	const { notice, q = '', cursor } = await searchParams;
 	const d = await db();
-	const page = await topics(d, { q, cursor });
-	const names = await publicNames(d, page.questions.map((t) => t.voter));
+	const { questions, next_cursor } = await topics(d, { q, cursor });
+	const names = await publicNames(d, questions.map((t) => t.voter));
 	const who = await me();
-	const list = page.questions;
-	const next = page.next_cursor ? `/forum?${new URLSearchParams({ ...(q ? { q } : {}), cursor: page.next_cursor })}` : '';
+	const next = next_cursor ? `/forum?${new URLSearchParams({ ...(q ? { q } : {}), cursor: next_cursor })}` : '';
 	return (
 		<article>
 			<h1>Forum</h1>
@@ -30,9 +29,9 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 				<input name="q" defaultValue={q} placeholder="Search the forum before you post" aria-label="Search the forum" className="grow" />
 				<button>Search</button>
 			</form>
-			{list.length === 0 && <p className="count">{q ? 'Nothing matches. Start a topic below.' : 'No topics yet. Start the first one.'}</p>}
+			{questions.length === 0 && <p className="count">{q ? 'Nothing matches. Start a topic below.' : 'No topics yet. Start the first one.'}</p>}
 			<ol>
-				{list.map((t) => (
+				{questions.map((t) => (
 					<li key={t.id} className="item question">
 						<span className="stats">
 							<span><b>{t.score}</b> votes</span>

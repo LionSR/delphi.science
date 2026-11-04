@@ -216,6 +216,7 @@ export function compact(rec: Record<string, unknown>) {
 interface SearchOptions {
 	limit?: number;
 	cursor?: string | null;
+	offset?: number; // where a numbered page starts, when there is no cursor
 	sort?: string;
 	fields?: 'compact' | 'full';
 	embedding?: number[]; // the query's embedding, for hybrid ranking
@@ -281,7 +282,7 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const fields = opts.fields ?? 'compact';
 	if (fields !== 'compact' && fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(fields)}`, 'Use fields=compact (default) or fields=full.');
 	const limit = Math.max(1, Math.min(Math.trunc(opts.limit ?? DEFAULT_LIMIT), MAX_LIMIT));
-	const { offset, total: known } = decode(opts.cursor);
+	const { offset, total: known } = opts.cursor ? decode(opts.cursor) : { offset: opts.offset ?? 0, total: undefined };
 	// An empty query lists everything.
 	const { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };
 	const n = params.length;

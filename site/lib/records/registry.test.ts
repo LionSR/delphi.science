@@ -216,6 +216,13 @@ describe('submitting and the forum, on Postgres', () => {
 		const one = await topics(db, { limit: 2 });
 		const two = await topics(db, { limit: 2, cursor: one.next_cursor });
 		assert.deepEqual([...ids(one), ...ids(two)], all.slice(0, 4), 'pages follow on without gaps or repeats');
+		const second = await topics(db, { limit: 2, page: 2 });
+		assert.deepEqual([ids(second), second.total], [ids(two), all.length], 'a numbered page matches the cursor page and counts the topics');
+		assert.equal(second.next_cursor, null, 'the last page');
+		const middle = await topics(db, { limit: 1, page: 2 });
+		assert.deepEqual(ids(await topics(db, { limit: 1, cursor: middle.next_cursor })), all.slice(2, 3), 'a numbered page\'s cursor goes on from it');
+		assert.equal((await topics(db, { q: 'Lean OR Ramsey', limit: 1, page: 2 })).total, 2);
+		assert.equal(one.total, undefined, 'cursor pages are not counted');
 		await assert.rejects(topics(db, { cursor: 'nonsense!' }), /cursor is not valid/);
 		const feed = await activity(db, { limit: 100 });
 		const mark = feed.since;

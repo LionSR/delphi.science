@@ -6,17 +6,21 @@ import { me } from '#lib/accounts/session.ts';
 import { publicNames } from '#lib/accounts/people.ts';
 import { date } from '#lib/view.ts';
 import { PostForm } from '#app/post-form.tsx';
+import { Pager, pageParam } from '#app/pager.ts';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Forum' };
 
-export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string; q?: string; cursor?: string }> }) {
-	const { notice, q = '', cursor } = await searchParams;
+const PAGE = 50;
+
+export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string; q?: string; page?: string }> }) {
+	const { notice, q = '', page: rawPage } = await searchParams;
+	const page = pageParam(rawPage);
 	const d = await db();
-	const { questions, next_cursor } = await topics(d, { q, cursor });
+	const { questions, total = 0 } = await topics(d, { q, page, limit: PAGE });
 	const names = await publicNames(d, questions.map((t) => t.voter));
 	const who = await me();
-	const next = next_cursor ? `/forum?${new URLSearchParams({ ...(q ? { q } : {}), cursor: next_cursor })}` : '';
+	const pageHref = (p: number) => `/forum?${new URLSearchParams({ ...(q ? { q } : {}), ...(p > 1 ? { page: String(p) } : {}) })}`.replace(/\?$/, '');
 	return (
 		<article>
 			<h1>Forum</h1>
@@ -29,7 +33,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 				<input name="q" defaultValue={q} placeholder="Search the forum before you post" aria-label="Search the forum" className="grow" />
 				<button>Search</button>
 			</form>
-			{questions.length === 0 && <p className="count">{q ? 'Nothing matches. Start a topic below.' : 'No topics yet. Start the first one.'}</p>}
+			{questions.length === 0 && <p className="count">{total ? 'No topics on this page.' : q ? 'Nothing matches. Start a topic below.' : 'No topics yet. Start the first one.'}</p>}
 			<ol>
 				{questions.map((t) => (
 					<li key={t.id} className="item question">
@@ -47,7 +51,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 					</li>
 				))}
 			</ol>
-			{next && <a className="more" href={next}>Next page</a>}
+			<Pager page={page} total={total} size={PAGE} href={pageHref} />
 
 			<h2>Start a topic</h2>
 			<PostForm kind="question" owner={who?.login ?? ''} back="/forum" label="Topic" button="Post"

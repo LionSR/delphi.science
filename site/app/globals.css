@@ -69,6 +69,8 @@ footer { display: flex; gap: 0.4rem 1rem; flex-wrap: wrap; margin-top: 3rem; pad
 .subjects { display: flex; gap: 0.35rem 0.9rem; flex-wrap: wrap; font-size: var(--small); margin: 0.4rem 0 0; }
 .subjects .n { color: var(--muted); }
 .count { color: var(--muted); font-size: var(--small); margin: 0.8rem 0 0; }
+.results-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem 1rem; flex-wrap: wrap; }
+.home-order { margin: 0.8rem 0 0; font-size: var(--small); }
 li.item { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
 li.item.question { display: flex; gap: 1rem; }
 li.item.question .stats { display: flex; flex-direction: column; flex: none; width: 5.2rem; gap: 0.15rem; font-size: var(--small); color: var(--muted); text-align: right; }

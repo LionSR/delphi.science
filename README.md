@@ -21,7 +21,7 @@ Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are 
 ## Architecture
 
 - **Site and API:** `site/` — Next.js on Vercel, backed by Supabase Postgres.
-- **Indexer:** Python scripts at the repository root (`index.py`, `sources.py`, `store.py`, `candidates.py`).
+- **Indexer:** Python scripts at the repository root (`index.py`, `sources.py`, `store.py`, `candidates.py`, `x_candidates.py`).
 - **Storage:** entries live in `open_index.entries` (via `store.py`). Each update archives the previous version in `open_index.entry_history` and uses a version check, so concurrent jobs cannot overwrite each other. `index.py build` compiles entries into `dist/index.json`, which is loaded into `open_index.records`.
 - **Schema:** `Entry` and `Record` are defined once in the OpenAPI spec (`site/lib/openapi.ts`). TypeScript types (`site/lib/schema.ts`) derive from it, and both Python (`schema.py`) and TypeScript (`ajv`) validate writes and responses against it as closed objects.
 - **Identifiers:** prefixes are registered in `site/lib/prefixes.json` and never reused. `/id/<id>` redirects to the upstream URL, or returns record JSON with `Accept: application/json`.
@@ -45,7 +45,7 @@ Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are 
 - **Metadata:** title, authors, abstract (truncated to ~600 characters), date and URLs come from the upstream API, with per-host rate limiting and a local cache in `.cache/`. Public HTTPS web pages use bounded retrieval; Python reads and refreshes require Node.js.
 - **Refresh:** `index.py refresh` re-fetches the 200 stalest entries older than 7 days, relabels when title or abstract changed, and marks 404s as `gone`.
 - **Classification:** `index.py label` uses DeepSeek (`label-prompt.md`) to label each entry `research`, `non-research`, `fiction`, `low-info` or `harmful`, with an arXiv subject code and up to 4 topic tags. Search defaults to `research`. `harmful` entries are excluded from `index.json` and search but kept in `open_index.entries`. Classification is optional metadata, not peer review and not a condition for inclusion.
-- **External responses (`discussion[]`):** `index.py discuss` links commentary from researchers, labs, journals and established research blogs (no anonymous accounts, aggregators or reposts). X posts store only author, handle and date (via oEmbed) and render through X's embed widget, so deleted posts disappear. Other responses store title, URL, author, date and a verbatim excerpt. `discuss --recheck` runs daily and drops dead links.
+- **External responses (`discussion[]`):** `index.py discuss` links commentary from researchers, labs, journals and established research blogs (no anonymous accounts, aggregators or reposts). X posts store only author, handle and date (via oEmbed) and render through X's embed widget, so deleted posts disappear. Other responses store title, URL, author, date and a verbatim excerpt. A page that does not describe itself, such as a PDF note on a researcher's home page, is attached with `--title`, `--author` and `--date`, which a recheck keeps; a page with no title is not attached otherwise. MathOverflow, Math.SE, CSTheory.SE and Physics.SE posts are read through the Stack Exchange API, and an answer link (`/a/<id>` or `/questions/<id>/<slug>/<answer id>`) credits the answer's author. `discuss --recheck` runs daily and drops dead links.
 - **Stances:** editors set a stance on each response with `discuss --stance`:
   - `refutes` — finds an error that invalidates the main claim
   - `questions` — incomplete step, Lean/prose mismatch, weaker statement than claimed, or priority issue
@@ -89,12 +89,14 @@ python3 index.py refresh [--older-than 7] [--dry-run]
 python3 index.py discuss openai-math/<key> <url>...               # attach external responses
 python3 index.py discuss --recheck [<record id>...]               # drop deleted links
 python3 index.py discuss <record id> <url>... --stance confirms   # set response stance
+python3 index.py discuss <record id> <pdf> --title "..." --author "..." [--date YYYY-MM-DD]  # a note that does not describe itself
 python3 index.py discuss --propose-stances [<record id>...]       # print proposed stance commands
 python3 index.py reception <record id> --draft                    # draft a reception summary
 python3 index.py reception <record id> --reviewed-by <login> [--text "..."] [--links <url>...]
 python3 index.py reception                                        # list published, draft and stale summaries
 python3 index.py build                                            # write dist/index.json
 python3 candidates.py [--days 7]                                  # scan arXiv and MathOverflow for candidate responses
+X_BEARER_TOKEN=... python3 x_candidates.py [--days 4]            # X posts about records, via the X API; prints only
 ```
 
 ### Paid DeepSeek calls
@@ -121,7 +123,7 @@ The browser **Submit** form uses the same gate after GitHub sign-in.
 
 ```bash
 cd site && npm run dev                                 # site and API against local PGlite
-python3 test_index.py && python3 test_candidates.py    # Python tests on ephemeral PGlite
+python3 test_index.py && python3 test_candidates.py && python3 test_x_candidates.py    # Python tests on ephemeral PGlite
 cd site && npm test
 ```
 

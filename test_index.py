@@ -483,6 +483,26 @@ class Discussion(unittest.TestCase):
         self.assertEqual(S.passage(page, "Glas%3A%20the%20zero-free%2C"), ("", ""))  # an encoded comma is part of the text
         self.assertEqual(S.passage(page, "Nobody-,the%20zero-free%20region"), ("", ""))  # the prefix must be on the page
 
+    def test_a_stack_exchange_answer_is_read_as_the_answer_in_every_link_form(self) -> None:
+        asked = []
+
+        def api(url: str, **kw: object) -> dict:
+            asked.append(url.split("?")[0].removeprefix("https://api.stackexchange.com/2.3/"))
+            post = {"owner": {"display_name": "Answerer" if "/answers/" in url else "Asker"}, "body": "<p>Body.</p>",
+                    "title": "Q?", "question_id": 1, "creation_date": 1760000000}
+            return {"items": [post]}
+
+        with patch.object(S, "get_json", api):
+            for url in ("https://mathoverflow.net/a/2", "https://mathoverflow.net/questions/1/q-slug/2#2", "https://physics.stackexchange.com/answers/2"):
+                self.assertEqual(S.discussion_link(url)["author"], "Answerer", url)
+            self.assertEqual(S.discussion_link("https://mathoverflow.net/questions/1/q-slug")["author"], "Asker")
+        self.assertEqual(asked[:2], ["answers/2", "questions/1"])  # an answer, then its question's title
+
+    def test_a_pdf_is_not_read_as_a_page(self) -> None:
+        with patch.object(S, "get", return_value=b"%PDF-1.5\n%\xe2\xe3\xcf\xd3\n1 0 obj<</Length 9>>stream\nx\x9c\x03\x00endstream"):
+            self.assertEqual(S.discussion_link("https://people.example.edu/~a/note.pdf"),
+                             {"kind": "web", "url": "https://people.example.edu/~a/note.pdf", "site": "people.example.edu"})
+
     def test_crosslink_both_ways(self) -> None:
         paper = {"id": "openai-math/P", "title": "P", "discussion": [{"kind": "web", "url": "https://arxiv.org/abs/2610.20058"}, {"kind": "x", "url": "https://x.com/a/status/1"}]}
         reply = {"id": "arxiv/2610.20058", "title": "Primes between 8th powers?"}
@@ -576,6 +596,31 @@ class Recheck(Entries):
         self.cmd("discuss", "--recheck", "web/a")
         self.assertNotIn("discussion", self.read("a"))
         self.assertIn("discussion", self.read("b"))
+
+
+class Described(Entries):
+    """A PDF on someone's home page says nothing about itself: a person gives its title, author and date, and they stay."""
+
+    PDF = "https://people.example.edu/~a/note.pdf"
+
+    def link(self, url: str) -> dict:
+        return {"kind": "web", "url": url, "site": "people.example.edu"} if url.endswith(".pdf") else {"kind": "web", "url": url, "title": "new"}
+
+    def test_a_page_without_a_title_needs_one_given(self) -> None:
+        self.entry("k")
+        self.cmd("discuss", "web/k", self.PDF)
+        self.assertNotIn("discussion", self.read())
+        self.cmd("discuss", "web/k", self.PDF, "--title", "Comments on the proof", "--author", "A. Person", "--date", "2026-10-20")
+        self.assertEqual(index.pick(self.read()["discussion"][0], ("title", "author", "date", "site")),
+                         {"title": "Comments on the proof", "author": "A. Person", "date": "2026-10-20", "site": "people.example.edu"})
+
+    def test_given_fields_survive_a_recheck_and_can_be_corrected_without_a_read(self) -> None:
+        self.entry("k", [{"kind": "web", "url": self.PDF, "site": "people.example.edu", "title": "Comments", "author": "A. Person", "added": "2026-10-21"}])
+        self.cmd("discuss", "--recheck")
+        self.assertEqual(self.read()["discussion"][0]["author"], "A. Person")
+        S.discussion_link = lambda url: self.fail("an attached link is not read again to describe it")
+        self.cmd("discuss", "web/k", self.PDF, "--author", "B. Person")
+        self.assertEqual(index.pick(self.read()["discussion"][0], ("title", "author", "added")), {"title": "Comments", "author": "B. Person", "added": "2026-10-21"})
 
 
 class Stance(Entries):

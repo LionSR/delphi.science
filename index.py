@@ -516,7 +516,7 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
 # ---- discuss ----
 
 KEPT = ("added", "stance")  # a link's fields set by a person, kept when the link is read again
-DESCRIBED = ("title", "author", "date")  # what discuss --title/--author/--date give a page that does not say (a PDF)
+DESCRIBED = ("title", "author", "date")  # a web link's description; discuss --title/--author/--date give or correct it
 DISCUSSED = "jsonb_typeof(entry->'discussion') = 'array' AND jsonb_array_length(entry->'discussion') > 0"
 
 # Stances, which count as upvotes and which mark a record disputed; shared with the site.
@@ -552,10 +552,11 @@ def link_url(url: str, attached: Iterable[str] = ()) -> str:
 
 
 def reread(old: dict[str, Any], fresh: dict[str, Any]) -> dict[str, Any]:
-    """A link read again. A web page keeps the title, author and date it had where the page no longer gives
-    them (a PDF never does: a person gave them); an X post keeps only what the post shows now."""
+    """A link read again. A web page keeps the title, author and date it was attached with, since a person may
+    have given or corrected them (a PDF says nothing; a blog's window title can name the blog, not the guest
+    who wrote the post); an X post keeps only what the post shows now."""
     kept = pick(old, DESCRIBED) if fresh.get("kind") == "web" else {}
-    return {**kept, **fresh, **pick(old, KEPT)}
+    return {**fresh, **kept, **pick(old, KEPT)}
 
 
 def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:

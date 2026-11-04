@@ -3,9 +3,9 @@
 import { useActionState, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { sendPost } from './actions.ts';
-import { adoptGuestDraft, clearDraft, emptyDraft, markDraftLogin, restoreDraft, saveDraft, type Draft } from '../lib/post-drafts.ts';
-import { holdFeedbackText, type PostFormState } from '../lib/post-feedback.ts';
-import copy from '../lib/post-copy.json';
+import { adoptGuestDraft, clearDraft, emptyDraft, markDraftLogin, restoreDraft, saveDraft, type Draft } from '../lib/posts/drafts.ts';
+import { holdFeedbackText, type PostFormState } from '../lib/posts/feedback.ts';
+import copy from '../lib/posts/copy.json';
 
 type Props = { kind: 'question' | 'answer' | 'comment' | 'record' | 'submission'; owner: string; topic?: number; parent?: number; record?: string;
 	back: string; label: string; placeholder: string; button: string; rows?: number };

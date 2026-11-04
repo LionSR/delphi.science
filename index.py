@@ -208,7 +208,7 @@ def harvest(only: str | None, limit: int | None, dry_run: bool) -> int:
     return 0
 
 
-# ---- the labelling model (DeepSeek, as in site/lib/moderate.ts) ----
+# ---- the labelling model (DeepSeek, as in site/lib/moderation/moderate.ts) ----
 
 DEEPSEEK = "https://api.deepseek.com/chat/completions"
 MODEL = "deepseek-flash"
@@ -520,7 +520,7 @@ DESCRIBED = ("title", "author", "date")  # a web link's description; discuss --t
 DISCUSSED = "jsonb_typeof(entry->'discussion') = 'array' AND jsonb_array_length(entry->'discussion') > 0"
 
 # Stances, which count as upvotes and which mark a record disputed; shared with the site.
-STANCE_FILE = json.loads((HERE / "site" / "lib" / "stances.json").read_text())
+STANCE_FILE = json.loads((HERE / "site" / "lib" / "records" / "stances.json").read_text())
 STANCES: dict[str, str] = STANCE_FILE["stances"]
 UPVOTING = set(STANCE_FILE["upvoting"])
 DISPUTING = set(STANCE_FILE["disputing"])
@@ -783,7 +783,7 @@ def reception(record: str | None, draft: bool, text: str | None, reviewed_by: st
 PASSTHROUGH = ("source", "url", "title", "authors", "summary", "domain", "origin", "agent_ready", "gone", "stars", "pdf",
                "family", "family_title", "formalized", "withdrawn", "withdrawn_on", "verified", "trust", "ai_models",
                "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json")
-PREFIXES = json.loads((HERE / "site" / "lib" / "prefixes.json").read_text())["prefixes"]
+PREFIXES = json.loads((HERE / "site" / "lib" / "records" / "prefixes.json").read_text())["prefixes"]
 # An X post's text is shown by X's own embed, so it is never served.
 X_FIELDS = ("kind", "url", "author", "handle", "date", "added", "stance")
 
@@ -845,9 +845,9 @@ def build() -> int:
     entries = [e for _, e in load()]
     all_items = items(entries)
     if unknown := {it["source"] for it in all_items} - PREFIXES.keys():
-        raise SystemExit(f"no prefix for {', '.join(sorted(unknown))}: add it to site/lib/prefixes.json (prefixes are never renamed)")
+        raise SystemExit(f"no prefix for {', '.join(sorted(unknown))}: add it to site/lib/records/prefixes.json (prefixes are never renamed)")
     if bad := [p for it in all_items for p in schema.problems(it, {"$ref": "#/components/schemas/Record"}, it["id"])]:
-        raise SystemExit(f"{len(bad)} problems with the Record schema (site/lib/openapi.ts; then npm run openapi in site/):\n  " + "\n  ".join(bad[:20]))
+        raise SystemExit(f"{len(bad)} problems with the Record schema (site/lib/api/openapi.ts; then npm run openapi in site/):\n  " + "\n  ".join(bad[:20]))
     counts = Counter(it["source"] for it in all_items)
     names = {"app": "agenticpapers.app", **{s.name: s.label for s in S.SOURCES}}
     index = {"generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "labels": names,
@@ -893,7 +893,7 @@ def parser() -> argparse.ArgumentParser:
     d.add_argument("--drop", action="store_true")
     d.add_argument("--dry-run", action="store_true")
     d.add_argument("--recheck", action="store_true", help="read every link again (or the named records' links); a deleted post drops out")
-    d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see site/lib/stances.json); set on links already attached without reading them again")
+    d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see site/lib/records/stances.json); set on links already attached without reading them again")
     d.add_argument("--title", help="the link's title, for a page that does not give one (a PDF note on a home page)")
     d.add_argument("--author", help="who wrote it, for a page that does not say (a PDF)")
     d.add_argument("--date", type=lambda s: dt.date.fromisoformat(s).isoformat(), help="YYYY-MM-DD, for a page that does not say")

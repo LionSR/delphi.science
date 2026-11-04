@@ -1,6 +1,6 @@
 // Small helpers the pages share.
-import prefixes from './prefixes.json' with { type: 'json' };
-import stances from './stances.json' with { type: 'json' };
+import prefixes from './records/prefixes.json' with { type: 'json' };
+import stances from './records/stances.json' with { type: 'json' };
 
 export const SITE = process.env.SITE_URL ?? 'https://delphi.science';
 export const NAME = 'Delphi.science';

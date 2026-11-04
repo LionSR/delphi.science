@@ -3,8 +3,8 @@
 import { useRef, useState, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { savePostEdit } from './actions.ts';
-import { clearEditDraft, readEditDraft, writeEditDraft, type EditDraft } from '../lib/edit-drafts.ts';
-import { holdFeedbackText, type PostFeedback } from '../lib/post-feedback.ts';
+import { clearEditDraft, readEditDraft, writeEditDraft, type EditDraft } from '../lib/posts/edit-drafts.ts';
+import { holdFeedbackText, type PostFeedback } from '../lib/posts/feedback.ts';
 
 // sessionStorage can be unavailable; the draft then lives only in component state.
 function stored<T>(use: () => T): T | undefined {

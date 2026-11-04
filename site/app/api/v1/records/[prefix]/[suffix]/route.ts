@@ -1,7 +1,8 @@
 // GET /api/v1/records/<prefix>/<suffix>: one full record, with its score, reactions and counts (getRecord).
 import { db } from '../../../../../../lib/db.ts';
-import { operation } from '../../../../../../lib/operation.ts';
-import { get, QueryError } from '../../../../../../lib/query.ts';
+import { operation } from '../../../../../../lib/api/operation.ts';
+import { get } from '../../../../../../lib/records/query.ts';
+import { QueryError } from '../../../../../../lib/errors.ts';
 import { joinId } from '../../../../../../lib/view.ts';
 
 export const GET = operation('getRecord', async ({ params }) => {

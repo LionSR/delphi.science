@@ -2,9 +2,9 @@
 import { redirect } from 'next/navigation';
 import { db } from '../../lib/db.ts';
 import { quickStart } from '../../lib/quick-start.ts';
-import { me } from '../../lib/session.ts';
+import { me } from '../../lib/accounts/session.ts';
 import { date, NAME, SITE } from '../../lib/view.ts';
-import { agentKeys } from '../../lib/votes.ts';
+import { agentKeys } from '../../lib/accounts/keys.ts';
 import { dropKey } from '../actions.ts';
 import { CopyBlock } from '../copy-block.tsx';
 

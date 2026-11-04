@@ -1,9 +1,9 @@
 // /stats: aggregate API usage for administrators (the same numbers as /api/v1/stats).
 import { db } from '../../lib/db.ts';
-import { collectionEnabled, retentionEnabled, USAGE_NOTE, usage } from '../../lib/usage.ts';
+import { collectionEnabled, retentionEnabled, USAGE_NOTE, usage } from '../../lib/api/usage.ts';
 import { date, NAME } from '../../lib/view.ts';
-import { me } from '../../lib/session.ts';
-import { canReadUsage } from '../../lib/usage-admin.ts';
+import { me } from '../../lib/accounts/session.ts';
+import { canReadUsage } from '../../lib/api/usage-admin.ts';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: `Usage statistics · ${NAME}`, description: 'Administrator access to aggregate API counts and claimed user-agent products.' };

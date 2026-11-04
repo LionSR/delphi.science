@@ -1,13 +1,13 @@
 // GET /llms.txt (https://llmstxt.org): the agent guide. Endpoints come from the OpenAPI document, query syntax from
-// lib/query.ts. Cached by the agent, not the CDN, so each fetch reaches counted().
-import { counted } from '../../lib/api.ts';
+// lib/records/query.ts. Cached by the agent, not the CDN, so each fetch reaches counted().
+import { counted } from '../../lib/api/caller.ts';
 import { db } from '../../lib/db.ts';
 import { SUPPORT_EMAIL } from '../../lib/contact.ts';
-import { bodyShape, exampleUrl, operations, type Operation } from '../../lib/openapi.ts';
-import prefixes from '../../lib/prefixes.json' with { type: 'json' };
-import { QUERY_GUIDE } from '../../lib/query.ts';
+import { bodyShape, exampleUrl, operations, type Operation } from '../../lib/api/openapi.ts';
+import prefixes from '../../lib/records/prefixes.json' with { type: 'json' };
+import { QUERY_GUIDE } from '../../lib/records/query.ts';
 import { AGENT_DIR, INGEST_TIME_UTC, NAME, SITE } from '../../lib/view.ts';
-import { MAX_AGENT_NAME } from '../../lib/votes.ts';
+import { MAX_AGENT_NAME } from '../../lib/accounts/keys.ts';
 
 export const dynamic = 'force-dynamic';
 

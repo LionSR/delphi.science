@@ -105,7 +105,7 @@ class BoundedWeb(unittest.TestCase):
     def test_web_bridge_starts_without_npm_packages_on_a_clean_runner(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
             clean = Path(raw)
-            for file in ["scripts/read-web.ts", "lib/public-source-fetch.ts"]:
+            for file in ["scripts/read-web.ts", "lib/moderation/source-fetch.ts"]:
                 target = clean / "site" / file
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(SITE / file, target)
@@ -702,7 +702,7 @@ class Stance(Entries):
 
 
 class StanceCopies(unittest.TestCase):
-    """The migration's generated columns and the stance prompt must match site/lib/stances.json."""
+    """The migration's generated columns and the stance prompt must match site/lib/records/stances.json."""
 
     ROOT = Path(__file__).resolve().parent
 
@@ -819,7 +819,7 @@ class RecordShape(unittest.TestCase):
     def check(self, items: list[dict]) -> None:
         record = {"$ref": "#/components/schemas/Record"}
         found = [p for it in items for p in S_.problems(it, record, it.get("id", "?"))]
-        self.assertFalse(found, "index.py serves records that do not fit the API's Record schema (fix site/lib/openapi.ts, then run "
+        self.assertFalse(found, "index.py serves records that do not fit the API's Record schema (fix site/lib/api/openapi.ts, then run "
                                 "npm run openapi in site/):\n" + "\n".join(found[:20]))
 
     def test_built_items_fit_the_record_schema(self) -> None:

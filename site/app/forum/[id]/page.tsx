@@ -1,16 +1,16 @@
 // One question with its comments, then its answers (accepted first, then by score), and a form for a new answer.
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import type { Post } from '../../../lib/comments.ts';
+import type { Post } from '../../../lib/posts/comments.ts';
 import { db } from '../../../lib/db.ts';
-import { myPostVotes, topicWithPosts } from '../../../lib/forum.ts';
-import { me } from '../../../lib/session.ts';
-import { publicNames, type PublicName } from '../../../lib/people.ts';
+import { myPostVotes, topicWithPosts } from '../../../lib/posts/forum.ts';
+import { me } from '../../../lib/accounts/session.ts';
+import { publicNames, type PublicName } from '../../../lib/accounts/people.ts';
 import { date, recordPath } from '../../../lib/view.ts';
 import { acceptOn, votePostOn } from '../../actions.ts';
 import { PostForm } from '../../post-form.tsx';
-import { PublicAuthor } from '../../../lib/public-author.ts';
-import { Markdown } from '../../../lib/markdown.ts';
+import { PublicAuthor } from '../../../lib/accounts/public-author.ts';
+import { Markdown } from '../../../lib/posts/markdown.ts';
 import { EditPost } from '../../edit-post.tsx';
 
 export const dynamic = 'force-dynamic';

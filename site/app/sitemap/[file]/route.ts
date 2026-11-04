@@ -1,7 +1,7 @@
 // GET /sitemap/<n>.xml: one sitemap file; /sitemap.xml lists them.
-import { counted } from '../../../lib/api.ts';
+import { counted } from '../../../lib/api/caller.ts';
 import { db } from '../../../lib/db.ts';
-import { sitemapFile, sitemapFiles, urlset, xmlResponse } from '../../../lib/sitemap.ts';
+import { sitemapFile, sitemapFiles, urlset, xmlResponse } from '../../../lib/records/sitemap.ts';
 import { SITE } from '../../../lib/view.ts';
 
 export const dynamic = 'force-dynamic';

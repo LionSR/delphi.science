@@ -1,9 +1,9 @@
 // GET /api/v1/users/<login>: a person's public activity, as /u/<login> shows it (getUserActivity).
-import { ApiError } from '../../../../../lib/api.ts';
+import { ApiError } from '../../../../../lib/api/caller.ts';
 import { db } from '../../../../../lib/db.ts';
-import { operation } from '../../../../../lib/operation.ts';
-import { publicName } from '../../../../../lib/people.ts';
-import { profile, ProfileUnavailable } from '../../../../../lib/profile.ts';
+import { operation } from '../../../../../lib/api/operation.ts';
+import { publicName } from '../../../../../lib/accounts/people.ts';
+import { profile, ProfileUnavailable } from '../../../../../lib/accounts/profile.ts';
 
 export const GET = operation('getUserActivity', async ({ params, query }) => {
 	try {

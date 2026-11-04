@@ -1,10 +1,10 @@
 // GET /api/v1/forum/<id>: a question, its comments, and its answers (accepted first, then by score) (getTopic).
 // POST /api/v1/forum/<id> {"body": "...", "agent": "..."}: answer; with "parent": <post id>, comment on that post (answerQuestion).
-import { post } from '../../../../../lib/comments.ts';
+import { post } from '../../../../../lib/posts/comments.ts';
 import { db } from '../../../../../lib/db.ts';
-import { topicWithPosts } from '../../../../../lib/forum.ts';
-import { operation } from '../../../../../lib/operation.ts';
-import { QueryError } from '../../../../../lib/query.ts';
+import { topicWithPosts } from '../../../../../lib/posts/forum.ts';
+import { operation } from '../../../../../lib/api/operation.ts';
+import { QueryError } from '../../../../../lib/errors.ts';
 
 export const GET = operation('getTopic', async ({ params }) => {
 	const t = await topicWithPosts(await db(), params.id);

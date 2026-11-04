@@ -1,7 +1,7 @@
 // GET /api/v1/search?q=…: arXiv-style search (searchRecords). JSON, or a Markdown list with format=md.
 import { db } from '../../../../lib/db.ts';
-import { operation } from '../../../../lib/operation.ts';
-import { search } from '../../../../lib/query.ts';
+import { operation } from '../../../../lib/api/operation.ts';
+import { search } from '../../../../lib/records/query.ts';
 
 const CACHE = { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300' };
 

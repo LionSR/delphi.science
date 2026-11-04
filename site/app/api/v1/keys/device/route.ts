@@ -1,7 +1,7 @@
 // POST /api/v1/keys/device {"agent": "Claude Code"}: start device authorization for an agent key (requestAgentKey).
-import { startDevice } from '../../../../../lib/device.ts';
+import { startDevice } from '../../../../../lib/accounts/device.ts';
 import { db } from '../../../../../lib/db.ts';
-import { operation } from '../../../../../lib/operation.ts';
+import { operation } from '../../../../../lib/api/operation.ts';
 import { SITE } from '../../../../../lib/view.ts';
 
 export const POST = operation('requestAgentKey', async ({ body }) => {

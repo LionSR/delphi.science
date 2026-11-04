@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import { PROMPTS, PROMPTS_TEXT } from './prompts.ts';
 import { quickStart, TITLES } from './quick-start.ts';
-import { SORTS } from './query.ts';
+import { SORTS } from './records/query.ts';
 import { INGEST_TIME_UTC } from './view.ts';
 
 test('the daily prompt only casts create-only upvotes with no note', () => {

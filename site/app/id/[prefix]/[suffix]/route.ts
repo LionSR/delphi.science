@@ -1,7 +1,8 @@
 // GET /id/<prefix>/<suffix>: redirects to the record's source, or returns the record for Accept: application/json.
-import { counted, handle } from '../../../../lib/api.ts';
+import { counted, handle } from '../../../../lib/api/caller.ts';
 import { db } from '../../../../lib/db.ts';
-import { get, QueryError } from '../../../../lib/query.ts';
+import { get } from '../../../../lib/records/query.ts';
+import { QueryError } from '../../../../lib/errors.ts';
 import { recordId, type IdParams } from '../../../../lib/view.ts';
 
 export const GET = counted('GET /id/{prefix}/{suffix}', (req: Request, ctx: IdParams) =>

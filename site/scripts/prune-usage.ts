@@ -1,6 +1,6 @@
 // Deletes old API usage counters (usage-retention.yml). Output is deliberately generic so logs never show the URL or errors.
 import postgres from 'postgres';
-import { pruneUsage, retentionEnabled } from '../lib/usage.ts';
+import { pruneUsage, retentionEnabled } from '../lib/api/usage.ts';
 
 let sql: ReturnType<typeof postgres> | undefined;
 try {

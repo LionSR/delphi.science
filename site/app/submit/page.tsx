@@ -1,5 +1,5 @@
-import { me } from '../../lib/session.ts';
-import { MAX_PER_DAY } from '../../lib/submit.ts';
+import { me } from '../../lib/accounts/session.ts';
+import { MAX_PER_DAY } from '../../lib/records/submit.ts';
 import { SITE } from '../../lib/view.ts';
 import { PostForm } from '../post-form.tsx';
 

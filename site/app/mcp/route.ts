@@ -1,8 +1,8 @@
-// POST /mcp: read-only, stateless Streamable HTTP MCP server (lib/mcp.ts). Without sessions or a server stream,
+// POST /mcp: read-only, stateless Streamable HTTP MCP server (lib/api/mcp.ts). Without sessions or a server stream,
 // GET and DELETE answer 405, as the transport spec allows.
-import { counted } from '../../lib/api.ts';
+import { counted } from '../../lib/api/caller.ts';
 import { db } from '../../lib/db.ts';
-import { handle } from '../../lib/mcp.ts';
+import { handle } from '../../lib/api/mcp.ts';
 
 // Reads need no key, so any page may call it.
 const CORS = {

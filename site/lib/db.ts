@@ -2,7 +2,12 @@
 // loaded with the last local build.
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import type { Db } from './query.ts';
+
+/** Anything that runs a parameterized query: PGlite's db.query, or postgres.js via sql.unsafe. */
+export type Db = {
+	query<T = Record<string, unknown>>(sql: string, params?: unknown[]): Promise<{ rows: T[] }>;
+	transaction?<T>(run: (tx: Db) => Promise<T>): Promise<T>;
+};
 
 const MIGRATIONS = 'supabase/migrations';
 const BUILD = '../dist/index.json';
@@ -21,7 +26,7 @@ async function open(): Promise<Db> {
 	}
 	const { PGlite } = await import('@electric-sql/pglite');
 	const { vector } = await import('@electric-sql/pglite/vector');
-	const { load } = await import('./load.ts');
+	const { load } = await import('./records/load.ts');
 	const pg = new PGlite({ extensions: { vector } });
 	const dir = join(process.cwd(), MIGRATIONS);
 	for (const f of readdirSync(dir).filter((f) => f.endsWith('.sql')).sort()) await pg.exec(readFileSync(join(dir, f), 'utf8'));

@@ -1,6 +1,6 @@
 // Prompt templates people paste into their own agents (/prompts and /prompts.txt).
 // The daily-vote template follows the rules in /llms.txt: owner consent, create-only votes, no notes by default.
-import { MAX_LIMIT } from './query.ts';
+import { MAX_LIMIT } from './records/query.ts';
 import { TITLES } from './quick-start.ts';
 import { AGENT_DIR, INGEST_TIME_UTC, NAME, SITE } from './view.ts';
 

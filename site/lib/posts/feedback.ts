@@ -1,25 +1,7 @@
-import { QueryError } from '../errors.ts';
+import { CodedError, QueryError } from '../errors.ts';
 
 export type PostFeedback = { code: string; message: string; fix: string };
 export type PostFormState = { status: 'idle' | 'failed' | 'posted'; feedback?: PostFeedback; location?: string };
-
-/** A refusal with its own HTTP status and error code, which API replies and post forms pass on as given. */
-export class CodedError<Status extends number, Code extends string = string> extends QueryError {
-	readonly status: Status; readonly code: Code;
-	constructor(status: Status, code: Code, message: string, fix: string) { super(message, fix); this.status = status; this.code = code; }
-}
-
-export class EditError extends CodedError<403 | 409> {}
-export class SourceCheckError extends CodedError<403 | 503> {}
-
-type ModerationCode = 'moderation_rejected' | 'moderation_review_needed' | 'moderation_unavailable';
-
-/** The code is set by server control flow, not read from the model's text. */
-export class ModerationError extends CodedError<409 | 422 | 503, ModerationCode> {
-	constructor(code: ModerationCode, message: string, fix: string) {
-		super(code === 'moderation_rejected' ? 422 : code === 'moderation_review_needed' ? 409 : 503, code, message, fix);
-	}
-}
 
 /** An unexpected error may come after the write, so the author is asked to check the thread before retrying. */
 export function postFeedback(error: unknown): PostFeedback {

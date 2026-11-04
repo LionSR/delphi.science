@@ -3,7 +3,7 @@
 import { db } from '../../../../lib/db.ts';
 import { activity, startTopic, topics } from '../../../../lib/posts/forum.ts';
 import { operation } from '../../../../lib/api/operation.ts';
-import { FORUM } from '../cache.ts';
+import { FORUM } from '../../../../lib/api/cache.ts';
 
 export const GET = operation('listForum', async ({ query }) => {
 	const d = await db();

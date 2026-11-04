@@ -1,6 +1,6 @@
 // Public-source checks for a record: fresh retrievals and reviewed historical observations, kept distinct.
 import { createHash } from 'node:crypto';
-import { QueryError } from '../errors.ts';
+import { NotFoundError, QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
 import { lookupCuratedPublicSource, type CuratedPublicSnapshot } from './curated-sources.ts';
 import { reserveAttempt, finishAttempt } from './audit.ts';
@@ -148,7 +148,7 @@ export async function checkPublicSources(db: Db, who: Voter, record: string, url
 		throw new QueryError('Send one to five public source URLs.', 'Each URL must be at most 2,000 characters.');
 	}
 	if (!(await db.query('SELECT id FROM open_index.records WHERE id=$1 AND NOT gone', [record])).rows.length) {
-		throw new QueryError(`no record ${JSON.stringify(record)}`, 'Open an existing research record.');
+		throw new NotFoundError(`no record ${JSON.stringify(record)}`, 'Open an existing research record.');
 	}
 	const audit = await reserveAttempt(db, who, 'source_check');
 	const batch = await collectPublicSources(record, urls, fetchSource, { allowCurated: true });

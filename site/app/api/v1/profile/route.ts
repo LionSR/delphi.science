@@ -3,7 +3,7 @@
 import { db } from '../../../../lib/db.ts';
 import { operation } from '../../../../lib/api/operation.ts';
 import { editPublicName, ownName } from '../../../../lib/accounts/people.ts';
-import { PRIVATE } from '../cache.ts';
+import { PRIVATE } from '../../../../lib/api/cache.ts';
 
 export const GET = operation('getMyProfile', async ({ voter }) => Response.json(await ownName(await db(), voter.login), { headers: PRIVATE }));
 

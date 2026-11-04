@@ -5,7 +5,7 @@ import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/
 import * as z from 'zod';
 import { operationById, spec } from './openapi.ts';
 import { compact, get, parse, search, SORTS } from '../records/query.ts';
-import { QueryError } from '../errors.ts';
+import { NotFoundError, QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
 import { NAME, recordPath, SITE } from '../view.ts';
 
@@ -47,7 +47,7 @@ async function searchRecords(db: Db, { q, query, sort, limit, cursor, fields }: 
 
 async function getRecord(db: Db, { id }: { id: string }) {
 	const rec = await get(db, id);
-	if (!rec) throw new QueryError(`no record ${JSON.stringify(id)}`, 'Use an id from a search_records result, e.g. openai-math/The-Quasi-Riemann-Hypothesis.');
+	if (!rec) throw new NotFoundError(`no record ${JSON.stringify(id)}`, 'Use an id from a search_records result, e.g. openai-math/The-Quasi-Riemann-Hypothesis.');
 	return { ...shown(rec), discussion: links(rec).map(response), discusses: Array.isArray(rec.discusses) ? rec.discusses : [] };
 }
 
@@ -73,10 +73,9 @@ const inline = (s: unknown): any => {
 	if (typeof ref === 'string') return inline(components[ref.replace('#/components/schemas/', '')]);
 	return Object.fromEntries(Object.entries(s).map(([k, v]) => [k, inline(v)]));
 };
-const op = (id: string) => operationById(id)!;
 /** An operation's parameters as the properties of one object: each its schema, with the parameter's description. */
 const parameters = (id: string): Record<string, Json> =>
-	Object.fromEntries(op(id).parameters.map((p) => [p.name, { ...inline(p.schema), ...(p.description ? { description: p.description } : {}) }]));
+	Object.fromEntries(operationById(id).parameters.map((p) => [p.name, { ...inline(p.schema), ...(p.description ? { description: p.description } : {}) }]));
 
 /** A zod schema for validation that reports the original JSON Schema in tools/list. */
 function schema(json: Json, s: z.ZodType = z.fromJSONSchema(json as z.core.JSONSchema.JSONSchema)): z.ZodType {
@@ -148,12 +147,12 @@ const COVERS = `Covers records indexed in ${NAME} (AI-generated research release
 const TOOLS = {
 	search_records: {
 		title: 'Search records',
-		description: `${op('searchRecords').summary} Returns one page of records with page URL and discussed response count; pass fields=full or call get_record for full discussion[] items. ${COVERS} An empty q lists records newest first.`,
+		description: `${operationById('searchRecords').summary} Returns one page of records with page URL and discussed response count; pass fields=full or call get_record for full discussion[] items. ${COVERS} An empty q lists records newest first.`,
 		inputSchema: schema(SEARCH_IN), outputSchema: schema(SEARCH_OUT),
 	},
 	get_record: {
 		title: 'Get a record',
-		description: `${op('getRecord').summary} Accepts a record ID from search_records. Response quote fields contain short verbatim excerpts; open url for the full text. An empty discussion[] means no responses have been linked in the index yet.`,
+		description: `${operationById('getRecord').summary} Accepts a record ID from search_records. Response quote fields contain short verbatim excerpts; open url for the full text. An empty discussion[] means no responses have been linked in the index yet.`,
 		// Hand-built so a bad id gets a readable error.
 		inputSchema: schema(GET_IN, z.object({ id: z.string().min(3).max(300).regex(ID, 'a record id is <prefix>/<suffix>, e.g. arxiv/2610.20058; use an id search_records returns') })),
 		outputSchema: schema(GET_OUT),

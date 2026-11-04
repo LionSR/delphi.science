@@ -2,7 +2,7 @@
 import { refuseKeys, type Voter } from '../accounts/keys.ts';
 import { screen, type Moderator } from '../moderation/moderate.ts';
 import type { SourceRetriever } from '../moderation/source-checks.ts';
-import { QueryError } from '../errors.ts';
+import { NotFoundError, QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
 
 export type Vote = { value?: 1 | -1; emoji?: string; note?: string; retrieveSources?: boolean; ifAbsent?: boolean };
@@ -28,7 +28,7 @@ export async function vote(db: Db, recordId: string, voter: Voter, v: Vote, mode
 	if (note.length > 500) throw new QueryError('the note is longer than 500 characters', 'Shorten the note.');
 	await refuseKeys(db, note);
 	const rec = (await db.query<{ repo: string | null; record: unknown }>("SELECT record, record->>'repo' AS repo FROM open_index.records WHERE id = $1", [recordId])).rows[0];
-	if (!rec) throw new QueryError(`no record ${JSON.stringify(recordId)}`, 'Use an id from a search result.');
+	if (!rec) throw new NotFoundError(`no record ${JSON.stringify(recordId)}`, 'Use an id from a search result.');
 	// Nobody votes on their own repository.
 	const owner = rec.repo?.match(/github\.com\/([^/]+)\//i)?.[1]?.toLowerCase();
 	if (owner && owner === voter.login.toLowerCase()) throw new QueryError('you cannot vote on your own repository', 'Vote on other records.');
@@ -56,6 +56,6 @@ export async function votes(db: Db, recordId: string) {
 
 async function tally(db: Db, recordId: string) {
 	const row = (await db.query<{ score: number; reactions: Record<string, number> }>('SELECT score, reactions FROM open_index.records WHERE id = $1', [recordId])).rows[0];
-	if (!row) throw new QueryError(`no record ${JSON.stringify(recordId)}`, 'Use an id from a search result.');
+	if (!row) throw new NotFoundError(`no record ${JSON.stringify(recordId)}`, 'Use an id from a search result.');
 	return { id: recordId, score: row.score, reactions: row.reactions };
 }

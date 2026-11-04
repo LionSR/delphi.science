@@ -29,7 +29,6 @@ const components = spec.components.schemas as Record<string, Json>;
 const inline = (s: unknown): any => Array.isArray(s) ? s.map(inline) : !s || typeof s !== 'object' ? s
 	: typeof (s as Json).$ref === 'string' ? inline(components[(s as Json).$ref.split('/').pop()])
 		: Object.fromEntries(Object.entries(s).map(([k, v]) => [k, inline(v)]));
-const operation = (id: string) => operationById(id)!;
 const param = (p: Json) => ({ ...p.schema, ...(p.description ? { description: p.description } : {}) });
 const without = (o: Json, ...keys: string[]) => Object.fromEntries(Object.entries(o).filter(([k]) => !keys.includes(k)));
 
@@ -44,11 +43,11 @@ const problems = (schema: Json, data: unknown) => {
 describe('the MCP tools follow the OpenAPI document', () => {
 	test('search_records takes searchRecords\' query parameters, but format', async () => {
 		const { search_records: t } = await listTools();
-		const params = operation('searchRecords').parameters.filter((p) => p.name !== 'format');
+		const params = operationById('searchRecords').parameters.filter((p) => p.name !== 'format');
 		assert.deepEqual(Object.keys(t.inputSchema.properties).sort(), params.map((p) => p.name).sort());
 		// The same type, enum, limits, default and description, length caps included.
 		for (const p of params) assert.deepEqual(t.inputSchema.properties[p.name], param(p), p.name);
-		assert.ok(t.description.startsWith(operation('searchRecords').summary));
+		assert.ok(t.description.startsWith(operationById('searchRecords').summary));
 	});
 
 	test('list_discussed_records takes the same, with its query in q\'s syntax and no q or sort', async () => {
@@ -61,8 +60,8 @@ describe('the MCP tools follow the OpenAPI document', () => {
 	test('get_record takes getRecord\'s path parameters as one id', async () => {
 		const { get_record: t } = await listTools();
 		assert.deepEqual(t.inputSchema.required, ['id']);
-		for (const p of operation('getRecord').parameters) assert.ok(t.inputSchema.properties.id.description.includes(p.description), p.name);
-		assert.ok(t.description.startsWith(operation('getRecord').summary));
+		for (const p of operationById('getRecord').parameters) assert.ok(t.inputSchema.properties.id.description.includes(p.description), p.name);
+		assert.ok(t.description.startsWith(operationById('getRecord').summary));
 	});
 
 	test('outputs are Record and SearchResult, with page for links and responses shown as quotes', async () => {

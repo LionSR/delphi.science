@@ -2,7 +2,7 @@
 // names by id or URL become its mentions.
 import type { SourceRetriever } from '../moderation/source-checks.ts';
 import { screen, type Moderator, type Post as ModeratedPost } from '../moderation/moderate.ts';
-import { QueryError } from '../errors.ts';
+import { NotFoundError, QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
 import { refuseKeys, type Voter } from '../accounts/keys.ts';
 
@@ -39,8 +39,8 @@ export async function post(db: Db, place: Place, voter: Voter, c: NewPost, moder
 		onRecord ? 'SELECT title, 0 AS posts, record FROM open_index.records WHERE id = $1' : 'SELECT title, posts_count AS posts FROM open_index.topics WHERE id = $1',
 		[value])).rows[0];
 	if (!target) {
-		if (onRecord) throw new QueryError(`no record ${JSON.stringify(place.record)}`, 'Use an id from a search result.');
-		throw new QueryError(`no topic ${place.topic}`, 'Use a topic id from GET /api/v1/forum.');
+		if (onRecord) throw new NotFoundError(`no record ${JSON.stringify(place.record)}`, 'Use an id from a search result.');
+		throw new NotFoundError(`no topic ${place.topic}`, 'Use a topic id from GET /api/v1/forum.');
 	}
 
 	const context: NonNullable<ModeratedPost['context']> = {};

@@ -1,6 +1,6 @@
 // The Origin rule for source checks, shared by browser actions and the API.
 import { SITE } from '../view.ts';
-import { SourceCheckError } from '../posts/feedback.ts';
+import { SourceCheckError } from '../errors.ts';
 
 /**
  * Allow only the site's origin and this Vercel deployment's. Host and forwarded headers are ignored.

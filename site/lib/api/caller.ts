@@ -3,23 +3,13 @@
 import { checkToken } from '@octokit/oauth-methods';
 import { after } from 'next/server';
 import { db } from '../db.ts';
-import { QueryError } from '../errors.ts';
-import { CodedError } from '../posts/feedback.ts';
+import { CodedError, NotFoundError, QueryError } from '../errors.ts';
+import { PRIVATE } from './cache.ts';
 import { client, collectionEnabled, countCall } from './usage.ts';
 import { SITE } from '../view.ts';
 import { voterFromKey, type Voter } from '../accounts/keys.ts';
 
-export class ApiError extends Error {
-	readonly status: number;
-	readonly code: string;
-	readonly fix: string;
-	constructor(status: number, code: string, message: string, fix: string) {
-		super(message);
-		this.status = status;
-		this.code = code;
-		this.fix = fix;
-	}
-}
+export class ApiError extends CodedError {}
 
 /** The token in `Authorization: Bearer <token>`, if any. */
 export const bearer = (req: Request) => req.headers.get('authorization')?.match(/^Bearer\s+(\S+)$/i)?.[1];
@@ -45,20 +35,16 @@ export async function voter(req: Request, agent: string): Promise<Voter> {
 }
 
 const errorResponse = (status: number, code: string, e: { message: string; fix: string }) =>
-	Response.json({ error: { code, message: e.message, fix: e.fix } }, { status, headers: { 'Cache-Control': 'private, no-store' } });
+	Response.json({ error: { code, message: e.message, fix: e.fix } }, { status, headers: PRIVATE });
 
 /** Runs a route, turning known errors into {"error": {code, message, fix}}. */
 export async function handle(run: () => Promise<Response>): Promise<Response> {
 	try {
 		return await run();
 	} catch (e) {
-		if (e instanceof ApiError || e instanceof CodedError) {
-			return errorResponse(e.status, e.code, e);
-		}
-		if (e instanceof QueryError) {
-			const notFound = /^no (record|topic|post) /.test(e.message);
-			return errorResponse(notFound ? 404 : 400, notFound ? 'not_found' : 'bad_request', e);
-		}
+		if (e instanceof CodedError) return errorResponse(e.status, e.code, e);
+		if (e instanceof NotFoundError) return errorResponse(404, 'not_found', e);
+		if (e instanceof QueryError) return errorResponse(400, 'bad_request', e);
 		throw e;
 	}
 }

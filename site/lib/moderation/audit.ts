@@ -1,7 +1,7 @@
 // The daily attempt ledger shared by posting and explicit source checks (open_index.moderations).
 import { QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
-import { ModerationError } from '../posts/feedback.ts';
+import { ModerationError } from '../errors.ts';
 import type { Voter } from '../accounts/keys.ts';
 
 const MAX_ATTEMPTS_PER_DAY = 30;

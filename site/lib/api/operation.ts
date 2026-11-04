@@ -6,7 +6,7 @@
 import { Ajv2020, type ErrorObject, type ValidateFunction } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { ApiError, counted, handle, voter } from './caller.ts';
-import { operationById, spec, type Operation, type Parameter, type Schema } from './openapi.ts';
+import { endpointName, operationById, spec, type Operation, type Parameter, type Schema } from './openapi.ts';
 import type { FromSchema, Simplify } from './schema.ts';
 import type { Voter } from '../accounts/keys.ts';
 
@@ -122,8 +122,7 @@ type Ctx = { params?: Promise<Record<string, string>> };
  */
 export function operation<I extends OperationId>(id: I, run: (input: Input<I>) => Response | Promise<Response>) {
 	const op = operationById(id);
-	if (!op) throw new Error(`no operation ${id} in lib/api/openapi.ts`);
-	const endpoint = `${op.method} ${op.path}`;
+	const endpoint = endpointName(op);
 	const c = checks(op);
 	const handler = counted(endpoint, (req: Request, ctx?: Ctx) => handle(async () => {
 		let body: unknown;

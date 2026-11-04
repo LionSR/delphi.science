@@ -2,7 +2,7 @@
 import { db } from '../../../../lib/db.ts';
 import { operation } from '../../../../lib/api/operation.ts';
 import { search } from '../../../../lib/records/query.ts';
-import { RECORDS } from '../cache.ts';
+import { RECORDS } from '../../../../lib/api/cache.ts';
 
 export const GET = operation('searchRecords', async ({ query }) => {
 	const res = await search(await db(), query.q ?? '', { limit: query.limit, cursor: query.cursor, sort: query.sort, fields: query.fields });

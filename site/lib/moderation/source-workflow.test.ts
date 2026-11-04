@@ -76,7 +76,7 @@ test('actual preflight API authenticates Bearer only, checks Origin, rejects sup
 	try {
 		(globalThis as { openIndexDb?: Promise<Db> }).openIndexDb = Promise.resolve(db);
 		const key = await createAgentKey(db, 'api-source-author', 'Offline test');
-		const { sourceCheckOperation } = await import('./source-check-api.ts');
+		const { sourceCheckOperation } = await import('../api/source-check-operation.ts');
 		const handler = sourceCheckOperation(async (t, d) => { calls++; return retrieved(t, d); });
 		const request = async (body: unknown, headers: Record<string, string> = {}, pathRecord = record) => handler(
 			new Request(`https://open-research-index.vercel.app/api/v1/records/${record}/source-checks`, { method: 'POST', headers: { 'Content-Type': 'application/json', ...headers }, body: JSON.stringify(body) }),

@@ -5,7 +5,7 @@ import { before, beforeEach, after, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { comment, post, thread } from './comments.ts';
 import { editPost } from './edit.ts';
-import { EditError } from './feedback.ts';
+import { EditError } from '../errors.ts';
 import { startTopic, votePost, accept, topicWithPosts } from './forum.ts';
 import { load } from '../records/load.ts';
 import type { Moderator, Post } from '../moderation/moderate.ts';

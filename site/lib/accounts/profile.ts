@@ -1,6 +1,6 @@
 // A person's public activity, for /u/<login>: posts by type, MathOverflow-style, and record votes (already public on
 // each record). Forum post votes stay private. Reads only rows that are already public.
-import { QueryError } from '../errors.ts';
+import { CodedError, QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
 import { recordPath } from '../view.ts';
 
@@ -36,8 +36,8 @@ type VoteRow = { record_id: string; title: string; agent: string; value: 1 | -1 
 const badLogin = () => new QueryError('Use a valid GitHub login.', 'Use 1–39 ASCII letters/digits or single internal hyphens; account paths and display names are not handles.');
 const badCursor = () => new QueryError('The public-activity cursor is invalid for this handle.', 'Pass this handle’s next_cursor unchanged, or start from its first page.');
 /** The database could not answer; the API reports it as 503. */
-export class ProfileUnavailable extends QueryError {}
-const unavailable = () => new ProfileUnavailable('Public activity is temporarily unavailable.', 'Try this public activity page again later.');
+export class ProfileUnavailable extends CodedError {}
+const unavailable = () => new ProfileUnavailable(503, 'unavailable', 'Public activity is temporarily unavailable.', 'Try this public activity page again later.');
 
 export function normalizeProfileLogin(value: unknown): string {
 	if (typeof value !== 'string' || !/^[a-z\d](?:[a-z\d-]{0,37}[a-z\d])?$/i.test(value) || value.includes('--')) throw badLogin();

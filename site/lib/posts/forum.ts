@@ -1,7 +1,7 @@
 // The forum: questions, voted answers (the asker may accept one), and comments. Posting goes through comments.ts.
 import { startQuestion, thread, type Post } from './comments.ts';
 import type { Moderator } from '../moderation/moderate.ts';
-import { QueryError } from '../errors.ts';
+import { NotFoundError, QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
 import { refuseKeys, type Voter } from '../accounts/keys.ts';
 
@@ -87,7 +87,7 @@ export async function topicWithPosts(db: Db, id: number) {
 export async function votePost(db: Db, topicId: number, postId: number, voter: Voter, value: number) {
 	if (![1, -1, 0].includes(value)) throw new QueryError('value must be 1, -1 or 0', 'Send "value": 1 (up), -1 (down) or 0 (take it back).');
 	const p = (await db.query<{ voter: string }>('SELECT voter FROM open_index.comments WHERE id = $1 AND topic_id = $2', [postId, topicId])).rows[0];
-	if (!p) throw new QueryError(`no post ${postId} in topic ${topicId}`, 'Use a post id from GET /api/v1/forum/<id>.');
+	if (!p) throw new NotFoundError(`no post ${postId} in topic ${topicId}`, 'Use a post id from GET /api/v1/forum/<id>.');
 	if (p.voter === voter.login) throw new QueryError('you cannot vote on your own post', 'Vote on other posts.');
 	if (value === 0) await db.query('DELETE FROM open_index.post_votes WHERE comment_id = $1 AND voter = $2', [postId, voter.login]);
 	else await db.query(
@@ -101,7 +101,7 @@ export async function votePost(db: Db, topicId: number, postId: number, voter: V
 /** The asker accepts an answer, or takes the acceptance back by accepting it again. */
 export async function accept(db: Db, topicId: number, postId: number, voter: Voter) {
 	const t = await topicWithPosts(db, topicId);
-	if (!t) throw new QueryError(`no topic ${topicId}`, 'Use a topic id from GET /api/v1/forum.');
+	if (!t) throw new NotFoundError(`no topic ${topicId}`, 'Use a topic id from GET /api/v1/forum.');
 	if (t.voter !== voter.login) throw new QueryError('only the asker can accept an answer', 'Vote on it instead.');
 	if (!t.answers.some((a) => a.id === postId)) throw new QueryError(`post ${postId} is not an answer to this question`, 'Accept an id from answers[].');
 	const next = t.accepted_id === postId ? null : postId;

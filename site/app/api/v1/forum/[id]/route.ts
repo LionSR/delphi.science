@@ -4,12 +4,12 @@ import { post } from '../../../../../lib/posts/comments.ts';
 import { db } from '../../../../../lib/db.ts';
 import { topicWithPosts } from '../../../../../lib/posts/forum.ts';
 import { operation } from '../../../../../lib/api/operation.ts';
-import { QueryError } from '../../../../../lib/errors.ts';
-import { FORUM } from '../../cache.ts';
+import { NotFoundError } from '../../../../../lib/errors.ts';
+import { FORUM } from '../../../../../lib/api/cache.ts';
 
 export const GET = operation('getTopic', async ({ params }) => {
 	const t = await topicWithPosts(await db(), params.id);
-	if (!t) throw new QueryError(`no topic ${params.id}`, 'Use a topic id from GET /api/v1/forum.');
+	if (!t) throw new NotFoundError(`no topic ${params.id}`, 'Use a topic id from GET /api/v1/forum.');
 	return Response.json(t, { headers: FORUM });
 });
 

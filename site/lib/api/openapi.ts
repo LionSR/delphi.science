@@ -518,8 +518,15 @@ export const operations: readonly Operation[] = Object.entries(spec.paths as unk
 		body: op.requestBody?.content['application/json'].schema, secured: Boolean(op.security?.length),
 	})));
 
-/** The operation with this operationId, if the document has one. */
-export const operationById = (id: string) => operations.find((o) => o.operationId === id);
+/** The operation with this operationId; an id the document lacks is a programming error. */
+export function operationById(id: string): Operation {
+	const op = operations.find((o) => o.operationId === id);
+	if (!op) throw new Error(`no operation ${id} in lib/api/openapi.ts`);
+	return op;
+}
+
+/** How usage counts and the docs name an operation: GET /api/v1/search. */
+export const endpointName = (op: Operation) => `${op.method} ${op.path}`;
 
 // The values a schema allows: 1..100, compact|full, text (at most 500 characters).
 function shape(s: Schema): string {
@@ -533,7 +540,7 @@ function shape(s: Schema): string {
 /** The operation as one line: GET /api/v1/search?q=<text>&sort=relevance|newest|… */
 export function call(op: Operation): string {
 	const query = op.parameters.filter((p) => p.in === 'query').map((p) => `${p.name}=${p.schema.enum ? shape(p.schema) : `<${shape(p.schema)}>`}`);
-	return `${op.method} ${op.path}${query.length ? `?${query.join('&')}` : ''}`;
+	return `${endpointName(op)}${query.length ? `?${query.join('&')}` : ''}`;
 }
 
 /** Its JSON body as one line: {"body": text (1-4000 characters, required), "review": true|false, …}. */

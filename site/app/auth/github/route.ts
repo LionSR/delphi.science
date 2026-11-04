@@ -1,9 +1,9 @@
 // GET /auth/github?next=<path>: redirect to GitHub sign-in. In local development without a GitHub App, sign in as @local-dev.
 import { cookies } from 'next/headers';
-import { callbackUrl } from '../../../lib/callback.ts';
-import { db } from '../../../lib/db.ts';
-import { COOKIE, safeNext, STATE } from '../../../lib/session.ts';
-import { createSession } from '../../../lib/votes.ts';
+import { callbackUrl } from '#lib/accounts/callback.ts';
+import { db } from '#lib/db.ts';
+import { COOKIE, safeNext, STATE } from '#lib/accounts/session.ts';
+import { createSession } from '#lib/accounts/keys.ts';
 
 export async function GET(req: Request) {
 	const url = new URL(req.url);

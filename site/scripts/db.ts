@@ -3,18 +3,15 @@
 //
 //   node --experimental-strip-types scripts/db.ts [--entries ../fixtures/entries.jsonl]
 //   SUPABASE_DB_URL=<the URL it prints> python3 index.py build
-import { readdirSync, readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { createServer } from 'node:net';
 import { parseArgs } from 'node:util';
-import { PGlite } from '@electric-sql/pglite';
-import { vector } from '@electric-sql/pglite/vector';
 import { PGLiteSocketServer } from '@electric-sql/pglite-socket';
+import { migratedDb } from '#lib/testing.ts';
 
 const { values } = parseArgs({ options: { entries: { type: 'string' } } });
-const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 
-const db = new PGlite({ extensions: { vector } });
-for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) await db.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
+const db = await migratedDb();
 if (values.entries) {
 	// JSON lines, as store.py keeps them; the id is <source>/<key>.
 	const entries = readFileSync(values.entries, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l));

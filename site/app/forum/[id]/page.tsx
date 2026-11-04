@@ -1,28 +1,35 @@
 // One question with its comments, then its answers (accepted first, then by score), and a form for a new answer.
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import type { Post } from '../../../lib/comments.ts';
-import { db } from '../../../lib/db.ts';
-import { myPostVotes, topicWithPosts } from '../../../lib/forum.ts';
-import { me } from '../../../lib/session.ts';
-import { publicNames, type PublicName } from '../../../lib/people.ts';
-import { date, recordPath } from '../../../lib/view.ts';
-import { acceptOn, votePostOn } from '../../actions.ts';
-import { PostForm } from '../../post-form.tsx';
-import { PublicAuthor } from '../../../lib/public-author.ts';
-import { Markdown } from '../../../lib/markdown.ts';
-import { EditPost } from '../../edit-post.tsx';
+import { cache, type ReactNode } from 'react';
+import type { Post } from '#lib/posts/comments.ts';
+import { db } from '#lib/db.ts';
+import { myPostVotes, topicWithPosts } from '#lib/posts/forum.ts';
+import { me } from '#lib/accounts/session.ts';
+import { publicNames, type PublicName } from '#lib/accounts/people.ts';
+import { date, recordPath } from '#lib/view.ts';
+import { acceptOn, votePostOn } from '#app/actions.ts';
+import { PostForm } from '#app/post-form.tsx';
+import { PublicAuthor } from '#lib/accounts/public-author.ts';
+import { Markdown } from '#lib/posts/markdown.ts';
+import { OwnerEdit } from '#app/owner-edit.tsx';
 
 export const dynamic = 'force-dynamic';
+
+// Read once per request: the metadata and the page both need it.
+const topicById = cache(async (id: number) => topicWithPosts(await db(), id));
 
 type Ctx = { params: Promise<{ id: string }>; searchParams: Promise<{ notice?: string }> };
 
 export async function generateMetadata({ params }: Ctx): Promise<Metadata> {
-	const t = await topicWithPosts(await db(), Number((await params).id));
+	const t = await topicById(Number((await params).id));
 	return t ? { title: t.title, alternates: { types: { 'application/json': `/api/v1/forum/${t.id}` } } } : {};
 }
 
 type Names = Map<string, PublicName>;
+type Thread = { topic: number; owner: string; names: Names };
+type WithComments = Post & { comments: Post[] };
+
 const by = (p: Post, names: Names) => <PublicAuthor voter={p.voter} agent={p.agent} who={names.get(p.voter)} />;
 
 function Votes({ topic, p, mine }: { topic: number; p: Post; mine?: number }) {
@@ -38,12 +45,12 @@ function Votes({ topic, p, mine }: { topic: number; p: Post; mine?: number }) {
 	);
 }
 
-function Comments({ topic, p, owner, names }: { topic: number; p: Post & { comments: Post[] }; owner: string; names: Names }) {
+function Comments({ topic, p, owner, names }: Thread & { p: WithComments }) {
 	return (
 		<div className="post-comments">
 			{p.comments.map((c) => (
 				<div className="post-comment" key={c.id} id={`p${c.id}`}><Markdown text={c.body} postId={c.id} /><span className="meta-inline">{by(c, names)} · {date(c.at)}</span>
-					{owner === c.voter && <EditPost key={owner} id={c.id} owner={owner} body={c.body} revision={c.revision} />}</div>
+					<OwnerEdit post={c} owner={owner} /></div>
 			))}
 			<details>
 				<summary>Add a comment</summary>
@@ -54,17 +61,33 @@ function Comments({ topic, p, owner, names }: { topic: number; p: Post & { comme
 	);
 }
 
+/** The question or an answer: votes beside the body, then its details line (`meta`) and its comments. */
+function Entry({ p, mine, className, meta, ...thread }: Thread & { p: WithComments; mine?: number; className: string; meta: ReactNode }) {
+	return (
+		<div className={className} id={`p${p.id}`}>
+			<Votes topic={thread.topic} p={p} mine={mine} />
+			<div className="post-body">
+				<Markdown text={p.body} postId={p.id} />
+				<OwnerEdit post={p} owner={thread.owner} />
+				{meta}
+				<Comments {...thread} p={p} />
+			</div>
+		</div>
+	);
+}
+
 export default async function Question({ params, searchParams }: Ctx) {
-	const t = await topicWithPosts(await db(), Number((await params).id));
+	const d = await db();
+	const [t, who, { notice }] = await Promise.all([topicById(Number((await params).id)), me(), searchParams]);
 	if (!t) notFound();
-	const { notice } = await searchParams;
-	const who = await me();
-	const ids = [t.question, ...t.answers].map((p) => p.id);
-	const mine = who ? await myPostVotes(await db(), who.login, ids) : new Map<number, number>();
+	const posts = [t.question, ...t.answers];
 	const owner = who?.login ?? '';
-	const all = [t.question, ...t.answers].flatMap((p) => [p, ...((p as Post & { comments?: Post[] }).comments ?? [])]);
-	const names = await publicNames(await db(), all.map((p) => p.voter));
+	const [mine, names] = await Promise.all([
+		who ? myPostVotes(d, who.login, posts.map((p) => p.id)) : new Map<number, number>(),
+		publicNames(d, posts.flatMap((p) => [p, ...p.comments]).map((p) => p.voter)),
+	]);
 	const asker = who?.login === t.voter;
+	const thread: Thread = { topic: t.id, owner, names };
 	return (
 		<article>
 			<p className="meta"><a href="/forum">Forum</a></p>
@@ -72,43 +95,32 @@ export default async function Question({ params, searchParams }: Ctx) {
 			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
 			{notice && <p className="count">{notice}</p>}
 
-			<div className="post" id={`p${t.question.id}`}>
-				<Votes topic={t.id} p={t.question} mine={mine.get(t.question.id)} />
-				<div className="post-body">
-					<Markdown text={t.question.body} postId={t.question.id} />
-					{owner === t.question.voter && <EditPost key={owner} id={t.question.id} owner={owner} body={t.question.body} revision={t.question.revision} />}
-					<p className="meta">
-						<span>posted by {by(t.question, names)}</span>
-						<span>{date(t.question.at)}</span>
-						{t.question.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
-					</p>
-					<Comments topic={t.id} p={t.question} owner={owner} names={names} />
-				</div>
-			</div>
+			<Entry {...thread} p={t.question} mine={mine.get(t.question.id)} className="post" meta={
+				<p className="meta">
+					<span>posted by {by(t.question, names)}</span>
+					<span>{date(t.question.at)}</span>
+					{t.question.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
+				</p>
+			} />
 
 			<h2>{t.answers.length} {t.answers.length === 1 ? 'reply' : 'replies'}</h2>
 			{t.answers.map((a) => (
-				<div key={a.id} className={a.accepted ? 'post accepted' : 'post'} id={`p${a.id}`}>
-					<Votes topic={t.id} p={a} mine={mine.get(a.id)} />
-					<div className="post-body">
-						<Markdown text={a.body} postId={a.id} />
-						{owner === a.voter && <EditPost key={owner} id={a.id} owner={owner} body={a.body} revision={a.revision} />}
-						<div className="meta">
-							<span>replied by {by(a, names)}</span>
-							<span>{date(a.at)}</span>
-							{a.accepted && <span className="badge">✓ accepted</span>}
-							{asker && (
-								<form action={acceptOn} className="inline">
-									<input type="hidden" name="topic" value={t.id} />
-									<input type="hidden" name="post" value={a.id} />
-									<button className="link">{a.accepted ? 'Unaccept' : 'Accept as the answer'}</button>
-								</form>
-							)}
-							{a.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
-						</div>
-						<Comments topic={t.id} p={a} owner={owner} names={names} />
+				<Entry key={a.id} {...thread} p={a} mine={mine.get(a.id)} className={a.accepted ? 'post accepted' : 'post'} meta={
+					// A div, not a p: it can hold the accept form.
+					<div className="meta">
+						<span>replied by {by(a, names)}</span>
+						<span>{date(a.at)}</span>
+						{a.accepted && <span className="badge">✓ accepted</span>}
+						{asker && (
+							<form action={acceptOn} className="inline">
+								<input type="hidden" name="topic" value={t.id} />
+								<input type="hidden" name="post" value={a.id} />
+								<button className="link">{a.accepted ? 'Unaccept' : 'Accept as the answer'}</button>
+							</form>
+						)}
+						{a.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
 					</div>
-				</div>
+				} />
 			))}
 
 			<h2>Your reply</h2>

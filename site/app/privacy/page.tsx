@@ -1,7 +1,7 @@
 // /privacy: what personal data the site keeps, why, who receives it, for how long, and how to remove it.
-import { OPERATOR } from '../../lib/contact.ts';
-import { NAME } from '../../lib/view.ts';
-import { Mail } from '../mail.tsx';
+import { OPERATOR } from '#lib/contact.ts';
+import { NAME } from '#lib/view.ts';
+import { Mail } from '#app/mail.tsx';
 
 export const metadata = { title: `Privacy · ${NAME}`, description: `Privacy policy for ${NAME}: data collection, processors, retention periods, and removal requests.` };
 

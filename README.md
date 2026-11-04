@@ -23,8 +23,8 @@ Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are 
 - **Site and API:** `site/` — Next.js on Vercel, backed by Supabase Postgres.
 - **Indexer:** Python scripts at the repository root (`index.py`, `sources.py`, `store.py`, `candidates.py`, `x_candidates.py`).
 - **Storage:** entries live in `open_index.entries` (via `store.py`). Each update archives the previous version in `open_index.entry_history` and uses a version check, so concurrent jobs cannot overwrite each other. `index.py build` compiles entries into `dist/index.json`, which is loaded into `open_index.records`.
-- **Schema:** `Entry` and `Record` are defined once in the OpenAPI spec (`site/lib/openapi.ts`). TypeScript types (`site/lib/schema.ts`) derive from it, and both Python (`schema.py`) and TypeScript (`ajv`) validate writes and responses against it as closed objects.
-- **Identifiers:** prefixes are registered in `site/lib/prefixes.json` and never reused. `/id/<id>` redirects to the upstream URL, or returns record JSON with `Accept: application/json`.
+- **Schema:** `Entry` and `Record` are defined once in the OpenAPI spec (`site/lib/api/openapi.ts`). TypeScript types (`site/lib/api/schema.ts`) derive from it, and both Python (`schema.py`) and TypeScript (`ajv`) validate writes and responses against it as closed objects.
+- **Identifiers:** prefixes are registered in `site/lib/records/prefixes.json` and never reused. `/id/<id>` redirects to the upstream URL, or returns record JSON with `Accept: application/json`.
 
 ### Agent access
 
@@ -59,7 +59,7 @@ Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are 
 
 ## Publication moderation
 
-Submissions, forum questions/answers/comments, record reviews and public vote notes all pass the DeepSeek gate in `site/lib/moderate.ts` before any public write. The public policy is at [/moderation](https://delphi.science/moderation) (`site/app/moderation/page.tsx`).
+Submissions, forum questions/answers/comments, record reviews and public vote notes all pass the DeepSeek gate in `site/lib/moderation/moderate.ts` before any public write. The public policy is at [/moderation](https://delphi.science/moderation) (`site/app/moderation/page.tsx`).
 
 - Decisions: `ACCEPT`, `REQUEST_REVISION`, `REJECT`, `REVIEW_NEEDED`. Only `ACCEPT` publishes.
 - Reasons name a concrete defect or contribution. Brevity, non-native English, AI authorship, stated uncertainty and negative results are not defects. This is screening, not peer review.
@@ -130,6 +130,7 @@ cd site && npm test
 - Without a GitHub OAuth App configured, "Sign in" logs you in as `@local-dev`.
 - Build without Supabase (as CI does): `cd site && npm run db -- --entries ../fixtures/entries.jsonl`, export the printed `SUPABASE_DB_URL`, then `python3 index.py build`. Refresh the fixture from production with `python3 fixtures/make.py`.
 - Apply migrations in `site/supabase/migrations/` with `supabase db push`.
+- `site/lib` is grouped by domain: `records`, `posts`, `moderation`, `accounts` and `api`, with shared helpers at the top. Imports from another folder use `#lib/…`, `#app/…` or `#scripts/…` (the `imports` map in `site/package.json`, which Node, TypeScript and Next.js all resolve); imports from the same folder stay `./…`. Tests use `lib/testing.ts` for a migrated PGlite, the local build and route handlers.
 
 ## Operations
 
@@ -138,7 +139,7 @@ cd site && npm test
 - `.github/workflows/usage-retention.yml` — optional usage-counter cleanup; see [docs/usage-analytics.md](docs/usage-analytics.md).
 - `.github/workflows/author-check.yml` — commits must use a Vercel team email (`VERCEL_TEAM_EMAILS`), e.g. `git config user.email 14889516+LionSR@users.noreply.github.com`.
 - `harvest.json` configures harvest jobs; `"enabled": false` skips one.
-- **Adding a source:** implement an adapter class in `sources.py` with `match`, `fetch` and `harvest`; register it in `SOURCES` and `site/lib/prefixes.json`; add URL resolution in `site/lib/resolve.ts` if users can submit it directly.
+- **Adding a source:** implement an adapter class in `sources.py` with `match`, `fetch` and `harvest`; register it in `SOURCES` and `site/lib/records/prefixes.json`; add URL resolution in `site/lib/records/resolve.ts` if users can submit it directly.
 - **Usage analytics** are off by default; setup and privacy bounds are in [docs/usage-analytics.md](docs/usage-analytics.md). Review Vercel costs before enabling.
 
 ## Further docs

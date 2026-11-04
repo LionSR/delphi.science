@@ -4,11 +4,11 @@ Historical record for [PR #30](https://github.com/LionSR/open-research-index/pul
 
 ## Scope
 
-- DeepSeek moderation gate with four decisions (`site/lib/moderate.ts`) for submissions, questions, answers, comments/reviews and vote notes.
-- Submissions resolve upstream metadata before screening; refused objects are never written (`site/lib/submit.ts`).
-- Moderation context includes the question, reply parent, up to four earlier posts, or the record's metadata (`site/lib/comments.ts`).
-- Sanitized Markdown with MathJax SVG; no raw HTML or remote images (`site/lib/markdown.ts`).
-- Browser drafts kept per author and thread after a refusal (`site/app/post-form.tsx`, `site/lib/post-drafts.ts`, `site/lib/post-feedback.ts`).
+- DeepSeek moderation gate with four decisions (`site/lib/moderation/moderate.ts`) for submissions, questions, answers, comments/reviews and vote notes.
+- Submissions resolve upstream metadata before screening; refused objects are never written (`site/lib/records/submit.ts`).
+- Moderation context includes the question, reply parent, up to four earlier posts, or the record's metadata (`site/lib/posts/comments.ts`).
+- Sanitized Markdown with MathJax SVG; no raw HTML or remote images (`site/lib/posts/markdown.ts`).
+- Browser drafts kept per author and thread after a refusal (`site/app/post-form.tsx`, `site/lib/posts/drafts.ts`, `site/lib/posts/feedback.ts`).
 
 ## Results
 

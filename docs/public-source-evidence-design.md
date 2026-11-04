@@ -2,13 +2,13 @@
 
 ## Problem
 
-The citation gate in `site/lib/moderate.ts` only recognizes indexed record IDs and URLs. Anything else is held. That blocks legitimate source guides that cite community letters, public collections, social posts or official pages, and those must not be turned into fake research records just to pass the gate.
+The citation gate in `site/lib/moderation/moderate.ts` only recognizes indexed record IDs and URLs. Anything else is held. That blocks legitimate source guides that cite community letters, public collections, social posts or official pages, and those must not be turned into fake research records just to pass the gate.
 
 ## Solution
 
 Comments, reviews and vote notes on an existing record can be backed by public source evidence in two ways:
 
-1. **Curated observations.** For an exact record/URL pair listed in `site/lib/curated-public-sources.json`, the gate can use that dated, repository-reviewed observation. See [curated-source-review.md](curated-source-review.md).
+1. **Curated observations.** For an exact record/URL pair listed in `site/lib/moderation/curated-sources.json`, the gate can use that dated, repository-reviewed observation. See [curated-source-review.md](curated-source-review.md).
 2. **Fresh retrieval.** The server fetches the cited public sources itself and passes bounded excerpts to the moderation model as untrusted source data.
 
 A successful check shows what a public endpoint returned at a given time. It says nothing about whether the cited claim is true. Only an ordinary `ACCEPT` publishes. The forum and submission gates are unchanged.
@@ -17,7 +17,7 @@ A successful check shows what a public endpoint returned at a given time. It say
 
 - **Preflight (optional):** `POST /api/v1/records/<prefix>/<suffix>/source-checks` with up to 5 URLs. It returns, per URL, the canonical reference, status, observation time, provenance and a next step. It never posts and never calls a model.
 - **Posting:** a post with `retrieve_sources: true` fetches its cited URLs again within that request. Earlier preflight results are never reused or trusted, and a fresh request never falls back to curated observations. Without the flag, posting makes no outbound fetches.
-- **Auth:** the API takes Bearer auth only and rejects an unexpected `Origin`; browser actions require an active session and an allowed origin (`site/lib/source-check-origin.ts`). The server checks the record exists. Client-supplied text, status, excerpts or `verified` flags are ignored.
+- **Auth:** the API takes Bearer auth only and rejects an unexpected `Origin`; browser actions require an active session and an allowed origin (`site/lib/moderation/source-check-origin.ts`). The server checks the record exists. Client-supplied text, status, excerpts or `verified` flags are ignored.
 - **Feedback** distinguishes unindexed, unsupported, inaccessible/private, identity mismatch, 404/410 and retrieval failure. An unavailable source is never reported as a false claim.
 
 ## Adapters
@@ -30,7 +30,7 @@ A successful check shows what a public endpoint returned at a given time. It say
 
 Network and parser adapters are injected so tests run offline.
 
-## Fetch security (`site/lib/public-source-fetch.ts`)
+## Fetch security (`site/lib/moderation/source-fetch.ts`)
 
 - Only adapter-generated HTTPS URLs on a narrow host/path allowlist. URL credentials, non-default ports, IP literals, encoded traversal and unknown query parameters are rejected before any DNS lookup.
 - Node HTTPS with normal TLS verification. DNS answers must be public IPv4; the validated address is pinned in the socket lookup. No connection pooling, proxies, cookies or auth headers.
@@ -46,7 +46,7 @@ Network and parser adapters are injected so tests run offline.
 
 ## Tests
 
-`public-source-checks.test.ts`, `public-source-fetch.test.ts`, `source-check-origin.test.ts`, `source-workflow.test.ts` and `moderation-sources.test.ts` in `site/lib/` cover URL canonicalization, DNS/redirect rules, limits, adapter identity checks, auth and origin, rate reservation before network access, fresh/curated separation, and that no non-`ACCEPT` outcome writes anything. They use scripted decisions and no real network or model.
+`source-checks.test.ts`, `source-fetch.test.ts`, `source-check-origin.test.ts`, `source-workflow.test.ts` and `citations.test.ts` in `site/lib/moderation/` cover URL canonicalization, DNS/redirect rules, limits, adapter identity checks, auth and origin, rate reservation before network access, fresh/curated separation, and that no non-`ACCEPT` outcome writes anything. They use scripted decisions and no real network or model.
 
 ## Billing
 

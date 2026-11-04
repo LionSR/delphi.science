@@ -3,23 +3,21 @@
 import { revalidatePath } from 'next/cache';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { db } from '../lib/db.ts';
-import { approveDevice, denyDevice } from '../lib/device.ts';
-import { editPost } from '../lib/edit-post.ts';
-import { accept, votePost } from '../lib/forum.ts';
-import { editPublicName } from '../lib/people.ts';
-import { profilePath } from '../lib/public-author.ts';
-import { postFeedback, type PostFeedback, type PostFormState } from '../lib/post-feedback.ts';
-import { submitPostForm, type PostInput } from '../lib/post-form-submit.ts';
-import { QueryError } from '../lib/query.ts';
-import { COOKIE, me, safeNext } from '../lib/session.ts';
-import { requireSourceCheckOrigin } from '../lib/source-check-origin.ts';
-import { recordPath } from '../lib/view.ts';
-import { myVotes, revokeAgentKey, revokeKey, unvote, vote } from '../lib/votes.ts';
+import { db } from '#lib/db.ts';
+import { approveDevice, denyDevice } from '#lib/accounts/device.ts';
+import { editPost } from '#lib/posts/edit.ts';
+import { accept, votePost } from '#lib/posts/forum.ts';
+import { editPublicName } from '#lib/accounts/people.ts';
+import { profilePath } from '#lib/accounts/public-author.ts';
+import { postFeedback, type PostFeedback, type PostFormState } from '#lib/posts/feedback.ts';
+import { FORM_KINDS, type PostInput, submitPostForm } from '#lib/posts/form-submit.ts';
+import { QueryError } from '#lib/errors.ts';
+import { COOKIE, me, safeNext, signedIn } from '#lib/accounts/session.ts';
+import { requireSourceCheckOrigin } from '#lib/moderation/source-check-origin.ts';
+import { recordPath } from '#lib/view.ts';
+import { myVotes, unvote, vote } from '#lib/records/votes.ts';
+import { revokeAgentKey, revokeKey } from '#lib/accounts/keys.ts';
 
-const KINDS: PostInput['kind'][] = ['question', 'answer', 'comment', 'record', 'submission'];
-
-const signedIn = async (back: string) => (await me()) ?? redirect(`/auth/github?next=${encodeURIComponent(back)}`);
 
 // Runs a form action and redirects back, with a QueryError's message as ?notice=.
 async function thenBack(back: string, act: () => Promise<unknown>) {
@@ -49,7 +47,7 @@ export async function savePostEdit(input: { id: number; body: string; revision: 
 
 export async function sendPost(_previous: PostFormState, form: FormData): Promise<PostFormState> {
 	const kind = String(form.get('kind')) as PostInput['kind'];
-	if (!KINDS.includes(kind)) {
+	if (!(FORM_KINDS as readonly string[]).includes(kind)) {
 		return { status: 'failed', feedback: { code: 'bad_request', message: 'Choose a topic, reply, comment or review form.', fix: 'Open the relevant thread and try again.' } };
 	}
 	try {

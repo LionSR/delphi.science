@@ -1,6 +1,6 @@
-// GET /api/v1/openapi.json: the API as an OpenAPI 3.1 document (lib/openapi.ts).
-import { counted } from '../../../../lib/api.ts';
-import { spec } from '../../../../lib/openapi.ts';
+// GET /api/v1/openapi.json: the API as an OpenAPI 3.1 document (lib/api/openapi.ts).
+import { counted } from '#lib/api/caller.ts';
+import { DOCUMENT } from '#lib/api/cache.ts';
+import { spec } from '#lib/api/openapi.ts';
 
-// Cached by the agent, not the CDN, so each fetch reaches counted().
-export const GET = counted('GET /api/v1/openapi.json', () => Response.json(spec, { headers: { 'Cache-Control': 'public, max-age=3600', 'Access-Control-Allow-Origin': '*' } }));
+export const GET = counted('GET /api/v1/openapi.json', () => Response.json(spec, { headers: { ...DOCUMENT, 'Access-Control-Allow-Origin': '*' } }));

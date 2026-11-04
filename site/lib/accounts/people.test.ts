@@ -2,8 +2,8 @@
 import { strict as assert } from 'node:assert';
 import { after, before, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
-import type { Db } from '../db.ts';
-import { migratedDb, migrations } from '../testing.ts';
+import type { Db } from '#lib/db.ts';
+import { migratedDb, migrations } from '#lib/testing.ts';
 import { editPublicName, profileAffiliation, publicName, publicNames, rememberGitHubProfile } from './people.ts';
 
 let db: PGlite;

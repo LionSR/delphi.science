@@ -2,7 +2,7 @@
 import { Analytics, type BeforeSendEvent } from '@vercel/analytics/react';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { analyticsContextSafe, analyticsEvent, analyticsPath } from '../lib/analytics.ts';
+import { analyticsContextSafe, analyticsEvent, analyticsPath } from '#lib/analytics.ts';
 
 function contextSafe() {
 	try { return analyticsContextSafe(document.referrer, localStorage.getItem('__va_attribution')); }

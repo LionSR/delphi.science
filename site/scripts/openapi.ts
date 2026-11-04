@@ -7,7 +7,7 @@ export const FILE = fileURLToPath(new URL('../openapi.json', import.meta.url));
 
 export async function openapiJson(): Promise<string> {
 	delete process.env.SITE_URL; // before lib/view.ts reads it
-	const { spec } = await import('../lib/api/openapi.ts');
+	const { spec } = await import('#lib/api/openapi.ts');
 	return `${JSON.stringify(spec, null, '\t')}\n`;
 }
 

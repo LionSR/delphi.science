@@ -1,6 +1,6 @@
 // GET /prompts.txt: the /prompts templates as plain text, for agents. Built once at deploy.
-import { DOCUMENT } from '../../lib/api/cache.ts';
-import { PROMPTS_TEXT } from '../../lib/prompts.ts';
+import { DOCUMENT } from '#lib/api/cache.ts';
+import { PROMPTS_TEXT } from '#lib/prompts.ts';
 
 export const dynamic = 'force-static';
 

@@ -1,14 +1,14 @@
 // Post feedback classification, offline and on real PGlite posting paths.
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
-import { type Moderator } from '../moderation/moderate.ts';
-import { ModerationError } from '../errors.ts';
+import { type Moderator } from '#lib/moderation/moderate.ts';
+import { ModerationError } from '#lib/errors.ts';
 import { postFeedback, holdFeedbackText } from './feedback.ts';
 import { submitPostForm, type PostInput } from './form-submit.ts';
-import { createAgentKey } from '../accounts/keys.ts';
-import { load } from '../records/load.ts';
-import type { Db } from '../db.ts';
-import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
+import { createAgentKey } from '#lib/accounts/keys.ts';
+import { load } from '#lib/records/load.ts';
+import type { Db } from '#lib/db.ts';
+import { allowRouteImports, migratedDb, useDb } from '#lib/testing.ts';
 
 allowRouteImports();
 const accept: Moderator = async () => ({ decision: 'ACCEPT', verification_needed: false, reason: 'Self-contained scoped argument.', fix: '' });
@@ -81,7 +81,7 @@ test('actual forum API distinguishes 422 refusal from 503 unavailable and preser
 		useDb(pg);
 		const key = await createAgentKey(pg, user.login, user.agent);
 		process.env.DEEPSEEK_API_KEY = 'offline-provider-fixture';
-		const { POST } = await import('../../app/api/v1/forum/route.ts');
+		const { POST } = await import('#app/api/v1/forum/route.ts');
 		let unavailable = false;
 		globalThis.fetch = (async () => {
 			if (unavailable) return new Response('down', { status: 503 });

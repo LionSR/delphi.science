@@ -2,12 +2,12 @@
 // agent key (oik_…) or a GitHub token from this index's GitHub App.
 import { checkToken } from '@octokit/oauth-methods';
 import { after } from 'next/server';
-import { db } from '../db.ts';
-import { CodedError, NotFoundError, QueryError } from '../errors.ts';
+import { db } from '#lib/db.ts';
+import { CodedError, NotFoundError, QueryError } from '#lib/errors.ts';
 import { PRIVATE } from './cache.ts';
 import { client, collectionEnabled, countCall } from './usage.ts';
-import { SITE } from '../view.ts';
-import { MAX_AGENT_NAME, voterFromKey, type Voter } from '../accounts/keys.ts';
+import { SITE } from '#lib/view.ts';
+import { MAX_AGENT_NAME, voterFromKey, type Voter } from '#lib/accounts/keys.ts';
 
 export class ApiError extends CodedError {}
 

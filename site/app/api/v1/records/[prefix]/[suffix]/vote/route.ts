@@ -1,10 +1,10 @@
 // GET /api/v1/records/<prefix>/<suffix>/vote: votes, newest first (listVotes).
 // POST {"value", "emoji", "note"}: cast or replace the caller's vote (vote). DELETE removes it (removeVote).
-import { requireSourceCheckOrigin } from '../../../../../../../lib/moderation/source-check-origin.ts';
-import { db } from '../../../../../../../lib/db.ts';
-import { operation } from '../../../../../../../lib/api/operation.ts';
-import { joinId } from '../../../../../../../lib/view.ts';
-import { unvote, vote, votes } from '../../../../../../../lib/records/votes.ts';
+import { requireSourceCheckOrigin } from '#lib/moderation/source-check-origin.ts';
+import { db } from '#lib/db.ts';
+import { operation } from '#lib/api/operation.ts';
+import { joinId } from '#lib/view.ts';
+import { unvote, vote, votes } from '#lib/records/votes.ts';
 
 export const GET = operation('listVotes', async ({ params }) => Response.json(await votes(await db(), joinId(params))));
 

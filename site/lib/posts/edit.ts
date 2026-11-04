@@ -1,9 +1,9 @@
 // Editing a post: moderate the new body, then save it if the revision (xmin) is unchanged.
 import { linkMentions, moderationPlace } from './comments.ts';
-import { screen, type Moderator, type Post as ModeratedPost } from '../moderation/moderate.ts';
-import { EditError, NotFoundError, QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
-import { refuseKeys, type Voter } from '../accounts/keys.ts';
+import { screen, type Moderator, type Post as ModeratedPost } from '#lib/moderation/moderate.ts';
+import { EditError, NotFoundError, QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
+import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
 import { MAX_BODY, MAX_BODY_SHOWN } from './limits.ts';
 
 type Stored = {

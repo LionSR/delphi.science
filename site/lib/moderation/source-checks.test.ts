@@ -2,9 +2,9 @@
 import { strict as assert } from 'node:assert';
 import { after, before, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
-import { load } from '../records/load.ts';
-import { migratedDb } from '../testing.ts';
-import type { Db } from '../db.ts';
+import { load } from '#lib/records/load.ts';
+import { migratedDb } from '#lib/testing.ts';
+import type { Db } from '#lib/db.ts';
 import { checkPublicSources, collectPublicSources } from './source-checks.ts';
 import type { SourceRetrieval, SourceTarget } from './source-fetch.ts';
 

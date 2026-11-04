@@ -1,10 +1,10 @@
 // Server-rendered profile: tabs with counts, then the chosen tab's posts or record votes.
 import { createElement as h, Fragment, type ReactNode } from 'react';
-import { Markdown } from '../posts/markdown.ts';
+import { Markdown } from '#lib/posts/markdown.ts';
 import type { PostKind, Profile, ProfilePost, ProfileVote, Tab } from './profile.ts';
 import { PublicAuthor, profilePath } from './public-author.ts';
 import type { PublicName } from './people.ts';
-import { date, voteMark } from '../view.ts';
+import { date, voteMark } from '#lib/view.ts';
 
 const TAB_NAMES: Record<Tab, string> = { all: 'All', topics: 'Topics', replies: 'Replies', comments: 'Comments', votes: 'Votes' };
 const KIND_NAMES: Record<PostKind, string> = { question: 'Topic', answer: 'Reply', comment: 'Comment', review: 'Review' };

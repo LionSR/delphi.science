@@ -4,10 +4,10 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js';
 import * as z from 'zod';
 import { operationById, spec } from './openapi.ts';
-import { compact, get, parse, search, SORTS } from '../records/query.ts';
-import { NotFoundError, QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
-import { NAME, recordPath, SITE } from '../view.ts';
+import { compact, get, parse, search, SORTS } from '#lib/records/query.ts';
+import { NotFoundError, QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
+import { NAME, recordPath, SITE } from '#lib/view.ts';
 
 const READ_ONLY = { readOnlyHint: true, destructiveHint: false, openWorldHint: false, idempotentHint: true };
 

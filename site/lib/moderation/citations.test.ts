@@ -2,7 +2,7 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { citationEvidence } from './citations.ts';
-import type { Db } from '../db.ts';
+import type { Db } from '#lib/db.ts';
 
 const record = { id: 'arxiv/1706.03762', title: 'Attention Is All You Need', url: 'https://arxiv.org/abs/1706.03762' };
 const db: Db = { query: async <T>(_sql: string, params: unknown[] = []) => ({ rows: (params[0] === record.id || params[1] === record.url ? [record] : []) as T[] }) };

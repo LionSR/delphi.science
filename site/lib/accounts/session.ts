@@ -2,7 +2,7 @@
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { cache } from 'react';
-import { db } from '../db.ts';
+import { db } from '#lib/db.ts';
 import { personFromSession, type Person } from './keys.ts';
 
 export const COOKIE = 'oi_session';

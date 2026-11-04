@@ -1,6 +1,6 @@
 // Repository-reviewed historical observations of public sources, shipped with the server.
 import registryData from './curated-sources.json' with { type: 'json' };
-import { sha256 } from '../hash.ts';
+import { sha256 } from '#lib/hash.ts';
 import { canonicalSource, type SourceAdapter } from './source-fetch.ts';
 
 const RECORD_ID = /^[a-z][a-z0-9-]{0,63}\/[A-Za-z0-9][A-Za-z0-9._-]{0,199}$/;

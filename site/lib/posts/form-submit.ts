@@ -1,12 +1,12 @@
 // The publish path for the site's post forms. A retry returns the author's identical existing post.
 import { comment, post } from './comments.ts';
 import { startTopic, topicTitle } from './forum.ts';
-import type { Moderator } from '../moderation/moderate.ts';
-import { QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
-import { submit } from '../records/submit.ts';
-import { recordPath } from '../view.ts';
-import type { Voter } from '../accounts/keys.ts';
+import type { Moderator } from '#lib/moderation/moderate.ts';
+import { QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
+import { submit } from '#lib/records/submit.ts';
+import { recordPath } from '#lib/view.ts';
+import type { Voter } from '#lib/accounts/keys.ts';
 import { MAX_BODY, MAX_BODY_SHOWN } from './limits.ts';
 
 /** What a post form can publish. */

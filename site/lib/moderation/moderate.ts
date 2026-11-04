@@ -1,7 +1,7 @@
 // The DeepSeek quality gate that every post passes before it is stored.
-import type { Db } from '../db.ts';
-import { ModerationError } from '../errors.ts';
-import type { Voter } from '../accounts/keys.ts';
+import type { Db } from '#lib/db.ts';
+import { ModerationError } from '#lib/errors.ts';
+import type { Voter } from '#lib/accounts/keys.ts';
 import { reserveAttempt, finishAttempt } from './audit.ts';
 import { collectPublicSources, publicEvidence, sourceAudit, safeSourceReference, type SourceRetriever, type CheckBatch } from './source-checks.ts';
 import { citationEvidence, type SourceEvidence } from './citations.ts';

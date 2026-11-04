@@ -1,9 +1,9 @@
 // POST /api/v1/keys/token {"device_code": "..."}: the key once approved, else 400 authorization_pending (redeemAgentKey).
 // ?format=text returns the bare key so a shell can write it to a file.
-import { ApiError } from '../../../../../lib/api/caller.ts';
-import { redeemDevice } from '../../../../../lib/accounts/device.ts';
-import { db } from '../../../../../lib/db.ts';
-import { operation } from '../../../../../lib/api/operation.ts';
+import { ApiError } from '#lib/api/caller.ts';
+import { redeemDevice } from '#lib/accounts/device.ts';
+import { db } from '#lib/db.ts';
+import { operation } from '#lib/api/operation.ts';
 
 export const POST = operation('redeemAgentKey', async ({ body, query }) => {
 	const r = await redeemDevice(await db(), body.device_code);

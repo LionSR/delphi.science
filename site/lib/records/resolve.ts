@@ -1,8 +1,8 @@
 // Reads a submitted link's metadata from its source (arXiv, GitHub, DOI, Zenodo, or a public web page),
 // following the harvester's rules in sources.py so ids match what `index.py add` stores.
-import { publicWebTarget, readPublicWeb, RetrievalError, webKey, type SourceTransport } from '../moderation/source-fetch.ts';
-import { check, type Entry, type Item } from '../api/schema.ts';
-import { truncate } from '../view.ts';
+import { publicWebTarget, readPublicWeb, RetrievalError, webKey, type SourceTransport } from '#lib/moderation/source-fetch.ts';
+import { check, type Entry, type Item } from '#lib/api/schema.ts';
+import { truncate } from '#lib/view.ts';
 import { divisionOf, isNamedSubject } from './taxonomy.ts';
 
 export class NotFound extends Error {}

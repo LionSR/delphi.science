@@ -1,8 +1,8 @@
 // /keys/approve?code=WDJB-MJHT: approve or deny an agent's device code.
-import { db } from '../../../lib/db.ts';
-import { pendingDevice } from '../../../lib/accounts/device.ts';
-import { approve, deny } from '../../actions.ts';
-import { signedIn } from '../../../lib/accounts/session.ts';
+import { db } from '#lib/db.ts';
+import { pendingDevice } from '#lib/accounts/device.ts';
+import { approve, deny } from '#app/actions.ts';
+import { signedIn } from '#lib/accounts/session.ts';
 
 export const dynamic = 'force-dynamic';
 

@@ -1,9 +1,9 @@
 // Citation evidence comes from server-held metadata, never from a model's claim to have opened a source.
 // Nothing is fetched here; a citation that is not indexed or curated stays unresolved.
-import prefixes from '../records/prefixes.json' with { type: 'json' };
+import prefixes from '#lib/records/prefixes.json' with { type: 'json' };
 import { lookupCuratedPublicSource, type CuratedPublicSnapshot } from './curated-sources.ts';
 import type { PublicEvidence } from './source-checks.ts';
-import type { Db } from '../db.ts';
+import type { Db } from '#lib/db.ts';
 
 export type SourceEvidence = { reference: string; status: 'indexed_metadata' | 'unresolved'; id?: string; title?: string; url?: string; check_status?: string; reason?: string; fix?: string } | PublicEvidence | CuratedPublicSnapshot;
 

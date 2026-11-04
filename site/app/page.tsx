@@ -1,11 +1,11 @@
 // The list: newest first, or a search in the API's syntax, with links to each subject division.
-import { db } from '../lib/db.ts';
-import { QueryError } from '../lib/errors.ts';
-import { search, sourceCounts } from '../lib/records/query.ts';
-import { DIVISIONS } from '../lib/records/taxonomy.ts';
-import { me } from '../lib/accounts/session.ts';
-import { date, recordPath, source, tally, tex } from '../lib/view.ts';
-import { myVotes } from '../lib/records/votes.ts';
+import { db } from '#lib/db.ts';
+import { QueryError } from '#lib/errors.ts';
+import { search, sourceCounts } from '#lib/records/query.ts';
+import { DIVISIONS } from '#lib/records/taxonomy.ts';
+import { me } from '#lib/accounts/session.ts';
+import { date, recordPath, source, tally, tex } from '#lib/view.ts';
+import { myVotes } from '#lib/records/votes.ts';
 import { Hero } from './logo.tsx';
 import { Vote } from './vote.tsx';
 import { HomeOrder } from './home-order.ts';

@@ -2,10 +2,10 @@
 import { strict as assert } from 'node:assert';
 import { after, before, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
-import { QueryError } from '../errors.ts';
-import { migratedDb } from '../testing.ts';
+import { QueryError } from '#lib/errors.ts';
+import { migratedDb } from '#lib/testing.ts';
 import { agentName, createAgentKey, createSession, personFromSession, profileName, revokeKey, voterFromKey } from './keys.ts';
-import { sha256 } from '../hash.ts';
+import { sha256 } from '#lib/hash.ts';
 
 let db: PGlite;
 before(async () => { db = await migratedDb(); });

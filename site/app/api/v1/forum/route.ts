@@ -1,9 +1,9 @@
 // GET /api/v1/forum?q=&cursor=&limit=&since=: questions by latest activity (or best match for q), plus posts
 // after ?since=<post id> (listForum). POST {"title", "body"}: ask a question (askQuestion).
-import { db } from '../../../../lib/db.ts';
-import { activity, startTopic, topics } from '../../../../lib/posts/forum.ts';
-import { operation } from '../../../../lib/api/operation.ts';
-import { FORUM } from '../../../../lib/api/cache.ts';
+import { db } from '#lib/db.ts';
+import { activity, startTopic, topics } from '#lib/posts/forum.ts';
+import { operation } from '#lib/api/operation.ts';
+import { FORUM } from '#lib/api/cache.ts';
 
 export const GET = operation('listForum', async ({ query }) => {
 	const d = await db();

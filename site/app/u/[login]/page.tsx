@@ -1,10 +1,10 @@
 import { notFound } from 'next/navigation';
-import { db } from '../../../lib/db.ts';
-import { MAX_AFFILIATION, MAX_NAME, ownName, publicName } from '../../../lib/accounts/people.ts';
-import { normalizeProfileLogin, profile, TABS, type Tab } from '../../../lib/accounts/profile.ts';
-import { ProfileView } from '../../../lib/accounts/profile-view.ts';
-import { me } from '../../../lib/accounts/session.ts';
-import { savePublicName } from '../../actions.ts';
+import { db } from '#lib/db.ts';
+import { MAX_AFFILIATION, MAX_NAME, ownName, publicName } from '#lib/accounts/people.ts';
+import { normalizeProfileLogin, profile, TABS, type Tab } from '#lib/accounts/profile.ts';
+import { ProfileView } from '#lib/accounts/profile-view.ts';
+import { me } from '#lib/accounts/session.ts';
+import { savePublicName } from '#app/actions.ts';
 
 export const dynamic = 'force-dynamic';
 type Context = { params: Promise<{ login: string }>; searchParams: Promise<{ cursor?: string | string[]; tab?: string | string[]; notice?: string }> };

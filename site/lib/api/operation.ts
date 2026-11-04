@@ -8,7 +8,7 @@ import addFormats from 'ajv-formats';
 import { ApiError, counted, handle, voter } from './caller.ts';
 import { endpointName, operationById, spec, type Operation, type Parameter, type Schema } from './openapi.ts';
 import type { FromSchema, Simplify } from './schema.ts';
-import type { Voter } from '../accounts/keys.ts';
+import type { Voter } from '#lib/accounts/keys.ts';
 
 // ---- Types read from the document ----
 

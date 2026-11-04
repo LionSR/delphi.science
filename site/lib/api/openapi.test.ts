@@ -6,12 +6,12 @@ import { after, before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
-import { load, type Item } from '../records/load.ts';
+import { load, type Item } from '#lib/records/load.ts';
 import { spec } from './openapi.ts';
 import { closed } from './schema.ts';
-import { approveDevice } from '../accounts/device.ts';
-import { createAgentKey } from '../accounts/keys.ts';
-import { allowRouteImports, BUILD, migratedDb, sampleItems, useDb } from '../testing.ts';
+import { approveDevice } from '#lib/accounts/device.ts';
+import { createAgentKey } from '#lib/accounts/keys.ts';
+import { allowRouteImports, BUILD, migratedDb, sampleItems, useDb } from '#lib/testing.ts';
 
 // Next's bundler resolves next/server for the routes; plain Node needs the file named.
 allowRouteImports();

@@ -1,8 +1,8 @@
 // The daily attempt ledger shared by posting and explicit source checks (open_index.moderations).
-import { QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
-import { ModerationError } from '../errors.ts';
-import type { Voter } from '../accounts/keys.ts';
+import { QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
+import { ModerationError } from '#lib/errors.ts';
+import type { Voter } from '#lib/accounts/keys.ts';
 
 const MAX_ATTEMPTS_PER_DAY = 30;
 const unavailable = () => new ModerationError('moderation_unavailable',

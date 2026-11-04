@@ -1,8 +1,8 @@
 // A person's public activity, for /u/<login>: posts by type, MathOverflow-style, and record votes (already public on
 // each record). Forum post votes stay private. Reads only rows that are already public.
-import { CodedError, QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
-import { recordPath } from '../view.ts';
+import { CodedError, QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
+import { recordPath } from '#lib/view.ts';
 
 export const DEFAULT_PROFILE_LIMIT = 20;
 export const MAX_PROFILE_LIMIT = 50;

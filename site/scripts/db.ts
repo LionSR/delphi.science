@@ -7,7 +7,7 @@ import { readFileSync } from 'node:fs';
 import { createServer } from 'node:net';
 import { parseArgs } from 'node:util';
 import { PGLiteSocketServer } from '@electric-sql/pglite-socket';
-import { migratedDb } from '../lib/testing.ts';
+import { migratedDb } from '#lib/testing.ts';
 
 const { values } = parseArgs({ options: { entries: { type: 'string' } } });
 

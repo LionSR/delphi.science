@@ -1,10 +1,10 @@
 // Public-source checks for a record: fresh retrievals and reviewed historical observations, kept distinct.
-import { NotFoundError, QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
-import { sha256 } from '../hash.ts';
+import { NotFoundError, QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
+import { sha256 } from '#lib/hash.ts';
 import { lookupCuratedPublicSource, type CuratedPublicSnapshot } from './curated-sources.ts';
 import { reserveAttempt, finishAttempt } from './audit.ts';
-import type { Voter } from '../accounts/keys.ts';
+import type { Voter } from '#lib/accounts/keys.ts';
 import { canonicalSource, retrieveSource, type SourceRetrieval, type SourceTarget } from './source-fetch.ts';
 
 export type SourceRetriever = (target: SourceTarget, deadlineAt?: number) => Promise<SourceRetrieval>;

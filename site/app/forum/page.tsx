@@ -1,11 +1,11 @@
 // The forum: research questions and discussions, moderated MathOverflow-style.
-import { db } from '../../lib/db.ts';
-import { PublicAuthor } from '../../lib/accounts/public-author.ts';
-import { topics } from '../../lib/posts/forum.ts';
-import { me } from '../../lib/accounts/session.ts';
-import { publicNames } from '../../lib/accounts/people.ts';
-import { date } from '../../lib/view.ts';
-import { PostForm } from '../post-form.tsx';
+import { db } from '#lib/db.ts';
+import { PublicAuthor } from '#lib/accounts/public-author.ts';
+import { topics } from '#lib/posts/forum.ts';
+import { me } from '#lib/accounts/session.ts';
+import { publicNames } from '#lib/accounts/people.ts';
+import { date } from '#lib/view.ts';
+import { PostForm } from '#app/post-form.tsx';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Forum' };

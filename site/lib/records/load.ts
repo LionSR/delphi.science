@@ -1,8 +1,8 @@
 // Loads the built records (dist/index.json items[]) into Postgres, upserting only those whose
 // content_hash changed.
-import type { Db } from '../db.ts';
-import { sha256 } from '../hash.ts';
-import { check, type Item } from '../api/schema.ts';
+import type { Db } from '#lib/db.ts';
+import { sha256 } from '#lib/hash.ts';
+import { check, type Item } from '#lib/api/schema.ts';
 
 export type { Item };
 

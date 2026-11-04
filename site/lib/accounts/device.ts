@@ -1,8 +1,8 @@
 // The device flow for agent keys (RFC 8628): the agent shows its person a user code to approve, then
 // redeems its private device code for a key, once.
-import { QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
-import { sha256 } from '../hash.ts';
+import { QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
+import { sha256 } from '#lib/hash.ts';
 import { agentName, createAgentKey } from './keys.ts';
 
 const LETTERS = 'BCDFGHJKLMNPQRSTVWXZ'; // no vowels, so codes spell no words

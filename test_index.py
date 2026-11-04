@@ -109,7 +109,7 @@ class BoundedWeb(unittest.TestCase):
                 target = clean / "site" / file
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(SITE / file, target)
-            (clean / "site/package.json").write_text('{"type":"module"}')
+            (clean / "site/package.json").write_text('{"type":"module","imports":{"#lib/*":"./lib/*"}}')
             result = subprocess.run(["node", "--experimental-strip-types", "site/scripts/read-web.ts"], cwd=clean,
                                     input='{"url":"https://127.0.0.1/private"}', text=True, capture_output=True, timeout=12)
             self.assertEqual(result.returncode, 0, result.stderr)

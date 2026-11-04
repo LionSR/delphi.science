@@ -7,7 +7,7 @@ import { after, before, describe, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { CLIENTS, ENDPOINTS, client, collectionEnabled, countCall, kind, pruneUsage, retentionEnabled, since, usage } from './usage.ts';
 import { canReadUsage } from './usage-admin.ts';
-import { emptyDb, migratedDb, migrations } from '../testing.ts';
+import { emptyDb, migratedDb, migrations } from '#lib/testing.ts';
 
 const flagNames = ['ORI_USAGE_ANALYTICS_ENABLED', 'ORI_USAGE_RETENTION_ENABLED', 'VERCEL_ENV'] as const;
 const savedFlags = Object.fromEntries(flagNames.map((name) => [name, process.env[name]]));

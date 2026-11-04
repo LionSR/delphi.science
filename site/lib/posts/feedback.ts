@@ -1,4 +1,4 @@
-import { CodedError, QueryError } from '../errors.ts';
+import { CodedError, QueryError } from '#lib/errors.ts';
 
 export type PostFeedback = { code: string; message: string; fix: string };
 export type PostFormState = { status: 'idle' | 'failed' | 'posted'; feedback?: PostFeedback; location?: string };

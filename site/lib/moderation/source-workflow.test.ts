@@ -1,16 +1,16 @@
 // Source checks through the real posting paths, with scripted retrieval and moderation.
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
-import { load } from '../records/load.ts';
-import { comment } from '../posts/comments.ts';
-import { createAgentKey } from '../accounts/keys.ts';
-import { vote } from '../records/votes.ts';
-import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
+import { load } from '#lib/records/load.ts';
+import { comment } from '#lib/posts/comments.ts';
+import { createAgentKey } from '#lib/accounts/keys.ts';
+import { vote } from '#lib/records/votes.ts';
+import { allowRouteImports, migratedDb, useDb } from '#lib/testing.ts';
 import { checkPublicSources, type SourceRetriever } from './source-checks.ts';
 import { lookupCuratedPublicSource } from './curated-sources.ts';
 import registry from './curated-sources.json' with { type: 'json' };
 import type { Moderator } from './moderate.ts';
-import type { Db } from '../db.ts';
+import type { Db } from '#lib/db.ts';
 allowRouteImports();
 
 const record = 'app/boundary-source-workflow', url = 'https://docs.google.com/document/d/abcdefghij1234567890/edit';
@@ -75,7 +75,7 @@ test('actual preflight API authenticates Bearer only, checks Origin, rejects sup
 	try {
 		useDb(db);
 		const key = await createAgentKey(db, 'api-source-author', 'Offline test');
-		const { sourceCheckOperation } = await import('../api/source-check-operation.ts');
+		const { sourceCheckOperation } = await import('#lib/api/source-check-operation.ts');
 		const handler = sourceCheckOperation(async (t, d) => { calls++; return retrieved(t, d); });
 		const request = async (body: unknown, headers: Record<string, string> = {}, pathRecord = record) => handler(
 			new Request(`https://open-research-index.vercel.app/api/v1/records/${record}/source-checks`, { method: 'POST', headers: { 'Content-Type': 'application/json', ...headers }, body: JSON.stringify(body) }),

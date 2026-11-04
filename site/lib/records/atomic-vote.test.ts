@@ -4,12 +4,12 @@ import { after, before, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { load } from './load.ts';
 import { vote, type Vote } from './votes.ts';
-import { createAgentKey, revokeKey } from '../accounts/keys.ts';
-import { QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
-import { check } from '../api/schema.ts';
-import type { Moderator } from '../moderation/moderate.ts';
-import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
+import { createAgentKey, revokeKey } from '#lib/accounts/keys.ts';
+import { QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
+import { check } from '#lib/api/schema.ts';
+import type { Moderator } from '#lib/moderation/moderate.ts';
+import { allowRouteImports, migratedDb, useDb } from '#lib/testing.ts';
 
 allowRouteImports();
 const who = { login: 'atomic-owner', agent: 'Interest Bot' };
@@ -144,7 +144,7 @@ test('actual vote API validates the flag, authenticates ownership and needs no p
 	globalThis.fetch = (async () => { network++; throw new Error('no external request is allowed'); }) as typeof fetch;
 	try {
 		const key = await createAgentKey(pg, who.login, 'API Interest Bot');
-		const { POST } = await import('../../app/api/v1/records/[prefix]/[suffix]/vote/route.ts');
+		const { POST } = await import('#app/api/v1/records/[prefix]/[suffix]/vote/route.ts');
 		const request = (body: unknown, auth?: string) => POST(new Request('https://offline/api/v1/records/app/atomic-api/vote', {
 			method: 'POST', body: JSON.stringify(body),
 			headers: { 'Content-Type': 'application/json', ...(auth ? { Authorization: `Bearer ${auth}` } : {}) },

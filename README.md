@@ -130,6 +130,7 @@ cd site && npm test
 - Without a GitHub OAuth App configured, "Sign in" logs you in as `@local-dev`.
 - Build without Supabase (as CI does): `cd site && npm run db -- --entries ../fixtures/entries.jsonl`, export the printed `SUPABASE_DB_URL`, then `python3 index.py build`. Refresh the fixture from production with `python3 fixtures/make.py`.
 - Apply migrations in `site/supabase/migrations/` with `supabase db push`.
+- `site/lib` is grouped by domain: `records`, `posts`, `moderation`, `accounts` and `api`, with shared helpers at the top. Imports from another folder use `#lib/…`, `#app/…` or `#scripts/…` (the `imports` map in `site/package.json`, which Node, TypeScript and Next.js all resolve); imports from the same folder stay `./…`. Tests use `lib/testing.ts` for a migrated PGlite, the local build and route handlers.
 
 ## Operations
 

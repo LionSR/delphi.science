@@ -3,12 +3,12 @@
 import { useActionState, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { sendPost } from './actions.ts';
-import { adoptGuestDraft, clearDraft, emptyDraft, markDraftLogin, restoreDraft, saveDraft, type Draft } from '../lib/posts/drafts.ts';
-import type { PostFormState } from '../lib/posts/feedback.ts';
-import type { PostInput } from '../lib/posts/form-submit.ts';
-import copy from '../lib/posts/copy.json';
+import { adoptGuestDraft, clearDraft, emptyDraft, markDraftLogin, restoreDraft, saveDraft, type Draft } from '#lib/posts/drafts.ts';
+import type { PostFormState } from '#lib/posts/feedback.ts';
+import type { PostInput } from '#lib/posts/form-submit.ts';
+import copy from '#lib/posts/copy.json';
 import { PostFeedbackText } from './post-feedback.tsx';
-import { MAX_BODY } from '../lib/posts/limits.ts';
+import { MAX_BODY } from '#lib/posts/limits.ts';
 
 type Props = { kind: PostInput['kind']; owner: string; topic?: number; parent?: number; record?: string;
 	back: string; label: string; placeholder: string; button: string; rows?: number };

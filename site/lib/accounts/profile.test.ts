@@ -3,8 +3,8 @@ import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { profileActivity, profileCounts, profileVotes, normalizeProfileLogin } from './profile.ts';
-import { QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
+import { QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
 
 async function database() {
 	const db = new PGlite();

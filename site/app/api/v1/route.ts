@@ -1,8 +1,8 @@
 // GET /api/v1: a JSON guide to the API. Endpoints come from the OpenAPI document and the query syntax from lib/records/query.ts.
-import { counted } from '../../../lib/api/caller.ts';
-import { bodyShape, call, endpointName, operationById, operations } from '../../../lib/api/openapi.ts';
-import { OPERATORS, QUERY_FIELDS, SORT_HELP } from '../../../lib/records/query.ts';
-import { SITE, STANCE_LIST } from '../../../lib/view.ts';
+import { counted } from '#lib/api/caller.ts';
+import { bodyShape, call, endpointName, operationById, operations } from '#lib/api/openapi.ts';
+import { OPERATORS, QUERY_FIELDS, SORT_HELP } from '#lib/records/query.ts';
+import { SITE, STANCE_LIST } from '#lib/view.ts';
 
 const endpoint = (id: string) => endpointName(operationById(id));
 

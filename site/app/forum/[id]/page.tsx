@@ -2,17 +2,17 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { cache, type ReactNode } from 'react';
-import type { Post } from '../../../lib/posts/comments.ts';
-import { db } from '../../../lib/db.ts';
-import { myPostVotes, topicWithPosts } from '../../../lib/posts/forum.ts';
-import { me } from '../../../lib/accounts/session.ts';
-import { publicNames, type PublicName } from '../../../lib/accounts/people.ts';
-import { date, recordPath } from '../../../lib/view.ts';
-import { acceptOn, votePostOn } from '../../actions.ts';
-import { PostForm } from '../../post-form.tsx';
-import { PublicAuthor } from '../../../lib/accounts/public-author.ts';
-import { Markdown } from '../../../lib/posts/markdown.ts';
-import { OwnerEdit } from '../../owner-edit.tsx';
+import type { Post } from '#lib/posts/comments.ts';
+import { db } from '#lib/db.ts';
+import { myPostVotes, topicWithPosts } from '#lib/posts/forum.ts';
+import { me } from '#lib/accounts/session.ts';
+import { publicNames, type PublicName } from '#lib/accounts/people.ts';
+import { date, recordPath } from '#lib/view.ts';
+import { acceptOn, votePostOn } from '#app/actions.ts';
+import { PostForm } from '#app/post-form.tsx';
+import { PublicAuthor } from '#lib/accounts/public-author.ts';
+import { Markdown } from '#lib/posts/markdown.ts';
+import { OwnerEdit } from '#app/owner-edit.tsx';
 
 export const dynamic = 'force-dynamic';
 

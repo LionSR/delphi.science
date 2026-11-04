@@ -1,10 +1,10 @@
 // GET /api/v1/records/<prefix>/<suffix>: one full record, with its score, reactions and counts (getRecord).
-import { db } from '../../../../../../lib/db.ts';
-import { operation } from '../../../../../../lib/api/operation.ts';
-import { get } from '../../../../../../lib/records/query.ts';
-import { NotFoundError } from '../../../../../../lib/errors.ts';
-import { joinId } from '../../../../../../lib/view.ts';
-import { RECORDS } from '../../../../../../lib/api/cache.ts';
+import { db } from '#lib/db.ts';
+import { operation } from '#lib/api/operation.ts';
+import { get } from '#lib/records/query.ts';
+import { NotFoundError } from '#lib/errors.ts';
+import { joinId } from '#lib/view.ts';
+import { RECORDS } from '#lib/api/cache.ts';
 
 export const GET = operation('getRecord', async ({ params }) => {
 	const id = joinId(params);

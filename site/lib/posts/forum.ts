@@ -1,9 +1,9 @@
 // The forum: questions, voted answers (the asker may accept one), and comments. Posting goes through comments.ts.
 import { startQuestion, thread, type Post } from './comments.ts';
-import type { Moderator } from '../moderation/moderate.ts';
-import { NotFoundError, QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
-import { refuseKeys, type Voter } from '../accounts/keys.ts';
+import type { Moderator } from '#lib/moderation/moderate.ts';
+import { NotFoundError, QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
+import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
 
 type Topic = { id: number; title: string; voter: string; agent: string; at: string; last_at: string;
 	score: number; answers: number; accepted_id: number | null };

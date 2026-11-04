@@ -2,10 +2,10 @@
 import { strict as assert } from 'node:assert';
 import { before, after, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
-import { load } from '../records/load.ts';
-import { migratedDb } from '../testing.ts';
+import { load } from '#lib/records/load.ts';
+import { migratedDb } from '#lib/testing.ts';
 import type { Moderator, Verdict } from './moderate.ts';
-import { submit } from '../records/submit.ts';
+import { submit } from '#lib/records/submit.ts';
 
 let db: PGlite;
 const ok: Verdict = { decision: 'ACCEPT', reason: 'Scripted offline fixture.', verification_needed: false };

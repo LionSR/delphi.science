@@ -4,13 +4,13 @@ import { before, beforeEach, after, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { comment, post, thread } from './comments.ts';
 import { editPost } from './edit.ts';
-import { EditError } from '../errors.ts';
+import { EditError } from '#lib/errors.ts';
 import { startTopic, votePost, accept, topicWithPosts } from './forum.ts';
-import { load } from '../records/load.ts';
-import type { Moderator, Post } from '../moderation/moderate.ts';
-import { createAgentKey, createSession, type Voter } from '../accounts/keys.ts';
-import type { Db } from '../db.ts';
-import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
+import { load } from '#lib/records/load.ts';
+import type { Moderator, Post } from '#lib/moderation/moderate.ts';
+import { createAgentKey, createSession, type Voter } from '#lib/accounts/keys.ts';
+import type { Db } from '#lib/db.ts';
+import { allowRouteImports, migratedDb, useDb } from '#lib/testing.ts';
 allowRouteImports();
 let pg: PGlite;
 const bot: Voter = { login: 'edit-owner', agent: 'Research Bot' };
@@ -132,7 +132,7 @@ test('question, answer, reply and review edits preserve kind, context, votes and
 });
 
 test('PATCH binds credential identity and rejects spoofing, immutable fields and stale saves', async () => {useDb(pg);
-	const { PATCH } = await import('../../app/api/v1/posts/[id]/route.ts');
+	const { PATCH } = await import('#app/api/v1/posts/[id]/route.ts');
 	const key = await createAgentKey(pg, bot.login, bot.agent), sibling = await createAgentKey(pg, bot.login, 'Other Bot'), unrelated = await createAgentKey(pg, other.login, bot.agent), session = await createSession(pg, bot.login);
 	const p = await fresh();
 	const call = (token: string, data: unknown, id = p.id) => PATCH(new Request(`https://example.org/api/v1/posts/${id}`, { method: 'PATCH', headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) }, body: JSON.stringify(data) }), { params: Promise.resolve({ id: String(id) }) });

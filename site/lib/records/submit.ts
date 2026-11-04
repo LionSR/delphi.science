@@ -1,14 +1,14 @@
 // Submitting a link: its metadata is read from the source and stored as an entry, as `index.py add` would,
 // and the record is listed at once.
 import { COLUMNS, row } from './load.ts';
-import { screen, type Moderator } from '../moderation/moderate.ts';
-import { finishAttempt, reserveAttempt } from '../moderation/audit.ts';
-import type { SourceTransport } from '../moderation/source-fetch.ts';
-import { QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
+import { screen, type Moderator } from '#lib/moderation/moderate.ts';
+import { finishAttempt, reserveAttempt } from '#lib/moderation/audit.ts';
+import type { SourceTransport } from '#lib/moderation/source-fetch.ts';
+import { QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
 import { blocked, detect, itemOf, looksLikeLink, NotFound, resolve } from './resolve.ts';
-import { check } from '../api/schema.ts';
-import { refuseKeys, type Voter } from '../accounts/keys.ts';
+import { check } from '#lib/api/schema.ts';
+import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
 
 // Per login, agents included; shared with index.py add (MAX_ADDS_PER_DAY).
 export const MAX_PER_DAY = 20;

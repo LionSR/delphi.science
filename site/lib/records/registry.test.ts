@@ -1,19 +1,19 @@
 // Submitting links and the forum, on real Postgres (PGlite) with the migrations as written. Sources are
 // faked, so this needs no network and no build of the index.
 import { createHash } from 'node:crypto';
-import { publicWebTarget, readPublicWeb, type SourceTransport } from '../moderation/source-fetch.ts';
+import { publicWebTarget, readPublicWeb, type SourceTransport } from '#lib/moderation/source-fetch.ts';
 import { strict as assert } from 'node:assert';
 import { before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
-import { comment as actualComment, post as actualPost } from '../posts/comments.ts';
-import { accept, activity, startTopic as actualStartTopic, topic, topics, topicWithPosts, votePost } from '../posts/forum.ts';
-import { screen, type Moderator } from '../moderation/moderate.ts';
+import { comment as actualComment, post as actualPost } from '#lib/posts/comments.ts';
+import { accept, activity, startTopic as actualStartTopic, topic, topics, topicWithPosts, votePost } from '#lib/posts/forum.ts';
+import { screen, type Moderator } from '#lib/moderation/moderate.ts';
 import { load } from './load.ts';
 import { get } from './query.ts';
 import { detect, itemOf, resolve } from './resolve.ts';
 import { submit as actualSubmit } from './submit.ts';
-import { createAgentKey, voterFromKey } from '../accounts/keys.ts';
-import { migratedDb } from '../testing.ts';
+import { createAgentKey, voterFromKey } from '#lib/accounts/keys.ts';
+import { migratedDb } from '#lib/testing.ts';
 
 const yes: Moderator = async () => ({ decision: 'ACCEPT', reason: 'Test fixture only.', verification_needed: false });
 const comment: typeof actualComment = (db, id, voter, c, moderate = yes) => actualComment(db, id, voter, c, moderate);

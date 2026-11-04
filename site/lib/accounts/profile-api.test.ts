@@ -2,8 +2,8 @@
 import { strict as assert } from 'node:assert';
 import { after, before, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
-import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
-import { sha256 } from '../hash.ts';
+import { allowRouteImports, migratedDb, useDb } from '#lib/testing.ts';
+import { sha256 } from '#lib/hash.ts';
 import { createAgentKey, createSession } from './keys.ts';
 
 // Next's bundler resolves next/server for the routes; plain Node needs the file named.

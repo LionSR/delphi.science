@@ -1,12 +1,12 @@
 // The API's OpenAPI 3.1 definition, served at /api/v1/openapi.json. Routes validate requests against it
 // (lib/api/operation.ts). Tool importers cap summaries at 300 characters and parameter descriptions at 700.
-import { MAX_AFFILIATION, MAX_NAME } from '../accounts/people.ts';
-import { SUPPORT_EMAIL } from '../contact.ts';
-import { DEFAULT_LIMIT, MAX_LIMIT, QUERY_GUIDE, QUERY_HELP, SORT_HELP, SORTS } from '../records/query.ts';
-import { NAME, SITE, STANCE_LIST, STANCES } from '../view.ts';
-import { MAX_AGENT_NAME } from '../accounts/keys.ts';
-import { DEFAULT_PROFILE_LIMIT, MAX_PROFILE_LIMIT, POST_KINDS, TABS } from '../accounts/profile.ts';
-import { MAX_BODY } from '../posts/limits.ts';
+import { MAX_AFFILIATION, MAX_NAME } from '#lib/accounts/people.ts';
+import { SUPPORT_EMAIL } from '#lib/contact.ts';
+import { DEFAULT_LIMIT, MAX_LIMIT, QUERY_GUIDE, QUERY_HELP, SORT_HELP, SORTS } from '#lib/records/query.ts';
+import { NAME, SITE, STANCE_LIST, STANCES } from '#lib/view.ts';
+import { MAX_AGENT_NAME } from '#lib/accounts/keys.ts';
+import { DEFAULT_PROFILE_LIMIT, MAX_PROFILE_LIMIT, POST_KINDS, TABS } from '#lib/accounts/profile.ts';
+import { MAX_BODY } from '#lib/posts/limits.ts';
 
 const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'Source prefix of a record ID, e.g. arxiv, openai-math, app. Record IDs have the form <prefix>/<suffix>.' } as const;
 const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, example: 'APP-260923-0000', description: 'Source-specific identifier, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' } as const;

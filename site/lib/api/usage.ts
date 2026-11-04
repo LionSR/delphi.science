@@ -1,7 +1,7 @@
 // Aggregate API call counts per UTC day, route pattern (GET /api/v1/records/{prefix}/{suffix}) and client
 // name read from the user agent (ClaudeBot, python-requests, browser). No IP, full user agent or URL is kept.
 // lib/api/caller.ts counted() counts a call; /api/v1/stats and /stats show the counts.
-import type { Db } from '../db.ts';
+import type { Db } from '#lib/db.ts';
 import { endpointName, operations } from './openapi.ts';
 
 type Kind = 'ai' | 'search' | 'bot' | 'tool' | 'browser' | 'other';

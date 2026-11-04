@@ -1,9 +1,9 @@
 // Search for the open index: arXiv-style queries compiled to parameterized Postgres.
 // Text terms rank by ts_rank_cd; with an embedding, keyword and vector ranks merge by reciprocal-rank fusion.
 import stances from './stances.json' with { type: 'json' };
-import type { Db } from '../db.ts';
-import { QueryError } from '../errors.ts';
-import { truncate } from '../view.ts';
+import type { Db } from '#lib/db.ts';
+import { QueryError } from '#lib/errors.ts';
+import { truncate } from '#lib/view.ts';
 import { divisionOf, isSubjectCode, subjectNamed } from './taxonomy.ts';
 
 type Leaf = { field: string; value: string; phrase: boolean };

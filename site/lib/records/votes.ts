@@ -1,9 +1,9 @@
 // Votes on records: up/down, an emoji, or both, with an optional note.
-import { refuseKeys, type Voter } from '../accounts/keys.ts';
-import { screen, type Moderator } from '../moderation/moderate.ts';
-import type { SourceRetriever } from '../moderation/source-checks.ts';
-import { NotFoundError, QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
+import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
+import { screen, type Moderator } from '#lib/moderation/moderate.ts';
+import type { SourceRetriever } from '#lib/moderation/source-checks.ts';
+import { NotFoundError, QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
 
 export type Vote = { value?: 1 | -1; emoji?: string; note?: string; retrieveSources?: boolean; ifAbsent?: boolean };
 

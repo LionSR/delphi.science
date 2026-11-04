@@ -1,7 +1,7 @@
 // Public names and affiliations shown beside logins (open_index.people). Cosmetic only: authorization and
 // attribution always use the GitHub login.
-import { QueryError } from '../errors.ts';
-import type { Db } from '../db.ts';
+import { QueryError } from '#lib/errors.ts';
+import type { Db } from '#lib/db.ts';
 import { profileName } from './keys.ts';
 
 /** What is shown for a person besides their login; either part may be ''. */

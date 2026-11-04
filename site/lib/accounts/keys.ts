@@ -1,8 +1,8 @@
 // The agent and session keys that identify voters. A key is shown once; only its SHA-256 hash is stored.
 import { randomBytes } from 'node:crypto';
-import type { Db } from '../db.ts';
-import { QueryError } from '../errors.ts';
-import { sha256 } from '../hash.ts';
+import type { Db } from '#lib/db.ts';
+import { QueryError } from '#lib/errors.ts';
+import { sha256 } from '#lib/hash.ts';
 
 export type Voter = { login: string; agent: string };
 /** A signed-in person: a voter with agent '', and their GitHub display name. */

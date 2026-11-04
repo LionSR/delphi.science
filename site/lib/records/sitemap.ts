@@ -1,7 +1,7 @@
 // The sitemap index at /sitemap.xml and its files at /sitemap/<n>.xml, records split by id. Plain route
 // handlers, because Next.js's generateSitemaps cannot serve an index at /sitemap.xml.
-import type { Db } from '../db.ts';
-import { recordPath } from '../view.ts';
+import type { Db } from '#lib/db.ts';
+import { recordPath } from '#lib/view.ts';
 
 export const MAX_URLS = 50_000;
 export const PAGES = ['', '/about', '/prompts', '/keys']; // the site's own pages, in the first file

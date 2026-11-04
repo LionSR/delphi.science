@@ -6,12 +6,12 @@ import { before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
-import { load, type Item } from '../records/load.ts';
+import { load, type Item } from '#lib/records/load.ts';
 import { handle } from './mcp.ts';
 import { operationById, spec } from './openapi.ts';
 import { closed } from './schema.ts';
-import type { Db } from '../db.ts';
-import { BUILD, migratedDb, sampleItems } from '../testing.ts';
+import type { Db } from '#lib/db.ts';
+import { BUILD, migratedDb, sampleItems } from '#lib/testing.ts';
 
 type Json = Record<string, any>;
 type Tool = { name: string; description: string; inputSchema: Json; outputSchema: Json };

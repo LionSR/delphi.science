@@ -1,20 +1,17 @@
 // The if_absent vote on migrated in-process Postgres (docs/atomic-vote-if-absent.md).
 import { strict as assert } from 'node:assert';
 import { after, before, test } from 'node:test';
-import { registerHooks } from 'node:module';
 import type { PGlite } from '@electric-sql/pglite';
-import { Ajv2020 } from 'ajv/dist/2020.js';
 import { load } from './load.ts';
 import { vote, type Vote } from './votes.ts';
 import { createAgentKey, revokeKey } from '../accounts/keys.ts';
 import { QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
-import { spec } from '../api/openapi.ts';
-import { closed } from '../api/schema.ts';
+import { check } from '../api/schema.ts';
 import type { Moderator } from '../moderation/moderate.ts';
-import { migratedDb } from '../testing.ts';
+import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
 
-registerHooks({ resolve: (name, context, next) => next(name === 'next/server' ? 'next/server.js' : name, context) });
+allowRouteImports();
 const who = { login: 'atomic-owner', agent: 'Interest Bot' };
 const accept: Moderator = async () => ({ decision: 'ACCEPT', reason: 'A scoped boundary-condition observation.', fix: '', verification_needed: false });
 const record = (name: string) => `app/atomic-${name}`;
@@ -143,7 +140,7 @@ test('database insert failure is not falsely acknowledged as an existing vote', 
 test('actual vote API validates the flag, authenticates ownership and needs no provider for note-free calls', async () => {
 	const priorFetch = globalThis.fetch;
 	let network = 0;
-	(globalThis as { openIndexDb?: Promise<Db> }).openIndexDb = Promise.resolve(pg);
+	useDb(pg);
 	globalThis.fetch = (async () => { network++; throw new Error('no external request is allowed'); }) as typeof fetch;
 	try {
 		const key = await createAgentKey(pg, who.login, 'API Interest Bot');
@@ -159,10 +156,7 @@ test('actual vote API validates the flag, authenticates ownership and needs no p
 		assert.equal(first.status, 200);
 		const data = await first.json();
 		assert.equal(data.created, true);
-		const ajv = new Ajv2020({ strict: false, allowUnionTypes: true });
-		ajv.addSchema(closed({ ...spec, $id: 'spec' }) as object);
-		const validate = ajv.compile({ $ref: 'spec#/components/schemas/Tally' });
-		assert.ok(validate(data), JSON.stringify(validate.errors));
+		check('Tally', data, 'vote reply');
 		const stored = await row(record('api'));
 		assert.deepEqual([stored.agent, stored.voter], ['API Interest Bot', who.login]);
 		const repeat = await request({ value: -1, if_absent: true }, await createAgentKey(pg, who.login, 'Another API Bot'));
@@ -174,6 +168,6 @@ test('actual vote API validates the flag, authenticates ownership and needs no p
 		assert.equal(network, 0);
 	} finally {
 		globalThis.fetch = priorFetch;
-		delete (globalThis as { openIndexDb?: Promise<Db> }).openIndexDb;
+		useDb();
 	}
 });

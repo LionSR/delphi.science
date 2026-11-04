@@ -68,6 +68,8 @@ export class RetrievalError extends Error {
 const inputError = () => new SourceInputError();
 const fail = (status: FailureStatus, reason: string): never => { throw new RetrievalError(status, reason); };
 const sha256 = (value: Uint8Array) => createHash('sha256').update(value).digest('hex');
+/** A web record's key: the first 12 hex digits of its canonical URL's SHA-1 (sources.py Web). */
+export const webKey = (canonical: string) => createHash('sha1').update(canonical).digest('hex').slice(0, 12);
 const responseCap = (adapter: SourceAdapter) => adapter === 'google_doc' ? MAX_SOURCE_BYTES : MAX_METADATA_BYTES;
 const rejectCredential = (text: string) => { if (CREDENTIAL.test(text)) fail('unsupported_format', CREDENTIAL_TEXT); };
 const plainUrl = (url: URL) => url.protocol === 'https:' && !url.username && !url.password && !url.port && !url.hash;
@@ -664,7 +666,7 @@ export async function readPublicWeb(url: string, transport: SourceTransport = de
 	if (!title || !summary) fail('unsupported_format', 'The page needs a source-reported title and research description.');
 	return {
 		source: 'web',
-		key: createHash('sha1').update(target.canonical).digest('hex').slice(0, 12),
+		key: webKey(target.canonical),
 		url: target.canonical,
 		title: short(title, 200),
 		...(authors.length ? { authors: authors.map((a) => short(a, 200)).slice(0, 20) } : {}),

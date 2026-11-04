@@ -11,7 +11,7 @@ import { handle } from './mcp.ts';
 import { operationById, spec } from './openapi.ts';
 import { closed } from './schema.ts';
 import type { Db } from '../db.ts';
-import { BUILD, migratedDb } from '../testing.ts';
+import { BUILD, migratedDb, sampleItems } from '../testing.ts';
 
 type Json = Record<string, any>;
 type Tool = { name: string; description: string; inputSchema: Json; outputSchema: Json };
@@ -88,9 +88,7 @@ describe('what the tools return fits their output schemas, closed', { skip: !exi
 	let discussed = '';
 	before(async () => {
 		pg = await migratedDb();
-		// Every discussed record and a few hundred others, as in openapi.test.ts.
-		const all: Item[] = JSON.parse(readFileSync(BUILD, 'utf8')).items;
-		const items = [...all.filter((i) => (i.discussion as unknown[] | undefined)?.length), ...all.filter((i) => !i.discussion).slice(0, 300)];
+		const items = sampleItems();
 		await load(pg, items);
 		discussed = items.find((i) => (i.discussion as unknown[]).length > 2)!.id as string;
 		tools = await listTools(pg);

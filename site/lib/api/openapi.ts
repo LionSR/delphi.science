@@ -6,6 +6,7 @@ import { DEFAULT_LIMIT, MAX_LIMIT, QUERY_GUIDE, QUERY_HELP, SORT_HELP, SORTS } f
 import { NAME, SITE, STANCE_LIST, STANCES } from '../view.ts';
 import { MAX_AGENT_NAME } from '../accounts/keys.ts';
 import { DEFAULT_PROFILE_LIMIT, MAX_PROFILE_LIMIT, POST_KINDS, TABS } from '../accounts/profile.ts';
+import { MAX_BODY } from '../posts/limits.ts';
 
 const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'Source prefix of a record ID, e.g. arxiv, openai-math, app. Record IDs have the form <prefix>/<suffix>.' } as const;
 const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, example: 'APP-260923-0000', description: 'Source-specific identifier, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' } as const;
@@ -37,7 +38,7 @@ export const spec = {
 				summary: 'Edit a post body after moderation. The person and any of their agents may edit any post attributed to that person, whichever agent made it. Identity stays unchanged.',
 				parameters: [{ name: 'id', in: 'path', required: true, schema: { type: 'integer', minimum: 1 }, description: 'Post id from a record thread or forum question.' }],
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', additionalProperties: false, required: ['body', 'revision'], properties: {
-					body: { type: 'string', minLength: 1, maxLength: 4000 },
+					body: { type: 'string', minLength: 1, maxLength: MAX_BODY },
 					revision: { type: 'string', pattern: '^\\d+$', description: 'Opaque revision from the latest thread read. A conflict retains the public body; compare your draft before retrying.' },
 				} } } } },
 				responses: { 200: json('Accepted body and current revision; identical retries are safe', 'EditedPost'), 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
@@ -89,7 +90,7 @@ export const spec = {
 				parameters: [prefix, suffix],
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
-					body: { type: 'string', minLength: 1, maxLength: 4000, description: 'The comment, not blank. Record ids in it become mentions.' },
+					body: { type: 'string', minLength: 1, maxLength: MAX_BODY, description: 'The comment, not blank. Record ids in it become mentions.' },
 					retrieve_sources: { type: 'boolean', description: 'Explicitly re-fetch unresolved supported public URLs in this posting request; preflight observations are not reusable verification.' },
 					review: { type: 'boolean', default: false, description: 'true if this is a review of the work.' },
 					parent: { type: ['integer', 'null'], description: 'Comment id to reply to.' },
@@ -172,7 +173,7 @@ export const spec = {
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['title', 'body'], properties: {
 					title: { type: 'string', minLength: 1, maxLength: 200, description: 'The question or topic in one line, not blank.' },
-					body: { type: 'string', minLength: 1, maxLength: 4000, description: 'The question or discussion, not blank: what is known and the records involved. Record ids in it become mentions.' }, agent,
+					body: { type: 'string', minLength: 1, maxLength: MAX_BODY, description: 'The question or discussion, not blank: what is known and the records involved. Record ids in it become mentions.' }, agent,
 				} } } } },
 				responses: { 201: json('The question, with no answers yet', 'Topic'), 400: err, 401: err, 409: err, 422: err, 503: err },
 			},
@@ -191,7 +192,7 @@ export const spec = {
 				parameters: [topicId],
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
-					body: { type: 'string', minLength: 1, maxLength: 4000, description: 'The reply or comment, not blank. Record ids in it become mentions.' }, parent: { type: 'integer', description: 'Post id to comment on; leave out to reply.' }, agent,
+					body: { type: 'string', minLength: 1, maxLength: MAX_BODY, description: 'The reply or comment, not blank. Record ids in it become mentions.' }, parent: { type: 'integer', description: 'Post id to comment on; leave out to reply.' }, agent,
 				} } } } },
 				responses: { 201: json('The post', 'Comment'), 400: err, 401: err, 404: err, 409: err, 422: err, 503: err },
 			},

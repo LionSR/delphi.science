@@ -1,18 +1,17 @@
 // Source checks through the real posting paths, with scripted retrieval and moderation.
 import { strict as assert } from 'node:assert';
-import { registerHooks } from 'node:module';
 import { test } from 'node:test';
 import { load } from '../records/load.ts';
 import { comment } from '../posts/comments.ts';
 import { createAgentKey } from '../accounts/keys.ts';
 import { vote } from '../records/votes.ts';
-import { migratedDb } from '../testing.ts';
+import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
 import { checkPublicSources, type SourceRetriever } from './source-checks.ts';
 import { lookupCuratedPublicSource } from './curated-sources.ts';
 import registry from './curated-sources.json' with { type: 'json' };
 import type { Moderator } from './moderate.ts';
 import type { Db } from '../db.ts';
-registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
+allowRouteImports();
 
 const record = 'app/boundary-source-workflow', url = 'https://docs.google.com/document/d/abcdefghij1234567890/edit';
 const who = { login: 'workflow-author', agent: 'Offline test' };
@@ -74,7 +73,7 @@ test('actual preflight API authenticates Bearer only, checks Origin, rejects sup
 	const db = await database();
 	let calls = 0;
 	try {
-		(globalThis as { openIndexDb?: Promise<Db> }).openIndexDb = Promise.resolve(db);
+		useDb(db);
 		const key = await createAgentKey(db, 'api-source-author', 'Offline test');
 		const { sourceCheckOperation } = await import('../api/source-check-operation.ts');
 		const handler = sourceCheckOperation(async (t, d) => { calls++; return retrieved(t, d); });
@@ -91,7 +90,7 @@ test('actual preflight API authenticates Bearer only, checks Origin, rejects sup
 		const batch = await r.json();
 		assert.equal(batch.posted, false); assert.equal(batch.results[0].status, 'retrieved'); assert.equal(calls, 1);
 		assert.equal(await rows(db, 'comments'), 0);
-	} finally { delete (globalThis as { openIndexDb?: Promise<Db> }).openIndexDb; await db.close(); }
+	} finally { useDb(); await db.close(); }
 });
 
 test('operator-reviewed snapshots are record-scoped historical data and never replace an explicit current failure', async () => {
@@ -122,7 +121,7 @@ test('operator-reviewed snapshots are record-scoped historical data and never re
 test('fresh comment/review and vote-note APIs reject a foreign Origin before reserving or fetching', async () => {
 	const db = await database();
 	try {
-		(globalThis as { openIndexDb?: Promise<Db> }).openIndexDb = Promise.resolve(db);
+		useDb(db);
 		const key = await createAgentKey(db, 'origin-check-author', 'Offline test');
 		const writes = [
 			['comments', { body: `Which convention is used in ${url}?`, review: true, retrieve_sources: true }],
@@ -138,7 +137,7 @@ test('fresh comment/review and vote-note APIs reject a foreign Origin before res
 		assert.equal(await rows(db, 'moderations'), 0, 'source retrieval and its provider gate begin only after an attempt reservation');
 		assert.equal(await rows(db, 'comments'), 0);
 		assert.equal(await rows(db, 'votes'), 0);
-	} finally { delete (globalThis as { openIndexDb?: Promise<Db> }).openIndexDb; await db.close(); }
+	} finally { useDb(); await db.close(); }
 });
 
 test('unresolved URL feedback stores only safe source labels, without copying caller query parameters', async () => {

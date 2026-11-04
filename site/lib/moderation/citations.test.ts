@@ -17,6 +17,5 @@ for (const [label, text, status] of [
 ] as const) test(`one citation is found with status ${status}: ${label}`, async () => {
 	const evidence = await citationEvidence(db, text);
 	assert.equal(evidence.length, 1);
-	assert.equal(evidence[0].status, status);
-	if (status === 'indexed_metadata') assert.equal(evidence[0].id, record.id);
+	assert.deepEqual([evidence[0].status, 'id' in evidence[0] ? evidence[0].id : undefined], [status, status === 'indexed_metadata' ? record.id : undefined]);
 });

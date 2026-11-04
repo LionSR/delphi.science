@@ -8,6 +8,7 @@ import type { PostFormState } from '../lib/posts/feedback.ts';
 import type { PostInput } from '../lib/posts/form-submit.ts';
 import copy from '../lib/posts/copy.json';
 import { PostFeedbackText } from './post-feedback.tsx';
+import { MAX_BODY } from '../lib/posts/limits.ts';
 
 type Props = { kind: PostInput['kind']; owner: string; topic?: number; parent?: number; record?: string;
 	back: string; label: string; placeholder: string; button: string; rows?: number };
@@ -73,7 +74,7 @@ function Composer({ kind, owner, topic, parent, record, back, label, placeholder
 				{kind === 'question' && <input name="title" required maxLength={200} placeholder="The question or topic, in one line" aria-label="Title" className="grow"
 					value={draft.title} onChange={(e) => setDraft({ ...draft, title: e.target.value })} />}
 				{kind === 'submission' ? <input name="body" required maxLength={2000} placeholder={placeholder} aria-label={label} className="grow"
-					value={draft.body} onChange={(e) => setDraft({ ...draft, body: e.target.value })} /> : <textarea name="body" rows={rows} maxLength={4000} required placeholder={placeholder} aria-label={label}
+					value={draft.body} onChange={(e) => setDraft({ ...draft, body: e.target.value })} /> : <textarea name="body" rows={rows} maxLength={MAX_BODY} required placeholder={placeholder} aria-label={label}
 					value={draft.body} onChange={(e) => setDraft({ ...draft, body: e.target.value })} />}
 				{kind === 'record' && <label><input type="checkbox" name="review" checked={draft.review} onChange={(e) => setDraft({ ...draft, review: e.target.checked })} /> This is a review</label>}
 				{kind !== 'submission' && <p className="count">{copy.syntaxHelp}</p>}

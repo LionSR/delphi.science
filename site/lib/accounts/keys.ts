@@ -1,16 +1,12 @@
 // The agent and session keys that identify voters. A key is shown once; only its SHA-256 hash is stored.
+import { randomBytes } from 'node:crypto';
 import type { Db } from '../db.ts';
 import { QueryError } from '../errors.ts';
+import { sha256 } from '../hash.ts';
 
 export type Voter = { login: string; agent: string };
 /** A signed-in person: a voter with agent '', and their GitHub display name. */
 export type Person = Voter & { name: string };
-
-const hex = (bytes: Uint8Array) => [...bytes].map((b) => b.toString(16).padStart(2, '0')).join('');
-
-export async function sha256(text: string): Promise<string> {
-	return hex(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text))));
-}
 
 export const MAX_AGENT_NAME = 60;
 
@@ -40,14 +36,14 @@ export async function createSession(db: Db, login: string, name: unknown = ''): 
 }
 
 async function newKey(db: Db, login: string, agent: string, name = '') {
-	const key = `oik_${hex(crypto.getRandomValues(new Uint8Array(24)))}`;
-	await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent, name) VALUES ($1, $2, $3, $4)', [await sha256(key), login, agent, name]);
+	const key = `oik_${randomBytes(24).toString('hex')}`;
+	await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent, name) VALUES ($1, $2, $3, $4)', [sha256(key), login, agent, name]);
 	return key;
 }
 
 /** Revokes one of `login`'s keys, sessions included: by the key itself (signing out) or by its hash. */
 export async function revokeKey(db: Db, login: string, by: { key?: string; hash?: string }) {
-	const hash = by.key ? await sha256(by.key) : by.hash;
+	const hash = by.key ? sha256(by.key) : by.hash;
 	await db.query('UPDATE open_index.agent_keys SET revoked_at = now() WHERE key_hash = $1 AND login = $2 AND revoked_at IS NULL', [hash, login]);
 }
 
@@ -66,14 +62,14 @@ export async function revokeAgentKey(db: Db, login: string, hash: string): Promi
 
 /** Who a key belongs to (agent '' for a session), or null if it is unknown, revoked or expired. */
 export async function voterFromKey(db: Db, key: string): Promise<Voter | null> {
-	const rows = (await db.query<Voter>('SELECT login, agent FROM open_index.agent_keys WHERE key_hash = $1 AND revoked_at IS NULL AND expires_at > now()', [await sha256(key)])).rows;
+	const rows = (await db.query<Voter>('SELECT login, agent FROM open_index.agent_keys WHERE key_hash = $1 AND revoked_at IS NULL AND expires_at > now()', [sha256(key)])).rows;
 	return rows[0] ?? null;
 }
 
 /** The person behind an active session key (agent keys do not count), or null. A blank name falls back to the login. */
 export async function personFromSession(db: Db, key: string): Promise<Person | null> {
 	const person = (await db.query<Person>(`SELECT login, agent, name FROM open_index.agent_keys
-		WHERE key_hash = $1 AND agent = '' AND revoked_at IS NULL AND expires_at > now()`, [await sha256(key)])).rows[0];
+		WHERE key_hash = $1 AND agent = '' AND revoked_at IS NULL AND expires_at > now()`, [sha256(key)])).rows[0];
 	return person ? { ...person, name: profileName(person.name) || person.login } : null;
 }
 
@@ -81,7 +77,7 @@ export async function personFromSession(db: Db, key: string): Promise<Person | n
 export async function refuseKeys(db: Db, text: string) {
 	const keys = text.match(/oik_[0-9a-f]{48}/g);
 	if (!keys) return;
-	const hashes = await Promise.all(keys.map(sha256));
+	const hashes = keys.map((k) => sha256(k));
 	await db.query('UPDATE open_index.agent_keys SET revoked_at = now() WHERE key_hash = ANY($1) AND revoked_at IS NULL', [hashes]);
 	throw new QueryError('the text contains an agent key, so it was not posted and the key is now revoked', 'Never post a key. Get a new one: see /llms.txt.');
 }

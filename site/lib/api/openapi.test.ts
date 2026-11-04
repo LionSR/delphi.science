@@ -2,7 +2,6 @@
 // Needs a build: python3 index.py build.
 import { strict as assert } from 'node:assert';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
-import { registerHooks } from 'node:module';
 import { after, before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { Ajv2020 } from 'ajv/dist/2020.js';
@@ -12,10 +11,10 @@ import { spec } from './openapi.ts';
 import { closed } from './schema.ts';
 import { approveDevice } from '../accounts/device.ts';
 import { createAgentKey } from '../accounts/keys.ts';
-import { BUILD, migratedDb } from '../testing.ts';
+import { allowRouteImports, BUILD, migratedDb, sampleItems, useDb } from '../testing.ts';
 
 // Next's bundler resolves next/server for the routes; plain Node needs the file named.
-registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
+allowRouteImports();
 
 const API = new URL('../../app/api/v1/', import.meta.url);
 const UNDOCUMENTED = ['/api/v1', '/api/v1/openapi.json']; // the API's own guides, not operations
@@ -92,9 +91,7 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 				: { decision: 'ACCEPT', verification_needed: false, reason: 'Private schema fixture.', fix: '' }) } }] });
 		}) as typeof fetch;
 		pg = await migratedDb();
-		// Every discussed record and a few hundred others: enough for each field to appear, quick to load.
-		const all: Item[] = JSON.parse(readFileSync(BUILD, 'utf8')).items;
-		const items = [...all.filter((i) => (i.discussion as unknown[] | undefined)?.length), ...all.filter((i) => !i.discussion).slice(0, 300)];
+		const items = sampleItems();
 		await load(pg, items);
 		discussed = items.find((i) => (i.discussion as unknown[]).length > 2)!.id as string;
 		const [prefix, suffix] = discussed.split('/');
@@ -105,7 +102,7 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		const reception = { text: 'Checked by two readers; one gap is open.', written: '2026-10-25', links: [links[0].url], reviewed_by: 'someone' };
 		await pg.query("UPDATE open_index.records SET record = record || jsonb_build_object('discussion', $2::jsonb, 'reception', $3::jsonb) WHERE id = $1",
 			[discussed, JSON.stringify(links), JSON.stringify(reception)]);
-		(globalThis as { openIndexDb?: Promise<unknown> }).openIndexDb = Promise.resolve(pg); // what lib/db.ts hands every route
+		useDb(pg); // what lib/db.ts hands every route
 		key = await createAgentKey(pg, 'someone', 'Test agent');
 		process.env.ORI_STATS_ADMINS = 'someone';
 	});
@@ -305,12 +302,11 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.equal((await call('GET', '/api/v1/users/no--such', {})).status, 400);
 		assert.equal((await call('GET', '/api/v1/users/someone', { query: 'tab=answers' })).status, 400);
 		assert.equal((await call('GET', '/api/v1/users/someone', { query: 'cursor=forged' })).status, 400);
-		const cache = globalThis as { openIndexDb?: Promise<unknown> };
-		cache.openIndexDb = Promise.resolve({ query: async () => { throw new Error('offline'); } });
+		useDb({ query: async () => { throw new Error('offline'); } });
 		try {
 			assert.equal((await call('GET', '/api/v1/users/someone', {})).status, 503);
 		} finally {
-			cache.openIndexDb = Promise.resolve(pg);
+			useDb(pg);
 		}
 	});
 
@@ -351,12 +347,11 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.equal((await call('POST', `${record}/comments`, { auth: true, headers: elsewhere, body: { body: 'Which boundary convention is used?', retrieve_sources: true } })).status, 403);
 		assert.equal((await call('POST', `${record}/vote`, { auth: true, headers: elsewhere, body: { value: 1, note: 'Which boundary convention is used?', retrieve_sources: true } })).status, 403);
 		// A database without transactions cannot keep the audit trail.
-		const cache = globalThis as { openIndexDb?: Promise<unknown> };
-		cache.openIndexDb = Promise.resolve({ query: pg.query.bind(pg) });
+		useDb({ query: pg.query.bind(pg) });
 		try {
 			assert.equal((await call('POST', at, { auth: true, body: { urls } })).status, 503);
 		} finally {
-			cache.openIndexDb = Promise.resolve(pg);
+			useDb(pg);
 		}
 	});
 

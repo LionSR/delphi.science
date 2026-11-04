@@ -1,4 +1,5 @@
 // Post drafts kept in tab storage, per author and form. A guest's draft can follow them through sign-in.
+import { MAX_BODY } from './limits.ts';
 export type Draft = { title: string; body: string; review: boolean };
 export type DraftStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
 
@@ -14,7 +15,7 @@ function read(storage: DraftStorage, form: string, owner: string): Draft | undef
 	try {
 		const d = JSON.parse(storage.getItem(key(form, owner)) || 'null');
 		if (d?.version !== 1 || typeof d.title !== 'string' || d.title.length > 200 || typeof d.body !== 'string'
-			|| d.body.length > 4000 || typeof d.review !== 'boolean' || hasKey(d.title + d.body)) return undefined;
+			|| d.body.length > MAX_BODY || typeof d.review !== 'boolean' || hasKey(d.title + d.body)) return undefined;
 		return { title: d.title, body: d.body, review: d.review };
 	} catch {
 		return undefined;

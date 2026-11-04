@@ -2,7 +2,7 @@
 import { db } from '../lib/db.ts';
 import { QueryError } from '../lib/errors.ts';
 import { search, sourceCounts } from '../lib/records/query.ts';
-import taxonomy from '../lib/records/taxonomy.json' with { type: 'json' };
+import { DIVISIONS } from '../lib/records/taxonomy.ts';
 import { me } from '../lib/accounts/session.ts';
 import { date, recordPath, source, tally, tex } from '../lib/view.ts';
 import { myVotes } from '../lib/records/votes.ts';
@@ -16,17 +16,16 @@ type Params = Promise<{ q?: string; sort?: string; cursor?: string; notice?: str
 
 export default async function Home({ searchParams }: { searchParams: Params }) {
 	const { q = '', sort = q ? 'relevance' : 'week', cursor, notice } = await searchParams;
-	let res: Awaited<ReturnType<typeof search>> | null = null;
-	let error = '';
 	const d = await db();
-	try {
-		res = await search(d, q, { sort, cursor, limit: 50 });
-	} catch (e) {
-		if (!(e instanceof QueryError)) throw e;
-		error = `${e.message}. ${e.fix}`;
-	}
-	const sources = await sourceCounts(d);
-	const who = await me();
+	// A query the caller can fix is shown with its fix; the source counts and the session read alongside.
+	const [found, sources, who] = await Promise.all([
+		search(d, q, { sort, cursor, limit: 50 }).then((res) => ({ res, error: '' }), (e) => {
+			if (!(e instanceof QueryError)) throw e;
+			return { res: null, error: `${e.message}. ${e.fix}` };
+		}),
+		sourceCounts(d), me(),
+	]);
+	const { res, error } = found;
 	const mine = who && res ? await myVotes(d, who.login, res.results.map((r) => String(r.id))) : new Map();
 	const here = `/?${new URLSearchParams({ q, sort, ...(cursor ? { cursor } : {}) })}`;
 	const next = res?.next_cursor ? `/?${new URLSearchParams({ q, sort, cursor: res.next_cursor })}` : '';
@@ -51,7 +50,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 				<button>Search</button>
 			</form>
 			<nav className="subjects" aria-label="Subjects">
-				{taxonomy.divisions.map((d) => <a key={d.key} href={`/?q=cat:${d.key}`}>{d.name}</a>)}
+				{DIVISIONS.map((d) => <a key={d.key} href={`/?q=cat:${d.key}`}>{d.name}</a>)}
 			</nav>
 			<nav className="subjects" aria-label="Sources">
 				{sources.map((r) => <a key={r.source} href={source(r.source).href}>{source(r.source).name} <span className="n">{r.n.toLocaleString('en')}</span></a>)}

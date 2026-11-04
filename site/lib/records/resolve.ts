@@ -1,10 +1,9 @@
 // Reads a submitted link's metadata from its source (arXiv, GitHub, DOI, Zenodo, or a public web page),
 // following the harvester's rules in sources.py so ids match what `index.py add` stores.
-import { createHash } from 'node:crypto';
-import { publicWebTarget, readPublicWeb, RetrievalError, type SourceTransport } from '../moderation/source-fetch.ts';
-import taxonomy from './taxonomy.json' with { type: 'json' };
+import { publicWebTarget, readPublicWeb, RetrievalError, webKey, type SourceTransport } from '../moderation/source-fetch.ts';
 import { check, type Entry, type Item } from '../api/schema.ts';
-import { divisionOf, truncate } from './query.ts';
+import { truncate } from '../view.ts';
+import { divisionOf, isNamedSubject } from './taxonomy.ts';
 
 export class NotFound extends Error {}
 // Mostly-pseudoscience venues (sources.py BLOCKED_HOSTS).
@@ -42,7 +41,7 @@ const clean = (text: unknown) =>
 		.replace(/\s+/g, ' ').trim();
 const summarize = (text: unknown) => truncate(clean(text), SUMMARY_CHARS);
 const isoDate = (text: unknown) => String(text ?? '').match(/(\d{4})[-/](\d{2})[-/](\d{2})/)?.slice(1).join('-') ?? '';
-const subject = (domain: string) => (domain in taxonomy.names ? { subject: domain, division: divisionOf(domain) } : {});
+const subject = (domain: string) => (isNamedSubject(domain) ? { subject: domain, division: divisionOf(domain) } : {});
 
 // Drops missing fields (index.py _drop_empty).
 function dropEmpty<T extends Record<string, unknown>>(o: T): T {
@@ -165,7 +164,7 @@ export function detect(link: string): { source: Source; key: string } | null {
 	}
 	try {
 		const { canonical } = publicWebTarget(url);
-		return { source: WEB, key: createHash('sha1').update(canonical).digest('hex').slice(0, 12) };
+		return { source: WEB, key: webKey(canonical) };
 	} catch { return null; }
 }
 

@@ -1,9 +1,10 @@
 // Search for the open index: arXiv-style queries compiled to parameterized Postgres.
 // Text terms rank by ts_rank_cd; with an embedding, keyword and vector ranks merge by reciprocal-rank fusion.
 import stances from './stances.json' with { type: 'json' };
-import taxonomy from './taxonomy.json' with { type: 'json' };
 import type { Db } from '../db.ts';
 import { QueryError } from '../errors.ts';
+import { truncate } from '../view.ts';
+import { divisionOf, isSubjectCode, subjectNamed } from './taxonomy.ts';
 
 type Leaf = { field: string; value: string; phrase: boolean };
 type Node = { op: 'AND' | 'OR' | 'NOT'; kids: Tree[] };
@@ -128,10 +129,6 @@ function date(s: string, end: boolean): string | null {
 	return s;
 }
 
-// The rules of taxonomy.py (is_code, division_of), read from the JSON its build writes.
-export const divisionOf = (c: string) =>
-	taxonomy.divisions.find((d) => d.prefixes.some((p) => c === p || c.startsWith(p + '.') || c.startsWith(p + '-')))?.key ?? 'other';
-const isSubjectCode = (c: string) => /^[a-z]+(?:-[a-z]+)?(?:\.[A-Za-z-]+)?$/.test(c) && (c in taxonomy.names || divisionOf(c) !== 'other');
 
 // The fields an unknown one is told to use instead.
 const FIELDS = [...Object.keys(TEXT).filter(Boolean), ...Object.keys(EXACT), 'cat', 'domain', 'is', 'published'].sort();
@@ -163,7 +160,7 @@ class Compiler {
 			return `r.${col} @@ ${tsq}`;
 		}
 		if (f === 'cat' || f === 'domain') {
-			const fromName = (taxonomy.from_name as Record<string, string>)[v.toLowerCase()];
+			const fromName = subjectNamed(v);
 			const code = fromName ?? v;
 			if (isSubjectCode(code)) {
 				const a = this.p(code), b = this.p(code + '.%'), c = this.p(code + '-%');
@@ -205,9 +202,6 @@ function decode(cursor?: string | null): { offset: number; total?: number } {
 	} catch { /* fall through */ }
 	throw new QueryError('the cursor is not valid', 'Pass next_cursor from the previous reply unchanged.');
 }
-
-/** s cut to at most n characters at a word boundary, with an ellipsis if cut. */
-export const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…');
 
 export function compact(rec: Record<string, unknown>) {
 	const out: Record<string, unknown> = {};

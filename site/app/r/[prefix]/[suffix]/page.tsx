@@ -14,7 +14,7 @@ import { date, idPath, reception, recordId, recordPath, SITE, source, STANCES, t
 import { publicNames } from '../../../../lib/accounts/people.ts';
 import { myVotes, votes } from '../../../../lib/records/votes.ts';
 import { Vote } from '../../../vote.tsx';
-import { EditPost } from '../../../edit-post.tsx';
+import { OwnerEdit } from '../../../owner-edit.tsx';
 
 export const dynamic = 'force-dynamic';
 
@@ -46,14 +46,13 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const r = await record(id);
 	if (!r) notFound();
 	const d = await db();
-	const thread = await comments(d, id);
-	const { notice } = await ctx.searchParams;
-	const voters = await votes(d, id);
+	const [thread, voters, who, { notice }] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams]);
 	const stands = reception(r);
-	const names = await publicNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter), ...(stands?.reviewed_by ? [String(stands.reviewed_by)] : [])]);
-	const who = await me();
 	const owner = who?.login ?? '';
-	const mine = who ? (await myVotes(d, who.login, [id])).get(id) : undefined;
+	const [names, mine] = await Promise.all([
+		publicNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter), ...(stands?.reviewed_by ? [String(stands.reviewed_by)] : [])]),
+		who ? myVotes(d, who.login, [id]).then((m) => m.get(id)) : undefined,
+	]);
 	const back = recordPath(id);
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
 	// External posts and articles about the record (index.py discuss).
@@ -138,7 +137,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
 					</p>
 					<Markdown text={c.body} postId={c.id} />
-					{owner === c.voter && <EditPost key={owner} id={c.id} owner={owner} body={c.body} revision={c.revision} />}
+					<OwnerEdit post={c} owner={owner} />
 				</div>
 			))}
 

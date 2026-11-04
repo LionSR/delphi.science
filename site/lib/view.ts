@@ -11,12 +11,11 @@ export const INGEST_TIME_UTC = '05:30';
 export const AGENT_DIR = '~/.config/open-research-index';
 
 export const tex = (s: unknown) => String(s ?? '').replace(/\$`([^`]+)`\$/g, (_, m) => `$${m}$`);
+const DAY = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 // Accepts a Date (from Postgres) or an ISO string (from records).
 export const date = (when: unknown) => {
 	const iso = when instanceof Date ? when.toISOString() : when;
-	return typeof iso === 'string' && /^\d{4}-\d{2}-\d{2}/.test(iso)
-		? new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(iso.slice(0, 10)))
-		: '';
+	return typeof iso === 'string' && /^\d{4}-\d{2}-\d{2}/.test(iso) ? DAY.format(new Date(iso.slice(0, 10))) : '';
 };
 /** ▲ for an upvote, ▼ for a downvote, nothing for an emoji-only reaction. */
 export const voteMark = (value: number | null | undefined) => value === 1 ? '▲' : value === -1 ? '▼' : '';
@@ -41,7 +40,6 @@ export const recordId = async ({ params }: IdParams) => joinId(await params);
 const NAMES = prefixes.prefixes as Record<string, { name: string }>;
 /** The source's name, linked to its records. */
 export const source = (s: unknown) => ({ name: NAMES[String(s)]?.name ?? String(s), href: `/?q=source:${String(s)}` });
-/** How many records each source has, most first (the homepage and /llms.txt list them). */
 // A reviewed summary of where the work stands (index.py reception).
 type Reception = { text: string; written?: string; links?: string[]; reviewed_by?: string };
 export const reception = (r: Record<string, unknown>): Reception | null => {
@@ -52,3 +50,6 @@ export const reception = (r: Record<string, unknown>): Reception | null => {
 export const STANCES: Record<string, string> = stances.stances;
 /** "refutes (…), questions (…), …", for the API docs. */
 export const STANCE_LIST = Object.entries(STANCES).map(([s, d]) => `${s} (${d})`).join(', ');
+
+/** s cut to at most n characters at a word boundary, with an ellipsis if cut. */
+export const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…');

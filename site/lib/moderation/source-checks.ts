@@ -1,7 +1,7 @@
 // Public-source checks for a record: fresh retrievals and reviewed historical observations, kept distinct.
-import { createHash } from 'node:crypto';
 import { NotFoundError, QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
+import { sha256 } from '../hash.ts';
 import { lookupCuratedPublicSource, type CuratedPublicSnapshot } from './curated-sources.ts';
 import { reserveAttempt, finishAttempt } from './audit.ts';
 import type { Voter } from '../accounts/keys.ts';
@@ -28,7 +28,6 @@ const FIELDS = ['adapter', 'author', 'blob_sha', 'canonical', 'digest', 'excerpt
 	'requested_ref', 'resolved_commit', 'response_status', 'status', 'title', 'file_mode', 'root_tree_sha'];
 const GIT_FIELDS = ['title', 'author', 'requested_ref', 'resolved_commit', 'path', 'blob_sha', 'file_mode', 'root_tree_sha'] as const;
 const SHA = /^[0-9a-f]{40}$/;
-const sha256 = (s: string) => createHash('sha256').update(s).digest('hex');
 const defaultRetriever: SourceRetriever = (target, deadline) => retrieveSource(target, undefined, deadline);
 const shortText = (value: unknown, max: number) => typeof value === 'string' && !!value.trim() && value.length <= max;
 /** One to `max` URLs, each a nonempty string of at most 2,000 characters. */

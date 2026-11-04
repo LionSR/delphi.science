@@ -1,19 +1,19 @@
 // GET/PATCH /api/v1/profile and the name fields of GET /api/v1/users/{login}, on in-process Postgres with every migration.
 import { strict as assert } from 'node:assert';
-import { registerHooks } from 'node:module';
 import { after, before, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
-import { migratedDb } from '../testing.ts';
-import { createAgentKey, createSession, sha256 } from './keys.ts';
+import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
+import { sha256 } from '../hash.ts';
+import { createAgentKey, createSession } from './keys.ts';
 
 // Next's bundler resolves next/server for the routes; plain Node needs the file named.
-registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
+allowRouteImports();
 
 let pg: PGlite, key = '';
 
 before(async () => {
 	pg = await migratedDb();
-	(globalThis as { openIndexDb?: Promise<unknown> }).openIndexDb = Promise.resolve(pg);
+	useDb(pg);
 	key = await createAgentKey(pg, 'EverettYou', 'dot');
 });
 after(() => pg.close());

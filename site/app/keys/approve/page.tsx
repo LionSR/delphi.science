@@ -2,7 +2,7 @@
 import { db } from '../../../lib/db.ts';
 import { pendingDevice } from '../../../lib/accounts/device.ts';
 import { approve, deny } from '../../actions.ts';
-import { signedIn } from '../../sign-in.ts';
+import { signedIn } from '../../../lib/accounts/session.ts';
 
 export const dynamic = 'force-dynamic';
 

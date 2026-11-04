@@ -2,7 +2,8 @@
 // redeems its private device code for a key, once.
 import { QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
-import { agentName, createAgentKey, sha256 } from './keys.ts';
+import { sha256 } from '../hash.ts';
+import { agentName, createAgentKey } from './keys.ts';
 
 const LETTERS = 'BCDFGHJKLMNPQRSTVWXZ'; // no vowels, so codes spell no words
 const random = (n: number, alphabet: string) => [...crypto.getRandomValues(new Uint8Array(n))].map((b) => alphabet[b % alphabet.length]).join('');
@@ -13,7 +14,7 @@ export async function startDevice(db: Db, agent: unknown) {
 	const name = agentName(agent); // validated before anyone is asked to approve it
 	const deviceCode = random(40, '0123456789abcdefghijklmnopqrstuvwxyz');
 	const userCode = `${random(4, LETTERS)}-${random(4, LETTERS)}`;
-	await db.query('INSERT INTO open_index.device_codes (device_hash, user_code, agent) VALUES ($1, $2, $3)', [await sha256(deviceCode), userCode, name]);
+	await db.query('INSERT INTO open_index.device_codes (device_hash, user_code, agent) VALUES ($1, $2, $3)', [sha256(deviceCode), userCode, name]);
 	return { device_code: deviceCode, user_code: userCode, expires_in: 600, interval: 5 };
 }
 
@@ -37,7 +38,7 @@ export async function denyDevice(db: Db, userCode: string) {
 
 /** The agent's key once its person has approved; 'pending' before that. Each device code gives one key. */
 export async function redeemDevice(db: Db, deviceCode: string): Promise<{ key: string; login: string; agent: string } | 'pending'> {
-	const hash = await sha256(deviceCode);
+	const hash = sha256(deviceCode);
 	const row = (await db.query<{ agent: string; login: string | null; live: boolean }>(
 		'SELECT agent, login, (used_at IS NULL AND expires_at > now()) AS live FROM open_index.device_codes WHERE device_hash = $1', [hash])).rows[0];
 	if (!row || !row.live) throw new QueryError('this device code is unknown, used, denied, or expired', 'Start again: POST /api/v1/keys/device.');

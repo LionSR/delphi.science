@@ -1,6 +1,6 @@
 // Repository-reviewed historical observations of public sources, shipped with the server.
-import { createHash } from 'node:crypto';
 import registryData from './curated-sources.json' with { type: 'json' };
+import { sha256 } from '../hash.ts';
 import { canonicalSource, type SourceAdapter } from './source-fetch.ts';
 
 const RECORD_ID = /^[a-z][a-z0-9-]{0,63}\/[A-Za-z0-9][A-Za-z0-9._-]{0,199}$/;
@@ -82,8 +82,9 @@ function parseRegistry(raw: unknown): readonly CuratedPublicSnapshot[] {
 		const reference = text(value.reference, 2000);
 		const target = sourceIdentity(reference);
 		if (target.canonical !== reference || target.adapter !== value.adapter) return invalid();
-		if (seen.has(key(value.record_id, reference))) return invalid();
-		seen.add(key(value.record_id, reference));
+		const k = key(value.record_id, reference);
+		if (seen.has(k)) return invalid();
+		seen.add(k);
 		const window = object(value.observed_window_utc, ['start', 'end']);
 		const start = text(window.start, 24), end = text(window.end, 24);
 		if (!utcSecond(start) || !utcSecond(end) || Date.parse(end) < Date.parse(start) || Date.parse(end) - Date.parse(start) > DAY_MS) return invalid();
@@ -98,7 +99,7 @@ function parseRegistry(raw: unknown): readonly CuratedPublicSnapshot[] {
 			review: Object.freeze({ reviewed_by: text(review.reviewed_by, 200), process: REVIEW_PROCESS }),
 		});
 		// The digest covers this reviewed record, not the remote page bytes.
-		const digest = createHash('sha256').update(JSON.stringify({ schema_version: 1, observation })).digest('hex');
+		const digest = sha256(JSON.stringify({ schema_version: 1, observation }));
 		return Object.freeze({ ...observation, status: 'curated_public_snapshot' as const, digest,
 			digest_kind: 'reviewed_observation_record_sha256' as const, evidence_limits: LIMITS });
 	}));

@@ -12,7 +12,7 @@ import { comment as actualComment, comments } from '../posts/comments.ts';
 import { approveDevice, denyDevice, pendingDevice, redeemDevice, startDevice } from '../accounts/device.ts';
 import { handle as mcp } from '../api/mcp.ts';
 import { fileCount, MAX_URLS, sitemapFile, sitemapFiles } from './sitemap.ts';
-import { BUILD, migratedDb } from '../testing.ts';
+import { BUILD, buildItems, migratedDb } from '../testing.ts';
 
 const yes = async () => ({ decision: 'ACCEPT' as const, reason: 'Test fixture only.', verification_needed: false });
 const comment: typeof actualComment = (db, id, voter, c, moderate = yes) => actualComment(db, id, voter, c, moderate);
@@ -51,7 +51,7 @@ describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' },
 	let items: Item[] = [];
 	before(async () => {
 		db = await migratedDb();
-		items = JSON.parse(readFileSync(BUILD, 'utf8')).items;
+		items = buildItems();
 		assert.equal(await load(db, items), items.length);
 	});
 	// Sets a record's links (record.discussion), as index.py discuss does; pair queries two palomar records.

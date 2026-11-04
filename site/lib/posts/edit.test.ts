@@ -1,6 +1,5 @@
 // Post editing on in-process Postgres with scripted moderation verdicts.
 import { strict as assert } from 'node:assert';
-import { registerHooks } from 'node:module';
 import { before, beforeEach, after, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { comment, post, thread } from './comments.ts';
@@ -11,8 +10,8 @@ import { load } from '../records/load.ts';
 import type { Moderator, Post } from '../moderation/moderate.ts';
 import { createAgentKey, createSession, type Voter } from '../accounts/keys.ts';
 import type { Db } from '../db.ts';
-import { migratedDb } from '../testing.ts';
-registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
+import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
+allowRouteImports();
 let pg: PGlite;
 const bot: Voter = { login: 'edit-owner', agent: 'Research Bot' };
 const owner: Voter = { ...bot, agent: '' };
@@ -132,8 +131,7 @@ test('question, answer, reply and review edits preserve kind, context, votes and
 	await write(p.id, p.revision, 'Equation 3 omits the endpoint term.', bot, async value => { assert.equal(value.kind, 'review'); assert.equal((value.context!.record as { id: string }).id, record); return yes(value); });
 });
 
-test('PATCH binds credential identity and rejects spoofing, immutable fields and stale saves', async () => {
-	const cache = globalThis as { openIndexDb?: Promise<Db> }; cache.openIndexDb = Promise.resolve(pg);
+test('PATCH binds credential identity and rejects spoofing, immutable fields and stale saves', async () => {useDb(pg);
 	const { PATCH } = await import('../../app/api/v1/posts/[id]/route.ts');
 	const key = await createAgentKey(pg, bot.login, bot.agent), sibling = await createAgentKey(pg, bot.login, 'Other Bot'), unrelated = await createAgentKey(pg, other.login, bot.agent), session = await createSession(pg, bot.login);
 	const p = await fresh();
@@ -147,5 +145,5 @@ test('PATCH binds credential identity and rejects spoofing, immutable fields and
 	for (const extra of [{ voter: bot.login }, { login: bot.login }, { human: true }, { agent: bot.agent }, { review: false }, { topic_id: 1 }]) assert.equal((await call(key, { ...input, ...extra })).status, 400);
 	assert.equal((await call(key, input, 999999)).status, 404); assert.equal((await call(key, { ...input, revision: '0' })).status, 409);
 	const identical = await call(key, { ...input, body: p.body }); assert.equal(identical.status, 200); assert.equal((await identical.json()).revision, p.revision);
-	assert.equal((await stored(p.id)).body, p.body); delete cache.openIndexDb;
+	assert.equal((await stored(p.id)).body, p.body); useDb();
 });

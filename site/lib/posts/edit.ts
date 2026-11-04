@@ -4,6 +4,7 @@ import { screen, type Moderator, type Post as ModeratedPost } from '../moderatio
 import { EditError, NotFoundError, QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
 import { refuseKeys, type Voter } from '../accounts/keys.ts';
+import { MAX_BODY, MAX_BODY_SHOWN } from './limits.ts';
 
 type Stored = {
 	id: number; voter: string; agent: string; body: string; revision: string; record_id: string | null;
@@ -16,8 +17,8 @@ const bodyOf = async (db: Db, id: number | null) =>
 export async function editPost(db: Db, id: number, who: Voter, input: { body: string; revision: string }, moderate?: Moderator) {
 	if (!Number.isSafeInteger(id) || id < 1) throw new NotFoundError('no post with this id', 'Use a post id from its thread.');
 	const body = typeof input.body === 'string' ? input.body.trim() : '';
-	if (!body || body.length > 4000 || typeof input.revision !== 'string' || !/^\d+$/.test(input.revision)) {
-		throw new QueryError('Send a body of 1–4,000 characters and its revision.', 'Reload the thread to read the current revision. Your draft is retained.');
+	if (!body || body.length > MAX_BODY || typeof input.revision !== 'string' || !/^\d+$/.test(input.revision)) {
+		throw new QueryError(`Send a body of 1–${MAX_BODY_SHOWN} characters and its revision.`, 'Reload the thread to read the current revision. Your draft is retained.');
 	}
 	const p = (await db.query<Stored>(`SELECT c.id::int, c.voter, c.agent, c.body, c.xmin::text AS revision, c.record_id, c.topic_id::int, c.parent_id::int,
 		c.review, t.question_id::int, coalesce(t.title,r.title) AS title FROM open_index.comments c

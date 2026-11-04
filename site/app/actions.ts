@@ -10,16 +10,14 @@ import { accept, votePost } from '../lib/posts/forum.ts';
 import { editPublicName } from '../lib/accounts/people.ts';
 import { profilePath } from '../lib/accounts/public-author.ts';
 import { postFeedback, type PostFeedback, type PostFormState } from '../lib/posts/feedback.ts';
-import { submitPostForm, type PostInput } from '../lib/posts/form-submit.ts';
+import { FORM_KINDS, type PostInput, submitPostForm } from '../lib/posts/form-submit.ts';
 import { QueryError } from '../lib/errors.ts';
-import { COOKIE, me, safeNext } from '../lib/accounts/session.ts';
+import { COOKIE, me, safeNext, signedIn } from '../lib/accounts/session.ts';
 import { requireSourceCheckOrigin } from '../lib/moderation/source-check-origin.ts';
 import { recordPath } from '../lib/view.ts';
 import { myVotes, unvote, vote } from '../lib/records/votes.ts';
 import { revokeAgentKey, revokeKey } from '../lib/accounts/keys.ts';
-import { signedIn } from './sign-in.ts';
 
-const KINDS: PostInput['kind'][] = ['question', 'answer', 'comment', 'record', 'submission'];
 
 // Runs a form action and redirects back, with a QueryError's message as ?notice=.
 async function thenBack(back: string, act: () => Promise<unknown>) {
@@ -49,7 +47,7 @@ export async function savePostEdit(input: { id: number; body: string; revision: 
 
 export async function sendPost(_previous: PostFormState, form: FormData): Promise<PostFormState> {
 	const kind = String(form.get('kind')) as PostInput['kind'];
-	if (!KINDS.includes(kind)) {
+	if (!(FORM_KINDS as readonly string[]).includes(kind)) {
 		return { status: 'failed', feedback: { code: 'bad_request', message: 'Choose a topic, reply, comment or review form.', fix: 'Open the relevant thread and try again.' } };
 	}
 	try {

@@ -5,6 +5,7 @@ import { screen, type Moderator, type Post as ModeratedPost } from '../moderatio
 import { NotFoundError, QueryError } from '../errors.ts';
 import type { Db } from '../db.ts';
 import { refuseKeys, type Voter } from '../accounts/keys.ts';
+import { MAX_BODY, MAX_BODY_SHOWN } from './limits.ts';
 
 const ID = /\b[a-z][a-z0-9-]*\/[^\s<>"'()[\]{},;/]+/g;
 const URL_ = /https?:\/\/[^\s<>"'()[\]{}]+/g;
@@ -16,11 +17,11 @@ type NewPost = { body: string; review?: boolean; parent?: number; retrieveSource
 /** Where moderation is told a post is, for new posts and edits alike. */
 export const moderationPlace = (recordId: string | null) => recordId ? { recordId, on: `the record ${recordId}` } : { on: 'a forum topic' };
 
-/** Trims a body and refuses one that is empty, over 4,000 characters or carrying an agent key. */
+/** Trims a body and refuses one that is empty, over MAX_BODY characters or carrying an agent key. */
 async function checkBody(db: Db, text: string) {
 	const body = (text ?? '').trim();
 	if (!body) throw new QueryError('the comment is empty', 'Send "body" with the text.');
-	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
+	if (body.length > MAX_BODY) throw new QueryError(`the comment is longer than ${MAX_BODY_SHOWN} characters`, 'Shorten it, or post a reply.');
 	await refuseKeys(db, body);
 	return body;
 }

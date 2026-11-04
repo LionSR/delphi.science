@@ -5,10 +5,9 @@ import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { after, before, describe, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
-import { vector } from '@electric-sql/pglite/vector';
 import { CLIENTS, ENDPOINTS, client, collectionEnabled, countCall, kind, pruneUsage, retentionEnabled, since, usage } from './usage.ts';
 import { canReadUsage } from './usage-admin.ts';
-import { migratedDb, migrations } from '../testing.ts';
+import { emptyDb, migratedDb, migrations } from '../testing.ts';
 
 const flagNames = ['ORI_USAGE_ANALYTICS_ENABLED', 'ORI_USAGE_RETENTION_ENABLED', 'VERCEL_ENV'] as const;
 const savedFlags = Object.fromEntries(flagNames.map((name) => [name, process.env[name]]));
@@ -117,7 +116,7 @@ test('retains exactly 90 UTC dates, with repeatable cleanup even when traffic st
 });
 
 test('migration preserves legacy rows while reports exclude unsafe dimensions and old dates', async () => {
-	const db = new PGlite({ extensions: { vector } });
+	const db = emptyDb();
 	try {
 		for (const m of migrations()) {
 			if (m.name.includes('private_bounded_usage')) await db.exec(`INSERT INTO open_index.api_usage VALUES

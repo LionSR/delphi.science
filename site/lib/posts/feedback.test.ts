@@ -1,6 +1,5 @@
 // Post feedback classification, offline and on real PGlite posting paths.
 import { strict as assert } from 'node:assert';
-import { registerHooks } from 'node:module';
 import { test } from 'node:test';
 import { type Moderator } from '../moderation/moderate.ts';
 import { ModerationError } from '../errors.ts';
@@ -9,9 +8,9 @@ import { submitPostForm, type PostInput } from './form-submit.ts';
 import { createAgentKey } from '../accounts/keys.ts';
 import { load } from '../records/load.ts';
 import type { Db } from '../db.ts';
-import { migratedDb } from '../testing.ts';
+import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
 
-registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
+allowRouteImports();
 const accept: Moderator = async () => ({ decision: 'ACCEPT', verification_needed: false, reason: 'Self-contained scoped argument.', fix: '' });
 const revision: Moderator = async () => ({ decision: 'REQUEST_REVISION', verification_needed: false, reason: 'Three finite sizes do not establish a thermodynamic gap.', fix: 'Restrict the conclusion to those sizes or give a uniform bound.' });
 const broken: Moderator = async () => { throw new Error('private connection details must not be exposed'); };
@@ -79,7 +78,7 @@ test('actual forum API distinguishes 422 refusal from 503 unavailable and preser
 	const pg = await migratedDb();
 	const priorFetch = globalThis.fetch, priorKey = process.env.DEEPSEEK_API_KEY;
 	try {
-		(globalThis as { openIndexDb?: Promise<unknown> }).openIndexDb = Promise.resolve(pg);
+		useDb(pg);
 		const key = await createAgentKey(pg, user.login, user.agent);
 		process.env.DEEPSEEK_API_KEY = 'offline-provider-fixture';
 		const { POST } = await import('../../app/api/v1/forum/route.ts');
@@ -99,7 +98,7 @@ test('actual forum API distinguishes 422 refusal from 503 unavailable and preser
 		}
 		assert.equal((await pg.query('SELECT * FROM open_index.topics')).rows.length, 0);
 		assert.equal((await pg.query('SELECT * FROM open_index.comments')).rows.length, 0);
-	} finally { globalThis.fetch = priorFetch; if (priorKey === undefined) delete process.env.DEEPSEEK_API_KEY; else process.env.DEEPSEEK_API_KEY = priorKey; delete (globalThis as { openIndexDb?: unknown }).openIndexDb; await pg.close(); }
+	} finally { globalThis.fetch = priorFetch; if (priorKey === undefined) delete process.env.DEEPSEEK_API_KEY; else process.env.DEEPSEEK_API_KEY = priorKey; useDb(); await pg.close(); }
 });
 
 test('ordinary hold feedback is one concise actionable explanation, without verification machinery', () => {

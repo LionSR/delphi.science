@@ -12,7 +12,7 @@ import { acceptOn, votePostOn } from '../../actions.ts';
 import { PostForm } from '../../post-form.tsx';
 import { PublicAuthor } from '../../../lib/accounts/public-author.ts';
 import { Markdown } from '../../../lib/posts/markdown.ts';
-import { EditPost } from '../../edit-post.tsx';
+import { OwnerEdit } from '../../owner-edit.tsx';
 
 export const dynamic = 'force-dynamic';
 
@@ -31,8 +31,6 @@ type Thread = { topic: number; owner: string; names: Names };
 type WithComments = Post & { comments: Post[] };
 
 const by = (p: Post, names: Names) => <PublicAuthor voter={p.voter} agent={p.agent} who={names.get(p.voter)} />;
-// The Edit button, on the signed-in person's own posts.
-const edit = (p: Post, owner: string) => owner === p.voter && <EditPost key={owner} id={p.id} owner={owner} body={p.body} revision={p.revision} />;
 
 function Votes({ topic, p, mine }: { topic: number; p: Post; mine?: number }) {
 	return (
@@ -52,7 +50,7 @@ function Comments({ topic, p, owner, names }: Thread & { p: WithComments }) {
 		<div className="post-comments">
 			{p.comments.map((c) => (
 				<div className="post-comment" key={c.id} id={`p${c.id}`}><Markdown text={c.body} postId={c.id} /><span className="meta-inline">{by(c, names)} · {date(c.at)}</span>
-					{edit(c, owner)}</div>
+					<OwnerEdit post={c} owner={owner} /></div>
 			))}
 			<details>
 				<summary>Add a comment</summary>
@@ -70,7 +68,7 @@ function Entry({ p, mine, className, meta, ...thread }: Thread & { p: WithCommen
 			<Votes topic={thread.topic} p={p} mine={mine} />
 			<div className="post-body">
 				<Markdown text={p.body} postId={p.id} />
-				{edit(p, thread.owner)}
+				<OwnerEdit post={p} owner={thread.owner} />
 				{meta}
 				<Comments {...thread} p={p} />
 			</div>
@@ -80,14 +78,14 @@ function Entry({ p, mine, className, meta, ...thread }: Thread & { p: WithCommen
 
 export default async function Question({ params, searchParams }: Ctx) {
 	const d = await db();
-	const t = await topicById(Number((await params).id));
+	const [t, who, { notice }] = await Promise.all([topicById(Number((await params).id)), me(), searchParams]);
 	if (!t) notFound();
-	const { notice } = await searchParams;
-	const who = await me();
 	const posts = [t.question, ...t.answers];
-	const mine = who ? await myPostVotes(d, who.login, posts.map((p) => p.id)) : new Map<number, number>();
 	const owner = who?.login ?? '';
-	const names = await publicNames(d, posts.flatMap((p) => [p, ...p.comments]).map((p) => p.voter));
+	const [mine, names] = await Promise.all([
+		who ? myPostVotes(d, who.login, posts.map((p) => p.id)) : new Map<number, number>(),
+		publicNames(d, posts.flatMap((p) => [p, ...p.comments]).map((p) => p.voter)),
+	]);
 	const asker = who?.login === t.voter;
 	const thread: Thread = { topic: t.id, owner, names };
 	return (

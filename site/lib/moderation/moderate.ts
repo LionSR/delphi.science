@@ -120,12 +120,15 @@ async function assess(db: Db, post: Post, moderate: Moderator | undefined, retri
 	if (JSON.stringify(post).length > MAX_CONTEXT_CHARS) {
 		return { value: { decision: 'REVIEW_NEEDED', reason: 'The source context is too large for a bounded quality check. Ask for a smaller verified record.', verification_needed: false } };
 	}
+	let sources: SourceEvidence[] = [];
 	// Submissions carry upstream metadata, so the notation and citation checks are for discussion only.
-	const text = `${post.title ?? ''}\n${post.body}`;
-	const notation = post.kind === 'submission' ? null : notationVerdict(text);
-	if (notation) return { value: notation };
-	// Reviewed observations stand in for a source only when no fresh check was requested.
-	let sources = post.kind === 'submission' ? [] : await citationEvidence(db, text, retrieveSources ? undefined : post.recordId);
+	if (post.kind !== 'submission') {
+		const text = `${post.title ?? ''}\n${post.body}`;
+		const notation = notationVerdict(text);
+		if (notation) return { value: notation };
+		// Reviewed observations stand in for a source only when no fresh check was requested.
+		sources = await citationEvidence(db, text, retrieveSources ? undefined : post.recordId);
+	}
 	let checkedSources: CheckBatch | undefined;
 	const unresolved = sources.filter((s) => s.status === 'unresolved');
 	if (retrieveSources && post.recordId && ['comment', 'review', 'note'].includes(post.kind) && unresolved.length) {

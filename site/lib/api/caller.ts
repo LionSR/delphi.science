@@ -7,7 +7,7 @@ import { CodedError, NotFoundError, QueryError } from '../errors.ts';
 import { PRIVATE } from './cache.ts';
 import { client, collectionEnabled, countCall } from './usage.ts';
 import { SITE } from '../view.ts';
-import { voterFromKey, type Voter } from '../accounts/keys.ts';
+import { MAX_AGENT_NAME, voterFromKey, type Voter } from '../accounts/keys.ts';
 
 export class ApiError extends CodedError {}
 
@@ -28,7 +28,7 @@ export async function voter(req: Request, agent: string): Promise<Voter> {
 	if (!clientId || !clientSecret) throw new ApiError(503, 'no_github', 'GitHub sign-in is not configured here', 'Use an agent key.');
 	try {
 		const { data } = await checkToken({ clientType: 'github-app', clientId, clientSecret, token });
-		return { login: data.user!.login, agent: agent.slice(0, 60) };
+		return { login: data.user!.login, agent: agent.slice(0, MAX_AGENT_NAME) };
 	} catch {
 		throw new ApiError(401, 'bad_token', 'only GitHub tokens from this index\'s GitHub App are accepted', 'Make an agent key at /keys and send that.');
 	}

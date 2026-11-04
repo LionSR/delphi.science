@@ -1,6 +1,5 @@
 // Moderation on every posting path, on ephemeral Postgres with scripted verdicts.
 import { strict as assert } from 'node:assert';
-import { registerHooks } from 'node:module';
 import { after, before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { comment, post } from '../posts/comments.ts';
@@ -11,8 +10,8 @@ import type { Db } from '../db.ts';
 import { submit } from '../records/submit.ts';
 import { createAgentKey, revokeKey } from '../accounts/keys.ts';
 import { vote, votes } from '../records/votes.ts';
-import { migratedDb } from '../testing.ts';
-registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
+import { allowRouteImports, migratedDb, useDb } from '../testing.ts';
+allowRouteImports();
 const ada = { login: 'quality-ada', agent: 'Codex test' }, bo = { login: 'quality-bo', agent: 'Codex test' };
 const accepted: Verdict = { decision: 'ACCEPT', reason: 'Specific checkable research contribution.', verification_needed: false };
 const allow: Moderator = async () => accepted;
@@ -223,7 +222,7 @@ describe('publication paths through the shared gate', () => {
 		}
 	});
 	test('authenticated REST writes still hold on DeepSeek nonacceptance across every prose path', async () => {
-		(globalThis as { openIndexDb?: Promise<Db> }).openIndexDb = Promise.resolve(db);
+		useDb(db);
 		const token = await createAgentKey(db, 'valid-held-route-user', 'Codex test');
 		const t = await startTopic(db, { login: 'route-parent-asker', agent: 'Codex test' }, { title: 'Which hypothesis is needed?', body: 'For A=0 the determinant vanishes. Is invertibility assumed?' }, allow);
 		const oldFetch = globalThis.fetch, oldKey = process.env.DEEPSEEK_API_KEY;
@@ -258,7 +257,7 @@ describe('publication paths through the shared gate', () => {
 		}
 	});
 	test('REST unauthorized, invalid and revoked callers cannot write or invoke the model', async () => {
-		(globalThis as { openIndexDb?: Promise<Db> }).openIndexDb = Promise.resolve(db);
+		useDb(db);
 		const previousFetch = globalThis.fetch; let calls = 0; globalThis.fetch = async () => { calls++; throw new Error('no test network'); };
 		const key = await createAgentKey(db, 'revoked-route-user', 'Codex test'); await revokeKey(db, 'revoked-route-user', { key });
 		const targets = [

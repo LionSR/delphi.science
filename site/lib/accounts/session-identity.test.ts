@@ -4,7 +4,8 @@ import { after, before, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { QueryError } from '../errors.ts';
 import { migratedDb } from '../testing.ts';
-import { agentName, createAgentKey, createSession, personFromSession, profileName, revokeKey, sha256, voterFromKey } from './keys.ts';
+import { agentName, createAgentKey, createSession, personFromSession, profileName, revokeKey, voterFromKey } from './keys.ts';
+import { sha256 } from '../hash.ts';
 
 let db: PGlite;
 before(async () => { db = await migratedDb(); });

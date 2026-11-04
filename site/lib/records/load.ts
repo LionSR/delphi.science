@@ -1,7 +1,7 @@
 // Loads the built records (dist/index.json items[]) into Postgres, upserting only those whose
 // content_hash changed.
 import type { Db } from '../db.ts';
-import { sha256 } from '../accounts/keys.ts';
+import { sha256 } from '../hash.ts';
 import { check, type Item } from '../api/schema.ts';
 
 export type { Item };
@@ -20,7 +20,7 @@ export async function row(it: Item): Promise<unknown[]> {
 		str(it.category) || 'research', str(it.origin), str(it.family), Boolean(it.agent_ready), Boolean(it.formalized),
 		Boolean(it.verified), Boolean(it.withdrawn), Boolean(it.gone),
 		it, // the object, not the string: postgres.js would encode a string again as a jsonb string
-		await sha256(record),
+		sha256(record),
 	];
 }
 

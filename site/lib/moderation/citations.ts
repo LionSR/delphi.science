@@ -45,8 +45,12 @@ export async function citationEvidence(db: Db, text: string, curatedRecord?: str
 	for (const reference of refs) {
 		const rec = (await db.query<{ id: string; title: string; url: string }>(
 			'SELECT id, title, url FROM open_index.records WHERE NOT gone AND (id = $1 OR url = $2) LIMIT 1', [recordId(reference), reference])).rows[0];
-		evidence.push(rec ? { reference, status: 'indexed_metadata', ...rec }
-			: (curatedRecord ? lookupCuratedPublicSource(curatedRecord, reference) : undefined) ?? { reference, status: 'unresolved' });
+		if (rec) {
+			evidence.push({ reference, status: 'indexed_metadata', ...rec });
+			continue;
+		}
+		const curated = curatedRecord ? lookupCuratedPublicSource(curatedRecord, reference) : undefined;
+		evidence.push(curated ?? { reference, status: 'unresolved' });
 	}
 	return evidence;
 }

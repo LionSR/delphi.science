@@ -7,13 +7,17 @@ import type { Db } from '../db.ts';
 import { submit } from '../records/submit.ts';
 import { recordPath } from '../view.ts';
 import type { Voter } from '../accounts/keys.ts';
+import { MAX_BODY, MAX_BODY_SHOWN } from './limits.ts';
 
-export type PostInput = { kind: 'question' | 'answer' | 'comment' | 'record' | 'submission'; title: string; body: string;
+/** What a post form can publish. */
+export const FORM_KINDS = ['question', 'answer', 'comment', 'record', 'submission'] as const;
+
+export type PostInput = { kind: (typeof FORM_KINDS)[number]; title: string; body: string;
 	topic?: number; parent?: number; record?: string; review: boolean; retrieveSources?: boolean };
 
 export async function submitPostForm(db: Db, who: Voter, input: PostInput, moderate?: Moderator, fetcher: typeof fetch = fetch): Promise<string> {
 	const body = input.body.trim();
-	if (!body || body.length > 4000) throw new QueryError('The post needs 1–4,000 characters.', 'Keep the precise question, argument or evidence and shorten unrelated background.');
+	if (!body || body.length > MAX_BODY) throw new QueryError(`The post needs 1–${MAX_BODY_SHOWN} characters.`, 'Keep the precise question, argument or evidence and shorten unrelated background.');
 	if (input.kind === 'submission') {
 		if (body.length > 2000) throw new QueryError('The link is longer than 2,000 characters.', 'Send one scholarly URL or identifier.');
 		const result = await submit(db, body, who, fetcher, moderate);

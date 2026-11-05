@@ -2,7 +2,8 @@
 // each record). Forum post votes stay private. Reads only rows that are already public.
 import { CodedError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
-import { pageInfo, pageSize, pageStart, type PageRequest, type Paging } from '#lib/paging.ts';
+import { pageInfo, pageSize, pageStart, type PageRequest } from '#lib/paging.ts';
+import type { FromSchema, Schemas } from '#lib/api/schema.ts';
 import { recordPath } from '#lib/view.ts';
 
 /** A profile's page size (lib/paging.ts). */
@@ -13,19 +14,20 @@ export const PROFILE_PAGE = pageSize('Items', 50, 20);
 export const POST_KINDS = ['question', 'answer', 'comment', 'review'] as const;
 export type PostKind = (typeof POST_KINDS)[number];
 /** Profile tabs: all posts, one group of kinds (comments include record reviews), or record votes. */
-export const TABS = ['all', 'topics', 'replies', 'comments', 'votes'] as const;
+export const POST_TABS = ['all', 'topics', 'replies', 'comments'] as const;
+export const TABS = [...POST_TABS, 'votes'] as const;
 export type Tab = (typeof TABS)[number];
-type PostTab = Exclude<Tab, 'votes'>;
+type PostTab = (typeof POST_TABS)[number];
 const TAB_KINDS: Record<Exclude<PostTab, 'all'>, PostKind[]> = { topics: ['question'], replies: ['answer'], comments: ['comment', 'review'] };
+/** The tabs that each hold one group of post kinds; together they hold every post once. */
+const KIND_TABS = TABS.filter((t): t is keyof typeof TAB_KINDS => t in TAB_KINDS);
 
-export type ProfilePost = {
-	id: number; kind: PostKind; voter: string; agent: string; body: string; at: string; title: string;
-	record_id?: string; topic_id?: number; parent?: number; permalink: string;
-};
-export type ProfileVote = { record_id: string; title: string; agent: string; value: 1 | -1 | null; emoji: string | null; note: string | null; at: string; permalink: string };
-type ProfileCounts = Record<Exclude<Tab, 'all'>, number>;
+// The types are the API's schemas (lib/api/openapi.ts), so what this module returns is what the API documents.
+export type ProfilePost = FromSchema<Schemas['ActivityPost']>;
+export type ProfileVote = FromSchema<Schemas['ActivityVote']>;
 /** A profile page: the counts, then one page (lib/paging.ts) of the tab's posts, or of its votes on the votes tab. */
-export type Profile = { login: string; tab: Tab; counts: ProfileCounts; posts?: ProfilePost[]; votes?: ProfileVote[] } & Paging;
+export type Profile = FromSchema<Schemas['UserActivity']>;
+type ProfileCounts = Profile['counts'];
 type Row = {
 	id: string; kind: PostKind; voter: string; agent: string; body: string; at: string | Date; title: string;
 	record_id: string | null; topic_id: string | null; parent: string | null;
@@ -121,12 +123,13 @@ export async function profile(db: Db, handle: unknown, options: PageRequest & { 
 	const login = normalizeProfileLogin(handle);
 	const tab = options.tab ?? 'all';
 	const start = pageStart(options, PROFILE_PAGE);
-	const [counts, items] = await Promise.all([
+	const [counts, list] = await Promise.all([
 		profileCounts(db, login),
-		tab === 'votes' ? profileVotes(db, login, start) : profileActivity(db, login, { ...start, tab }),
+		tab === 'votes'
+			? profileVotes(db, login, start).then((votes) => ({ tab, votes, count: votes.length }))
+			: profileActivity(db, login, { ...start, tab }).then((posts) => ({ tab, posts, count: posts.length })),
 	]);
-	// All posts count once each, under the tab of their kind.
-	const total = tab === 'all' ? (Object.keys(TAB_KINDS) as (keyof typeof TAB_KINDS)[]).reduce((n, t) => n + counts[t], 0) : counts[tab];
-	const list = tab === 'votes' ? { votes: items as ProfileVote[] } : { posts: items as ProfilePost[] };
-	return { login, tab, counts, ...list, ...pageInfo(start, total, items.length) };
+	const { count, ...items } = list;
+	const total = tab === 'all' ? KIND_TABS.reduce((n, t) => n + counts[t], 0) : counts[tab];
+	return { login, counts, ...items, ...pageInfo(start, total, count) };
 }

@@ -32,8 +32,10 @@ export const PAGING = { type: 'object', required: ['total', 'page', 'pages', 'ne
 } } as const;
 export type Paging = FromSchema<typeof PAGING>;
 
-/** Which page to read, and how long: after `cursor`, else page `page`, else the first; `limit` items. */
-export type PageRequest = { limit?: number; page?: number; cursor?: string | null };
+type PageParameter = ReturnType<typeof pageParameters>[number];
+/** Which page to read, and how long, typed by the parameters' schemas: after `cursor` (a reply's next_cursor, as it
+ * is), else page `page`, else the first; `limit` items. */
+export type PageRequest = { [P in Exclude<PageParameter, { name: 'cursor' }> as P['name']]?: FromSchema<P['schema']> } & { cursor?: Paging['next_cursor'] };
 
 type Start = { offset: number; limit: number; total?: number };
 

@@ -2,7 +2,7 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
-import { profile, profileActivity, profileCounts, profileVotes, normalizeProfileLogin } from './profile.ts';
+import { profile, profileActivity, profileCounts, profileVotes, normalizeProfileLogin, type Profile } from './profile.ts';
 import { QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
 
@@ -57,11 +57,11 @@ test('human and bot contributions come only from public rows with an explicit DT
 
 test('a profile pages like every list: by number or by cursor, with the tab\'s total', () => withDb(async (db) => {
 	for (let id = 1; id <= 45; id++) await post(db, id);
+	const ids = (p: Profile) => p.tab === 'votes' ? p.votes.map((v) => v.record_id) : p.posts.map((x) => x.id);
 	const first = await profile(db, 'ADA');
-	assert.deepEqual([first.login, first.posts!.length, first.posts![0].id, first.total, first.page, first.pages], ['ada', 20, 45, 45, 1, 3]);
-	const second = await profile(db, 'ada', { cursor: first.next_cursor });
-	assert.deepEqual(second.posts, (await profile(db, 'ada', { page: 2 })).posts);
-	assert.deepEqual([(await profile(db, 'ada', { page: 3 })).posts!.length, (await profile(db, 'ada', { tab: 'votes' })).total], [5, 0]);
+	assert.deepEqual([first.login, ids(first).length, ids(first)[0], first.total, first.page, first.pages], ['ada', 20, 45, 45, 1, 3]);
+	assert.deepEqual(ids(await profile(db, 'ada', { cursor: first.next_cursor })), ids(await profile(db, 'ada', { page: 2 })));
+	assert.deepEqual([ids(await profile(db, 'ada', { page: 3 })).length, (await profile(db, 'ada', { tab: 'votes' })).total], [5, 0]);
 }));
 
 test('limits and pages outside the schema fail before a query', async () => {

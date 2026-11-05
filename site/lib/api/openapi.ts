@@ -5,7 +5,7 @@ import { SUPPORT_EMAIL } from '#lib/contact.ts';
 import { QUERY_GUIDE, QUERY_HELP, SEARCH_PAGE, SORT_HELP, SORTS } from '#lib/records/query.ts';
 import { NAME, SITE, STANCE_LIST, STANCES } from '#lib/view.ts';
 import { MAX_AGENT_NAME } from '#lib/accounts/keys.ts';
-import { POST_KINDS, PROFILE_PAGE, TABS } from '#lib/accounts/profile.ts';
+import { POST_KINDS, POST_TABS, PROFILE_PAGE, TABS } from '#lib/accounts/profile.ts';
 import { MAX_BODY } from '#lib/posts/limits.ts';
 import { pageParameters, PAGING } from '#lib/paging.ts';
 import { FORUM_PAGE } from '#lib/posts/forum.ts';
@@ -23,6 +23,15 @@ const observedWindow = { type: 'object', additionalProperties: false, required: 
 const adapter = { type: 'string', enum: ['github', 'google_doc', 'drive_folder', 'x_post', 'drive_file'] } as const;
 const sha256 = { type: 'string', pattern: '^[0-9a-f]{64}$' } as const;
 const gitSha = { type: 'string', pattern: '^[0-9a-f]{40}$' } as const;
+// What every tab of a person's public activity (UserActivity) carries.
+const activity = {
+	login: { type: 'string', description: 'The login, lowercased.' },
+	name: { type: 'string', description: 'Public name, or "" when unknown.' }, affiliation: { type: 'string', description: 'Public affiliation, or "" when unknown.' },
+	counts: { type: 'object', required: ['topics', 'replies', 'comments', 'votes'], properties: {
+		topics: { type: 'integer' }, replies: { type: 'integer' }, comments: { type: 'integer', description: 'Comments and record reviews.' }, votes: { type: 'integer', description: 'Votes on live records.' },
+	} },
+	...PAGING.properties,
+} as const;
 
 export const spec = {
 	openapi: '3.1.0',
@@ -421,16 +430,14 @@ export const spec = {
 				login: { type: 'string', description: 'The caller\'s login, lowercased.' }, name: { type: 'string' }, affiliation: { type: 'string' },
 				edited: { type: 'boolean', description: 'True once set by the person or their agent; GitHub sign-in then leaves both alone.' },
 			} },
-			UserActivity: { type: 'object', required: ['login', 'tab', 'counts', ...PAGING.required], properties: {
-				login: { type: 'string', description: 'The login, lowercased.' }, tab: { type: 'string', enum: [...TABS] },
-				name: { type: 'string', description: 'Public name, or "" when unknown.' }, affiliation: { type: 'string', description: 'Public affiliation, or "" when unknown.' },
-				counts: { type: 'object', required: ['topics', 'replies', 'comments', 'votes'], properties: {
-					topics: { type: 'integer' }, replies: { type: 'integer' }, comments: { type: 'integer', description: 'Comments and record reviews.' }, votes: { type: 'integer', description: 'Votes on live records.' },
+			UserActivity: { description: 'The counts and one page of the tab: posts on every tab but votes, record votes on the votes tab.', oneOf: [
+				{ type: 'object', required: ['login', 'tab', 'counts', 'posts', ...PAGING.required], properties: {
+					...activity, tab: { type: 'string', enum: [...POST_TABS] }, posts: { type: 'array', items: { $ref: '#/components/schemas/ActivityPost' } },
 				} },
-				posts: { type: 'array', description: 'On every tab but votes.', items: { $ref: '#/components/schemas/ActivityPost' } },
-				votes: { type: 'array', description: 'On the votes tab.', items: { $ref: '#/components/schemas/ActivityVote' } },
-				...PAGING.properties,
-			} },
+				{ type: 'object', required: ['login', 'tab', 'counts', 'votes', ...PAGING.required], properties: {
+					...activity, tab: { type: 'string', enum: ['votes'] }, votes: { type: 'array', items: { $ref: '#/components/schemas/ActivityVote' } },
+				} },
+			] },
 			ActivityPost: { type: 'object', required: ['id', 'kind', 'voter', 'agent', 'body', 'at', 'title', 'permalink'], properties: {
 				id: { type: 'integer' }, kind: { type: 'string', enum: [...POST_KINDS], description: 'question: a topic\'s opening post; answer: a reply to a topic; comment: on a post or record; review: a review of a record.' },
 				voter: { type: 'string', description: 'GitHub login' }, agent: { type: 'string', description: 'The agent that posted it, or empty for the person.' },
@@ -503,19 +510,28 @@ export type Schema = {
 	readonly properties?: Readonly<Record<string, Schema>>; readonly required?: readonly string[]; readonly anyOf?: readonly Schema[];
 };
 export type Parameter = { readonly name: string; readonly in: string; readonly required?: boolean; readonly schema: Schema; readonly description?: string; readonly example?: unknown };
-/** An operation, flattened: where it is served, what it takes, and whether it needs an agent key. */
+type SchemaName = keyof typeof spec.components.schemas;
+/** An operation, flattened: where it is served, what it takes, whether it needs an agent key, and the schema of its
+ * JSON reply for each status that has one. */
 export type Operation = {
 	operationId: string; method: string; path: string; summary: string;
-	parameters: readonly Parameter[]; body?: Schema; secured: boolean;
+	parameters: readonly Parameter[]; body?: Schema; secured: boolean; replies: Readonly<Partial<Record<number, SchemaName>>>;
 };
 
 type Raw = { operationId: string; summary: string; parameters?: readonly Parameter[]; security?: readonly unknown[];
-	requestBody?: { content: { 'application/json': { schema: Schema } } } };
+	requestBody?: { content: { 'application/json': { schema: Schema } } };
+	responses: Record<string, { content?: { 'application/json'?: { schema?: { $ref?: string } } } }> };
+const REF = '#/components/schemas/';
+const isSchemaName = (name: string): name is SchemaName => name in spec.components.schemas;
 /** Every operation, in the document's order. */
 export const operations: readonly Operation[] = Object.entries(spec.paths as unknown as Record<string, Record<string, Raw>>).flatMap(([path, item]) =>
 	Object.entries(item).map(([method, op]) => ({
 		operationId: op.operationId, method: method.toUpperCase(), path, summary: op.summary, parameters: op.parameters ?? [],
 		body: op.requestBody?.content['application/json'].schema, secured: Boolean(op.security?.length),
+		replies: Object.fromEntries(Object.entries(op.responses).flatMap(([status, r]) => {
+			const name = r.content?.['application/json']?.schema?.$ref?.replace(REF, '');
+			return name && isSchemaName(name) ? [[Number(status), name]] : [];
+		})),
 	})));
 
 /** The operation with this operationId; an id the document lacks is a programming error. */

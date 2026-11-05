@@ -6,7 +6,8 @@ import { spec } from './openapi.ts';
 
 // ---- Types ----
 
-type Schemas = typeof spec.components.schemas;
+/** The document's schemas, by name: FromSchema<Schemas['Record']> is a record's type. */
+export type Schemas = typeof spec.components.schemas;
 /** An intersection written out as one object type, so editors show its fields. */
 export type Simplify<T> = { [K in keyof T]: T[K] } & {};
 type FromType<T, S> = T extends 'string' ? string : T extends 'integer' | 'number' ? number : T extends 'boolean' ? boolean

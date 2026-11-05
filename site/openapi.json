@@ -3226,98 +3226,178 @@
 				}
 			},
 			"UserActivity": {
-				"type": "object",
-				"required": [
-					"login",
-					"tab",
-					"counts",
-					"total",
-					"page",
-					"pages",
-					"next_cursor"
-				],
-				"properties": {
-					"login": {
-						"type": "string",
-						"description": "The login, lowercased."
-					},
-					"tab": {
-						"type": "string",
-						"enum": [
-							"all",
-							"topics",
-							"replies",
-							"comments",
-							"votes"
-						]
-					},
-					"name": {
-						"type": "string",
-						"description": "Public name, or \"\" when unknown."
-					},
-					"affiliation": {
-						"type": "string",
-						"description": "Public affiliation, or \"\" when unknown."
-					},
-					"counts": {
+				"description": "The counts and one page of the tab: posts on every tab but votes, record votes on the votes tab.",
+				"oneOf": [
+					{
 						"type": "object",
 						"required": [
-							"topics",
-							"replies",
-							"comments",
-							"votes"
+							"login",
+							"tab",
+							"counts",
+							"posts",
+							"total",
+							"page",
+							"pages",
+							"next_cursor"
 						],
 						"properties": {
-							"topics": {
-								"type": "integer"
+							"login": {
+								"type": "string",
+								"description": "The login, lowercased."
 							},
-							"replies": {
-								"type": "integer"
+							"name": {
+								"type": "string",
+								"description": "Public name, or \"\" when unknown."
 							},
-							"comments": {
+							"affiliation": {
+								"type": "string",
+								"description": "Public affiliation, or \"\" when unknown."
+							},
+							"counts": {
+								"type": "object",
+								"required": [
+									"topics",
+									"replies",
+									"comments",
+									"votes"
+								],
+								"properties": {
+									"topics": {
+										"type": "integer"
+									},
+									"replies": {
+										"type": "integer"
+									},
+									"comments": {
+										"type": "integer",
+										"description": "Comments and record reviews."
+									},
+									"votes": {
+										"type": "integer",
+										"description": "Votes on live records."
+									}
+								}
+							},
+							"total": {
 								"type": "integer",
-								"description": "Comments and record reviews."
+								"description": "How many items match."
 							},
-							"votes": {
+							"page": {
 								"type": "integer",
-								"description": "Votes on live records."
+								"description": "This page's number, from 1."
+							},
+							"pages": {
+								"type": "integer",
+								"description": "How many pages of limit items there are (at least 1)."
+							},
+							"next_cursor": {
+								"type": [
+									"string",
+									"null"
+								],
+								"description": "Pass as cursor for the next page; null on the last."
+							},
+							"tab": {
+								"type": "string",
+								"enum": [
+									"all",
+									"topics",
+									"replies",
+									"comments"
+								]
+							},
+							"posts": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/ActivityPost"
+								}
 							}
 						}
 					},
-					"posts": {
-						"type": "array",
-						"description": "On every tab but votes.",
-						"items": {
-							"$ref": "#/components/schemas/ActivityPost"
-						}
-					},
-					"votes": {
-						"type": "array",
-						"description": "On the votes tab.",
-						"items": {
-							"$ref": "#/components/schemas/ActivityVote"
-						}
-					},
-					"total": {
-						"type": "integer",
-						"description": "How many items match."
-					},
-					"page": {
-						"type": "integer",
-						"description": "This page's number, from 1."
-					},
-					"pages": {
-						"type": "integer",
-						"description": "How many pages of limit items there are (at least 1)."
-					},
-					"next_cursor": {
-						"type": [
-							"string",
-							"null"
+					{
+						"type": "object",
+						"required": [
+							"login",
+							"tab",
+							"counts",
+							"votes",
+							"total",
+							"page",
+							"pages",
+							"next_cursor"
 						],
-						"description": "Pass as cursor for the next page; null on the last."
+						"properties": {
+							"login": {
+								"type": "string",
+								"description": "The login, lowercased."
+							},
+							"name": {
+								"type": "string",
+								"description": "Public name, or \"\" when unknown."
+							},
+							"affiliation": {
+								"type": "string",
+								"description": "Public affiliation, or \"\" when unknown."
+							},
+							"counts": {
+								"type": "object",
+								"required": [
+									"topics",
+									"replies",
+									"comments",
+									"votes"
+								],
+								"properties": {
+									"topics": {
+										"type": "integer"
+									},
+									"replies": {
+										"type": "integer"
+									},
+									"comments": {
+										"type": "integer",
+										"description": "Comments and record reviews."
+									},
+									"votes": {
+										"type": "integer",
+										"description": "Votes on live records."
+									}
+								}
+							},
+							"total": {
+								"type": "integer",
+								"description": "How many items match."
+							},
+							"page": {
+								"type": "integer",
+								"description": "This page's number, from 1."
+							},
+							"pages": {
+								"type": "integer",
+								"description": "How many pages of limit items there are (at least 1)."
+							},
+							"next_cursor": {
+								"type": [
+									"string",
+									"null"
+								],
+								"description": "Pass as cursor for the next page; null on the last."
+							},
+							"tab": {
+								"type": "string",
+								"enum": [
+									"votes"
+								]
+							},
+							"votes": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/ActivityVote"
+								}
+							}
+						}
 					}
-				}
+				]
 			},
 			"ActivityPost": {
 				"type": "object",

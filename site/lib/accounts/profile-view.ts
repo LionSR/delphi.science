@@ -43,11 +43,12 @@ function Votes({ login, votes, who }: { login: string; votes: ProfileVote[]; who
  *  owner's form for changing them. */
 export function ProfileView({ login, tab = 'all', page, who, editor }: { login: string; tab?: Tab; page: Profile | null; who?: PublicName; editor?: ReactNode }) {
 	const empty = tab === 'all' ? 'public posts or comments' : tab === 'votes' ? 'public votes' : TAB_NAMES[tab].toLowerCase();
+	const list = page && (page.tab === 'votes'
+		? page.votes.length > 0 && h(Votes, { login, votes: page.votes, who })
+		: page.posts.length > 0 && h(Posts, { posts: page.posts, who }));
 	const body = !page
 		? h('p', { role: 'alert' }, 'Public activity is temporarily unavailable. ', h('a', { href: tabPath(login, tab) }, 'Try again'))
-		: !(page.votes ?? page.posts ?? []).length
-			? h('p', { className: 'count' }, `No ${empty} on this page.`)
-			: page.votes ? h(Votes, { login, votes: page.votes, who }) : h(Posts, { posts: page.posts!, who });
+		: list || h('p', { className: 'count' }, `No ${empty} on this page.`);
 	return h('article', null,
 		who?.name ? h('h1', null, who.name) : h('h1', { className: 'tex2jax_ignore' }, `@${login}`),
 		who?.name || who?.affiliation ? h('p', { className: 'meta' },

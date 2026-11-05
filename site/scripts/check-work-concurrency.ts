@@ -14,10 +14,13 @@ let sql:ReturnType<typeof postgres>|undefined;
 try{
  run('run','--rm','-d','--name',name,'-e','POSTGRES_PASSWORD=isolated-probe-only','-p','127.0.0.1::5432','pgvector/pgvector:pg17');
  const port=run('port',name,'5432/tcp').split(':').pop();
- sql=postgres(`postgresql://postgres:isolated-probe-only@127.0.0.1:${port}/postgres`,{max:4,connect_timeout:2,onnotice:()=>{}});
  let ready=false;
- for(let i=0;i<50;i++){try{await sql`SELECT 1`;ready=true;break;}catch{await new Promise(r=>setTimeout(r,100));}}
+ for(let i=0;i<50;i++){
+  try{run('exec',name,'pg_isready','-h','127.0.0.1','-U','postgres');ready=true;break;}
+  catch{await new Promise(r=>setTimeout(r,100));}
+ }
  assert.ok(ready,'isolated PostgreSQL must become ready');
+ sql=postgres(`postgresql://postgres:isolated-probe-only@127.0.0.1:${port}/postgres`,{max:4,connect_timeout:5,onnotice:()=>{}});
  for(const m of migrations())await sql.begin(tx=>tx.unsafe(m.sql));
  const proof=(value:string,zenodo?:string)=>({scheme:'doi',value,verified_by:zenodo?'zenodo-record':'doi-csl',evidence:zenodo?`https://zenodo.org/api/records/${zenodo}`:`https://doi.org/${value.toLowerCase()}`});
  for(const reverse of [false,true]){

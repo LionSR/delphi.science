@@ -1,6 +1,6 @@
 # Persistent canonical works: isolated verification
 
-2026-11-05. Validated against main `ff34c497329f6d3b52dd9eee02623cdf74951605`; unrelated #61 attribution changes remain intact. Schema iteration, upgrade/backfill, role and ingestion tests used isolated PGlite databases; focused real concurrency probes used a disposable local PostgreSQL 17/pgvector container. **No live migration, backfill, SQL/advisor call, merge or manual deployment was performed.**
+2026-11-05. Validated against main `206c692602e98cf3a6537de40c22d40437984243`; unrelated #61 attribution changes remain intact. Schema iteration, upgrade/backfill, role and ingestion tests used isolated PGlite databases; focused real concurrency probes used a disposable local PostgreSQL 17/pgvector container. **No live migration, backfill, SQL/advisor call, PR merge or manual deployment was performed.**
 
 ## Automated results
 
@@ -20,7 +20,7 @@ The migration file was created using the installed Supabase CLI migration comman
 
 `node --experimental-strip-types scripts/check-work-plans.ts` constructs a fresh isolated database with **5,002 source rows / 5,001 visible canonical works**, analyzes it and runs actual `EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON)`, printing compact reproducible index/count/timing summaries. The bulky generated plan dump was removed.
 
-Natural plans use `records_source` for the selective source filter, `records_work` for persisted work ordering, and `work_records_pkey`/`records_pkey` for membership/source hydration. Canonical grouping ranks narrow rows and fetches source JSON only after selecting the work page. On this local run, source-filter page/count took about **0.15/0.04 ms**, broad page/count about **11.87/4.04 ms**. These are local engine measurements, not production latency guarantees. Global work ordering still visits the filtered candidate set; a production-scale staging plan/load check is required before rollout.
+Natural plans use `records_source` for the selective source filter, `records_work` for persisted work ordering, and `work_records_pkey`/`records_pkey` for membership/source hydration. Canonical grouping ranks narrow rows and fetches source JSON only after selecting the work page. On this local run, source-filter page/count took about **0.19/0.04 ms**, broad page/count about **13.44/3.51 ms**. These are local engine measurements, not production latency guarantees. Global work ordering still visits the filtered candidate set; a production-scale staging plan/load check is required before rollout.
 
 ## Browser checks
 
@@ -28,12 +28,13 @@ Chromium desktop 1280×900 light and mobile 390×844 dark against the local prod
 
 - Migrated isolated database: one persisted work, two retained sources, official Lean/GitHub main under newest/oldest/score and alternative-source filters; stable main title/link/canonical URL/JSON-LD identifier; **10 distinct external responses with 6 shared**, all source assertions reachable; original source-bound action IDs and upstream redirects.
 - Title/H1/citation/JSON-LD preserve `2^{o(n)}` while raw source titles remain visible. Citation publication date and JSON-LD `datePublished` both use **2026-10-27**, not repository creation **2026-08-06**; publication PDF comes from the paper. Unit regressions also verify omission when that publication source is absent.
+- Automatic DOI group with its main materialization removed: durable member count 2, one available source, fixed unavailable-main disclosure, canonical citation/JSON-LD identity and persisted DOI provenance remain visible.
 - Canonical API reads the persisted main and publication source; the retained Hexagon work alias resolves to the official work with `requested_work_id`.
 - A separately isolated **unmigrated** PGlite fixture: two raw source cards, explicit source-record mode, no inferred group, and canonical-work endpoint 503. Schema readiness changes are also exercised in-process by the upgrade tests.
 - No page errors or horizontal overflow. Migrated desktop/mobile search/detail and legacy source-mode screenshots were inspected. External browser requests/widgets were blocked; no write/sign-in action was submitted.
 
 ## Independent review and remaining limits
 
-Independent schema/data-safety review audited persisted authority and fresh ingestion/replay, not just UI behavior. Its isolated upgrade tests preserved legacy IDs, source JSON/hashes and archives, and rejected ambiguous legacy data atomically. It independently reran **6/6** migration tests and confirmed null/stale CAS rejection, exact no-op replay, alias-chain rejection, publication-only history, hostile-default ACLs, ingestion-role guards and complete hybrid pages (**100/100/5** for 205 matching works). Reported findings were corrected and regression-tested.
+Independent schema/data-safety review audited persisted authority and fresh ingestion/replay, not just UI behavior. Its isolated upgrade tests preserved legacy IDs, source JSON/hashes and archives, and rejected ambiguous legacy data atomically. It independently reran **9/9** migration tests and **15/15** adapter/registry tests plus the Python DOI-proof build test, and confirmed null/stale CAS rejection, exact no-op replay, alias-chain rejection, publication-only history, hostile-default ACLs, ingestion-role guards and complete hybrid pages (**100/100/5** for 205 matching works). Reported findings were corrected and regression-tested.
 
 PGlite serializes execution. The additional PostgreSQL 17 probe covers same-key and operator contention across two real backends, but is not an exhaustive lock/load test. Real transactions may still deadlock and require retry after rereading expectations; constraints/transactions protect integrity rather than deadlock freedom. Production table size, lock duration and query latency remain untested. Review the [migration-before-code rollout and forward recovery contract](curated-work-groups.md) before any separately authorized live change. Until that migration is authorized/applied, a draft preview connected to an old database deliberately remains in raw source-record mode.

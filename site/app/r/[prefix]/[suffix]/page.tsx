@@ -31,9 +31,10 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	const r = await record(id);
 	if (!r) return {};
 	const main = mainRecordOf(r);
+	const mainId = workOf(r)?.main_record_id ?? main.id;
 	const authors = Array.isArray(main.authors) ? main.authors.map(String) : [];
 	const cite: Record<string, string | string[]> = { citation_title: workTitleOf(r), citation_author: authors,
-		citation_abstract_html_url: `${SITE}${recordPath(main.id)}` };
+		citation_abstract_html_url: `${SITE}${recordPath(mainId)}` };
 	const publication = publicationOf(r);
 	const published = publication?.published;
 	if (published) cite.citation_publication_date = String(published).replaceAll('-', '/');
@@ -42,7 +43,7 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	return {
 		// A reviewed reception summary describes a discussed record better than its abstract.
 		title: workTitleOf(r), description: reception(main)?.text ?? (String(main.summary ?? '').slice(0, 300) || undefined),
-		alternates: { canonical: recordPath(main.id), types: { 'application/json': apiPath(id) } },
+		alternates: { canonical: recordPath(mainId), types: { 'application/json': apiPath(id) } },
 		other: cite,
 	};
 }
@@ -78,7 +79,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const from = original(r);
 	const tag = source(r.source);
 	const ld = {
-		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: main.id, name: workTitleOf(r), url: `${SITE}${recordPath(main.id)}`,
+		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: workOf(r)?.main_record_id ?? main.id, name: workTitleOf(r), url: `${SITE}${recordPath(workOf(r)?.main_record_id ?? main.id)}`,
 		sameAs: work ? work.sources.map((s) => s.record.url) : r.url, datePublished: publication?.published, abstract: main.summary, about: main.subject, keywords: main.tags,
 		author: Array.isArray(main.authors) ? main.authors.map((name) => ({ '@type': 'Person', name })) : undefined,
 	};

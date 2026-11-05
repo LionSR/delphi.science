@@ -304,7 +304,7 @@
 						}
 					},
 					"400": {
-						"description": "Structured error response with remediation hint",
+						"description": "Error with a code, a message and a fix",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -314,7 +314,7 @@
 						}
 					},
 					"404": {
-						"description": "Structured error response with remediation hint",
+						"description": "Error with a code, a message and a fix",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -324,7 +324,7 @@
 						}
 					},
 					"503": {
-						"description": "Structured error response with remediation hint",
+						"description": "Error with a code, a message and a fix",
 						"content": {
 							"application/json": {
 								"schema": {

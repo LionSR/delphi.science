@@ -22,6 +22,7 @@ export function WorkSources({ record, detail = false }: { record: Record<string,
 				<p className="meta"><a href={`${recordPath(s.id)}#interactions`}>Interactions: {tally(r)}</a></p>
 				{detail && <>
 					<p>Source title: {tex(r.title)}{Array.isArray(r.authors) ? ` — ${r.authors.join(', ')}` : ''}</p>
+					{s.identity && <p className="meta">Source DOI: <a href={String(s.identity.evidence)}>{String(s.identity.value)}</a></p>}
 					<p className="meta">Source assertions: formalized {flag('formalized')} · verified {flag('verified')}</p>
 					{reception(r) && <p>Reception for this source: {reception(r)!.text}</p>}
 					{r.summary ? <p>{tex(r.summary)}</p> : null}
@@ -33,6 +34,6 @@ export function WorkSources({ record, detail = false }: { record: Record<string,
 				</>}
 			</li>;
 		})}</ul>
-		{detail && <p className="meta">Grouping evidence: {work.evidence.map((url, i) => <a key={url} href={url}>source {i + 1}</a>)}</p>}
+		{detail && work.evidence.length > 0 && <p className="meta">Grouping evidence: {work.evidence.map((url, i) => <a key={url} href={url}>source {i + 1}</a>)}</p>}
 	</section>;
 }

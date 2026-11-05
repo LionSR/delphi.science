@@ -6,6 +6,6 @@ import { profile } from '#lib/accounts/profile.ts';
 
 export const GET = operation('getUserActivity', async ({ params, query }) => {
 	const d = await db();
-	const { login, ...rest } = await profile(d, params.login, { tab: query.tab, cursor: query.cursor, limit: query.limit });
+	const { login, ...rest } = await profile(d, params.login, query);
 	return Response.json({ login, ...await publicName(d, login), ...rest });
 });

@@ -2,39 +2,39 @@
 // each record). Forum post votes stay private. Reads only rows that are already public.
 import { CodedError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
+import { pageInfo, pageSize, pageStart, type PageRequest } from '#lib/paging.ts';
+import type { FromSchema, Schemas } from '#lib/api/schema.ts';
 import { recordPath } from '#lib/view.ts';
 
-export const DEFAULT_PROFILE_LIMIT = 20;
-export const MAX_PROFILE_LIMIT = 50;
+/** A profile's page size (lib/paging.ts). */
+export const PROFILE_PAGE = pageSize('Items', 50, 20);
 
 /** Post kinds, named as moderation names them (posts/comments.ts, posts/edit.ts): a topic's opening post is a question, a
  * reply to it an answer. The profile shows them as Topic and Reply. */
 export const POST_KINDS = ['question', 'answer', 'comment', 'review'] as const;
 export type PostKind = (typeof POST_KINDS)[number];
 /** Profile tabs: all posts, one group of kinds (comments include record reviews), or record votes. */
-export const TABS = ['all', 'topics', 'replies', 'comments', 'votes'] as const;
+export const POST_TABS = ['all', 'topics', 'replies', 'comments'] as const;
+export const TABS = [...POST_TABS, 'votes'] as const;
 export type Tab = (typeof TABS)[number];
-type PostTab = Exclude<Tab, 'votes'>;
+type PostTab = (typeof POST_TABS)[number];
 const TAB_KINDS: Record<Exclude<PostTab, 'all'>, PostKind[]> = { topics: ['question'], replies: ['answer'], comments: ['comment', 'review'] };
+/** The tabs that each hold one group of post kinds; together they hold every post once. */
+const KIND_TABS = TABS.filter((t): t is keyof typeof TAB_KINDS => t in TAB_KINDS);
 
-export type ProfilePost = {
-	id: number; kind: PostKind; voter: string; agent: string; body: string; at: string; title: string;
-	record_id?: string; topic_id?: number; parent?: number; permalink: string;
-};
-export type ProfileVote = { record_id: string; title: string; agent: string; value: 1 | -1 | null; emoji: string | null; note: string | null; at: string; permalink: string };
-type ProfileActivity = { login: string; posts: ProfilePost[]; next_cursor: string | null };
-type ProfileVotes = { login: string; votes: ProfileVote[]; next_cursor: string | null };
-type ProfileCounts = Record<Exclude<Tab, 'all'>, number>;
-/** A profile page: the counts, then the tab's posts, or its votes on the votes tab. */
-export type Profile = { login: string; tab: Tab; counts: ProfileCounts; posts?: ProfilePost[]; votes?: ProfileVote[]; next_cursor: string | null };
+// The types are the API's schemas (lib/api/openapi.ts), so what this module returns is what the API documents.
+export type ProfilePost = FromSchema<Schemas['ActivityPost']>;
+export type ProfileVote = FromSchema<Schemas['ActivityVote']>;
+/** A profile page: the counts, then one page (lib/paging.ts) of the tab's posts, or of its votes on the votes tab. */
+export type Profile = FromSchema<Schemas['UserActivity']>;
+type ProfileCounts = Profile['counts'];
 type Row = {
 	id: string; kind: PostKind; voter: string; agent: string; body: string; at: string | Date; title: string;
 	record_id: string | null; topic_id: string | null; parent: string | null;
 };
-type VoteRow = { record_id: string; title: string; agent: string; value: 1 | -1 | null; emoji: string | null; note: string | null; at: string | Date; at_key: string };
+type VoteRow = { record_id: string; title: string; agent: string; value: 1 | -1 | null; emoji: string | null; note: string | null; at: string | Date };
 
 const badLogin = () => new QueryError('Use a valid GitHub login.', 'Use 1–39 ASCII letters/digits or single internal hyphens; account paths and display names are not handles.');
-const badCursor = () => new QueryError('The public-activity cursor is invalid for this handle.', 'Pass this handle’s next_cursor unchanged, or start from its first page.');
 /** The database could not answer; the API reports it as 503. */
 export class ProfileUnavailable extends CodedError {}
 const unavailable = () => new ProfileUnavailable(503, 'unavailable', 'Public activity is temporarily unavailable.', 'Try this public activity page again later.');
@@ -43,28 +43,6 @@ export function normalizeProfileLogin(value: unknown): string {
 	if (typeof value !== 'string' || !/^[a-z\d](?:[a-z\d-]{0,37}[a-z\d])?$/i.test(value) || value.includes('--')) throw badLogin();
 	return value.toLowerCase();
 }
-
-const encode = (login: string, payload: object) => Buffer.from(JSON.stringify({ v: 1, login, ...payload })).toString('base64url');
-
-/** A cursor's payload. Only a cursor this module issued for this login is accepted: re-encoding the payload must
- * reproduce it exactly, which also pins v and login. */
-function decode<T extends object>(cursor: string | undefined | null, login: string, valid: (p: Record<string, unknown>) => p is T & Record<string, unknown>): T | undefined {
-	if (cursor === undefined || cursor === null) return undefined;
-	if (typeof cursor !== 'string' || !cursor || cursor.length > 1024 || !/^[a-z\d_-]+$/i.test(cursor)) throw badCursor();
-	let parsed: Record<string, unknown>;
-	try {
-		parsed = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(Buffer.from(cursor, 'base64url')));
-	} catch {
-		throw badCursor();
-	}
-	const { v, login: owner, ...payload } = parsed ?? {};
-	if (v !== 1 || owner !== login || !valid(payload) || encode(login, payload) !== cursor) throw badCursor();
-	return payload;
-}
-const postCursor = (p: Record<string, unknown>): p is { before: number } => Number.isSafeInteger(p.before) && (p.before as number) >= 1;
-// The database's own timestamp text, so microseconds survive the round trip.
-const voteCursor = (p: Record<string, unknown>): p is { at: string; record: string } =>
-	typeof p.at === 'string' && typeof p.record === 'string' && /^\d{4}-\d\d-\d\d [\d:.]+[+-]\d\d(:\d\d)?$/.test(p.at);
 
 // The listed fields only. Ids are read as text and shown as numbers.
 function toPost(row: Row): ProfilePost {
@@ -95,26 +73,15 @@ const ACTIVITY = `SELECT c.id AS pid, c.id::text AS id, c.voter, c.agent, c.body
 		AND (c.parent_id IS NULL OR p.id IS NOT NULL)`;
 const VOTES = `FROM open_index.votes v JOIN open_index.records r ON r.id = v.record_id AND NOT r.gone WHERE lower(v.voter) = $1`;
 
-function checkLimit(limit: number) {
-	if (!Number.isSafeInteger(limit) || limit < 1 || limit > MAX_PROFILE_LIMIT) {
-		throw new QueryError(`Activity limit must be from 1 to ${MAX_PROFILE_LIMIT}.`, `Use a whole-number limit, or omit it for ${DEFAULT_PROFILE_LIMIT} public posts.`);
-	}
-}
+// A slice of a login's list, as profile() pages it.
+type Slice = { offset?: number; limit?: number };
 
-/** One page of a login's public posts, newest first: all of them, or one tab's kinds. */
-export async function profileActivity(db: Db, handle: unknown, options: { limit?: number; cursor?: string | null; tab?: PostTab } = {}): Promise<ProfileActivity> {
+/** A slice of a login's public posts, newest first: all of them, or one tab's kinds. */
+export async function profileActivity(db: Db, handle: unknown, { tab = 'all', offset = 0, limit = PROFILE_PAGE.fallback }: Slice & { tab?: PostTab } = {}): Promise<ProfilePost[]> {
 	const login = normalizeProfileLogin(handle);
-	const limit = options.limit ?? DEFAULT_PROFILE_LIMIT;
-	checkLimit(limit);
-	const before = decode(options.cursor, login, postCursor)?.before;
-	const tab = options.tab ?? 'all';
-	const kinds = tab === 'all' ? null : TAB_KINDS[tab];
 	try {
-		const rows = (await db.query<Row>(`SELECT * FROM (${ACTIVITY}) a
-			WHERE ($2::bigint IS NULL OR a.pid < $2::bigint) AND ($4::text[] IS NULL OR a.kind = ANY($4::text[]))
-			ORDER BY a.pid DESC LIMIT $3`, [login, before ?? null, limit + 1, kinds])).rows;
-		const posts = rows.slice(0, limit).map(toPost);
-		return { login, posts, next_cursor: rows.length > limit ? encode(login, { before: posts.at(-1)!.id }) : null };
+		return (await db.query<Row>(`SELECT * FROM (${ACTIVITY}) a WHERE ($2::text[] IS NULL OR a.kind = ANY($2::text[]))
+			ORDER BY a.pid DESC LIMIT $3 OFFSET $4`, [login, tab === 'all' ? null : TAB_KINDS[tab], limit, offset])).rows.map(toPost);
 	} catch {
 		throw unavailable();
 	}
@@ -137,37 +104,32 @@ export async function profileCounts(db: Db, handle: unknown): Promise<ProfileCou
 	}
 }
 
-/** One page of a login's votes on live records, newest first. */
-export async function profileVotes(db: Db, handle: unknown, options: { limit?: number; cursor?: string | null } = {}): Promise<ProfileVotes> {
+/** A slice of a login's votes on live records, newest first. */
+export async function profileVotes(db: Db, handle: unknown, { offset = 0, limit = PROFILE_PAGE.fallback }: Slice = {}): Promise<ProfileVote[]> {
 	const login = normalizeProfileLogin(handle);
-	const limit = options.limit ?? DEFAULT_PROFILE_LIMIT;
-	checkLimit(limit);
-	const after = decode(options.cursor, login, voteCursor);
 	try {
-		const rows = (await db.query<VoteRow>(
-			`SELECT v.record_id, r.title, v.agent, v.value, v.emoji, v.note, v.at, v.at::text AS at_key ${VOTES}
-				AND ($2::timestamptz IS NULL OR (v.at, v.record_id) < ($2::timestamptz, $3::text))
-			ORDER BY v.at DESC, v.record_id DESC LIMIT $4`, [login, after?.at ?? null, after?.record ?? null, limit + 1])).rows;
-		const votes = rows.slice(0, limit).map((v): ProfileVote => ({
+		return (await db.query<VoteRow>(`SELECT v.record_id, r.title, v.agent, v.value, v.emoji, v.note, v.at ${VOTES}
+			ORDER BY v.at DESC, v.record_id DESC LIMIT $2 OFFSET $3`, [login, limit, offset])).rows.map((v): ProfileVote => ({
 			record_id: v.record_id, title: v.title, agent: v.agent, value: v.value, emoji: v.emoji, note: v.note,
 			at: new Date(v.at).toISOString(), permalink: recordPath(v.record_id),
 		}));
-		const last = rows[limit - 1];
-		return { login, votes, next_cursor: rows.length > limit ? encode(login, { at: last.at_key, record: last.record_id }) : null };
 	} catch {
 		throw unavailable();
 	}
 }
 
-/** What /u/<login> and GET /api/v1/users/{login} show: the counts and one page of the chosen tab. */
-export async function profile(db: Db, handle: unknown, options: { tab?: Tab; cursor?: string | null; limit?: number } = {}): Promise<Profile> {
+/** What /u/<login> and GET /api/v1/users/{login} show: the counts and one page (lib/paging.ts) of the chosen tab. */
+export async function profile(db: Db, handle: unknown, options: PageRequest & { tab?: Tab } = {}): Promise<Profile> {
 	const login = normalizeProfileLogin(handle);
 	const tab = options.tab ?? 'all';
-	const counts = await profileCounts(db, login);
-	if (tab === 'votes') {
-		const { votes, next_cursor } = await profileVotes(db, login, options);
-		return { login, tab, counts, votes, next_cursor };
-	}
-	const { posts, next_cursor } = await profileActivity(db, login, { ...options, tab });
-	return { login, tab, counts, posts, next_cursor };
+	const start = pageStart(options, PROFILE_PAGE);
+	const [counts, list] = await Promise.all([
+		profileCounts(db, login),
+		tab === 'votes'
+			? profileVotes(db, login, start).then((votes) => ({ tab, votes, count: votes.length }))
+			: profileActivity(db, login, { ...start, tab }).then((posts) => ({ tab, posts, count: posts.length })),
+	]);
+	const { count, ...items } = list;
+	const total = tab === 'all' ? KIND_TABS.reduce((n, t) => n + counts[t], 0) : counts[tab];
+	return { login, counts, ...items, ...pageInfo(start, total, count) };
 }

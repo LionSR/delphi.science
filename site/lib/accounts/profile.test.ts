@@ -2,7 +2,7 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
-import { profileActivity, profileCounts, profileVotes, normalizeProfileLogin } from './profile.ts';
+import { profile, profileActivity, profileCounts, profileVotes, normalizeProfileLogin, type Profile } from './profile.ts';
 import { QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
 
@@ -46,45 +46,29 @@ test('human and bot contributions come only from public rows with an explicit DT
 	await post(db, 1, 'Ada');
 	await post(db, 2, 'ADA', 'Boundary Bot', { topic: 10, review: true });
 	await post(db, 3, 'bo', 'Other Bot');
-	const page = await profileActivity(db, 'aDa');
-	assert.equal(page.login, 'ada');
-	assert.deepEqual(page.posts.map((p) => p.id), [2, 1]);
-	assert.equal(page.posts[0].agent, 'Boundary Bot');
-	assert.equal(page.posts[1].agent, '');
-	assert.equal(page.posts[0].permalink, '/forum/10#p2');
-	assert.equal(page.posts[1].permalink, '/r/app/boundary#p1');
-	assert.deepEqual(Object.keys(page.posts[0]).sort(), ['agent', 'at', 'body', 'id', 'kind', 'permalink', 'title', 'topic_id', 'voter']);
-	assert.equal(page.next_cursor, null);
+	const posts = await profileActivity(db, 'aDa');
+	assert.deepEqual(posts.map((p) => p.id), [2, 1]);
+	assert.equal(posts[0].agent, 'Boundary Bot');
+	assert.equal(posts[1].agent, '');
+	assert.equal(posts[0].permalink, '/forum/10#p2');
+	assert.equal(posts[1].permalink, '/r/app/boundary#p1');
+	assert.deepEqual(Object.keys(posts[0]).sort(), ['agent', 'at', 'body', 'id', 'kind', 'permalink', 'title', 'topic_id', 'voter']);
 }));
 
-test('descending keyset pagination has no duplicates and ignores later new inserts', () => withDb(async (db) => {
+test('a profile pages like every list: by number or by cursor, with the tab\'s total', () => withDb(async (db) => {
 	for (let id = 1; id <= 45; id++) await post(db, id);
-	const first = await profileActivity(db, 'ada');
-	assert.equal(first.posts.length, 20);
-	assert.equal(first.posts[0].id, 45);
-	await post(db, 46);
-	const second = await profileActivity(db, 'ADA', { cursor: first.next_cursor! });
-	const third = await profileActivity(db, 'ada', { cursor: second.next_cursor! });
-	const ids = [...first.posts, ...second.posts, ...third.posts].map((p) => p.id);
-	assert.equal(ids.length, 45);
-	assert.equal(new Set(ids).size, 45);
-	assert.ok(!ids.includes(46));
-	assert.equal(third.next_cursor, null);
+	const ids = (p: Profile) => p.tab === 'votes' ? p.votes.map((v) => v.record_id) : p.posts.map((x) => x.id);
+	const first = await profile(db, 'ADA');
+	assert.deepEqual([first.login, ids(first).length, ids(first)[0], first.total, first.page, first.pages], ['ada', 20, 45, 45, 1, 3]);
+	assert.deepEqual(ids(await profile(db, 'ada', { cursor: first.next_cursor })), ids(await profile(db, 'ada', { page: 2 })));
+	assert.deepEqual([ids(await profile(db, 'ada', { page: 3 })).length, (await profile(db, 'ada', { tab: 'votes' })).total], [5, 0]);
 }));
 
-test('limits and malformed or cross-owner cursors fail before a query', () => withDb(async (db) => {
-	await post(db, 1);
-	await post(db, 2);
-	const page = await profileActivity(db, 'ada', { limit: 1 });
-	assert.ok(page.next_cursor);
-	let calls = 0;
-	const noQuery: Db = { query: async () => { calls++; throw new Error('query must not run'); } };
-	for (const limit of [0, 51, 1.5, NaN]) await assert.rejects(profileActivity(noQuery, 'ada', { limit }), QueryError);
-	const zero = Buffer.from(JSON.stringify({ v: 1, login: 'ada', before: 0 })).toString('base64url');
-	for (const cursor of ['?', 'x'.repeat(300), zero]) await assert.rejects(profileActivity(noQuery, 'ada', { cursor }), QueryError);
-	await assert.rejects(profileActivity(noQuery, 'bo', { cursor: page.next_cursor! }), QueryError);
-	assert.equal(calls, 0);
-}));
+test('limits and pages outside the schema fail before a query', async () => {
+	const noQuery: Db = { query: async () => { throw new Error('query must not run'); } };
+	for (const limit of [0, 51, 1.5, NaN]) await assert.rejects(profile(noQuery, 'ada', { limit }), QueryError);
+	await assert.rejects(profile(noQuery, 'ada', { page: 0 }), QueryError);
+});
 
 test('nonexistent and private-only handles have identical empty public activity without private-table dependence', () => withDb(async (db) => {
 	const missing = await profileActivity(db, 'quiet-owner');
@@ -94,7 +78,7 @@ test('nonexistent and private-only handles have identical empty public activity 
 		INSERT INTO open_index.moderations VALUES ('quiet-owner', 'An unpublished draft note');`);
 	const privateOnly = await profileActivity(db, 'quiet-owner');
 	assert.deepEqual(privateOnly, missing);
-	assert.deepEqual(privateOnly, { login: 'quiet-owner', posts: [], next_cursor: null });
+	assert.deepEqual(privateOnly, []);
 }));
 
 test('posts on missing or gone places, in topics without a root post, or replying across places do not expose activity', () => withDb(async (db) => {
@@ -111,17 +95,17 @@ test('posts on missing or gone places, in topics without a root post, or replyin
 	await db.exec("INSERT INTO open_index.topics(id, title) VALUES (20, 'An incomplete boundary question')");
 	await post(db, 11, 'ada', '', { topic: 20, parent: 12 });
 	await post(db, 12, 'ada', 'Boundary Bot', { topic: 20, parent: 11 });
-	const page = await profileActivity(db, 'ada');
-	assert.deepEqual(page.posts.map((p) => p.id), [9, 8]);
-	assert.equal(page.posts[0].parent, 7);
-	assert.equal(page.posts[0].title, 'Which boundary convention is assumed?');
+	const posts = await profileActivity(db, 'ada');
+	assert.deepEqual(posts.map((p) => p.id), [9, 8]);
+	assert.equal(posts[0].parent, 7);
+	assert.equal(posts[0].title, 'Which boundary convention is assumed?');
 }));
 
 test('permalinks encode public record identifiers instead of interpreting their punctuation', () => withDb(async (db) => {
 	const id = 'app/boundary notes?version=1#terms';
 	await db.query('INSERT INTO open_index.records(id, title) VALUES ($1, $2)', [id, 'Boundary notes']);
 	await post(db, 1, 'ada', '', { record: id });
-	assert.equal((await profileActivity(db, 'ada')).posts[0].permalink, '/r/app/boundary%20notes%3Fversion%3D1%23terms#p1');
+	assert.equal((await profileActivity(db, 'ada'))[0].permalink, '/r/app/boundary%20notes%3Fversion%3D1%23terms#p1');
 }));
 
 test('query failures expose a neutral public error without database diagnostics', async () => {
@@ -137,29 +121,23 @@ test('posts are typed as topic, reply, comment or review, and tabs and counts fo
 	await post(db, 4, 'ada', '', { record: 'app/boundary', review: true });
 	await post(db, 5, 'ada');
 	await post(db, 6, 'bo', '', { topic: 10 });
-	const kinds = (await profileActivity(db, 'ada')).posts.map((p) => [p.id, p.kind]);
+	const kinds = (await profileActivity(db, 'ada')).map((p) => [p.id, p.kind]);
 	assert.deepEqual(kinds, [[5, 'comment'], [4, 'review'], [3, 'comment'], [2, 'answer'], [1, 'question']]);
-	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'topics' })).posts.map((p) => p.id), [1]);
-	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'replies' })).posts.map((p) => p.id), [2]);
-	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'comments' })).posts.map((p) => p.id), [5, 4, 3]);
+	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'topics' })).map((p) => p.id), [1]);
+	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'replies' })).map((p) => p.id), [2]);
+	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'comments' })).map((p) => p.id), [5, 4, 3]);
 	await db.exec(`INSERT INTO open_index.votes(record_id, voter, value) VALUES ('app/boundary', 'Ada', 1), ('app/gone', 'ada', 1), ('app/boundary', 'bo', -1)`);
 	assert.deepEqual(await profileCounts(db, 'ADA'), { topics: 1, replies: 1, comments: 3, votes: 1 });
 }));
 
-test('record votes page newest first with a cursor that keeps full timestamp precision', () => withDb(async (db) => {
+test('record votes on live records list newest first, to the microsecond', () => withDb(async (db) => {
 	for (let i = 1; i <= 5; i++) await db.query('INSERT INTO open_index.records(id, title) VALUES ($1, $2)', [`app/r${i}`, `Record ${i}`]);
-	// Microseconds apart, so a millisecond cursor would skip some.
+	// Microseconds apart.
 	for (let i = 1; i <= 5; i++) await db.query(`INSERT INTO open_index.votes(record_id, voter, agent, value, note, at)
 		VALUES ($1, 'ada', 'Daily picks', 1, 'Matches open-chain work.', '2026-11-03 07:00:00.000001+00'::timestamptz + make_interval(secs => $2 * 0.000001))`, [`app/r${i}`, i]);
 	await db.query("INSERT INTO open_index.votes(record_id, voter, value) VALUES ('app/gone', 'ada', 1)");
-	const first = await profileVotes(db, 'ada', { limit: 2 });
-	assert.deepEqual(first.votes.map((v) => v.record_id), ['app/r5', 'app/r4']);
-	assert.equal(first.votes[0].permalink, '/r/app/r5');
-	assert.deepEqual(Object.keys(first.votes[0]).sort(), ['agent', 'at', 'emoji', 'note', 'permalink', 'record_id', 'title', 'value']);
-	const second = await profileVotes(db, 'ada', { limit: 2, cursor: first.next_cursor! });
-	const third = await profileVotes(db, 'ada', { limit: 2, cursor: second.next_cursor! });
-	assert.deepEqual([...second.votes, ...third.votes].map((v) => v.record_id), ['app/r3', 'app/r2', 'app/r1']);
-	assert.equal(third.next_cursor, null);
-	await assert.rejects(profileVotes(db, 'bo', { cursor: first.next_cursor! }), QueryError);
-	await assert.rejects(profileVotes(db, 'ada', { cursor: 'not-a-cursor' }), QueryError);
+	const votes = await profileVotes(db, 'ada');
+	assert.deepEqual(votes.map((v) => v.record_id), ['app/r5', 'app/r4', 'app/r3', 'app/r2', 'app/r1']);
+	assert.equal(votes[0].permalink, '/r/app/r5');
+	assert.deepEqual(Object.keys(votes[0]).sort(), ['agent', 'at', 'emoji', 'note', 'permalink', 'record_id', 'title', 'value']);
 }));

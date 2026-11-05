@@ -88,6 +88,8 @@ describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' },
 		assert.ok(r.total >= 4 && r.results.every((x) => /lattice/i.test(String(x.title))));
 		const page2 = await search(db, 'ti:lattice', { limit: 2, cursor: r.next_cursor });
 		assert.notDeepEqual(page2.results.map((x) => x.id), r.results.map((x) => x.id));
+		const numbered = await search(db, 'ti:lattice', { limit: 2, page: 2 });
+		assert.deepEqual([numbered.total, numbered.results], [r.total, page2.results], 'a numbered page matches the cursor page');
 		assert.ok((await search(db, 'au:claude')).results.some((x) => String(x.title).startsWith('Zeta23')));
 		assert.ok((await search(db, '"zero-free"')).total >= 1);
 		assert.ok((await search(db, 'lattice*')).total >= r.total);

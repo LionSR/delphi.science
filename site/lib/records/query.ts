@@ -1,6 +1,7 @@
 // Search for the open index: arXiv-style queries compiled to parameterized Postgres.
 // Text terms rank by ts_rank_cd; with an embedding, keyword and vector ranks merge by reciprocal-rank fusion.
 import stances from './stances.json' with { type: 'json' };
+import { GROUP_IDS, groupFor, withWorks, workOf } from './work-groups.ts';
 import type { Db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
 import { pageInfo, pageSize, pageStart, type PageRequest } from '#lib/paging.ts';
@@ -199,6 +200,11 @@ export function compact(rec: Record<string, unknown>) {
 		const v = rec[k];
 		if (v !== undefined && v !== null && v !== '' && v !== false && !(Array.isArray(v) && v.length === 0)) out[k] = v;
 	}
+	const work = workOf(rec);
+	if (work) {
+		const { discussion: _, ...summary } = work;
+		out.work = { ...summary, sources: work.sources.map((s) => ({ ...s, record: { ...compact(s.record), ...Object.fromEntries(['formalized', 'verified', 'withdrawn'].filter((k) => s.record[k] !== undefined).map((k) => [k, s.record[k]])) } })) };
+	}
 	if (typeof rec.summary === 'string' && rec.summary) out.summary = truncate(rec.summary, 240);
 	return out;
 }
@@ -262,7 +268,7 @@ function rankedSql(ranked: Ranked, where: string, n: number): string {
 		SELECT ${SERVED} AS record FROM cand r ORDER BY r.points DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 1} OFFSET $${n + 2}`;
 }
 
-export async function search(db: Db, q: string, opts: SearchOptions = {}) {
+async function rawSearch(db: Db, q: string, opts: SearchOptions = {}, excluded: string[] = [], only: readonly string[] = []) {
 	const t0 = performance.now();
 	const sort = opts.sort ?? (q.trim() ? 'relevance' : 'newest');
 	if (!(SORTS as readonly string[]).includes(sort)) throw new QueryError(`unknown sort ${JSON.stringify(sort)}`, `Use sort=${SORTS.join(', sort=')}.`);
@@ -270,7 +276,14 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	if (fields !== 'compact' && fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(fields)}`, 'Use fields=compact (default) or fields=full.');
 	const start = pageStart(opts, SEARCH_PAGE);
 	// An empty query lists everything.
-	const { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };
+	let { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };
+	if (excluded.length) {
+		params.push(excluded);
+		where = `(${where}) AND r.id <> ALL($${params.length}::text[])`;
+	}
+	let onlyWhere = 'true';
+	if (only.length) { params.push(only); onlyWhere = `r.id = ANY($${params.length}::text[])`; }
+	const filtered = `(${where}) AND ${onlyWhere}`;
 	const n = params.length;
 	let sql: string;
 	const all = [...params];
@@ -281,27 +294,27 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 			const e = `$${n + 1}::extensions.vector`;
 			// Each side reads the table with the filters, so the vector side can use the HNSW index.
 			sql = `WITH kw AS (${ranks.length
-					? `SELECT r.id, row_number() OVER (ORDER BY ${rank} DESC) AS k FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC LIMIT 200`
+					? `SELECT r.id, row_number() OVER (ORDER BY ${rank} DESC, r.id) AS k FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.id LIMIT 200`
 					: 'SELECT NULL::text AS id, NULL::bigint AS k WHERE false'}),
-				vec AS (SELECT r.id, row_number() OVER (ORDER BY r.embedding OPERATOR(extensions.<=>) ${e}) AS k FROM open_index.records r
-				        WHERE ${where} AND r.embedding IS NOT NULL ORDER BY r.embedding OPERATOR(extensions.<=>) ${e} LIMIT 200)
+				vec AS (SELECT r.id, row_number() OVER (ORDER BY r.embedding OPERATOR(extensions.<=>) ${e}, r.id) AS k FROM open_index.records r
+				        WHERE ${where} AND r.embedding IS NOT NULL ORDER BY r.embedding OPERATOR(extensions.<=>) ${e}, r.id LIMIT 200)
 				SELECT ${SERVED} AS record FROM open_index.records r
 				JOIN (SELECT coalesce(kw.id, vec.id) AS id, coalesce(1.0 / (60 + kw.k), 0) + coalesce(1.0 / (60 + vec.k), 0) AS score
-				      FROM kw FULL JOIN vec ON kw.id = vec.id) s ON s.id = r.id
-				ORDER BY s.score DESC, r.published DESC NULLS LAST LIMIT $${n + 2} OFFSET $${n + 3}`;
+				      FROM kw FULL JOIN vec ON kw.id = vec.id) s ON s.id = r.id WHERE ${onlyWhere}
+				ORDER BY s.score DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 2} OFFSET $${n + 3}`;
 		} else {
-			sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.published DESC NULLS LAST LIMIT $${n + 1} OFFSET $${n + 2}`;
+			sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${filtered} ORDER BY ${rank} DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 1} OFFSET $${n + 2}`;
 		}
 	} else if (RANKED[sort]) {
-		sql = rankedSql(RANKED[sort], where, n);
+		sql = rankedSql(RANKED[sort], filtered, n);
 	} else {
-		sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${ORDER[sort] ?? ORDER.newest} LIMIT $${n + 1} OFFSET $${n + 2}`;
+		sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${filtered} ORDER BY ${ORDER[sort] ?? ORDER.newest} LIMIT $${n + 1} OFFSET $${n + 2}`;
 	}
 	all.push(start.limit, start.offset);
 	// The count, unless the cursor carries it, runs alongside the page.
 	const [rows, total] = await Promise.all([
 		db.query<{ record: Record<string, unknown> }>(sql, all).then((r) => r.rows),
-		start.total ?? db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params).then((r) => Number(r.rows[0].n)),
+		start.total ?? db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${filtered}`, params).then((r) => Number(r.rows[0].n)),
 	]);
 	return {
 		query: q, sort, count: rows.length,
@@ -312,10 +325,38 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	};
 }
 
+/** Filter first, then retain the best-ranked matching source per curated work BEFORE SQL count/paging.
+ * The small indexed preflight keeps the existing pagination/ranking queries (including hot/cold) intact.
+ * Ranking uses the best individual source, never sums interactions or shared external responses.
+ */
+export async function search(db: Db, q: string, opts: SearchOptions = {}) {
+	const t0 = performance.now();
+	if (opts.fields !== undefined && opts.fields !== 'compact' && opts.fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(opts.fields)}`, 'Use fields=compact (default) or fields=full.');
+	pageStart(opts, SEARCH_PAGE); // validate the caller before the preflight overrides paging
+	if (!GROUP_IDS.length) return rawSearch(db, q, opts);
+	const preflight = { ...opts, fields: 'full' as const, limit: GROUP_IDS.length, page: 1, cursor: undefined };
+	// Membership must be complete even when a hybrid candidate window contains neither source.
+	const members = await rawSearch(db, q, { ...preflight, embedding: undefined }, [], GROUP_IDS);
+	const hybrid = opts.embedding && (opts.sort ?? (q.trim() ? 'relevance' : 'newest')) === 'relevance';
+	const ranked = hybrid ? await rawSearch(db, q, preflight, [], GROUP_IDS) : members;
+	const rankedIds = new Set(ranked.results.map((r) => r.id));
+	const candidates = [...ranked.results, ...members.results.filter((r) => !rankedIds.has(r.id))];
+	const seen = new Set<string>(), excluded: string[] = [];
+	for (const r of candidates) {
+		const group = groupFor(r.id)!;
+		if (seen.has(group.id)) excluded.push(String(r.id));
+		else seen.add(group.id);
+	}
+	const res = await rawSearch(db, q, { ...opts, fields: 'full' }, excluded);
+	const records = await withWorks(db, res.results, SERVED);
+	return { ...res, results: records.map((r) => opts.fields === 'full' ? r : { ...compact(r), links: r.links }),
+		took_ms: Math.round((performance.now() - t0) * 10) / 10 };
+}
+
 export async function get(db: Db, id: string) {
 	const rows = (await db.query<{ record: Record<string, unknown> }>(
 		`SELECT ${SERVED} AS record FROM open_index.records r WHERE r.id = $1`, [id])).rows;
-	return rows[0]?.record ?? null;
+	return rows.length ? (await withWorks(db, [rows[0].record], SERVED))[0] : null;
 }
 
 /** How many records each source has, most first. */

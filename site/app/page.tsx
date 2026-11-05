@@ -1,4 +1,6 @@
 // The list: newest first, or a search in the API's syntax, with links to each subject division.
+import { WorkSources } from './work-sources.tsx';
+import { mainRecordOf, workOf, workTitleOf } from '#lib/records/work-groups.ts';
 import { db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
 import { search, sourceCounts } from '#lib/records/query.ts';
@@ -58,18 +60,20 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 			</nav>
 			{(error || notice) && <p className="count">{error || notice}</p>}
 			{res && <div className="results-heading">
-				<p className="count">{res.total.toLocaleString('en')} records</p>
+				<p className="count">{res.total.toLocaleString('en')} {res.total === 1 ? 'result' : 'results'}</p>
 				<HomeOrder q={q} sort={sort} />
 			</div>}
 			<ol>
 				{res?.results.map((r) => {
 					const from = original(r);
+					const work = workOf(r);
+					const main = mainRecordOf(r);
 					return (
-					<li key={String(r.id)} className="item">
-						<Vote id={String(r.id)} reactions={r.reactions} mine={mine.get(String(r.id))?.value} back={here} />
-						<a className="title" href={recordPath(r.id)}>{tex(r.title)}</a>
-						{Array.isArray(r.authors) && r.authors.length > 0 && <p className="authors">{r.authors.slice(0, 8).join(', ')}</p>}
-						<p className="meta">
+					<li key={work?.id ?? String(r.id)} className="item">
+						{!work && <Vote id={String(r.id)} reactions={r.reactions} mine={mine.get(String(r.id))?.value} back={here} />}
+						<a className="title" href={recordPath(main.id)}>{tex(workTitleOf(r))}</a>
+						{Array.isArray(main.authors) && main.authors.length > 0 && <p className="authors">{main.authors.slice(0, 8).join(', ')}</p>}
+						{work ? <WorkSources record={r} /> : <p className="meta">
 							{/* The source tag filters the list; the Source link opens the original work. */}
 							<a className="tag" href={source(r.source).href} title={source(r.source).title}>{source(r.source).name}</a>
 							{from && <a className="external" href={from.href} rel="external" title={from.href}>Source: {from.host}</a>}
@@ -79,7 +83,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 							{r.verified ? <span>machine-checked</span> : r.formalized ? <span>Lean</span> : null}
 							{r.withdrawn ? <span>withdrawn</span> : null}
 							<span>{tally(r)}</span>
-						</p>
+						</p>}
 					</li>
 					);
 				})}

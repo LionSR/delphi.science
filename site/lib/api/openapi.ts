@@ -373,6 +373,18 @@ export const spec = {
 						reviewed_by: { type: 'string' }, drafted_by: { type: 'string' }, basis: { type: 'string', description: 'SHA-1 prefix of linked URLs and stances at review time.' },
 					} },
 				} },
+			Work: { type: 'object', description: 'Curated read/display group. Top-level Record identity and interactions stay source-bound. Membership is not verification. Compact results omit group discussion and compact each source snapshot.', required: ['id', 'title', 'main_record_id', 'view_record_id', 'evidence', 'sources', 'discussed'], properties: {
+				id: { type: 'string' }, title: { type: 'string', description: 'Evidence-backed work display title; preserves mathematical notation lost by a source parser without rewriting source snapshots.' }, main_record_id: { type: 'string', description: 'Stable curated canonical main record ID, independent of query/sort. May be temporarily unavailable; sources lists only available records.' }, view_record_id: { type: 'string', description: 'Source record view at the root of this response; interactions target this ID, never implicitly the main record.' }, evidence: { type: 'array', items: { type: 'string' } }, discussed: { type: 'integer', description: 'URL-normalized union of external responses across available sources; never a sum of source counts.' },
+				sources: { type: 'array', items: { type: 'object', required: ['id', 'role', 'date_meaning', 'record'], properties: {
+					id: { type: 'string' }, role: { type: 'string' }, date_meaning: { type: 'string' },
+					record: { type: 'object', additionalProperties: true, description: 'Unmodified source record with live source-bound interaction counts; full or compact according to fields. Does not contain work recursively.' },
+				} } },
+				discussion: { type: 'array', items: { type: 'object', additionalProperties: true, required: ['url', 'assertions'], description: 'One external response per normalized URL. Display fields use the first curated source; assertions retain all original source metadata, including conflicts.', properties: {
+					url: { type: 'string' }, assertions: { type: 'array', items: { type: 'object', required: ['record_id', 'link'], properties: {
+						record_id: { type: 'string' }, link: { $ref: '#/components/schemas/Link' },
+					} } },
+				} } },
+			} },
 			Record: { type: 'object', required: ['id', 'title', 'url', 'source'], properties: {
 				id: { type: 'string' }, source: { type: 'string', description: 'Source prefix (see listPrefixes).' }, title: { type: 'string' }, authors: { type: 'array', items: { type: 'string' } },
 				url: { type: 'string', description: 'Canonical URL at the upstream source.' }, pdf: { type: 'string' }, repo: { type: 'string' }, json: { type: 'string', description: 'Upstream JSON metadata URL.' },
@@ -397,10 +409,11 @@ export const spec = {
 				reception: { $ref: '#/components/schemas/Reception' },
 				discussion: { type: 'array', items: { $ref: '#/components/schemas/Link' } },
 				discusses: { type: 'array', description: 'Indexed records that this item responds to.', items: { type: 'object', properties: { id: { type: 'string' }, title: { type: 'string' } } } },
+				work: { $ref: '#/components/schemas/Work' },
 				links: { type: 'object', description: 'Self link to full record endpoint.', properties: { self: { type: 'string' } } },
 			} },
 			SearchResult: { type: 'object', required: ['query', 'sort', ...PAGING.required, 'count', 'results'], properties: {
-				query: { type: 'string' }, sort: { type: 'string' }, ...PAGING.properties, count: { type: 'integer' },
+				query: { type: 'string', description: 'Filters apply to individual sources before curated work grouping; one best-ranked matching source per work. Source date/flag assertions remain searchable independently. Totals and pages count grouped results; source counts remain raw records.' }, sort: { type: 'string' }, ...PAGING.properties, count: { type: 'integer' },
 				results: { type: 'array', items: { $ref: '#/components/schemas/Record' } }, took_ms: { type: 'number' },
 			} },
 			CuratedPublicSnapshot: { type: 'object', additionalProperties: false, required: ['status', 'record_id', 'reference', 'adapter', 'method', 'observed_window_utc', 'visibility', 'title', 'factual_summary', 'attribution_caveats', 'review', 'digest', 'digest_kind', 'evidence_limits'], properties: {

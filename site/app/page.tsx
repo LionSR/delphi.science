@@ -4,7 +4,7 @@ import { QueryError } from '#lib/errors.ts';
 import { search, sourceCounts } from '#lib/records/query.ts';
 import { DIVISIONS } from '#lib/records/taxonomy.ts';
 import { me } from '#lib/accounts/session.ts';
-import { date, recordPath, source, tally, tex } from '#lib/view.ts';
+import { date, original, recordPath, source, tally, tex } from '#lib/view.ts';
 import { myVotes } from '#lib/records/votes.ts';
 import { Hero } from './logo.tsx';
 import { Vote } from './vote.tsx';
@@ -53,7 +53,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 				{DIVISIONS.map((d) => <a key={d.key} href={`/?q=cat:${d.key}`}>{d.name}</a>)}
 			</nav>
 			<nav className="subjects" aria-label="Sources">
-				{sources.map((r) => <a key={r.source} href={source(r.source).href}>{source(r.source).name} <span className="n">{r.n.toLocaleString('en')}</span></a>)}
+				{sources.map((r) => <a key={r.source} href={source(r.source).href} title={source(r.source).title}>{source(r.source).name} <span className="n">{r.n.toLocaleString('en')}</span></a>)}
 			</nav>
 			{(error || notice) && <p className="count">{error || notice}</p>}
 			{res && <div className="results-heading">
@@ -61,13 +61,17 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 				<HomeOrder q={q} sort={sort} />
 			</div>}
 			<ol>
-				{res?.results.map((r) => (
+				{res?.results.map((r) => {
+					const from = original(r);
+					return (
 					<li key={String(r.id)} className="item">
 						<Vote id={String(r.id)} reactions={r.reactions} mine={mine.get(String(r.id))?.value} back={here} />
 						<a className="title" href={recordPath(r.id)}>{tex(r.title)}</a>
 						{Array.isArray(r.authors) && r.authors.length > 0 && <p className="authors">{r.authors.slice(0, 8).join(', ')}</p>}
 						<p className="meta">
-							<a href={source(r.source).href}>{source(r.source).name}</a>
+							{/* The source tag filters the list; the Source link opens the original work. */}
+							<a className="tag" href={source(r.source).href} title={source(r.source).title}>{source(r.source).name}</a>
+							{from && <a className="external" href={from.href} rel="external" title={from.href}>Source: {from.host}</a>}
 							<span>{date(r.published)}</span>
 							{r.subject ? <code>{String(r.subject)}</code> : null}
 							{r.origin === 'ai-generated' && <span>AI-generated</span>}
@@ -76,7 +80,8 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 							<span>{tally(r)}</span>
 						</p>
 					</li>
-				))}
+					);
+				})}
 			</ol>
 			{next && <a className="more" href={next}>Next page</a>}
 		</>

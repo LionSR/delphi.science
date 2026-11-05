@@ -80,6 +80,12 @@ li.item.question .answered { color: var(--accent); font-weight: 600; }
 .authors { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.875rem; overflow-wrap: anywhere; }
 .meta { display: flex; gap: 0.25rem 0.8rem; flex-wrap: wrap; margin: 0.25rem 0 0; color: var(--muted); font-size: var(--small); }
 .meta code { color: var(--ink); }
+/* A source tag filters the index by source; it looks like a label, not like a link to the work. */
+.tag { color: var(--muted); text-decoration: none; padding: 0 0.45rem; border: 1px solid var(--rule); border-radius: 1rem; background: var(--surface); }
+.tag:hover { color: var(--accent); border-color: var(--accent); }
+/* The link to the original work, on cards and under a record's title. */
+.external::after { content: ' \2197'; }
+.origin { margin: 0.1rem 0 0; color: var(--muted); font-size: var(--small); overflow-wrap: anywhere; }
 .more { display: inline-block; margin-top: 1rem; }
 
 /* Votes */

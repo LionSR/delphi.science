@@ -7,7 +7,7 @@ import { Ajv2020, type ErrorObject, type ValidateFunction } from 'ajv/dist/2020.
 import addFormats from 'ajv-formats';
 import { ApiError, counted, handle, voter } from './caller.ts';
 import { endpointName, operationById, spec, type Operation, type Parameter, type Schema } from './openapi.ts';
-import type { FromSchema, Simplify } from './schema.ts';
+import { check as fits, type FromSchema, type Simplify } from './schema.ts';
 import type { Voter } from '#lib/accounts/keys.ts';
 
 // ---- Types read from the document ----
@@ -115,6 +115,15 @@ function checks(op: Operation) {
 
 type Ctx = { params?: Promise<Record<string, string>> };
 
+// Outside production, every JSON reply is checked against the schema its operation declares for that status, so the
+// code cannot drift from the published contract: a reply that does not fit fails (500) in development and tests.
+const ENFORCE_REPLIES = process.env.NODE_ENV !== 'production';
+
+async function checkReply(op: Operation, res: Response) {
+	const name = op.replies[res.status];
+	if (name && res.headers.get('Content-Type')?.startsWith('application/json')) fits(name, await res.clone().json(), endpointName(op));
+}
+
 /**
  * The route handler for the operation `id` of the OpenAPI document: checks each request against the document,
  * counts it, and runs `run` with the checked input. Errors thrown as ApiError or QueryError become the API's
@@ -135,7 +144,9 @@ export function operation<I extends OperationId>(id: I, run: (input: Input<I>) =
 		const url = new URL(req.url).searchParams;
 		const query = check(c.query, Object.fromEntries(c.names.filter((n) => url.has(n)).map((n) => [n, url.get(n)])), 'query');
 		check(c.body, body, 'body');
-		return run({ params, query, body, voter: who, req } as Input<I>);
+		const res = await run({ params, query, body, voter: who, req } as Input<I>);
+		if (ENFORCE_REPLIES) await checkReply(op, res);
+		return res;
 	}));
 	return Object.assign(handler, { operationId: id, endpoint });
 }

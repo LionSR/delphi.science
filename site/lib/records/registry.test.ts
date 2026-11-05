@@ -216,6 +216,10 @@ describe('submitting and the forum, on Postgres', () => {
 		const one = await topics(db, { limit: 2 });
 		const two = await topics(db, { limit: 2, cursor: one.next_cursor });
 		assert.deepEqual([...ids(one), ...ids(two)], all.slice(0, 4), 'pages follow on without gaps or repeats');
+		const second = await topics(db, { limit: 2, page: 2 });
+		assert.deepEqual([ids(second), second.total, second.page, second.pages], [ids(two), all.length, 2, 2], 'a numbered page matches the cursor page');
+		const found = await topics(db, { q: 'Lean OR Ramsey', limit: 1, page: 2 });
+		assert.deepEqual([found.total, found.page, found.pages, found.next_cursor], [2, 2, 2, null], 'a search pages the same way');
 		await assert.rejects(topics(db, { cursor: 'nonsense!' }), /cursor is not valid/);
 		const feed = await activity(db, { limit: 100 });
 		const mark = feed.since;

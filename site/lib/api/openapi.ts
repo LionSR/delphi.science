@@ -2,11 +2,13 @@
 // (lib/api/operation.ts). Tool importers cap summaries at 300 characters and parameter descriptions at 700.
 import { MAX_AFFILIATION, MAX_NAME } from '#lib/accounts/people.ts';
 import { SUPPORT_EMAIL } from '#lib/contact.ts';
-import { DEFAULT_LIMIT, MAX_LIMIT, QUERY_GUIDE, QUERY_HELP, SORT_HELP, SORTS } from '#lib/records/query.ts';
+import { QUERY_GUIDE, QUERY_HELP, SEARCH_PAGE, SORT_HELP, SORTS } from '#lib/records/query.ts';
 import { NAME, SITE, STANCE_LIST, STANCES } from '#lib/view.ts';
 import { MAX_AGENT_NAME } from '#lib/accounts/keys.ts';
-import { DEFAULT_PROFILE_LIMIT, MAX_PROFILE_LIMIT, POST_KINDS, TABS } from '#lib/accounts/profile.ts';
+import { POST_KINDS, POST_TABS, PROFILE_PAGE, TABS } from '#lib/accounts/profile.ts';
 import { MAX_BODY } from '#lib/posts/limits.ts';
+import { pageParameters, PAGING } from '#lib/paging.ts';
+import { FORUM_PAGE } from '#lib/posts/forum.ts';
 
 const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'Source prefix of a record ID, e.g. arxiv, openai-math, app. Record IDs have the form <prefix>/<suffix>.' } as const;
 const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, example: 'APP-260923-0000', description: 'Source-specific identifier, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' } as const;
@@ -21,6 +23,15 @@ const observedWindow = { type: 'object', additionalProperties: false, required: 
 const adapter = { type: 'string', enum: ['github', 'google_doc', 'drive_folder', 'x_post', 'drive_file'] } as const;
 const sha256 = { type: 'string', pattern: '^[0-9a-f]{64}$' } as const;
 const gitSha = { type: 'string', pattern: '^[0-9a-f]{40}$' } as const;
+// What every tab of a person's public activity (UserActivity) carries.
+const activity = {
+	login: { type: 'string', description: 'The login, lowercased.' },
+	name: { type: 'string', description: 'Public name, or "" when unknown.' }, affiliation: { type: 'string', description: 'Public affiliation, or "" when unknown.' },
+	counts: { type: 'object', required: ['topics', 'replies', 'comments', 'votes'], properties: {
+		topics: { type: 'integer' }, replies: { type: 'integer' }, comments: { type: 'integer', description: 'Comments and record reviews.' }, votes: { type: 'integer', description: 'Votes on live records.' },
+	} },
+	...PAGING.properties,
+} as const;
 
 export const spec = {
 	openapi: '3.1.0',
@@ -53,8 +64,7 @@ export const spec = {
 				parameters: [
 					{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000 }, example: 'cat:math.NT', description: QUERY_HELP },
 					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: SORT_HELP },
-					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: MAX_LIMIT, default: DEFAULT_LIMIT }, description: `Results per page, from 1 to ${MAX_LIMIT}; ${DEFAULT_LIMIT} if left out.` },
-					{ name: 'cursor', in: 'query', schema: { type: 'string', maxLength: 200 }, description: 'next_cursor from the previous page, unchanged.' },
+					...pageParameters(SEARCH_PAGE),
 					{ name: 'fields', in: 'query', schema: { type: 'string', enum: ['compact', 'full'], default: 'compact' }, description: 'full returns each record whole, with discussion[].' },
 					{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'md'], default: 'json' }, example: 'md', description: 'md returns a short Markdown list (title, link, id, date, subject, score) to paste into context.' },
 				],
@@ -161,9 +171,8 @@ export const spec = {
 				summary: 'List or search forum topics (questions and research discussions) and recent posts. Pass q to search topics and replies, or since to fetch posts newer than a given post ID.',
 				parameters: [
 					{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000 }, description: 'Words to find in topics and replies ("quoted phrases", -excluded words).' },
-					{ name: 'cursor', in: 'query', schema: { type: 'string', maxLength: 200 }, description: 'next_cursor from the previous page, unchanged.' },
+					...pageParameters(FORUM_PAGE),
 					{ name: 'since', in: 'query', schema: { type: 'integer', minimum: 0 }, description: 'A post id, the since of your last reply: returns only the posts after it, oldest first.' },
-					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 30 }, description: 'Topics, and latest posts, per page: from 1 to 100; 30 if left out.' },
 				],
 				responses: { 200: json('Questions and the latest posts', 'ForumPage'), 400: err },
 			},
@@ -229,8 +238,7 @@ export const spec = {
 				parameters: [
 					{ name: 'login', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 39 }, example: 'octocat', description: 'GitHub login, as shown after @ on posts and votes. Case does not matter.' },
 					{ name: 'tab', in: 'query', schema: { type: 'string', enum: [...TABS], default: 'all' }, description: 'all (every post), topics (opening posts), replies, comments (including record reviews), or votes (record votes).' },
-					{ name: 'cursor', in: 'query', schema: { type: 'string', maxLength: 1024 }, description: 'next_cursor from the previous page of the same login and tab, unchanged.' },
-					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: MAX_PROFILE_LIMIT, default: DEFAULT_PROFILE_LIMIT }, description: `Items per page, from 1 to ${MAX_PROFILE_LIMIT}; ${DEFAULT_PROFILE_LIMIT} if left out.` },
+					...pageParameters(PROFILE_PAGE),
 				],
 				responses: { 200: json('Counts and one page of posts, or of votes on the votes tab', 'UserActivity'), 400: err, 503: err },
 			},
@@ -391,9 +399,9 @@ export const spec = {
 				discusses: { type: 'array', description: 'Indexed records that this item responds to.', items: { type: 'object', properties: { id: { type: 'string' }, title: { type: 'string' } } } },
 				links: { type: 'object', description: 'Self link to full record endpoint.', properties: { self: { type: 'string' } } },
 			} },
-			SearchResult: { type: 'object', required: ['query', 'sort', 'total', 'count', 'results', 'next_cursor'], properties: {
-				query: { type: 'string' }, sort: { type: 'string' }, total: { type: 'integer' }, count: { type: 'integer' },
-				results: { type: 'array', items: { $ref: '#/components/schemas/Record' } }, next_cursor: { type: ['string', 'null'] }, took_ms: { type: 'number' },
+			SearchResult: { type: 'object', required: ['query', 'sort', ...PAGING.required, 'count', 'results'], properties: {
+				query: { type: 'string' }, sort: { type: 'string' }, ...PAGING.properties, count: { type: 'integer' },
+				results: { type: 'array', items: { $ref: '#/components/schemas/Record' } }, took_ms: { type: 'number' },
 			} },
 			CuratedPublicSnapshot: { type: 'object', additionalProperties: false, required: ['status', 'record_id', 'reference', 'adapter', 'method', 'observed_window_utc', 'visibility', 'title', 'factual_summary', 'attribution_caveats', 'review', 'digest', 'digest_kind', 'evidence_limits'], properties: {
 				status: { type: 'string', enum: ['curated_public_snapshot'] }, record_id: { type: 'string' }, reference: { type: 'string', maxLength: 2000 }, adapter, method: { type: 'string', enum: ['signed_out_browser'] },
@@ -422,16 +430,14 @@ export const spec = {
 				login: { type: 'string', description: 'The caller\'s login, lowercased.' }, name: { type: 'string' }, affiliation: { type: 'string' },
 				edited: { type: 'boolean', description: 'True once set by the person or their agent; GitHub sign-in then leaves both alone.' },
 			} },
-			UserActivity: { type: 'object', required: ['login', 'tab', 'counts', 'next_cursor'], properties: {
-				login: { type: 'string', description: 'The login, lowercased.' }, tab: { type: 'string', enum: [...TABS] },
-				name: { type: 'string', description: 'Public name, or "" when unknown.' }, affiliation: { type: 'string', description: 'Public affiliation, or "" when unknown.' },
-				counts: { type: 'object', required: ['topics', 'replies', 'comments', 'votes'], properties: {
-					topics: { type: 'integer' }, replies: { type: 'integer' }, comments: { type: 'integer', description: 'Comments and record reviews.' }, votes: { type: 'integer', description: 'Votes on live records.' },
+			UserActivity: { description: 'The counts and one page of the tab: posts on every tab but votes, record votes on the votes tab.', oneOf: [
+				{ type: 'object', required: ['login', 'tab', 'counts', 'posts', ...PAGING.required], properties: {
+					...activity, tab: { type: 'string', enum: [...POST_TABS] }, posts: { type: 'array', items: { $ref: '#/components/schemas/ActivityPost' } },
 				} },
-				posts: { type: 'array', description: 'On every tab but votes.', items: { $ref: '#/components/schemas/ActivityPost' } },
-				votes: { type: 'array', description: 'On the votes tab.', items: { $ref: '#/components/schemas/ActivityVote' } },
-				next_cursor: { type: ['string', 'null'], description: 'Pass as cursor, with the same tab, for the next page; null on the last page.' },
-			} },
+				{ type: 'object', required: ['login', 'tab', 'counts', 'votes', ...PAGING.required], properties: {
+					...activity, tab: { type: 'string', enum: ['votes'] }, votes: { type: 'array', items: { $ref: '#/components/schemas/ActivityVote' } },
+				} },
+			] },
 			ActivityPost: { type: 'object', required: ['id', 'kind', 'voter', 'agent', 'body', 'at', 'title', 'permalink'], properties: {
 				id: { type: 'integer' }, kind: { type: 'string', enum: [...POST_KINDS], description: 'question: a topic\'s opening post; answer: a reply to a topic; comment: on a post or record; review: a review of a record.' },
 				voter: { type: 'string', description: 'GitHub login' }, agent: { type: 'string', description: 'The agent that posted it, or empty for the person.' },
@@ -466,8 +472,8 @@ export const spec = {
 				id: { type: 'integer' }, voter: { type: 'string' }, agent: { type: 'string' }, body: { type: 'string' }, review: { type: 'boolean' }, at: { type: 'string', format: 'date-time' },
 				record_id: { type: ['string', 'null'] }, topic_id: { type: ['integer', 'null'] }, title: { type: 'string' },
 			} },
-			ForumPage: { type: 'object', properties: {
-				questions: { type: 'array', items: { $ref: '#/components/schemas/Topic' } }, next_cursor: { type: ['string', 'null'] },
+			ForumPage: { type: 'object', required: PAGING.required, properties: {
+				questions: { type: 'array', items: { $ref: '#/components/schemas/Topic' } }, ...PAGING.properties,
 				latest_posts: { type: 'array', items: { $ref: '#/components/schemas/Activity' } },
 				since: { type: 'integer', description: 'The newest post id seen: send it as since next time.' }, post: { type: 'string', description: 'How to post.' },
 			} },
@@ -504,19 +510,28 @@ export type Schema = {
 	readonly properties?: Readonly<Record<string, Schema>>; readonly required?: readonly string[]; readonly anyOf?: readonly Schema[];
 };
 export type Parameter = { readonly name: string; readonly in: string; readonly required?: boolean; readonly schema: Schema; readonly description?: string; readonly example?: unknown };
-/** An operation, flattened: where it is served, what it takes, and whether it needs an agent key. */
+type SchemaName = keyof typeof spec.components.schemas;
+/** An operation, flattened: where it is served, what it takes, whether it needs an agent key, and the schema of its
+ * JSON reply for each status that has one. */
 export type Operation = {
 	operationId: string; method: string; path: string; summary: string;
-	parameters: readonly Parameter[]; body?: Schema; secured: boolean;
+	parameters: readonly Parameter[]; body?: Schema; secured: boolean; replies: Readonly<Partial<Record<number, SchemaName>>>;
 };
 
 type Raw = { operationId: string; summary: string; parameters?: readonly Parameter[]; security?: readonly unknown[];
-	requestBody?: { content: { 'application/json': { schema: Schema } } } };
+	requestBody?: { content: { 'application/json': { schema: Schema } } };
+	responses: Record<string, { content?: { 'application/json'?: { schema?: { $ref?: string } } } }> };
+const REF = '#/components/schemas/';
+const isSchemaName = (name: string): name is SchemaName => name in spec.components.schemas;
 /** Every operation, in the document's order. */
 export const operations: readonly Operation[] = Object.entries(spec.paths as unknown as Record<string, Record<string, Raw>>).flatMap(([path, item]) =>
 	Object.entries(item).map(([method, op]) => ({
 		operationId: op.operationId, method: method.toUpperCase(), path, summary: op.summary, parameters: op.parameters ?? [],
 		body: op.requestBody?.content['application/json'].schema, secured: Boolean(op.security?.length),
+		replies: Object.fromEntries(Object.entries(op.responses).flatMap(([status, r]) => {
+			const name = r.content?.['application/json']?.schema?.$ref?.replace(REF, '');
+			return name && isSchemaName(name) ? [[Number(status), name]] : [];
+		})),
 	})));
 
 /** The operation with this operationId; an id the document lacks is a programming error. */

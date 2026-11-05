@@ -38,8 +38,20 @@ export const joinId = ({ prefix, suffix }: { prefix: string; suffix: string }) =
 export const recordId = async ({ params }: IdParams) => joinId(await params);
 
 const NAMES = prefixes.prefixes as Record<string, { name: string }>;
-/** The source's name, linked to its records. */
-export const source = (s: unknown) => ({ name: NAMES[String(s)]?.name ?? String(s), href: `/?q=source:${String(s)}` });
+/** The source's name as a tag: it links to the index's records from that source, not to the original work. */
+export const source = (s: unknown) => {
+	const name = NAMES[String(s)]?.name ?? String(s);
+	return { name, href: `/?q=source:${String(s)}`, title: `All ${name} records on ${NAME}` };
+};
+/** The original work at its upstream site (the record's canonical url), to show as an external "Source" link; null without one. */
+export const original = (r: Record<string, unknown>) => {
+	const href = typeof r.url === 'string' && /^https?:\/\//i.test(r.url) ? r.url : '';
+	if (!href) return null;
+	// The address as people read it: no scheme, no www., no trailing slash, and cut when long.
+	const shown = href.replace(/^https?:\/\/(www\.)?/i, '').replace(/\/$/, '');
+	const host = shown.split('/')[0];
+	return { href, host, label: shown.length > 60 ? `${shown.slice(0, 59)}…` : shown };
+};
 // A reviewed summary of where the work stands (index.py reception).
 type Reception = { text: string; written?: string; links?: string[]; reviewed_by?: string };
 export const reception = (r: Record<string, unknown>): Reception | null => {

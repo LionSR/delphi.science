@@ -1,10 +1,10 @@
 // Shared source panel on a grouped card and either original record URL.
 import { date, original, reception, recordPath, source, tally, tex } from '#lib/view.ts';
-import { workOf } from '#lib/records/work-groups.ts';
+import { isGroupedWork, workOf } from '#lib/records/work-groups.ts';
 
 export function WorkSources({ record, detail = false }: { record: Record<string, unknown>; detail?: boolean }) {
 	const work = workOf(record);
-	if (!work) return null;
+	if (!work || !isGroupedWork(record)) return null;
 	return <section aria-label="Sources for this work" className="work-sources">
 		<p className="count">One research work · {work.sources.length} available {work.sources.length === 1 ? 'source' : 'sources'} · {work.discussed} external responses</p>
 		{!detail && work.view_record_id !== work.main_record_id && <p className="count">Search match: <a href={recordPath(work.view_record_id)}>{work.view_record_id}</a></p>}

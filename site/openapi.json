@@ -274,6 +274,68 @@
 				}
 			}
 		},
+		"/api/v1/works": {
+			"get": {
+				"operationId": "getWork",
+				"security": [],
+				"summary": "Read a persisted canonical work and its available source records. Retained work aliases resolve to their canonical work; source interactions stay separate.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "query",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"maxLength": 300
+						},
+						"description": "Persisted work_id from a source record or search result."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Canonical work, including source provenance",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Work"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"503": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
 		"/api/v1/records/{prefix}/{suffix}": {
 			"get": {
 				"operationId": "getRecord",
@@ -2607,11 +2669,12 @@
 			},
 			"Work": {
 				"type": "object",
-				"description": "Curated read/display group. Top-level Record identity and interactions stay source-bound. Membership is not verification. Compact results omit group discussion and compact each source snapshot.",
+				"description": "Persisted canonical work from open_index.works/work_records. Top-level Record identity and interactions stay source-bound. Membership is not verification. Compact results omit group discussion and compact each source snapshot.",
 				"required": [
 					"id",
 					"title",
 					"main_record_id",
+					"publication_record_id",
 					"view_record_id",
 					"evidence",
 					"sources",
@@ -2628,6 +2691,17 @@
 					"main_record_id": {
 						"type": "string",
 						"description": "Stable curated canonical main record ID, independent of query/sort. May be temporarily unavailable; sources lists only available records."
+					},
+					"publication_record_id": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "Independent publication metadata source; never inferred from the main record creation date."
+					},
+					"requested_work_id": {
+						"type": "string",
+						"description": "Original ID when a retained work alias was requested."
 					},
 					"view_record_id": {
 						"type": "string",
@@ -2662,6 +2736,18 @@
 								},
 								"date_meaning": {
 									"type": "string"
+								},
+								"evidence": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"reviewed_by": {
+									"type": [
+										"string",
+										"null"
+									]
 								},
 								"record": {
 									"type": "object",
@@ -2719,6 +2805,10 @@
 				"properties": {
 					"id": {
 						"type": "string"
+					},
+					"work_id": {
+						"type": "string",
+						"description": "Persisted canonical work identity; absent until the separately reviewed schema migration is applied."
 					},
 					"source": {
 						"type": "string",
@@ -2913,6 +3003,9 @@
 						"properties": {
 							"self": {
 								"type": "string"
+							},
+							"work": {
+								"type": "string"
 							}
 						}
 					}
@@ -2931,6 +3024,14 @@
 					"results"
 				],
 				"properties": {
+					"work_model": {
+						"type": "string",
+						"enum": [
+							"canonical",
+							"source_records"
+						],
+						"description": "canonical uses persisted relationships and grouped counts; source_records is a safe compatibility response before migration, with raw record counts and no inferred grouping."
+					},
 					"query": {
 						"type": "string",
 						"description": "Filters apply to individual sources before curated work grouping; one best-ranked matching source per work. Source date/flag assertions remain searchable independently. Totals and pages count grouped results; source counts remain raw records."

@@ -1,46 +1,32 @@
-// Reviewed identities only. This is a read projection, never a merge of stored records.
+// Canonical identity/membership are persisted in works/work_records; no runtime identity list.
 import type { Db } from '#lib/db.ts';
+import { CodedError } from '#lib/errors.ts';
 
-type CuratedGroup = { id: string; main_record_id: string; title: string; evidence: readonly string[]; sources: readonly { id: string; role: string; date_meaning: string }[] };
-export const WORK_GROUPS: readonly CuratedGroup[] = [{
-	id: 'anthropic-eth-3sat',
-	main_record_id: 'lean/anthropics__formal-math__eth',
-	// README/paper evidence preserves the exponent lost by the source parser; raw titles stay in sources.
-	title: 'A 2^{o(n)} Time Algorithm for 3-SAT',
-	evidence: [
-		'https://github.com/anthropics/formal-math/blob/main/eth/README.md',
-		'https://hexagonmath.org/2610.00577v1',
-	],
-	sources: [
-		{ id: 'lean/anthropics__formal-math__eth', role: 'Paper and Lean proof repository', date_meaning: 'Repository creation; not paper publication' },
-		{ id: 'hexagon/2610.00577', role: 'Paper', date_meaning: 'Paper publication' },
-	],
-}];
-
-export const GROUP_IDS = WORK_GROUPS.flatMap((g) => g.sources.map((s) => s.id));
-export const groupFor = (id: unknown) => WORK_GROUPS.find((g) => g.sources.some((s) => s.id === id));
 type Raw = Record<string, unknown>;
-export type WorkSource = { id: string; role: string; date_meaning: string; record: Raw };
+export type WorkSource = { id: string; role: string; date_meaning: string; evidence?: string[]; reviewed_by?: string | null; record: Raw };
 export type WorkResponse = Raw & { url: string; assertions: { record_id: string; link: Raw }[] };
-export type Work = { id: string; title: string; main_record_id: string; view_record_id: string; evidence: readonly string[]; sources: WorkSource[]; discussed: number; discussion?: WorkResponse[] };
+export type Work = { id: string; title: string; main_record_id: string; publication_record_id: string | null; view_record_id: string; evidence: string[]; sources: WorkSource[]; discussed: number; discussion?: WorkResponse[]; requested_work_id?: string };
 export const workOf = (r: Raw) => r.work as Work | undefined;
-/** Stable main-work display, independent of the matching source that earned the search rank. */
+export const isGroupedWork = (r: Raw) => Boolean(workOf(r) && (workOf(r)!.sources.length > 1 || workOf(r)!.evidence.length));
 export const mainRecordOf = (r: Raw): Raw => {
 	const work = workOf(r);
 	return work?.sources.find((s) => s.id === work.main_record_id)?.record ?? r;
 };
-
-/** Evidence-backed work title; raw per-source titles are never rewritten. */
 export const workTitleOf = (r: Raw): string => workOf(r)?.title ?? String(mainRecordOf(r).title ?? '');
-/** Publication metadata is separate from canonical identity and repository creation. */
 export const publicationOf = (r: Raw): Raw | undefined => {
 	const work = workOf(r);
-	return work ? work.sources.find((s) => s.date_meaning === 'Paper publication')?.record : r;
+	return work ? work.sources.find((s) => s.id === work.publication_record_id)?.record : r;
 };
 
-/** Conservative URL identity: ignore tracking, normalize host/default ports and X status aliases.
- * Keep fragments, path case, meaningful query parameters and trailing slashes (they can identify distinct responses).
+/** Old-schema runtimes read raw sources safely until the reviewed migration is applied separately.
+ * No cached negative: a later operator-authorized migration becomes visible without a restart.
  */
+export async function canonicalWorksReady(db: Db): Promise<boolean> {
+	return (await db.query<{ ready: boolean }>(`SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_attribute
+		WHERE attrelid=to_regclass('open_index.works') AND attname='main_record_id' AND NOT attisdropped) AS ready`)).rows[0].ready;
+}
+
+/** Keep fragments/path case/meaningful queries/trailing slashes; they may identify distinct responses. */
 export function responseUrl(raw: string): string {
 	try {
 		const u = new URL(raw);
@@ -54,34 +40,45 @@ export function responseUrl(raw: string): string {
 	} catch { return raw; }
 }
 
-/** One response per URL; every original assertion survives, including conflicting stances/dates. */
 export function workResponses(sources: WorkSource[]): WorkResponse[] {
 	const links = new Map<string, WorkResponse>();
 	for (const s of sources) for (const link of Array.isArray(s.record.discussion) ? s.record.discussion as Raw[] : []) {
 		if (typeof link.url !== 'string' || !link.url) continue;
-		const key = responseUrl(link.url);
-		const found = links.get(key);
+		const key = responseUrl(link.url), found = links.get(key);
 		if (found) found.assertions.push({ record_id: s.id, link });
 		else links.set(key, { ...link, url: link.url, assertions: [{ record_id: s.id, link }] });
 	}
 	return [...links.values()];
 }
 
-/** Attach available sources only; never synthesize an absent record or replace source metadata. */
+type WorkRow = { id: string; title: string; main_record_id: string; publication_record_id: string | null; evidence: string[] };
+async function readWorks(db: Db, ids: string[], served: string): Promise<Map<string, Work>> {
+	if (!ids.length) return new Map();
+	const works = (await db.query<WorkRow>(`SELECT id,title,main_record_id,publication_record_id,evidence FROM open_index.works WHERE id=ANY($1::text[]) AND redirect_work_id IS NULL`, [ids])).rows;
+	const sources = (await db.query<{ work_id: string; id: string; role: string; date_meaning: string; evidence: string[]; reviewed_by: string | null; record: Raw }>(
+		`SELECT m.work_id,m.record_id AS id,m.role,m.date_meaning,m.evidence,m.reviewed_by,${served} AS record
+		 FROM open_index.work_records m JOIN open_index.records r ON r.id=m.record_id JOIN open_index.works w ON w.id=m.work_id
+		 WHERE m.work_id=ANY($1::text[]) ORDER BY m.work_id,(m.record_id=w.main_record_id) DESC,m.record_id`, [ids])).rows;
+	return new Map(works.map((w) => {
+		const available = sources.filter((s) => s.work_id === w.id).map(({ work_id: _, ...s }) => s);
+		const discussion = workResponses(available);
+		return [w.id, { ...w, view_record_id: w.main_record_id, sources: available, discussed: discussion.length, discussion }];
+	}));
+}
+
 export async function withWorks(db: Db, records: Raw[], served: string): Promise<Raw[]> {
-	const groups = WORK_GROUPS.filter((g) => records.some((r) => groupFor(r.id) === g));
-	if (!groups.length) return records;
-	const ids = groups.flatMap((g) => g.sources.map((s) => s.id));
-	const rows = (await db.query<{ record: Raw }>(`SELECT ${served} AS record FROM open_index.records r WHERE r.id = ANY($1::text[])`, [ids])).rows;
-	const byId = new Map(rows.map(({ record }) => [record.id, record]));
+	const works = await readWorks(db, [...new Set(records.map((r) => String(r.work_id)))], served);
 	return records.map((r) => {
-		const group = groupFor(r.id);
-		if (!group) return r;
-		const sources: WorkSource[] = group.sources.flatMap((s) => {
-			const record = byId.get(s.id);
-			return record ? [{ ...s, record }] : [];
-		});
-		const discussion = workResponses(sources);
-		return { ...r, work: { id: group.id, title: group.title, main_record_id: group.main_record_id, view_record_id: String(r.id), evidence: group.evidence, sources, discussed: discussion.length, discussion } satisfies Work };
+		const work=works.get(String(r.work_id));
+		if (!work) throw new CodedError(503,'canonical_work_changed','The work relationship changed during this read.','Retry the query.');
+		return { ...r,work:{...work,view_record_id:String(r.id)} };
 	});
+}
+
+export async function getWork(db: Db, id: string, served: string): Promise<Work | null> {
+	if (!await canonicalWorksReady(db)) throw new CodedError(503, 'canonical_schema_unavailable', 'Canonical work relationships are not enabled on this database.', 'Use source record endpoints until the separately reviewed migration is applied.');
+	const row = (await db.query<{ id: string }>('SELECT coalesce(redirect_work_id,id) AS id FROM open_index.works WHERE id=$1', [id])).rows[0];
+	if (!row) return null;
+	const work = (await readWorks(db, [row.id], served)).get(row.id)!;
+	return row.id === id ? work : { ...work, requested_work_id: id };
 }

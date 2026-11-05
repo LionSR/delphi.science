@@ -5,7 +5,7 @@ import { migratedDb, allowRouteImports, useDb } from '#lib/testing.ts';
 import { check, type Item } from '#lib/api/schema.ts';
 import { load } from './load.ts';
 import { compact, get, search, sourceCounts, SORTS } from './query.ts';
-import { mainRecordOf, publicationOf, responseUrl, workOf, workTitleOf, WORK_GROUPS } from './work-groups.ts';
+import { isGroupedWork, mainRecordOf, publicationOf, responseUrl, workOf, workTitleOf } from './work-groups.ts';
 import { vote } from './votes.ts';
 import { comment, comments } from '#lib/posts/comments.ts';
 import { handle as mcp } from '#lib/api/mcp.ts';
@@ -46,8 +46,8 @@ describe('curated work projection on Postgres', () => {
 		const found = await search(db, 'ti:algorithm', { fields: 'full' });
 		assert.equal(found.total, 2);
 		assert.equal(found.count, 2);
-		assert.equal(found.results.filter((r) => workOf(r)).length, 1);
-		assert.ok(found.results.some((r) => r.id === other && !r.work));
+		assert.equal(found.results.filter((r) => isGroupedWork(r)).length, 1);
+		assert.ok(found.results.some((r) => r.id === other && r.work_id === other && !isGroupedWork(r)));
 		for (const id of [paper, repo]) {
 			const r = (await get(db, id))!;
 			assert.equal(r.id, id);
@@ -59,7 +59,7 @@ describe('curated work projection on Postgres', () => {
 	});
 
 	test('canonical main is the official repository independently of ranking, filters and requested source view', async () => {
-		assert.equal(WORK_GROUPS[0].main_record_id, repo);
+		assert.equal(workOf((await get(db,repo))!)!.main_record_id,repo);
 		const views = [];
 		for (const sort of SORTS) {
 			const r = (await search(db, 'source:lean OR source:hexagon', { sort, fields: 'full' })).results[0];
@@ -202,12 +202,25 @@ describe('curated work projection on Postgres', () => {
 		const expected = fixtures.length + controls.length - 1;
 		const outside = await search(db, '', { sort: 'relevance', embedding: unit, limit: 100 });
 		assert.equal(outside.total, expected, 'both members outside candidate window still count as one work');
-		assert.ok(outside.results.every((r) => !r.work), 'controls fill the first candidate page');
+		assert.ok(outside.results.every((r) => !isGroupedWork(r)), 'controls fill the first candidate page');
 		await db.query('UPDATE open_index.records SET embedding = NULL WHERE id = ANY($1::text[])', [controls.slice(0, 3).map((r) => r.id)]);
 		const oneInside = await search(db, '', { sort: 'relevance', embedding: unit, limit: 100 });
 		assert.equal(oneInside.total, expected, 'only one member in candidate window still counts as one work');
 		const second = await search(db, '', { sort: 'relevance', embedding: unit, limit: 100, page: 2 });
-		assert.equal(second.results.filter((r) => r.work).length, 1);
+		assert.equal(second.results.filter((r) => isGroupedWork(r)).length, 1);
+	});
+
+	test('hybrid pagination includes every persisted work after the ranking candidate window',async()=>{
+		const unit=Array.from({length:1024},(_,i)=>Number(i===0));
+		await load(db,Array.from({length:205},(_,i)=>({id:`test/overflow-${i}`,source:'test',title:'Window control',url:`https://example.org/${i}`})));
+		await db.query('UPDATE open_index.records SET embedding=$1::extensions.vector',[`[${unit}]`]);
+		const seen=new Set<string>();let cursor:string|null|undefined;
+		let total=0;
+		do { const page=await search(db,'',{sort:'relevance',embedding:unit,limit:100,cursor});total=page.total;
+			for(const r of page.results){assert.ok(!seen.has(String(r.work_id)));seen.add(String(r.work_id));}
+			cursor=page.next_cursor;
+		}while(cursor);
+		assert.equal(seen.size,total);
 	});
 
 	test('REST, original redirects and MCP expose group membership while preserving requested source IDs', async () => {

@@ -1,6 +1,6 @@
 // The list: newest first, or a search in the API's syntax, with links to each subject division.
 import { WorkSources } from './work-sources.tsx';
-import { mainRecordOf, workOf, workTitleOf } from '#lib/records/work-groups.ts';
+import { isGroupedWork, mainRecordOf, workOf, workTitleOf } from '#lib/records/work-groups.ts';
 import { db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
 import { search, sourceCounts } from '#lib/records/query.ts';
@@ -59,6 +59,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 				{sources.map((r) => <a key={r.source} href={source(r.source).href} title={source(r.source).title}>{source(r.source).name} <span className="n">{r.n.toLocaleString('en')}</span></a>)}
 			</nav>
 			{(error || notice) && <p className="count">{error || notice}</p>}
+			{res?.work_model === 'source_records' && <p className="count">Showing source records; canonical work relationships are not enabled yet.</p>}
 			{res && <div className="results-heading">
 				<p className="count">{res.total.toLocaleString('en')} {res.total === 1 ? 'result' : 'results'}</p>
 				<HomeOrder q={q} sort={sort} />
@@ -66,7 +67,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 			<ol>
 				{res?.results.map((r) => {
 					const from = original(r);
-					const work = workOf(r);
+					const work = isGroupedWork(r) ? workOf(r) : undefined;
 					const main = mainRecordOf(r);
 					return (
 					<li key={work?.id ?? String(r.id)} className="item">

@@ -88,7 +88,9 @@ def checked(record: str, entry: dict[str, Any]) -> Jsonb:
 
 
 def save(ref: Ref, entry: dict[str, Any]) -> Ref:
-    """Stores an entry: a new one (ref.version None), or a new version of the one read at ref.version."""
+    """Stores raw source metadata with optimistic concurrency. The DB trigger binds persisted work identity;
+    refresh/build payloads never choose or overwrite reviewed canonical membership.
+    """
     data = checked(ref.id, entry)
     if ref.version is None:
         row = conn().execute("INSERT INTO open_index.entries (id, entry) VALUES (%s, %s) ON CONFLICT (id) DO NOTHING RETURNING version",

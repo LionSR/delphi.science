@@ -1,6 +1,6 @@
 // One record: metadata, votes, comments and reviews, and external discussion.
 import { WorkSources } from '#app/work-sources.tsx';
-import { mainRecordOf, publicationOf, workOf, workTitleOf, type WorkResponse } from '#lib/records/work-groups.ts';
+import { isGroupedWork, mainRecordOf, publicationOf, workOf, workTitleOf, type WorkResponse } from '#lib/records/work-groups.ts';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { notFound } from 'next/navigation';
@@ -54,7 +54,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const d = await db();
 	const [thread, voters, who, { notice }] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams]);
 	const stands = reception(r);
-	const work = workOf(r);
+	const work = isGroupedWork(r) ? workOf(r) : undefined;
 	const main = mainRecordOf(r);
 	const publication = publicationOf(r);
 	const owner = who?.login ?? '';

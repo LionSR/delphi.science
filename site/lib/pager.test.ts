@@ -32,3 +32,24 @@ test('the pager links every page and marks this one; one page needs none', () =>
 	assert.match(html, /href="\/\?sort=newest&amp;page=3" rel="next">Next/);
 	assert.doesNotMatch(pager(3, 120), /Next/);
 });
+
+test('out-of-range pages keep recovery links, including empty and single-page lists', () => {
+	for (const path of ['/', '/forum']) {
+		const params = { q: 'cat:math.NT au:"A & B"', sort: 'newest' };
+		const pager = (page: number, total: number) => renderToStaticMarkup(createElement(Pager, { page, total, path, params }));
+		for (const total of [0, 1, 49, 50, 51, 100, 101]) {
+			const last = Math.max(1, Math.ceil(total / 50));
+			if (last === 1) assert.equal(pager(1, total), '', `no pager on page 1 with ${total} items`);
+			for (const page of [last + 1, 1000]) {
+				const html = pager(page, total);
+				const previous = html.match(/href="([^"]+)" rel="prev">Previous/);
+				assert.ok(previous, `${path} page ${page} with ${total} items has a way back`);
+				const url = new URL(previous[1].replaceAll('&amp;', '&'), 'https://example.test');
+				assert.equal(url.pathname, path);
+				assert.deepEqual(Object.fromEntries(url.searchParams), { ...params, ...(last > 1 ? { page: String(last) } : {}) });
+				assert.doesNotMatch(html, /rel="next"|aria-current="page"/);
+				assert.match(html, />1<\/a>/);
+			}
+		}
+	}
+});

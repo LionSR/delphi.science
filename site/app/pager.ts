@@ -36,10 +36,10 @@ export function pageNumbers(page: number, last: number): (number | null)[] {
 	return out;
 }
 
-/** Links to every page of a list of `total` items at `path` with `params`; nothing when they fit on one page. */
+/** Links to pages of a list; hide a single page only when already on it, keeping a way back from past the end. */
 export function Pager({ page, total, path, params }: { page: number; total: number; path: string; params: Record<string, string> }) {
-	const last = Math.ceil(total / PAGE_SIZE);
-	if (last <= 1) return null;
+	const last = Math.max(1, Math.ceil(total / PAGE_SIZE));
+	if (last === 1 && page === 1) return null;
 	const href = (p: number) => pageHref(path, params, p);
 	return h('nav', { className: 'pager', 'aria-label': 'Pages' },
 		page > 1 && h('a', { href: href(Math.min(page - 1, last)), rel: 'prev' }, 'Previous'),

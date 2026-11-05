@@ -30,10 +30,9 @@ export default async function Profile({ params, searchParams }: Context) {
 	const { page: rawPage, tab: rawTab, notice } = await searchParams;
 	const tab: Tab = (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
 	const d = await db();
-	const who = await publicName(d, login);
-	// A failure to load shows "temporarily unavailable" with a retry link.
-	const page = await profile(d, login, { tab, page: pageParam(rawPage) }).catch(() => null);
-	const owner = (await me())?.login.toLowerCase() === login.toLowerCase();
+	// A failure to load the activity shows "temporarily unavailable" with a retry link.
+	const [who, page, viewer] = await Promise.all([publicName(d, login), profile(d, login, { tab, page: pageParam(rawPage) }).catch(() => null), me()]);
+	const owner = viewer?.login.toLowerCase() === login.toLowerCase();
 	const own = owner ? await ownName(d, login).catch(() => null) : null;
 	const editor = own ? (
 		<details className="profile-edit" open={!own.name && !own.affiliation}>

@@ -5,6 +5,7 @@ import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/
 import * as z from 'zod';
 import { operationById, spec } from './openapi.ts';
 import { compact, get, parse, search, SORTS } from '#lib/records/query.ts';
+import type { PageRequest } from '#lib/paging.ts';
 import { NotFoundError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
 import { NAME, recordPath, SITE } from '#lib/view.ts';
@@ -37,12 +38,12 @@ const shown = (rec: Record<string, unknown>) => {
 };
 
 type Fields = 'compact' | 'full';
-type Paging = { limit?: number; page?: number; cursor?: string; fields?: Fields };
-type SearchArgs = Paging & { q?: string; sort?: (typeof SORTS)[number] };
+type ListArgs = PageRequest & { fields?: Fields };
+type SearchArgs = ListArgs & { q?: string; sort?: (typeof SORTS)[number] };
 
 // `query` is the old name for q, still accepted.
-async function searchRecords(db: Db, { q, query, sort, ...paging }: SearchArgs & { query?: unknown }) {
-	const { took_ms: _, results, ...res } = await search(db, q ?? (typeof query === 'string' ? query : ''), { sort, ...paging });
+async function searchRecords(db: Db, { q, query, ...opts }: SearchArgs & { query?: unknown }) {
+	const { took_ms: _, results, ...res } = await search(db, q ?? (typeof query === 'string' ? query : ''), opts);
 	return { ...res, results: results.map(shown) };
 }
 
@@ -52,11 +53,11 @@ async function getRecord(db: Db, { id }: { id: string }) {
 	return { ...shown(rec), discussion: links(rec).map(response), discusses: Array.isArray(rec.discusses) ? rec.discusses : [] };
 }
 
-async function listDiscussedRecords(db: Db, { query = '', fields, ...paging }: Paging & { query?: string }) {
+async function listDiscussedRecords(db: Db, { query = '', fields, ...paging }: ListArgs & { query?: string }) {
 	if (query.trim()) parse(query); // alone first, so its parentheses cannot escape the wrapper below
-	const { took_ms: _, sort: _sort, query: _query, results, ...res } = await search(db, query.trim() ? `is:discussed AND (${query})` : 'is:discussed',
+	const { took_ms: _, sort: _sort, results, ...res } = await search(db, query.trim() ? `is:discussed AND (${query})` : 'is:discussed',
 		{ ...paging, sort: 'responded', fields: 'full' });
-	return { query, ...res, results: results.map((rec) => ({ ...shown(fields === 'full' ? rec : compact(rec)), latest_response: newest(rec) })) };
+	return { ...res, query, results: results.map((rec) => ({ ...shown(fields === 'full' ? rec : compact(rec)), latest_response: newest(rec) })) };
 }
 
 // ---- Schemas, from the OpenAPI document ----
@@ -84,8 +85,8 @@ function schema(json: Json, s: z.ZodType = z.fromJSONSchema(json as z.core.JSONS
 
 const searchParams = parameters('searchRecords');
 const recordParams = parameters('getRecord');
-const q: Json = searchParams.q;
-const paging = { limit: searchParams.limit, page: searchParams.page, cursor: searchParams.cursor, fields: searchParams.fields }; // format is HTTP's only
+// The search parameters other than q and sort, which the tools take as they are: paging and fields (format is HTTP's only).
+const { q, sort: _sort, format: _format, ...paging } = searchParams;
 
 const Link = inline(components.Link);
 const RecordSchema = inline(components.Record);

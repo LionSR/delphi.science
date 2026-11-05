@@ -1,8 +1,9 @@
 :root {
 	--bg: #fbfbfd; --ink: #161a22; --muted: #4a5163; --rule: #dde1ea; --surface: #f1f3f8; --accent: #1f56a8; --warn: #a3261b;
 	--small: 0.85rem;
-	/* Shapes and motion, shared by every control: square-cornered fields and buttons, round tags and page links. */
-	--radius: 0.35rem; --round: 999px; --control: 2.25rem; --motion: 0.15s;
+	/* Controls: the corner radius of fields, buttons and cards; fully round tags and page links; the size of round
+	   controls; the text size of every control; hover motion. */
+	--radius: 0.35rem; --round: 999px; --control: 2.25rem; --control-text: 0.9rem; --motion: 0.15s;
 	--sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Noto Sans SC', sans-serif;
 	--mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
@@ -31,7 +32,8 @@ ul.plain li { margin: 0.2rem 0; }
 form { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.2rem 0 0.4rem; }
 form.inline { display: inline; margin: 0; }
 input, select, button, textarea { font: inherit; padding: 0.45rem 0.6rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--bg); color: var(--ink); box-sizing: border-box; }
-input, select, button { font-size: 0.9rem; }
+input, select, button { font-size: var(--control-text); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 textarea { padding: 0.5rem 0.6rem; }
 button { cursor: pointer; }
 button.link { border: 0; padding: 0; background: none; color: var(--accent); font-size: inherit; }
@@ -83,11 +85,10 @@ li.item.question .answered { color: var(--accent); font-weight: 600; }
 .meta { display: flex; gap: 0.25rem 0.8rem; flex-wrap: wrap; margin: 0.25rem 0 0; color: var(--muted); font-size: var(--small); }
 .meta code { color: var(--ink); }
 /* Numbered pages under a list (lib/pager.ts) */
-.pager { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.25rem; margin: 2rem 0 0; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.pager { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.25rem; margin: 2rem 0 0; font-size: var(--control-text); font-variant-numeric: tabular-nums; }
 .pager a, .pager .gap { display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem; min-width: var(--control); height: var(--control); padding: 0 0.65rem; border-radius: var(--round); box-sizing: border-box; }
 .pager a { color: var(--ink); text-decoration: none; transition: background-color var(--motion), color var(--motion); }
 .pager a:hover { background: var(--surface); }
-.pager a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .pager a[aria-current='page'] { background: var(--ink); color: var(--bg); font-weight: 600; }
 .pager a[rel] { color: var(--muted); }
 .pager a[rel]:hover { color: var(--ink); }

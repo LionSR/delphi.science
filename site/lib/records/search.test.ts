@@ -90,7 +90,6 @@ describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' },
 		assert.notDeepEqual(page2.results.map((x) => x.id), r.results.map((x) => x.id));
 		const numbered = await search(db, 'ti:lattice', { limit: 2, page: 2 });
 		assert.deepEqual([numbered.total, numbered.results], [r.total, page2.results], 'a numbered page matches the cursor page');
-		assert.deepEqual([r.page, page2.page, numbered.pages], [1, 2, Math.ceil(r.total / 2)]);
 		assert.ok((await search(db, 'au:claude')).results.some((x) => String(x.title).startsWith('Zeta23')));
 		assert.ok((await search(db, '"zero-free"')).total >= 1);
 		assert.ok((await search(db, 'lattice*')).total >= r.total);

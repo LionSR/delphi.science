@@ -2,11 +2,11 @@
 // each record). Forum post votes stay private. Reads only rows that are already public.
 import { CodedError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
-import { pageInfo, pageStart, type PageRequest, type Paging } from '#lib/paging.ts';
+import { pageInfo, pageSize, pageStart, type PageRequest, type Paging } from '#lib/paging.ts';
 import { recordPath } from '#lib/view.ts';
 
-export const DEFAULT_PROFILE_LIMIT = 20;
-export const MAX_PROFILE_LIMIT = 50;
+/** A profile's page size (lib/paging.ts). */
+export const PROFILE_PAGE = pageSize('Items', 50, 20);
 
 /** Post kinds, named as moderation names them (posts/comments.ts, posts/edit.ts): a topic's opening post is a question, a
  * reply to it an answer. The profile shows them as Topic and Reply. */
@@ -71,18 +71,12 @@ const ACTIVITY = `SELECT c.id AS pid, c.id::text AS id, c.voter, c.agent, c.body
 		AND (c.parent_id IS NULL OR p.id IS NOT NULL)`;
 const VOTES = `FROM open_index.votes v JOIN open_index.records r ON r.id = v.record_id AND NOT r.gone WHERE lower(v.voter) = $1`;
 
-function checkLimit(limit: number) {
-	if (!Number.isSafeInteger(limit) || limit < 1 || limit > MAX_PROFILE_LIMIT) {
-		throw new QueryError(`Activity limit must be from 1 to ${MAX_PROFILE_LIMIT}.`, `Use a whole-number limit, or omit it for ${DEFAULT_PROFILE_LIMIT} public posts.`);
-	}
-}
-
+// A slice of a login's list, as profile() pages it.
 type Slice = { offset?: number; limit?: number };
 
 /** A slice of a login's public posts, newest first: all of them, or one tab's kinds. */
-export async function profileActivity(db: Db, handle: unknown, { tab = 'all', offset = 0, limit = DEFAULT_PROFILE_LIMIT }: Slice & { tab?: PostTab } = {}): Promise<ProfilePost[]> {
+export async function profileActivity(db: Db, handle: unknown, { tab = 'all', offset = 0, limit = PROFILE_PAGE.fallback }: Slice & { tab?: PostTab } = {}): Promise<ProfilePost[]> {
 	const login = normalizeProfileLogin(handle);
-	checkLimit(limit);
 	try {
 		return (await db.query<Row>(`SELECT * FROM (${ACTIVITY}) a WHERE ($2::text[] IS NULL OR a.kind = ANY($2::text[]))
 			ORDER BY a.pid DESC LIMIT $3 OFFSET $4`, [login, tab === 'all' ? null : TAB_KINDS[tab], limit, offset])).rows.map(toPost);
@@ -109,9 +103,8 @@ export async function profileCounts(db: Db, handle: unknown): Promise<ProfileCou
 }
 
 /** A slice of a login's votes on live records, newest first. */
-export async function profileVotes(db: Db, handle: unknown, { offset = 0, limit = DEFAULT_PROFILE_LIMIT }: Slice = {}): Promise<ProfileVote[]> {
+export async function profileVotes(db: Db, handle: unknown, { offset = 0, limit = PROFILE_PAGE.fallback }: Slice = {}): Promise<ProfileVote[]> {
 	const login = normalizeProfileLogin(handle);
-	checkLimit(limit);
 	try {
 		return (await db.query<VoteRow>(`SELECT v.record_id, r.title, v.agent, v.value, v.emoji, v.note, v.at ${VOTES}
 			ORDER BY v.at DESC, v.record_id DESC LIMIT $2 OFFSET $3`, [login, limit, offset])).rows.map((v): ProfileVote => ({
@@ -124,14 +117,16 @@ export async function profileVotes(db: Db, handle: unknown, { offset = 0, limit 
 }
 
 /** What /u/<login> and GET /api/v1/users/{login} show: the counts and one page (lib/paging.ts) of the chosen tab. */
-export async function profile(db: Db, handle: unknown, options: PageRequest & { tab?: Tab; limit?: number } = {}): Promise<Profile> {
+export async function profile(db: Db, handle: unknown, options: PageRequest & { tab?: Tab } = {}): Promise<Profile> {
 	const login = normalizeProfileLogin(handle);
-	const { tab = 'all', limit = DEFAULT_PROFILE_LIMIT } = options;
-	checkLimit(limit);
-	const start = pageStart(options, limit);
-	const counts = await profileCounts(db, login);
-	const slice = { offset: start.offset, limit };
-	const items = tab === 'votes' ? { votes: await profileVotes(db, login, slice) } : { posts: await profileActivity(db, login, { ...slice, tab }) };
-	const total = tab === 'votes' ? counts.votes : tab === 'all' ? counts.topics + counts.replies + counts.comments : counts[tab];
-	return { login, tab, counts, ...items, ...pageInfo(start, total, limit, (items.votes ?? items.posts).length) };
+	const tab = options.tab ?? 'all';
+	const start = pageStart(options, PROFILE_PAGE);
+	const [counts, items] = await Promise.all([
+		profileCounts(db, login),
+		tab === 'votes' ? profileVotes(db, login, start) : profileActivity(db, login, { ...start, tab }),
+	]);
+	// All posts count once each, under the tab of their kind.
+	const total = tab === 'all' ? (Object.keys(TAB_KINDS) as (keyof typeof TAB_KINDS)[]).reduce((n, t) => n + counts[t], 0) : counts[tab];
+	const list = tab === 'votes' ? { votes: items as ProfileVote[] } : { posts: items as ProfilePost[] };
+	return { login, tab, counts, ...list, ...pageInfo(start, total, items.length) };
 }

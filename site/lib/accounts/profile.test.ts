@@ -64,9 +64,10 @@ test('a profile pages like every list: by number or by cursor, with the tab\'s t
 	assert.deepEqual([(await profile(db, 'ada', { page: 3 })).posts!.length, (await profile(db, 'ada', { tab: 'votes' })).total], [5, 0]);
 }));
 
-test('limits fail before a query', async () => {
+test('limits and pages outside the schema fail before a query', async () => {
 	const noQuery: Db = { query: async () => { throw new Error('query must not run'); } };
-	for (const limit of [0, 51, 1.5, NaN]) await assert.rejects(profileActivity(noQuery, 'ada', { limit }), QueryError);
+	for (const limit of [0, 51, 1.5, NaN]) await assert.rejects(profile(noQuery, 'ada', { limit }), QueryError);
+	await assert.rejects(profile(noQuery, 'ada', { page: 0 }), QueryError);
 });
 
 test('nonexistent and private-only handles have identical empty public activity without private-table dependence', () => withDb(async (db) => {

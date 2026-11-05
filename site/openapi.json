@@ -1051,6 +1051,17 @@
 						"description": "Words to find in topics and replies (\"quoted phrases\", -excluded words)."
 					},
 					{
+						"name": "limit",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"minimum": 1,
+							"maximum": 100,
+							"default": 30
+						},
+						"description": "Topics, and latest posts, per page, from 1 to 100; 30 if left out."
+					},
+					{
 						"name": "page",
 						"in": "query",
 						"schema": {
@@ -1078,17 +1089,6 @@
 							"minimum": 0
 						},
 						"description": "A post id, the since of your last reply: returns only the posts after it, oldest first."
-					},
-					{
-						"name": "limit",
-						"in": "query",
-						"schema": {
-							"type": "integer",
-							"minimum": 1,
-							"maximum": 100,
-							"default": 30
-						},
-						"description": "Topics, and latest posts, per page, from 1 to 100; 30 if left out."
 					}
 				],
 				"responses": {
@@ -1632,6 +1632,17 @@
 						"description": "all (every post), topics (opening posts), replies, comments (including record reviews), or votes (record votes)."
 					},
 					{
+						"name": "limit",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"minimum": 1,
+							"maximum": 50,
+							"default": 20
+						},
+						"description": "Items per page, from 1 to 50; 20 if left out."
+					},
+					{
 						"name": "page",
 						"in": "query",
 						"schema": {
@@ -1650,17 +1661,6 @@
 							"maxLength": 200
 						},
 						"description": "next_cursor from the previous reply, unchanged."
-					},
-					{
-						"name": "limit",
-						"in": "query",
-						"schema": {
-							"type": "integer",
-							"minimum": 1,
-							"maximum": 50,
-							"default": 20
-						},
-						"description": "Items per page, from 1 to 50; 20 if left out."
 					}
 				],
 				"responses": {

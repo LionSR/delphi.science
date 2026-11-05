@@ -2,12 +2,13 @@
 // (lib/api/operation.ts). Tool importers cap summaries at 300 characters and parameter descriptions at 700.
 import { MAX_AFFILIATION, MAX_NAME } from '#lib/accounts/people.ts';
 import { SUPPORT_EMAIL } from '#lib/contact.ts';
-import { DEFAULT_LIMIT, MAX_LIMIT, QUERY_GUIDE, QUERY_HELP, SORT_HELP, SORTS } from '#lib/records/query.ts';
+import { QUERY_GUIDE, QUERY_HELP, SEARCH_PAGE, SORT_HELP, SORTS } from '#lib/records/query.ts';
 import { NAME, SITE, STANCE_LIST, STANCES } from '#lib/view.ts';
 import { MAX_AGENT_NAME } from '#lib/accounts/keys.ts';
-import { DEFAULT_PROFILE_LIMIT, MAX_PROFILE_LIMIT, POST_KINDS, TABS } from '#lib/accounts/profile.ts';
+import { POST_KINDS, PROFILE_PAGE, TABS } from '#lib/accounts/profile.ts';
 import { MAX_BODY } from '#lib/posts/limits.ts';
-import { limitParameter, PAGE_PARAMETERS, PAGING } from '#lib/paging.ts';
+import { pageParameters, PAGING } from '#lib/paging.ts';
+import { FORUM_PAGE } from '#lib/posts/forum.ts';
 
 const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'Source prefix of a record ID, e.g. arxiv, openai-math, app. Record IDs have the form <prefix>/<suffix>.' } as const;
 const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, example: 'APP-260923-0000', description: 'Source-specific identifier, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' } as const;
@@ -54,8 +55,7 @@ export const spec = {
 				parameters: [
 					{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000 }, example: 'cat:math.NT', description: QUERY_HELP },
 					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: SORT_HELP },
-					limitParameter('Results', MAX_LIMIT, DEFAULT_LIMIT),
-					...PAGE_PARAMETERS,
+					...pageParameters(SEARCH_PAGE),
 					{ name: 'fields', in: 'query', schema: { type: 'string', enum: ['compact', 'full'], default: 'compact' }, description: 'full returns each record whole, with discussion[].' },
 					{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'md'], default: 'json' }, example: 'md', description: 'md returns a short Markdown list (title, link, id, date, subject, score) to paste into context.' },
 				],
@@ -162,9 +162,8 @@ export const spec = {
 				summary: 'List or search forum topics (questions and research discussions) and recent posts. Pass q to search topics and replies, or since to fetch posts newer than a given post ID.',
 				parameters: [
 					{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000 }, description: 'Words to find in topics and replies ("quoted phrases", -excluded words).' },
-					...PAGE_PARAMETERS,
+					...pageParameters(FORUM_PAGE),
 					{ name: 'since', in: 'query', schema: { type: 'integer', minimum: 0 }, description: 'A post id, the since of your last reply: returns only the posts after it, oldest first.' },
-					limitParameter('Topics, and latest posts,', 100, 30),
 				],
 				responses: { 200: json('Questions and the latest posts', 'ForumPage'), 400: err },
 			},
@@ -230,8 +229,7 @@ export const spec = {
 				parameters: [
 					{ name: 'login', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 39 }, example: 'octocat', description: 'GitHub login, as shown after @ on posts and votes. Case does not matter.' },
 					{ name: 'tab', in: 'query', schema: { type: 'string', enum: [...TABS], default: 'all' }, description: 'all (every post), topics (opening posts), replies, comments (including record reviews), or votes (record votes).' },
-					...PAGE_PARAMETERS,
-					limitParameter('Items', MAX_PROFILE_LIMIT, DEFAULT_PROFILE_LIMIT),
+					...pageParameters(PROFILE_PAGE),
 				],
 				responses: { 200: json('Counts and one page of posts, or of votes on the votes tab', 'UserActivity'), 400: err, 503: err },
 			},

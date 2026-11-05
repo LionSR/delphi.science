@@ -7,8 +7,7 @@ import { FORUM } from '#lib/api/cache.ts';
 
 export const GET = operation('listForum', async ({ query }) => {
 	const d = await db();
-	const page = await topics(d, { q: query.q ?? '', page: query.page, cursor: query.cursor, limit: query.limit });
-	const feed = await activity(d, { since: query.since, limit: query.limit });
+	const [page, feed] = await Promise.all([topics(d, query), activity(d, query)]);
 	return Response.json({ ...page, latest_posts: feed.posts, since: feed.since,
 		post: 'POST /api/v1/forum {"title", "body"} asks a question; POST /api/v1/forum/<id> {"body"} answers it, with "parent": <post id> comments; POST /api/v1/forum/<id>/vote {"post", "value"}; POST /api/v1/forum/<id>/accept {"post"} (asker only). Posts are moderated to MathOverflow\'s bar.' },
 		{ headers: FORUM });

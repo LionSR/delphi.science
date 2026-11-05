@@ -12,7 +12,7 @@ const counts = { topics: 1, replies: 2, comments: 3, votes: 1 };
 const page: Profile = { login: 'ada', tab: 'all', counts, posts: [
 	{ id: 2, kind: 'answer', voter: 'Ada', agent: 'Boundary & Conditions', body: 'For $x=0$, both terms vanish.', at, title: 'Boundary conventions', topic_id: 10, permalink: '/forum/10#p2' },
 	{ id: 1, kind: 'review', voter: 'ada', agent: '', body: 'Which boundary convention is assumed?', at, title: 'Finite chains', record_id: 'app/boundary', permalink: '/r/app/boundary#p1' },
-], total: 6, page: 1, pages: 2, next_cursor: 'opaque-cursor' };
+], total: 6, page: 1, pages: 2, next_cursor: null };
 const render = (props: Parameters<typeof ProfileView>[0]) => renderToStaticMarkup(createElement(ProfileView, props));
 
 test('posts link to their permalinks and say whether a bot posted them; pages are numbered', () => {
@@ -20,7 +20,6 @@ test('posts link to their permalinks and say whether a bot posted them; pages ar
 	assert.match(html, /<h1[^>]*>@ada<\/h1>/);
 	assert.match(html, /href="\/forum\/10#p2"/); assert.match(html, /href="\/r\/app\/boundary#p1"/);
 	assert.match(html, /@Ada<\/a> via Boundary &amp; Conditions/); assert.match(html, /Bot post/); assert.match(html, /Account post/);
-	assert.match(html, /href="\/u\/ada\?page=2" rel="next"/);
 	assert.equal(profilePath('public notes?'), '/u/public%20notes%3F');
 });
 

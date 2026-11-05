@@ -91,6 +91,12 @@ li.item.question .answered { color: var(--accent); font-weight: 600; }
 .pager a[rel]:hover { color: var(--ink); }
 .pager .gap { min-width: 1.5rem; padding: 0; color: var(--muted); }
 @media (max-width: 30rem) { .pager a[rel] span { display: none; } .pager a[rel] { padding: 0; } }
+/* A source tag filters the index by source; it looks like a label, not like a link to the work. */
+.tag { color: var(--muted); text-decoration: none; padding: 0 0.45rem; border: 1px solid var(--rule); border-radius: 1rem; background: var(--surface); }
+.tag:hover { color: var(--accent); border-color: var(--accent); }
+/* The link to the original work, on cards and under a record's title. */
+.external::after { content: ' \2197'; }
+.origin { margin: 0.1rem 0 0; color: var(--muted); font-size: var(--small); overflow-wrap: anywhere; }
 
 /* Votes */
 .vote { display: inline-flex; gap: 0.3rem; margin: 0.5rem 0 0; }

@@ -52,7 +52,8 @@ export function kind(name: string): Kind {
 	return KINDS.get(name) ?? (name === 'browser' ? 'browser' : TOOLS.includes(name) ? 'tool' : 'other');
 }
 
-/** Retain today and the previous 89 UTC dates. Also run daily, even when there is no traffic. */
+/** Keeps today and the previous 89 UTC days, deleting older rows. Also run it daily, so rows are deleted even when
+ * there is no traffic. */
 export async function pruneUsage(db: Db) {
 	if (!retentionEnabled()) return;
 	await db.query(`DELETE FROM open_index.api_usage WHERE day < (now() AT TIME ZONE 'utc')::date - ${RETENTION_DAYS - 1}`);
@@ -70,7 +71,7 @@ export async function countCall(db: Db, endpoint: string, name: string) {
 		[endpoint, safeClient]);
 }
 
-export const USAGE_NOTE = 'Origin API calls are aggregated by UTC day, fixed route pattern and allowlisted User-Agent product token. Unknown products count as other. Tokens are spoofable claims, not authenticated agent identities or unique visitors. No IPs, raw user agents, query strings, credentials, bodies or personal identifiers are stored in these metrics. CDN cache hits are not counted; failed metric writes are dropped. Reports show 90 UTC dates; deletion requires separate retention activation.';
+export const USAGE_NOTE = 'API calls that reach the origin server are counted per UTC day, route pattern and allowlisted User-Agent product token. Unknown products count as other. A product token is a claim anyone can fake, not a verified agent identity or a unique visitor. These metrics store no IP addresses, raw user agents, query strings, credentials, request bodies or personal identifiers. CDN cache hits are not counted, and failed metric writes are dropped. Reports cover 90 UTC days; old rows are deleted only when retention cleanup is enabled separately.';
 
 const TOP = 20;
 

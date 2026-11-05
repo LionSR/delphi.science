@@ -1,4 +1,5 @@
-// The publish path for the site's post forms. A retry returns the author's identical existing post.
+// Publishes posts from the site's forms. If the author already posted the same text, a retry returns that post
+// instead of posting it again.
 import { comment, post } from './comments.ts';
 import { startTopic, topicTitle } from './forum.ts';
 import type { Moderator } from '#lib/moderation/moderate.ts';

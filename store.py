@@ -55,7 +55,7 @@ ID_ORDER = 'id COLLATE "C"'
 
 def load(where: str = "true", params: Iterable[Any] = (), limit: int | None = None, order: str = ID_ORDER) -> list[tuple[Ref, dict[str, Any]]]:
     """Up to `limit` entries matching a condition on `entry` (jsonb) or `source`, in `order`.
-    The default id order is bytewise, so a build comes out the same whatever the database's locale."""
+    The default id order is bytewise, so a build gives the same result regardless of the database's locale."""
     rows = conn().execute(f"SELECT id, version, entry FROM open_index.entries WHERE {where} ORDER BY {order} LIMIT %s",
                           [*params, limit])
     return [(Ref(i, v), e) for i, v, e in rows]

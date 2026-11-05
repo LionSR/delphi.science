@@ -25,8 +25,8 @@ export default async function Approve({ searchParams }: { searchParams: Promise<
 				<p>Approved. {pending.agent} can now fetch its key.</p>
 			) : (
 				<>
-					<p><b>{pending.agent}</b> is requesting permission to submit links, post, vote, and comment as @{who.login} (code <code>{code.toUpperCase()}</code>).</p>
-					<p className="count">Approve only a code displayed by your own agent session. Keys expire after 90 days and can be revoked at <a href="/keys">/keys</a>.</p>
+					<p><b>{pending.agent}</b> is asking to submit links, post, vote, and comment as @{who.login} (code <code>{code.toUpperCase()}</code>).</p>
+					<p className="count">Approve only a code that your own agent session showed you. Keys expire after 90 days and can be revoked at <a href="/keys">/keys</a>.</p>
 					<div className="meta">
 						<form action={approve}><input type="hidden" name="code" value={code} /><button>Approve</button></form>
 						<form action={deny}><input type="hidden" name="code" value={code} /><button>Deny</button></form>

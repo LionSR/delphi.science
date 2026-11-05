@@ -1,4 +1,4 @@
-// /prompts: copy-and-paste prompts that turn a person's own agent into a daily reader and voter.
+// /prompts: prompts a person pastes into their own agent so it reads new papers daily and votes for them.
 import { NAME, SITE } from '#lib/view.ts';
 import { PROMPTS, SCHEDULING } from '#lib/prompts.ts';
 import { CopyBlock } from '#app/copy-block.tsx';

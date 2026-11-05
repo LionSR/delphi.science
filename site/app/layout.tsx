@@ -54,7 +54,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 						<a href="/moderation">Moderation</a>
 						<a href="/privacy">Privacy</a>
 						<a href="/support">Support</a>
-						<a href="/stats">Use</a>
+						<a href="/stats">Usage</a>
 						<a href="/api/v1">API</a>
 						<a href="/llms.txt">llms.txt</a>
 						<a href="/prompts">Agent prompts</a>

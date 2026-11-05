@@ -1,5 +1,5 @@
-// Bounded retrieval of public source text. Sockets use native HTTPS with a validated public IPv4
-// pinned in the DNS lookup, and no ambient credentials or proxy agent.
+// Fetches public source text within size and time limits. Requests use Node's own HTTPS with the DNS lookup pinned
+// to a checked public IPv4 address. They send no stored credentials and use no proxy.
 import { createHash } from 'node:crypto';
 import { resolve4 } from 'node:dns/promises';
 import type { LookupFunction } from 'node:net';

@@ -57,7 +57,7 @@ function problem(e: ErrorObject, where: 'path' | 'query' | 'body'): ApiError {
 	const field = e.instancePath.slice(1).replaceAll('/', '.');
 	const s = (e.parentSchema ?? {}) as Schema;
 	const bad = (message: string, fix: string) => new ApiError(400, 'bad_request', message, fix);
-	// A body field is named in quotes, as in JSON; a parameter bare, as in a URL.
+	// Body fields are quoted, as in JSON; parameters are not, as in a URL.
 	const name = (f: string) => where === 'body' ? `"${f}"` : f;
 	const about = (x: Schema) => x.description ? ` ${x.description}` : '';
 	// What a schema takes, in words: "an integer from 1 to 100 (default 20)", "a string of at most 500 characters".
@@ -79,7 +79,7 @@ function problem(e: ErrorObject, where: 'path' | 'query' | 'body'): ApiError {
 	}
 	if (!field && where === 'body') return badBody(); // a JSON array, string or number where an object belongs
 	if (e.keyword === 'enum' && where === 'query') {
-		// As the query parser words it: unknown sort "hot" / Use sort=relevance, sort=newest, …
+		// Same wording as the query parser: unknown sort "hot" / Use sort=relevance, sort=newest, …
 		return bad(`unknown ${field} ${JSON.stringify(e.data)}`, `Use ${(s.enum ?? []).map((v) => `${field}=${v}${v === s.default ? ' (default)' : ''}`).join(', ')}.`);
 	}
 	const inRange = () => `${name(field)} must be ${range(s)}`;
@@ -116,7 +116,8 @@ function checks(op: Operation) {
 type Ctx = { params?: Promise<Record<string, string>> };
 
 // Outside production, every JSON reply is checked against the schema its operation declares for that status, so the
-// code cannot drift from the published contract: a reply that does not fit fails (500) in development and tests.
+// code cannot stop matching the published OpenAPI document: a reply that does not fit fails (500) in development and
+// tests.
 const ENFORCE_REPLIES = process.env.NODE_ENV !== 'production';
 
 async function checkReply(op: Operation, res: Response) {

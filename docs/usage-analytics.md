@@ -33,7 +33,7 @@ Each row is `(UTC day, method + endpoint template, client category, call count)`
 
 ### Retention
 
-Cleanup is destructive, so it is separately gated and needs explicit owner approval:
+Cleanup deletes data, so it has its own switch and needs explicit owner approval:
 
 - Set `ORI_USAGE_ANALYTICS_ENABLED=true` and `ORI_USAGE_RETENTION_ENABLED=true` both in the server environment and as repository variables.
 - `.github/workflows/usage-retention.yml` runs daily at 00:11 UTC. It skips the whole job unless both repository variables are `true`, and `scripts/prune-usage.ts` checks both again before connecting.
@@ -47,13 +47,13 @@ Cleanup is destructive, so it is separately gated and needs explicit owner appro
 2. Enable Web Analytics in the Vercel project and set `ORI_WEB_ANALYTICS_ENABLED=true`.
 3. View results in Vercel: project → Analytics → Visitors. ORI's `/stats` page links there but does not fetch visitor counts.
 
-The SDK (`@vercel/analytics/react`) receives explicit fixed `route` and `path` values from `analyticsPath`, preserving Vercel's Next.js intake configuration. This avoids the Next wrapper deriving dynamic-path names from arbitrary query keys on static pages. `beforeSend` drops custom events, private and unknown routes, queries and fragments, and replaces record/forum IDs with route patterns.
+The app passes the React SDK (`@vercel/analytics/react`) fixed `route` and `path` values from `analyticsPath`, which keeps Vercel's Next.js intake configuration. This way the Next.js wrapper cannot build dynamic-path names from arbitrary query keys on static pages. `beforeSend` drops custom events, private and unknown routes, queries and fragments, and replaces record/forum IDs with route patterns.
 
-The hosted script adds referrer and stored attribution separately from the filtered event URL. Collection therefore skips documents with a non-origin incoming referrer (path, query, fragment, credentials, invalid URL or non-HTTP scheme), existing `__va_attribution` storage, or inaccessible storage. Checks run before mounting and before every event; no visitor storage is deleted or modified by these checks. A site-wide `Referrer-Policy: strict-origin` also strips paths and queries from same-origin script/intake request headers. Incoming referrers are controlled by their source, so the response header alone is insufficient. Private routes never mount the SDK initially, and explicit routes disable its automatic history tracking.
+The hosted script adds the referrer and stored attribution separately from the filtered event URL, so the URL filter does not reach them. Collection is therefore skipped on a page whose incoming referrer is more than an origin (it has a path, query, fragment or credentials, is not a valid URL, or is not HTTP), on a page with existing `__va_attribution` storage, and when storage cannot be accessed. These checks run before the SDK mounts and before every event, and they never delete or change visitor storage. A site-wide `Referrer-Policy: strict-origin` also strips paths and queries from the referrer header of same-origin script and intake requests. That header alone is not enough: the referrer a visitor arrives with is set by the linking site. Private routes never mount the SDK on initial load, and passing explicit routes turns off its automatic history tracking.
 
-No page content, search text, account identity, custom event properties, or record IDs are supplied by the app. Vercel still processes origin-only referrer, location and device data and incoming network requests, and uses a daily visitor hash discarded after 24 hours. The privacy policy at `/privacy` discloses these limits. Clients without JavaScript, with blocked scripts, unsafe referrers or stored attribution, or bots may not appear.
+The app sends no page content, search text, account identity, custom event properties or record IDs. Vercel still processes origin-only referrer, location and device data and incoming network requests, and uses a daily visitor hash discarded after 24 hours. The privacy policy at `/privacy` describes these limits. Visitors without JavaScript or with blocked scripts, visits with unsafe referrers or stored attribution, and bots may not be counted.
 
-Activation still requires the project dashboard switch, the production environment flag, and a subsequent authorized deployment. Installing the SDK does not prove collection is active. Verify a sanitized pageview request in browser Network tools and its arrival in the dashboard after activation; do not infer success from a successful build.
+Collection starts only after three steps: the switch in the project dashboard, the production environment flag, and then an authorized deployment. Installing the SDK does not mean collection is on. After activation, look for a sanitized pageview request in the browser's Network tools and confirm it arrives in the dashboard; a successful build does not show that collection works.
 
 ## Tests
 

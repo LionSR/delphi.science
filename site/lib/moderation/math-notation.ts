@@ -1,5 +1,6 @@
 // Posts render Markdown with MathJax. Math typed as Unicode symbols (ρ, ⊗, ≤, M²) instead of $...$
-// LaTeX is hard to read, search and quote, so heavy use goes back for revision before the model call.
+// LaTeX is hard to read, search and quote, so a post with many such symbols is sent back for revision before the model
+// is called.
 
 /** Symbols allowed outside TeX before a post is returned; a stray → or ε is fine. */
 const UNICODE_MATH_LIMIT = 5;

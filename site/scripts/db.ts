@@ -1,4 +1,4 @@
-// A throwaway Postgres server (PGlite with all migrations) for index.py, used by test_index.py and CI.
+// A temporary Postgres server (PGlite with all migrations) for index.py, used by test_index.py and CI.
 // Prints its URL on the first line and serves until stopped.
 //
 //   node --experimental-strip-types scripts/db.ts [--entries ../fixtures/entries.jsonl]

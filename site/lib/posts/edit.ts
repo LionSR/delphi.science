@@ -18,17 +18,17 @@ export async function editPost(db: Db, id: number, who: Voter, input: { body: st
 	if (!Number.isSafeInteger(id) || id < 1) throw new NotFoundError('no post with this id', 'Use a post id from its thread.');
 	const body = typeof input.body === 'string' ? input.body.trim() : '';
 	if (!body || body.length > MAX_BODY || typeof input.revision !== 'string' || !/^\d+$/.test(input.revision)) {
-		throw new QueryError(`Send a body of 1–${MAX_BODY_SHOWN} characters and its revision.`, 'Reload the thread to read the current revision. Your draft is retained.');
+		throw new QueryError(`Send a body of 1–${MAX_BODY_SHOWN} characters and its revision.`, 'Reload the thread to read the current revision. Your draft is kept.');
 	}
 	const p = (await db.query<Stored>(`SELECT c.id::int, c.voter, c.agent, c.body, c.xmin::text AS revision, c.record_id, c.topic_id::int, c.parent_id::int,
 		c.review, t.question_id::int, coalesce(t.title,r.title) AS title FROM open_index.comments c
 		LEFT JOIN open_index.topics t ON t.id=c.topic_id LEFT JOIN open_index.records r ON r.id=c.record_id WHERE c.id=$1`, [id])).rows[0];
-	if (!p) throw new NotFoundError(`no post ${id}`, 'Reload the thread. Your draft is retained.');
+	if (!p) throw new NotFoundError(`no post ${id}`, 'Reload the thread. Your draft is kept.');
 	// A person and every one of their agents may edit any post attributed to that person, whichever agent made it.
 	if (who.login !== p.voter) throw new EditError(403, 'edit_forbidden', 'You cannot edit this post.', 'Sign in as its owner, or use the agent credentials attributed on this post.');
 	// A retry of an accepted edit succeeds.
 	if (p.body === body) return { id, body, revision: p.revision, record_id: p.record_id, topic_id: p.topic_id };
-	const conflict = () => new EditError(409, 'edit_conflict', 'This post changed while you were editing.', 'Your draft is retained. Reload the thread and compare it with the current post before saving again.');
+	const conflict = () => new EditError(409, 'edit_conflict', 'This post changed while you were editing.', 'Your draft is kept. Reload the thread and compare it with the current post before saving again.');
 	if (p.revision !== input.revision) throw conflict();
 	if (!db.transaction) throw new Error('Editing requires a database transaction.');
 	await refuseKeys(db, body);

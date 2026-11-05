@@ -1,4 +1,4 @@
-// The DeepSeek quality gate that every post passes before it is stored.
+// The DeepSeek quality check that every post must pass before it is stored.
 import type { Db } from '#lib/db.ts';
 import { ModerationError } from '#lib/errors.ts';
 import type { Voter } from '#lib/accounts/keys.ts';
@@ -97,7 +97,7 @@ async function checkedVerdict(moderate: Moderator, post: Post): Promise<{ value:
 	} catch {
 		return {
 			value: { decision: 'REVIEW_NEEDED', reason: 'Automated quality review could not complete a valid check. Try again later.',
-				fix: 'Your draft is retained. Retry later; this is a service failure, not a rejection of your post.', verification_needed: false },
+				fix: 'Your draft is kept. Retry later; this is a service failure, not a rejection of your post.', verification_needed: false },
 			unavailable: true,
 		};
 	}
@@ -109,7 +109,7 @@ export async function verdict(moderate: Moderator, post: Post): Promise<Verdict>
 const refused = (v: Verdict, unavailable = false) => new ModerationError(
 	unavailable ? 'moderation_unavailable' : v.decision === 'REVIEW_NEEDED' ? 'moderation_review_needed' : 'moderation_rejected',
 	`not posted: ${v.decision}: ${v.reason}`,
-	v.fix || (unavailable ? 'Your draft is retained. Try again after service recovery.' : v.decision === 'REVIEW_NEEDED'
+	v.fix || (unavailable ? 'Your draft is kept. Try again once the service is back.' : v.decision === 'REVIEW_NEEDED'
 		? 'Publication is on hold. Resolve the specific check above, then resubmit; no public content was stored.'
 		: `Revise the specific issue above, then resubmit. ${v.reason}`));
 

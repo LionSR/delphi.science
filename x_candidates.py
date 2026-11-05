@@ -29,7 +29,7 @@ import sources as S
 
 SEARCH = "https://api.x.com/2/tweets/search/recent"
 NOT_RETWEETS = " -is:retweet"
-# (query, records it is about); an empty list: the posts' links say which record.
+# (query, records it is about); with an empty list, each post's links identify the record.
 QUERIES: list[tuple[str, list[str]]] = [
     ('url:"github.com/openai/math" OR url:"mathcommunity.github.io/oai-math-revised"', []),
     ('url:"github.com/anthropics" OR url:"anthropic.com/research" OR url:"hexagonmath.org"', []),

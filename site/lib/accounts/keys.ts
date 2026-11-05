@@ -24,7 +24,7 @@ export async function createAgentKey(db: Db, login: string, agent: string): Prom
 	return newKey(db, login, agentName(agent));
 }
 
-/** A GitHub display name for show only: NFC, whitespace and control characters collapsed, at most 100 code points. */
+/** A GitHub display name, shown but never used for identity: NFC, whitespace and control characters collapsed, at most 100 code points. */
 export function profileName(value: unknown): string {
 	if (typeof value !== 'string') return '';
 	return [...value.normalize('NFC').replace(/[\p{Cc}\s]+/gu, ' ').trim()].slice(0, 100).join('');

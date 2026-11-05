@@ -27,7 +27,7 @@ const TOPIC = `SELECT t.id::int, t.title, t.voter, t.agent, t.at, t.last_at, t.a
 	FROM open_index.topics t`;
 
 /** The forum's page size (lib/paging.ts), for topics and for the latest posts. */
-export const FORUM_PAGE = pageSize('Topics, and latest posts,', 100, 30);
+export const FORUM_PAGE = pageSize('Topics and latest posts', 100, 30);
 
 // The topics matching $1, each with its best rank. websearch_to_tsquery accepts any text without error.
 const MATCHES = `WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq),

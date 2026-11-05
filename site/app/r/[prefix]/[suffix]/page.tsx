@@ -89,10 +89,10 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 			<h1>{tex(workTitleOf(r))}</h1>
 			{work && id !== work.main_record_id && <p className="count">Alternative source view: <code>{id}</code>.
 				{main.id === work.main_record_id && <> <a href={recordPath(work.main_record_id)}>Open main record</a>.</>}</p>}
-			{/* Where to read the original work, at its upstream site. */}
 			{!work && from && <p className="origin">Source: <a className="external" href={from.href} rel="external" title={from.href}>{from.label}</a></p>}
 			<WorkSources record={r} detail />
 			{!work && Array.isArray(r.authors) && <p className="authors">{r.authors.join(', ')}</p>}
+
 			<p className="meta">
 				{/* The source tag filters the index; it is not a link to the paper. */}
 				<a className="tag" href={tag.href} title={tag.title}>{tag.name}</a>

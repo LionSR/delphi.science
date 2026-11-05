@@ -1,4 +1,4 @@
-"""Source adapters: one class per place a research output can live.
+"""Source adapters: one class per site or registry that hosts research outputs.
 
 Each adapter has match(url) -> key or None, fetch(key) -> entry, and harvest(query, n) -> entries.
 Entries are plain dicts in the shape of the Entry schema (site/lib/api/openapi.ts). A record that cannot be
@@ -58,7 +58,7 @@ def get(url: str, *, accept: str | None = None, cache: bool = True, max_age: flo
     if host == "api.github.com" and TOKEN:
         headers["Authorization"] = f"Bearer {TOKEN}"
     try:
-        for attempt in (1, 2):  # one retry: arXiv in particular times out now and then
+        for attempt in (1, 2):  # retry once: arXiv sometimes times out
             try:
                 with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=45) as r:
                     body = r.read()
@@ -70,7 +70,7 @@ def get(url: str, *, accept: str | None = None, cache: bool = True, max_age: flo
             except urllib.error.HTTPError as e:
                 if e.code != 429 or attempt == 2:
                     raise
-                time.sleep(int(e.headers.get("Retry-After") or 20))  # rate limited: wait as asked, once
+                time.sleep(int(e.headers.get("Retry-After") or 20))  # rate limited: wait as long as Retry-After says, once
     except urllib.error.HTTPError as e:
         if e.code in (404, 410):
             raise NotFound(url) from None
@@ -193,8 +193,8 @@ def parse_oembed(data: dict[str, Any]) -> dict[str, Any]:
 
 
 def passage(page: str, fragment: str) -> tuple[str, str]:
-    """What a text-fragment URL (#:~:text=prefix-,start,end,-suffix) points at: (prefix, the page's text from
-    start on). The prefix may name the person quoted. The fragment is still URL-encoded, so %2C is a literal comma."""
+    """Returns (prefix, the page's text from start onward) for a text-fragment URL
+    (#:~:text=prefix-,start,end,-suffix). The prefix may name the person quoted. The fragment is still URL-encoded, so %2C is a literal comma."""
     text = clean(re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", page, flags=re.S | re.I))
     parts = [urllib.parse.unquote(x) for x in fragment.split(",")]
     prefix = clean(parts.pop(0)[:-1]) if parts[0].endswith("-") else ""
@@ -248,14 +248,14 @@ def stackexchange(host: str, url: str) -> dict[str, str]:
 
 
 def stackexchange_item(q: dict[str, Any]) -> dict[str, str]:
-    """A Stack Exchange API question or answer (filter=withbody) as a link shows it."""
+    """The title, author, opening text and date of a Stack Exchange API question or answer (filter=withbody)."""
     created = q.get("creation_date")
     return {"title": clean(q.get("title")), "author": clean((q.get("owner") or {}).get("display_name")),
             "text": trim(q.get("body"), LINK_CHARS), "date": dt.date.fromtimestamp(created).isoformat() if created else ""}
 
 
 def discussion_link(url: str) -> dict[str, Any]:
-    """The link as the page shows it. Raises NotFound when the post or page is gone. A text-fragment URL
+    """Reads a discussion link from the post or page. Raises NotFound when the post or page is gone. A text-fragment URL
     (page#:~:text=a%20passage) quotes that passage."""
     url = url.strip()
     parts = urllib.parse.urlsplit(url)
@@ -332,7 +332,7 @@ class Source:
         return self.fetch(self.match(url) or "")
 
     def refetch(self, entry: dict[str, Any]) -> dict[str, Any]:
-        """The record again, for refresh."""
+        """Fetches the record again, for refresh."""
         return self.fetch(entry["key"])
 
     def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
@@ -831,7 +831,7 @@ class Hexagon(Source):
             return self._entry(self._detail(key))
         except (NotFound, SourceError):
             pass
-        latest = None  # the API may want a version: the latest is the last that answers
+        latest = None  # the API may require a version: try v1, v2, ... and keep the last one found
         for v in range(1, 51):
             try:
                 latest = self._detail(f"{key}v{v}")
@@ -918,7 +918,7 @@ SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Hexagon(),
 BY_NAME = {s.name: s for s in SOURCES}
 
 
-# Venues whose listings are mostly pseudoscience; not taken, not even as web pages.
+# Venues whose listings are mostly pseudoscience. They are rejected, even as plain web pages.
 BLOCKED_HOSTS = ("vixra.org", "aixiv.science", "clawxiv.org", "jaigp.org")
 
 

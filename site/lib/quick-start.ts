@@ -1,5 +1,6 @@
-// The quick-start message: one paste that sends an agent to /prompts.txt with the owner's answers.
-// No imports, so the browser form ships only this file. Callers pass the site URL (SITE_URL is server-only).
+// The quick-start message: a single message the owner pastes into their agent. It points the agent to /prompts.txt
+// and includes the owner's answers. It has no imports, so the browser form bundles only this file. Callers pass the
+// site URL because SITE_URL is only available on the server.
 
 /** Section titles in /prompts.txt, which the message names. */
 export const TITLES = { setup: '1. Set up (once)', daily: '2. Daily picks and votes', digest: 'Read-only digest' };

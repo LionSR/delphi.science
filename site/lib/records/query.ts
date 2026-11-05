@@ -132,7 +132,7 @@ function date(s: string, end: boolean): string | null {
 }
 
 
-// The fields an unknown one is told to use instead.
+// The fields suggested when a query uses an unknown one.
 const FIELDS = [...Object.keys(TEXT).filter(Boolean), ...Object.keys(EXACT), 'cat', 'domain', 'is', 'published'].sort();
 
 class Compiler {
@@ -221,9 +221,9 @@ const LINK_DATE = "coalesce(nullif(d->>'date', ''), d->>'added')";
 if (!stances.upvoting.every((s) => /^[a-z]+$/.test(s))) throw new Error('stances.json: every stance is a lowercase word');
 const UPVOTE = `(${stances.unlabelled_upvotes ? "d->>'stance' IS NULL OR " : ''}d->>'stance' IN (${stances.upvoting.map((s) => `'${s}'`).join(', ')}))`;
 
-// day/week/month rank by net votes plus upvoting links in the window; mentions by comment mentions.
-// Few records have either, so only those (hot) are ranked; the rest (cold) follow in published order,
-// read only as far as the page needs.
+// day/week/month rank by net votes plus upvoting links in the window; mentions ranks by comment mentions.
+// Few records have either, so only those records (hot) are ranked. The rest (cold) follow in published
+// order, and are read only as far as the page needs.
 type Ranked = (where: string) => { with?: string; hot: string; cold: string };
 
 const recent = (days: number): Ranked => (where) => ({
@@ -304,7 +304,7 @@ async function rawSearch(db: Db, q: string, opts: SearchOptions = {}) {
 		sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${ORDER[sort] ?? ORDER.newest} LIMIT $${n + 1} OFFSET $${n + 2}`;
 	}
 	all.push(start.limit, start.offset);
-	// The count, unless the cursor carries it, runs alongside the page.
+	// Count the matches in parallel with the page query, unless the cursor already holds the total.
 	const [rows, total] = await Promise.all([
 		db.query<{ record: Record<string, unknown> }>(sql, all).then((r) => r.rows),
 		start.total ?? db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params).then((r) => Number(r.rows[0].n)),

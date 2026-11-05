@@ -1,5 +1,5 @@
-// The device flow for agent keys (RFC 8628): the agent shows its person a user code to approve, then
-// redeems its private device code for a key, once.
+// The device flow for agent keys (RFC 8628): the agent shows its owner a user code to approve, then
+// exchanges its private device code for a key, once.
 import { QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
 import { sha256 } from '#lib/hash.ts';
@@ -36,7 +36,7 @@ export async function denyDevice(db: Db, userCode: string) {
 	await db.query('UPDATE open_index.device_codes SET used_at = now() WHERE user_code = $1 AND used_at IS NULL', [normalCode(userCode)]);
 }
 
-/** The agent's key once its person has approved; 'pending' before that. Each device code gives one key. */
+/** The agent's key once its owner has approved; 'pending' before that. Each device code gives one key. */
 export async function redeemDevice(db: Db, deviceCode: string): Promise<{ key: string; login: string; agent: string } | 'pending'> {
 	const hash = sha256(deviceCode);
 	const row = (await db.query<{ agent: string; login: string | null; live: boolean }>(

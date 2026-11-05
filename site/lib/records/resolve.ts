@@ -25,7 +25,7 @@ const DAILY = [
 	/^(?:https?:\/\/)?github\.com\/[\w.-]+\/[\w.-]+\/blob\/[^/]+\/(?:[\w./-]+?\/)?formalization\.yaml$/i,
 ];
 
-// read gets the key, a fetch for the source's API, and the link with a transport for public web pages.
+// read gets the key, a fetch function for the source's API, the original link, and a transport for public web pages.
 type Source = { name: string; patterns: RegExp[]; key?: (m: RegExpMatchArray) => string;
 	read: (key: string, get: Get, link: string, transport?: SourceTransport) => Promise<Entry> };
 type Get = (url: string, accept?: string) => Promise<Response>;
@@ -177,7 +177,7 @@ export function detect(link: string): { source: Source; key: string } | null {
 	} catch { return null; }
 }
 
-/** A link or a bare id: one word. */
+/** Whether the input could be a link or a bare id: one word of at most 2,000 characters. */
 export const looksLikeLink = (link: string) => /^\S{1,2000}$/.test(link.trim());
 
 /** Reads the record's entry from its source. Throws NotFound when it does not exist or is not public. */

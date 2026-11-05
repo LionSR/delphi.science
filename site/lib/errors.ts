@@ -1,4 +1,4 @@
-// Errors a caller can act on. The message says what is wrong and `fix` what to send instead. API routes turn them
+// Errors a caller can act on. The message says what is wrong, and `fix` says what to send instead. API routes turn them
 // into {"error": {code, message, fix}} (lib/api/caller.ts handle): a QueryError is 400 bad_request, a NotFoundError
 // 404 not_found, and a CodedError carries its own status and code. Post forms show the same fields (posts/feedback.ts).
 export class QueryError extends Error {

@@ -16,7 +16,7 @@ export default async function Stats() {
 		return (
 			<article>
 				<h1>Usage statistics</h1>
-				<p>Usage statistics are available to administrators.</p>
+				<p>Only administrators can see usage statistics.</p>
 				{!who && <p><a href="/auth/github?next=/stats">Sign in with GitHub</a></p>}
 			</article>
 		);

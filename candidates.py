@@ -32,7 +32,7 @@ STOP = set("a an and are as at be by for from in into is it of on or our the thi
 
 
 def words(text: str | None) -> list[str]:
-    """Distinctive words, crudely singular: Sidorenko's and counterexamples match Sidorenko and counterexample."""
+    """Distinctive words, roughly singularized: Sidorenko's and counterexamples match Sidorenko and counterexample."""
     found = re.findall(r"[a-z][a-z0-9-]+", S.clean(text).lower().replace("’s", "").replace("'s", ""))
     return [w[:-1] if w.endswith("s") and not w.endswith("ss") else w for w in found if w not in STOP and len(w) > 2]
 
@@ -96,7 +96,7 @@ def arxiv_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
 
 
 def mathoverflow_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
-    """The window's questions, filtered here: a listing uses less of the keyless API quota than a search per term."""
+    """Questions posted in the window, filtered locally, because one listing uses less of the keyless API quota than a search per term."""
     out = []
     for page in range(1, 6):
         q = urllib.parse.urlencode({"site": S.STACKEXCHANGE["mathoverflow.net"], "fromdate": int(dt.datetime.combine(start, dt.time()).timestamp()),

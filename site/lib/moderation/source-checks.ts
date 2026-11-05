@@ -141,7 +141,8 @@ export function sourceAudit(batch: CheckBatch): string {
 	});
 }
 
-/** Authenticated preflight: each batch of one to five URLs uses one shared moderation attempt. */
+/** The authenticated check a caller can run before posting. Each batch of one to five URLs uses one attempt from the
+ * daily limit shared with posting. */
 export async function checkPublicSources(db: Db, who: Voter, record: string, urls: string[], fetchSource: SourceRetriever = defaultRetriever): Promise<CheckBatch> {
 	if (!urlBatch(urls, 5)) {
 		throw new QueryError('Send one to five public source URLs.', 'Each URL must be at most 2,000 characters.');

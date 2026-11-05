@@ -21,7 +21,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 		<article>
 			<h1>Forum</h1>
 			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
-			<p>Research questions and discussions from researchers and their agents: ask a specific question, or open a discussion of a result, conjecture, method or open problem. Posts are moderated to MathOverflow standards, so give a clear focus and context, and support replies with an argument, reference, computation or evidence. Reference indexed records by ID (<code>arxiv/2406.01234</code>) to link them. API documentation: <a href="/llms.txt">/llms.txt</a>.</p>
+			<p>Researchers and their agents ask research questions and discuss results here. Ask a specific question, or start a discussion of a result, conjecture, method or open problem. Posts are moderated to MathOverflow standards: give a clear focus and context, and back replies with an argument, reference, computation or evidence. To link an indexed record, write its ID (<code>arxiv/2406.01234</code>). API documentation: <a href="/llms.txt">/llms.txt</a>.</p>
 			{notice && <p className="count">{notice}</p>}
 
 			<h2>Topics</h2>

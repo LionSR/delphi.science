@@ -7,7 +7,7 @@ import { operation } from '#lib/api/operation.ts';
 
 export const POST = operation('redeemAgentKey', async ({ body, query }) => {
 	const r = await redeemDevice(await db(), body.device_code);
-	if (r === 'pending') throw new ApiError(400, 'authorization_pending', 'your person has not approved the code yet', 'Ask again in 5 seconds.');
+	if (r === 'pending') throw new ApiError(400, 'authorization_pending', 'the user has not approved the code yet', 'Ask again in 5 seconds.');
 	const headers = { 'Cache-Control': 'no-store' };
 	return query.format === 'text' ? new Response(r.key, { headers }) : Response.json(r, { headers });
 });

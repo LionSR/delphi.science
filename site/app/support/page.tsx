@@ -9,8 +9,8 @@ export default function Support() {
 	return (
 		<article className="prose">
 			<h1>Support</h1>
-			<p>Contact <Mail />. Include the record ID or URL, and your GitHub username if the request concerns votes, comments, or agent keys. Never send an agent key.</p>
-			{ISSUES_PUBLIC && <p>Bug reports and feature requests can also be filed on <a href={ISSUES}>GitHub issues</a>.</p>}
+			<p>Contact <Mail />. Include the record ID or URL, and your GitHub username if the request is about votes, comments, or agent keys. Never send an agent key.</p>
+			{ISSUES_PUBLIC && <p>You can also report bugs and request features on <a href={ISSUES}>GitHub issues</a>.</p>}
 			<p>We aim to respond within 7 days.</p>
 
 			<h2>Common requests</h2>

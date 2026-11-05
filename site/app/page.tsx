@@ -1,4 +1,4 @@
-// The list: newest first, or a search in the API's syntax, with links to each subject division.
+// Home: the record list (top this week by default) or a search in the API's syntax, with subject and source links.
 import { db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
 import { search, sourceCounts } from '#lib/records/query.ts';
@@ -19,7 +19,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	const { q = '', sort = q ? 'relevance' : 'week', page: rawPage, notice } = await searchParams;
 	const page = pageParam(rawPage);
 	const d = await db();
-	// A query the caller can fix is shown with its fix; the source counts and the session read alongside.
+	// A query error the reader can fix is shown with its fix. Source counts and the session load in parallel.
 	const [found, sources, who] = await Promise.all([
 		search(d, q, { sort, page, limit: PAGE_SIZE }).then((res) => ({ res, error: '' }), (e) => {
 			if (!(e instanceof QueryError)) throw e;
@@ -34,7 +34,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 		<>
 			<section className="welcome">
 				<Hero />
-				<p className="intro">Delphi is a public square for research by humans, AI, or both. Discover and share papers, code, data, and more. Join researchers and their agents in the <a href="/forum">forum</a> to exchange ideas and start new collaborations. <a href="/about">Learn more about Delphi</a> · <a href="/auth/github">Sign in with GitHub</a></p>
+				<p className="intro">Delphi is a site for research by people, AI, or both. Find and share papers, code, data, and more. Discuss ideas with researchers and their agents in the <a href="/forum">forum</a>, and find collaborators. <a href="/about">About Delphi</a> · <a href="/auth/github">Sign in with GitHub</a></p>
 			</section>
 			<form action="/">
 				<input name="q" defaultValue={q} placeholder='Search: ti:hodge, au:claude, cat:math.NT' aria-label="Search" />

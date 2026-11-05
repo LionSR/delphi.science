@@ -52,7 +52,7 @@ export function EditPost({ id, owner, body, revision }: { id: number; owner: str
 				router.refresh();
 			} else setFeedback(result.feedback);
 		} catch {
-			setFeedback({ code: 'editing_unconfirmed', message: 'Saving could not be confirmed.', fix: 'Your draft is retained. Check the current post before trying again.' });
+			setFeedback({ code: 'editing_unconfirmed', message: 'Saving could not be confirmed.', fix: 'Your draft is kept. Check the current post before trying again.' });
 		} finally {
 			saving.current = false;
 			setPending(false);

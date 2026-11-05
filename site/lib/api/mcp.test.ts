@@ -33,7 +33,7 @@ const param = (p: Json) => ({ ...p.schema, ...(p.description ? { description: p.
 const without = (o: Json, ...keys: string[]) => Object.fromEntries(Object.entries(o).filter(([k]) => !keys.includes(k)));
 
 const ajv = addFormats(new Ajv2020({ strict: false, allErrors: true }));
-/** What in data the tool's output schema, closed, does not allow. */
+/** The parts of data that the tool's output schema, closed, does not allow. */
 const problems = (schema: Json, data: unknown) => {
 	const validate = ajv.compile(closed(without(schema, '$schema')) as object);
 	return validate(data) ? [] : [...new Set(validate.errors!.map((e) =>
@@ -68,12 +68,12 @@ describe('the MCP tools follow the OpenAPI document', () => {
 		const { search_records: s, get_record: g, list_discussed_records: l } = await listTools();
 		const record = inline(components.Record);
 		const link = inline(components.Link).properties;
-		// Every field of Record as the document states it, but links (page instead) and discussion (below).
+		// Every field of Record as the document states it, except links (replaced by page) and discussion (below).
 		assert.deepEqual(without(g.outputSchema.properties, 'page', 'discussion'), without(record.properties, 'links', 'discussion'));
 		assert.deepEqual(g.outputSchema.required, [...record.required, 'page', 'discussion', 'discusses']);
 		const shown = g.outputSchema.properties.discussion.items.properties;
 		assert.deepEqual({ quote: shown.quote, date: shown.date, url: shown.url }, { quote: link.text, date: link.date, url: link.url });
-		// SearchResult as the document states it, but took_ms; its results are the record as get_record shows it.
+		// SearchResult as the document states it, except took_ms; its results are records as get_record shows them.
 		const result = inline(components.SearchResult).properties;
 		assert.deepEqual(without(s.outputSchema.properties, 'results'), without(result, 'results', 'took_ms'));
 		assert.deepEqual(s.outputSchema.properties.results.items, { ...without(g.outputSchema, '$schema'), required: record.required });

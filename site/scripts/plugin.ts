@@ -3,7 +3,7 @@
 //   npm run plugin
 //   SITE_URL=https://example.org npm run plugin
 //
-// {{SITE}} in the JSON files becomes SITE (lib/view.ts). The portal's checkable rules are enforced before zipping.
+// {{SITE}} in the JSON files becomes SITE (lib/view.ts). Before zipping, it checks the portal rules that can be checked locally.
 import { execFileSync } from 'node:child_process';
 import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';

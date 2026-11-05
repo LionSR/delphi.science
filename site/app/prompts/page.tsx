@@ -12,7 +12,7 @@ export default function Prompts() {
 			<h1>Prompts for your agent</h1>
 			<p>Have your own agent (Claude, ChatGPT, Codex or any agent that can make web requests) read the new papers each morning, rank them against your past papers and current interests, upvote a few for you and send you a short list. Fill in the form, copy the message, and paste it into your agent.</p>
 			<QuickStart site={SITE} name={NAME} />
-			<p>Your agent shows you your profile first and asks you to approve its key at <a href="/keys">Connect an agent</a>. Its votes appear as <code>@you via your agent</code>, never replace a vote you cast yourself, and are never downvotes. Nothing in the form is saved or sent.</p>
+			<p>Your agent shows you your profile first and asks you to approve its key at <a href="/keys">Connect an agent</a>. Its votes appear as <code>your agent · @you’s team</code>, never replace a vote you cast yourself, and are never downvotes. Nothing in the form is saved or sent.</p>
 			<h2>The full templates</h2>
 			<p>For agents that cannot fetch web pages, or if you want to edit the rules. Replace each <code>&lt;…&gt;</code>. Plain text for agents: <a href="/prompts.txt">/prompts.txt</a>.</p>
 			{PROMPTS.map((p) => (

@@ -3,6 +3,7 @@
 import stances from './stances.json' with { type: 'json' };
 import type { Db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
+import { pageInfo, pageSize, pageStart, type PageRequest } from '#lib/paging.ts';
 import { truncate } from '#lib/view.ts';
 import { divisionOf, isSubjectCode, subjectNamed } from './taxonomy.ts';
 
@@ -28,8 +29,8 @@ const IS_FLAGS: Record<string, [sql: string, meaning: string]> = {
 	disputed: ['r.disputed', 'a response refutes or questions it'],
 };
 export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'day', 'week', 'month', 'mentions', 'responded'] as const;
-export const MAX_LIMIT = 100;
-export const DEFAULT_LIMIT = 20;
+/** Search's page size (lib/paging.ts). */
+export const SEARCH_PAGE = pageSize('Results', 100, 20);
 
 // The query language as the docs describe it (OpenAPI, /api/v1, /llms.txt, MCP).
 export const IS: Record<string, string> = Object.fromEntries(Object.entries(IS_FLAGS).map(([k, [, meaning]]) => [k, meaning]));
@@ -192,17 +193,6 @@ export function compile(q: string) {
 
 // ---- Running ----
 
-// A cursor carries where the next page starts and the total, so later pages skip the count.
-const encode = (o: number, t: number) => btoa(JSON.stringify({ o, t })).replace(/=+$/, '');
-function decode(cursor?: string | null): { offset: number; total?: number } {
-	if (!cursor) return { offset: 0 };
-	try {
-		const { o, t } = JSON.parse(atob(cursor));
-		if (Number.isInteger(o) && o >= 0) return { offset: o, total: Number.isInteger(t) ? t : undefined };
-	} catch { /* fall through */ }
-	throw new QueryError('the cursor is not valid', 'Pass next_cursor from the previous reply unchanged.');
-}
-
 export function compact(rec: Record<string, unknown>) {
 	const out: Record<string, unknown> = {};
 	for (const k of COMPACT) {
@@ -213,9 +203,7 @@ export function compact(rec: Record<string, unknown>) {
 	return out;
 }
 
-interface SearchOptions {
-	limit?: number;
-	cursor?: string | null;
+interface SearchOptions extends PageRequest {
 	sort?: string;
 	fields?: 'compact' | 'full';
 	embedding?: number[]; // the query's embedding, for hybrid ranking
@@ -280,13 +268,10 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	if (!(SORTS as readonly string[]).includes(sort)) throw new QueryError(`unknown sort ${JSON.stringify(sort)}`, `Use sort=${SORTS.join(', sort=')}.`);
 	const fields = opts.fields ?? 'compact';
 	if (fields !== 'compact' && fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(fields)}`, 'Use fields=compact (default) or fields=full.');
-	const limit = Math.max(1, Math.min(Math.trunc(opts.limit ?? DEFAULT_LIMIT), MAX_LIMIT));
-	const { offset, total: known } = decode(opts.cursor);
+	const start = pageStart(opts, SEARCH_PAGE);
 	// An empty query lists everything.
 	const { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };
 	const n = params.length;
-	const total = known ?? Number((await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params)).rows[0].n);
-
 	let sql: string;
 	const all = [...params];
 	if (sort === 'relevance' && (ranks.length || opts.embedding)) {
@@ -312,14 +297,17 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	} else {
 		sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${ORDER[sort] ?? ORDER.newest} LIMIT $${n + 1} OFFSET $${n + 2}`;
 	}
-	all.push(limit, offset);
-	const rows = (await db.query<{ record: Record<string, unknown> }>(sql, all)).rows;
-	const next = offset + rows.length;
+	all.push(start.limit, start.offset);
+	// The count, unless the cursor carries it, runs alongside the page.
+	const [rows, total] = await Promise.all([
+		db.query<{ record: Record<string, unknown> }>(sql, all).then((r) => r.rows),
+		start.total ?? db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params).then((r) => Number(r.rows[0].n)),
+	]);
 	return {
-		query: q, sort, total, count: rows.length,
+		query: q, sort, count: rows.length,
 		results: rows.map((r): Record<string, unknown> =>
 			({ ...(fields === 'full' ? r.record : compact(r.record)), links: { self: `/api/v1/records/${r.record.id}` } })),
-		next_cursor: next < total && rows.length ? encode(next, total) : null,
+		...pageInfo(start, total, rows.length),
 		took_ms: Math.round((performance.now() - t0) * 10) / 10,
 	};
 }

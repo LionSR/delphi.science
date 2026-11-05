@@ -9,17 +9,19 @@ import { myVotes } from '#lib/records/votes.ts';
 import { Hero } from './logo.tsx';
 import { Vote } from './vote.tsx';
 import { HomeOrder } from './home-order.ts';
+import { Pager, PAGE_SIZE, pageHref, pageParam } from '#lib/pager.ts';
 
 export const dynamic = 'force-dynamic';
 
-type Params = Promise<{ q?: string; sort?: string; cursor?: string; notice?: string }>;
+type Params = Promise<{ q?: string; sort?: string; page?: string; notice?: string }>;
 
 export default async function Home({ searchParams }: { searchParams: Params }) {
-	const { q = '', sort = q ? 'relevance' : 'week', cursor, notice } = await searchParams;
+	const { q = '', sort = q ? 'relevance' : 'week', page: rawPage, notice } = await searchParams;
+	const page = pageParam(rawPage);
 	const d = await db();
 	// A query the caller can fix is shown with its fix; the source counts and the session read alongside.
 	const [found, sources, who] = await Promise.all([
-		search(d, q, { sort, cursor, limit: 50 }).then((res) => ({ res, error: '' }), (e) => {
+		search(d, q, { sort, page, limit: PAGE_SIZE }).then((res) => ({ res, error: '' }), (e) => {
 			if (!(e instanceof QueryError)) throw e;
 			return { res: null, error: `${e.message}. ${e.fix}` };
 		}),
@@ -27,8 +29,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	]);
 	const { res, error } = found;
 	const mine = who && res ? await myVotes(d, who.login, res.results.map((r) => String(r.id))) : new Map();
-	const here = `/?${new URLSearchParams({ q, sort, ...(cursor ? { cursor } : {}) })}`;
-	const next = res?.next_cursor ? `/?${new URLSearchParams({ q, sort, cursor: res.next_cursor })}` : '';
+	const here = pageHref('/', { q, sort }, page);
 	return (
 		<>
 			<section className="welcome">
@@ -83,7 +84,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 					);
 				})}
 			</ol>
-			{next && <a className="more" href={next}>Next page</a>}
+			{res && <Pager page={res.page} pages={res.pages} path="/" params={{ q, sort }} />}
 		</>
 	);
 }

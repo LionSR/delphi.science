@@ -2,6 +2,7 @@
 import { startQuestion, thread, type Post } from './comments.ts';
 import type { Moderator } from '#lib/moderation/moderate.ts';
 import { NotFoundError, QueryError } from '#lib/errors.ts';
+import { pageInfo, pageLimit, pageSize, pageStart, type PageRequest } from '#lib/paging.ts';
 import type { Db } from '#lib/db.ts';
 import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
 
@@ -25,42 +26,29 @@ export async function startTopic(db: Db, voter: Voter, t: { title: string; body:
 const TOPIC = `SELECT t.id::int, t.title, t.voter, t.agent, t.at, t.last_at, t.accepted_id::int, t.score, t.answers_count AS answers
 	FROM open_index.topics t`;
 
-// A page holds 1 to 100 rows. A cursor holds the last row's (last_at, id), or an offset into search results.
-const pageSize = (limit: number | undefined, fallback: number) => Math.max(1, Math.min(Math.trunc(limit ?? fallback), 100));
-const encode = (o: object) => Buffer.from(JSON.stringify(o)).toString('base64url');
-function decode(cursor?: string | null): { at?: string; id?: number; o?: number } {
-	if (!cursor) return {};
-	try {
-		return JSON.parse(Buffer.from(cursor, 'base64url').toString());
-	} catch {
-		throw new QueryError('the cursor is not valid', 'Pass next_cursor from the previous reply unchanged.');
-	}
-}
+/** The forum's page size (lib/paging.ts), for topics and for the latest posts. */
+export const FORUM_PAGE = pageSize('Topics, and latest posts,', 100, 30);
 
-/** One page of questions: the latest activity first, or with q, the best matches of the words in titles and posts. */
-export async function topics(db: Db, opts: { q?: string; cursor?: string | null; limit?: number } = {}) {
-	const limit = pageSize(opts.limit, 50);
-	const c = decode(opts.cursor);
+// The topics matching $1, each with its best rank. websearch_to_tsquery accepts any text without error.
+const MATCHES = `WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq),
+	hits AS (SELECT t.id, ts_rank(t.tsv, query.tq) * 2 AS rank FROM open_index.topics t, query WHERE t.tsv @@ query.tq
+	         UNION ALL
+	         SELECT c.topic_id, ts_rank(c.tsv, query.tq) FROM open_index.comments c, query WHERE c.topic_id IS NOT NULL AND c.tsv @@ query.tq),
+	best AS (SELECT id, max(rank) AS rank FROM hits GROUP BY id)`;
+
+/** One page of questions (lib/paging.ts): the latest activity first, or with q, the best matches of the words in
+ * titles and posts. */
+export async function topics(db: Db, opts: PageRequest & { q?: string } = {}) {
+	const start = pageStart(opts, FORUM_PAGE);
 	const q = (opts.q ?? '').trim();
-	if (q) {
-		// websearch_to_tsquery accepts any text without error.
-		const offset = Math.max(0, Number(c.o) || 0);
-		const rows = (await db.query<Topic>(
-			`WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq),
-			 hits AS (SELECT t.id, ts_rank(t.tsv, query.tq) * 2 AS rank FROM open_index.topics t, query WHERE t.tsv @@ query.tq
-			          UNION ALL
-			          SELECT c.topic_id, ts_rank(c.tsv, query.tq) FROM open_index.comments c, query WHERE c.topic_id IS NOT NULL AND c.tsv @@ query.tq),
-			 best AS (SELECT id, max(rank) AS rank FROM hits GROUP BY id)
-			 ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $2 OFFSET $3`,
-			[q, limit + 1, offset])).rows;
-		return { questions: rows.slice(0, limit), next_cursor: rows.length > limit ? encode({ o: offset + limit }) : null };
-	}
-	const after = c.at && Number.isSafeInteger(c.id) ? 'WHERE (t.last_at, t.id) < ($2::timestamptz, $3)' : '';
-	const rows = (await db.query<Topic>(`${TOPIC} ${after} ORDER BY t.last_at DESC, t.id DESC LIMIT $1`,
-		after ? [limit + 1, c.at, c.id] : [limit + 1])).rows;
-	const last = rows[limit - 1];
-	return { questions: rows.slice(0, limit),
-		next_cursor: rows.length > limit ? encode({ at: new Date(last.last_at).toISOString(), id: last.id }) : null };
+	const [list, count, args] = q
+		? [`${MATCHES} ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $2 OFFSET $3`, `${MATCHES} SELECT count(*)::int AS n FROM best`, [q]]
+		: [`${TOPIC} ORDER BY t.last_at DESC, t.id DESC LIMIT $1 OFFSET $2`, 'SELECT count(*)::int AS n FROM open_index.topics', []];
+	const [questions, total] = await Promise.all([
+		db.query<Topic>(list, [...args, start.limit, start.offset]).then((r) => r.rows),
+		start.total ?? db.query<{ n: number }>(count, args).then((r) => r.rows[0].n),
+	]);
+	return { questions, ...pageInfo(start, total, questions.length) };
 }
 
 /** One question, without its posts, or null. */
@@ -114,7 +102,7 @@ type Activity = { id: number; voter: string; agent: string; body: string; review
 
 /** All posts with the title they were posted under: newest first, or with since (a post id), the later ones oldest first. */
 export async function activity(db: Db, opts: { since?: number; limit?: number } = {}) {
-	const limit = pageSize(opts.limit, 30);
+	const limit = pageLimit(opts.limit, FORUM_PAGE);
 	const since = Number.isSafeInteger(opts.since) ? opts.since : undefined;
 	const posts = (await db.query<Activity>(
 		`SELECT c.id::int, c.voter, c.agent, c.body, c.review, c.at, c.record_id, c.topic_id::int, coalesce(t.title, r.title) AS title

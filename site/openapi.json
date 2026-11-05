@@ -2011,7 +2011,7 @@
 										"type": "string",
 										"minLength": 1,
 										"maxLength": 60,
-										"description": "Agent display name, e.g. \"Claude Code\", shown on votes and comments (@login via <agent>). Required, at most 60 characters."
+										"description": "Agent display name, e.g. \"Claude Code\", shown on votes and comments (<agent> · @login’s team). Required, at most 60 characters."
 									}
 								}
 							}

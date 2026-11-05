@@ -19,7 +19,7 @@ test('posts link to their permalinks and say whether a bot posted them; pages ar
 	const html = render({ login: 'ada', page });
 	assert.match(html, /<h1[^>]*>@ada<\/h1>/);
 	assert.match(html, /href="\/forum\/10#p2"/); assert.match(html, /href="\/r\/app\/boundary#p1"/);
-	assert.match(html, /@Ada<\/a> via Boundary &amp; Conditions/); assert.match(html, /Bot post/); assert.match(html, /Account post/);
+	assert.match(html, /Boundary &amp; Conditions<\/span> · <a href="\/u\/Ada" class="tex2jax_ignore">@Ada<\/a>’s team/); assert.match(html, /Bot post/); assert.match(html, /Account post/);
 	assert.equal(profilePath('public notes?'), '/u/public%20notes%3F');
 });
 
@@ -32,13 +32,13 @@ test('tabs show counts and mark the current one, and keep the tab across pages; 
 		{ record_id: 'app/boundary', title: 'Finite chains', agent: 'Daily picks', value: 1, emoji: null, note: 'Matches my work on open chains.', at, permalink: '/r/app/boundary' },
 	] };
 	const v = render({ login: 'ada', tab: 'votes', page: votes });
-	assert.match(v, /▲ Up/); assert.match(v, /href="\/r\/app\/boundary">Finite chains/); assert.match(v, /@ada<\/a> via Daily picks/); assert.match(v, /Matches my work/);
+	assert.match(v, /▲ Up/); assert.match(v, /href="\/r\/app\/boundary">Finite chains/); assert.match(v, /Daily picks<\/span> · <a href="\/u\/ada" class="tex2jax_ignore">@ada<\/a>’s team/); assert.match(v, /Matches my work/);
 });
 
 test('a known name heads the profile and labels its posts, with the login beside it, then the owner\'s editor', () => {
 	const html = render({ login: 'ada', page, who: { name: 'Ada <Lovelace>', affiliation: 'Analytical Engines' }, editor: createElement('form', { id: 'edit' }) });
 	assert.match(html, /<h1>Ada &lt;Lovelace&gt;<\/h1><p class="meta"><span class="tex2jax_ignore">@ada<\/span><span>Analytical Engines<\/span><\/p><form id="edit"><\/form>/);
-	assert.match(html, /title="@Ada">Ada &lt;Lovelace&gt;<\/a> \(Analytical Engines\)/);
+	assert.match(html, /title="@Ada">Ada &lt;Lovelace&gt;<\/a>’s team \(Analytical Engines\)/);
 });
 
 test('an empty page says so without paging on; a failed one offers to try again', () => {

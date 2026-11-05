@@ -552,7 +552,7 @@ class Entries(Stored):
 
 
 class Drop(Entries):
-    """discuss --drop takes a link off by the URL it was attached with, as a takedown asks."""
+    """discuss --drop removes a link by the URL it was attached with, as a takedown request asks."""
 
     def test_drop_finds_a_page_whose_query_matters_and_an_x_post_in_any_form(self) -> None:
         self.entry("k", [{"kind": "web", "url": "https://www.youtube.com/watch?v=abc", "added": "2026-10-09"},
@@ -563,7 +563,7 @@ class Drop(Entries):
 
 
 class Recheck(Entries):
-    """discuss --recheck reads every link again: a deleted post drops out, an unreachable one is kept."""
+    """discuss --recheck reads every link again: a deleted post is dropped, an unreachable one is kept."""
 
     def link(self, url: str) -> dict:
         if "deleted" in url:
@@ -599,7 +599,7 @@ class Recheck(Entries):
 
 
 class Described(Entries):
-    """A PDF on someone's home page says nothing about itself: a person gives its title, author and date, and they stay."""
+    """A PDF on someone's home page has no metadata: a person gives its title, author and date, and a recheck keeps them."""
 
     PDF = "https://people.example.edu/~a/note.pdf"
 
@@ -724,8 +724,8 @@ class StanceCopies(unittest.TestCase):
 
 
 class Reception(Entries):
-    """Where the work stands: drafted by the agent from labelled links, published only once a person reviews it,
-    and no longer published once the links change."""
+    """Reception summaries: drafted by the model from labelled links, published only after a person reviews them,
+    and unpublished when the links change."""
 
     LINKS = [{"kind": "web", "url": "https://e.org/sign-error", "author": "Lekili", "stance": "refutes", "text": "a sign error"},
              {"kind": "x", "url": "https://x.com/a/status/1", "author": "A"}]
@@ -804,7 +804,7 @@ class RecordShape(unittest.TestCase):
         items = [index.to_item(e) for e in self.entries()]
         index.crosslink(items)
         self.assertEqual((items[0]["reception"]["reviewed_by"], items[0]["discussion"][1]["record"], items[1]["discusses"][0]["id"]),
-                         ("LionSR", "arxiv/2610.20058", "openai-math/P"))  # the fixture reaches every part
+                         ("LionSR", "arxiv/2610.20058", "openai-math/P"))  # the fixture covers every part
         return items
 
     def test_entries_fit_the_entry_schema_and_a_misfit_is_not_stored(self) -> None:

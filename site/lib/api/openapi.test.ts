@@ -217,7 +217,7 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.deepEqual(await error('POST', `${record}/vote`, { body: { note: 'Why not.' }, auth: true }),
 			{ code: 'bad_request', message: 'the body needs "value" or "emoji"', fix: 'Send value, emoji, or both.' });
 		assert.match((await error('POST', `${record}/vote`, { body: { value: 1, note: 'x'.repeat(501) }, auth: true })).message, /^"note" is longer than 500 characters$/);
-		// The domain's own checks still answer after the document's.
+		// The domain's own checks still run after the document's checks.
 		assert.match((await error('POST', '/api/v1/keys/device', { body: { agent: '   ' } })).message, /needs a name/);
 		assert.match((await error('POST', `${record}/vote`, { body: { emoji: 'no' }, auth: true })).message, /one emoji/);
 	});

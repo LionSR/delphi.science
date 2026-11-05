@@ -78,7 +78,6 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replaceAll('<', '\\u003c') }} />
 			{notice && <p className="count">{notice}</p>}
 			<h1>{tex(r.title)}</h1>
-			{/* Where to read the original work, at its upstream site. */}
 			{from && <p className="origin">Source: <a className="external" href={from.href} rel="external" title={from.href}>{from.label}</a></p>}
 			{Array.isArray(r.authors) && <p className="authors">{r.authors.join(', ')}</p>}
 			<p className="meta">

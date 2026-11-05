@@ -44,7 +44,7 @@ export default async function Profile({ params, searchParams }: Context) {
 				<label>Affiliation <input name="affiliation" defaultValue={own.affiliation} maxLength={MAX_AFFILIATION} autoComplete="organization" placeholder="e.g. University of California San Diego" /></label>
 				<button>Save</button>
 			</form>
-			<p className="meta"><span>Shown publicly beside your username. Sign-in no longer copies these from GitHub once you save here. Your connected agents can also set them.</span></p>
+			<p className="meta"><span>Shown publicly beside your username. Once you save here, signing in no longer copies these from GitHub. Your connected agents can also set them.</span></p>
 		</details>
 	) : null;
 	return <ProfileView login={login} tab={tab} page={page} who={who} editor={editor} />;

@@ -1,5 +1,5 @@
-// Public names and affiliations shown beside logins (open_index.people). Cosmetic only: authorization and
-// attribution always use the GitHub login.
+// Public names and affiliations shown beside logins (open_index.people). They are for display only: authorization
+// and attribution always use the GitHub login.
 import { QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
 import { profileName } from './keys.ts';
@@ -10,13 +10,14 @@ export type PublicName = { name: string; affiliation: string };
 export const MAX_NAME = 100;
 export const MAX_AFFILIATION = 100;
 
-/** A GitHub "company" for show only: profileName rules, without GitHub's leading "@" on organization mentions. */
+/** A GitHub "company", shown but never used for identity: profileName rules, without GitHub's leading "@" on organization mentions. */
 export function profileAffiliation(value: unknown): string {
 	return profileName(value).replace(/^@(?=\S)/, '');
 }
 
 /** Public names keyed by each login as given (GitHub logins ignore case). Logins with nothing to show are left out,
- *  and a name that only repeats the login is dropped. Names are cosmetic, so a failed lookup shows none. */
+ *  and a name that only repeats the login is dropped. Names are for display only, so if the lookup fails none are
+ *  shown. */
 export async function publicNames(db: Db, logins: string[]): Promise<Map<string, PublicName>> {
 	const names = new Map<string, PublicName>();
 	const lower = [...new Set(logins.map((l) => l.toLowerCase()))];

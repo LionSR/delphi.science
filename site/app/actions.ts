@@ -34,7 +34,7 @@ async function thenBack(back: string, act: () => Promise<unknown>) {
 export async function savePostEdit(input: { id: number; body: string; revision: string }): Promise<{ ok: boolean; feedback?: PostFeedback }> {
 	try {
 		const who = await me();
-		if (!who) return { ok: false, feedback: { code: 'sign_in', message: 'Sign in before saving.', fix: 'Your draft is retained. Sign in as the post owner and try again.' } };
+		if (!who) return { ok: false, feedback: { code: 'sign_in', message: 'Sign in before saving.', fix: 'Your draft is kept. Sign in as the post owner and try again.' } };
 		const saved = await editPost(await db(), input.id, who, input);
 		revalidatePath(saved.record_id ? recordPath(saved.record_id) : `/forum/${saved.topic_id}`);
 		if (saved.topic_id) revalidatePath('/forum');
@@ -52,7 +52,7 @@ export async function sendPost(_previous: PostFormState, form: FormData): Promis
 	}
 	try {
 		const who = await me();
-		if (!who) return { status: 'failed', feedback: { code: 'sign_in', message: 'Sign in with GitHub before posting.', fix: 'Your draft is retained. Sign in, review it, then submit.' } };
+		if (!who) return { status: 'failed', feedback: { code: 'sign_in', message: 'Sign in with GitHub before posting.', fix: 'Your draft is kept. Sign in, review it, then submit.' } };
 		const retrieveSources = form.get('retrieve_sources') === 'on';
 		if (kind === 'record' && retrieveSources) requireSourceCheckOrigin((await headers()).get('origin'), true);
 		const location = await submitPostForm(await db(), who, {

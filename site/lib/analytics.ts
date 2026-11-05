@@ -1,4 +1,5 @@
-// Use the same bounded route for both the event URL and the SDK's separate dynamic-path field.
+// The route pattern of a known public page, or null. The same pattern goes in the event URL and in the SDK's separate
+// dynamic-path field.
 export function analyticsPath(path: string): string | null {
 	if (/^\/r\/[^/]+\/[^/]+\/?$/.test(path)) return '/r/[prefix]/[suffix]';
 	if (/^\/forum\/\d+\/?$/.test(path)) return '/forum/[id]';

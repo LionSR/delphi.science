@@ -47,7 +47,7 @@ export const source = (s: unknown) => {
 export const original = (r: Record<string, unknown>) => {
 	const href = typeof r.url === 'string' && /^https?:\/\//i.test(r.url) ? r.url : '';
 	if (!href) return null;
-	// The address as people read it: no scheme, no www., no trailing slash, and cut when long.
+	// The address as people read it: no scheme, no www., no trailing slash, and shortened when long.
 	const shown = href.replace(/^https?:\/\/(www\.)?/i, '').replace(/\/$/, '');
 	const host = shown.split('/')[0];
 	return { href, host, label: shown.length > 60 ? `${shown.slice(0, 59)}…` : shown };

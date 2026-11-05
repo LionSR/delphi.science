@@ -55,7 +55,7 @@ export function ProfileView({ login, tab = 'all', page, who, editor }: { login: 
 			who.name ? h('span', { className: 'tex2jax_ignore' }, `@${login}`) : null,
 			who.affiliation ? h('span', null, who.affiliation) : null) : null,
 		editor ?? null,
-		h('p', null, 'Public topics, replies, comments and record votes by this account and the bots attributed on them. Forum post votes are not shown, as on MathOverflow.'),
+		h('p', null, 'Public topics, replies, comments and record votes by this account, including those made by its bots. Forum post votes are not shown, as on MathOverflow.'),
 		h(Tabs, { login, tab, counts: page?.counts }),
 		body,
 		page && h(Pager, { page: page.page, pages: page.pages, path: profilePath(login), params: tabParams(tab) }));

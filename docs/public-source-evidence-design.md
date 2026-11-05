@@ -23,10 +23,10 @@ A successful check shows what a public endpoint returned at a given time. It say
 ## Adapters
 
 - **GitHub text files:** fresh retrieval requires a full 40-character commit SHA. The Git commit, tree and blob APIs bind the exact path, file mode and blob digest; symlinks and submodules are rejected. Branch/tag URLs can only match curated observations.
-- **Google Docs:** a fixed public text-export URL derived from the document ID, with no user session or OAuth. Access walls stay unavailable.
+- **Google Docs:** a fixed public text-export URL derived from the document ID, with no user session or OAuth. A document that needs sign-in or permission is reported as unavailable.
 - **X posts:** the credential-free `https://publish.x.com/oembed` endpoint, with post and author identity checked. Embed HTML is never executed.
 - **Drive collections and PDFs:** not fetched automatically; only curated observations.
-- **Anything else** (other hosts, HTML crawling, PDFs, login-only pages, token URLs) stays held.
+- **Anything else** (other hosts, HTML crawling, PDFs, login-only pages, token URLs) is held.
 
 Network and parser adapters are injected so tests run offline.
 
@@ -36,7 +36,7 @@ Network and parser adapters are injected so tests run offline.
 - Node HTTPS with normal TLS verification. DNS answers must be public IPv4; the validated address is pinned in the socket lookup. No connection pooling, proxies, cookies or auth headers.
 - Manual redirects, at most 2, revalidated at each hop. Google exports may redirect only to `docs.google.com` or public `*.googleusercontent.com` hosts; GitHub requests may not redirect to a different object or repository.
 - Limits: 8 s per source, 20 s per batch, two concurrent workers, bounded response bytes, content types and decoded text.
-- Response text is inert data: never rendered as HTML or executed, and it cannot set policy or verdicts.
+- Response text is treated only as data: it is never rendered as HTML or executed, and it cannot change policy or decisions.
 
 ## State and audit
 

@@ -125,7 +125,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 
 			<h2>Your reply</h2>
 			<PostForm kind="answer" owner={owner} topic={t.id} back={`/forum/${t.id}`} label="Reply" button="Post your reply"
-				placeholder="Provide an argument, reference, computation, or checkable evidence. Reference records by id (e.g. arxiv/2406.01234) to link them." />
+				placeholder="Give an argument, reference, computation, or checkable evidence. To link a record, write its id (e.g. arxiv/2406.01234)." />
 			<p className="count">Posts are moderated against MathOverflow standards: specific research questions or focused discussions, and replies or comments backed by an argument, reference, or evidence.</p>
 		</article>
 	);

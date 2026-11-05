@@ -13,7 +13,7 @@ export default async function Submit({ searchParams }: { searchParams: Promise<{
 		<article>
 			<h1>Submit a link</h1>
 			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
-			<p>Submit a paper, dataset, or repository by URL or identifier. Title, authors, abstract, and publication date are fetched directly from the source.</p>
+			<p>Submit a paper, dataset, or repository by URL or identifier. We fetch the title, authors, abstract, and publication date from the source.</p>
 			<ul className="plain">
 				<li>Public HTTPS research webpages and blogs, without credentials or query parameters.</li>
 				<li>arXiv (<code>2406.01234</code> or URL), DOIs, Zenodo.</li>

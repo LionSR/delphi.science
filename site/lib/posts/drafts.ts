@@ -1,4 +1,4 @@
-// Post drafts kept in tab storage, per author and form. A guest's draft can follow them through sign-in.
+// Post drafts kept in tab storage, per author and form. A guest's draft can carry over when they sign in.
 import { MAX_BODY } from './limits.ts';
 export type Draft = { title: string; body: string; review: boolean };
 export type DraftStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
@@ -70,7 +70,7 @@ export function restoreDraft(storage: DraftStorage, form: string, owner: string)
 					return { draft: own ?? guest ?? emptyDraft() };
 				}
 			}
-			// Beside the owner's own draft the guest draft is only offered, and the marker kept so the owner can adopt it.
+			// If the owner already has a draft, the guest draft is only offered, and the marker is kept so the owner can adopt it.
 			if (marker.toOwner === owner && guest) {
 				if (own) return { draft: own, alternate: guest };
 				if (saveDraft(storage, form, owner, guest)) storage.removeItem(key(form, ''));

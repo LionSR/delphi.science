@@ -19,7 +19,7 @@ export async function myVotes(db: Db, login: string, ids: string[]) {
 
 /** Casts or replaces a vote; with ifAbsent, keeps an existing vote and reports whether one was created. */
 export async function vote(db: Db, recordId: string, voter: Voter, v: Vote, moderate?: Moderator, fetchSource?: SourceRetriever) {
-	if (v.ifAbsent !== undefined && typeof v.ifAbsent !== 'boolean') throw new QueryError('if_absent must be a boolean', 'Send if_absent: true to preserve an existing owner vote, or omit it for normal updates.');
+	if (v.ifAbsent !== undefined && typeof v.ifAbsent !== 'boolean') throw new QueryError('if_absent must be a boolean', 'Send if_absent: true to keep the person\'s existing vote, or leave it out to replace the vote as usual.');
 	if (v.value === undefined && v.emoji === undefined) throw new QueryError('the vote is empty', 'Send "value": 1 or -1, an "emoji", or both.');
 	if (v.value !== undefined && v.value !== 1 && v.value !== -1) throw new QueryError('value must be 1 or -1', 'Send "value": 1 (up) or -1 (down).');
 	if (v.emoji !== undefined && !EMOJI.test(v.emoji)) throw new QueryError('emoji must be one emoji', 'Send a single emoji, e.g. "🤔".');

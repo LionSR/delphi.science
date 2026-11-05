@@ -1,4 +1,4 @@
-// The daily attempt ledger shared by posting and explicit source checks (open_index.moderations).
+// The daily log of attempts (open_index.moderations), shared by posting and explicit source checks.
 import { QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
 import { ModerationError } from '#lib/errors.ts';

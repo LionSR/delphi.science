@@ -99,7 +99,7 @@ def save(ref: Ref, entry: dict[str, Any]) -> Ref:
 
 
 def saved(ref: Ref, entry: dict[str, Any]) -> bool:
-    """Saves one entry of a bulk pass; one changed meanwhile is skipped and left for the next pass."""
+    """Saves one entry during a bulk pass. An entry that changed since it was read is skipped and left for the next pass."""
     try:
         save(ref, entry)
         return True
@@ -117,7 +117,7 @@ def app_repos() -> dict[str, str]:
 
 
 def app_entry(p: dict[str, Any]) -> dict[str, Any]:
-    """An APP registry paper as an ordinary entry, so to_item serves every source."""
+    """Converts an APP registry paper to an ordinary entry, so to_item handles every source the same way."""
     v = p["versions"][-1]
     return {
         "key": p["id"], "source": "app", "url": f"{SITE}/papers/{p['id']}/", "repo": p["repo_url"],
@@ -237,7 +237,7 @@ class GenerationBudget:
 
     def reserve(self, request_bytes: int) -> dict[str, Any]:
         self.require_enabled()
-        ceiling = request_bytes + 1024  # UTF-8 bytes bound the input tokens; the rest covers chat formatting
+        ceiling = request_bytes + 1024  # input tokens are at most the UTF-8 byte count; the extra 1024 covers chat formatting
         cost = (ceiling * INPUT_USD_PER_MILLION + MAX_OUTPUT_TOKENS * OUTPUT_USD_PER_MILLION) / 1_000_000
         if self.used + cost > self.limit:
             raise RuntimeError("DeepSeek run budget exhausted: the next worst-case request would exceed the cap")
@@ -410,7 +410,7 @@ def ask(prompt_file: str, name: str, data: Any) -> Any:
     return replies
 
 
-# How an ask call fails: the API errs or hangs, or the reply is not valid JSON of the right shape.
+# Errors from ask(): the API fails or times out, or the reply is not valid JSON of the expected shape.
 LABELER_ERRORS = (RuntimeError, json.JSONDecodeError, urllib.error.URLError, TimeoutError)
 
 
@@ -546,21 +546,22 @@ def with_stance(link: dict[str, Any], stance: str) -> dict[str, Any]:
 
 
 def link_url(url: str, attached: Iterable[str] = ()) -> str:
-    """A link as it is stored: as given if attached that way, else normalized like an X post (x.com, no query)."""
+    """The URL to store for a link: unchanged if a link is already attached with it, else with twitter.com
+    changed to x.com and any query removed."""
     url = url.strip()
     return url if url in attached else url.replace("twitter.com/", "x.com/").split("?")[0]
 
 
 def reread(old: dict[str, Any], fresh: dict[str, Any]) -> dict[str, Any]:
-    """A link read again. A web page keeps the title, author and date it was attached with, since a person may
-    have given or corrected them (a PDF says nothing; a blog's window title can name the blog, not the guest
-    who wrote the post); an X post keeps only what the post shows now."""
+    """Merges a fresh read of a link into the stored link. A web page keeps the title, author and date it was
+    attached with, because a person may have given or corrected them (a PDF has none; a blog's window title may
+    name the blog instead of the guest who wrote the post). An X post keeps only what the post shows now."""
     kept = pick(old, DESCRIBED) if fresh.get("kind") == "web" else {}
     return {**fresh, **kept, **pick(old, KEPT)}
 
 
 def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Each link read again: a deleted one drops out, an unreachable one is kept as it was."""
+    """Rereads each link. A deleted link is dropped; an unreachable one is kept unchanged."""
     out = []
     for d in links:
         try:
@@ -580,7 +581,7 @@ def propose_stances(records: list[str], labeler: str) -> int:
     canned = canned_replies(labeler)
     todo = [e for _, e in load(DISCUSSED) if (not records or rid(e) in records) and unlabelled(e)]
     batches: list[list[dict[str, Any]]] = [[]]
-    for e in todo:  # whole records, about BATCH links to a batch
+    for e in todo:  # about BATCH links per batch; a record is never split across batches
         if sum(len(x["discussion"]) for x in batches[-1]) >= BATCH:
             batches.append([])
         batches[-1].append(e)
@@ -610,7 +611,7 @@ def propose_stances(records: list[str], labeler: str) -> int:
 
 
 def recheck_all(records: list[str], dry_run: bool) -> int:
-    """Rereads every record's links (or the named records'), so a deleted post leaves within a day."""
+    """Rereads every record's links (or the named records'), so a deleted post is removed within a day."""
     todo = [(p, e) for p, e in load(DISCUSSED) if not records or rid(e) in records]
     n = dropped = 0
     for ref, e in todo:
@@ -625,9 +626,9 @@ def recheck_all(records: list[str], dry_run: bool) -> int:
 
 def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str | None = None,
             described: dict[str, str] | None = None) -> int:
-    """Attaches (or with drop, removes) links about a record. With a stance, new links get it and links
-    already attached take it without being read again. `described` (--title, --author, --date) stands in
-    for what a page does not say about itself, as a PDF does not; a web page with no title is not attached."""
+    """Attaches links about a record, or removes them with drop. With a stance, new links get it, and links
+    already attached get it without being read again. `described` (--title, --author, --date) supplies what a
+    page does not say about itself, as with a PDF; a web page with no title is not attached."""
     described = {k: v for k, v in (described or {}).items() if v}
     if not urls:
         print("name the links to attach, or use --recheck")
@@ -668,8 +669,8 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str
 
 # ---- reception ----
 
-# A one- or two-sentence summary of where the work stands, resting on some of its links. It is published only
-# once a person reviews it, and stops being published when the links (or their stances) change.
+# A one- or two-sentence summary of how the work was received, based on some of its links. It is published
+# only after a person reviews it, and is unpublished when the links (or their stances) change.
 RECEPTION_CHARS = 400
 LOGIN = re.compile(r"^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$")  # a GitHub login
 
@@ -809,8 +810,8 @@ def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
 
 
 def crosslink(all_items: list[dict[str, Any]]) -> None:
-    """A discussion link to a paper that is itself in the index gets "record", and that record lists
-    the item under "discusses"."""
+    """Links indexed records to each other: a discussion link to a paper that is also in the index gets a
+    "record" field, and that record lists the item under "discusses"."""
     by_id = {it["id"]: it for it in all_items}
     for it in all_items:
         for link in it.get("discussion") or []:
@@ -892,7 +893,7 @@ def parser() -> argparse.ArgumentParser:
     d.add_argument("urls", nargs="*")
     d.add_argument("--drop", action="store_true")
     d.add_argument("--dry-run", action="store_true")
-    d.add_argument("--recheck", action="store_true", help="read every link again (or the named records' links); a deleted post drops out")
+    d.add_argument("--recheck", action="store_true", help="read every link again (or the named records' links); deleted posts are removed")
     d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see site/lib/records/stances.json); set on links already attached without reading them again")
     d.add_argument("--title", help="the link's title, for a page that does not give one (a PDF note on a home page)")
     d.add_argument("--author", help="who wrote it, for a page that does not say (a PDF)")
@@ -905,7 +906,7 @@ def parser() -> argparse.ArgumentParser:
     rc.add_argument("--draft", action="store_true")
     rc.add_argument("--text")
     rc.add_argument("--reviewed-by", help="the GitHub login of the person who checked the text against its links; publishes it")
-    rc.add_argument("--links", nargs="+", help="the links the text rests on (default: all of the record's)")
+    rc.add_argument("--links", nargs="+", help="the links the text is based on (default: all of the record's links)")
     rc.add_argument("--labeler", default="deepseek", type=labeler_option())
     rc.add_argument("--dry-run", action="store_true")
 

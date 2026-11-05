@@ -44,7 +44,7 @@ export function normalizeProfileLogin(value: unknown): string {
 	return value.toLowerCase();
 }
 
-// The listed fields only. Ids are read as text and shown as numbers.
+// Only the fields the schema lists. Ids are read as text and returned as numbers.
 function toPost(row: Row): ProfilePost {
 	const id = Number(row.id), topic = row.topic_id === null ? undefined : Number(row.topic_id);
 	return {
@@ -56,8 +56,8 @@ function toPost(row: Row): ProfilePost {
 	};
 }
 
-// A login's public posts with their kind (the rule in posts/edit.ts, in SQL). Posts on a live record, or in a topic whose question exists; replies only to a
-// parent in the same place.
+// A login's public posts and the kind of each (the rule in posts/edit.ts, written in SQL). Only posts on a live record,
+// or in a topic whose question exists; a reply counts only if its parent is in the same place.
 const ACTIVITY = `SELECT c.id AS pid, c.id::text AS id, c.voter, c.agent, c.body, c.at,
 		c.record_id, c.topic_id::text AS topic_id, c.parent_id::text AS parent, coalesce(r.title, t.title) AS title,
 		CASE WHEN c.record_id IS NOT NULL THEN CASE WHEN c.review THEN 'review' ELSE 'comment' END

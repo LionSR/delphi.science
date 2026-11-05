@@ -45,7 +45,7 @@ function object(value: unknown, keys: readonly string[], optional: readonly stri
 	if (Object.keys(result).some(k => !keys.includes(k) && !optional.includes(k)) || keys.some(k => !Object.hasOwn(result, k))) return invalid();
 	return result;
 }
-/** Bounded, trimmed, inert text with no markup, control characters or credential-shaped strings. */
+/** Trimmed, non-empty text of at most `max` characters, with no markup, control characters or credential-like strings. */
 function text(value: unknown, max: number): string {
 	if (typeof value !== 'string' || !value.trim() || value !== value.trim() || value.length > max
 		|| /[<>\u0000-\u001f\u007f]/u.test(value)

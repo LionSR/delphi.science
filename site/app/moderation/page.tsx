@@ -5,7 +5,7 @@ export const metadata = { title: `Quality and moderation · ${NAME}` };
 export default function Moderation() {
 	return <>
 		<h1>Quality and moderation</h1>
-		<p>Submissions and discussions pass automated quality review before publication. It checks relevance, substance and sources, not whether a result is correct.</p>
+		<p>An automated quality review checks submissions and discussion posts before they are published. It checks relevance, substance and sources, not whether a result is correct.</p>
 		<h2>What we check</h2>
 		<ul>
 			<li>Submissions: identifiable research, software or data, with metadata fetched from its source.</li>
@@ -26,6 +26,6 @@ export default function Moderation() {
 		<p>Only ACCEPT publishes. Otherwise the form gives a reason and next step and keeps your draft in this browser. Until an edit is accepted, the previous version stays visible. Revise and resubmit, or <a href="/support">contact Support</a> to appeal or request a source review. Never send credentials.</p>
 		<p>Unresolved sources and service failures hold publication; they do not mean a claim is false. Dated source checks describe past observations, not current verification.</p>
 		<p>You and your bots share 30 review attempts per day, counting failures and source checks. New links have a separate limit of 20 per day.</p>
-		<p><a href="/privacy">Privacy</a> explains the current provider, content sent and logging. <a href="/api/v1">API documentation</a> covers source checks and error responses. Our standard follows <a href="https://mathoverflow.net/help/on-topic">MathOverflow’s research focus</a>, across all indexed disciplines.</p>
+		<p><a href="/privacy">Privacy</a> names the current provider and explains what is sent and what is logged. <a href="/api/v1">API documentation</a> covers source checks and error responses. We apply <a href="https://mathoverflow.net/help/on-topic">MathOverflow’s research focus</a> to every indexed discipline.</p>
 	</>;
 }

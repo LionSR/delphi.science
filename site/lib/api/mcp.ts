@@ -16,7 +16,7 @@ const INSTRUCTIONS = `${NAME}: papers, preprints, and formal proofs (AI-generate
 
 // ---- What the tools return ----
 
-/** A linked response: text as quote, and added as linked only when it has no date. */
+/** A linked response as the tools show it: text is renamed quote, and added is shown as linked only when there is no date. */
 const response = (l: Record<string, unknown>) => {
 	const out: Record<string, unknown> = { author: l.author || l.handle, date: l.date, linked: l.date ? undefined : l.added,
 		quote: l.text, url: l.url, title: l.title, site: l.site, record: l.record, stance: l.stance };
@@ -54,7 +54,7 @@ async function getRecord(db: Db, { id }: { id: string }) {
 }
 
 async function listDiscussedRecords(db: Db, { query = '', fields, ...paging }: ListArgs & { query?: string }) {
-	if (query.trim()) parse(query); // alone first, so its parentheses cannot escape the wrapper below
+	if (query.trim()) parse(query); // parsed alone first, so its parentheses cannot break out of the wrapping below
 	const { took_ms: _, sort: _sort, results, ...res } = await search(db, query.trim() ? `is:discussed AND (${query})` : 'is:discussed',
 		{ ...paging, sort: 'responded', fields: 'full' });
 	return { ...res, query, results: results.map((rec) => ({ ...shown(fields === 'full' ? rec : compact(rec)), latest_response: newest(rec) })) };
@@ -73,19 +73,19 @@ const inline = (s: unknown): any => {
 	if (typeof ref === 'string') return inline(components[ref.replace('#/components/schemas/', '')]);
 	return Object.fromEntries(Object.entries(s).map(([k, v]) => [k, inline(v)]));
 };
-/** An operation's parameters as the properties of one object: each its schema, with the parameter's description. */
+/** An operation's parameters as the properties of one object: each parameter's schema, with its description. */
 const parameters = (id: string): Record<string, Json> =>
 	Object.fromEntries(operationById(id).parameters.map((p) => [p.name, { ...inline(p.schema), ...(p.description ? { description: p.description } : {}) }]));
 
 /** A zod schema for validation that reports the original JSON Schema in tools/list. */
 function schema(json: Json, s: z.ZodType = z.fromJSONSchema(json as z.core.JSONSchema.JSONSchema)): z.ZodType {
-	s._zod.toJSONSchema = () => structuredClone(json); // a copy: zod writes into what it is handed
+	s._zod.toJSONSchema = () => structuredClone(json); // a copy, because zod modifies the object it is given
 	return s;
 }
 
 const searchParams = parameters('searchRecords');
 const recordParams = parameters('getRecord');
-// The search parameters other than q and sort, which the tools take as they are: paging and fields (format is HTTP's only).
+// The search parameters the tools take unchanged: paging and fields. q and sort are handled per tool; format is HTTP-only.
 const { q, sort: _sort, format: _format, ...paging } = searchParams;
 
 const Link = inline(components.Link);
@@ -130,7 +130,7 @@ const LIST_OUT = page({ ...ShownRecord, properties: { ...ShownRecord.properties,
 
 type Result = { content: { type: 'text'; text: string }[]; structuredContent?: Record<string, unknown>; isError?: boolean };
 
-/** Wraps a tool: structured and JSON-text results; query errors as message plus fix. */
+/** Wraps a tool handler. Results are returned both as structured content and as JSON text; a query error is returned as its message and fix. */
 const tool = <A>(db: () => Promise<Db>, work: (db: Db, args: A) => Promise<Record<string, unknown>>) => async (args: A): Promise<Result> => {
 	try {
 		const out = await work(await db(), args);
@@ -159,7 +159,7 @@ const TOOLS = {
 	},
 	list_discussed_records: {
 		title: 'List discussed records',
-		description: `List records with linked expert responses ordered by most recent response first (equivalent to search_records with is:discussed and sort=responded, plus latest_response). Pass query in search_records' q syntax to filter (e.g. source:openai-math or cat:math.NT).`,
+		description: `List records that have linked expert responses, most recent response first. This is search_records with is:discussed and sort=responded, plus latest_response. Pass query in search_records' q syntax to filter (e.g. source:openai-math or cat:math.NT).`,
 		inputSchema: schema(LIST_IN), outputSchema: schema(LIST_OUT),
 	},
 };

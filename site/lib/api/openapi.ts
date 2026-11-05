@@ -292,7 +292,7 @@ export const spec = {
 				operationId: 'requestAgentKey',
 				...open,
 				summary: 'Start device authorization for an agent key. Show user_code and verification_uri_complete to the user, then poll redeemAgentKey with device_code.',
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: MAX_AGENT_NAME, description: `Agent display name, e.g. "Claude Code", shown on votes and comments (@login via <agent>). Required, at most ${MAX_AGENT_NAME} characters.` } } } } } },
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: MAX_AGENT_NAME, description: `Agent display name, e.g. "Claude Code", shown on votes and comments (<agent> · @login’s team). Required, at most ${MAX_AGENT_NAME} characters.` } } } } } },
 				responses: { 201: { description: 'A device code', content: { 'application/json': { schema: { type: 'object', properties: {
 					device_code: { type: 'string' }, user_code: { type: 'string' }, verification_uri: { type: 'string' }, verification_uri_complete: { type: 'string' }, expires_in: { type: 'integer' }, interval: { type: 'integer' },
 				} } } } }, 400: err },

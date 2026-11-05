@@ -27,6 +27,7 @@ alter table open_index.work_records
   add column date_meaning text not null default 'Source date',
   add column evidence jsonb not null default '[]' check (jsonb_typeof(evidence)='array'),
   add column reviewed_by text,
+  add column identity jsonb,
   add constraint work_records_one_work unique(record_id);
 -- Membership is a durable identity registry, including reviewed sources not materialized yet.
 -- Replace only the FK; retaining its old cascade would erase canonical identity on rebuild/removal.
@@ -52,8 +53,11 @@ create table open_index.work_membership_history (
   record_id text not null,
   previous_work_id text not null references open_index.works(id),
   work_id text not null references open_index.works(id),
-  previous_work jsonb not null,
-  work jsonb not null,
+  -- Each ID names an explicit side of the association, before/after (including review timestamps).
+  previous_source_work jsonb not null,
+  previous_target_work jsonb not null,
+  source_work jsonb not null,
+  target_work jsonb not null,
   previous_membership jsonb not null,
   membership jsonb not null,
   reviewed_by text not null,
@@ -67,42 +71,126 @@ alter table open_index.work_membership_history enable row level security;
 revoke all on open_index.work_membership_history from public;
 revoke all on sequence open_index.work_membership_history_seq_seq from public;
 
--- Ingestion writers may create only singleton identity rows. Cross-source membership is owner-reviewed.
+-- Accepted exact identity keys are private ingestion state, never derived from titles/links.
+-- One key per source is deliberately supported: a DOI verified by an authoritative adapter.
+create table open_index.work_identifiers (
+  doi text primary key,
+  work_id text not null references open_index.works(id),
+  record_id text not null,
+  evidence jsonb not null,
+  foreign key(work_id,record_id) references open_index.work_records(work_id,record_id) deferrable initially deferred
+);
+create index work_identifiers_member on open_index.work_identifiers(work_id,record_id);
+create index work_identifiers_record on open_index.work_identifiers(record_id);
+alter table open_index.work_identifiers enable row level security;
+
+create function open_index.normalized_doi(value text) returns text
+language sql immutable strict security invoker set search_path='' as $$
+  select lower(regexp_replace(btrim(value),'^(https?://(dx\.)?doi\.org/|doi:)[[:space:]]*','','i'))
+$$;
+
+-- The source adapters emit this proof only after checking the returned authoritative identifier.
+-- Arbitrary DOI fields, cited DOIs, concept DOIs and formalizes/adapts links are not accepted.
+create function open_index.source_doi(p_id text, proof jsonb) returns text
+language plpgsql immutable security invoker set search_path='' as $$
+declare doi text; begin
+  if proof is null or proof='null'::jsonb then return null; end if;
+  doi:=open_index.normalized_doi(proof->>'value');
+  if jsonb_typeof(proof)<>'object' or proof->>'scheme' is distinct from 'doi' or
+    doi is null or doi !~ '^10\.[0-9]{4,9}/[^[:space:]]+$' then raise exception 'Invalid verified source identifier'; end if;
+  if (proof->>'verified_by'='doi-csl' and p_id like 'doi/%' and
+      doi=open_index.normalized_doi(replace(substr(p_id,5),'__','/')) and
+      proof->>'evidence'='https://doi.org/'||doi) or
+     (proof->>'verified_by'='zenodo-record' and p_id ~ '^zenodo/[0-9]+$' and
+      doi='10.5281/zenodo.'||substr(p_id,8) and
+      proof->>'evidence'='https://zenodo.org/api/records/'||substr(p_id,8)) then return doi; end if;
+  raise exception 'Unverified or conflicting source identifier; operator review required';
+end $$;
+
+-- Ingestion can associate only a verified key already bound to the target work.
+-- Reviewed associations remain owner-only; membership cannot be changed by an importer.
 create function open_index.guard_work_membership() returns trigger
 language plpgsql security invoker set search_path='' as $$
 begin
+  if tg_table_name='work_identifiers' then
+    if new.doi is distinct from open_index.source_doi(new.record_id,new.evidence) then raise exception 'Invalid identifier provenance'; end if;
+    if current_user<>pg_get_userbyid((select relowner from pg_class where oid='open_index.works'::regclass)) and not (
+      exists(select 1 from open_index.work_identifiers k where k.doi=new.doi and k.work_id=new.work_id) or
+      exists(select 1 from open_index.work_records m where m.record_id=new.record_id and m.work_id=new.work_id) or
+      exists(select 1 from open_index.works w where w.id=new.work_id and w.id=new.record_id and w.main_record_id=new.record_id and w.redirect_work_id is null and not w.curated and w.auto_title)
+    ) then raise exception 'Only the work owner may assign a new identifier to another work'; end if;
+    return new;
+  end if;
   if new.record_id !~ '^[a-z0-9-]+/.+' then raise exception 'Invalid source identity'; end if;
-  if current_user<>pg_get_userbyid((select relowner from pg_class where oid='open_index.works'::regclass))
-    and (new.work_id<>new.record_id or not exists(select 1 from open_index.works where id=new.work_id and main_record_id=new.record_id and redirect_work_id is null and not curated)) then raise exception 'Only the work owner may associate source identities'; end if;
+  if current_user<>pg_get_userbyid((select relowner from pg_class where oid='open_index.works'::regclass)) and
+    ((tg_op='UPDATE' and (new.record_id is distinct from old.record_id or new.work_id is distinct from old.work_id or
+      (old.identity is not null and new.identity is distinct from old.identity))) or not (
+      (new.work_id=new.record_id and exists(select 1 from open_index.works where id=new.work_id and main_record_id=new.record_id and redirect_work_id is null and not curated)) or
+      exists(select 1 from open_index.work_identifiers where doi=open_index.source_doi(new.record_id,new.identity) and work_id=new.work_id)
+    )) then raise exception 'Only the work owner or a verified identifier may associate source identities'; end if;
   return new;
 end $$;
+create trigger work_identifier_guard before insert or update on open_index.work_identifiers
+  for each row execute function open_index.guard_work_membership();
 create trigger work_membership_guard before insert or update on open_index.work_records
   for each row execute function open_index.guard_work_membership();
 
-create function open_index.ensure_work_source(p_id text, p_title text) returns text
+-- Single ingestion identity path for entries, records, rebuilds and backfills.
+-- Lock the normalized identity before choosing/creating a work, then lock the source.
+-- Different aliases arriving at once therefore cannot create disconnected canonical works.
+create function open_index.resolve_work_source(p_id text, p_title text, proof jsonb default null) returns text
 language plpgsql security invoker set search_path='' as $$
-declare wid text;
+declare wid text; keyed text; v_doi text; prior jsonb;
 begin
   if p_id is null or p_id !~ '^[a-z0-9-]+/.+' then raise exception 'Invalid source identity'; end if;
+  v_doi:=open_index.source_doi(p_id,proof);
+  if v_doi is not null then perform pg_advisory_xact_lock(hashtextextended('work-doi:'||v_doi,0)); end if;
   perform pg_advisory_xact_lock(hashtextextended('work-source:'||p_id,0));
-  select work_id into wid from open_index.work_records where record_id=p_id;
-  if wid is not null then return wid; end if;
-  if exists(select 1 from open_index.works where id=p_id) then
-    raise exception 'Singleton work ID collision for %; operator review required',p_id;
+  select work_id,identity into wid,prior from open_index.work_records where record_id=p_id;
+  if v_doi is not null and ((prior is not null and open_index.source_doi(p_id,prior)<>v_doi) or
+    exists(select 1 from open_index.work_identifiers k where k.record_id=p_id and k.doi<>v_doi)) then
+    raise exception 'Source identifier changed; operator review required';
   end if;
-  insert into open_index.works(id,title,main_record_id,publication_record_id,auto_title)
-    values(p_id,coalesce(nullif(p_title,''),p_id),p_id,p_id,true);
-  insert into open_index.work_records(work_id,record_id,relation) values(p_id,p_id,'source');
-  return p_id;
+  if v_doi is not null then select work_id into keyed from open_index.work_identifiers where work_identifiers.doi=v_doi; end if;
+  if wid is not null and keyed is not null and wid<>keyed then
+    raise exception 'Source identifier conflicts with existing membership; operator review required';
+  end if;
+  if wid is null then
+    wid:=coalesce(keyed,p_id);
+    if keyed is null then
+      if exists(select 1 from open_index.works where id=p_id) then
+        raise exception 'Singleton work ID collision for %; operator review required',p_id;
+      end if;
+      insert into open_index.works(id,title,main_record_id,publication_record_id,auto_title)
+        values(wid,coalesce(nullif(p_title,''),p_id),p_id,p_id,true);
+    end if;
+    perform 1 from open_index.works where id=wid for update;
+    if not exists(select 1 from open_index.works where id=wid and redirect_work_id is null) then
+      raise exception 'Canonical work changed during ingestion; retry transaction';
+    end if;
+    -- Register proof before membership so its guard can verify a non-singleton insertion.
+    if v_doi is not null then
+      insert into open_index.work_identifiers values(v_doi,wid,p_id,proof) on conflict(doi) do nothing;
+    end if;
+    insert into open_index.work_records(work_id,record_id,relation,identity)
+      values(wid,p_id,case when keyed is null then 'source' else 'alternative' end,proof);
+  elsif v_doi is not null then
+    insert into open_index.work_identifiers values(v_doi,wid,p_id,proof) on conflict(doi) do nothing;
+    update open_index.work_records set identity=proof where record_id=p_id and identity is null;
+    -- Preserve original accepted provenance on refresh. New proof for an existing source is retained
+    -- in raw entry/record history; the key's first verified assertion remains immutable.
+  end if;
+  return wid;
 end $$;
 
 create function open_index.bind_work_source() returns trigger
 language plpgsql security invoker set search_path='' as $$
-declare title_text text;
+declare title_text text; proof jsonb;
 begin
   if tg_op='UPDATE' and new.id is distinct from old.id then raise exception 'Source IDs are immutable'; end if;
-  if tg_table_name='entries' then title_text:=new.entry->>'title'; else title_text:=new.record->>'title'; end if;
-  new.work_id:=open_index.ensure_work_source(new.id,title_text);
+  if tg_table_name='entries' then title_text:=new.entry->>'title'; proof:=new.entry->'identity';
+  else title_text:=new.record->>'title'; proof:=new.record->'identity'; end if;
+  new.work_id:=open_index.resolve_work_source(new.id,title_text,proof);
   -- Source refreshes update only automatic singleton titles, never reviewed work metadata.
   update open_index.works set title=coalesce(nullif(title_text,''),title)
     where id=new.work_id and auto_title and not curated and main_record_id=new.id;
@@ -141,9 +229,10 @@ create constraint trigger work_records_graph after insert or update on open_inde
 create function open_index.backfill_work_sources() returns void
 language plpgsql security invoker set search_path='' as $$
 declare src record; begin
-  for src in select id,max(title) title from (
-    select id,entry->>'title' title from open_index.entries union all select id,title from open_index.records
-  ) s group by id order by id loop perform open_index.ensure_work_source(src.id,src.title); end loop;
+  for src in select id,payload from (
+    select id,entry payload from open_index.entries union all select id,record payload from open_index.records
+  ) s order by id,(coalesce(payload->'identity','null'::jsonb)<>'null'::jsonb) desc
+  loop perform open_index.resolve_work_source(src.id,src.payload->>'title',src.payload->'identity'); end loop;
   update open_index.entries e set work_id=m.work_id from open_index.work_records m where m.record_id=e.id and e.work_id is distinct from m.work_id;
   update open_index.records r set work_id=m.work_id from open_index.work_records m where m.record_id=r.id and r.work_id is distinct from m.work_id;
 end $$;
@@ -161,7 +250,7 @@ create function open_index.associate_work_source(
   p_main text,p_source text,p_expected_work text,p_reviewer text,p_evidence jsonb,
   p_title text,p_source_role text,p_source_date_meaning text,p_publication text
 ) returns text language plpgsql security invoker set search_path='' as $$
-declare target text; previous text; old_member jsonb; new_member jsonb; old_work jsonb; new_work jsonb;
+declare target text; previous text; old_member jsonb; new_member jsonb; old_source_work jsonb; old_target_work jsonb; new_source_work jsonb; new_target_work jsonb;
 begin
   if p_main=p_source or coalesce(trim(p_expected_work),'')='' or coalesce(trim(p_reviewer),'')='' or coalesce(trim(p_title),'')='' or
     jsonb_typeof(p_evidence) is distinct from 'array' or jsonb_array_length(p_evidence)=0 or
@@ -170,8 +259,8 @@ begin
     raise exception 'Reviewed distinct IDs, title, role, date meaning and nonempty evidence are required';
   end if;
   perform pg_advisory_xact_lock(hashtextextended('work-source:'||v,0)) from unnest(array[p_main,p_source]) v order by v;
-  target:=open_index.ensure_work_source(p_main,p_title);
-  previous:=open_index.ensure_work_source(p_source,p_source);
+  target:=open_index.resolve_work_source(p_main,p_title);
+  previous:=open_index.resolve_work_source(p_source,p_source);
   perform 1 from open_index.works where id in(target,previous) order by id for update;
   if not exists(select 1 from open_index.works where id=target and main_record_id=p_main and redirect_work_id is null) then
     raise exception 'Requested main must already be the canonical main of its work';
@@ -192,8 +281,10 @@ begin
     not exists(select 1 from open_index.work_records where work_id=target and record_id=p_publication) then
     raise exception 'Publication source must belong to the work';
   end if;
-  select to_jsonb(w)-'reviewed_at' into old_work from open_index.works w where id=target;
+  select to_jsonb(w) into old_source_work from open_index.works w where id=previous;
+  select to_jsonb(w) into old_target_work from open_index.works w where id=target;
   select to_jsonb(m) into old_member from open_index.work_records m where record_id=p_source;
+  update open_index.work_identifiers set work_id=target where work_id=previous and record_id=p_source;
   update open_index.work_records set work_id=target,relation='alternative',role=p_source_role,
     date_meaning=p_source_date_meaning,evidence=p_evidence,reviewed_by=p_reviewer where record_id=p_source;
   if previous<>target then
@@ -205,10 +296,11 @@ begin
   update open_index.entries set work_id=target where id=p_source and work_id<>target;
   update open_index.records set work_id=target where id=p_source and work_id<>target;
   select to_jsonb(m) into new_member from open_index.work_records m where record_id=p_source;
-  select to_jsonb(w)-'reviewed_at' into new_work from open_index.works w where id=target;
-  if old_member is distinct from new_member or old_work is distinct from new_work then
-    insert into open_index.work_membership_history(record_id,previous_work_id,work_id,previous_work,work,previous_membership,membership,reviewed_by,evidence)
-      values(p_source,previous,target,old_work,new_work,old_member,new_member,p_reviewer,p_evidence);
+  select to_jsonb(w) into new_source_work from open_index.works w where id=previous;
+  select to_jsonb(w) into new_target_work from open_index.works w where id=target;
+  if old_member is distinct from new_member or old_source_work is distinct from new_source_work or old_target_work is distinct from new_target_work then
+    insert into open_index.work_membership_history(record_id,previous_work_id,work_id,previous_source_work,previous_target_work,source_work,target_work,previous_membership,membership,reviewed_by,evidence)
+      values(p_source,previous,target,old_source_work,old_target_work,new_source_work,new_target_work,old_member,new_member,p_reviewer,p_evidence);
     insert into open_index.changes(record_id,kind) select id,'updated' from open_index.records where work_id=target;
   end if;
   return target;
@@ -216,8 +308,8 @@ end $$;
 
 -- Versioned evidence-backed DATA, not a runtime identity list. Reservations cover either arrival order.
 do $$ declare expected text; target text; proof jsonb:='["https://github.com/anthropics/formal-math/blob/main/eth/README.md","https://hexagonmath.org/2610.00577v1"]'; begin
-  perform open_index.ensure_work_source('lean/anthropics__formal-math__eth','A 2^{o(n)} Time Algorithm for 3-SAT');
-  expected:=open_index.ensure_work_source('hexagon/2610.00577','A 2^{o(n)} Time Algorithm for 3-SAT');
+  perform open_index.resolve_work_source('lean/anthropics__formal-math__eth','A 2^{o(n)} Time Algorithm for 3-SAT');
+  expected:=open_index.resolve_work_source('hexagon/2610.00577','A 2^{o(n)} Time Algorithm for 3-SAT');
   target:=open_index.associate_work_source('lean/anthropics__formal-math__eth','hexagon/2610.00577',expected,
     'curated-migration:anthropic-eth',proof,'A 2^{o(n)} Time Algorithm for 3-SAT','Paper','Paper publication','hexagon/2610.00577');
   update open_index.work_records set relation='main',role='Paper and Lean proof repository',
@@ -228,8 +320,9 @@ end $$;
 -- RLS remains enabled, without public policies. These helpers are not exposed to PUBLIC/anon/authenticated.
 revoke all on function open_index.guard_work_membership() from public;
 revoke all on function open_index.backfill_work_sources() from public;
-revoke all on open_index.works,open_index.work_records from public;
-revoke all on function open_index.ensure_work_source(text,text) from public;
+revoke all on open_index.works,open_index.work_records,open_index.work_identifiers from public;
+revoke all on function open_index.normalized_doi(text),open_index.source_doi(text,jsonb) from public;
+revoke all on function open_index.resolve_work_source(text,text,jsonb) from public;
 revoke all on function open_index.bind_work_source() from public;
 revoke all on function open_index.check_work_graph() from public;
 revoke all on function open_index.associate_work_source(text,text,text,text,jsonb,text,text,text,text) from public;
@@ -237,15 +330,16 @@ revoke all on function open_index.associate_work_source(text,text,text,text,json
 do $$ declare r text; begin
   foreach r in array array['anon','authenticated','service_role'] loop
     if exists(select 1 from pg_roles where rolname=r) then
-      execute format('revoke all on open_index.works,open_index.work_records,open_index.work_membership_history from %I',r);
+      execute format('revoke all on open_index.works,open_index.work_records,open_index.work_identifiers,open_index.work_membership_history from %I',r);
       execute format('revoke all on sequence open_index.work_membership_history_seq_seq from %I',r);
-      execute format('revoke all on function open_index.guard_work_membership(),open_index.backfill_work_sources(),open_index.ensure_work_source(text,text),open_index.bind_work_source(),open_index.check_work_graph(),open_index.associate_work_source(text,text,text,text,jsonb,text,text,text,text) from %I',r);
+      execute format('revoke all on function open_index.normalized_doi(text),open_index.source_doi(text,jsonb),open_index.guard_work_membership(),open_index.backfill_work_sources(),open_index.resolve_work_source(text,text,jsonb),open_index.bind_work_source(),open_index.check_work_graph(),open_index.associate_work_source(text,text,text,text,jsonb,text,text,text,text) from %I',r);
     end if;
   end loop;
   if exists(select 1 from pg_roles where rolname='service_role') then
-    grant select,insert on open_index.works,open_index.work_records to service_role;
+    grant select,insert on open_index.works,open_index.work_records,open_index.work_identifiers to service_role;
     grant update(title) on open_index.works to service_role;
-    grant execute on function open_index.guard_work_membership(),open_index.ensure_work_source(text,text),open_index.bind_work_source(),open_index.check_work_graph() to service_role;
+    grant update(identity) on open_index.work_records to service_role;
+    grant execute on function open_index.normalized_doi(text),open_index.source_doi(text,jsonb),open_index.guard_work_membership(),open_index.resolve_work_source(text,text,jsonb),open_index.bind_work_source(),open_index.check_work_graph() to service_role;
   end if;
 end $$;
 

@@ -2369,6 +2369,40 @@
 					}
 				}
 			},
+			"SourceIdentity": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": [
+					"scheme",
+					"value",
+					"verified_by",
+					"evidence"
+				],
+				"description": "Exact self DOI checked by a trusted upstream adapter. Other DOI fields and relationship links are unverified for entity resolution.",
+				"properties": {
+					"scheme": {
+						"type": "string",
+						"enum": [
+							"doi"
+						]
+					},
+					"value": {
+						"type": "string",
+						"minLength": 1
+					},
+					"verified_by": {
+						"type": "string",
+						"enum": [
+							"doi-csl",
+							"zenodo-record"
+						]
+					},
+					"evidence": {
+						"type": "string",
+						"minLength": 1
+					}
+				}
+			},
 			"Entry": {
 				"type": "object",
 				"additionalProperties": false,
@@ -2452,6 +2486,9 @@
 					},
 					"doi": {
 						"type": "string"
+					},
+					"identity": {
+						"$ref": "#/components/schemas/SourceIdentity"
 					},
 					"stars": {
 						"type": "integer"
@@ -2674,6 +2711,7 @@
 					"id",
 					"title",
 					"main_record_id",
+					"member_count",
 					"publication_record_id",
 					"view_record_id",
 					"evidence",
@@ -2698,6 +2736,10 @@
 							"null"
 						],
 						"description": "Independent publication metadata source; never inferred from the main record creation date."
+					},
+					"member_count": {
+						"type": "integer",
+						"description": "Durable source membership count, including unavailable records."
 					},
 					"requested_work_id": {
 						"type": "string",
@@ -2736,6 +2778,9 @@
 								},
 								"date_meaning": {
 									"type": "string"
+								},
+								"identity": {
+									"$ref": "#/components/schemas/SourceIdentity"
 								},
 								"evidence": {
 									"type": "array",
@@ -2836,6 +2881,12 @@
 					"json": {
 						"type": "string",
 						"description": "Upstream JSON metadata URL."
+					},
+					"doi": {
+						"type": "string"
+					},
+					"identity": {
+						"$ref": "#/components/schemas/SourceIdentity"
 					},
 					"summary": {
 						"type": "string",

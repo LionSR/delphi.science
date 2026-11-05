@@ -268,7 +268,7 @@ function rankedSql(ranked: Ranked, where: string, n: number): string {
 		SELECT ${SERVED} AS record FROM cand r ORDER BY r.points DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 1} OFFSET $${n + 2}`;
 }
 
-async function rawSearch(db: Db, q: string, opts: SearchOptions = {}, excluded: string[] = [], only: readonly string[] = []) {
+async function rawSearch(db: Db, q: string, opts: SearchOptions = {}) {
 	const t0 = performance.now();
 	const sort = opts.sort ?? (q.trim() ? 'relevance' : 'newest');
 	if (!(SORTS as readonly string[]).includes(sort)) throw new QueryError(`unknown sort ${JSON.stringify(sort)}`, `Use sort=${SORTS.join(', sort=')}.`);
@@ -277,13 +277,6 @@ async function rawSearch(db: Db, q: string, opts: SearchOptions = {}, excluded: 
 	const start = pageStart(opts, SEARCH_PAGE);
 	// An empty query lists everything.
 	let { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };
-	if (excluded.length) {
-		params.push(excluded);
-		where = `(${where}) AND r.id <> ALL($${params.length}::text[])`;
-	}
-	let onlyWhere = 'true';
-	if (only.length) { params.push(only); onlyWhere = `r.id = ANY($${params.length}::text[])`; }
-	const filtered = `(${where}) AND ${onlyWhere}`;
 	const n = params.length;
 	let sql: string;
 	const all = [...params];
@@ -300,21 +293,21 @@ async function rawSearch(db: Db, q: string, opts: SearchOptions = {}, excluded: 
 				        WHERE ${where} AND r.embedding IS NOT NULL ORDER BY r.embedding OPERATOR(extensions.<=>) ${e}, r.id LIMIT 200)
 				SELECT ${SERVED} AS record FROM open_index.records r
 				JOIN (SELECT coalesce(kw.id, vec.id) AS id, coalesce(1.0 / (60 + kw.k), 0) + coalesce(1.0 / (60 + vec.k), 0) AS score
-				      FROM kw FULL JOIN vec ON kw.id = vec.id) s ON s.id = r.id WHERE ${onlyWhere}
+				      FROM kw FULL JOIN vec ON kw.id = vec.id) s ON s.id = r.id
 				ORDER BY s.score DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 2} OFFSET $${n + 3}`;
 		} else {
-			sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${filtered} ORDER BY ${rank} DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 1} OFFSET $${n + 2}`;
+			sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 1} OFFSET $${n + 2}`;
 		}
 	} else if (RANKED[sort]) {
-		sql = rankedSql(RANKED[sort], filtered, n);
+		sql = rankedSql(RANKED[sort], where, n);
 	} else {
-		sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${filtered} ORDER BY ${ORDER[sort] ?? ORDER.newest} LIMIT $${n + 1} OFFSET $${n + 2}`;
+		sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${ORDER[sort] ?? ORDER.newest} LIMIT $${n + 1} OFFSET $${n + 2}`;
 	}
 	all.push(start.limit, start.offset);
 	// The count, unless the cursor carries it, runs alongside the page.
 	const [rows, total] = await Promise.all([
 		db.query<{ record: Record<string, unknown> }>(sql, all).then((r) => r.rows),
-		start.total ?? db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${filtered}`, params).then((r) => Number(r.rows[0].n)),
+		start.total ?? db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params).then((r) => Number(r.rows[0].n)),
 	]);
 	return {
 		query: q, sort, count: rows.length,

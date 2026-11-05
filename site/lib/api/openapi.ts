@@ -349,6 +349,11 @@ export const spec = {
 				identifier: { type: 'string', description: 'Target paper or result identifier (arXiv ID, DOI, or URL).' }, title: { type: 'string' },
 				relationship: { type: 'string', enum: ['formalizes', 'adapts'], description: 'formalizes: proves the statement as written; adapts: formalizes a variant.' },
 			} },
+			SourceIdentity: { type: 'object', additionalProperties: false, required: ['scheme', 'value', 'verified_by', 'evidence'],
+				description: 'Exact self DOI checked by a trusted upstream adapter. Other DOI fields and relationship links are unverified for entity resolution.', properties: {
+					scheme: { type: 'string', enum: ['doi'] }, value: { type: 'string', minLength: 1 },
+					verified_by: { type: 'string', enum: ['doi-csl', 'zenodo-record'] }, evidence: { type: 'string', minLength: 1 },
+				} },
 			Entry: { type: 'object', additionalProperties: false, required: ['key', 'source', 'url', 'title'],
 				description: 'Internal source entry stored in open_index.entries and validated by store.py and the site before building a Record.',
 				properties: {
@@ -358,7 +363,7 @@ export const spec = {
 					published: { type: 'string', format: 'date' }, updated: { type: 'string', format: 'date', description: 'Last revision date at the upstream source.' },
 					added: { type: 'string', format: 'date' }, added_by: { type: 'string', description: 'Submitter GitHub login or harvest:<job>.' },
 					refreshed: { type: 'string', format: 'date', description: 'Date metadata was last re-fetched from the source (index.py refresh).' },
-					origin: { type: 'string' }, pdf: { type: 'string' }, repo: { type: 'string' }, json: { type: 'string' }, doi: { type: 'string' },
+					origin: { type: 'string' }, pdf: { type: 'string' }, repo: { type: 'string' }, json: { type: 'string' }, doi: { type: 'string' }, identity: { $ref: '#/components/schemas/SourceIdentity' },
 					stars: { type: 'integer' }, agent_ready: { type: 'boolean' }, citation_cff: { type: 'boolean' }, gone: { type: 'boolean' }, license: { type: 'string' },
 					version: { type: 'integer' }, commit: { type: 'string' }, trust: { type: 'string' }, verified: { type: 'boolean' },
 					reviewer_models: { type: 'array', items: { type: 'string' } }, ai_models: { type: 'array', items: { type: 'string' } },
@@ -380,10 +385,10 @@ export const spec = {
 						reviewed_by: { type: 'string' }, drafted_by: { type: 'string' }, basis: { type: 'string', description: 'SHA-1 prefix of linked URLs and stances at review time.' },
 					} },
 				} },
-			Work: { type: 'object', description: 'Persisted canonical work from open_index.works/work_records. Top-level Record identity and interactions stay source-bound. Membership is not verification. Compact results omit group discussion and compact each source snapshot.', required: ['id', 'title', 'main_record_id', 'publication_record_id', 'view_record_id', 'evidence', 'sources', 'discussed'], properties: {
-				id: { type: 'string' }, title: { type: 'string', description: 'Evidence-backed work display title; preserves mathematical notation lost by a source parser without rewriting source snapshots.' }, main_record_id: { type: 'string', description: 'Stable curated canonical main record ID, independent of query/sort. May be temporarily unavailable; sources lists only available records.' }, publication_record_id: { type: ['string', 'null'], description: 'Independent publication metadata source; never inferred from the main record creation date.' }, requested_work_id: { type: 'string', description: 'Original ID when a retained work alias was requested.' }, view_record_id: { type: 'string', description: 'Source record view at the root of this response; interactions target this ID, never implicitly the main record.' }, evidence: { type: 'array', items: { type: 'string' } }, discussed: { type: 'integer', description: 'URL-normalized union of external responses across available sources; never a sum of source counts.' },
+			Work: { type: 'object', description: 'Persisted canonical work from open_index.works/work_records. Top-level Record identity and interactions stay source-bound. Membership is not verification. Compact results omit group discussion and compact each source snapshot.', required: ['id', 'title', 'main_record_id', 'member_count', 'publication_record_id', 'view_record_id', 'evidence', 'sources', 'discussed'], properties: {
+				id: { type: 'string' }, title: { type: 'string', description: 'Evidence-backed work display title; preserves mathematical notation lost by a source parser without rewriting source snapshots.' }, main_record_id: { type: 'string', description: 'Stable curated canonical main record ID, independent of query/sort. May be temporarily unavailable; sources lists only available records.' }, publication_record_id: { type: ['string', 'null'], description: 'Independent publication metadata source; never inferred from the main record creation date.' }, member_count: { type: 'integer', description: 'Durable source membership count, including unavailable records.' }, requested_work_id: { type: 'string', description: 'Original ID when a retained work alias was requested.' }, view_record_id: { type: 'string', description: 'Source record view at the root of this response; interactions target this ID, never implicitly the main record.' }, evidence: { type: 'array', items: { type: 'string' } }, discussed: { type: 'integer', description: 'URL-normalized union of external responses across available sources; never a sum of source counts.' },
 				sources: { type: 'array', items: { type: 'object', required: ['id', 'role', 'date_meaning', 'record'], properties: {
-					id: { type: 'string' }, role: { type: 'string' }, date_meaning: { type: 'string' }, evidence: { type: 'array', items: { type: 'string' } }, reviewed_by: { type: ['string', 'null'] },
+					id: { type: 'string' }, role: { type: 'string' }, date_meaning: { type: 'string' }, identity: { $ref: '#/components/schemas/SourceIdentity' }, evidence: { type: 'array', items: { type: 'string' } }, reviewed_by: { type: ['string', 'null'] },
 					record: { type: 'object', additionalProperties: true, description: 'Unmodified source record with live source-bound interaction counts; full or compact according to fields. Does not contain work recursively.' },
 				} } },
 				discussion: { type: 'array', items: { type: 'object', additionalProperties: true, required: ['url', 'assertions'], description: 'One external response per normalized URL. Display fields use the first curated source; assertions retain all original source metadata, including conflicts.', properties: {
@@ -394,7 +399,7 @@ export const spec = {
 			} },
 			Record: { type: 'object', required: ['id', 'title', 'url', 'source'], properties: {
 				id: { type: 'string' }, work_id: { type: 'string', description: 'Persisted canonical work identity; absent until the separately reviewed schema migration is applied.' }, source: { type: 'string', description: 'Source prefix (see listPrefixes).' }, title: { type: 'string' }, authors: { type: 'array', items: { type: 'string' } },
-				url: { type: 'string', description: 'Canonical URL at the upstream source.' }, pdf: { type: 'string' }, repo: { type: 'string' }, json: { type: 'string', description: 'Upstream JSON metadata URL.' },
+				url: { type: 'string', description: 'Canonical URL at the upstream source.' }, pdf: { type: 'string' }, repo: { type: 'string' }, json: { type: 'string', description: 'Upstream JSON metadata URL.' }, doi: { type: 'string' }, identity: { $ref: '#/components/schemas/SourceIdentity' },
 				summary: { type: 'string', description: 'Abstract (truncated to ~240 characters in compact search results).' }, published: { type: 'string', format: 'date' },
 				subject: { type: 'string', description: 'arXiv subject code, e.g. math.NT (cat: in queries).' }, division: { type: 'string', description: 'arXiv division, e.g. math.' },
 				domain: { type: 'string', description: 'Upstream subject classification.' }, tags: { type: 'array', items: { type: 'string' } },

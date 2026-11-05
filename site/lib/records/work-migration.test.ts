@@ -5,12 +5,14 @@ import {test} from 'node:test';
 import {emptyDb,migrations,allowRouteImports,useDb} from '#lib/testing.ts';
 import {load,type Item} from './load.ts';
 import {canonicalWork,get,search} from './query.ts';
+import {isGroupedWork} from './work-groups.ts';
 import {comment} from '#lib/posts/comments.ts';
 import {vote} from './votes.ts';
 const migration=migrations().find(m=>m.name.includes('persistent_canonical_works'))!;
 const main='lean/anthropics__formal-math__eth',paper='hexagon/2610.00577';
 const accept=async()=>({decision:'ACCEPT' as const,reason:'Fixture',verification_needed:false});
 const item=(id:string):Item=>({id,source:id.split('/')[0],title:'A similar title',url:`https://example.org/${id}`,published:'2026-01-01'});
+const doiProof=(doi:string,zenodo?:string)=>({scheme:'doi' as const,value:doi,verified_by:zenodo?'zenodo-record' as const:'doi-csl' as const,evidence:zenodo?`https://zenodo.org/api/records/${zenodo}`:`https://doi.org/${doi.trim().replace(/^(https?:\/\/(dx\.)?doi\.org\/|doi:)\s*/i,'').toLowerCase()}`});
 async function legacy(){const db=emptyDb();for(const m of migrations().filter(m=>m.name!==migration.name))await db.exec(m.sql);return db;}
 const apply=async(db:Awaited<ReturnType<typeof legacy>>)=>db.transaction(tx=>tx.exec(migration.sql));
 const associate=(db:Awaited<ReturnType<typeof legacy>>,a:string,b:string,expected:string|null,title='Reviewed work',publication:string|null=a)=>db.query(
@@ -90,12 +92,91 @@ test('entries-first, records-only, reserved missing sources, refreshes and concu
  }finally{await db.close();}
 });
 
+test('new aliases resolve by verified exact DOI at insertion, before search/display, in either arrival order',async()=>{
+ for(const reverse of [false,true]){
+  const db=await legacy();try{
+   await apply(db);
+   const a={...item('doi/10.5281__ZENODO.8001'),identity:doiProof(' DOI:10.5281/ZENODO.8001 ')},b={...item('zenodo/8001'),identity:doiProof('https://doi.org/10.5281/zenodo.8001','8001')};
+   const [first,second]=reverse?[b,a]:[a,b];
+   // Records-only import and entry-first submission share the same trigger resolver.
+   await load(db,[first]);
+   await db.query('INSERT INTO open_index.entries(id,entry) VALUES($1,$2)',[second.id,{...second,key:second.id.split('/')[1],id:undefined}]);
+   const rows=(await db.query<{work_id:string}>('SELECT work_id FROM open_index.work_records WHERE record_id=ANY($1::text[])',[ [a.id,b.id] ])).rows;
+   assert.deepEqual(rows.map(r=>r.work_id),[first.id,first.id]);
+   assert.equal((await db.query('SELECT id FROM open_index.works WHERE id=ANY($1::text[])',[[a.id,b.id]])).rows.length,1,'no second singleton is created, even transiently at transaction completion');
+   assert.equal((await db.query('SELECT * FROM open_index.work_identifiers')).rows.length,1);
+   await Promise.all([load(db,[a,b]),load(db,[b,a])]);
+   await db.query('SELECT open_index.backfill_work_sources()');
+   assert.equal((await db.query('SELECT DISTINCT work_id FROM open_index.records WHERE id=ANY($1::text[])',[[a.id,b.id]])).rows.length,1);
+   assert.equal((await db.query<{main_record_id:string}>('SELECT main_record_id FROM open_index.works WHERE id=$1',[first.id])).rows[0].main_record_id,first.id,'main does not change with import/sort order after creation');
+   await load(db,[item(second.id)]);
+   assert.deepEqual((await canonicalWork(db,first.id))!.sources.find(s=>s.id===second.id)!.identity,second.identity,'accepted proof remains visible from persisted membership when a raw refresh omits it');
+   await load(db,[{...item('doi/10.5281__zenodo.8002'),identity:doiProof('10.5281/zenodo.8002')}]);
+   assert.equal((await db.query('SELECT * FROM open_index.work_identifiers')).rows.length,2,'different version DOI is distinct');
+   await db.query('DELETE FROM open_index.records WHERE id=$1',[first.id]);
+   const remaining=(await get(db,second.id))!;
+   assert.ok(isGroupedWork(remaining));assert.equal((remaining.work as any).member_count,2);
+   assert.equal((remaining.work as any).main_record_id,first.id,'automatic group still discloses fixed unavailable main');
+   assert.equal((remaining.work as any).sources.length,1,'available source snapshots and durable membership are separate');
+  }finally{await db.close();}
+ }
+});
+
+test('identifier enrichment is conservative: conflicts, multiple/invalid proofs and relationship links never auto-merge',async()=>{
+ const db=await legacy();try{
+  await apply(db);
+  const doi='10.5281/zenodo.9001',a='doi/10.5281__zenodo.9001',b='zenodo/9001';
+  await load(db,[{...item(a),identity:doiProof(doi)},item(b)]);
+  const before=(await db.query('SELECT id,record,content_hash,work_id FROM open_index.records ORDER BY id')).rows;
+  await assert.rejects(load(db,[{...item(b),identity:doiProof(doi,'9001')}]),/conflicts with existing membership/);
+  assert.deepEqual((await db.query('SELECT id,record,content_hash,work_id FROM open_index.records ORDER BY id')).rows,before);
+  await load(db,[{...item('doi/10.5555__enriched'),doi:'10.5555/enriched'}]);
+  await load(db,[{...item('doi/10.5555__enriched'),identity:doiProof('10.5555/enriched')}]);
+  assert.equal((await db.query('SELECT * FROM open_index.work_identifiers WHERE doi=$1',['10.5555/enriched'])).rows.length,1,'late verified proof may enrich an otherwise unclaimed identity');
+  for(const [id,proof] of [['zenodo/9002',doiProof(doi,'9002')],['web/false',doiProof(doi)],['doi/10.5555__bad',[doiProof(doi),doiProof('10.5555/other')]]]){
+   await assert.rejects(db.query('INSERT INTO open_index.entries(id,entry) VALUES($1,$2)',[id,{title:'Unsafe claim',identity:proof}]),/identifier/);
+   assert.equal((await db.query('SELECT * FROM open_index.work_records WHERE record_id=$1',[id])).rows.length,0);
+  }
+  await load(db,[{...item('test/reference'),doi,formalizes:[{identifier:doi,relationship:'formalizes'}]},item('test/same-title')]);
+  assert.equal((await db.query('SELECT DISTINCT work_id FROM open_index.records WHERE id=ANY($1::text[])',[[a,b,'test/reference','test/same-title']])).rows.length,4,'plain DOI, title and formalizes relationship are not verified identity');
+  await associate(db,a,b,b,'Reviewed DOI work');
+  assert.equal((await db.query<{work_id:string}>('SELECT work_id FROM open_index.work_identifiers WHERE doi=$1',[doi])).rows[0].work_id,a);
+  await load(db,[{...item(b),identity:doiProof(doi,'9001')}]);
+  assert.equal((await db.query<{work_id:string}>('SELECT work_id FROM open_index.records WHERE id=$1',[b])).rows[0].work_id,a);
+ }finally{await db.close();}
+});
+
+test('backfill prefers verified entry metadata over an older proof-less materialization without rewriting either',async()=>{
+ const db=await legacy();try{
+  const doi='10.5281/zenodo.8101',a='doi/10.5281__zenodo.8101',b='zenodo/8101';
+  await load(db,[{...item(a),identity:doiProof(doi)},item(b)]);
+  await db.query('INSERT INTO open_index.entries(id,entry) VALUES($1,$2)',[b,{title:'Refreshed source',identity:doiProof(doi,'8101')}]);
+  const before=(await db.query('SELECT id,record,content_hash FROM open_index.records ORDER BY id')).rows;
+  await apply(db);
+  assert.equal((await db.query('SELECT DISTINCT work_id FROM open_index.work_records WHERE record_id=ANY($1::text[])',[[a,b]])).rows.length,1);
+  assert.deepEqual((await db.query('SELECT id,record,content_hash FROM open_index.records ORDER BY id')).rows,before);
+  await db.query('SELECT open_index.backfill_work_sources()');
+  assert.equal((await db.query('SELECT * FROM open_index.work_identifiers WHERE doi=$1',[doi])).rows.length,1);
+ }finally{await db.close();}
+});
+
 test('reviewed association is generic, transactional, idempotent and rejects stale/null CAS, false merges and invalid graph changes',async()=>{
  const db=await legacy();try{
   await apply(db);await load(db,[item('test/a'),item('test/b'),item('test/c')]);
   await assert.rejects(associate(db,'test/a','test/b',null),/required/);
   await assert.rejects(associate(db,'test/a','test/b','wrong/work'),/Stale/);
+  await db.exec("UPDATE open_index.works SET title='Original target title' WHERE id='test/a'; UPDATE open_index.works SET title='Original source title' WHERE id='test/b'");
+  const rawBefore=(await db.query('SELECT id,record,content_hash FROM open_index.records ORDER BY id')).rows;
   await associate(db,'test/a','test/b','test/b');
+  type Audit={previous_work_id:string;work_id:string;previous_source_work:Record<string,unknown>;previous_target_work:Record<string,unknown>;source_work:Record<string,unknown>;target_work:Record<string,unknown>};
+  const attached=(await db.query<Audit>("SELECT * FROM open_index.work_membership_history WHERE record_id='test/b' ORDER BY seq DESC LIMIT 1")).rows[0];
+  assert.equal(attached.previous_source_work.id,attached.previous_work_id);
+  assert.equal(attached.previous_source_work.id,'test/b');assert.equal(attached.previous_source_work.title,'Original source title');
+  assert.equal(attached.previous_target_work.id,attached.work_id);assert.equal(attached.previous_target_work.title,'Original target title');
+  assert.equal(attached.source_work.id,'test/b');assert.equal(attached.source_work.redirect_work_id,'test/a');assert.equal(attached.source_work.main_record_id,null);
+  assert.equal(attached.target_work.id,'test/a');assert.equal(attached.target_work.title,'Reviewed work');
+  assert.ok('reviewed_at' in attached.previous_source_work && 'reviewed_at' in attached.previous_target_work && 'reviewed_at' in attached.source_work && 'reviewed_at' in attached.target_work);
+  assert.deepEqual((await db.query('SELECT id,record,content_hash FROM open_index.records ORDER BY id')).rows,rawBefore);
   const snapshot=(await db.query('SELECT * FROM open_index.work_membership_history')).rows;
   await associate(db,'test/a','test/b','test/b');assert.deepEqual((await db.query('SELECT * FROM open_index.work_membership_history')).rows,snapshot);
   await assert.rejects(associate(db,'test/a','test/b','wrong/work','Unexpected title'),/Stale/);
@@ -105,6 +186,15 @@ test('reviewed association is generic, transactional, idempotent and rejects sta
   const count=(await db.query('SELECT * FROM open_index.work_membership_history')).rows.length;
   await associate(db,'test/a','test/b','test/a','Reviewed work','test/b');
   assert.equal((await db.query('SELECT * FROM open_index.work_membership_history')).rows.length,count+1,'publication-only reviewed changes are audited');
+  const publication=(await db.query<Audit>("SELECT * FROM open_index.work_membership_history WHERE record_id='test/b' ORDER BY seq DESC LIMIT 1")).rows[0];
+  assert.equal(publication.previous_work_id,'test/a');assert.equal(publication.work_id,'test/a');
+  assert.deepEqual(publication.previous_source_work,publication.previous_target_work);
+  assert.deepEqual(publication.source_work,publication.target_work);
+  assert.equal(publication.previous_target_work.publication_record_id,'test/a');assert.equal(publication.target_work.publication_record_id,'test/b');
+  assert.equal(publication.target_work.main_record_id,'test/a');
+  const publicationSnapshot=(await db.query('SELECT * FROM open_index.work_membership_history ORDER BY seq')).rows;
+  await associate(db,'test/a','test/b','test/a','Reviewed work','test/b');
+  assert.deepEqual((await db.query('SELECT * FROM open_index.work_membership_history ORDER BY seq')).rows,publicationSnapshot,'same-target no-op replay does not emit timestamp-only audit rows');
   const work=await canonicalWork(db,'test/b');assert.equal(work!.id,'test/a');assert.equal(work!.publication_record_id,'test/b');
   assert.equal((await search(db,'source:test')).total,2,'no per-work code needed for new association');
  }finally{await db.close();}
@@ -121,12 +211,22 @@ test('private ACLs override default public/app grants while the ingestion servic
    assert.deepEqual(p,{op:false,history:false,backfill:false});
   }
   await db.exec('SET ROLE service_role');await load(db,[item('test/service-ingest')]);
+  await load(db,[{...item('doi/10.5281__ZENODO.7001'),identity:doiProof('10.5281/zenodo.7001')},{...item('zenodo/7001'),identity:doiProof('10.5281/zenodo.7001','7001')}]);
+  assert.equal((await db.query('SELECT DISTINCT work_id FROM open_index.records WHERE id=ANY($1::text[])',[['doi/10.5281__ZENODO.7001','zenodo/7001']])).rows.length,1,'service ingestion resolves accepted aliases');
+  await load(db,[item('doi/10.5555__service-enriched')]);
+  await load(db,[{...item('doi/10.5555__service-enriched'),identity:doiProof('10.5555/service-enriched')}]);
+  assert.ok((await db.query<{identity:unknown}>("SELECT identity FROM open_index.work_records WHERE record_id='doi/10.5555__service-enriched'")).rows[0].identity,'late proof is durable under the ingestion role');
+  await assert.rejects(db.query('INSERT INTO open_index.work_identifiers VALUES($1,$2,$3,$4)',['10.5555/spoof','test/service-ingest','test/service-ingest',doiProof('10.5555/spoof')]),/identifier/);
+  await assert.rejects(db.transaction(async tx=>{
+   await tx.query('INSERT INTO open_index.work_identifiers VALUES($1,$2,$3,$4)',['10.5555/backdoor',main,'doi/10.5555__backdoor',doiProof('10.5555/backdoor')]);
+   await tx.query('INSERT INTO open_index.work_records(work_id,record_id,identity) VALUES($1,$2,$3)',[main,'doi/10.5555__backdoor',doiProof('10.5555/backdoor')]);
+  }),/owner/,'ingestion cannot invent a new DOI claim to bypass reviewed membership');
   await assert.rejects(db.query('INSERT INTO open_index.work_records(work_id,record_id) VALUES($1,$2)',[main,'test/backdoor']),/owner/);
   await assert.rejects(db.query("INSERT INTO open_index.work_records(work_id,record_id) VALUES('test/legacy-collision','test/legacy-collision')"),/owner/);
   await db.exec('RESET ROLE');
   assert.equal((await get(db,'test/service-ingest'))!.work_id,'test/service-ingest');
   assert.ok((await db.query<{relrowsecurity:boolean}>("SELECT relrowsecurity FROM pg_class WHERE oid='open_index.work_membership_history'::regclass")).rows[0].relrowsecurity);
-  assert.equal((await db.query<{n:number}>("SELECT count(*)::int n FROM pg_proc WHERE pronamespace='open_index'::regnamespace AND proname IN ('ensure_work_source','bind_work_source','check_work_graph','associate_work_source','backfill_work_sources') AND prosecdef")).rows[0].n,0);
+  assert.equal((await db.query<{n:number}>("SELECT count(*)::int n FROM pg_proc WHERE pronamespace='open_index'::regnamespace AND proname IN ('normalized_doi','source_doi','resolve_work_source','guard_work_membership','bind_work_source','check_work_graph','associate_work_source','backfill_work_sources') AND prosecdef")).rows[0].n,0);
  }finally{await db.close();}
 });
 

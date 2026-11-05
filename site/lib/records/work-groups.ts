@@ -3,11 +3,11 @@ import type { Db } from '#lib/db.ts';
 import { CodedError } from '#lib/errors.ts';
 
 type Raw = Record<string, unknown>;
-export type WorkSource = { id: string; role: string; date_meaning: string; evidence?: string[]; reviewed_by?: string | null; record: Raw };
+export type WorkSource = { id: string; role: string; date_meaning: string; evidence?: string[]; reviewed_by?: string | null; identity?: Raw | null; record: Raw };
 export type WorkResponse = Raw & { url: string; assertions: { record_id: string; link: Raw }[] };
-export type Work = { id: string; title: string; main_record_id: string; publication_record_id: string | null; view_record_id: string; evidence: string[]; sources: WorkSource[]; discussed: number; discussion?: WorkResponse[]; requested_work_id?: string };
+export type Work = { id: string; title: string; main_record_id: string; member_count: number; publication_record_id: string | null; view_record_id: string; evidence: string[]; sources: WorkSource[]; discussed: number; discussion?: WorkResponse[]; requested_work_id?: string };
 export const workOf = (r: Raw) => r.work as Work | undefined;
-export const isGroupedWork = (r: Raw) => Boolean(workOf(r) && (workOf(r)!.sources.length > 1 || workOf(r)!.evidence.length));
+export const isGroupedWork = (r: Raw) => Boolean(workOf(r) && (workOf(r)!.member_count > 1 || workOf(r)!.evidence.length));
 export const mainRecordOf = (r: Raw): Raw => {
 	const work = workOf(r);
 	return work?.sources.find((s) => s.id === work.main_record_id)?.record ?? r;
@@ -51,16 +51,16 @@ export function workResponses(sources: WorkSource[]): WorkResponse[] {
 	return [...links.values()];
 }
 
-type WorkRow = { id: string; title: string; main_record_id: string; publication_record_id: string | null; evidence: string[] };
+type WorkRow = { id: string; title: string; main_record_id: string; member_count: number; publication_record_id: string | null; evidence: string[] };
 async function readWorks(db: Db, ids: string[], served: string): Promise<Map<string, Work>> {
 	if (!ids.length) return new Map();
-	const works = (await db.query<WorkRow>(`SELECT id,title,main_record_id,publication_record_id,evidence FROM open_index.works WHERE id=ANY($1::text[]) AND redirect_work_id IS NULL`, [ids])).rows;
-	const sources = (await db.query<{ work_id: string; id: string; role: string; date_meaning: string; evidence: string[]; reviewed_by: string | null; record: Raw }>(
-		`SELECT m.work_id,m.record_id AS id,m.role,m.date_meaning,m.evidence,m.reviewed_by,${served} AS record
+	const works = (await db.query<WorkRow>(`SELECT id,title,main_record_id,publication_record_id,evidence,(SELECT count(*)::int FROM open_index.work_records m WHERE m.work_id=w.id) AS member_count FROM open_index.works w WHERE id=ANY($1::text[]) AND redirect_work_id IS NULL`, [ids])).rows;
+	const sources = (await db.query<{ work_id: string; id: string; role: string; date_meaning: string; evidence: string[]; reviewed_by: string | null; identity: Raw | null; record: Raw }>(
+		`SELECT m.work_id,m.record_id AS id,m.role,m.date_meaning,m.evidence,m.reviewed_by,m.identity,${served} AS record
 		 FROM open_index.work_records m JOIN open_index.records r ON r.id=m.record_id JOIN open_index.works w ON w.id=m.work_id
 		 WHERE m.work_id=ANY($1::text[]) ORDER BY m.work_id,(m.record_id=w.main_record_id) DESC,m.record_id`, [ids])).rows;
 	return new Map(works.map((w) => {
-		const available = sources.filter((s) => s.work_id === w.id).map(({ work_id: _, ...s }) => s);
+		const available = sources.filter((s) => s.work_id === w.id).map(({ work_id: _, identity, ...s }) => ({...s,...(identity ? {identity} : {})}));
 		const discussion = workResponses(available);
 		return [w.id, { ...w, view_record_id: w.main_record_id, sources: available, discussed: discussion.length, discussion }];
 	}));

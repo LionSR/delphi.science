@@ -2,7 +2,7 @@ import { strict as assert } from 'node:assert';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { test } from 'node:test';
-import { Pager, pageHref, pageNumbers, pageParam } from '#app/pager.ts';
+import { Pager, pageHref, pageNumbers, pageParam } from '#lib/pager.ts';
 
 test('page numbers show the ends and the pages around this one, and skip the rest', () => {
 	assert.deepEqual(pageNumbers(1, 1), [1]);

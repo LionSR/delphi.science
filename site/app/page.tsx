@@ -9,7 +9,7 @@ import { myVotes } from '#lib/records/votes.ts';
 import { Hero } from './logo.tsx';
 import { Vote } from './vote.tsx';
 import { HomeOrder } from './home-order.ts';
-import { Pager, PAGE_SIZE, pageHref, pageParam } from './pager.ts';
+import { Pager, PAGE_SIZE, pageHref, pageParam } from '#lib/pager.ts';
 
 export const dynamic = 'force-dynamic';
 

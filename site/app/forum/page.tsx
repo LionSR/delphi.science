@@ -6,7 +6,7 @@ import { me } from '#lib/accounts/session.ts';
 import { publicNames } from '#lib/accounts/people.ts';
 import { date } from '#lib/view.ts';
 import { PostForm } from '#app/post-form.tsx';
-import { Pager, PAGE_SIZE, pageParam } from '#app/pager.ts';
+import { Pager, PAGE_SIZE, pageParam } from '#lib/pager.ts';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Forum' };

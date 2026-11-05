@@ -215,7 +215,7 @@
 							"type": "string",
 							"maxLength": 200
 						},
-						"description": "next_cursor from the previous page, unchanged."
+						"description": "next_cursor from the previous reply, unchanged."
 					},
 					{
 						"name": "fields",
@@ -1068,7 +1068,7 @@
 							"type": "string",
 							"maxLength": 200
 						},
-						"description": "next_cursor from the previous page, unchanged."
+						"description": "next_cursor from the previous reply, unchanged."
 					},
 					{
 						"name": "since",
@@ -1088,7 +1088,7 @@
 							"maximum": 100,
 							"default": 30
 						},
-						"description": "Topics, and latest posts, per page: from 1 to 100; 30 if left out."
+						"description": "Topics, and latest posts, per page, from 1 to 100; 30 if left out."
 					}
 				],
 				"responses": {
@@ -1632,13 +1632,24 @@
 						"description": "all (every post), topics (opening posts), replies, comments (including record reviews), or votes (record votes)."
 					},
 					{
+						"name": "page",
+						"in": "query",
+						"schema": {
+							"type": "integer",
+							"minimum": 1,
+							"maximum": 10000,
+							"default": 1
+						},
+						"description": "Page number, from 1 to 10000, of limit items each; pages in the reply says how many there are. Ignored when cursor is given."
+					},
+					{
 						"name": "cursor",
 						"in": "query",
 						"schema": {
 							"type": "string",
-							"maxLength": 1024
+							"maxLength": 200
 						},
-						"description": "next_cursor from the previous page of the same login and tab, unchanged."
+						"description": "next_cursor from the previous reply, unchanged."
 					},
 					{
 						"name": "limit",
@@ -2809,9 +2820,9 @@
 					"total",
 					"page",
 					"pages",
+					"next_cursor",
 					"count",
-					"results",
-					"next_cursor"
+					"results"
 				],
 				"properties": {
 					"query": {
@@ -3220,6 +3231,9 @@
 					"login",
 					"tab",
 					"counts",
+					"total",
+					"page",
+					"pages",
 					"next_cursor"
 				],
 				"properties": {
@@ -3284,12 +3298,24 @@
 							"$ref": "#/components/schemas/ActivityVote"
 						}
 					},
+					"total": {
+						"type": "integer",
+						"description": "How many items match."
+					},
+					"page": {
+						"type": "integer",
+						"description": "This page's number, from 1."
+					},
+					"pages": {
+						"type": "integer",
+						"description": "How many pages of limit items there are (at least 1)."
+					},
 					"next_cursor": {
 						"type": [
 							"string",
 							"null"
 						],
-						"description": "Pass as cursor, with the same tab, for the next page; null on the last page."
+						"description": "Pass as cursor for the next page; null on the last."
 					}
 				}
 			},
@@ -3616,6 +3642,12 @@
 			},
 			"ForumPage": {
 				"type": "object",
+				"required": [
+					"total",
+					"page",
+					"pages",
+					"next_cursor"
+				],
 				"properties": {
 					"questions": {
 						"type": "array",

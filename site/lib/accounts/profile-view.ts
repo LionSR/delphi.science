@@ -1,18 +1,17 @@
 // Server-rendered profile: tabs with counts, then the chosen tab's posts or record votes.
-import { createElement as h, Fragment, type ReactNode } from 'react';
+import { createElement as h, type ReactNode } from 'react';
 import { Markdown } from '#lib/posts/markdown.ts';
 import type { PostKind, Profile, ProfilePost, ProfileVote, Tab } from './profile.ts';
 import { PublicAuthor, profilePath } from './public-author.ts';
 import type { PublicName } from './people.ts';
 import { date, voteMark } from '#lib/view.ts';
+import { Pager, pageHref } from '#lib/pager.ts';
 
 const TAB_NAMES: Record<Tab, string> = { all: 'All', topics: 'Topics', replies: 'Replies', comments: 'Comments', votes: 'Votes' };
 const KIND_NAMES: Record<PostKind, string> = { question: 'Topic', answer: 'Reply', comment: 'Comment', review: 'Review' };
 
-const tabPath = (login: string, tab: Tab, cursor?: string) => {
-	const q = new URLSearchParams({ ...(tab === 'all' ? {} : { tab }), ...(cursor ? { cursor } : {}) }).toString();
-	return `${profilePath(login)}${q ? `?${q}` : ''}`;
-};
+const tabParams = (tab: Tab) => ({ tab: tab === 'all' ? '' : tab });
+const tabPath = (login: string, tab: Tab) => pageHref(profilePath(login), tabParams(tab));
 
 function Tabs({ login, tab, counts }: { login: string; tab: Tab; counts?: Profile['counts'] }) {
 	return h('nav', { className: 'tabs', 'aria-label': 'Activity type' }, ...(Object.keys(TAB_NAMES) as Tab[]).map((t) =>
@@ -43,16 +42,12 @@ function Votes({ login, votes, who }: { login: string; votes: ProfileVote[]; who
 /** page is null when loading failed; who is the person's public name and affiliation, when known; editor is the
  *  owner's form for changing them. */
 export function ProfileView({ login, tab = 'all', page, who, editor }: { login: string; tab?: Tab; page: Profile | null; who?: PublicName; editor?: ReactNode }) {
-	const noun = tab === 'votes' ? 'votes' : 'posts';
 	const empty = tab === 'all' ? 'public posts or comments' : tab === 'votes' ? 'public votes' : TAB_NAMES[tab].toLowerCase();
 	const body = !page
 		? h('p', { role: 'alert' }, 'Public activity is temporarily unavailable. ', h('a', { href: tabPath(login, tab) }, 'Try again'))
 		: !(page.votes ?? page.posts ?? []).length
 			? h('p', { className: 'count' }, `No ${empty} on this page.`)
 			: page.votes ? h(Votes, { login, votes: page.votes, who }) : h(Posts, { posts: page.posts!, who });
-	const older = page?.next_cursor
-		? h(Fragment, null, ' · ', h('a', { href: tabPath(login, tab, page.next_cursor) }, `Older ${noun}`))
-		: null;
 	return h('article', null,
 		who?.name ? h('h1', null, who.name) : h('h1', { className: 'tex2jax_ignore' }, `@${login}`),
 		who?.name || who?.affiliation ? h('p', { className: 'meta' },
@@ -62,5 +57,5 @@ export function ProfileView({ login, tab = 'all', page, who, editor }: { login: 
 		h('p', null, 'Public topics, replies, comments and record votes by this account and the bots attributed on them. Forum post votes are not shown, as on MathOverflow.'),
 		h(Tabs, { login, tab, counts: page?.counts }),
 		body,
-		h('nav', { 'aria-label': 'Public activity pages' }, h('a', { href: tabPath(login, tab) }, `Latest ${noun}`), older));
+		page && h(Pager, { page: page.page, pages: page.pages, path: profilePath(login), params: tabParams(tab) }));
 }

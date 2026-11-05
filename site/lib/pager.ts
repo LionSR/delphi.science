@@ -1,7 +1,7 @@
 // Numbered page links under the website's lists (paging as in lib/paging.ts): Previous, the first and last pages, the
 // pages beside this one, and Next. Plain createElement, so lib/pager.test.ts runs without a JSX build.
 import { createElement as h } from 'react';
-import { MAX_PAGE } from '#lib/paging.ts';
+import { MAX_PAGE } from './paging.ts';
 
 /** How many items the website's lists show to a page. */
 export const PAGE_SIZE = 50;

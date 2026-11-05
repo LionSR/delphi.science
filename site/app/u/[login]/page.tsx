@@ -5,9 +5,10 @@ import { normalizeProfileLogin, profile, TABS, type Tab } from '#lib/accounts/pr
 import { ProfileView } from '#lib/accounts/profile-view.ts';
 import { me } from '#lib/accounts/session.ts';
 import { savePublicName } from '#app/actions.ts';
+import { pageParam } from '#lib/pager.ts';
 
 export const dynamic = 'force-dynamic';
-type Context = { params: Promise<{ login: string }>; searchParams: Promise<{ cursor?: string | string[]; tab?: string | string[]; notice?: string }> };
+type Context = { params: Promise<{ login: string }>; searchParams: Promise<{ page?: string | string[]; tab?: string | string[]; notice?: string }> };
 
 export async function generateMetadata({ params }: Context) {
 	try {
@@ -26,12 +27,12 @@ export default async function Profile({ params, searchParams }: Context) {
 	} catch {
 		notFound();
 	}
-	const { cursor, tab: rawTab, notice } = await searchParams;
+	const { page: rawPage, tab: rawTab, notice } = await searchParams;
 	const tab: Tab = (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
 	const d = await db();
 	const who = await publicName(d, login);
-	// A repeated or unreadable cursor, like any failure to load, shows "temporarily unavailable" with a retry link.
-	const page = Array.isArray(cursor) ? null : await profile(d, login, { tab, cursor }).catch(() => null);
+	// A failure to load shows "temporarily unavailable" with a retry link.
+	const page = await profile(d, login, { tab, page: pageParam(rawPage) }).catch(() => null);
 	const owner = (await me())?.login.toLowerCase() === login.toLowerCase();
 	const own = owner ? await ownName(d, login).catch(() => null) : null;
 	const editor = own ? (

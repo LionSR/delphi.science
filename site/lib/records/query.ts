@@ -3,6 +3,7 @@
 import stances from './stances.json' with { type: 'json' };
 import type { Db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
+import { pageInfo, pageStart, type PageRequest } from '#lib/paging.ts';
 import { truncate } from '#lib/view.ts';
 import { divisionOf, isSubjectCode, subjectNamed } from './taxonomy.ts';
 
@@ -192,17 +193,6 @@ export function compile(q: string) {
 
 // ---- Running ----
 
-// A cursor carries where the next page starts and the total, so later pages skip the count.
-const encode = (o: number, t: number) => btoa(JSON.stringify({ o, t })).replace(/=+$/, '');
-function decode(cursor?: string | null): { offset: number; total?: number } {
-	if (!cursor) return { offset: 0 };
-	try {
-		const { o, t } = JSON.parse(atob(cursor));
-		if (Number.isInteger(o) && o >= 0) return { offset: o, total: Number.isInteger(t) ? t : undefined };
-	} catch { /* fall through */ }
-	throw new QueryError('the cursor is not valid', 'Pass next_cursor from the previous reply unchanged.');
-}
-
 export function compact(rec: Record<string, unknown>) {
 	const out: Record<string, unknown> = {};
 	for (const k of COMPACT) {
@@ -213,10 +203,8 @@ export function compact(rec: Record<string, unknown>) {
 	return out;
 }
 
-interface SearchOptions {
+interface SearchOptions extends PageRequest {
 	limit?: number;
-	cursor?: string | null;
-	offset?: number; // where a numbered page starts, when there is no cursor
 	sort?: string;
 	fields?: 'compact' | 'full';
 	embedding?: number[]; // the query's embedding, for hybrid ranking
@@ -282,11 +270,11 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const fields = opts.fields ?? 'compact';
 	if (fields !== 'compact' && fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(fields)}`, 'Use fields=compact (default) or fields=full.');
 	const limit = Math.max(1, Math.min(Math.trunc(opts.limit ?? DEFAULT_LIMIT), MAX_LIMIT));
-	const { offset, total: known } = opts.cursor ? decode(opts.cursor) : { offset: opts.offset ?? 0, total: undefined };
+	const start = pageStart(opts, limit);
 	// An empty query lists everything.
 	const { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };
 	const n = params.length;
-	const total = known ?? Number((await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params)).rows[0].n);
+	const total = start.total ?? Number((await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params)).rows[0].n);
 
 	let sql: string;
 	const all = [...params];
@@ -313,14 +301,14 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	} else {
 		sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${ORDER[sort] ?? ORDER.newest} LIMIT $${n + 1} OFFSET $${n + 2}`;
 	}
-	all.push(limit, offset);
+	all.push(limit, start.offset);
 	const rows = (await db.query<{ record: Record<string, unknown> }>(sql, all)).rows;
-	const next = offset + rows.length;
+	const { next_cursor, ...place } = pageInfo(start, total, limit, rows.length);
 	return {
-		query: q, sort, total, count: rows.length,
+		query: q, sort, ...place, count: rows.length,
 		results: rows.map((r): Record<string, unknown> =>
 			({ ...(fields === 'full' ? r.record : compact(r.record)), links: { self: `/api/v1/records/${r.record.id}` } })),
-		next_cursor: next < total && rows.length ? encode(next, total) : null,
+		next_cursor,
 		took_ms: Math.round((performance.now() - t0) * 10) / 10,
 	};
 }

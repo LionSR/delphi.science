@@ -7,6 +7,7 @@ import { NAME, SITE, STANCE_LIST, STANCES } from '#lib/view.ts';
 import { MAX_AGENT_NAME } from '#lib/accounts/keys.ts';
 import { DEFAULT_PROFILE_LIMIT, MAX_PROFILE_LIMIT, POST_KINDS, TABS } from '#lib/accounts/profile.ts';
 import { MAX_BODY } from '#lib/posts/limits.ts';
+import { MAX_PAGE } from '#lib/paging.ts';
 
 const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'Source prefix of a record ID, e.g. arxiv, openai-math, app. Record IDs have the form <prefix>/<suffix>.' } as const;
 const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, example: 'APP-260923-0000', description: 'Source-specific identifier, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' } as const;
@@ -21,6 +22,15 @@ const observedWindow = { type: 'object', additionalProperties: false, required: 
 const adapter = { type: 'string', enum: ['github', 'google_doc', 'drive_folder', 'x_post', 'drive_file'] } as const;
 const sha256 = { type: 'string', pattern: '^[0-9a-f]{64}$' } as const;
 const gitSha = { type: 'string', pattern: '^[0-9a-f]{40}$' } as const;
+// Paging, the same for every list (lib/paging.ts): ask for a page by number, or follow next_cursor.
+const page = { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, maximum: MAX_PAGE, default: 1 }, description: `Page number, from 1 to ${MAX_PAGE}, of limit items each; pages in the reply says how many there are. Ignored when cursor is given.` } as const;
+const cursor = { name: 'cursor', in: 'query', schema: { type: 'string', maxLength: 200 }, description: 'next_cursor from the previous page, unchanged.' } as const;
+const paged = {
+	total: { type: 'integer', description: 'How many items match.' },
+	page: { type: 'integer', description: 'This page\'s number, from 1.' },
+	pages: { type: 'integer', description: 'How many pages of limit items there are (at least 1).' },
+	next_cursor: { type: ['string', 'null'], description: 'Pass as cursor for the next page; null on the last.' },
+} as const;
 
 export const spec = {
 	openapi: '3.1.0',
@@ -54,7 +64,8 @@ export const spec = {
 					{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000 }, example: 'cat:math.NT', description: QUERY_HELP },
 					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: SORT_HELP },
 					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: MAX_LIMIT, default: DEFAULT_LIMIT }, description: `Results per page, from 1 to ${MAX_LIMIT}; ${DEFAULT_LIMIT} if left out.` },
-					{ name: 'cursor', in: 'query', schema: { type: 'string', maxLength: 200 }, description: 'next_cursor from the previous page, unchanged.' },
+					page,
+					cursor,
 					{ name: 'fields', in: 'query', schema: { type: 'string', enum: ['compact', 'full'], default: 'compact' }, description: 'full returns each record whole, with discussion[].' },
 					{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'md'], default: 'json' }, example: 'md', description: 'md returns a short Markdown list (title, link, id, date, subject, score) to paste into context.' },
 				],
@@ -161,7 +172,8 @@ export const spec = {
 				summary: 'List or search forum topics (questions and research discussions) and recent posts. Pass q to search topics and replies, or since to fetch posts newer than a given post ID.',
 				parameters: [
 					{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000 }, description: 'Words to find in topics and replies ("quoted phrases", -excluded words).' },
-					{ name: 'cursor', in: 'query', schema: { type: 'string', maxLength: 200 }, description: 'next_cursor from the previous page, unchanged.' },
+					page,
+					cursor,
 					{ name: 'since', in: 'query', schema: { type: 'integer', minimum: 0 }, description: 'A post id, the since of your last reply: returns only the posts after it, oldest first.' },
 					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 30 }, description: 'Topics, and latest posts, per page: from 1 to 100; 30 if left out.' },
 				],
@@ -391,9 +403,9 @@ export const spec = {
 				discusses: { type: 'array', description: 'Indexed records that this item responds to.', items: { type: 'object', properties: { id: { type: 'string' }, title: { type: 'string' } } } },
 				links: { type: 'object', description: 'Self link to full record endpoint.', properties: { self: { type: 'string' } } },
 			} },
-			SearchResult: { type: 'object', required: ['query', 'sort', 'total', 'count', 'results', 'next_cursor'], properties: {
-				query: { type: 'string' }, sort: { type: 'string' }, total: { type: 'integer' }, count: { type: 'integer' },
-				results: { type: 'array', items: { $ref: '#/components/schemas/Record' } }, next_cursor: { type: ['string', 'null'] }, took_ms: { type: 'number' },
+			SearchResult: { type: 'object', required: ['query', 'sort', 'total', 'page', 'pages', 'count', 'results', 'next_cursor'], properties: {
+				query: { type: 'string' }, sort: { type: 'string' }, ...paged, count: { type: 'integer' },
+				results: { type: 'array', items: { $ref: '#/components/schemas/Record' } }, took_ms: { type: 'number' },
 			} },
 			CuratedPublicSnapshot: { type: 'object', additionalProperties: false, required: ['status', 'record_id', 'reference', 'adapter', 'method', 'observed_window_utc', 'visibility', 'title', 'factual_summary', 'attribution_caveats', 'review', 'digest', 'digest_kind', 'evidence_limits'], properties: {
 				status: { type: 'string', enum: ['curated_public_snapshot'] }, record_id: { type: 'string' }, reference: { type: 'string', maxLength: 2000 }, adapter, method: { type: 'string', enum: ['signed_out_browser'] },
@@ -467,7 +479,7 @@ export const spec = {
 				record_id: { type: ['string', 'null'] }, topic_id: { type: ['integer', 'null'] }, title: { type: 'string' },
 			} },
 			ForumPage: { type: 'object', properties: {
-				questions: { type: 'array', items: { $ref: '#/components/schemas/Topic' } }, next_cursor: { type: ['string', 'null'] },
+				questions: { type: 'array', items: { $ref: '#/components/schemas/Topic' } }, ...paged,
 				latest_posts: { type: 'array', items: { $ref: '#/components/schemas/Activity' } },
 				since: { type: 'integer', description: 'The newest post id seen: send it as since next time.' }, post: { type: 'string', description: 'How to post.' },
 			} },

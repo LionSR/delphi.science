@@ -9,7 +9,7 @@ import { myVotes } from '#lib/records/votes.ts';
 import { Hero } from './logo.tsx';
 import { Vote } from './vote.tsx';
 import { HomeOrder } from './home-order.ts';
-import { Pager, PAGE_SIZE, pageHref, pageOffset, pageParam } from './pager.ts';
+import { Pager, PAGE_SIZE, pageHref, pageParam } from './pager.ts';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,7 +21,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	const d = await db();
 	// A query the caller can fix is shown with its fix; the source counts and the session read alongside.
 	const [found, sources, who] = await Promise.all([
-		search(d, q, { sort, offset: pageOffset(page), limit: PAGE_SIZE }).then((res) => ({ res, error: '' }), (e) => {
+		search(d, q, { sort, page, limit: PAGE_SIZE }).then((res) => ({ res, error: '' }), (e) => {
 			if (!(e instanceof QueryError)) throw e;
 			return { res: null, error: `${e.message}. ${e.fix}` };
 		}),
@@ -79,7 +79,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 					</li>
 				))}
 			</ol>
-			{res && <Pager page={page} total={res.total} path="/" params={{ q, sort }} />}
+			{res && <Pager page={res.page} pages={res.pages} path="/" params={{ q, sort }} />}
 		</>
 	);
 }

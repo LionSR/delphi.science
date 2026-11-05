@@ -37,12 +37,13 @@ const shown = (rec: Record<string, unknown>) => {
 };
 
 type Fields = 'compact' | 'full';
-type SearchArgs = { q?: string; sort?: (typeof SORTS)[number]; limit?: number; cursor?: string; fields?: Fields };
+type Paging = { limit?: number; page?: number; cursor?: string; fields?: Fields };
+type SearchArgs = Paging & { q?: string; sort?: (typeof SORTS)[number] };
 
 // `query` is the old name for q, still accepted.
-async function searchRecords(db: Db, { q, query, sort, limit, cursor, fields }: SearchArgs & { query?: unknown }) {
-	const res = await search(db, q ?? (typeof query === 'string' ? query : ''), { sort, limit, cursor, fields });
-	return { query: res.query, sort: res.sort, total: res.total, count: res.count, results: res.results.map(shown), next_cursor: res.next_cursor };
+async function searchRecords(db: Db, { q, query, sort, ...paging }: SearchArgs & { query?: unknown }) {
+	const { took_ms: _, results, ...res } = await search(db, q ?? (typeof query === 'string' ? query : ''), { sort, ...paging });
+	return { ...res, results: results.map(shown) };
 }
 
 async function getRecord(db: Db, { id }: { id: string }) {
@@ -51,13 +52,11 @@ async function getRecord(db: Db, { id }: { id: string }) {
 	return { ...shown(rec), discussion: links(rec).map(response), discusses: Array.isArray(rec.discusses) ? rec.discusses : [] };
 }
 
-async function listDiscussedRecords(db: Db, { query = '', limit, cursor, fields }: { query?: string; limit?: number; cursor?: string; fields?: Fields }) {
+async function listDiscussedRecords(db: Db, { query = '', fields, ...paging }: Paging & { query?: string }) {
 	if (query.trim()) parse(query); // alone first, so its parentheses cannot escape the wrapper below
-	const res = await search(db, query.trim() ? `is:discussed AND (${query})` : 'is:discussed', { sort: 'responded', limit, cursor, fields: 'full' });
-	return {
-		query, total: res.total, count: res.count, next_cursor: res.next_cursor,
-		results: res.results.map((rec) => ({ ...shown(fields === 'full' ? rec : compact(rec)), latest_response: newest(rec) })),
-	};
+	const { took_ms: _, sort: _sort, query: _query, results, ...res } = await search(db, query.trim() ? `is:discussed AND (${query})` : 'is:discussed',
+		{ ...paging, sort: 'responded', fields: 'full' });
+	return { query, ...res, results: results.map((rec) => ({ ...shown(fields === 'full' ? rec : compact(rec)), latest_response: newest(rec) })) };
 }
 
 // ---- Schemas, from the OpenAPI document ----
@@ -86,7 +85,7 @@ function schema(json: Json, s: z.ZodType = z.fromJSONSchema(json as z.core.JSONS
 const searchParams = parameters('searchRecords');
 const recordParams = parameters('getRecord');
 const q: Json = searchParams.q;
-const paging = { limit: searchParams.limit, cursor: searchParams.cursor, fields: searchParams.fields }; // format is HTTP's only
+const paging = { limit: searchParams.limit, page: searchParams.page, cursor: searchParams.cursor, fields: searchParams.fields }; // format is HTTP's only
 
 const Link = inline(components.Link);
 const RecordSchema = inline(components.Record);

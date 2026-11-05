@@ -2,6 +2,7 @@
 import { startQuestion, thread, type Post } from './comments.ts';
 import type { Moderator } from '#lib/moderation/moderate.ts';
 import { NotFoundError, QueryError } from '#lib/errors.ts';
+import { pageInfo, pageStart, type PageRequest } from '#lib/paging.ts';
 import type { Db } from '#lib/db.ts';
 import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
 
@@ -25,17 +26,8 @@ export async function startTopic(db: Db, voter: Voter, t: { title: string; body:
 const TOPIC = `SELECT t.id::int, t.title, t.voter, t.agent, t.at, t.last_at, t.accepted_id::int, t.score, t.answers_count AS answers
 	FROM open_index.topics t`;
 
-// A page holds 1 to 100 rows. A cursor holds the last row's (last_at, id), or an offset into search results.
+// A page holds 1 to 100 rows.
 const pageSize = (limit: number | undefined, fallback: number) => Math.max(1, Math.min(Math.trunc(limit ?? fallback), 100));
-const encode = (o: object) => Buffer.from(JSON.stringify(o)).toString('base64url');
-function decode(cursor?: string | null): { at?: string; id?: number; o?: number } {
-	if (!cursor) return {};
-	try {
-		return JSON.parse(Buffer.from(cursor, 'base64url').toString());
-	} catch {
-		throw new QueryError('the cursor is not valid', 'Pass next_cursor from the previous reply unchanged.');
-	}
-}
 
 // The topics matching $1, each with its best rank. websearch_to_tsquery accepts any text without error.
 const MATCHES = `WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq),
@@ -44,32 +36,20 @@ const MATCHES = `WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq
 	         SELECT c.topic_id, ts_rank(c.tsv, query.tq) FROM open_index.comments c, query WHERE c.topic_id IS NOT NULL AND c.tsv @@ query.tq),
 	best AS (SELECT id, max(rank) AS rank FROM hits GROUP BY id)`;
 
-/** One page of questions: the latest activity first, or with q, the best matches of the words in titles and posts.
- * The page starts after the cursor, or without one at `offset` (a numbered page). */
-export async function topics(db: Db, opts: { q?: string; cursor?: string | null; offset?: number; limit?: number } = {}) {
+/** One page of questions (lib/paging.ts): the latest activity first, or with q, the best matches of the words in
+ * titles and posts. */
+export async function topics(db: Db, opts: PageRequest & { q?: string; limit?: number } = {}) {
 	const limit = pageSize(opts.limit, 50);
-	const c = decode(opts.cursor);
+	const start = pageStart(opts, limit);
 	const q = (opts.q ?? '').trim();
-	const offset = opts.cursor ? Math.max(0, Number(c.o) || 0) : opts.offset ?? 0;
-	if (q) {
-		const rows = (await db.query<Topic>(
-			`${MATCHES} ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $2 OFFSET $3`,
-			[q, limit + 1, offset])).rows;
-		return { questions: rows.slice(0, limit), next_cursor: rows.length > limit ? encode({ o: offset + limit }) : null };
-	}
-	const after = c.at && Number.isSafeInteger(c.id) ? 'WHERE (t.last_at, t.id) < ($3::timestamptz, $4)' : '';
-	const rows = (await db.query<Topic>(`${TOPIC} ${after} ORDER BY t.last_at DESC, t.id DESC LIMIT $1 OFFSET $2`,
-		[limit + 1, offset, ...(after ? [c.at, c.id] : [])])).rows;
-	const last = rows[limit - 1];
-	return { questions: rows.slice(0, limit),
-		next_cursor: rows.length > limit ? encode({ at: new Date(last.last_at).toISOString(), id: last.id }) : null };
-}
-
-/** How many questions there are, or with q, how many match. */
-export async function topicCount(db: Db, q = ''): Promise<number> {
-	q = q.trim();
-	const sql = q ? `${MATCHES} SELECT count(*)::int AS n FROM best` : 'SELECT count(*)::int AS n FROM open_index.topics';
-	return (await db.query<{ n: number }>(sql, q ? [q] : [])).rows[0].n;
+	const [rows, total] = await Promise.all([
+		db.query<Topic>(q
+			? `${MATCHES} ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $2 OFFSET $3`
+			: `${TOPIC} ORDER BY t.last_at DESC, t.id DESC LIMIT $1 OFFSET $2`, [...(q ? [q] : []), limit, start.offset]).then((r) => r.rows),
+		start.total ?? db.query<{ n: number }>(q ? `${MATCHES} SELECT count(*)::int AS n FROM best` : 'SELECT count(*)::int AS n FROM open_index.topics',
+			q ? [q] : []).then((r) => r.rows[0].n),
+	]);
+	return { questions: rows, ...pageInfo(start, total, limit, rows.length) };
 }
 
 /** One question, without its posts, or null. */

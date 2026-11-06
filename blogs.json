@@ -1,5 +1,5 @@
 {
-  "about": "Research blogs and magazines that candidates.py reads for responses. Each feed's posts name their author (dc:creator or Atom author); authors maps that name to the person's full name when the feed gives a handle, and \"\" is the author of posts that name none. Add only blogs whose authors are identified researchers or bylined science journalists.",
+  "about": "Research blogs and magazines that candidates.py reads for responses. Each feed's posts name their author (dc:creator or Atom author); authors maps that name to the person's full name when the feed gives a handle, and author is the full name for posts that name none. Add only blogs whose authors are identified researchers or bylined science journalists.",
   "blogs": [
     { "name": "Not Even Wrong", "feed": "https://www.math.columbia.edu/~woit/wordpress/?feed=rss2", "authors": { "woit": "Peter Woit" } },
     { "name": "Combinatorics and more", "feed": "https://gilkalai.wordpress.com/feed/", "authors": {} },
@@ -12,7 +12,7 @@
     { "name": "Proofs and Prompts", "feed": "https://proofsandprompts.com/feed/", "authors": {} },
     { "name": "Windows On Theory", "feed": "https://windowsontheory.org/feed/", "authors": {} },
     { "name": "Peter Cameron's Blog", "feed": "https://cameroncounts.wordpress.com/feed/", "authors": {} },
-    { "name": "Asaf Karagila", "feed": "https://karagila.org/feed.xml", "authors": { "": "Asaf Karagila" } },
+    { "name": "Asaf Karagila", "feed": "https://karagila.org/feed.xml", "author": "Asaf Karagila" },
     { "name": "theHigherGeometer", "feed": "https://thehighergeometer.wordpress.com/feed/", "authors": {} },
     { "name": "ETH: Community Examination and Discussion", "feed": "https://ethdiscussion.blog/feed/", "authors": { "rpaturi7da97240c3": "Ramamohan Paturi" } },
     { "name": "Gödel's Lost Letter and P=NP", "feed": "https://rjlipton.com/feed/", "authors": { "rjlipton": "Richard J. Lipton", "KWRegan": "Kenneth W. Regan" } },

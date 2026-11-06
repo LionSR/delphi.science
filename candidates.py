@@ -1,11 +1,12 @@
 """Finds new items that may respond to indexed records: posts on the research blogs in blogs.json, arXiv papers that
-cite a record and name it in their abstract, MathOverflow, CSTheory and Physics Stack Exchange posts, Bluesky posts
-that link a record already being discussed, and arXiv preprints that mention the AI labs.
+name an AI lab or cite a record and name it in their abstract, MathOverflow, CSTheory and Physics Stack Exchange
+posts, and Bluesky posts that link the labs' records.
 
 An item names its records when it links them (any URL or arXiv id that an adapter in sources.py recognizes) or cites
-them. Other items count when they mention an AI lab, and are matched against the titles of the AI-made records, ranked
-by IDF-weighted title overlap. Writes a Markdown report with the `python3 index.py discuss` command that attaches each
-match after review. Nothing is attached.
+them; for an arXiv paper that names a lab, that includes the AI-made records its bibliography links. An item that
+names no record but names a lab is matched against the titles of that lab's records, ranked by IDF-weighted title
+overlap. Writes a Markdown report with the `python3 index.py discuss` command that attaches each match after review,
+leaving out what the earlier reports in the same folder already listed. Nothing is attached.
 
   python3 candidates.py [--days 7] [--until 2026-10-25] [--out reports/responses/2026-10-25.md]
 
@@ -19,7 +20,6 @@ import argparse
 import datetime as dt
 import email.utils
 import functools
-import time
 import html
 import json
 import math
@@ -27,24 +27,30 @@ import os
 import re
 import shlex
 import sys
+import time
 import urllib.parse
 import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
-from typing import Any, Iterable, Iterator
+from typing import Any, Iterable, Iterator, Literal, TypedDict
 
 import index as I
 import sources as S
 
-# Names that mark an abstract or a question as being about AI-made work.
-TERMS = ["OpenAI", "openai/math", "Astra", "Anthropic", "Claude", "Hexagon", "Palomar", "AlphaProof", "AlphaEvolve", "DeepMind", "Gemini"]
-MENTIONS = re.compile("|".join(map(re.escape, TERMS)), re.I)
+# The AI labs, by the names that mark a text as being about their work, with the sources that hold their records. Names
+# match whole and with their case, so "hexagonal" and "the hexagon of exponents" are not mentions.
+LABS: dict[str, tuple[str, ...]] = {"OpenAI": ("openai-math",), "GPT": ("openai-math",),
+                                    "Anthropic": ("anthropic-science", "lean"), "Claude": ("anthropic-science", "lean")}
+MENTIONS = re.compile(rf"\b(?:{'|'.join(LABS)})\b")
+# arXiv categories whose papers name the labs as vendors of the models they study, not as authors of a result.
+VENDOR_CATEGORIES = ("cs.AI", "cs.CL", "cs.LG", "cs.SE", "cs.CR", "cs.HC", "cs.CY", "cs.MA", "cs.IR", "cs.RO", "cs.CV")
+# Sources of papers. A bibliography cites them as ordinary references; the citation finders take the ones an abstract names.
+PAPERS = ("arxiv/", "doi/")
 # Records matched only by link or citation, not by title: arXiv has tens of thousands, and a web record can be any page.
 SKIP_SOURCES = {"arxiv", "web"}
 MIN_CONFIDENCE = 0.45
 STOP = set("a an and are as at be by for from in into is it of on or our the this to via we with without new "
            "proof proofs paper note result results theorem conjecture problem problems open some two one".split())
-BLOGS: list[dict[str, Any]] = json.loads(Path(__file__).with_name("blogs.json").read_text())["blogs"]
 SE_SITES = ("mathoverflow.net", "cstheory.stackexchange.com", "physics.stackexchange.com")
 S2_BATCH = ("https://api.semanticscholar.org/graph/v1/paper/batch"
             "?fields=title,abstract,authors,publicationDate,externalIds,references.externalIds,references.authors")
@@ -54,7 +60,51 @@ INSPIRE_FIELDS = "arxiv_eprints,titles,authors.full_name,abstracts.value,preprin
 INSPIRE_DOMAINS = ("hep-", "gr-qc", "nucl-", "quant-ph", "math-ph")  # arXiv categories INSPIRE lists
 INSPIRE_IDS = 50
 BSKY = "https://api.bsky.app/xrpc"
+# Searches for posts linking the labs' pages; posts about other records are found by the record's URL.
+BSKY_SEARCHES = ({"url": "https://github.com/openai/math"}, {"domain": "mathcommunity.github.io"},
+                 {"url": "https://www.anthropic.com/research"}, {"domain": "hexagonmath.org"})
 BOT = re.compile(r"bot\b|arxiv", re.I)  # accounts that post every new paper
+
+
+class Blog(TypedDict, total=False):
+    name: str
+    feed: str
+    authors: dict[str, str]  # the feed's author names, by the full names to credit
+    author: str  # the full name for posts whose feed entry names no author
+
+
+def load_blogs(path: Path) -> list[Blog]:
+    blogs = json.loads(path.read_text())["blogs"]
+    for b in blogs:
+        if not (set(b) <= set(Blog.__annotations__) and isinstance(b.get("name"), str) and isinstance(b.get("feed"), str)
+                and isinstance(b.get("authors", {}), dict) and isinstance(b.get("author", ""), str)):
+            raise ValueError(f"{path.name}: not a blog entry: {b!r}")
+    return blogs
+
+
+BLOGS = load_blogs(Path(__file__).with_name("blogs.json"))
+
+
+class Candidate(TypedDict):
+    """An item that may respond to records."""
+    url: str
+    title: str
+    authors: list[str]
+    date: str
+    text: str  # an excerpt
+    where: str  # arXiv, the blog's name, or the site
+    records: list[str]  # the records it names
+    how: Literal["links", "cites"]  # how it names them
+    labs: list[str]  # the sources of the labs its full text names, whose titles it is matched against if it names no record
+    author: str  # the full name to attach it with (--author), or ""
+
+
+def candidate(url: str, title: str, authors: Iterable[str], date: str, text: str, where: str, *, records: Iterable[str] = (),
+              how: Literal["links", "cites"] = "links", full: str = "", author: str = "") -> Candidate:
+    """An item; `full` is its whole text, read for lab names."""
+    labs = sorted({src for name in MENTIONS.findall(full) for src in LABS[name]})
+    return Candidate(url=url, title=title, authors=list(authors), date=date, text=text, where=where, records=list(records),
+                     how=how, labs=labs, author=author)
 
 
 def words(text: str | None) -> list[str]:
@@ -68,51 +118,52 @@ def live(where: str, params: list[Any]) -> list[dict[str, Any]]:
     return [e for _, e in I.load(f"({where}) AND NOT coalesce((entry->>'gone')::boolean, false)", params)]
 
 
-TRACKING = re.compile(r"utm_.*|fbclid|gclid|ref|ref_src|r|s|t")  # query parameters that do not identify a page
-
-
-def ident(url: str) -> str:
-    """An identity for a link: its record id, or for a plain web page its URL without fragment or tracking parameters
-    (a blog post can be ?p=15979)."""
-    try:
-        src, key = S.detect(urllib.parse.urldefrag(url.strip())[0])
-    except ValueError:
-        src, key = S.BY_NAME["web"], ""
-    if src.name != "web":
-        return f"{src.name}/{key}"
-    u = urllib.parse.urlsplit(url.strip())
-    query = urllib.parse.urlencode([(k, v) for k, v in urllib.parse.parse_qsl(u.query) if not TRACKING.fullmatch(k)])
-    return urllib.parse.urlunsplit(u._replace(path=u.path.rstrip("/"), query=query, fragment=""))
-
-
 def attached(entries: Iterable[dict[str, Any]]) -> set[tuple[str, str]]:
     """(record id, link identity) for every link already attached, so an item is reported once for each record."""
-    return {(I.rid(e), ident(d["url"])) for e in entries for d in e.get("discussion") or []}
+    return {(I.rid(e), S.identity(d["url"])) for e in entries for d in e.get("discussion") or []}
+
+
+COMMAND = re.compile(r"`python3 index\.py discuss (.+?)`")
+
+
+def reported(folder: Path, start: dt.date, end: dt.date) -> set[tuple[str, str]]:
+    """(record id, link identity) for each command in the earlier reports in the folder that overlap the window (named
+    by date, from start until before end), so a daily run lists only what they did not."""
+    out = set()
+    for p in folder.glob("*.md"):
+        if start.isoformat() <= p.stem < end.isoformat():
+            for m in COMMAND.finditer(p.read_text()):
+                rid, url = shlex.split(m[1])[:2]
+                out.add((rid, S.identity(url)))
+    return out
 
 
 LINK = re.compile(r"""href=["']([^"']+)|\barXiv:\s?(\d{4}\.\d{4,5})""", re.I)
 
 
-def named(text: str | None) -> list[str]:
-    """The ids of the records a text links: every link or arXiv id that an adapter other than Web recognizes."""
+def linked_ids(urls: Iterable[str]) -> list[str]:
+    """The ids of the records the URLs or arXiv ids point at, as far as an adapter recognizes them."""
     ids = []
-    for m in LINK.finditer(text or ""):
+    for url in urls:
         try:
-            src, key = S.detect(urllib.parse.urldefrag(html.unescape(m[1] or m[2]).strip())[0])  # a section link names its paper
+            src, key = S.detect(urllib.parse.urldefrag(url.strip())[0])  # a section link names its paper
         except ValueError:
             continue
-        if src.name != "web":
-            ids.append(f"{src.name}/{key}")
+        ids.append(f"{src.name}/{key}")
     return list(dict.fromkeys(ids))
 
 
-class Matcher:
-    """Scores an item's text against each record's title: the IDF-weighted share of the title's words
-    that the item uses, raised a little when the item names the record's source."""
+def named(text: str | None) -> list[str]:
+    """The ids of the records an HTML text links or names by arXiv id."""
+    return linked_ids(html.unescape(m[1] or m[2]) for m in LINK.finditer(text or ""))
 
-    LAB = {"openai-math": ("openai",), "anthropic-science": ("anthropic", "claude"), "hexagon": ("hexagon",),
-           "palomar": ("palomar",), "lean": ("lean",)}
+
+class Matcher:
+    """Scores an item's text against the titles of the records of the labs it names: the IDF-weighted share of a title's
+    words that the item uses, counted when it uses at least three of them (all of a shorter title)."""
+
     TOP = 3
+    SHARED = 3
 
     def __init__(self, entries: list[dict[str, Any]]):
         titled = [(e, set(words(f"{e.get('title')} {e.get('family_title', '')}"))) for e in entries]
@@ -121,15 +172,14 @@ class Matcher:
         self.idf = {w: math.log((1 + len(titled)) / (1 + n)) + 1 for w, n in df.items()}
         self.records = [(e, t, sum(self.idf[w] for w in t)) for e, t in titled]
 
-    def match(self, text: str) -> list[tuple[float, dict[str, Any]]]:
-        have = set(words(text))
-        low = text.lower()
-        named = {src for src, labs in self.LAB.items() if any(lab in low for lab in labs)}
+    def match(self, text: str, sources: Iterable[str]) -> list[tuple[float, dict[str, Any]]]:
+        have, sources = set(words(text)), set(sources)
         scored: dict[str, tuple[float, dict[str, Any]]] = {}
         for e, title, total in self.records:
-            score = sum(self.idf[w] for w in title & have) / total
-            if e["source"] in named:
-                score = min(1.0, score * 1.15)
+            shared = title & have
+            if e["source"] not in sources or len(shared) < min(self.SHARED, len(title)):
+                continue
+            score = sum(self.idf[w] for w in shared) / total
             # One line per family: versions of one OpenAI manuscript share a family.
             group = f"{e['source']}:{e.get('family') or e['key']}"
             if score >= MIN_CONFIDENCE and score > scored.get(group, (0.0, {}))[0]:
@@ -137,21 +187,29 @@ class Matcher:
         return sorted(scored.values(), key=lambda s: -s[0])[: self.TOP]
 
 
-# ---- Finders: each returns the items dated in the window, as {url, title, authors, date, text, where}, with the
-# records the item links or cites (records), how it names them (how: links or cites), whether its full text mentions an AI
-# lab (lab), and the --author to attach it with.
+# ---- Finders: each returns the candidates dated in the window ----
 
 
 def in_window(day: str, start: dt.date, end: dt.date) -> bool:
     return start.isoformat() <= day[:10] <= end.isoformat()
 
 
-def arxiv_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
+def bibliography(key: str) -> list[str]:
+    """The AI-made records a paper's bibliography links, read from its arXiv HTML; none when arXiv has no HTML for it."""
+    try:
+        page = S.get(f"https://arxiv.org/html/{key}").decode("utf-8", "replace")
+    except (S.NotFound, S.SourceError):
+        return []
+    return [r for r in named(page) if not r.startswith(PAPERS)]
+
+
+def arxiv_candidates(start: dt.date, end: dt.date) -> list[Candidate]:
     window = f"submittedDate:[{start:%Y%m%d}0000 TO {end:%Y%m%d}2359]"
-    terms = " OR ".join(f'abs:"{t}"' for t in TERMS)
-    query = f"({terms}) AND {window}"
-    return [{"url": e["url"], "title": e["title"], "authors": e.get("authors", []), "date": e.get("published", ""),
-             "text": e.get("summary", ""), "where": "arXiv", "records": named(e.get("summary")), "lab": True} for e in S.ArXiv().harvest(query, 500)]
+    vendors = " OR ".join(f"cat:{c}" for c in VENDOR_CATEGORIES)
+    query = f"({' OR '.join(f'abs:{name}' for name in LABS)}) AND {window} ANDNOT ({vendors})"
+    return [candidate(e["url"], e["title"], e.get("authors", []), e.get("published", ""), e.get("summary", ""), "arXiv",
+                      records=[*named(e.get("summary")), *bibliography(e["key"])], how="cites", full=f"{e['title']} {e.get('summary', '')}")
+            for e in S.ArXiv().harvest(query, 500) if MENTIONS.search(f"{e['title']} {e.get('summary', '')}")]
 
 
 def surname(name: str | None) -> str:
@@ -160,7 +218,7 @@ def surname(name: str | None) -> str:
     return name.split(",")[0].strip() if "," in name else (name.split() or [""])[-1]
 
 
-def citing(papers: Iterable[dict[str, Any] | None]) -> list[dict[str, Any]]:
+def citing(papers: Iterable[dict[str, Any] | None]) -> list[Candidate]:
     """The papers (in Semantic Scholar's shape) whose abstract names a paper they cite, by its arXiv id or an author's
     surname ("a variant of the algorithm described by Craig"). A cited paper that shares a surname with the citing
     paper's authors is their own earlier work, so it does not count."""
@@ -174,8 +232,8 @@ def citing(papers: Iterable[dict[str, Any] | None]) -> list[dict[str, Any]]:
             if arxiv and not names & own and (arxiv in abstract or any(re.search(rf"\b{re.escape(n)}\b", abstract) for n in names)):
                 ids.append(f"arxiv/{arxiv}")
         if ids and (key := (p.get("externalIds") or {}).get("ArXiv")):
-            out.append({"url": f"https://arxiv.org/abs/{key}", "title": p.get("title") or "", "authors": [a.get("name") for a in p.get("authors") or []],
-                        "date": p.get("publicationDate") or "", "text": S.trim(abstract), "where": "arXiv", "records": ids, "how": "cites"})
+            out.append(candidate(f"https://arxiv.org/abs/{key}", p.get("title") or "", [a.get("name") or "" for a in p.get("authors") or []],
+                                 p.get("publicationDate") or "", S.trim(abstract), "arXiv", records=ids, how="cites"))
     return out
 
 
@@ -198,7 +256,7 @@ def inspire_paper(m: dict[str, Any]) -> dict[str, Any]:
                            for r in m.get("references") or []]}
 
 
-def inspire_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
+def inspire_candidates(start: dt.date, end: dt.date) -> list[Candidate]:
     """New physics papers that cite a record and name it in their abstract, with references from INSPIRE."""
     keys = [e["key"] for e in new_papers(start, end) if physics(e)]
     out = []
@@ -209,7 +267,7 @@ def inspire_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
     return out
 
 
-def semantic_scholar_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
+def semantic_scholar_candidates(start: dt.date, end: dt.date) -> list[Candidate]:
     """New papers outside physics that cite a record and name it in their abstract, with references from Semantic Scholar."""
     keys = [e["key"] for e in new_papers(start, end) if not physics(e)]
     api_key = os.environ.get("S2_API_KEY", "").strip()
@@ -223,8 +281,8 @@ def semantic_scholar_candidates(start: dt.date, end: dt.date) -> list[dict[str, 
     return out
 
 
-def stackexchange_candidates(host: str, start: dt.date, end: dt.date) -> list[dict[str, Any]]:
-    """Questions and answers posted in the window that link a record or mention the AI labs. One listing per kind,
+def stackexchange_candidates(host: str, start: dt.date, end: dt.date) -> list[Candidate]:
+    """Questions and answers posted in the window that link a record or name an AI lab. One listing per kind,
     filtered here, uses less of the keyless API quota than a search per term."""
     window = {"fromdate": int(dt.datetime.combine(start, dt.time()).timestamp()), "todate": int(dt.datetime.combine(end, dt.time.max).timestamp())}
     out = []
@@ -234,12 +292,12 @@ def stackexchange_candidates(host: str, start: dt.date, end: dt.date) -> list[di
             data = S.get_json(f"https://api.stackexchange.com/2.3/{kind}?{q}", cache=False)
             time.sleep(data.get("backoff", 0))  # the API refuses the next request until then
             for item in data.get("items", []):
-                ids, lab = named(item.get("body")), bool(MENTIONS.search(f"{item.get('title', '')} {item.get('body', '')}"))
-                if ids or lab:
+                full = f"{item.get('title', '')} {item.get('body', '')}"
+                if (ids := named(item.get("body"))) or MENTIONS.search(full):
                     link = S.stackexchange_item(item)
                     url = item["link"] if kind == "questions" else f"https://{host}/a/{item['answer_id']}"  # an answer link credits its author
-                    out.append({"url": url, "title": link["title"] or f"An answer on {host}", "authors": [link["author"]], "date": link["date"],
-                                "text": link["text"], "where": host, "records": ids, "lab": lab})
+                    out.append(candidate(url, link["title"] or f"An answer on {host}", [link["author"]], link["date"], link["text"], host,
+                                         records=ids, full=full))
             if not data.get("has_more"):
                 break
     return out
@@ -279,28 +337,36 @@ def posts(feed: bytes) -> Iterator[dict[str, str]]:
                "date": S.iso_date(t(it, "a:published", "a:updated")), "body": body(it, "a:content", "a:summary")}
 
 
-def blog_candidates(blog: dict[str, Any], start: dt.date, end: dt.date) -> list[dict[str, Any]]:
+def blog_candidates(blog: Blog, start: dt.date, end: dt.date) -> list[Candidate]:
     """The blog's posts dated in the window, credited to the full name blogs.json gives for the feed's author."""
     out = []
     for p in posts(S.get(blog["feed"], cache=False)):
         if in_window(p["date"], start, end):
-            author = blog["authors"].get(p["author"], "")
-            out.append({"url": p["link"], "title": S.clean(p["title"]), "authors": [author or p["author"]], "date": p["date"],
-                        "text": S.trim(p["body"]), "where": blog["name"], "records": named(p["body"]),
-                        "lab": bool(MENTIONS.search(f"{p['title']} {p['body']}")), "author": author})
+            author = blog.get("authors", {}).get(p["author"], "") if p["author"] else blog.get("author", "")
+            out.append(candidate(p["link"], S.clean(p["title"]), [author or p["author"]], p["date"], S.trim(p["body"]), blog["name"],
+                                 records=named(p["body"]), full=f"{p['title']} {p['body']}", author=author))
     return out
 
 
-def bluesky_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
-    """Posts in the window that link a record that already has responses, found by the record's URL. Accounts that
-    post every new paper are left out; each author's profile text is shown so a person can tell who they are."""
+def post_links(p: dict[str, Any]) -> list[str]:
+    """The URLs a Bluesky post links: in its text and its link card."""
+    record = p.get("record") or {}
+    facets = [f.get("uri", "") for facet in record.get("facets") or [] for f in facet.get("features") or []]
+    return [u for u in [*facets, ((record.get("embed") or {}).get("external") or {}).get("uri", "")] if u]
+
+
+def bluesky_candidates(start: dt.date, end: dt.date) -> list[Candidate]:
+    """Posts in the window that link the labs' records, or a record that already has responses (found by its URL).
+    Accounts that post every new paper are left out; each author's profile text is shown so a person can tell who they are."""
+    searches = [(q, None) for q in BSKY_SEARCHES] + [({"url": e["url"]}, I.rid(e)) for e in live(I.DISCUSSED, [])]
     found: dict[str, tuple[dict[str, Any], list[str]]] = {}
-    for e in live(I.DISCUSSED, []):
-        q = urllib.parse.urlencode({"q": "*", "url": e["url"], "sort": "latest", "limit": 100})
+    for search, rid in searches:
+        q = urllib.parse.urlencode({"q": "*", **search, "sort": "latest", "limit": 100})
         for p in S.get_json(f"{BSKY}/app.bsky.feed.searchPosts?{q}", cache=False).get("posts", []):
             a = p.get("author") or {}
-            if in_window(p["record"].get("createdAt", ""), start, end) and not BOT.search(f"{a.get('handle', '')} {a.get('displayName', '')}"):
-                found.setdefault(p["uri"], (p, []))[1].append(I.rid(e))
+            ids = [rid] if rid else linked_ids(post_links(p))
+            if ids and in_window(p["record"].get("createdAt", ""), start, end) and not BOT.search(f"{a.get('handle', '')} {a.get('displayName', '')}"):
+                found.setdefault(p["uri"], (p, []))[1].extend(ids)
     dids = sorted({p["author"]["did"] for p, _ in found.values()})
     bios = {}
     for i in range(0, len(dids), 25):
@@ -310,8 +376,8 @@ def bluesky_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
     for p, ids in found.values():
         a = p["author"]
         name = f"{a.get('displayName') or a['handle']} (@{a['handle']}; {S.trim(bios.get(a['did']), 120) or 'no profile text'})"
-        out.append({"url": f"https://bsky.app/profile/{a['handle']}/post/{p['uri'].rsplit('/', 1)[-1]}", "title": "", "authors": [name],
-                    "date": p["record"]["createdAt"][:10], "text": S.trim(p["record"].get("text")), "where": "Bluesky", "records": ids})
+        out.append(candidate(f"https://bsky.app/profile/{a['handle']}/post/{p['uri'].rsplit('/', 1)[-1]}", "", [name], p["record"]["createdAt"][:10],
+                             S.trim(p["record"].get("text")), "Bluesky", records=dict.fromkeys(ids)))
     return out
 
 
@@ -320,28 +386,35 @@ FINDERS = (("arXiv", arxiv_candidates), ("INSPIRE citations", inspire_candidates
            *((b["name"], functools.partial(blog_candidates, b)) for b in BLOGS), ("Bluesky", bluesky_candidates))
 
 
-def report(candidates: list[dict[str, Any]], matcher: Matcher, linked: dict[str, dict[str, Any]], known: set[tuple[str, str]],
+def report(candidates: list[Candidate], matcher: Matcher, linked: dict[str, dict[str, Any]], known: set[tuple[str, str]],
            start: dt.date, end: dt.date, errors: list[str]) -> str:
-    """The items that match a record not already linked to them. `linked` holds the records the items name. An item
-    that names none is matched by title, and only when it mentions an AI lab."""
+    """The items that match a record not already linked to them or listed for it. `linked` holds the records the items
+    name. An item that names none, and is not linked or listed already, is matched by title if it names an AI lab."""
     lines = [f"# Candidate responses, {start} to {end}", "",
              "Found by `candidates.py`; nothing is attached. Read each one, and if it responds to the record, run the command "
              "under it (only voices with a public scholarly record, as the README says).", ""]
     lines += [f"> Not searched: {e}" for e in errors] + ([""] if errors else [])
+    seen = {u for _, u in known}
 
-    def matches(c: dict[str, Any]) -> list[tuple[float, str, dict[str, Any]]]:
-        exact = [(1.0, c.get("how", "links"), linked[r]) for r in c.get("records", []) if r in linked and r != ident(c["url"])]
-        found = exact or ([(s, f"{s:.0%}", e) for s, e in matcher.match(f"{c['title']} {c['text']}")] if c.get("lab") else [])
-        return [m for m in found if (I.rid(m[2]), ident(c["url"])) not in known]
+    def matches(c: Candidate) -> list[tuple[float, str, dict[str, Any]]]:
+        url = S.identity(c["url"])
+        found = [(1.0, c["how"], linked[r]) for r in c["records"] if r in linked and r != url]
+        if not found and url not in seen:
+            found = [(s, f"title {s:.0%}", e) for s, e in matcher.match(f"{c['title']} {c['text']}", c["labs"])]
+        return [m for m in found if (I.rid(m[2]), url) not in known]
 
-    matched = [(c, m) for c in candidates if (m := matches(c))]
+    matched = sorted(((c, m) for c in candidates if (m := matches(c))), key=lambda cm: (cm[1][0][1].startswith("title"), -cm[1][0][0]))
     if not matched:
         return "\n".join(lines + [f"No candidates ({len(candidates)} new items read, none matched a record).", ""])
     lines.append(f"{len(matched)} of {len(candidates)} new items match a record.")
-    for c, m in sorted(matched, key=lambda cm: -cm[1][0][0]):
+    by_title = False
+    for c, m in matched:
+        if not by_title and (by_title := m[0][1].startswith("title")):
+            lines += ["", "---", "", "The items below name no record. They name an AI lab and share words with these records' titles, so "
+                      "check that they are about the record."]
         who = ", ".join(c["authors"][:4]) + (" et al." if len(c["authors"]) > 4 else "")
         lines += ["", f"## [{c['title'] or S.trim(c['text'], 80)}]({c['url']})", f"{c['where']}, {c['date']}, {who}", ""]
-        author = f" --author {shlex.quote(c['author'])}" if c.get("author") else ""
+        author = f" --author {shlex.quote(c['author'])}" if c["author"] else ""
         for _, how, e in m:
             lines.append(f"- {how} `{I.rid(e)}`: {e.get('title')}")
             lines.append(f"  `python3 index.py discuss {I.rid(e)} {shlex.quote(c['url'])}{author}`")
@@ -356,15 +429,17 @@ def main(argv: Iterable[str] | None = None) -> int:
     a = ap.parse_args(list(argv) if argv is not None else None)
     start, end = a.until - dt.timedelta(days=a.days - 1), a.until
     entries = live("source <> ALL(%s)", [sorted(SKIP_SOURCES)])
-    candidates, errors = [], []
+    candidates: list[Candidate] = []
+    errors = []
     for name, find in FINDERS:
         try:
             candidates += find(start, end)
-        except (S.NotFound, S.SourceError, ET.ParseError) as err:
-            errors.append(f"{name} ({err})")
-    ids = sorted({r for c in candidates for r in c.get("records", [])})
+        except Exception as err:  # a source that is down or changed its replies costs its own items, not the report
+            errors.append(f"{name} ({type(err).__name__}: {err})")
+    ids = sorted({r for c in candidates for r in c["records"]})
     linked = {I.rid(e): e for e in live("id = ANY(%s)", [ids])} if ids else {}
-    text = report(candidates, Matcher(entries), linked, attached([*entries, *linked.values()]), start, end, errors)
+    known = attached([*entries, *linked.values()]) | (reported(a.out.parent, start, end) if a.out else set())
+    text = report(candidates, Matcher(entries), linked, known, start, end, errors)
     if a.out:
         a.out.parent.mkdir(parents=True, exist_ok=True)
         a.out.write_text(text)

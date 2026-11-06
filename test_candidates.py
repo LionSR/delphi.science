@@ -38,6 +38,9 @@ class Matching(unittest.TestCase):
         self.assertIn((rid, C.ident("http://www.arxiv.org/pdf/2610.01234v3.pdf")), known)
         self.assertIn((rid, C.ident("https://mathoverflow.net/questions/1/x?r=1")), known)
         self.assertNotIn(("openai-math/Siegel-zeros", C.ident("https://arxiv.org/abs/2610.01234")), known)
+        blog = "https://www.math.columbia.edu/~woit/wordpress/?p=15979"
+        self.assertEqual(C.ident(blog + "&utm_source=rss#:~:text=Witten"), C.ident(blog))
+        self.assertNotEqual(C.ident(blog), C.ident(blog.replace("15979", "15957")))
 
     def test_report_lists_commands_and_survives_a_source_down(self):
         cands = [{"url": "https://arxiv.org/abs/2610.00001", "title": "Siegel zeros after OpenAI", "authors": ["A. Person"], "date": "2026-10-20",

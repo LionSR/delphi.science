@@ -68,13 +68,21 @@ def live(where: str, params: list[Any]) -> list[dict[str, Any]]:
     return [e for _, e in I.load(f"({where}) AND NOT coalesce((entry->>'gone')::boolean, false)", params)]
 
 
+TRACKING = re.compile(r"utm_.*|fbclid|gclid|ref|ref_src|r|s|t")  # query parameters that do not identify a page
+
+
 def ident(url: str) -> str:
-    """An identity for a link: its record id, or for a plain web page its URL without fragment or query."""
+    """An identity for a link: its record id, or for a plain web page its URL without fragment or tracking parameters
+    (a blog post can be ?p=15979)."""
     try:
         src, key = S.detect(url)
     except ValueError:
         src, key = S.BY_NAME["web"], ""
-    return f"{src.name}/{key}" if src.name != "web" else url.split("#")[0].split("?")[0].rstrip("/")
+    if src.name != "web":
+        return f"{src.name}/{key}"
+    u = urllib.parse.urlsplit(url.strip())
+    query = urllib.parse.urlencode([(k, v) for k, v in urllib.parse.parse_qsl(u.query) if not TRACKING.fullmatch(k)])
+    return urllib.parse.urlunsplit(u._replace(path=u.path.rstrip("/"), query=query, fragment=""))
 
 
 def attached(entries: Iterable[dict[str, Any]]) -> set[tuple[str, str]]:

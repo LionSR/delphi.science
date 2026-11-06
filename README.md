@@ -46,6 +46,7 @@ Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are 
 - **Refresh:** `index.py refresh` re-fetches the 200 stalest entries older than 7 days, relabels when title or abstract changed, and marks 404s as `gone`.
 - **Classification:** `index.py label` uses DeepSeek (`label-prompt.md`) to label each entry `research`, `non-research`, `fiction`, `low-info` or `harmful`, with an arXiv subject code and up to 4 topic tags. Search defaults to `research`. `harmful` entries are excluded from `index.json` and search but kept in `open_index.entries`. Classification is optional metadata, not peer review and not a condition for inclusion.
 - **External responses (`discussion[]`):** `index.py discuss` links commentary from researchers, labs, journals and established research blogs (no anonymous accounts, aggregators or reposts). X posts store only author, handle and date (via oEmbed) and render through X's embed widget, so deleted posts disappear. Other responses store title, URL, author, date and a verbatim excerpt. A page that does not describe itself, such as a PDF note on a researcher's home page, is attached with `--title`, `--author` and `--date`; a page with no title is not attached otherwise. The same flags correct an attached link, such as a guest post that the page credits to its blog, and a recheck keeps a web link's title, author and date. MathOverflow, Math.SE, CSTheory.SE and Physics.SE posts are read through the Stack Exchange API, and an answer link (`/a/<id>` or `/questions/<id>/<slug>/<answer id>`) credits the answer's author. `discuss --recheck` runs daily and drops dead links.
+- **Finding responses:** `candidates.py` reports items that may respond to any record, arXiv records included. It reads the research blogs in `blogs.json`, which gives each feed's authors by full name. It also reads new arXiv papers that cite a record and name it in their abstract (references from INSPIRE for physics, and from Semantic Scholar otherwise, which needs `S2_API_KEY` to avoid its shared rate limit), MathOverflow, CSTheory and Physics.SE questions and answers, Bluesky posts that link a record that already has responses, and arXiv preprints that mention the AI labs. An item that links or cites a record is matched to it exactly. Other items must mention an AI lab and are matched by title. A person reads each item before attaching it.
 - **Stances:** editors set a stance on each response with `discuss --stance`:
   - `refutes` — finds an error that invalidates the main claim
   - `questions` — incomplete step, Lean/prose mismatch, weaker statement than claimed, or priority issue
@@ -95,7 +96,7 @@ python3 index.py reception <record id> --draft                    # draft a rece
 python3 index.py reception <record id> --reviewed-by <login> [--text "..."] [--links <url>...]
 python3 index.py reception                                        # list published, draft and stale summaries
 python3 index.py build                                            # write dist/index.json
-python3 candidates.py [--days 7]                                  # scan arXiv and MathOverflow for candidate responses
+python3 candidates.py [--days 7]                                  # find candidate responses (blogs, citations, Stack Exchange, Bluesky, arXiv)
 X_BEARER_TOKEN=... python3 x_candidates.py [--days 4]            # X posts about records, via the X API; prints only
 ```
 
@@ -135,7 +136,7 @@ cd site && npm test
 ## Operations
 
 - `.github/workflows/daily.yml` — daily harvest, label, refresh, recheck and build (05:30 UTC).
-- `.github/workflows/responses.yml` — runs `candidates.py` every Monday and commits reports to `reports/responses/` for manual review.
+- `.github/workflows/responses.yml` — runs `candidates.py` daily (04:17 UTC, over the last 4 days) and commits reports to `reports/responses/` for review.
 - `.github/workflows/usage-retention.yml` — optional usage-counter cleanup; see [docs/usage-analytics.md](docs/usage-analytics.md).
 - `.github/workflows/author-check.yml` — commits must use a Vercel team email (`VERCEL_TEAM_EMAILS`), e.g. `git config user.email 14889516+LionSR@users.noreply.github.com`.
 - `harvest.json` configures harvest jobs; `"enabled": false` skips one.

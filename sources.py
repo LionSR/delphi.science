@@ -44,15 +44,19 @@ DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "export.arx
 TOKEN: str | None = None  # GitHub token, set by index.py
 
 
-def get(url: str, *, accept: str | None = None, cache: bool = True, max_age: float = 86400) -> bytes:
+def get(url: str, *, accept: str | None = None, cache: bool = True, max_age: float = 86400, data: bytes | None = None,
+        headers: dict[str, str] | None = None) -> bytes:
+    """The body at url; with data, the body of a POST of that JSON. Extra headers are not part of the cache key."""
     host = urllib.parse.urlsplit(url).hostname or ""
-    path = CACHE / hashlib.sha1(f"{accept}|{url}".encode()).hexdigest()
+    path = CACHE / hashlib.sha1(f"{accept}|{url}".encode() + (b"|" + data if data else b"")).hexdigest()
     if cache and path.exists() and time.time() - path.stat().st_mtime < max_age:
         return path.read_bytes()
     wait = DELAY.get(host, 0.2) - (time.time() - _last_hit.get(host, 0))
     if wait > 0:
         time.sleep(wait)
-    headers = {"User-Agent": USER_AGENT}
+    headers = {"User-Agent": USER_AGENT, **(headers or {})}
+    if data is not None:
+        headers["Content-Type"] = "application/json"
     if accept:
         headers["Accept"] = accept
     if host == "api.github.com" and TOKEN:
@@ -60,7 +64,7 @@ def get(url: str, *, accept: str | None = None, cache: bool = True, max_age: flo
     try:
         for attempt in (1, 2):  # retry once: arXiv sometimes times out
             try:
-                with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=45) as r:
+                with urllib.request.urlopen(urllib.request.Request(url, data=data, headers=headers), timeout=45) as r:
                     body = r.read()
                 break
             except (TimeoutError, ConnectionResetError):

@@ -44,7 +44,7 @@ class Matching(unittest.TestCase):
 
     def test_report_lists_commands_and_survives_a_source_down(self):
         cands = [{"url": "https://arxiv.org/abs/2610.00001", "title": "Siegel zeros after OpenAI", "authors": ["A. Person"], "date": "2026-10-20",
-                  "where": "arXiv", "text": "We check the argument on exceptional characters and Siegel zeros of Dirichlet L-functions."},
+                  "where": "arXiv", "text": "We check the argument on exceptional characters and Siegel zeros of Dirichlet L-functions.", "lab": True},
                  {"url": "https://www.math.columbia.edu/~woit/wordpress/?p=15979", "title": "New Morning", "authors": ["Peter Woit"], "date": "2026-11-04",
                   "where": "Not Even Wrong", "text": "On top of this, there's a new paper.", "records": ["arxiv/2610.09093"], "author": "Peter Woit"}]
         text = C.report(cands, self.m, {"arxiv/2610.09093": CRAIG}, set(), *WEEK, ["MathOverflow (down)"])
@@ -61,10 +61,12 @@ class Finding(unittest.TestCase):
             <pubDate>Wed, 04 Nov 2026 15:31:00 +0000</pubDate><content:encoded><![CDATA[A <a href="https://arxiv.org/abs/2611.05051v1">new paper</a>,
             after arXiv:2610.09093 and <a href="https://example.org/about">this</a>.]]></content:encoded></item></channel></rss>"""
         atom = b"""<feed xmlns="http://www.w3.org/2005/Atom"><author><name>Asaf Karagila</name></author><entry><title>Choice</title>
-            <link rel="alternate" href="https://karagila.org/2026/choice/"/><published>2026-11-02T08:00:00Z</published><content>Set theory.</content></entry></feed>"""
+            <link rel="alternate" href="https://karagila.org/2026/choice/"/><published>2026-11-02T08:00:00Z</published>
+            <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">See <a href="https://arxiv.org/html/2610.09093v1#S2">section 2</a>.</div></content></entry></feed>"""
         (post,), (entry,) = C.posts(rss), C.posts(atom)
         self.assertEqual([post["author"], post["date"], C.named(post["body"])], ["woit", "2026-11-04", ["arxiv/2611.05051", "arxiv/2610.09093"]])
-        self.assertEqual([entry["link"], entry["author"], entry["date"]], ["https://karagila.org/2026/choice/", "Asaf Karagila", "2026-11-02"])
+        self.assertEqual([entry["link"], entry["author"], entry["date"], C.named(entry["body"])],
+                         ["https://karagila.org/2026/choice/", "Asaf Karagila", "2026-11-02", ["arxiv/2610.09093"]])
 
     def test_a_citing_paper_counts_when_its_abstract_names_the_cited_work_but_not_its_own(self):
         ref = lambda arxiv, *names: {"reference": {"arxiv_eprint": arxiv, "authors": [{"full_name": n} for n in names]}}  # noqa: E731

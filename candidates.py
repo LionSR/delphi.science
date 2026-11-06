@@ -75,7 +75,7 @@ def ident(url: str) -> str:
     """An identity for a link: its record id, or for a plain web page its URL without fragment or tracking parameters
     (a blog post can be ?p=15979)."""
     try:
-        src, key = S.detect(url)
+        src, key = S.detect(urllib.parse.urldefrag(url.strip())[0])
     except ValueError:
         src, key = S.BY_NAME["web"], ""
     if src.name != "web":
@@ -98,7 +98,7 @@ def named(text: str | None) -> list[str]:
     ids = []
     for m in LINK.finditer(text or ""):
         try:
-            src, key = S.detect(html.unescape(m[1] or m[2]).strip())
+            src, key = S.detect(urllib.parse.urldefrag(html.unescape(m[1] or m[2]).strip())[0])  # a section link names its paper
         except ValueError:
             continue
         if src.name != "web":
@@ -138,7 +138,8 @@ class Matcher:
 
 
 # ---- Finders: each returns the items dated in the window, as {url, title, authors, date, text, where}, with the
-# records the item links or cites (records), how it names them (how: links or cites), and the --author to attach it with.
+# records the item links or cites (records), how it names them (how: links or cites), whether its full text mentions an AI
+# lab (lab), and the --author to attach it with.
 
 
 def in_window(day: str, start: dt.date, end: dt.date) -> bool:
@@ -150,7 +151,7 @@ def arxiv_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
     terms = " OR ".join(f'abs:"{t}"' for t in TERMS)
     query = f"({terms}) AND {window}"
     return [{"url": e["url"], "title": e["title"], "authors": e.get("authors", []), "date": e.get("published", ""),
-             "text": e.get("summary", ""), "where": "arXiv", "records": named(e.get("summary"))} for e in S.ArXiv().harvest(query, 500)]
+             "text": e.get("summary", ""), "where": "arXiv", "records": named(e.get("summary")), "lab": True} for e in S.ArXiv().harvest(query, 500)]
 
 
 def surname(name: str | None) -> str:
@@ -233,12 +234,12 @@ def stackexchange_candidates(host: str, start: dt.date, end: dt.date) -> list[di
             data = S.get_json(f"https://api.stackexchange.com/2.3/{kind}?{q}", cache=False)
             time.sleep(data.get("backoff", 0))  # the API refuses the next request until then
             for item in data.get("items", []):
-                ids = named(item.get("body"))
-                if ids or MENTIONS.search(f"{item.get('title', '')} {item.get('body', '')}"):
+                ids, lab = named(item.get("body")), bool(MENTIONS.search(f"{item.get('title', '')} {item.get('body', '')}"))
+                if ids or lab:
                     link = S.stackexchange_item(item)
                     url = item["link"] if kind == "questions" else f"https://{host}/a/{item['answer_id']}"  # an answer link credits its author
                     out.append({"url": url, "title": link["title"] or f"An answer on {host}", "authors": [link["author"]], "date": link["date"],
-                                "text": link["text"], "where": host, "records": ids})
+                                "text": link["text"], "where": host, "records": ids, "lab": lab})
             if not data.get("has_more"):
                 break
     return out
@@ -261,14 +262,21 @@ def posts(feed: bytes) -> Iterator[dict[str, str]]:
     def t(el: ET.Element, *paths: str) -> str:
         return next((x for p in paths if (x := (el.findtext(p, "", FEED) or "").strip())), "")
 
+    def body(el: ET.Element, *paths: str) -> str:
+        """Escaped HTML, or Atom's inline XHTML serialized with its links."""
+        for found in (el.find(p, FEED) for p in paths):
+            if found is not None and (x := ((found.text or "") + "".join(ET.tostring(c, encoding="unicode") for c in found)).strip()):
+                return x
+        return ""
+
     for it in root.iter("item"):
         yield {"link": t(it, "link"), "title": t(it, "title"), "author": t(it, "dc:creator"), "date": rss_date(t(it, "pubDate")),
-               "body": t(it, "content:encoded", "description")}
+               "body": body(it, "content:encoded", "description")}
     owner = t(root, "a:author/a:name")
     for it in root.iter(f"{{{FEED['a']}}}entry"):
         link = next((x.get("href", "") for x in it.findall("a:link", FEED) if x.get("rel", "alternate") == "alternate"), "")
         yield {"link": link, "title": t(it, "a:title"), "author": t(it, "a:author/a:name") or owner,
-               "date": S.iso_date(t(it, "a:published", "a:updated")), "body": t(it, "a:content", "a:summary")}
+               "date": S.iso_date(t(it, "a:published", "a:updated")), "body": body(it, "a:content", "a:summary")}
 
 
 def blog_candidates(blog: dict[str, Any], start: dt.date, end: dt.date) -> list[dict[str, Any]]:
@@ -278,7 +286,8 @@ def blog_candidates(blog: dict[str, Any], start: dt.date, end: dt.date) -> list[
         if in_window(p["date"], start, end):
             author = blog["authors"].get(p["author"], "")
             out.append({"url": p["link"], "title": S.clean(p["title"]), "authors": [author or p["author"]], "date": p["date"],
-                        "text": S.trim(p["body"]), "where": blog["name"], "records": named(p["body"]), "author": author})
+                        "text": S.trim(p["body"]), "where": blog["name"], "records": named(p["body"]),
+                        "lab": bool(MENTIONS.search(f"{p['title']} {p['body']}")), "author": author})
     return out
 
 
@@ -322,8 +331,7 @@ def report(candidates: list[dict[str, Any]], matcher: Matcher, linked: dict[str,
 
     def matches(c: dict[str, Any]) -> list[tuple[float, str, dict[str, Any]]]:
         exact = [(1.0, c.get("how", "links"), linked[r]) for r in c.get("records", []) if r in linked and r != ident(c["url"])]
-        text = f"{c['title']} {c['text']}"
-        found = exact or ([(s, f"{s:.0%}", e) for s, e in matcher.match(text)] if MENTIONS.search(text) else [])
+        found = exact or ([(s, f"{s:.0%}", e) for s, e in matcher.match(f"{c['title']} {c['text']}")] if c.get("lab") else [])
         return [m for m in found if (I.rid(m[2]), ident(c["url"])) not in known]
 
     matched = [(c, m) for c in candidates if (m := matches(c))]

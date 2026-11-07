@@ -1,0 +1,26 @@
+{
+  "about": "Research blogs and magazines that candidates.py reads for responses. Each feed's posts name their author (dc:creator or Atom author); authors maps that name to the person's full name when the feed gives a handle, and author is the full name for posts that name none. Add only blogs whose authors are identified researchers or bylined science journalists.",
+  "blogs": [
+    { "name": "Not Even Wrong", "feed": "https://www.math.columbia.edu/~woit/wordpress/?feed=rss2", "authors": { "woit": "Peter Woit" } },
+    { "name": "Combinatorics and more", "feed": "https://gilkalai.wordpress.com/feed/", "authors": {} },
+    { "name": "What's new", "feed": "https://terrytao.wordpress.com/feed/", "authors": {} },
+    { "name": "Shtetl-Optimized", "feed": "https://scottaaronson.blog/?feed=rss2", "authors": { "Scott": "Scott Aaronson" } },
+    { "name": "Computational Complexity", "feed": "https://blog.computationalcomplexity.org/feeds/posts/default", "authors": { "gasarch": "William Gasarch" } },
+    { "name": "Xena", "feed": "https://xenaproject.wordpress.com/feed/", "authors": { "xenaproject": "Kevin Buzzard" } },
+    { "name": "4 gravitons", "feed": "https://4gravitons.com/feed/", "authors": { "4gravitons": "Matt von Hippel" } },
+    { "name": "Persiflage", "feed": "https://galoisrepresentations.org/feed/", "authors": { "Persiflage": "Frank Calegari" } },
+    { "name": "Proofs and Prompts", "feed": "https://proofsandprompts.com/feed/", "authors": {} },
+    { "name": "Windows On Theory", "feed": "https://windowsontheory.org/feed/", "authors": {} },
+    { "name": "Peter Cameron's Blog", "feed": "https://cameroncounts.wordpress.com/feed/", "authors": {} },
+    { "name": "Asaf Karagila", "feed": "https://karagila.org/feed.xml", "author": "Asaf Karagila" },
+    { "name": "theHigherGeometer", "feed": "https://thehighergeometer.wordpress.com/feed/", "authors": {} },
+    { "name": "ETH: Community Examination and Discussion", "feed": "https://ethdiscussion.blog/feed/", "authors": { "rpaturi7da97240c3": "Ramamohan Paturi" } },
+    { "name": "Gödel's Lost Letter and P=NP", "feed": "https://rjlipton.com/feed/", "authors": { "rjlipton": "Richard J. Lipton", "KWRegan": "Kenneth W. Regan" } },
+    { "name": "The n-Category Café", "feed": "https://golem.ph.utexas.edu/category/atom10.xml", "authors": { "john": "John Baez" } },
+    { "name": "Sean Carroll", "feed": "https://www.preposterousuniverse.com/blog/feed/", "authors": {} },
+    { "name": "Crunch Time for Humanity", "feed": "https://haggstrom.substack.com/feed", "authors": {} },
+    { "name": "AI, Math, etc.", "feed": "https://stevenheilman.substack.com/feed", "authors": {} },
+    { "name": "arg min", "feed": "https://www.argmin.net/feed", "authors": {} },
+    { "name": "Quanta Magazine", "feed": "https://www.quantamagazine.org/feed/", "authors": {} }
+  ]
+}

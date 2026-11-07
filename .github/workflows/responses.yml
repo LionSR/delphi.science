@@ -1,10 +1,10 @@
-# Weekly: write arXiv papers and MathOverflow questions that may respond to AI-made records
-# (candidates.py) to reports/responses/<date>.md for a person to review.
+# Daily, before the curator routine: write items that may respond to records (candidates.py) to
+# reports/responses/<date>.md for a person to review.
 name: Candidate responses
 
 on:
   schedule:
-    - cron: '17 6 * * 1' # Mondays, 06:17 UTC
+    - cron: '17 4 * * *' # daily, 04:17 UTC
   workflow_dispatch:
 
 concurrency:
@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      S2_API_KEY: ${{ secrets.S2_API_KEY }} # optional
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
@@ -29,11 +30,11 @@ jobs:
       - name: Find candidates
         run: |
           out="reports/responses/$(date -u +%F).md"
-          python3 candidates.py --out "$out"
+          python3 candidates.py --days 4 --out "$out"
           cat "$out" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit the report
         uses: ./.github/actions/commit-as-owner
         with:
           paths: reports
-          message: 'Candidate responses for the week to {date}'
+          message: 'Candidate responses to {date}'

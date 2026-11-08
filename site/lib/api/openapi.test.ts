@@ -11,7 +11,7 @@ import { spec } from './openapi.ts';
 import { closed } from './schema.ts';
 import { approveDevice } from '#lib/accounts/device.ts';
 import { createAgentKey } from '#lib/accounts/keys.ts';
-import { allowRouteImports, BUILD, emptyDb, migratedDb, sampleItems, useDb } from '#lib/testing.ts';
+import { allowRouteImports, BUILD, migratedDb, sampleItems, useDb } from '#lib/testing.ts';
 
 // Next's bundler resolves next/server for the routes; plain Node needs the file named.
 allowRouteImports();
@@ -148,16 +148,6 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		const page = JSON.parse((await call('GET', '/api/v1/search', { query: 'limit=2' })).text);
 		await call('GET', '/api/v1/search', { query: `limit=2&cursor=${page.next_cursor}` });
 		assert.equal((await call('GET', '/api/v1/search', { query: 'q=foo:bar' })).status, 400);
-	});
-
-	test('persisted canonical works have documented success, unknown, invalid and migration-required responses',async()=>{
-		const id=(await pg.query<{work_id:string}>('SELECT work_id FROM open_index.records WHERE id=$1',[discussed])).rows[0].work_id;
-		assert.equal((await call('GET','/api/v1/works',{query:`id=${encodeURIComponent(id)}`})).status,200);
-		assert.equal((await call('GET','/api/v1/works',{query:'id=missing-work'})).status,404);
-		assert.equal((await call('GET','/api/v1/works')).status,400);
-		const old=emptyDb();
-		try {useDb(old);assert.equal((await call('GET','/api/v1/works',{query:'id=missing-work'})).status,503);}
-		finally {useDb(pg);await old.close();}
 	});
 
 	test('records, with stances and a reception, and an unknown id', async () => {

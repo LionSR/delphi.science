@@ -49,12 +49,10 @@ describe('query syntax', () => {
 describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' }, () => {
 	let db: PGlite;
 	let items: Item[] = [];
-	let workIds = new Map<string,string>();
 	before(async () => {
 		db = await migratedDb();
 		items = buildItems();
 		assert.equal(await load(db, items), items.length);
-		workIds = new Map((await db.query<{id:string;work_id:string}>('SELECT id,work_id FROM open_index.records')).rows.map((r)=>[r.id,r.work_id]));
 	});
 	// Sets a record's links (record.discussion), as index.py discuss does; pair queries two palomar records.
 	const discuss = (id: string, links: object[]) =>
@@ -72,8 +70,8 @@ describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' },
 		assert.equal(added, items.length);
 	});
 
-	test('structured filters match source assertions, counted by curated work', async () => {
-		const expect = (pred: (it: Item) => boolean) => new Set(items.filter(pred).map((it) => workIds.get(it.id) ?? it.id)).size;
+	test('structured filters match the build exactly', async () => {
+		const expect = (pred: (it: Item) => boolean) => items.filter(pred).length;
 		const cases: [string, number][] = [
 			['cat:math', expect((it) => it.division === 'math')],
 			['cat:math.NT', expect((it) => it.subject === 'math.NT')],
@@ -137,7 +135,7 @@ describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' },
 		const discussed = items.filter((it) => Array.isArray(it.discussion) && it.discussion.length > 0);
 		assert.ok(discussed.length > 0, 'the build has records with discussion');
 		const r = await search(db, 'is:discussed', { sort: 'score', limit: 50 });
-		assert.equal(r.total, new Set(discussed.map((it) => workIds.get(it.id) ?? it.id)).size);
+		assert.equal(r.total, discussed.length);
 		const most = Math.max(...discussed.map((it) => (it.discussion as unknown[]).length));
 		assert.equal(r.results[0].discussed, most); // no votes yet: the posts alone rank it first
 	});

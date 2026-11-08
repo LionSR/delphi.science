@@ -274,68 +274,6 @@
 				}
 			}
 		},
-		"/api/v1/works": {
-			"get": {
-				"operationId": "getWork",
-				"security": [],
-				"summary": "Read a persisted canonical work and its available source records. Retained work aliases resolve to their canonical work; source interactions stay separate.",
-				"parameters": [
-					{
-						"name": "id",
-						"in": "query",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"minLength": 1,
-							"maxLength": 300
-						},
-						"description": "Persisted work_id from a source record or search result."
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "Canonical work, including source provenance",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/Work"
-								}
-							}
-						}
-					},
-					"400": {
-						"description": "Error with a code, a message and a fix",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/Error"
-								}
-							}
-						}
-					},
-					"404": {
-						"description": "Error with a code, a message and a fix",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/Error"
-								}
-							}
-						}
-					},
-					"503": {
-						"description": "Error with a code, a message and a fix",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/Error"
-								}
-							}
-						}
-					}
-				}
-			}
-		},
 		"/api/v1/records/{prefix}/{suffix}": {
 			"get": {
 				"operationId": "getRecord",
@@ -2369,40 +2307,6 @@
 					}
 				}
 			},
-			"SourceIdentity": {
-				"type": "object",
-				"additionalProperties": false,
-				"required": [
-					"scheme",
-					"value",
-					"verified_by",
-					"evidence"
-				],
-				"description": "Exact self DOI checked by a trusted upstream adapter. Other DOI fields and relationship links are unverified for entity resolution.",
-				"properties": {
-					"scheme": {
-						"type": "string",
-						"enum": [
-							"doi"
-						]
-					},
-					"value": {
-						"type": "string",
-						"minLength": 1
-					},
-					"verified_by": {
-						"type": "string",
-						"enum": [
-							"doi-csl",
-							"zenodo-record"
-						]
-					},
-					"evidence": {
-						"type": "string",
-						"minLength": 1
-					}
-				}
-			},
 			"Entry": {
 				"type": "object",
 				"additionalProperties": false,
@@ -2486,9 +2390,6 @@
 					},
 					"doi": {
 						"type": "string"
-					},
-					"identity": {
-						"$ref": "#/components/schemas/SourceIdentity"
 					},
 					"stars": {
 						"type": "integer"
@@ -2708,141 +2609,6 @@
 					}
 				}
 			},
-			"Work": {
-				"type": "object",
-				"description": "Persisted canonical work from open_index.works/work_records. Top-level Record identity and interactions stay source-bound. Membership is not verification. Compact results omit group discussion and compact each source snapshot.",
-				"required": [
-					"id",
-					"title",
-					"main_record_id",
-					"member_count",
-					"publication_record_id",
-					"view_record_id",
-					"evidence",
-					"sources",
-					"discussed"
-				],
-				"properties": {
-					"id": {
-						"type": "string"
-					},
-					"title": {
-						"type": "string",
-						"description": "Evidence-backed work display title; preserves mathematical notation lost by a source parser without rewriting source snapshots."
-					},
-					"main_record_id": {
-						"type": "string",
-						"description": "Stable curated canonical main record ID, independent of query/sort. May be temporarily unavailable; sources lists only available records."
-					},
-					"publication_record_id": {
-						"type": [
-							"string",
-							"null"
-						],
-						"description": "Independent publication metadata source; never inferred from the main record creation date."
-					},
-					"member_count": {
-						"type": "integer",
-						"description": "Durable source membership count, including unavailable records."
-					},
-					"requested_work_id": {
-						"type": "string",
-						"description": "Original ID when a retained work alias was requested."
-					},
-					"view_record_id": {
-						"type": "string",
-						"description": "Source record view at the root of this response; interactions target this ID, never implicitly the main record."
-					},
-					"evidence": {
-						"type": "array",
-						"items": {
-							"type": "string"
-						}
-					},
-					"discussed": {
-						"type": "integer",
-						"description": "URL-normalized union of external responses across available sources; never a sum of source counts."
-					},
-					"sources": {
-						"type": "array",
-						"items": {
-							"type": "object",
-							"required": [
-								"id",
-								"role",
-								"date_meaning",
-								"record"
-							],
-							"properties": {
-								"id": {
-									"type": "string"
-								},
-								"role": {
-									"type": "string"
-								},
-								"date_meaning": {
-									"type": "string"
-								},
-								"identity": {
-									"$ref": "#/components/schemas/SourceIdentity"
-								},
-								"evidence": {
-									"type": "array",
-									"items": {
-										"type": "string"
-									}
-								},
-								"reviewed_by": {
-									"type": [
-										"string",
-										"null"
-									]
-								},
-								"record": {
-									"type": "object",
-									"additionalProperties": true,
-									"description": "Unmodified source record with live source-bound interaction counts; full or compact according to fields. Does not contain work recursively."
-								}
-							}
-						}
-					},
-					"discussion": {
-						"type": "array",
-						"items": {
-							"type": "object",
-							"additionalProperties": true,
-							"required": [
-								"url",
-								"assertions"
-							],
-							"description": "One external response per normalized URL. Display fields use the first curated source; assertions retain all original source metadata, including conflicts.",
-							"properties": {
-								"url": {
-									"type": "string"
-								},
-								"assertions": {
-									"type": "array",
-									"items": {
-										"type": "object",
-										"required": [
-											"record_id",
-											"link"
-										],
-										"properties": {
-											"record_id": {
-												"type": "string"
-											},
-											"link": {
-												"$ref": "#/components/schemas/Link"
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			},
 			"Record": {
 				"type": "object",
 				"required": [
@@ -2854,10 +2620,6 @@
 				"properties": {
 					"id": {
 						"type": "string"
-					},
-					"work_id": {
-						"type": "string",
-						"description": "Persisted canonical work identity; absent until the separately reviewed schema migration is applied."
 					},
 					"source": {
 						"type": "string",
@@ -2885,12 +2647,6 @@
 					"json": {
 						"type": "string",
 						"description": "Upstream JSON metadata URL."
-					},
-					"doi": {
-						"type": "string"
-					},
-					"identity": {
-						"$ref": "#/components/schemas/SourceIdentity"
 					},
 					"summary": {
 						"type": "string",
@@ -3049,17 +2805,11 @@
 							}
 						}
 					},
-					"work": {
-						"$ref": "#/components/schemas/Work"
-					},
 					"links": {
 						"type": "object",
 						"description": "Self link to full record endpoint.",
 						"properties": {
 							"self": {
-								"type": "string"
-							},
-							"work": {
 								"type": "string"
 							}
 						}
@@ -3079,17 +2829,8 @@
 					"results"
 				],
 				"properties": {
-					"work_model": {
-						"type": "string",
-						"enum": [
-							"canonical",
-							"source_records"
-						],
-						"description": "canonical uses persisted relationships and grouped counts; source_records is a safe compatibility response before migration, with raw record counts and no inferred grouping."
-					},
 					"query": {
-						"type": "string",
-						"description": "Filters apply to individual sources before curated work grouping; one best-ranked matching source per work. Source date/flag assertions remain searchable independently. Totals and pages count grouped results; source counts remain raw records."
+						"type": "string"
 					},
 					"sort": {
 						"type": "string"

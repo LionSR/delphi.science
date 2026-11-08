@@ -160,3 +160,9 @@ table.stats :is(th, td) { text-align: left; padding: 0.25rem 1.2rem 0.25rem 0; b
 table.stats th { font-weight: 500; color: var(--muted); }
 table.stats .num { text-align: right; }
 table.stats :is(th, td):last-child { padding-right: 0; }
+
+/* Curated work sources keep original identities and dates readable on narrow screens. */
+.work-sources { border-left: 2px solid var(--rule); padding-left: 0.8rem; margin: 0.6rem 0; overflow-wrap: anywhere; }
+.work-sources ul { list-style: none; padding: 0; margin: 0.4rem 0; }
+.work-sources li { margin: 0.65rem 0; }
+.work-sources p { margin-top: 0.3rem; }

@@ -55,6 +55,20 @@ class Stored(unittest.TestCase):
 
 
 class Detect(unittest.TestCase):
+    def test_verified_doi_identity_survives_build_and_rejects_mismatched_responses(self) -> None:
+        doi = "10.5555/Case.Suffix"
+        with patch.object(S, "get_json", return_value={"DOI": doi.lower(), "title": "Verified work"}):
+            e = S.Doi().fetch(doi.replace("/", "__"))
+        self.assertEqual(e["identity"], {"scheme": "doi", "value": doi.lower(), "verified_by": "doi-csl", "evidence": f"https://doi.org/{doi.lower()}"})
+        self.assertEqual(index.to_item(e)["identity"], e["identity"])
+        S_.check(index.to_item(e), "Record", "verified DOI")
+        for response in [{"title": "Missing DOI"}, {"title": "Other work", "DOI": "10.5555/other"}]:
+            with patch.object(S, "get_json", return_value=response), self.assertRaises(S.SourceError):
+                S.Doi().fetch(doi.replace("/", "__"))
+        version = S.Zenodo()._entry({"id": 8001, "doi": "10.5281/zenodo.8001", "conceptdoi": "10.5281/zenodo.8000", "metadata": {"title": "Version"}})
+        self.assertEqual(version["identity"]["value"], "10.5281/zenodo.8001")
+        self.assertNotIn("identity", S.Zenodo()._entry({"id": 8002, "doi": "10.5281/zenodo.8000", "metadata": {"title": "Concept"}}))
+
     CASES = {
         "https://github.com/SakanaAI/AI-Scientist": ("github", "SakanaAI__AI-Scientist"),
         "github.com/owner/repo.git": ("github", "owner__repo"),
@@ -796,7 +810,8 @@ class RecordShape(unittest.TestCase):
         reply = {"key": "2610.20058", "source": "arxiv", "url": "https://arxiv.org/abs/2610.20058", "title": "Reply", "added": "2026-10-08"}
         app = index.app_entry({"id": "APP-260923-0000", "repo_url": "https://github.com/o/app", "versions": [
             {"title": "A", "authors": [{"name": "D"}], "paper_summary": "s", "tags": ["physics"], "domain": "hep-th", "listed_at": "2026-09-23"}]})
-        self.assertEqual(set(index.PASSTHROUGH) - set(paper) - set(app), set(), "a served field this fixture leaves out")
+        self.assertEqual(set(index.PASSTHROUGH) - set(paper) - set(app), {"doi", "identity"},
+                         "verified DOI fields are covered by the authoritative-adapter test; all other served fields belong here")
         return paper, reply, app
 
     def built(self) -> list[dict]:

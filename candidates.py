@@ -115,7 +115,7 @@ def words(text: str | None) -> list[str]:
 
 def live(where: str, params: list[Any]) -> list[dict[str, Any]]:
     """The entries matching a condition that are not gone."""
-    return [e for _, e in I.load(f"({where}) AND NOT coalesce((entry->>'gone')::boolean, false)", params)]
+    return [e for _, e in I.load(f"({where}) AND NOT coalesce((entry->>'gone')::boolean, false) AND entry->>'merged_into' IS NULL", params)]
 
 
 def attached(entries: Iterable[dict[str, Any]]) -> set[tuple[str, str]]:

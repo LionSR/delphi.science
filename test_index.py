@@ -156,11 +156,13 @@ class Checks(Stored):
         problems = index.check(self.entry(key=f"{owner}__{name}", url=repo))
         self.assertTrue(any("APP paper" in p for p in problems))
 
-    def test_harmful_is_left_out_of_build(self) -> None:
+    def test_harmful_and_merged_are_left_out_of_build(self) -> None:
         index.save(Ref("github/o__r"), self.entry(review={"category": "harmful"}))
         index.save(Ref("github/o__s"), self.entry(key="o__s", url="https://github.com/o/s", review={"category": "fiction"}))
+        index.save(Ref("github/o__m"), self.entry(key="o__m", url="https://github.com/o/m", merged_into="github/o__s"))
         ids = {i["id"]: i for i in index.items([e for _, e in index.load()]) if i["source"] != "app"}
         self.assertNotIn("github/o__r", ids)
+        self.assertNotIn("github/o__m", ids)
         self.assertEqual(ids["github/o__s"]["category"], "fiction")
 
     def test_unlabelled_counts_as_research(self) -> None:

@@ -40,19 +40,23 @@ class SourceError(Exception):
 # ---- HTTP: cached, with a per-host delay ----
 
 _last_hit: dict[str, float] = {}
-DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "export.arxiv.org": 3.0, "hexagonmath.org": 0.5}
+DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "export.arxiv.org": 3.0, "arxiv.org": 1.0, "hexagonmath.org": 0.5}
 TOKEN: str | None = None  # GitHub token, set by index.py
 
 
-def get(url: str, *, accept: str | None = None, cache: bool = True, max_age: float = 86400) -> bytes:
+def get(url: str, *, accept: str | None = None, cache: bool = True, max_age: float = 86400, data: bytes | None = None,
+        headers: dict[str, str] | None = None) -> bytes:
+    """The body at url; with data, the body of a POST of that JSON. Extra headers are not part of the cache key."""
     host = urllib.parse.urlsplit(url).hostname or ""
-    path = CACHE / hashlib.sha1(f"{accept}|{url}".encode()).hexdigest()
+    path = CACHE / hashlib.sha1(f"{accept}|{url}".encode() + (b"|" + data if data else b"")).hexdigest()
     if cache and path.exists() and time.time() - path.stat().st_mtime < max_age:
         return path.read_bytes()
     wait = DELAY.get(host, 0.2) - (time.time() - _last_hit.get(host, 0))
     if wait > 0:
         time.sleep(wait)
-    headers = {"User-Agent": USER_AGENT}
+    headers = {"User-Agent": USER_AGENT, **(headers or {})}
+    if data is not None:
+        headers["Content-Type"] = "application/json"
     if accept:
         headers["Accept"] = accept
     if host == "api.github.com" and TOKEN:
@@ -60,7 +64,7 @@ def get(url: str, *, accept: str | None = None, cache: bool = True, max_age: flo
     try:
         for attempt in (1, 2):  # retry once: arXiv sometimes times out
             try:
-                with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=45) as r:
+                with urllib.request.urlopen(urllib.request.Request(url, data=data, headers=headers), timeout=45) as r:
                     body = r.read()
                 break
             except (TimeoutError, ConnectionResetError):
@@ -524,7 +528,9 @@ class OpenAIMath(Source):
 
     name, label, origin = "openai-math", "OpenAI Math", "ai-generated"
     REPO, RAW = "openai/math", "https://raw.githubusercontent.com/openai/math/main"
-    patterns = [r"^(?:https?://)?github\.com/openai/math/(?:blob|tree)/main/preprints/([^/]+?)(?:/.*)?$"]
+    # Any branch or commit of the repository, and the community's mirror with its reactions to each paper.
+    patterns = [r"^(?:https?://)?(?:github\.com/openai/math/(?:blob|tree)|raw\.githubusercontent\.com/openai/math)/[^/]+/preprints/([^/]+?)(?:/.*)?$",
+                r"^(?:https?://)?mathcommunity\.github\.io/oai-math-revised/papers/([^/]+?)(?:/.*)?$"]
     DATED = re.compile(r"-(January|February|March|April|May|June|July|August|September|October|November|December)-(\d{1,2})-(\d{4})$")
     MONTHS = "January February March April May June July August September October November December".split()
 
@@ -936,6 +942,26 @@ def detect(url: str) -> tuple[Source, str]:
         if key:
             return s, key
     raise ValueError(f"not a URL or a known ID: {url!r}")
+
+
+TRACKING = re.compile(r"utm_.*|fbclid|gclid|ref|ref_src|r|s|t")  # query parameters that do not identify a page
+
+
+def identity(url: str) -> str:
+    """What a link points at, so two spellings of one link compare equal: its record id, or for any other page its URL
+    over https without fragment, tracking parameters or trailing slash (a blog post can be ?p=15979), with X posts
+    under x.com."""
+    url = urllib.parse.urldefrag(url.strip())[0]
+    try:
+        src, key = detect(url)
+    except ValueError:
+        src, key = BY_NAME["web"], ""
+    if src.name != "web":
+        return f"{src.name}/{key}"
+    u = urllib.parse.urlsplit(url)
+    host = "x.com" if u.hostname in X_HOSTS else u.hostname or ""
+    query = urllib.parse.urlencode([(k, v) for k, v in urllib.parse.parse_qsl(u.query) if not TRACKING.fullmatch(k)])
+    return urllib.parse.urlunsplit(("https", host, u.path.rstrip("/"), query, ""))
 
 
 def fetch(url: str) -> dict[str, Any]:

@@ -545,13 +545,6 @@ def with_stance(link: dict[str, Any], stance: str) -> dict[str, Any]:
     return out if stance == "none" else {**out, "stance": stance}
 
 
-def link_url(url: str, attached: Iterable[str] = ()) -> str:
-    """The URL to store for a link: unchanged if a link is already attached with it, else with twitter.com
-    changed to x.com and any query removed."""
-    url = url.strip()
-    return url if url in attached else url.replace("twitter.com/", "x.com/").split("?")[0]
-
-
 def reread(old: dict[str, Any], fresh: dict[str, Any]) -> dict[str, Any]:
     """Merges a fresh read of a link into the stored link. A web page keeps the title, author and date it was
     attached with, because a person may have given or corrected them (a PDF has none; a blog's window title may
@@ -638,13 +631,11 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str
     ref, e = found
     links = e.get("discussion", [])
     if drop:
-        attached = {x["url"] for x in links}
-        gone = {link_url(u, attached) for u in urls}
-        links = [x for x in links if x["url"] not in gone]
+        gone = {S.identity(u) for u in urls}
+        links = [x for x in links if S.identity(x["url"]) not in gone]
         print(f"{len(e.get('discussion', [])) - len(links)} dropped")
     for url in [] if drop else urls:
-        attached = {x["url"]: x for x in links}
-        old = attached.get(link_url(url, attached))
+        old = next((x for x in links if S.identity(x["url"]) == S.identity(url)), None)
         if old and (stance or described):
             changed = with_stance({**old, **described}, stance) if stance else {**old, **described}
             links = [changed if x is old else x for x in links]
@@ -658,8 +649,9 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str
         if d.get("kind") == "web" and not (described.get("title") or d.get("title")):
             print(f"skipped {url}: the page gives no title (a PDF?); give --title and --author", file=sys.stderr)
             continue
-        new = {**d, **described, "added": S.today(), **pick(old or attached.get(d["url"], {}), KEPT)}
-        links = [x for x in links if x["url"] != d["url"]] + [with_stance(new, stance) if stance else new]
+        same = next((x for x in links if S.identity(x["url"]) == S.identity(d["url"])), None)
+        new = {**d, **described, "added": S.today(), **pick(old or same or {}, KEPT)}
+        links = [x for x in links if x is not same and x is not old] + [with_stance(new, stance) if stance else new]
         print(f"+ {d.get('author') or d.get('site')}: {(d.get('text') or d.get('title') or d['url'])[:90]}")
     e["discussion"] = sorted(links, key=lambda d: d.get("date", ""))
     if not dry_run:
@@ -763,7 +755,8 @@ def reception(record: str | None, draft: bool, text: str | None, reviewed_by: st
         return 2
     urls = {d["url"] for d in attached}
     if links:
-        new["links"] = [link_url(u, urls) for u in links]
+        stored = {S.identity(u): u for u in urls}
+        new["links"] = [stored.get(S.identity(u), u) for u in links]
     if missing := [u for u in new["links"] if u not in urls]:
         print(f"not among {record}'s links: {', '.join(missing)}")
         return 2

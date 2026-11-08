@@ -787,9 +787,9 @@ def served_link(d: dict[str, Any]) -> dict[str, Any]:
 
 
 def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
-    """What the site and API serve for one entry; None for entries labelled harmful."""
+    """What the site and API serve for one entry; None for entries labelled harmful or merged into another record."""
     r = e.get("review", {})
-    if r.get("category") == "harmful":
+    if r.get("category") == "harmful" or e.get("merged_into"):
         return None
     subject = TX.subject_of(e.get("domain"), r.get("subject"))
     links = e.get("discussion") or []

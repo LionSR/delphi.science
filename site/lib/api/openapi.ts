@@ -364,7 +364,7 @@ export const spec = {
 					added: { type: 'string', format: 'date' }, added_by: { type: 'string', description: 'Submitter GitHub login or harvest:<job>.' },
 					refreshed: { type: 'string', format: 'date', description: 'Date metadata was last re-fetched from the source (index.py refresh).' },
 					origin: { type: 'string' }, pdf: { type: 'string' }, repo: { type: 'string' }, json: { type: 'string' }, doi: { type: 'string' }, identity: { $ref: '#/components/schemas/SourceIdentity' },
-					stars: { type: 'integer' }, agent_ready: { type: 'boolean' }, citation_cff: { type: 'boolean' }, gone: { type: 'boolean' }, license: { type: 'string' },
+					stars: { type: 'integer' }, agent_ready: { type: 'boolean' }, citation_cff: { type: 'boolean' }, gone: { type: 'boolean' }, merged_into: { type: 'string', description: 'The record that shows this work instead. The entry stays stored so a harvest does not add it again, and is not served.' }, license: { type: 'string' },
 					version: { type: 'integer' }, commit: { type: 'string' }, trust: { type: 'string' }, verified: { type: 'boolean' },
 					reviewer_models: { type: 'array', items: { type: 'string' } }, ai_models: { type: 'array', items: { type: 'string' } },
 					family: { type: 'string' }, family_title: { type: 'string' }, formalized: { type: 'boolean' },

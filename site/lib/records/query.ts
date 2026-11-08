@@ -1,7 +1,6 @@
 // Search for the open index: arXiv-style queries compiled to parameterized Postgres.
 // Text terms rank by ts_rank_cd; with an embedding, keyword and vector ranks merge by reciprocal-rank fusion.
 import stances from './stances.json' with { type: 'json' };
-import { canonicalWorksReady, getWork, withWorks, workOf } from './work-groups.ts';
 import type { Db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
 import { pageInfo, pageSize, pageStart, type PageRequest } from '#lib/paging.ts';
@@ -49,11 +48,11 @@ export const QUERY_HELP = `arXiv-style query. ${Object.entries(QUERY_FIELDS).map
 	`${fieldNames(f)} ${f === 'is' ? Object.keys(IS).join(', ') : about}`).join('; ')}. ${OPERATORS}. Empty lists everything.`;
 export const QUERY_GUIDE = [...Object.entries(QUERY_FIELDS).map(([f, about]) => `- ${fieldNames(f)} ${about}`), `- Operators: ${OPERATORS}`].join('\n');
 export const SORT_HELP = 'relevance (default with a query), newest (default without), oldest, title, score (votes plus linked responses that confirm, simplify or extend it or have no stance yet, all time), day, week, month (votes and such responses published in that window), mentions (most cited in comments: how many people\'s comments name the record by id, then the newest; not linked posts, which count in score), responded (the newest expert response first, whatever its stance).';
-const COMPACT = ['id', 'work_id', 'source', 'title', 'authors', 'url', 'pdf', 'published', 'subject', 'division', 'category', 'origin',
+const COMPACT = ['id', 'source', 'title', 'authors', 'url', 'pdf', 'published', 'subject', 'division', 'category', 'origin',
 	'agent_ready', 'formalized', 'verified', 'withdrawn', 'disputed', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions', 'discussed'];
 
 // The stored record plus its live counts.
-export const SERVED = `r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count, 'discussed', r.discussed, 'disputed', r.disputed)`;
+const SERVED = `r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count, 'discussed', r.discussed, 'disputed', r.disputed)`;
 
 // ---- Parsing ----
 
@@ -200,11 +199,6 @@ export function compact(rec: Record<string, unknown>) {
 		const v = rec[k];
 		if (v !== undefined && v !== null && v !== '' && v !== false && !(Array.isArray(v) && v.length === 0)) out[k] = v;
 	}
-	const work = workOf(rec);
-	if (work) {
-		const { discussion: _, ...summary } = work;
-		out.work = { ...summary, sources: work.sources.map((s) => ({ ...s, record: { ...compact(s.record), ...Object.fromEntries(['formalized', 'verified', 'withdrawn'].filter((k) => s.record[k] !== undefined).map((k) => [k, s.record[k]])) } })) };
-	}
 	if (typeof rec.summary === 'string' && rec.summary) out.summary = truncate(rec.summary, 240);
 	return out;
 }
@@ -268,7 +262,7 @@ function rankedSql(ranked: Ranked, where: string, n: number): string {
 		SELECT ${SERVED} AS record FROM cand r ORDER BY r.points DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 1} OFFSET $${n + 2}`;
 }
 
-async function rawSearch(db: Db, q: string, opts: SearchOptions = {}) {
+export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const t0 = performance.now();
 	const sort = opts.sort ?? (q.trim() ? 'relevance' : 'newest');
 	if (!(SORTS as readonly string[]).includes(sort)) throw new QueryError(`unknown sort ${JSON.stringify(sort)}`, `Use sort=${SORTS.join(', sort=')}.`);
@@ -276,7 +270,7 @@ async function rawSearch(db: Db, q: string, opts: SearchOptions = {}) {
 	if (fields !== 'compact' && fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(fields)}`, 'Use fields=compact (default) or fields=full.');
 	const start = pageStart(opts, SEARCH_PAGE);
 	// An empty query lists everything.
-	let { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };
+	const { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };
 	const n = params.length;
 	let sql: string;
 	const all = [...params];
@@ -287,16 +281,16 @@ async function rawSearch(db: Db, q: string, opts: SearchOptions = {}) {
 			const e = `$${n + 1}::extensions.vector`;
 			// Each side reads the table with the filters, so the vector side can use the HNSW index.
 			sql = `WITH kw AS (${ranks.length
-					? `SELECT r.id, row_number() OVER (ORDER BY ${rank} DESC, r.id) AS k FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.id LIMIT 200`
+					? `SELECT r.id, row_number() OVER (ORDER BY ${rank} DESC) AS k FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC LIMIT 200`
 					: 'SELECT NULL::text AS id, NULL::bigint AS k WHERE false'}),
-				vec AS (SELECT r.id, row_number() OVER (ORDER BY r.embedding OPERATOR(extensions.<=>) ${e}, r.id) AS k FROM open_index.records r
-				        WHERE ${where} AND r.embedding IS NOT NULL ORDER BY r.embedding OPERATOR(extensions.<=>) ${e}, r.id LIMIT 200)
+				vec AS (SELECT r.id, row_number() OVER (ORDER BY r.embedding OPERATOR(extensions.<=>) ${e}) AS k FROM open_index.records r
+				        WHERE ${where} AND r.embedding IS NOT NULL ORDER BY r.embedding OPERATOR(extensions.<=>) ${e} LIMIT 200)
 				SELECT ${SERVED} AS record FROM open_index.records r
 				JOIN (SELECT coalesce(kw.id, vec.id) AS id, coalesce(1.0 / (60 + kw.k), 0) + coalesce(1.0 / (60 + vec.k), 0) AS score
 				      FROM kw FULL JOIN vec ON kw.id = vec.id) s ON s.id = r.id
-				ORDER BY s.score DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 2} OFFSET $${n + 3}`;
+				ORDER BY s.score DESC, r.published DESC NULLS LAST LIMIT $${n + 2} OFFSET $${n + 3}`;
 		} else {
-			sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 1} OFFSET $${n + 2}`;
+			sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.published DESC NULLS LAST LIMIT $${n + 1} OFFSET $${n + 2}`;
 		}
 	} else if (RANKED[sort]) {
 		sql = rankedSql(RANKED[sort], where, n);
@@ -318,62 +312,11 @@ async function rawSearch(db: Db, q: string, opts: SearchOptions = {}) {
 	};
 }
 
-/** Filter source rows, then select one ranked source for each persisted canonical work in SQL. */
-export async function search(db: Db, q: string, opts: SearchOptions = {}) {
-	const t0 = performance.now();
-	const start = pageStart(opts, SEARCH_PAGE);
-	const sort = opts.sort ?? (q.trim() ? 'relevance' : 'newest');
-	if (!(SORTS as readonly string[]).includes(sort)) throw new QueryError(`unknown sort ${JSON.stringify(sort)}`, `Use sort=${SORTS.join(', sort=')}.`);
-	if (opts.fields !== undefined && opts.fields !== 'compact' && opts.fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(opts.fields)}`, 'Use fields=compact (default) or fields=full.');
-	const { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };
-	if (!await canonicalWorksReady(db)) return { ...await rawSearch(db, q, opts), work_model: 'source_records' as const };
-	const all = [...params];
-	let ctes = '', from = 'open_index.records r', order = ORDER[sort] ?? ORDER.newest;
-	let points = '0';
-	if (['day','week','month'].includes(sort)) {
-		const ranked = RANKED[sort](where);
-		ctes = ranked.with ?? '';
-		from += ' LEFT JOIN hot h ON h.id=r.id';
-		points = 'coalesce(h.points,0)';
-		order = 'r.points DESC, r.published DESC NULLS LAST, r.id';
-	} else if (sort === 'mentions') {
-		points = 'r.mentions_count'; order = 'r.points DESC, r.published DESC NULLS LAST, r.id';
-	} else if (sort === 'relevance' && (ranks.length || opts.embedding)) {
-		const rank = ranks.length ? `ts_rank_cd(r.all_tsv, ${ranks.map((x) => `(${x})`).join(' || ')})` : '0';
-		if (opts.embedding) {
-			all.push(`[${opts.embedding.join(',')}]`);
-			const e = `$${all.length}::extensions.vector`;
-			ctes = `kw AS (${ranks.length ? `SELECT r.id,row_number() OVER (ORDER BY ${rank} DESC,r.id) AS k FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC,r.id LIMIT 200` : 'SELECT NULL::text AS id,NULL::bigint AS k WHERE false'}),
-			 vec AS (SELECT r.id,row_number() OVER (ORDER BY r.embedding OPERATOR(extensions.<=>) ${e},r.id) AS k FROM open_index.records r WHERE ${where} AND r.embedding IS NOT NULL ORDER BY r.embedding OPERATOR(extensions.<=>) ${e},r.id LIMIT 200),
-			 fusion AS (SELECT coalesce(kw.id,vec.id) AS id,coalesce(1.0/(60+kw.k),0)+coalesce(1.0/(60+vec.k),0) AS points FROM kw FULL JOIN vec ON kw.id=vec.id),`;
-			from += ' LEFT JOIN fusion f ON f.id=r.id'; points = 'coalesce(f.points,0)';
-		} else points = rank;
-		order = 'r.points DESC, r.published DESC NULLS LAST, r.id';
-	}
-	const n = all.length;
-	// Rank/deduplicate narrow rows; fetch source JSON/embeddings only after the work page is chosen.
-	const sql = `WITH ${ctes} candidates AS (SELECT r.id,r.work_id,r.published,r.title,r.score,r.upvoting,r.responded,${points} AS points FROM ${from} WHERE ${where}),
-		 selected AS (SELECT DISTINCT ON (r.work_id) r.* FROM candidates r ORDER BY r.work_id,${order}),
-		 page AS (SELECT r.id,r.points FROM selected r ORDER BY ${order} LIMIT $${n+1} OFFSET $${n+2})
-		 SELECT ${SERVED} || jsonb_build_object('work_id',r.work_id) AS record FROM page p JOIN open_index.records r ON r.id=p.id
-		 ORDER BY ${order.replaceAll('r.points','p.points')}`;
-	all.push(start.limit,start.offset);
-	const [rows,total] = await Promise.all([
-		db.query<{ record: Record<string,unknown> }>(sql,all).then((r)=>r.rows),
-		start.total ?? db.query<{n:number}>(`SELECT count(DISTINCT r.work_id)::int AS n FROM open_index.records r WHERE ${where}`,params).then((r)=>Number(r.rows[0].n)),
-	]);
-	const records = await withWorks(db,rows.map((r)=>r.record),SERVED);
-	return { query:q,sort,count:records.length,work_model:'canonical' as const,
-		results:records.map((r):Record<string,unknown>=>({ ...(opts.fields==='full'?r:compact(r)),links:{self:`/api/v1/records/${r.id}`,work:`/api/v1/works?id=${encodeURIComponent(String(r.work_id))}`} })),
-		...pageInfo(start,total,records.length),took_ms:Math.round((performance.now()-t0)*10)/10 };
-}
-
 export async function get(db: Db, id: string) {
-	const ready=await canonicalWorksReady(db);
-	const rows=(await db.query<{record:Record<string,unknown>}>(`SELECT ${SERVED}${ready ? " || jsonb_build_object('work_id',r.work_id)" : ''} AS record FROM open_index.records r WHERE r.id=$1`,[id])).rows;
-	return rows.length ? ready ? (await withWorks(db,[rows[0].record],SERVED))[0] : rows[0].record : null;
+	const rows = (await db.query<{ record: Record<string, unknown> }>(
+		`SELECT ${SERVED} AS record FROM open_index.records r WHERE r.id = $1`, [id])).rows;
+	return rows[0]?.record ?? null;
 }
-export const canonicalWork = (db:Db,id:string) => getWork(db,id,SERVED);
 
 /** How many records each source has, most first. */
 export const sourceCounts = async (d: Db) => (await d.query<{ source: string; n: number }>(

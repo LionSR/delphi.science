@@ -776,7 +776,7 @@ def reception(record: str | None, draft: bool, text: str | None, reviewed_by: st
 # Entry fields served as they are; to_item adds id, tags, published, category and subject.
 PASSTHROUGH = ("source", "url", "title", "authors", "summary", "domain", "origin", "agent_ready", "gone", "stars", "pdf",
                "family", "family_title", "formalized", "withdrawn", "withdrawn_on", "verified", "trust", "ai_models",
-               "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json", "doi", "identity")
+               "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json")
 PREFIXES = json.loads((HERE / "site" / "lib" / "records" / "prefixes.json").read_text())["prefixes"]
 # An X post's text is shown by X's own embed, so it is never served.
 X_FIELDS = ("kind", "url", "author", "handle", "date", "added", "stance")

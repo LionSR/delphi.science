@@ -1,6 +1,4 @@
 // One record: metadata, votes, comments and reviews, and external discussion.
-import { WorkSources } from '#app/work-sources.tsx';
-import { isGroupedWork, mainRecordOf, publicationOf, workOf, workTitleOf, type WorkResponse } from '#lib/records/work-groups.ts';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { notFound } from 'next/navigation';
@@ -30,20 +28,15 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	const id = await recordId(ctx);
 	const r = await record(id);
 	if (!r) return {};
-	const main = mainRecordOf(r);
-	const mainId = workOf(r)?.main_record_id ?? main.id;
-	const authors = Array.isArray(main.authors) ? main.authors.map(String) : [];
-	const cite: Record<string, string | string[]> = { citation_title: workTitleOf(r), citation_author: authors,
-		citation_abstract_html_url: `${SITE}${recordPath(mainId)}` };
-	const publication = publicationOf(r);
-	const published = publication?.published;
-	if (published) cite.citation_publication_date = String(published).replaceAll('-', '/');
-	const pdf = publication?.pdf;
-	if (pdf) cite.citation_pdf_url = String(pdf);
+	const authors = Array.isArray(r.authors) ? r.authors.map(String) : [];
+	const cite: Record<string, string | string[]> = { citation_title: String(r.title), citation_author: authors,
+		citation_abstract_html_url: `${SITE}${recordPath(id)}` };
+	if (r.published) cite.citation_publication_date = String(r.published).replaceAll('-', '/');
+	if (r.pdf) cite.citation_pdf_url = String(r.pdf);
 	return {
 		// A reviewed reception summary describes a discussed record better than its abstract.
-		title: workTitleOf(r), description: reception(main)?.text ?? (String(main.summary ?? '').slice(0, 300) || undefined),
-		alternates: { canonical: recordPath(mainId), types: { 'application/json': apiPath(id) } },
+		title: String(r.title), description: reception(r)?.text ?? (String(r.summary ?? '').slice(0, 300) || undefined),
+		alternates: { canonical: recordPath(id), types: { 'application/json': apiPath(id) } },
 		other: cite,
 	};
 }
@@ -55,9 +48,6 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const d = await db();
 	const [thread, voters, who, { notice }] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams]);
 	const stands = reception(r);
-	const work = isGroupedWork(r) ? workOf(r) : undefined;
-	const main = mainRecordOf(r);
-	const publication = publicationOf(r);
 	const owner = who?.login ?? '';
 	const [names, mine] = await Promise.all([
 		publicNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter), ...(stands?.reviewed_by ? [String(stands.reviewed_by)] : [])]),
@@ -66,7 +56,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const back = recordPath(id);
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
 	// External posts and articles about the record (index.py discuss).
-	const links = (work?.discussion ?? (Array.isArray(r.discussion) ? r.discussion : [])) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string; stance?: string }[];
+	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string; stance?: string }[];
 	// Records whose discussion links this one, set at build time.
 	const discusses = (Array.isArray(r.discusses) ? r.discusses : []) as { id: string; title: string }[];
 	// Label for a reception link: its author, site, or host.
@@ -79,26 +69,22 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const from = original(r);
 	const tag = source(r.source);
 	const ld = {
-		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: workOf(r)?.main_record_id ?? main.id, name: workTitleOf(r), url: `${SITE}${recordPath(workOf(r)?.main_record_id ?? main.id)}`,
-		sameAs: work ? work.sources.map((s) => s.record.url) : r.url, datePublished: publication?.published, abstract: main.summary, about: main.subject, keywords: main.tags,
-		author: Array.isArray(main.authors) ? main.authors.map((name) => ({ '@type': 'Person', name })) : undefined,
+		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${recordPath(id)}`,
+		sameAs: r.url, datePublished: r.published, abstract: r.summary, about: r.subject, keywords: r.tags,
+		author: Array.isArray(r.authors) ? r.authors.map((name) => ({ '@type': 'Person', name })) : undefined,
 	};
 	return (
 		<article>
 			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replaceAll('<', '\\u003c') }} />
 			{notice && <p className="count">{notice}</p>}
-			<h1>{tex(workTitleOf(r))}</h1>
-			{work && id !== work.main_record_id && <p className="count">Alternative source view: <code>{id}</code>.
-				{main.id === work.main_record_id && <> <a href={recordPath(work.main_record_id)}>Open main record</a>.</>}</p>}
-			{!work && from && <p className="origin">Source: <a className="external" href={from.href} rel="external" title={from.href}>{from.label}</a></p>}
-			<WorkSources record={r} detail />
-			{!work && Array.isArray(r.authors) && <p className="authors">{r.authors.join(', ')}</p>}
-
+			<h1>{tex(r.title)}</h1>
+			{from && <p className="origin">Source: <a className="external" href={from.href} rel="external" title={from.href}>{from.label}</a></p>}
+			{Array.isArray(r.authors) && <p className="authors">{r.authors.join(', ')}</p>}
 			<p className="meta">
 				{/* The source tag filters the index; it is not a link to the paper. */}
 				<a className="tag" href={tag.href} title={tag.title}>{tag.name}</a>
 				<code>{id}</code>
-				<span>{work?.sources.find((s) => s.id === id)?.date_meaning} {date(r.published)}</span>
+				<span>{date(r.published)}</span>
 				{r.subject ? <code>{String(r.subject)}</code> : null}
 				{r.origin === 'ai-generated' && <span>AI-generated</span>}
 				{r.withdrawn ? <span>withdrawn</span> : null}
@@ -115,8 +101,6 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 					</p>
 				</section>
 			)}
-			<div id="interactions" />
-			{work && <p className="count">Viewing and interacting with source <code>{id}</code>. Votes, comments and reviews below apply to this source only. Open another source above to see its interactions.</p>}
 			<Vote id={id} reactions={r.reactions} mine={mine?.value} back={back} />
 			{voters.length > 0 && (
 				<ul className="voters">
@@ -166,12 +150,10 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 
 			{links.length > 0 && (
 				<>
-					<h2>Discussed elsewhere{work ? ` (${work.discussed} distinct responses)` : ''}</h2>
-					{links.map((l) => <Fragment key={l.url}>
-						{work && <ResponseAssertions link={l as unknown as WorkResponse} />}
-						{l.kind === 'x' ? (
+					<h2>Discussed elsewhere</h2>
+					{links.map((l) => l.kind === 'x' ? (
 						<Fragment key={l.url}>
-							{!work && l.stance ? <p className="meta"><Stance stance={l.stance} /></p> : null}
+							{l.stance ? <p className="meta"><Stance stance={l.stance} /></p> : null}
 							{/* widgets.js turns this into an embedded post; without it only author and date show. */}
 							<blockquote className="twitter-tweet" data-dnt="true">
 								— {l.author} (@{l.handle}) <a href={l.url}>{date(l.date) || 'Post on X'}</a>
@@ -180,7 +162,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 					) : (
 						<div key={l.url} className="comment">
 							<p className="meta">
-								{!work && <Stance stance={l.stance} />}
+								<Stance stance={l.stance} />
 								<a href={l.url}>{l.title || l.url}</a>
 								{l.site ? <span>{l.site}</span> : null}
 								{l.author ? <span>{l.author}</span> : null}
@@ -189,7 +171,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 							</p>
 							{l.text ? <p>{l.text}</p> : null}
 						</div>
-					)}</Fragment>)}
+					))}
 					{links.some((l) => l.kind === 'x') && <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />}
 				</>
 			)}
@@ -202,21 +184,4 @@ curl -X POST ${api}/comments -H "Authorization: Bearer $KEY" -H "Content-Type: a
   -d '{"body": "…", "review": true}'`}</pre>
 		</article>
 	);
-}
-
-// Keep source assertions visible rather than treating the first source's stance/date as consensus.
-function ResponseAssertions({ link }: { link: WorkResponse }) {
-	const sources = new Set(link.assertions.map((a) => a.record_id)).size;
-	return <details><summary>Response provenance ({sources} {sources === 1 ? 'source' : 'sources'})</summary>
-		<ul>{link.assertions.map((a, i) => <li key={i}>
-			<a href={recordPath(a.record_id)}>{a.record_id}</a>
-			<p className="meta"><Stance stance={typeof a.link.stance === 'string' ? a.link.stance : undefined} />
-				<span>{a.link.stance ? '' : 'stance not stated'}</span><span>{date(a.link.date)}</span>
-				<a href={String(a.link.url)}>{String(a.link.title || a.link.author || a.link.url)}</a></p>
-			<p className="meta">{a.link.author ? <span>{String(a.link.author)}</span> : null}
-				{a.link.site ? <span>{String(a.link.site)}</span> : null}
-				{a.link.added ? <span>Linked {date(a.link.added)}</span> : null}</p>
-			{a.link.text ? <p>{String(a.link.text)}</p> : null}
-		</li>)}</ul>
-	</details>;
 }

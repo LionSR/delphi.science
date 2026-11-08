@@ -451,15 +451,6 @@ class ArXiv(Source):
             start += len(page)
 
 
-def normalized_doi(value: str) -> str:
-    """Exact self identifier comparison; versions and suffix punctuation remain significant."""
-    return re.sub(r"^(?:https?://(?:dx\.)?doi\.org/|doi:)\s*", "", value.strip(), flags=re.I).lower()
-
-
-def doi_identity(value: str, verified_by: str, evidence: str) -> dict[str, str]:
-    return {"scheme": "doi", "value": normalized_doi(value), "verified_by": verified_by, "evidence": evidence}
-
-
 class Zenodo(Source):
     name, label = "zenodo", "Zenodo"
     patterns = [r"^(?:https?://)?zenodo\.org/(?:records?|doi/10\.5281/zenodo\.)/?(\d+)", r"^(?:https?://doi\.org/)?10\.5281/zenodo\.(\d+)$"]
@@ -476,8 +467,6 @@ class Zenodo(Source):
             domain=(m.get("resource_type") or {}).get("type", ""),
             published=iso_date(m.get("publication_date")),
             doi=d.get("doi", ""),
-            **({"identity": doi_identity(d["doi"], "zenodo-record", f"https://zenodo.org/api/records/{d['id']}")}
-               if normalized_doi(d.get("doi", "")) == f"10.5281/zenodo.{d['id']}" else {}),
         )
 
     def fetch(self, key: str) -> dict[str, Any]:
@@ -875,8 +864,6 @@ class Doi(Source):
     def fetch(self, key: str) -> dict[str, Any]:
         doi = key.replace("__", "/")
         d = get_json(f"https://doi.org/{urllib.parse.quote(doi, safe='/')}", accept="application/vnd.citationstyles.csl+json")
-        if not d.get("DOI") or normalized_doi(d["DOI"]) != normalized_doi(doi):
-            raise SourceError("DOI response identity does not match request")
         parts = ((d.get("issued") or {}).get("date-parts") or [[]])[0]
         return self.entry(
             key,
@@ -886,8 +873,7 @@ class Doi(Source):
             summary=trim(d.get("abstract")),
             domain=d.get("type", ""),
             published="-".join(f"{p:02d}" for p in parts) if len(parts) == 3 else "",
-            doi=d["DOI"],
-            identity=doi_identity(d["DOI"], "doi-csl", f"https://doi.org/{normalized_doi(doi)}"),
+            doi=doi,
         )
 
 

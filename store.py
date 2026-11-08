@@ -103,15 +103,20 @@ def save(ref: Ref, entry: dict[str, Any]) -> Ref:
     return Ref(ref.id, row[0])
 
 
+ADD_BATCH = 500  # the insert trigger takes up to two identity locks per entry, held until the transaction ends
+
+
 def add_all(entries: list[tuple[str, dict[str, Any]]]) -> int:
-    """Stores new entries in one round trip, leaving any id already stored as it is. Returns how many were new."""
-    if not entries:
-        return 0
+    """Stores new entries in transactions of ADD_BATCH, leaving any id already stored as it is. Returns how many
+    were new. Batches keep each transaction's locks well inside the lock table that all connections share."""
     data = [checked(i, e) for i, e in entries]
+    added = 0
     with conn().cursor() as cur:
-        cur.execute("INSERT INTO open_index.entries (id, entry) SELECT * FROM unnest(%s::text[], %s::jsonb[]) ON CONFLICT (id) DO NOTHING",
-                    [[i for i, _ in entries], data])
-        return cur.rowcount
+        for k in range(0, len(entries), ADD_BATCH):
+            cur.execute("INSERT INTO open_index.entries (id, entry) SELECT * FROM unnest(%s::text[], %s::jsonb[]) ON CONFLICT (id) DO NOTHING",
+                        [[i for i, _ in entries[k:k + ADD_BATCH]], data[k:k + ADD_BATCH]])
+            added += cur.rowcount
+    return added
 
 
 def added_today(login: str, day: str) -> int:

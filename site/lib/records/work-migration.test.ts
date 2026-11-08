@@ -226,7 +226,7 @@ test('private ACLs override default public/app grants while the ingestion servic
   await db.exec('RESET ROLE');
   assert.equal((await get(db,'test/service-ingest'))!.work_id,'test/service-ingest');
   assert.ok((await db.query<{relrowsecurity:boolean}>("SELECT relrowsecurity FROM pg_class WHERE oid='open_index.work_membership_history'::regclass")).rows[0].relrowsecurity);
-  assert.equal((await db.query<{n:number}>("SELECT count(*)::int n FROM pg_proc WHERE pronamespace='open_index'::regnamespace AND proname IN ('normalized_doi','source_doi','resolve_work_source','guard_work_membership','bind_work_source','check_work_graph','associate_work_source','backfill_work_sources') AND prosecdef")).rows[0].n,0);
+  assert.equal((await db.query<{n:number}>("SELECT count(*)::int n FROM pg_proc WHERE pronamespace='open_index'::regnamespace AND proname IN ('normalized_doi','source_doi','place_work_source','resolve_work_source','guard_work_membership','bind_work_source','check_work_graph','associate_work_source','backfill_work_sources') AND prosecdef")).rows[0].n,0);
  }finally{await db.close();}
 });
 

@@ -136,16 +136,16 @@ create trigger work_membership_guard before insert or update on open_index.work_
   for each row execute function open_index.guard_work_membership();
 
 -- Single ingestion identity path for entries, records, rebuilds and backfills.
--- Lock the normalized identity before choosing/creating a work, then lock the source.
--- Different aliases arriving at once therefore cannot create disconnected canonical works.
-create function open_index.resolve_work_source(p_id text, p_title text, proof jsonb default null) returns text
+-- place_work_source chooses or creates the work, and its caller must keep other writers of the source out.
+-- resolve_work_source does this by locking the normalized identity, then the source, so different aliases
+-- arriving at once cannot create disconnected canonical works. The backfill holds table locks instead:
+-- advisory locks last until commit, and one per source would overflow the shared lock table.
+create function open_index.place_work_source(p_id text, p_title text, proof jsonb default null) returns text
 language plpgsql security invoker set search_path='' as $$
 declare wid text; keyed text; v_doi text; prior jsonb;
 begin
   if p_id is null or p_id !~ '^[a-z0-9-]+/.+' then raise exception 'Invalid source identity'; end if;
   v_doi:=open_index.source_doi(p_id,proof);
-  if v_doi is not null then perform pg_advisory_xact_lock(hashtextextended('work-doi:'||v_doi,0)); end if;
-  perform pg_advisory_xact_lock(hashtextextended('work-source:'||p_id,0));
   select work_id,identity into wid,prior from open_index.work_records where record_id=p_id;
   if v_doi is not null and ((prior is not null and open_index.source_doi(p_id,prior)<>v_doi) or
     exists(select 1 from open_index.work_identifiers k where k.record_id=p_id and k.doi<>v_doi)) then
@@ -183,6 +183,17 @@ begin
   return wid;
 end $$;
 
+create function open_index.resolve_work_source(p_id text, p_title text, proof jsonb default null) returns text
+language plpgsql security invoker set search_path='' as $$
+declare v_doi text;
+begin
+  if p_id is null or p_id !~ '^[a-z0-9-]+/.+' then raise exception 'Invalid source identity'; end if;
+  v_doi:=open_index.source_doi(p_id,proof);
+  if v_doi is not null then perform pg_advisory_xact_lock(hashtextextended('work-doi:'||v_doi,0)); end if;
+  perform pg_advisory_xact_lock(hashtextextended('work-source:'||p_id,0));
+  return open_index.place_work_source(p_id,p_title,proof);
+end $$;
+
 create function open_index.bind_work_source() returns trigger
 language plpgsql security invoker set search_path='' as $$
 declare title_text text; proof jsonb;
@@ -196,10 +207,6 @@ begin
     where id=new.work_id and auto_title and not curated and main_record_id=new.id;
   return new;
 end $$;
-create trigger entries_bind_work before insert or update of id,work_id,entry on open_index.entries
-  for each row execute function open_index.bind_work_source();
-create trigger records_bind_work before insert or update of id,work_id,record on open_index.records
-  for each row execute function open_index.bind_work_source();
 
 -- Check constraints cannot express cross-table alias/root rules; defer until an atomic attach commits.
 create function open_index.check_work_graph() returns trigger
@@ -229,10 +236,11 @@ create constraint trigger work_records_graph after insert or update on open_inde
 create function open_index.backfill_work_sources() returns void
 language plpgsql security invoker set search_path='' as $$
 declare src record; begin
+  lock table open_index.works, open_index.work_records, open_index.entries, open_index.records in share row exclusive mode;
   for src in select id,payload from (
     select id,entry payload from open_index.entries union all select id,record payload from open_index.records
   ) s order by id,(coalesce(payload->'identity','null'::jsonb)<>'null'::jsonb) desc
-  loop perform open_index.resolve_work_source(src.id,src.payload->>'title',src.payload->'identity'); end loop;
+  loop perform open_index.place_work_source(src.id,src.payload->>'title',src.payload->'identity'); end loop;
   update open_index.entries e set work_id=m.work_id from open_index.work_records m where m.record_id=e.id and e.work_id is distinct from m.work_id;
   update open_index.records r set work_id=m.work_id from open_index.work_records m where m.record_id=r.id and r.work_id is distinct from m.work_id;
 end $$;
@@ -243,6 +251,11 @@ alter table open_index.entries add constraint entries_work_member foreign key(wo
   references open_index.work_records(work_id,record_id) deferrable initially deferred;
 alter table open_index.records add constraint records_work_member foreign key(work_id,id)
   references open_index.work_records(work_id,record_id) deferrable initially deferred;
+-- Bound after the backfill, whose updates would otherwise resolve every source again under its own locks.
+create trigger entries_bind_work before insert or update of id,work_id,entry on open_index.entries
+  for each row execute function open_index.bind_work_source();
+create trigger records_bind_work before insert or update of id,work_id,record on open_index.records
+  for each row execute function open_index.bind_work_source();
 
 -- Owner-only reviewed association path. No public RPC or ingestion-provided membership overrides.
 -- A caller supplies its expected current source work, preventing stale or accidental group merges.
@@ -322,7 +335,7 @@ revoke all on function open_index.guard_work_membership() from public;
 revoke all on function open_index.backfill_work_sources() from public;
 revoke all on open_index.works,open_index.work_records,open_index.work_identifiers from public;
 revoke all on function open_index.normalized_doi(text),open_index.source_doi(text,jsonb) from public;
-revoke all on function open_index.resolve_work_source(text,text,jsonb) from public;
+revoke all on function open_index.place_work_source(text,text,jsonb),open_index.resolve_work_source(text,text,jsonb) from public;
 revoke all on function open_index.bind_work_source() from public;
 revoke all on function open_index.check_work_graph() from public;
 revoke all on function open_index.associate_work_source(text,text,text,text,jsonb,text,text,text,text) from public;
@@ -332,14 +345,14 @@ do $$ declare r text; begin
     if exists(select 1 from pg_roles where rolname=r) then
       execute format('revoke all on open_index.works,open_index.work_records,open_index.work_identifiers,open_index.work_membership_history from %I',r);
       execute format('revoke all on sequence open_index.work_membership_history_seq_seq from %I',r);
-      execute format('revoke all on function open_index.normalized_doi(text),open_index.source_doi(text,jsonb),open_index.guard_work_membership(),open_index.backfill_work_sources(),open_index.resolve_work_source(text,text,jsonb),open_index.bind_work_source(),open_index.check_work_graph(),open_index.associate_work_source(text,text,text,text,jsonb,text,text,text,text) from %I',r);
+      execute format('revoke all on function open_index.normalized_doi(text),open_index.source_doi(text,jsonb),open_index.guard_work_membership(),open_index.backfill_work_sources(),open_index.place_work_source(text,text,jsonb),open_index.resolve_work_source(text,text,jsonb),open_index.bind_work_source(),open_index.check_work_graph(),open_index.associate_work_source(text,text,text,text,jsonb,text,text,text,text) from %I',r);
     end if;
   end loop;
   if exists(select 1 from pg_roles where rolname='service_role') then
     grant select,insert on open_index.works,open_index.work_records,open_index.work_identifiers to service_role;
     grant update(title) on open_index.works to service_role;
     grant update(identity) on open_index.work_records to service_role;
-    grant execute on function open_index.normalized_doi(text),open_index.source_doi(text,jsonb),open_index.guard_work_membership(),open_index.resolve_work_source(text,text,jsonb),open_index.bind_work_source(),open_index.check_work_graph() to service_role;
+    grant execute on function open_index.normalized_doi(text),open_index.source_doi(text,jsonb),open_index.guard_work_membership(),open_index.place_work_source(text,text,jsonb),open_index.resolve_work_source(text,text,jsonb),open_index.bind_work_source(),open_index.check_work_graph() to service_role;
   end if;
 end $$;
 

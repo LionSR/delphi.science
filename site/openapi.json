@@ -2502,6 +2502,10 @@
 					"gone": {
 						"type": "boolean"
 					},
+					"merged_into": {
+						"type": "string",
+						"description": "The record that shows this work instead. The entry stays stored so a harvest does not add it again, and is not served."
+					},
 					"license": {
 						"type": "string"
 					},

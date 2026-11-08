@@ -57,6 +57,12 @@ function entry(source: string, key: string, f: Omit<Entry, 'key' | 'source'>): E
 	return e;
 }
 
+// DOI comparison is case insensitive; never remove a version suffix or meaningful punctuation.
+const normalizedDoi = (value: unknown) => String(value ?? '').trim().replace(/^(?:https?:\/\/(?:dx\.)?doi\.org\/|doi:)\s*/i, '').toLowerCase();
+function identity(value: unknown, verifiedBy: 'doi-csl' | 'zenodo-record', evidence: string): NonNullable<Entry['identity']> {
+	return { scheme: 'doi', value: normalizedDoi(value), verified_by: verifiedBy, evidence };
+}
+
 const BOOKKEEPING = new Set(['key', 'added', 'added_by', 'refreshed']);
 
 /** The record served for an entry not labelled yet (index.py to_item). */
@@ -95,10 +101,12 @@ const SOURCES: Source[] = [
 		async read(key, get) {
 			const d = await (await get(`https://zenodo.org/api/records/${key}`, 'application/json')).json();
 			const m = d.metadata ?? {};
-			return entry('zenodo', String(d.id), {
+			const doi = normalizedDoi(d.doi);
+				return entry('zenodo', String(d.id), {
 				url: d.links?.self_html ?? `https://zenodo.org/records/${d.id}`, title: clean(m.title),
 				authors: (m.creators ?? []).map((c: { name?: string }) => clean(c.name)).filter(Boolean), summary: summarize(m.description),
-				tags: m.keywords ?? [], domain: m.resource_type?.type ?? '', published: isoDate(m.publication_date),
+				tags: m.keywords ?? [], domain: m.resource_type?.type ?? '', published: isoDate(m.publication_date), doi: d.doi,
+				...(doi === `10.5281/zenodo.${d.id}` ? { identity: identity(doi, 'zenodo-record', `https://zenodo.org/api/records/${d.id}`) } : {}),
 			});
 		},
 	},
@@ -125,9 +133,10 @@ const SOURCES: Source[] = [
 		async read(key, get) {
 			const doi = key.replaceAll('__', '/');
 			const d = await (await get(`https://doi.org/${encodeURI(doi)}`, 'application/vnd.citationstyles.csl+json')).json();
+			if (!d.DOI || normalizedDoi(d.DOI) !== normalizedDoi(doi)) throw new NotFound('DOI response identity does not match request');
 			const parts: number[] = d.issued?.['date-parts']?.[0] ?? [];
 			return entry('doi', key, {
-				url: `https://doi.org/${doi}`, title: clean(Array.isArray(d.title) ? d.title[0] : d.title),
+				url: `https://doi.org/${doi}`, doi: d.DOI, identity: identity(d.DOI, 'doi-csl', `https://doi.org/${normalizedDoi(doi)}`), title: clean(Array.isArray(d.title) ? d.title[0] : d.title),
 				authors: (d.author ?? []).map((a: { given?: string; family?: string; literal?: string }) => clean(`${a.given ?? ''} ${a.family ?? ''}`) || clean(a.literal)),
 				summary: summarize(d.abstract), domain: d.type ?? '',
 				published: parts.length === 3 ? parts.map((p) => String(p).padStart(2, '0')).join('-') : '',

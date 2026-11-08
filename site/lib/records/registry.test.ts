@@ -53,6 +53,21 @@ const SOURCES = fake({
 });
 
 describe('reading a link', () => {
+	test('only authoritative own DOI responses emit an accepted identity, preserving it in built records', async () => {
+		const doi='10.5555/Case.Sensitive-Suffix', normalized=doi.toLowerCase();
+		const read=fake({[`https://doi.org/${doi}`]:{DOI:normalized,title:'A work'},
+			'https://zenodo.org/api/records/8001':{id:8001,doi:'10.5281/zenodo.8001',conceptdoi:'10.5281/zenodo.8000',metadata:{title:'A version'}},
+			'https://zenodo.org/api/records/8002':{id:8002,doi:'10.5281/zenodo.8000',metadata:{title:'Concept only'}}});
+		const entry=(await resolve(doi,read))!;
+		assert.deepEqual(entry.identity,{scheme:'doi',value:normalized,verified_by:'doi-csl',evidence:`https://doi.org/${normalized}`});
+		assert.deepEqual(itemOf(entry).identity,entry.identity);
+		assert.equal(itemOf(entry).doi,normalized);
+		assert.deepEqual((await resolve('https://zenodo.org/records/8001',read))!.identity,
+			{scheme:'doi',value:'10.5281/zenodo.8001',verified_by:'zenodo-record',evidence:'https://zenodo.org/api/records/8001'});
+		assert.equal((await resolve('https://zenodo.org/records/8002',read))!.identity,undefined,'concept/other DOI cannot establish version identity');
+		await assert.rejects(resolve(doi,fake({[`https://doi.org/${doi}`]:{DOI:'10.5555/another',title:'Wrong work'}})),/identity does not match/);
+		await assert.rejects(resolve(doi,fake({[`https://doi.org/${doi}`]:{title:'Unverified work'}})),/identity does not match/);
+	});
 	test('ids match the harvester (sources.py)', () => {
 		const id = (u: string) => { const h = detect(u); return h && `${h.source.name}/${h.key}`; };
 		assert.equal(id('https://arxiv.org/abs/1706.03762v7'), 'arxiv/1706.03762');

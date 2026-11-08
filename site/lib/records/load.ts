@@ -13,13 +13,15 @@ const str = (v: unknown) => (typeof v === 'string' ? v : '');
 const list = (v: unknown) => (Array.isArray(v) ? v.map(String) : []);
 
 export async function row(it: Item): Promise<unknown[]> {
-	const record = JSON.stringify(it);
+	// Canonical projection comes from the database, never an imported API snapshot.
+	const {work: _work,work_id: _workId,links: _links,...sourceRecord}=it;
+	const record = JSON.stringify(sourceRecord);
 	return [
 		it.id, it.source, it.url, it.title, list(it.authors).join('; '), str(it.summary), list(it.tags).join(' '),
 		str(it.subject), str(it.division), str(it.domain), /^\d{4}-\d{2}-\d{2}$/.test(str(it.published)) ? it.published : null,
 		str(it.category) || 'research', str(it.origin), str(it.family), Boolean(it.agent_ready), Boolean(it.formalized),
 		Boolean(it.verified), Boolean(it.withdrawn), Boolean(it.gone),
-		it, // the object, not the string: postgres.js would encode a string again as a jsonb string
+		sourceRecord, // the object, not the string: postgres.js would encode a string again as a jsonb string
 		sha256(record),
 	];
 }

@@ -71,7 +71,9 @@ class EventCompiler extends Compiler {
 		if (f === 'kind') {
 			const kind = v.toLowerCase();
 			if (!(KINDS as readonly string[]).includes(kind)) throw new QueryError(`unknown kind:${v}`, `Use ${KINDS.map((k) => 'kind:' + k).join(', ')}.`);
-			return kind === 'record' ? `e.kind = ${this.p(kind)}` : `(${POST} AND e.kind = ${this.p(kind)})`;
+			// A record is the event with no post (a check constraint says so). Written this way, NOT kind:record is
+			// "post_id IS NOT NULL" to the planner, which the index of posts alone (events_posts) needs.
+			return kind === 'record' ? 'e.post_id IS NULL' : `(${POST} AND e.kind = ${this.p(kind)})`;
 		}
 		if (f === 'by') return `(${POST} AND lower(e.voter) = ${this.login(f, v)})`;
 		if (f === 'to') {

@@ -10,7 +10,7 @@ import type { PGlite } from '@electric-sql/pglite';
 import { load } from '#lib/records/load.ts';
 import { allowRouteImports, migratedDb, useDb } from '#lib/testing.ts';
 import { createAgentKey, createSession, revokeAgentKey, voterFromKey } from '#lib/accounts/keys.ts';
-import { authorization, authorizationServer, issueCode, OAuthError, protectedResource, redirectAllowed, registerClient, RESOURCE, RESOURCE_METADATA, token } from '#lib/accounts/oauth.ts';
+import { authorization, authorizationServer, client, issueCode, OAuthError, protectedResource, redirectAllowed, registerClient, RESOURCE, RESOURCE_METADATA, token } from '#lib/accounts/oauth.ts';
 import { sha256 } from '#lib/hash.ts';
 import { SITE } from '#lib/view.ts';
 import { isReviewer, reviewLogin } from '#lib/accounts/review.ts';
@@ -50,7 +50,7 @@ const route = (p: string) => import(new URL(`../../app/${p}/route.ts`, import.me
 const form = (path: string, fields: Record<string, string>) => new Request(`http://localhost${path}`, {
 	method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(fields) });
 
-const register = (name = 'ChatGPT', redirect_uris = [CHATGPT]) => registerClient(pg, { client_name: name, redirect_uris, token_endpoint_auth_method: 'none' });
+const register = async (name = 'ChatGPT', redirect_uris = [CHATGPT]) => registerClient({ client_name: name, redirect_uris, token_endpoint_auth_method: 'none' });
 const request = (client_id: string, more: object = {}) =>
 	authorization(pg, { response_type: 'code', client_id, redirect_uri: CHATGPT, code_challenge: CHALLENGE, code_challenge_method: 'S256', state: 'st-1', resource: RESOURCE, ...more });
 /** The whole sign-in for `login` through a newly registered client: the access token it ends with. */
@@ -117,12 +117,12 @@ describe('client registration', () => {
 		assert.equal(r.status, 201);
 		assert.equal(r.headers.get('cache-control'), 'no-store');
 		const c = await r.json();
-		assert.match(c.client_id, /^oic_[0-9a-f]{32}$/);
+		assert.match(c.client_id, /^oic_[A-Za-z0-9_-]+$/);
 		assert.deepEqual([c.client_name, c.redirect_uris, c.token_endpoint_auth_method, c.client_secret], ['ChatGPT', [CHATGPT], 'none', undefined]);
 	});
 
 	test('a client with no name is named after where it returns to; a long name is cut to an agent name\'s length', async () => {
-		assert.equal((await registerClient(pg, { redirect_uris: ['http://127.0.0.1:33418/callback'] })).client_name, '127.0.0.1:33418');
+		assert.equal(registerClient({ redirect_uris: ['http://127.0.0.1:33418/callback'] }).client_name, '127.0.0.1:33418');
 		assert.equal([...(await register('n'.repeat(200))).client_name].length, 60);
 	});
 
@@ -130,9 +130,9 @@ describe('client registration', () => {
 		for (const uri of ['http://example.org/cb', 'javascript:alert(1)', 'data:text/html,x', 'https://example.org/cb#frag', 'https://user:pw@example.org/cb', 'not a url', '']) {
 			await assert.rejects(register('X', [uri]), refused('invalid_redirect_uri'), uri);
 		}
-		await assert.rejects(registerClient(pg, { client_name: 'X' }), refused('invalid_redirect_uri'));
-		await assert.rejects(registerClient(pg, []), refused('invalid_client_metadata'));
-		await assert.rejects(registerClient(pg, { redirect_uris: [CHATGPT], grant_types: ['client_credentials'] }), refused('invalid_client_metadata'));
+		assert.throws(() => registerClient({ client_name: 'X' }), refused('invalid_redirect_uri'));
+		assert.throws(() => registerClient([]), refused('invalid_client_metadata'));
+		assert.throws(() => registerClient({ redirect_uris: [CHATGPT], grant_types: ['client_credentials'] }), refused('invalid_client_metadata'));
 		for (const uri of ['cursor://anysphere.cursor-mcp/oauth/callback', 'http://localhost:6274/oauth/callback', 'http://[::1]:9/cb']) assert.ok((await register('X', [uri])).client_id, uri);
 	});
 
@@ -145,13 +145,35 @@ describe('client registration', () => {
 		}
 	});
 
-	test('registrations never used are dropped after 90 days; used ones are kept', async () => {
-		const unused = (await register('Stale')).client_id, used = (await register('Kept')).client_id;
-		await pg.query("UPDATE open_index.oauth_clients SET created_at = now() - interval '91 days' WHERE client_id = ANY($1)", [[unused, used]]);
-		await pg.query('UPDATE open_index.oauth_clients SET used_at = now() WHERE client_id = $1', [used]);
-		await register('Fresh');
-		const left = (await pg.query<{ client_id: string }>('SELECT client_id FROM open_index.oauth_clients WHERE client_id = ANY($1)', [[unused, used]])).rows.map((r) => r.client_id);
-		assert.deepEqual(left, [used]);
+	test('registering stores nothing, so it cannot be used up: a client_id is the registration itself', async () => {
+		const tables = async () => (await pg.query<{ n: number }>("SELECT count(*)::int AS n FROM information_schema.tables WHERE table_schema = 'open_index' AND table_name = 'oauth_clients'")).rows[0].n;
+		assert.equal(await tables(), 0);
+		const codes = async () => (await pg.query<{ n: number }>('SELECT count(*)::int AS n FROM open_index.oauth_codes')).rows[0].n;
+		const before = await codes();
+		const ids = new Set<string>();
+		for (let i = 0; i < 6000; i++) ids.add(registerClient({ client_name: `Flood ${i}`, redirect_uris: [`https://flood.example/cb/${i}`] }).client_id);
+		assert.equal(ids.size, 6000);
+		assert.equal(await codes(), before);
+		// A client that registered before the flood, and one after, are both known.
+		const { client_id } = await register();
+		assert.deepEqual(client(client_id), { client_id, name: 'ChatGPT', redirect_uris: [CHATGPT] });
+		assert.equal(registerClient({ client_name: 'ChatGPT', redirect_uris: [CHATGPT] }).client_id, client_id, 'the same registration is the same client');
+		assert.ok('client' in await request(client_id));
+	});
+
+	test('a client_id is only what this server would have issued: edited, oversized or malformed ones are unknown', async () => {
+		const forge = (o: unknown) => `oic_${Buffer.from(JSON.stringify(o)).toString('base64url')}`;
+		for (const id of ['', 'oic_', 'oic_unknown', 'oic_!!!', forge({ n: 'ChatGPT', r: ['http://evil.example/cb'] }), forge({ n: 'ChatGPT', r: ['javascript:alert(1)'] }),
+			forge({ n: 'ChatGPT', r: [] }), forge({ n: 'x'.repeat(200), r: [CHATGPT] }), forge({ n: 'ChatGPT', r: [CHATGPT], extra: 1 }), forge({ n: 7, r: [CHATGPT] }), forge([1]),
+			forge({ n: 'ChatGPT', r: [CHATGPT, `https://example.org/${'a'.repeat(1500)}`] }), 7, null]) {
+			assert.equal(client(id), null, String(id).slice(0, 60));
+			if (typeof id === 'string') assert.ok('show' in await request(id), id.slice(0, 60));
+		}
+		// A forged id that is well-formed is simply a registration anyone could have made: it names its own return address, which the approval page shows.
+		const own = forge({ n: 'ChatGPT', r: ['https://evil.example/cb'] });
+		assert.deepEqual(client(own)?.redirect_uris, ['https://evil.example/cb']);
+		assert.ok('show' in await request(own), 'and it cannot return anywhere else');
+		assert.throws(() => registerClient({ redirect_uris: Array.from({ length: 10 }, (_, i) => `https://example.org/${i}/${'a'.repeat(300)}`) }), refused('invalid_redirect_uri'));
 	});
 });
 
@@ -213,16 +235,34 @@ describe('authorization', () => {
 		assert.equal((await r.json()).error, 'invalid_grant');
 	});
 
-	test('a code presented twice is refused, and the key from its first use stops working', async () => {
+	test('a code presented twice by the client that holds its verifier is refused, and the key from its first use stops working', async () => {
 		const { client_id } = await register();
 		const approved = await request(client_id);
 		assert.ok('client' in approved);
 		const code = await issueCode(pg, 'ada', approved);
-		const exchange = () => token(pg, { grant_type: 'authorization_code', code, client_id, redirect_uri: CHATGPT, code_verifier: VERIFIER });
+		const exchange = (more: object = {}) => token(pg, { grant_type: 'authorization_code', code, client_id, redirect_uri: CHATGPT, code_verifier: VERIFIER, ...more });
 		const first = (await exchange()).access_token;
+		assert.ok(await voterFromKey(pg, first));
+		// Knowing a used code alone signs nobody out: without the right client and verifier a replay proves nothing.
+		await assert.rejects(exchange({ code_verifier: 'w'.repeat(64) }), refused('invalid_grant'));
+		await assert.rejects(exchange({ client_id: (await register('Other')).client_id }), refused('invalid_grant'));
 		assert.ok(await voterFromKey(pg, first));
 		await assert.rejects(exchange(), refused('invalid_grant'));
 		assert.equal(await voterFromKey(pg, first), null);
+	});
+
+	test('two exchanges of one code at once: one key is issued, and it is revoked by the other', async () => {
+		const { client_id } = await register();
+		const approved = await request(client_id);
+		assert.ok('client' in approved);
+		const code = await issueCode(pg, 'ada', approved);
+		const before = (await pg.query<{ n: number }>("SELECT count(*)::int AS n FROM open_index.agent_keys WHERE login = 'ada' AND agent = 'ChatGPT'")).rows[0].n;
+		const exchange = () => token(pg, { grant_type: 'authorization_code', code, client_id, redirect_uri: CHATGPT, code_verifier: VERIFIER });
+		const results = await Promise.allSettled([exchange(), exchange(), exchange()]);
+		const issued = results.flatMap((r) => (r.status === 'fulfilled' ? [r.value.access_token] : []));
+		assert.equal(issued.length, 1);
+		assert.equal((await pg.query<{ n: number }>("SELECT count(*)::int AS n FROM open_index.agent_keys WHERE login = 'ada' AND agent = 'ChatGPT'")).rows[0].n, before + 1);
+		assert.equal(await voterFromKey(pg, issued[0]), null, 'the replays saw the key and revoked it');
 	});
 });
 
@@ -528,6 +568,22 @@ describe('the reviewers\' demo account', () => {
 		assert.ok(isReviewer(' Delphi_Reviewer ', env.REVIEW_ACCOUNT_PASSWORD, env));
 		for (const [login, password] of [['delphi_reviewer', 'wrong'], ['delphi_reviewer', ''], ['octocat', env.REVIEW_ACCOUNT_PASSWORD], [undefined, undefined], ['delphi_reviewer', `${env.REVIEW_ACCOUNT_PASSWORD} `]]) {
 			assert.ok(!isReviewer(login, password, env), `${login} ${password}`);
+		}
+	});
+
+	test('its public activity page and API answer, though its login is not a GitHub one', async () => {
+		const prior = { login: process.env.REVIEW_ACCOUNT_LOGIN, password: process.env.REVIEW_ACCOUNT_PASSWORD };
+		const { GET } = await route('api/v1/users/[login]');
+		const status = async (login: string) => (await GET(new Request(`http://localhost/api/v1/users/${login}`), { params: Promise.resolve({ login }) }) as Response).status;
+		try {
+			delete process.env.REVIEW_ACCOUNT_LOGIN;
+			assert.equal(await status('delphi_reviewer'), 400, 'not a login at all while the account is off');
+			Object.assign(process.env, env);
+			assert.equal(await status('delphi_reviewer'), 200);
+			assert.equal(await status('Delphi_Reviewer'), 200);
+			assert.equal(await status('other_login'), 400);
+		} finally {
+			for (const [k, v] of [['REVIEW_ACCOUNT_LOGIN', prior.login], ['REVIEW_ACCOUNT_PASSWORD', prior.password]] as const) if (v === undefined) delete process.env[k]; else process.env[k] = v;
 		}
 	});
 

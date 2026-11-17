@@ -2,11 +2,11 @@
 // answer (vote). The same call as the MCP tool vote.
 import { requireSourceCheckOrigin } from '#lib/moderation/source-check-origin.ts';
 import { db } from '#lib/db.ts';
-import { TOOLS } from '#lib/api/mcp.ts';
+import { voteTool } from '#lib/api/mcp-tools.ts';
 import { operation } from '#lib/api/operation.ts';
 import { PRIVATE } from '#lib/api/cache.ts';
 
 export const POST = operation('vote', async ({ params, body, voter, req }) => {
 	if (body.retrieve_sources) requireSourceCheckOrigin(req.headers.get('origin'), false);
-	return Response.json(await TOOLS.vote.work(await db(), { ...body, ...params }, voter), { headers: PRIVATE });
+	return Response.json(await voteTool(await db(), { ...body, ...params }, voter), { headers: PRIVATE });
 });

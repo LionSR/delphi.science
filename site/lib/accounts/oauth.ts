@@ -14,7 +14,6 @@ export const SCOPE = 'write';
 /** The protected resource tokens are issued for (RFC 8707, RFC 9728). */
 export const RESOURCE = `${SITE}/mcp`;
 export const KEY_SECONDS = 90 * 86400; // open_index.agent_keys.expires_at's default
-const CODE_SECONDS = 300;
 const MAX_REDIRECTS = 10, MAX_URI = 2000;
 // A client_id carries its own registration (below), so it is bounded in size.
 const MAX_CLIENT_ID = 1500;
@@ -162,9 +161,9 @@ export function client(id: unknown): Client | null {
 
 // ---- Authorization ----
 
+const AUTHORIZE_PARAMS = ['response_type', 'client_id', 'redirect_uri', 'state', 'scope', 'code_challenge', 'code_challenge_method', 'resource'] as const;
 /** An authorization request (the query of /oauth/authorize), as received. */
-export type AuthorizeParams = Partial<Record<'response_type' | 'client_id' | 'redirect_uri' | 'state' | 'scope' | 'code_challenge' | 'code_challenge_method' | 'resource', string>>;
-export const AUTHORIZE_PARAMS = ['response_type', 'client_id', 'redirect_uri', 'state', 'scope', 'code_challenge', 'code_challenge_method', 'resource'] as const;
+export type AuthorizeParams = Partial<Record<(typeof AUTHORIZE_PARAMS)[number], string>>;
 
 /** The resource a request names, if any, must be this MCP server (or the site it is on). */
 const resourceOk = (resource: string | undefined) => !resource || [RESOURCE, SITE].includes(resource.replace(/\/$/, ''));
@@ -173,8 +172,7 @@ const resourceOk = (resource: string | undefined) => !resource || [RESOURCE, SIT
  * Checks an authorization request. A problem with the client or its redirect URI is shown to the person
  * (`show`), since nothing can safely be sent back; any other problem goes back to the client (`refuse`, a URL).
  */
-export async function authorization(db: Db, p: AuthorizeParams): Promise<
-	{ show: string } | { refuse: string } | { client: Client; redirect_uri: string; challenge: string; state?: string }> {
+export function authorization(p: AuthorizeParams): { show: string } | { refuse: string } | { client: Client; redirect_uri: string; challenge: string; state?: string } {
 	const c = client(p.client_id);
 	if (!c) return { show: 'This app is not registered here. Start the connection again from the app.' };
 	const redirect_uri = p.redirect_uri ?? (c.redirect_uris.length === 1 ? c.redirect_uris[0] : '');
@@ -186,6 +184,16 @@ export async function authorization(db: Db, p: AuthorizeParams): Promise<
 	if (p.code_challenge_method !== 'S256') return refuse('invalid_request', 'code_challenge_method must be S256');
 	if (!resourceOk(p.resource)) return refuse('invalid_target', `resource must be ${RESOURCE}`);
 	return { client: c, redirect_uri, challenge: p.code_challenge, state: p.state };
+}
+
+/** The authorization request among a query's or a form's values: its parameters, the approval page's address for it, and the check. */
+export function authorizeRequest(read: (name: string) => unknown) {
+	const params: AuthorizeParams = {};
+	for (const k of AUTHORIZE_PARAMS) {
+		const v = read(k);
+		if (typeof v === 'string') params[k] = v;
+	}
+	return { params, page: `/oauth/authorize?${new URLSearchParams(params)}`, request: authorization(params) };
 }
 
 /** `uri` with these query parameters added (the authorization response, RFC 6749 section 4.1.2). */

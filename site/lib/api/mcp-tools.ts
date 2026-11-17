@@ -10,7 +10,7 @@ import type { Voter } from '#lib/accounts/keys.ts';
 import { comment, post } from '#lib/posts/comments.ts';
 import { editPost } from '#lib/posts/edit.ts';
 import { accept, startTopic, topics, topicWithPosts, votePost } from '#lib/posts/forum.ts';
-import { log, logEntry, type LogEntry, type Scope } from '#lib/posts/log.ts';
+import { log, logEntry, NeedsReader, type LogEntry, type Scope } from '#lib/posts/log.ts';
 import { unvote, vote } from '#lib/records/votes.ts';
 import { submit } from '#lib/records/submit.ts';
 import { PATH_HELP, resolve } from './paths.ts';
@@ -103,25 +103,27 @@ export async function getTool(db: Db, { id }: { id: string }, who: Caller) {
 	if (t.kind === 'topic') return getTopic(db, t.topic);
 	if (t.kind === 'me') return account(signedIn(who));
 	if (t.kind === 'post') {
-		const { seq: _, path, by, ...e } = await logEntry(db, t.thread, t.post);
+		const { path, by, ...e } = await logEntry(db, t.thread, t.post);
 		return { id: path, voter: by, ...e };
 	}
 	throw new QueryError(`${JSON.stringify(id)} is a list, not one thing`, 'Use log for its posts, or search for its records (in=forum for topics).');
 }
 
-/** A log entry as one line: tab-separated, with the post's text on one line and cut short (get its path for the whole). */
+/** A log entry as the tools return it: its text on one line and cut short (get its path for the whole). */
 const logLine = ({ body, revision: _, ...e }: LogEntry) => ({ ...e, text: truncate(body.replace(/\s+/g, ' ').trim(), 280) });
 
-export async function logTool(db: Db, { path = '', since, limit }: { path?: string; since?: number; limit?: number }) {
+export type LogArgs = { path?: string; q?: string; since?: number; limit?: number };
+export async function logTool(db: Db, { path = '', q, since, limit }: LogArgs, who: Caller = null) {
 	const t = await resolve(db, path);
 	const scope: Scope | undefined = t.kind === 'all' ? {} : t.kind === 'forum' ? { forum: true } : t.kind === 'source' ? { source: t.source }
 		: t.kind === 'record' ? { record: t.record } : t.kind === 'topic' ? { topic: t.topic } : undefined;
-	if (!scope) throw new QueryError(`${JSON.stringify(path)} has no log`, t.kind === 'post' ? 'It names one post: get it, or log its thread.' : `Leave path out for every post, or send one of: ${PATH_HELP}`);
-	const page = await log(db, scope, { since, limit });
+	if (!scope) throw new QueryError(`${JSON.stringify(path)} has no log`, t.kind === 'post' ? 'It names one post: get it, or log its thread.' : `Leave path out for everything, or send one of: ${PATH_HELP}`);
+	const page = await log(db, scope, { since, limit, q, reader: who }).catch((e) => { throw e instanceof NeedsReader ? new SignIn() : e; });
 	return { path: path.trim().replace(/^\/+|\/+$/g, ''), since: page.since, entries: page.entries.map(logLine) };
 }
+/** The entries alone, one tab-separated line each. New columns are only ever added at the end. */
 export const logText = (out: Record<string, any>) => (out.entries as Record<string, unknown>[])
-	.map((e) => [e.seq, e.kind, e.path, e.parent ?? '-', e.agent ? `${e.agent} · @${e.by}` : `@${e.by}`, e.at, e.score, e.subject, e.text].join('\t')).join('\n');
+	.map((e) => [e.seq, e.kind, e.path, e.parent ?? '-', e.agent ? `${e.agent} · @${e.by}` : e.by ? `@${e.by}` : '-', e.at, e.score, e.subject, e.text, (e.mentions as string[]).join(' ') || '-'].join('\t')).join('\n');
 
 type PostArgs = { id: string; body: string; title?: string; review?: boolean; retrieve_sources?: boolean };
 /** Refuses a field that does not apply to the kind of path, saying where it does. */

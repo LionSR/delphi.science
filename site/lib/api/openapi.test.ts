@@ -525,10 +525,43 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.deepEqual(await json('GET', '/api/v1/log', { query: `since=${all.since}` }), { status: 200, path: '', since: all.since, entries: [] });
 		assert.equal((await call('GET', '/api/v1/log', { query: `since=${all.since}&format=text` })).text, '');
 		const line = (await call('GET', '/api/v1/log', { query: `path=${topic}&format=text` })).text.split('\n').find((l) => l.split('\t')[2] === answer)!.split('\t');
-		assert.deepEqual([line.length, line[1], line[3], line[4], line[6], line[7], line[8]], [9, 'answer', '-', 'Other agent · @verb-other', '0', 'Which seed reproduces table 3?', 'Seed 7 does, to three digits.']);
+		assert.deepEqual([line.length, line[1], line[3], line[4], line[6], line[7], line[8], line[9]], [10, 'answer', '-', 'Other agent · @verb-other', '0', 'Which seed reproduces table 3?', 'Seed 7 does, to three digits.', '-']);
+		// A record's line has no author; the opening post names the record, in the last column.
+		const lines = (await call('GET', '/api/v1/log', { query: 'limit=200&format=text' })).text.trimEnd().split('\n').map((l) => l.split('\t'));
+		assert.deepEqual(lines.find((l) => l[1] === 'record')!.slice(3, 5), ['-', '-']);
+		assert.equal(lines.find((l) => l[1] === 'question' && l[2].startsWith(`${topic}/`))![9], discussed);
 		for (const [query, status] of [['path=me', 400], ['path=records', 400], [`path=${encodeURIComponent(answer)}`, 400], ['limit=0', 400], ['since=-1', 400], ['format=tsv', 400], ['path=nowhere', 404], ['path=app/no-such-record', 404]] as const) {
 			assert.equal((await call('GET', '/api/v1/log', { query })).status, status, query);
 		}
+	});
+
+	test('verbs: log takes a query, the same by REST, by the tool and as a feed; to:@me is the caller\'s inbox', async () => {
+		const source = discussed.split('/')[0];
+		const paths = (page: { entries: { path: string }[] }) => page.entries.map((e) => e.path);
+		for (const [q, path] of [['kind:record', source], [`re:${discussed}`, undefined], ['to:@verb-author', undefined], ['by:@Verb-Other', 'forum'], ['kind:answer OR kind:question', undefined],
+			[`source:${source} NOT kind:record`, undefined], ['seed', 'forum'], ['kind:review', discussed]] as const) {
+			const query = `q=${encodeURIComponent(q)}${path ? `&path=${encodeURIComponent(path)}` : ''}`;
+			const page = await json('GET', '/api/v1/log', { query });
+			assert.equal(page.status, 200, q);
+			assert.ok(page.entries.length, q);
+			const fromTool = await tool('log', { q, ...(path ? { path } : {}) });
+			same(page, fromTool, q);
+			assert.equal((await call('GET', '/api/v1/log', { query: `${query}&format=text` })).text, `${fromTool.text}\n`, q);
+			// The feed: the same entries in the same order, each once, read as nobody.
+			const feed = await call('GET', '/api/v1/log', { query: `${query}&format=atom`, auth: author });
+			assert.equal(feed.headers.get('content-type'), 'application/atom+xml; charset=utf-8');
+			assert.deepEqual([...feed.text.matchAll(/<entry>\n<id>[^<]*#(-?\d+)<\/id>/g)].map((m) => Number(m[1])), page.entries.map((e: { seq: number }) => e.seq), q);
+		}
+		// The inbox: what others posted to the caller. It needs the caller, by every door.
+		const inbox = await json('GET', '/api/v1/log', { query: 'q=to:@me', auth: author });
+		assert.deepEqual(paths(inbox), [answer]);
+		same(inbox, await tool('log', { q: 'to:@me' }, author), 'to:@me');
+		assert.deepEqual(paths(await json('GET', '/api/v1/log', { query: 'q=to:@verb-author' })), [answer], 'named, it is public');
+		const anonymous = await json('GET', '/api/v1/log', { query: 'q=to:@me' });
+		assert.deepEqual([anonymous.status, anonymous.error.code], [401, 'sign_in']);
+		assert.match((await tool('log', { q: 'to:@me' })).refused!, /^Sign-in required/);
+		assert.equal((await call('GET', '/api/v1/log', { query: 'q=to:@me&format=atom', auth: author })).status, 401, 'a feed is read as nobody');
+		for (const q of ['kind:paper', 'foo:bar', 'to:', '(kind:record']) assert.equal((await call('GET', '/api/v1/log', { query: `q=${encodeURIComponent(q)}` })).status, 400, q);
 	});
 
 	test('verbs: search finds records and forum topics, as the tool does', async () => {
@@ -622,7 +655,7 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		const { TOOLS, securitySchemes } = await import('./mcp.ts');
 		const { authorizationServer } = await import('#lib/accounts/oauth.ts');
 		assert.deepEqual(Object.keys(TOOLS), [...VERBS]);
-		assert.deepEqual(VERBS.map((v) => operationById(v).auth), ['none', 'optional', 'none', 'required', 'required', 'required']);
+		assert.deepEqual(VERBS.map((v) => operationById(v).auth), ['none', 'optional', 'optional', 'required', 'required', 'required']);
 		for (const v of VERBS) assert.equal(TOOLS[v].auth, operationById(v).auth, v);
 		assert.deepEqual(securitySchemes('get'), [{ type: 'noauth' }, { type: 'oauth2', scopes: ['write'] }]);
 		// The OAuth scheme names the endpoints the authorization server's own metadata names.

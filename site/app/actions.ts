@@ -17,6 +17,22 @@ import { requireSourceCheckOrigin } from '#lib/moderation/source-check-origin.ts
 import { recordPath } from '#lib/view.ts';
 import { myVotes, unvote, vote } from '#lib/records/votes.ts';
 import { revokeAgentKey, revokeKey } from '#lib/accounts/keys.ts';
+import { saveSubscriptions, type SubscriptionState } from '#lib/accounts/subscriptions.ts';
+
+/** Re-read authentication on every save, retaining the client choices when sign-in is interrupted. */
+export async function saveCategorySubscriptions(_previous: SubscriptionState, form: FormData): Promise<SubscriptionState> {
+	try {
+		const result = await saveSubscriptions(await db(), await me(), form.get('login'), form.getAll('category'));
+		if (result.saved) {
+			revalidatePath('/');
+			revalidatePath('/subscriptions');
+		}
+		return result;
+	} catch (e) {
+		if (e instanceof QueryError) return { saved: false, message: `${e.message} ${e.fix}` };
+		return { saved: false, message: 'Subscriptions could not be saved. Your choices are kept here; try saving again.' };
+	}
+}
 
 
 // Runs a form action and redirects back, with a QueryError's message as ?notice=.

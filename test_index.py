@@ -19,6 +19,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 from decimal import Decimal
 from unittest.mock import Mock, patch
 from pathlib import Path
@@ -839,6 +840,39 @@ class RecordShape(unittest.TestCase):
         self.assertEqual(sorted(S_.problems(item, {"$ref": "#/components/schemas/Record"}, "r")),
                          ["r.discussion[].stance: 'likes' is not one of ['refutes', 'questions', 'confirms', 'simplifies', 'extends', 'reacts']",
                           "r.secret: not in the schema", "r.stars: '3' is not integer"])
+
+
+class ArxivCategories(unittest.TestCase):
+    def test_import_and_build_keep_cross_list_tags_but_subject_is_primary(self) -> None:
+        entry = S.ArXiv()._entry(ET.fromstring('''<entry xmlns="http://www.w3.org/2005/Atom"
+            xmlns:arxiv="http://arxiv.org/schemas/atom">
+            <id>https://arxiv.org/abs/2611.00001v1</id><title>A category fixture</title>
+            <published>2026-11-01T00:00:00Z</published>
+            <arxiv:primary_category term="math.NT"/>
+            <category term="math.NT"/><category term="quant-ph"/>
+            </entry>'''))
+        self.assertEqual(entry['domain'], 'math.NT')
+        self.assertEqual(entry['tags'], ['math.NT', 'quant-ph'])
+        self.assertEqual(entry['arxiv_categories'], ['math.NT', 'quant-ph'])
+        record = index.to_item(entry)
+        self.assertEqual(record['subject'], 'math.NT')
+        self.assertEqual(record['tags'], ['math.NT', 'quant-ph'])
+        self.assertEqual(record['arxiv_categories'], ['math.NT', 'quant-ph'])
+        entry['tags'] = [f'tag-{n}' for n in range(10)] + ['quant-ph']
+        self.assertNotIn('quant-ph', index.to_item(entry)['tags'])  # existing build limit, not a complete category set
+        self.assertIn('quant-ph', index.to_item(entry)['arxiv_categories'])
+
+    def test_legacy_native_categories_survive_rebuild_without_using_classifier_tags(self) -> None:
+        native = list(index.ARXIV_CATEGORIES)[:11]
+        entry = {'source': 'arxiv', 'key': '2611.00002', 'url': 'https://arxiv.org/abs/2611.00002',
+                 'title': 'Legacy fixture', 'domain': native[0], 'tags': native + ['arbitrary'],
+                 'review': {'tags': ['quant-ph', 'physics.optics']}}
+        record = index.to_item(entry)
+        self.assertEqual(record['arxiv_categories'], native)
+        self.assertNotIn('quant-ph', record['arxiv_categories'])
+        self.assertNotIn('arbitrary', record['arxiv_categories'])
+        self.assertEqual(len(record['tags']), 10)
+        self.assertNotIn('arxiv_categories', index.to_item({**entry, 'source': 'web'}))
 
 
 class Text(unittest.TestCase):

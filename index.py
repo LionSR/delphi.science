@@ -778,6 +778,7 @@ PASSTHROUGH = ("source", "url", "title", "authors", "summary", "domain", "origin
                "family", "family_title", "formalized", "withdrawn", "withdrawn_on", "verified", "trust", "ai_models",
                "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json")
 PREFIXES = json.loads((HERE / "site" / "lib" / "records" / "prefixes.json").read_text())["prefixes"]
+ARXIV_CATEGORIES = json.loads((HERE / "site" / "lib" / "records" / "arxiv-categories.json").read_text())
 # An X post's text is shown by X's own embed, so it is never served.
 X_FIELDS = ("kind", "url", "author", "handle", "date", "added", "stance")
 
@@ -797,6 +798,10 @@ def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
         "id": rid(e), **{k: e.get(k) for k in PASSTHROUGH}, "discussion": [served_link(d) for d in links],
         "disputed": disputed(links) or None, "reception": published_reception(e),
         "tags": list(dict.fromkeys([*(e.get("tags") or []), *(r.get("tags") or [])]))[:10],
+        # Legacy arXiv entry.tags was the adapter's upstream category list, before classifier tags were merged.
+        # Never recover categories from the merged/capped Record.tags or review.tags.
+        "arxiv_categories": list(dict.fromkeys(c for c in e.get("arxiv_categories", e.get("tags", []))
+                                               if c in ARXIV_CATEGORIES)) if e.get("source") == "arxiv" else None,
         "published": e.get("published") or e.get("added"), "category": r.get("category", "research"),
         "subject": subject, "division": TX.division_of(subject) if subject else None,
     })

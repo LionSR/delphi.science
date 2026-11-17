@@ -4,6 +4,7 @@ import { publicWebTarget, readPublicWeb, RetrievalError, webKey, type SourceTran
 import { check, type Entry, type Item } from '#lib/api/schema.ts';
 import { truncate } from '#lib/view.ts';
 import { divisionOf, isNamedSubject } from './taxonomy.ts';
+import arxivCategories from './arxiv-categories.json' with { type: 'json' };
 
 export class NotFound extends Error {}
 // Mostly-pseudoscience venues (sources.py BLOCKED_HOSTS).
@@ -63,6 +64,7 @@ const BOOKKEEPING = new Set(['key', 'added', 'added_by', 'refreshed']);
 export function itemOf(e: Entry): Item {
 	const fields = Object.fromEntries(Object.entries(e).filter(([k]) => !BOOKKEEPING.has(k)));
 	const out = dropEmpty({ id: `${e.source}/${e.key}`, ...fields, tags: e.tags && [...new Set(e.tags)].slice(0, 10),
+		arxiv_categories: e.source === 'arxiv' ? [...new Set(e.arxiv_categories ?? e.tags ?? [])].filter((c) => Object.hasOwn(arxivCategories, c)) : undefined,
 		published: e.published || e.added, category: 'research', ...subject(e.domain ?? '') });
 	check('Record', out, out.id);
 	return out;
@@ -82,10 +84,11 @@ const SOURCES: Source[] = [
 			if (!e) throw new NotFound(`arXiv:${key}`);
 			const id = (xml(e, 'id')[0] ?? '').trim().split('/abs/').pop()!.replace(/v\d+$/, '');
 			const domain = e.match(/<arxiv:primary_category[^>]*term="([^"]+)"/)?.[1] ?? '';
+			const categories = [...e.matchAll(/<category[^>]*term="([^"]+)"/g)].map((m) => m[1]);
 			return entry('arxiv', id, {
 				url: `https://arxiv.org/abs/${id}`, title: clean(xml(e, 'title')[0]),
 				authors: xml(e, 'author').map((a) => clean(xml(a, 'name')[0])).filter(Boolean), summary: summarize(xml(e, 'summary')[0]), domain,
-				tags: [...e.matchAll(/<category[^>]*term="([^"]+)"/g)].map((m) => m[1]), published: isoDate(xml(e, 'published')[0]),
+				tags: categories, arxiv_categories: categories, published: isoDate(xml(e, 'published')[0]),
 			});
 		},
 	},

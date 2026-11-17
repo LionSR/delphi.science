@@ -46,6 +46,17 @@ input[name='q'], input.grow { flex: 1 1 16rem; min-width: 0; }
 .comment-form fieldset > button { align-self: flex-start; }
 .comment-form fieldset:disabled { opacity: 0.75; }
 .edit-actions { display: flex; gap: 0.5rem; }
+.subscription-form { flex-direction: column; }
+.subscription-form > fieldset { min-width: 0; border: 0; padding: 0; margin: 0; }
+.subscription-form legend { font-weight: 600; }
+.category-filter { display: flex; flex-direction: column; gap: 0.25rem; }
+.category-filter input { width: 100%; }
+.selected-categories { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.75rem 0; }
+.category-options { max-height: 28rem; overflow: auto; border: 1px solid var(--rule); border-radius: var(--radius); padding: 0.7rem; margin: 0.75rem 0; }
+.category-options fieldset { border: 0; padding: 0; min-width: 0; margin: 0 0 1rem; }
+.category-options label { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.25rem 0; font-size: var(--small); cursor: pointer; }
+.category-options input { flex: none; }
+.category-options span { overflow-wrap: anywhere; }
 .quick-start { display: flex; flex-direction: column; gap: 0.6rem; margin: 1rem 0; }
 .quick-start label { display: flex; flex-direction: column; gap: 0.25rem; font-size: var(--small); color: var(--muted); }
 .quick-start :is(input, textarea) { width: 100%; font-size: inherit; }

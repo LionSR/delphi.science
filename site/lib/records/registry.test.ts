@@ -72,6 +72,8 @@ describe('reading a link', () => {
 		assert.match(String(e.summary), /recurrent & convolutional/);
 		const it = itemOf(e); // as index.py to_item serves an entry not labelled yet
 		assert.deepEqual([it.id, it.subject, it.division, it.category, 'key' in it], ['arxiv/1706.03762', 'cs.CL', 'cs', 'research', false]);
+		assert.deepEqual(e.arxiv_categories, ['cs.CL', 'cs.LG']);
+		assert.deepEqual(it.arxiv_categories, ['cs.CL', 'cs.LG']);
 		const repo = itemOf((await resolve('karpathy/nanoGPT', SOURCES))!);
 		assert.deepEqual([repo.id, repo.title, repo.repo, repo.agent_ready], ['github/karpathy__nanoGPT', 'nanoGPT', REPO.html_url, true]);
 		await assert.rejects(resolve('https://arxiv.org/abs/2999.99999', SOURCES), /2999/);

@@ -72,12 +72,13 @@ describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' },
 
 	test('structured filters match the build exactly', async () => {
 		const expect = (pred: (it: Item) => boolean) => items.filter(pred).length;
+		const cross = (it: Item, code: string) => it.source === 'arxiv' && Boolean(it.arxiv_categories?.some((c) => c === code || c.startsWith(code + '.') || c.startsWith(code + '-')));
 		const cases: [string, number][] = [
-			['cat:math', expect((it) => it.division === 'math')],
-			['cat:math.NT', expect((it) => it.subject === 'math.NT')],
+			['cat:math', expect((it) => it.division === 'math' || cross(it, 'math'))],
+			['cat:math.NT', expect((it) => it.subject === 'math.NT' || cross(it, 'math.NT'))],
 			['is:withdrawn', expect((it) => Boolean(it.withdrawn))],
 			['source:app', expect((it) => it.source === 'app')],
-			['is:verified cat:math.NT', expect((it) => Boolean(it.verified) && it.subject === 'math.NT')],
+			['is:verified cat:math.NT', expect((it) => Boolean(it.verified) && (it.subject === 'math.NT' || cross(it, 'math.NT')))],
 			['source:openai-math ANDNOT is:withdrawn', expect((it) => it.source === 'openai-math' && !it.withdrawn)],
 		];
 		for (const [q, n] of cases) assert.equal((await search(db, q)).total, n, q);

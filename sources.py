@@ -420,6 +420,7 @@ class ArXiv(Source):
             summary=trim(t("a:summary")),
             domain=cat.get("term", "") if cat is not None else "",
             tags=[c.get("term", "") for c in e.findall("a:category", self.NS)],
+            arxiv_categories=[c.get("term", "") for c in e.findall("a:category", self.NS)],
             published=iso_date(t("a:published")),
             updated=iso_date(t("a:updated")),
         )

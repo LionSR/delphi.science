@@ -150,4 +150,5 @@ cd site && npm test
 - [docs/curated-source-review.md](docs/curated-source-review.md) — reviewed historical source observations
 - [docs/atomic-vote-if-absent.md](docs/atomic-vote-if-absent.md) — create-only votes
 - [docs/usage-analytics.md](docs/usage-analytics.md) — usage metrics, admin access, retention
+- [docs/category-subscriptions.md](docs/category-subscriptions.md) — private home-feed subscriptions, cross-list metadata, local checks and rollout
 - [docs/release-validation-2026-10-27.md](docs/release-validation-2026-10-27.md), [docs/source-evidence-validation-2026-10-27.md](docs/source-evidence-validation-2026-10-27.md) — dated validation records

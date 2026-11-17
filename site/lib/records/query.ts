@@ -1,11 +1,12 @@
 // Search for the open index: arXiv-style queries compiled to parameterized Postgres.
 // Text terms rank by ts_rank_cd; with an embedding, keyword and vector ranks merge by reciprocal-rank fusion.
 import stances from './stances.json' with { type: 'json' };
+import arxivCategories from './arxiv-categories.json' with { type: 'json' };
 import type { Db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
 import { pageInfo, pageSize, pageStart, type PageRequest } from '#lib/paging.ts';
 import { truncate } from '#lib/view.ts';
-import { divisionOf, isSubjectCode, subjectNamed } from './taxonomy.ts';
+import { DIVISIONS, divisionOf, isSubjectCode, subjectNamed } from './taxonomy.ts';
 
 type Leaf = { field: string; value: string; phrase: boolean };
 type Node = { op: 'AND' | 'OR' | 'NOT'; kids: Tree[] };
@@ -36,7 +37,7 @@ export const SEARCH_PAGE = pageSize('Results', 100, 20);
 export const IS: Record<string, string> = Object.fromEntries(Object.entries(IS_FLAGS).map(([k, [, meaning]]) => [k, meaning]));
 export const QUERY_FIELDS: Record<string, string> = {
 	'ti au abs all': 'title, author, abstract, every text field (a bare word searches all)',
-	cat: 'arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes',
+	cat: 'arXiv subject or division, including source-owned arXiv cross-lists: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes',
 	'source category origin family id': 'exact values, e.g. source:openai-math id:app/APP-260923-0000',
 	is: Object.entries(IS).map(([k, meaning]) => `${k} (${meaning})`).join(', '),
 	published: 'published:[2026-10-01 TO *], published:2026-09',
@@ -165,7 +166,10 @@ class Compiler {
 			const code = fromName ?? v;
 			if (isSubjectCode(code)) {
 				const a = this.p(code), b = this.p(code + '.%'), c = this.p(code + '-%');
-				return `(r.subject = ${a} OR r.division = ${a} OR r.subject LIKE ${b} OR r.subject LIKE ${c})`;
+				const prefixes = DIVISIONS.find((d) => d.key === code)?.prefixes ?? [code];
+				const codes = this.p(Object.keys(arxivCategories).filter((cat) => prefixes.some((p) => cat === p || cat.startsWith(p + '.') || cat.startsWith(p + '-'))));
+				return `(r.subject = ${a} OR r.division = ${a} OR r.subject LIKE ${b} OR r.subject LIKE ${c}
+					OR (r.source = 'arxiv' AND coalesce(r.record->'arxiv_categories', '[]'::jsonb) ?| ${codes}::text[]))`;
 			}
 			return `lower(r.domain) LIKE ${this.p('%' + v.toLowerCase() + '%')}`;
 		}
@@ -191,6 +195,18 @@ export function compile(q: string) {
 	return { where, params: c.params, ranks: c.ranks };
 }
 
+/** Compile scope separately from user syntax: even OR and parentheses cannot escape it. */
+function scopedQuery(q: string, categories?: string[]) {
+	const c = new Compiler();
+	let where = q.trim() ? c.tree(parse(q)) : 'true';
+	if (categories !== undefined) {
+		if (categories.some((code) => !isSubjectCode(code))) throw new QueryError('Invalid feed category', 'Choose categories in your subscriptions.');
+		const scope = categories.map((value) => c.tree({ field: 'cat', value, phrase: false })).join(' OR ') || 'false';
+		where = `(${where}) AND (${scope})`;
+	}
+	return { where, params: c.params, ranks: c.ranks };
+}
+
 // ---- Running ----
 
 export function compact(rec: Record<string, unknown>) {
@@ -204,6 +220,7 @@ export function compact(rec: Record<string, unknown>) {
 }
 
 interface SearchOptions extends PageRequest {
+	categories?: string[]; // server-owned feed scope; [] matches nothing, undefined is global
 	sort?: string;
 	fields?: 'compact' | 'full';
 	embedding?: number[]; // the query's embedding, for hybrid ranking
@@ -270,7 +287,7 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	if (fields !== 'compact' && fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(fields)}`, 'Use fields=compact (default) or fields=full.');
 	const start = pageStart(opts, SEARCH_PAGE);
 	// An empty query lists everything.
-	const { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };
+	const { where, params, ranks } = scopedQuery(q, opts.categories);
 	const n = params.length;
 	let sql: string;
 	const all = [...params];
@@ -288,9 +305,9 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 				SELECT ${SERVED} AS record FROM open_index.records r
 				JOIN (SELECT coalesce(kw.id, vec.id) AS id, coalesce(1.0 / (60 + kw.k), 0) + coalesce(1.0 / (60 + vec.k), 0) AS score
 				      FROM kw FULL JOIN vec ON kw.id = vec.id) s ON s.id = r.id
-				ORDER BY s.score DESC, r.published DESC NULLS LAST LIMIT $${n + 2} OFFSET $${n + 3}`;
+				ORDER BY s.score DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 2} OFFSET $${n + 3}`;
 		} else {
-			sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.published DESC NULLS LAST LIMIT $${n + 1} OFFSET $${n + 2}`;
+			sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 1} OFFSET $${n + 2}`;
 		}
 	} else if (RANKED[sort]) {
 		sql = rankedSql(RANKED[sort], where, n);

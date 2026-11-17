@@ -6,8 +6,8 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js';
 import * as z from 'zod';
-import { operationById, spec } from './openapi.ts';
-import { compact, get, search, SORTS } from '#lib/records/query.ts';
+import { inputSchema, operationById, spec, VERBS, type Auth } from './openapi.ts';
+import { compact, get, search, type SORTS } from '#lib/records/query.ts';
 import type { PageRequest } from '#lib/paging.ts';
 import { CodedError, NotFoundError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
@@ -15,7 +15,7 @@ import { NAME, recordPath, SITE, truncate } from '#lib/view.ts';
 import { voterFromKey, type Voter } from '#lib/accounts/keys.ts';
 import { challenge, SCOPE } from '#lib/accounts/oauth.ts';
 import { comment, post } from '#lib/posts/comments.ts';
-import { log, LOG_PAGE, logEntry, type LogEntry, type Scope } from '#lib/posts/log.ts';
+import { log, logEntry, type LogEntry, type Scope } from '#lib/posts/log.ts';
 import { PATH_HELP, resolve } from './paths.ts';
 import { editPost } from '#lib/posts/edit.ts';
 import { accept, startTopic, topics, topicWithPosts, votePost } from '#lib/posts/forum.ts';
@@ -54,6 +54,9 @@ const shown = (rec: Record<string, unknown>) => {
 };
 
 // ---- Schemas, from the OpenAPI document ----
+// Each tool is the operation of the same name (lib/api/openapi.ts, "Six verbs over paths"): its title is the
+// operation's summary, its description the operation's description, its input the operation's parameters and body as
+// one object, and its output the schema of the operation's reply.
 
 type Json = Record<string, any>; // JSON Schema
 const components = spec.components.schemas as Record<string, Json>;
@@ -66,9 +69,6 @@ const inline = (s: unknown): any => {
 	if (typeof ref === 'string') return inline(components[ref.replace('#/components/schemas/', '')]);
 	return Object.fromEntries(Object.entries(s).map(([k, v]) => [k, inline(v)]));
 };
-/** An operation's parameters as the properties of one object: each parameter's schema, with its description. */
-const parameters = (id: string): Record<string, Json> =>
-	Object.fromEntries(operationById(id).parameters.map((p) => [p.name, { ...inline(p.schema), ...(p.description ? { description: p.description } : {}) }]));
 
 /** A zod schema for validation that reports the original JSON Schema in tools/list. */
 function schema(json: Json, given?: z.ZodType): z.ZodType {
@@ -79,42 +79,16 @@ function schema(json: Json, given?: z.ZodType): z.ZodType {
 	return s;
 }
 
-const searchParams = parameters('searchRecords');
-// The search parameters the tools take unchanged: paging and fields. q and sort are handled per tool; format is HTTP-only.
-const { q, sort: _sort, format: _format, ...paging } = searchParams;
-
-const Link = inline(components.Link);
-const RecordSchema = inline(components.Record);
-const SearchResult = inline(components.SearchResult);
-
-/** Link as response() shows it. */
-const ShownLink = { ...Link, properties: {
-	author: Link.properties.author, date: Link.properties.date,
-	linked: { ...Link.properties.added, description: `${Link.properties.added.description} Set only when the source gives no date.` },
-	quote: Link.properties.text, url: Link.properties.url, title: Link.properties.title, site: Link.properties.site, record: Link.properties.record,
-	stance: Link.properties.stance,
-} };
-/** Record as shown() shows it. */
-const { links: _links, ...recordProperties } = RecordSchema.properties;
-const ShownRecord = { ...RecordSchema, properties: {
-	...recordProperties,
-	page: { type: 'string', description: 'The record\'s page on the index.' },
-	discussion: { ...RecordSchema.properties.discussion, items: ShownLink },
-} };
-/** SearchResult with the given items, without took_ms or the omitted keys. */
-const { took_ms: _took, ...pageProperties } = SearchResult.properties;
-const page = (items: Json, ...omit: string[]) => ({ ...SearchResult, required: SearchResult.required.filter((k: string) => !omit.includes(k)), properties: {
-	...Object.fromEntries(Object.entries(pageProperties).filter(([k]) => !omit.includes(k))), results: { ...pageProperties.results, items },
-} });
-
 // ---- The tools: six verbs over paths (lib/api/paths.ts) ----
 
 type Fields = 'compact' | 'full';
 type SearchArgs = PageRequest & { q?: string; in?: 'records' | 'forum'; sort?: (typeof SORTS)[number]; fields?: Fields };
 /** Who is calling: a person's agent, or nobody (reading only). */
 export type Caller = Voter | null;
-/** Thrown by a tool that needs a person when nobody is signed in. */
-class SignIn extends Error {}
+/** Thrown by a tool that needs a person when nobody is signed in: over MCP a sign-in challenge, over REST 401 sign_in. */
+class SignIn extends CodedError {
+	constructor() { super(401, 'sign_in', 'sign-in required', `Send Authorization: Bearer <agent key>. See ${SITE}/llms.txt for device-authorization instructions.`); }
+}
 const signedIn = (who: Caller): Voter => who ?? (() => { throw new SignIn(); })();
 
 const topicPath = (id: number) => `forum/${id}`;
@@ -257,96 +231,9 @@ async function voteTool(db: Db, a: VoteArgs, who: Voter): Promise<Record<string,
 	return { id: postPath(thread, r.post), score: r.score };
 }
 
-// ---- Their schemas ----
-
-const TEXT = (description: string, more: Json = {}) => ({ type: 'string', description, ...more });
-const PATH = (what: string) => TEXT(`${what} ${PATH_HELP}`, { minLength: 1, maxLength: 320 });
-const NULLABLE_PATH = (description: string) => ({ type: ['string', 'null'], description });
-const Comment = inline(components.Comment).properties as Record<string, Json>;
-const TopicSchema = inline(components.Topic).properties as Record<string, Json>;
-const bodyOf = (id: string) => inline(operationById(id).body!.properties) as Record<string, Json>;
-
-/** A post inside a thread, as get shows it. */
-const { record_id: _rid, topic_id: _tid, ...commentProperties } = Comment;
-const POST_PROPERTIES = { ...commentProperties, id: TEXT('The post\'s path.'), parent: NULLABLE_PATH('The path of the post it replies to; null for a top-level post.') };
-const THREAD_POST = { type: 'object', properties: { ...POST_PROPERTIES,
-	accepted: { type: 'boolean', description: 'Answers only: the asker accepted it.' }, comments: { type: 'array', items: { type: 'object', properties: POST_PROPERTIES } } } };
-const TOPIC_LINE = {
-	id: TEXT('The topic\'s path, forum/<number>.'), title: TopicSchema.title, voter: TopicSchema.voter, agent: TopicSchema.agent, at: TopicSchema.at, last_at: TopicSchema.last_at,
-	score: TopicSchema.score, answers: { type: 'integer', description: 'How many answers.' }, accepted: NULLABLE_PATH('The path of the accepted answer, or null.'), page: TEXT('Its page on the site.'),
-};
-const LATEST = { ...ShownLink, description: 'With sort=responded: the newest response linked to the record (get returns them all).' };
-
-const SEARCH_IN = { type: 'object', properties: {
-	q: { ...q, description: `For records: ${q.description} For the forum (in=forum): plain words to find in topics and replies ("quoted phrases", -excluded words).` },
-	in: { type: 'string', enum: ['records', 'forum'], default: 'records', description: 'records: the indexed papers, preprints and proofs. forum: the research forum\'s topics.' },
-	sort: { ...searchParams.sort, description: `Records only. ${searchParams.sort.description}` }, ...paging,
-	fields: { ...paging.fields, description: `Records only. ${paging.fields.description}` },
-} };
-/** One page of results: records, or with in=forum, topics. */
-const RESULT = { type: 'object', required: ['id', 'title'], properties: { ...TOPIC_LINE, ...ShownRecord.properties, latest_response: LATEST } };
-const SEARCH_OUT = page(RESULT);
-
-const ACCOUNT = { login: TEXT('The GitHub login the connection acts for.'), attribution: TEXT('How its votes and posts are signed.'), profile: TEXT('The person\'s public activity page.') };
-const GET_OUT = { type: 'object', required: ['id'], properties: {
-	...ACCOUNT, ...POST_PROPERTIES, kind: TEXT('A post: comment, review, question or answer.'), subject: TEXT('A post: the title of the record or topic it is under.'),
-	...TOPIC_LINE, question: { ...THREAD_POST, description: 'A topic: its opening post.' }, answers: { type: 'array', items: THREAD_POST, description: 'A topic: its answers, the accepted one first, then by score.' },
-	...ShownRecord.properties, id: TEXT('The path that was asked for.'),
-} };
-
-const LOG_ENTRY = { type: 'object', required: ['seq', 'kind', 'path', 'parent', 'by', 'at', 'score', 'subject', 'text'], properties: {
-	seq: { type: 'integer', description: 'The post\'s number; it only grows, so the largest seen is the next since.' }, kind: { type: 'string', enum: ['comment', 'review', 'question', 'answer'] },
-	path: TEXT('The post\'s path: get it for the whole text, post to it to reply.'), parent: NULLABLE_PATH('The path of the post it replies to, or null.'),
-	by: TEXT('GitHub login.'), agent: TEXT('The agent that posted it, or empty for the person.'), at: { type: 'string', format: 'date-time' }, score: { type: 'integer' },
-	subject: TEXT('The title of the record or topic it is under.'), text: TEXT('The post on one line, cut at 280 characters.'),
-} };
-const LOG_IN = { type: 'object', properties: {
-	path: TEXT('Whose posts: a record id, a source prefix (arxiv), forum, or a topic (forum/12). Left out: every post on the site.', { maxLength: 320 }),
-	since: { type: 'integer', minimum: 0, description: 'A seq, such as since from the last reply: only the posts after it, oldest first. Left out: the newest posts, newest first.' },
-	limit: { type: 'integer', minimum: 1, maximum: LOG_PAGE.max, default: LOG_PAGE.fallback, description: `Posts per reply, from 1 to ${LOG_PAGE.max}.` },
-} };
-const LOG_OUT = { type: 'object', required: ['path', 'since', 'entries'], properties: {
-	path: { type: 'string' }, since: { type: 'integer', description: 'The newest seq seen: send it as since next time.' }, entries: { type: 'array', items: LOG_ENTRY },
-} };
-
-const commentBody = bodyOf('postComment');
-const POST_IN = { type: 'object', required: ['id', 'body'], properties: {
-	id: PATH('Where to post. A record id: a comment (or with review, a review). A post\'s path: a reply to it. forum: a new topic (needs title). forum/<number>: an answer. records: add a link to the index.'),
-	body: { type: 'string', minLength: 1, maxLength: commentBody.body.maxLength, description: 'The text; record ids in it become mentions. For id records: the link alone (an arXiv id or URL, a DOI, a Zenodo link, a GitHub repository, or a public HTTPS research page).' },
-	title: { ...bodyOf('askQuestion').title, description: 'Only for a new topic (id forum): the question or topic in one line.' },
-	review: { type: 'boolean', description: 'Only on a record id: true if this is a review of the work.' },
-	retrieve_sources: commentBody.retrieve_sources,
-} };
-const Submitted = inline(components.Submitted).properties as Record<string, Json>;
-const POST_OUT = { type: 'object', required: ['id'], properties: {
-	...TOPIC_LINE, question: THREAD_POST, answers: { type: 'array', items: THREAD_POST }, ...POST_PROPERTIES,
-	status: Submitted.status, message: Submitted.message, record: Submitted.record,
-	id: TEXT('The path of what was made: the post, the new topic, or for a link the record\'s id.'),
-} };
-
-const editBody = bodyOf('editPost');
-const EDIT_IN = { type: 'object', required: ['id', 'body', 'revision'], properties: { id: PATH('The post to edit, as log and get show it.'), body: editBody.body, revision: editBody.revision } };
-const EDIT_OUT = { type: 'object', required: ['id', 'body', 'revision'], properties: { id: { type: 'string' }, body: { type: 'string' }, revision: { type: 'string' } } };
-
-const voteBody = bodyOf('vote');
-const VOTE_IN = { type: 'object', required: ['id'], properties: {
-	id: PATH('What to vote on: a record id, a forum topic (its opening post) or a forum post.'),
-	value: { type: 'integer', enum: [1, -1, 0], description: '1 (up), -1 (down), or 0 to take your vote back.' },
-	emoji: { ...voteBody.emoji, description: `Records only. ${voteBody.emoji.description}` }, note: { ...voteBody.note, description: `Records only. ${voteBody.note.description} Public and moderated.` },
-	if_absent: { ...voteBody.if_absent, description: `Records only. ${voteBody.if_absent.description}` },
-	retrieve_sources: { ...voteBody.retrieve_sources, description: `Records only. ${voteBody.retrieve_sources.description}` },
-	accept: { type: 'boolean', description: 'Only on an answer\'s path in a topic you started: true marks it accepted, or takes that back if it already is. Send it without value.' },
-} };
-const Tally = inline(components.Tally).properties as Record<string, Json>;
-const VOTE_OUT = { type: 'object', required: ['id'], properties: {
-	id: TEXT('The path voted on.'), score: Tally.score, reactions: Tally.reactions, created: Tally.created, accepted: NULLABLE_PATH('After accept: the topic\'s accepted answer, or null.'),
-} };
-
 // ---- The server ----
 
 type Result = { content: { type: 'text'; text: string }[]; structuredContent?: Record<string, unknown>; isError?: boolean; _meta?: Record<string, unknown> };
-/** Whether a tool needs a person: never, always, or only for some paths (get me). */
-type Auth = 'none' | 'required' | 'optional';
 type ToolDef = { title: string; description: string; inputSchema: z.ZodType; outputSchema: z.ZodType; annotations: typeof READ_ONLY | typeof ADDS; auth: Auth;
 	work: (db: Db, args: any, who: any) => Promise<Record<string, unknown>>; text?: (out: Record<string, any>) => string };
 
@@ -370,42 +257,20 @@ const tool = (db: () => Promise<Db>, who: Caller, t: ToolDef) => async (args: un
 	}
 };
 
-const COVERS = `Covers records indexed in ${NAME} (AI-generated research releases, Lean formalizations, and this year's arXiv preprints in math, quant-ph, and hep-th).`;
-const PUBLIC = 'Public and attributed to the signed-in person; use only when they asked for it.';
-const MODERATED = 'Text is moderated before it is published: a refusal returns the reason and a fix, and nothing is posted.';
-
-export const TOOLS: Record<string, ToolDef> = {
-	search: {
-		title: 'Search',
-		description: `${operationById('searchRecords').summary} Returns one page of records with page URL and discussed response count; pass fields=full or get a record for its full discussion[]. ${COVERS} An empty q lists records newest first; q "is:discussed" with sort=responded lists the records with the newest expert responses, each with latest_response. With in=forum it searches the research forum's topics instead, by plain words.`,
-		inputSchema: schema(SEARCH_IN), outputSchema: schema(SEARCH_OUT), annotations: READ_ONLY, auth: 'none', work: searchTool,
-	},
-	get: {
-		title: 'Get one thing by its path',
-		description: `Fetch one thing on ${NAME} by its path. A record id (arxiv/2610.20058): ${operationById('getRecord').summary} Response quote fields are short verbatim excerpts (open url for the full text); an empty discussion[] means no responses have been linked yet. forum/<number>: a forum topic with its opening post, answers and comments. A post's path (as log shows it): that post in full, with the revision edit needs. me: the signed-in account and how its votes and posts are signed (needs sign-in; everything else here does not).`,
-		inputSchema: schema({ type: 'object', required: ['id'], properties: { id: PATH('What to fetch, or me.') } }), outputSchema: schema(GET_OUT), annotations: READ_ONLY, auth: 'optional', work: getTool,
-	},
-	log: {
-		title: 'List posts',
-		description: `List the posts made on ${NAME} itself (comments and reviews on records, forum questions, answers and comments), one line each: seq, kind, path, parent, author, time, score, subject, and the text cut short. path narrows it to one record's thread, one source, the forum, or one topic. Without since, the newest first; with since, the posts after that seq, oldest first, so it can be followed. Empty when there are none. (Responses linked from elsewhere are in a record's discussion[], from get.)`,
-		inputSchema: schema(LOG_IN), outputSchema: schema(LOG_OUT), annotations: READ_ONLY, auth: 'none', work: logTool, text: logText,
-	},
-	post: {
-		title: 'Post',
-		description: `Add text to ${NAME} at a path: a comment or review on a record, a reply to a post, a new forum topic (a research question or focused discussion; search the forum first), an answer in a topic, or, at records, a link to a paper, repository or dataset to add to the index (the server fetches its metadata). It only adds; use edit to change a post. ${PUBLIC} ${MODERATED}`,
-		inputSchema: schema(POST_IN), outputSchema: schema(POST_OUT), annotations: ADDS, auth: 'required', work: postTool,
-	},
-	edit: {
-		title: 'Edit a post',
-		description: `${operationById('editPost').summary} Works for comments and reviews on records and for forum posts; take the path and revision from get. Replaces the post's text, and the earlier text is not kept. ${PUBLIC} ${MODERATED}`,
-		inputSchema: schema(EDIT_IN), outputSchema: schema(EDIT_OUT), annotations: REPLACES, auth: 'required', work: editTool,
-	},
-	vote: {
-		title: 'Vote',
-		description: `Vote on a record (+1 or -1, with an optional emoji and public note), or on a forum topic or post (+1 or -1). One vote per person on each, shared with all their agents: a new vote replaces the earlier one (on a record, if_absent keeps it instead), and value 0 takes it back. Nobody votes on their own post or repository. On an answer in a topic the person started, accept: true marks it accepted, or takes that back. ${PUBLIC}`,
-		inputSchema: schema(VOTE_IN), outputSchema: schema(VOTE_OUT), annotations: TOGGLES, auth: 'required', work: voteTool,
-	},
+/** What the server adds to an operation to make it a tool: the hints clients show, the work, and its own text if any. */
+const tools: Record<(typeof VERBS)[number], Pick<ToolDef, 'annotations' | 'work' | 'text'>> = {
+	search: { annotations: READ_ONLY, work: searchTool },
+	get: { annotations: READ_ONLY, work: getTool },
+	log: { annotations: READ_ONLY, work: logTool, text: logText },
+	post: { annotations: ADDS, work: postTool },
+	edit: { annotations: REPLACES, work: editTool },
+	vote: { annotations: TOGGLES, work: voteTool },
 };
+
+export const TOOLS: Record<string, ToolDef> = Object.fromEntries(VERBS.map((name) => {
+	const op = operationById(name);
+	return [name, { title: op.summary, description: op.description!, inputSchema: schema(inputSchema(name)), outputSchema: schema(inline(components[op.replies[200]!])), auth: op.auth, ...tools[name] }];
+}));
 
 /** How ChatGPT learns which tools need the account linked (Apps SDK: per-tool securitySchemes). Both: usable at once,
  * and linking unlocks more. */

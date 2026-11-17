@@ -5,7 +5,7 @@
 // (lib/api/usage.ts) as "<METHOD> <path template>".
 import { Ajv2020, type ErrorObject, type ValidateFunction } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
-import { ApiError, counted, handle, voter } from './caller.ts';
+import { ApiError, bearer, counted, handle, voter } from './caller.ts';
 import { endpointName, operationById, spec, type Operation, type Parameter, type Schema } from './openapi.ts';
 import { check as fits, type FromSchema, type Simplify } from './schema.ts';
 import type { Voter } from '#lib/accounts/keys.ts';
@@ -22,14 +22,15 @@ type HasValue<X> = X extends { required: true } ? true : X extends { schema: { d
 type ParamObject<X> = Simplify<{ [K in X as HasValue<K> extends true ? K extends { name: infer N extends string } ? N : never : never]: K extends { schema: infer S } ? FromSchema<S> : never }
 	& { [K in X as HasValue<K> extends true ? never : K extends { name: infer N extends string } ? N : never]?: K extends { schema: infer S } ? FromSchema<S> : never }>;
 type BodyOf<O> = O extends { requestBody: { content: { 'application/json': { schema: infer S } } } } ? FromSchema<S> : undefined;
-type VoterOf<O> = O extends { security: readonly [unknown, ...unknown[]] } ? Voter : undefined;
+// An empty requirement first ({}: lib/api/openapi.ts authOf) makes signing in optional.
+type VoterOf<O> = O extends { security: readonly [infer First, ...unknown[]] } ? ([keyof First] extends [never] ? Voter | undefined : Voter) : undefined;
 
 /** What a handler gets: the request's parameters and body, checked against the operation and typed from it. */
 type Input<I extends OperationId> = {
 	params: ParamObject<ParamsIn<Op<I>, 'path'>>;
 	query: ParamObject<ParamsIn<Op<I>, 'query'>>;
 	body: BodyOf<Op<I>>;
-	/** The caller, when the operation needs an agent key. */
+	/** The caller, when the operation needs an agent key; or when it takes one and the request carries a token. */
 	voter: VoterOf<Op<I>>;
 	req: Request;
 };
@@ -113,7 +114,9 @@ function checks(op: Operation) {
 	};
 }
 
-type Ctx = { params?: Promise<Record<string, string>> };
+// A catch-all segment ([...id]) arrives as its parts; a path id is those joined again.
+type Ctx = { params?: Promise<Record<string, string | string[]>> };
+const joined = (params: Record<string, string | string[]> = {}) => Object.fromEntries(Object.entries(params).map(([k, v]) => [k, Array.isArray(v) ? v.join('/') : v]));
 
 // Outside production, every JSON reply is checked against the schema its operation declares for that status, so the
 // code cannot stop matching the published OpenAPI document: a reply that does not fit fails (500) in development and
@@ -140,8 +143,8 @@ export function operation<I extends OperationId>(id: I, run: (input: Input<I>) =
 			body = await req.json().catch(() => undefined);
 			if (body === null || typeof body !== 'object') throw badBody();
 		}
-		const who = op.secured ? await voter(req, String((body as { agent?: unknown } | undefined)?.agent ?? '')) : undefined;
-		const params = check(c.path, { ...(await ctx?.params) }, 'path');
+		const who = op.auth === 'required' || (op.auth === 'optional' && bearer(req)) ? await voter(req, String((body as { agent?: unknown } | undefined)?.agent ?? '')) : undefined;
+		const params = check(c.path, joined(await ctx?.params), 'path');
 		const url = new URL(req.url).searchParams;
 		const query = check(c.query, Object.fromEntries(c.names.filter((n) => url.has(n)).map((n) => [n, url.get(n)])), 'query');
 		check(c.body, body, 'body');

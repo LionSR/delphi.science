@@ -278,32 +278,31 @@ describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' },
 		const call = async (name: string, args: object) => rpc('tools/call', { name, arguments: args });
 		await rpc('initialize', { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'test', version: '0' } });
 		const tools = (await rpc('tools/list')).tools as { name: string; annotations: object; outputSchema?: object }[];
-		assert.deepEqual(tools.map((t) => t.name), ['search_records', 'get_record', 'list_discussed_records']);
-		for (const t of tools) {
-			assert.deepEqual(t.annotations, { readOnlyHint: true, destructiveHint: false, openWorldHint: false, idempotentHint: true });
-			assert.ok(t.outputSchema, t.name);
-		}
+		// What each tool may do, and who may call it, is in lib/api/mcp-auth.test.ts.
+		assert.deepEqual(tools.map((t) => t.name), ['search', 'get', 'log', 'post', 'edit', 'vote']);
+		for (const t of tools) assert.ok(t.outputSchema, t.name);
 
 		const total = async (q: string) => (await search(db, q, { limit: 1 })).total; // earlier tests link posts to some records
-		const found = (await call('search_records', { q: 'is:discussed', sort: 'score', limit: 2 })).structuredContent;
+		const found = (await call('search', { q: 'is:discussed', sort: 'score', limit: 2 })).structuredContent;
 		assert.equal(found.total, await total('is:discussed'));
 		assert.ok(found.results.every((r: Record<string, unknown>) => r.page && !r.links && r.discussed));
 		assert.ok(!('took_ms' in found));
 
 		const it = items.find((x) => x.source === 'openai-math' && Array.isArray(x.discussion) && x.discussion.length > 2)!;
-		const rec = (await call('get_record', { id: it.id })).structuredContent;
+		const rec = (await call('get', { id: it.id })).structuredContent;
 		assert.equal(rec.discussion.length, (it.discussion as unknown[]).length);
 		assert.ok(rec.discussion.every((l: Record<string, unknown>) => l.url && l.quote && !('added' in l) && !('kind' in l)));
 		assert.ok(Array.isArray(rec.discusses));
 
-		const list = (await call('list_discussed_records', { limit: 3 })).structuredContent;
+		// The records with the newest responses: a search like any other, sorted by response, each with that response.
+		const list = (await call('search', { q: 'is:discussed', sort: 'responded', limit: 3 })).structuredContent;
 		assert.equal(list.total, await total('is:discussed'));
 		assert.ok(list.results.every((r: Record<string, unknown>) => r.latest_response));
-		assert.equal((await call('list_discussed_records', { query: 'source:openai-math', limit: 1 })).structuredContent.total,
+		assert.equal((await call('search', { q: 'is:discussed source:openai-math', sort: 'responded', limit: 1 })).structuredContent.total,
 			await total('is:discussed source:openai-math'));
 
-		for (const [name, args, text] of [['get_record', { id: 'nope/x' }, /no record/], ['search_records', { q: 'foo:bar' }, /Use one of/],
-			['list_discussed_records', { query: 'a) OR (b' }, /Balance/], ['search_records', { limit: 0 }, /limit/]] as const) {
+		for (const [name, args, text] of [['get', { id: 'nope/x' }, /no record/], ['search', { q: 'foo:bar' }, /Use one of/],
+			['search', { q: 'a) OR (b', sort: 'responded' }, /Balance/], ['search', { limit: 0 }, /limit/]] as const) {
 			const r = await call(name, args);
 			assert.ok(r.isError && text.test(r.content[0].text), name);
 		}

@@ -39,7 +39,7 @@ export const spec = {
 		title: NAME,
 		version: '1.0.0',
 		contact: { name: 'Support', url: `${SITE}/support`, email: SUPPORT_EMAIL },
-		description: `Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Research read endpoints require no authentication; usage statistics require administrator access. Also available as an MCP server at ${SITE}/mcp (Streamable HTTP, no key). Guide: ${SITE}/llms.txt`,
+		description: `Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Research read endpoints require no authentication; usage statistics require administrator access. Also available as an MCP server at ${SITE}/mcp, with the same reads and writes as tools (reading needs no key; clients can sign a person in by OAuth). Guide: ${SITE}/llms.txt`,
 	},
 	servers: [{ url: SITE }],
 	paths: {

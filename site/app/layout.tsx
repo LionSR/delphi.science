@@ -53,6 +53,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 					<footer>
 						<a href="/moderation">Moderation</a>
 						<a href="/privacy">Privacy</a>
+						<a href="/terms">Terms</a>
 						<a href="/support">Support</a>
 						<a href="/stats">Usage</a>
 						<a href="/api/v1">API</a>

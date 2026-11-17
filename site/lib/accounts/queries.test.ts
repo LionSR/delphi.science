@@ -47,12 +47,12 @@ const html = (el: Parameters<typeof renderToStaticMarkup>[0]) => renderToStaticM
 const text = (markup: string) => markup.replace(/<[^>]+>/g, ' ').replace(/&#x27;/g, '\'').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 const rejects = async (run: () => Promise<unknown>) => { try { await run(); } catch (e) { return e as QueriesError; } throw new Error('it did not refuse'); };
 
-/** Runs `run` with the MCP server's switches set as given, and puts them back. */
-async function withMcp<T>(on: { queries?: boolean; spaces?: boolean }, run: () => Promise<T>): Promise<T> {
-	const names = { ORI_MCP_QUERIES: on.queries, ORI_MCP_SPACES: on.spaces };
-	const prior = Object.fromEntries(Object.keys(names).map((n) => [n, process.env[n]]));
-	for (const [n, v] of Object.entries(names)) { if (v) process.env[n] = 'true'; else delete process.env[n]; }
-	try { return await run(); } finally { for (const [n, v] of Object.entries(prior)) { if (v === undefined) delete process.env[n]; else process.env[n] = v; } }
+/** Runs `run` with the MCP server open to spaces and me/queries (ORI_MCP_SPACES), or closed to both as it is by
+ * default, and puts the switch back. */
+async function withMcp<T>(open: boolean, run: () => Promise<T>): Promise<T> {
+	const prior = process.env.ORI_MCP_SPACES;
+	if (open) process.env.ORI_MCP_SPACES = 'true'; else delete process.env.ORI_MCP_SPACES;
+	try { return await run(); } finally { if (prior === undefined) delete process.env.ORI_MCP_SPACES; else process.env.ORI_MCP_SPACES = prior; }
 }
 
 const mcpAsSet = async (db: PGlite, key: string | undefined, name: string, args: object) => {
@@ -61,8 +61,8 @@ const mcpAsSet = async (db: PGlite, key: string | undefined, name: string, args:
 	return (await (await handle(req, async () => db)).json()).result as { isError?: boolean; structuredContent?: Record<string, any>; content: { text: string }[]; _meta?: object };
 };
 
-/** One MCP tool call with the server open to me/queries (ORI_MCP_QUERIES), and closed to spaces as it is by default. */
-const mcp = (db: PGlite, key: string | undefined, name: string, args: object) => withMcp({ queries: true }, () => mcpAsSet(db, key, name, args));
+/** One MCP tool call with the server open to me/queries, as it is after the release that opens spaces to it. */
+const mcp = (db: PGlite, key: string | undefined, name: string, args: object) => withMcp(true, () => mcpAsSet(db, key, name, args));
 
 describe('the table', () => {
 	test('is private: row level security with no policy, and no grant to the public or to the Data API roles', async () => {
@@ -455,22 +455,23 @@ describe('the read position', () => {
 });
 
 describe('the MCP server and me/queries', () => {
-	test('while its switch is off, no verb finds me/queries over MCP and nothing is stored; REST is not affected', async () => {
+	test('while MCP is closed to spaces it is closed to me/queries: no verb finds it, nothing is stored, get me is as it was; REST is not affected', async () => {
 		const { db } = await site();
 		const key = await createAgentKey(db, 'Ada', 'Claude Code');
 		await replaceQueries(db, ada, 'cat:quant-ph');
-		await withMcp({}, async () => {
+		await withMcp(false, async () => {
 			for (const [name, args] of [['get', { id: 'me/queries' }], ['log', { path: 'me/queries' }], ['post', { id: 'me/queries', body: 'cat:math' }], ['edit', { id: 'me/queries', body: 'cat:math', revision: '1' }]] as const) {
 				const r = await mcpAsSet(db, key, name, args);
 				assert.ok(r.isError, name);
 				assert.match(r.content[0].text, /^no me\/queries\. A path: /, name);
 			}
-			// get me is as it was, and the server's instructions do not mention a path it does not serve.
-			assert.equal((await mcpAsSet(db, key, 'get', { id: 'me' })).structuredContent!.login, 'Ada');
+			// The ordinary not-found, with nothing about saved queries in it; and get me is the account, as it was.
+			assert.doesNotMatch((await mcpAsSet(db, key, 'get', { id: 'me/queries' })).content[0].text, /saved|quer(y|ies)\b(?!\.)/i);
+			assert.deepEqual(Object.keys((await mcpAsSet(db, key, 'get', { id: 'me' })).structuredContent!).sort(), ['agent', 'attribution', 'id', 'login', 'profile']);
 		});
 		assert.deepEqual(await savedQueries(db, 'ada').then((q) => [q.text, q.revision]), ['cat:quant-ph', '1']);
 		// The same functions through the REST door, which the command line and the site use, with the switch still off.
-		await withMcp({}, async () => {
+		await withMcp(false, async () => {
 			assert.deepEqual(seqs((await logTool(db, { path: 'me/queries' }, ada, 'rest')).entries), [5, 4, 1]);
 		});
 		const initialize = async () => {
@@ -478,8 +479,8 @@ describe('the MCP server and me/queries', () => {
 				headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' } });
 			return String((await (await handle(req, async () => db)).json()).result.instructions);
 		};
-		assert.doesNotMatch(await withMcp({}, initialize), /me\/queries/);
-		assert.match(await withMcp({ queries: true }, initialize), /me\/queries is the signed-in person's saved queries, private to their account and not moderated/);
+		assert.doesNotMatch(await withMcp(false, initialize), /me\/queries/);
+		assert.match(await withMcp(true, initialize), /me\/queries is the signed-in person's saved queries, private to their account and not moderated/);
 		await db.close();
 	});
 });
@@ -532,22 +533,24 @@ describe('My feed and private spaces', () => {
 		await db.close();
 	});
 
-	test('through MCP the feed holds nothing private while spaces are closed to it, and a member\'s posts once they are open', async () => {
+	test('through MCP nothing private is reached while it is closed: no me/queries, and log with the same queries is public only; open, the feed is the member\'s', async () => {
 		const { db, space } = await withSpace();
 		const key = await createAgentKey(db, 'Ada', 'Claude Code');
 		const publicOnly = paths((await myFeed(db, eve)).entries);
-		// Closed (the default), with me/queries served: the public entries of the same queries, and no trace of the space.
-		const closed = await withMcp({ queries: true }, () => mcpAsSet(db, key, 'log', { path: 'me/queries' }));
+		const queries = joined(['kind:question', 'by:@bob']);
+		// Closed (the default): there is no feed path at all, and the stateless way to the same feed, log with the queries
+		// as q, holds the public entries and no trace of the space, however it is asked.
+		assert.ok((await withMcp(false, () => mcpAsSet(db, key, 'log', { path: 'me/queries' }))).isError);
+		const closed = await withMcp(false, () => mcpAsSet(db, key, 'log', { q: queries }));
 		assert.deepEqual(paths(closed.structuredContent!.entries), publicOnly);
-		assert.ok(!JSON.stringify(closed).includes(SECRET) && !JSON.stringify(closed).includes(`ws/${space}`));
-		for (const args of [{ path: 'me/queries', since: 0 }, { path: 'me/queries', q: 'sharper OR constant' }, { path: 'me/queries', q: 'by:@me OR kind:question' }]) {
-			const r = await withMcp({ queries: true }, () => mcpAsSet(db, key, 'log', args));
+		for (const args of [{ q: queries }, { q: queries, since: 0 }, { q: 'sharper OR constant' }, { q: 'by:@me OR kind:question' }, { path: 'me/queries', q: 'sharper' }]) {
+			const r = await withMcp(false, () => mcpAsSet(db, key, 'log', args));
 			assert.ok(!JSON.stringify(r).includes(SECRET) && !JSON.stringify(r).includes('ws/'), JSON.stringify(args));
 		}
 		// Open: the member's feed as REST gives it.
-		const opened = await withMcp({ queries: true, spaces: true }, () => mcpAsSet(db, key, 'log', { path: 'me/queries' }));
+		const opened = await withMcp(true, () => mcpAsSet(db, key, 'log', { path: 'me/queries' }));
 		assert.deepEqual(paths(opened.structuredContent!.entries), paths((await myFeed(db, ada)).entries));
-		assert.ok(JSON.stringify(opened).includes(SECRET));
+		assert.ok(JSON.stringify(opened).includes(SECRET) && JSON.stringify(opened).includes(`ws/${space}`));
 		await db.close();
 	});
 

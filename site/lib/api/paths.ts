@@ -29,7 +29,7 @@ const isRecord = async (db: Db, id: string) => (await db.query('SELECT 1 FROM op
 /** What a path names, for `who`. Throws NotFoundError for a path that names nothing here, and the same for a space
  * `who` cannot read, or anything in it. With `spaces` false no ws path names anything, for anyone: that is how the
  * MCP server reads paths while spaces are closed to it (lib/posts/spaces.ts spacesOverMcp). With `queries` false
- * me/queries names nothing either, in the same way and for the same reason (lib/accounts/queries.ts queriesOverMcp). */
+ * me/queries names nothing either, in the same way: the MCP server passes the same switch for both. */
 export async function resolve(db: Db, given: unknown, who: Reader, { spaces = true, queries = true } = {}): Promise<Target> {
 	const path = typeof given === 'string' ? given.trim().replace(/^\/+|\/+$/g, '') : '';
 	if (!path) return { kind: 'all' };

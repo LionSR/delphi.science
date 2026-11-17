@@ -20,7 +20,7 @@ import { log, logEntry, NeedsReader, type LogEntry, type Scope } from '#lib/post
 import { unvote, vote } from '#lib/records/votes.ts';
 import { submit } from '#lib/records/submit.ts';
 import { PATH_HELP, resolve, SPACE_HELP } from './paths.ts';
-import { addQueries, QUERIES_PATH, queriesOverMcp, queryLines, replaceQueries, savedQueries } from '#lib/accounts/queries.ts';
+import { addQueries, QUERIES_PATH, queryLines, replaceQueries, savedQueries } from '#lib/accounts/queries.ts';
 
 // ---- Records as the tools show them ----
 
@@ -59,8 +59,10 @@ const signedIn = (who: Caller): Voter => who ?? (() => { throw new SignIn(); })(
  * no ws path and reads public things only, whoever they are. */
 export type Door = 'rest' | 'mcp';
 const open = (door: Door) => door === 'rest' || spacesOverMcp();
-/** How a path is read through this door. The saved queries (me/queries) have their own switch for MCP, of the same kind. */
-const at = (door: Door) => ({ spaces: open(door), queries: door === 'rest' || queriesOverMcp() });
+/** How a path is read through this door. The saved queries (me/queries) are closed to MCP with spaces, by the same
+ * switch: the reviewed descriptions of post and edit say public and moderated, and of get and log name neither path,
+ * so both open in the one release that rewords them. */
+const at = (door: Door) => ({ spaces: open(door), queries: open(door) });
 /** Who reads through this door: the caller, or nobody while spaces are closed to it. */
 const sees = (who: Caller, door: Door) => (open(door) ? reader(who) : null);
 

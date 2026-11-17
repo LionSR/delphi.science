@@ -13,11 +13,6 @@ import type { Voter } from './keys.ts';
 export const QUERIES_PATH = 'me/queries';
 /** The file the command line keeps them in. */
 export const QUERIES_FILE = '~/.delphi/queries';
-/** Whether the MCP server (/mcp) reaches me/queries. Off unless ORI_MCP_QUERIES is "true": the descriptions of the
- * tools, which the plugin directories reviewed, say that post and edit publish moderated text, and at me/queries
- * they store private text that no model reads. Until that is disclosed there and signed off, an MCP caller finds no
- * me/queries at all, for any verb. The REST API, the command line and the website are not affected. */
-export const queriesOverMcp = (env: Record<string, string | undefined> = process.env) => env.ORI_MCP_QUERIES === 'true';
 /** The most text that is stored, comments included. */
 export const MAX_QUERIES_TEXT = 4000;
 /** The longest q that log takes (lib/api/openapi.ts): the queries, joined as `delphi log -f` joins them, must fit it,

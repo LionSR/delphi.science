@@ -63,13 +63,19 @@ with `site/lib/api/tools-list.json`, taken from the branch this one starts from)
 
 All of them need sign-in there, as `get me` does. The replies use only fields the verbs' schemas already had.
 
-**Over MCP this is switched off by default.** `queriesOverMcp()` (`lib/accounts/queries.ts`, environment variable
-`ORI_MCP_QUERIES=true`) decides whether the MCP server serves `me/queries`. While it is off an MCP caller finds no
-such path, for any of the four verbs, and the server's instructions do not mention it; nothing is stored through
-MCP. The REST API, the command line and the website are not affected. The reason is the first point below: the
-plugin directories reviewed tool descriptions that say `post` and `edit` publish moderated text, so storing private
-text through those tools is behaviour to disclose and have signed off before it is live. It is the same kind of
-switch as `spacesOverMcp()` for private spaces, and independent of it.
+**Over MCP this is closed in the reviewed version, for reading and for writing.** It opens with private spaces,
+by the same switch: `spacesOverMcp()` (`lib/posts/spaces.ts`, environment variable `ORI_MCP_SPACES=true`, off by
+default). While it is off an MCP caller finds no `me/queries`, for any of the four verbs: the answer is the ordinary
+not-found, the server's instructions do not mention the path, `get me` is the account as before, and nothing is
+stored through MCP. The REST API, the command line and the website are not affected, and an MCP client still gets a
+feed for any query statelessly, with `log` and `q`.
+
+The reason is the plugin directories' review of the tool descriptions. `post` and `edit` are described as publishing
+moderated text, and a client builds its confirmation prompt from that, so storing a private setting through them
+would ask the person to approve the wrong thing. `get` and `log` list the paths they take, and `me/queries` is not
+among them, so reading it would be undisclosed too. Both features become accurate under one rewording ("public, or
+private to you or to a space's members, and not moderated", with the new paths in each id's help), so they flip in
+one release and one re-review; that is why there is one switch and not two.
 
 Two things about the fit are not perfect, and are stated here and in `/llms.txt` instead of in the tool
 descriptions, which cannot change:
@@ -181,8 +187,8 @@ log's one rule and by the door the request came through, not by anything in the 
 | --- | --- |
 | The website (`/?feed=mine`) | public entries, and the posts of their spaces; a private entry links to `/ws/<slug>/<topic>#p<post>` |
 | REST and the command line (`log me/queries`, `log -f`) | the same |
-| MCP, spaces closed (`ORI_MCP_SPACES` unset, the default) | public entries only: the log is read as nobody, while `@me` still names the caller |
-| MCP, spaces open | the same as REST |
+| MCP, closed (`ORI_MCP_SPACES` unset, the default) | no `me/queries`; `log` with the queries as `q` gives public entries only (read as nobody, while `@me` still names the caller) |
+| MCP, open | `log me/queries`, the same as REST |
 | Atom (`/log.atom`) | public entries only, always, whatever token came with the request; `me/queries` has no Atom form |
 
 Somebody who is not a member, with the same saved queries, gets the public entries and nothing else. The unread

@@ -88,6 +88,7 @@ const LOGOUT = () => `delphi logout\n\n${wrap(`${OPS.revokeAgentKey.summary}`, 0
 const overview = () => `delphi <command> [arguments]    ${api.info.title}, ${SERVER}
 
 Everything has a path: ${fields(OPS.get)[0].description.replace(/^.*?A path: /, '')}
+Private spaces, signed in: ws (yours), ws/<slug>, a topic ws/<slug>/12, a post ws/<slug>/12/502, ws/<slug>/members.
 
 ${table([...VERBS.map((v) => [v, OPS[v].summary + (signsIn(OPS[v]) && !optionalSignIn(OPS[v]) ? ' (needs sign-in)' : '')]),
 		['login', 'Sign in: show the person a code to approve, and save the key.'], ['logout', 'Revoke the saved key and delete it.']])}

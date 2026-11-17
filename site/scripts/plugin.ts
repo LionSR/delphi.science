@@ -8,7 +8,8 @@
 // with an MCP server is submitted in the portal as "With MCP", by the server's URL, and the manifest's interface
 // fields are what to enter there. So the checks below apply the portal's final-submission limits
 // (developers.openai.com/plugins/deploy/submission-errors), as far as they can be checked locally.
-// {{SITE}} in the JSON files becomes SITE (lib/view.ts).
+// The JSON files name https://delphi.science, so the folder installs as it is from the repo marketplace
+// (.agents/plugins/marketplace.json); with SITE_URL set, the packaged copies name that site instead (lib/view.ts).
 //
 // It also writes dist/chatgpt-app-submission.json, the import file the portal's submission form takes: the listing,
 // each tool's hints as the server declares them (lib/api/mcp.ts) with a justification for each, and the reviewer test
@@ -30,7 +31,7 @@ const src = path('../plugin/'), out = path('../../dist/plugin/'), zip = path('..
 rmSync(out, { recursive: true, force: true });
 for (const f of FILES) {
 	mkdirSync(dirname(out + f), { recursive: true });
-	if (f.endsWith('.json')) writeFileSync(out + f, readFileSync(src + f, 'utf8').replaceAll('{{SITE}}', SITE));
+	if (f.endsWith('.json')) writeFileSync(out + f, readFileSync(src + f, 'utf8').replaceAll('https://delphi.science', SITE));
 	else copyFileSync(src + f, out + f);
 }
 

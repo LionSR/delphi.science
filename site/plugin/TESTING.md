@@ -91,6 +91,52 @@ Called without sign-in, a tool that needs it returns an error result with `_meta
 - Invalid query syntax returns a structured tool error explaining the valid fields and operators.
 - Tool results contain public site content and, for write tools, the connected account's own GitHub username. They contain no tokens, session identifiers or internal account IDs.
 
+## Testing with Codex
+
+Codex signs in to an MCP server itself (`codex mcp login`, or **Authenticate** under `/mcp` in the app): it reads the discovery documents above, registers by Dynamic Client Registration as "Codex", opens the browser at `/oauth/authorize`, and listens on `http://127.0.0.1:<port>/callback`. No key is copied anywhere.
+
+### Before deployment: against a local server
+
+From the repository root (the index build needs network access to the sources):
+
+```bash
+pip install -r requirements.txt && (cd site && npm ci)
+node --experimental-strip-types site/scripts/db.ts --entries fixtures/entries.jsonl > db.url &
+sleep 5 && SUPABASE_DB_URL="$(head -1 db.url)" python3 index.py build      # writes dist/index.json
+cd site && SITE_URL=http://localhost:3000 npm run dev                       # leave running
+```
+
+In another terminal:
+
+```bash
+codex mcp add delphi-local --url http://localhost:3000/mcp
+codex mcp login delphi-local
+```
+
+The browser opens "Connect an app" naming **Codex**. Choose **Sign in with GitHub** (the local server signs you in as `@local-dev` without contacting GitHub), check that the page says what Codex may do and that it returns to `127.0.0.1`, then **Approve**. Codex reports the login succeeded. Then, in `codex`:
+
+1. "Use delphi-local to search for records about matrix multiplication and show the first one." Expect `search_records`, then `get_record`; no sign-in involved.
+2. "Which account am I signed in as on delphi-local?" Expect `whoami`: login `local-dev`, attribution `Codex · @local-dev’s team`.
+3. "Upvote that record." Expect `vote_on_record` (Codex asks first; the tool is not read-only). Open `http://localhost:3000/r/<id>`: the vote shows as `Codex · @local-dev’s team`.
+4. "Post a comment on it: <a specific technical remark>." Expect `post_comment` to be refused with `moderation_unavailable` and nothing posted, since a local server has no moderation provider. With `DEEPSEEK_API_KEY` set it is accepted or returned with a reason.
+5. "Remove my vote." Expect `remove_record_vote`; the record page no longer shows it.
+6. Open `http://localhost:3000/keys`: **Codex** is listed. **Revoke** it, then ask Codex for `whoami` again: the server answers 401 and Codex asks you to log in again. Reading (step 1) still works after `codex mcp logout delphi-local`.
+7. Run `codex mcp login delphi-local` again and choose **Deny**: Codex reports that access was denied, and `/keys` lists no new connection.
+
+To try the reviewers' password sign-in locally, start the server with `REVIEW_ACCOUNT_LOGIN=demo_reviewer REVIEW_ACCOUNT_PASSWORD=<20+ characters>`; the approval page then also offers **Sign in with the demo account**.
+
+`node scripts/mcp-e2e.mjs` (see its header) runs the same flow unattended with the MCP SDK client and a headless browser.
+
+### After deployment: the plugin itself
+
+The repository is a plugin marketplace (`.agents/plugins/marketplace.json` points at `site/plugin/`, whose `.mcp.json` names `https://delphi.science/mcp`):
+
+```bash
+codex plugin marketplace add LionSR/open-research-index
+```
+
+Restart the ChatGPT desktop app, open the Plugins Directory, choose the **Delphi.science** marketplace and install the plugin. Sign-in is asked for on first use of a tool that needs it, not at install. Run the positive test cases above in Codex; with a GitHub account, or with the demo account once it is configured on the live site.
+
 ## CLI verification
 
 ```bash

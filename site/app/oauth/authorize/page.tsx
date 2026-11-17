@@ -1,7 +1,6 @@
 // /oauth/authorize: the OAuth approval page for the MCP server's sign-in (lib/accounts/oauth.ts). An app such as the
 // ChatGPT plugin sends its person here; they sign in with GitHub and approve or deny, and go back to the app.
-import { db } from '#lib/db.ts';
-import { authorization, AUTHORIZE_PARAMS, type AuthorizeParams } from '#lib/accounts/oauth.ts';
+import { authorizeRequest } from '#lib/accounts/oauth.ts';
 import { me } from '#lib/accounts/session.ts';
 import { reviewLogin } from '#lib/accounts/review.ts';
 import { approveApp, denyApp } from '#app/actions.ts';
@@ -12,9 +11,7 @@ export const metadata = { title: `Connect an app · ${NAME}`, robots: { index: f
 
 export default async function Authorize({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
 	const query = await searchParams;
-	const params: AuthorizeParams = {};
-	for (const k of AUTHORIZE_PARAMS) if (typeof query[k] === 'string') params[k] = query[k];
-	const request = await authorization(await db(), params);
+	const { params, page, request } = authorizeRequest((k) => query[k]);
 	// Not redirected unasked: anyone can register a client, so that would make this page an open redirector.
 	if ('refuse' in request) {
 		const to = new URL(request.refuse);
@@ -31,7 +28,7 @@ export default async function Authorize({ searchParams }: { searchParams: Promis
 	const who = await me();
 	if (!who) {
 		// Said before anyone is sent to GitHub: which app is asking, and for what.
-		const back = encodeURIComponent(`/oauth/authorize?${new URLSearchParams(params as Record<string, string>)}`);
+		const back = encodeURIComponent(page);
 		return (
 			<article>
 				<h1>Connect an app</h1>

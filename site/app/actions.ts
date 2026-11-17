@@ -5,7 +5,7 @@ import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { db } from '#lib/db.ts';
 import { approveDevice, denyDevice } from '#lib/accounts/device.ts';
-import { authorization, AUTHORIZE_PARAMS, issueCode, redirectBack, type AuthorizeParams } from '#lib/accounts/oauth.ts';
+import { authorizeRequest, issueCode, redirectBack } from '#lib/accounts/oauth.ts';
 import { editPost } from '#lib/posts/edit.ts';
 import { accept, votePost } from '#lib/posts/forum.ts';
 import { editPublicName } from '#lib/accounts/people.ts';
@@ -136,10 +136,7 @@ export async function reviewSignIn(form: FormData) {
 
 // The authorization request an approval form carries, checked again: the form's fields are not trusted.
 async function appRequest(form: FormData) {
-	const params: AuthorizeParams = {};
-	for (const k of AUTHORIZE_PARAMS) if (typeof form.get(k) === 'string') params[k] = form.get(k) as string;
-	const back = `/oauth/authorize?${new URLSearchParams(params as Record<string, string>)}`;
-	const request = await authorization(await db(), params);
+	const { page: back, request } = authorizeRequest((k) => form.get(k));
 	if ('refuse' in request) redirect(request.refuse);
 	if ('show' in request) redirect(back);
 	return { request, back };

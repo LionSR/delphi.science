@@ -1,5 +1,6 @@
 // A person's public activity, for /u/<login>: posts by type, MathOverflow-style, and record votes (already public on
 // each record). Forum post votes stay private. Reads only rows that are already public.
+import { reviewLogin } from './review.ts';
 import { CodedError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
 import { pageInfo, pageSize, pageStart, type PageRequest } from '#lib/paging.ts';
@@ -40,7 +41,10 @@ export class ProfileUnavailable extends CodedError {}
 const unavailable = () => new ProfileUnavailable(503, 'unavailable', 'Public activity is temporarily unavailable.', 'Try this public activity page again later.');
 
 export function normalizeProfileLogin(value: unknown): string {
-	if (typeof value !== 'string' || !/^[a-z\d](?:[a-z\d-]{0,37}[a-z\d])?$/i.test(value) || value.includes('--')) throw badLogin();
+	if (typeof value !== 'string') throw badLogin();
+	// The plugin reviewers' demo account has a login no GitHub account can have (lib/accounts/review.ts), and a profile like anyone's.
+	if (value.toLowerCase() === reviewLogin()) return value.toLowerCase();
+	if (!/^[a-z\d](?:[a-z\d-]{0,37}[a-z\d])?$/i.test(value) || value.includes('--')) throw badLogin();
 	return value.toLowerCase();
 }
 

@@ -41,44 +41,51 @@ const problems = (schema: Json, data: unknown) => {
 };
 
 describe('the MCP tools follow the OpenAPI document', () => {
-	test('search_records takes searchRecords\' query parameters, but format', async () => {
-		const { search_records: t } = await listTools();
+	test('search takes searchRecords\' query parameters, but format, and says which apply to records only', async () => {
+		const { search: t } = await listTools();
 		const params = operationById('searchRecords').parameters.filter((p) => p.name !== 'format');
-		assert.deepEqual(Object.keys(t.inputSchema.properties).sort(), params.map((p) => p.name).sort());
-		// The same type, enum, limits, default and description, length caps included.
-		for (const p of params) assert.deepEqual(t.inputSchema.properties[p.name], param(p), p.name);
+		assert.deepEqual(Object.keys(t.inputSchema.properties).sort(), [...params.map((p) => p.name), 'in'].sort());
+		for (const p of params) {
+			// The same type, enum, limits and default, length caps included; the description is the document's, with a prefix where it needs one.
+			assert.deepEqual(without(t.inputSchema.properties[p.name], 'description'), without(param(p), 'description'), p.name);
+			assert.ok(t.inputSchema.properties[p.name].description.includes(p.description), p.name);
+		}
+		for (const name of ['sort', 'fields']) assert.ok(t.inputSchema.properties[name].description.startsWith('Records only. '), name);
+		assert.deepEqual(t.inputSchema.properties.in.enum, ['records', 'forum']);
 		assert.ok(t.description.startsWith(operationById('searchRecords').summary));
 	});
 
-	test('list_discussed_records takes the same, with its query in q\'s syntax and no q or sort', async () => {
-		const { search_records: s, list_discussed_records: t } = await listTools();
-		assert.deepEqual(without(t.inputSchema.properties, 'query'), without(s.inputSchema.properties, 'q', 'sort'));
-		assert.deepEqual(without(t.inputSchema.properties.query, 'description'), without(s.inputSchema.properties.q, 'description'));
-		assert.ok(t.inputSchema.properties.query.description.endsWith(s.inputSchema.properties.q.description));
-	});
-
-	test('get_record takes getRecord\'s path parameters as one id', async () => {
-		const { get_record: t } = await listTools();
-		assert.deepEqual(t.inputSchema.required, ['id']);
-		for (const p of operationById('getRecord').parameters) assert.ok(t.inputSchema.properties.id.description.includes(p.description), p.name);
-		assert.ok(t.description.startsWith(operationById('getRecord').summary));
+	test('get, post, edit and vote take a path as id; edit and vote keep the REST bodies\' fields', async () => {
+		const tools = await listTools();
+		for (const name of ['get', 'post', 'edit', 'vote']) {
+			assert.ok(tools[name].inputSchema.required.includes('id'), name);
+			assert.deepEqual([tools[name].inputSchema.properties.id.type, tools[name].inputSchema.properties.id.maxLength], ['string', 320], name);
+		}
+		assert.ok(tools.get.description.includes(operationById('getRecord').summary));
+		const body = (id: string) => operationById(id).body!.properties as Json;
+		assert.deepEqual(without(tools.edit.inputSchema.properties, 'id'), body('editPost'));
+		for (const k of ['emoji', 'note', 'if_absent', 'retrieve_sources']) assert.deepEqual(without(tools.vote.inputSchema.properties[k], 'description'), without(body('vote')[k], 'description'), k);
+		assert.equal(tools.post.inputSchema.properties.body.maxLength, body('postComment').body.maxLength);
+		assert.deepEqual(without(tools.post.inputSchema.properties.title, 'description'), without(body('askQuestion').title, 'description'));
 	});
 
 	test('outputs are Record and SearchResult, with page for links and responses shown as quotes', async () => {
-		const { search_records: s, get_record: g, list_discussed_records: l } = await listTools();
+		const { search: s, get: g } = await listTools();
 		const record = inline(components.Record);
 		const link = inline(components.Link).properties;
-		// Every field of Record as the document states it, except links (replaced by page) and discussion (below).
-		assert.deepEqual(without(g.outputSchema.properties, 'page', 'discussion'), without(record.properties, 'links', 'discussion'));
-		assert.deepEqual(g.outputSchema.required, [...record.required, 'page', 'discussion', 'discusses']);
+		// Every field of Record as the document states it, except links (replaced by page), discussion (below) and id (a path).
+		for (const [k, v] of Object.entries(without(record.properties, 'links', 'discussion', 'id'))) assert.deepEqual(g.outputSchema.properties[k], v, k);
+		assert.deepEqual(g.outputSchema.required, ['id']);
 		const shown = g.outputSchema.properties.discussion.items.properties;
 		assert.deepEqual({ quote: shown.quote, date: shown.date, url: shown.url }, { quote: link.text, date: link.date, url: link.url });
-		// SearchResult as the document states it, except took_ms; its results are records as get_record shows them.
-		const result = inline(components.SearchResult).properties;
-		assert.deepEqual(without(s.outputSchema.properties, 'results'), without(result, 'results', 'took_ms'));
-		assert.deepEqual(s.outputSchema.properties.results.items, { ...without(g.outputSchema, '$schema'), required: record.required });
-		assert.deepEqual(without(l.outputSchema.properties, 'results'), without(result, 'results', 'took_ms', 'sort'));
-		assert.deepEqual(without(l.outputSchema.properties.results.items.properties, 'latest_response'), g.outputSchema.properties);
+		// SearchResult as the document states it, except took_ms; its results are records as get shows them, or topics.
+		const result = inline(components.SearchResult);
+		assert.deepEqual(without(s.outputSchema.properties, 'results'), without(result.properties, 'results', 'took_ms'));
+		assert.deepEqual(s.outputSchema.required, result.required);
+		const item = s.outputSchema.properties.results.items.properties;
+		for (const [k, v] of Object.entries(without(record.properties, 'links', 'discussion'))) assert.deepEqual(item[k], v, k);
+		assert.deepEqual(item.discussion, g.outputSchema.properties.discussion);
+		for (const k of ['answers', 'accepted', 'last_at', 'latest_response']) assert.ok(item[k], k);
 	});
 });
 
@@ -100,35 +107,34 @@ describe('what the tools return fits their output schemas, closed', { skip: !exi
 		return r.structuredContent;
 	};
 
-	test('get_record: a real record fits, and a field the schema leaves out does not', async () => {
-		const rec = await call('get_record', { id: discussed });
+	test('get: a real record fits, and a field the schema leaves out does not', async () => {
+		const rec = await call('get', { id: discussed });
 		assert.ok(rec.discussion.length > 2);
-		assert.deepEqual(problems(tools.get_record.outputSchema, rec), []);
-		assert.deepEqual(problems(tools.get_record.outputSchema, { ...rec, secret: 1 }), ['(body) serves secret, which is not documented']);
-		assert.deepEqual(problems(tools.get_record.outputSchema, { ...rec, discussion: [{ ...rec.discussion[0], kind: 'web' }] }),
+		assert.deepEqual(problems(tools.get.outputSchema, rec), []);
+		assert.deepEqual(problems(tools.get.outputSchema, { ...rec, secret: 1 }), ['(body) serves secret, which is not documented']);
+		assert.deepEqual(problems(tools.get.outputSchema, { ...rec, discussion: [{ ...rec.discussion[0], kind: 'web' }] }),
 			['/discussion[] serves kind, which is not documented']);
 	});
 
-	test('search_records and list_discussed_records, compact and full', async () => {
-		for (const args of [{ q: 'is:discussed', limit: 5 }, { q: `id:${JSON.stringify(discussed)}`, fields: 'full' }, { limit: 3, sort: 'responded' }]) {
-			assert.deepEqual(problems(tools.search_records.outputSchema, await call('search_records', args)), [], JSON.stringify(args));
+	test('search: records compact and full, by newest response with that response, and the forum', async () => {
+		for (const args of [{ q: 'is:discussed', limit: 5 }, { q: `id:${JSON.stringify(discussed)}`, fields: 'full' }, { limit: 3, sort: 'responded' }, { in: 'forum' }]) {
+			assert.deepEqual(problems(tools.search.outputSchema, await call('search', args)), [], JSON.stringify(args));
 		}
-		for (const args of [{ limit: 5 }, { query: 'source:openai-math', limit: 2, fields: 'full' }]) {
-			assert.deepEqual(problems(tools.list_discussed_records.outputSchema, await call('list_discussed_records', args)), [], JSON.stringify(args));
+		for (const args of [{ q: 'is:discussed', sort: 'responded', limit: 5 }, { q: 'is:discussed AND (source:openai-math)', sort: 'responded', limit: 2, fields: 'full' }]) {
+			const found = await call('search', args);
+			assert.deepEqual(problems(tools.search.outputSchema, found), [], JSON.stringify(args));
+			assert.ok(found.results.length && found.results.every((r: Json) => r.latest_response?.url && r.discussed), JSON.stringify(args));
+			assert.equal('discussion' in found.results[0], args.fields === 'full');
 		}
 	});
 
-	test('get_record shows each response\'s stance, and says what an id looks like when one is malformed', async () => {
-		const links = (await call('get_record', { id: discussed })).discussion.map((d: Json) => ({ url: d.url, stance: 'questions' }));
+	test('get shows each response\'s stance, and says what a path is when it names nothing', async () => {
+		const links = (await call('get', { id: discussed })).discussion.map((d: Json) => ({ url: d.url, stance: 'questions' }));
 		await pg.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', (SELECT jsonb_agg(d || '{\"stance\": \"questions\"}') FROM jsonb_array_elements(record->'discussion') d)) WHERE id = $1", [discussed]);
-		const rec = await call('get_record', { id: discussed });
+		const rec = await call('get', { id: discussed });
 		assert.deepEqual(rec.discussion.map((d: Json) => ({ url: d.url, stance: d.stance })), links);
-		assert.deepEqual(problems(tools.get_record.outputSchema, rec), []);
-		const bad = await rpc(pg, 'tools/call', { name: 'get_record', arguments: { id: 'no slash here' } });
-		assert.ok(bad.isError && /a record id is <prefix>\/<suffix>/.test(bad.content[0].text), bad.content[0].text);
-	});
-
-	test('query, search_records\' old name for q, still answers the same', async () => {
-		assert.deepEqual(await call('search_records', { query: 'is:discussed', limit: 3 }), await call('search_records', { q: 'is:discussed', limit: 3 }));
+		assert.deepEqual(problems(tools.get.outputSchema, rec), []);
+		const bad = await rpc(pg, 'tools/call', { name: 'get', arguments: { id: 'no slash here' } });
+		assert.ok(bad.isError && /^no no slash here\. A path: a record id \(arxiv\//.test(bad.content[0].text), bad.content[0].text);
 	});
 });

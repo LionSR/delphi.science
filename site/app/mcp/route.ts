@@ -1,19 +1,23 @@
-// POST /mcp: read-only, stateless Streamable HTTP MCP server (lib/api/mcp.ts). Without sessions or a server stream,
-// GET and DELETE answer 405, as the transport spec allows.
+// POST /mcp: stateless Streamable HTTP MCP server (lib/api/mcp.ts). Reading needs no token; the tools that act for a
+// person need Authorization: Bearer. Without sessions or a server stream, GET and DELETE answer 405, as the transport
+// spec allows.
 import { counted } from '#lib/api/caller.ts';
 import { db } from '#lib/db.ts';
 import { handle } from '#lib/api/mcp.ts';
 
-// Reads need no key, so any page may call it.
+// Reads need no key, so any page may call it. Cookies are never read here, so a page can act for a person only with
+// a token that person's client already holds.
 const CORS = {
 	'Access-Control-Allow-Origin': '*',
-	'Access-Control-Allow-Headers': 'Content-Type, Accept, Mcp-Protocol-Version, Mcp-Session-Id, Last-Event-ID',
-	'Access-Control-Expose-Headers': 'Mcp-Protocol-Version, Mcp-Session-Id',
+	'Access-Control-Allow-Headers': 'Content-Type, Accept, Authorization, Mcp-Protocol-Version, Mcp-Session-Id, Last-Event-ID',
+	'Access-Control-Expose-Headers': 'Mcp-Protocol-Version, Mcp-Session-Id, WWW-Authenticate',
 };
 
 export const POST = counted('POST /mcp', async (req: Request) => {
 	const res = await handle(req, db);
 	for (const [k, v] of Object.entries(CORS)) res.headers.set(k, v);
+	// A reply to a signed-in caller is theirs alone.
+	if (req.headers.has('authorization')) res.headers.set('Cache-Control', 'private, no-store');
 	return res;
 });
 

@@ -278,9 +278,10 @@ describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' },
 		const call = async (name: string, args: object) => rpc('tools/call', { name, arguments: args });
 		await rpc('initialize', { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'test', version: '0' } });
 		const tools = (await rpc('tools/list')).tools as { name: string; annotations: object; outputSchema?: object }[];
-		assert.deepEqual(tools.map((t) => t.name), ['search_records', 'get_record', 'list_discussed_records']);
+		// The reading tools come first; the tools that act for a person are in lib/api/mcp-auth.test.ts.
+		assert.deepEqual(tools.map((t) => t.name).slice(0, 6), ['search_records', 'get_record', 'list_discussed_records', 'list_record_comments', 'search_forum', 'get_forum_topic']);
 		for (const t of tools) {
-			assert.deepEqual(t.annotations, { readOnlyHint: true, destructiveHint: false, openWorldHint: false, idempotentHint: true });
+			if (tools.indexOf(t) < 6) assert.deepEqual(t.annotations, { readOnlyHint: true, destructiveHint: false, openWorldHint: false, idempotentHint: true });
 			assert.ok(t.outputSchema, t.name);
 		}
 

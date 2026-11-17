@@ -1,4 +1,5 @@
 // GET /api/v1: a JSON guide to the API. Endpoints come from the OpenAPI document and the query syntax from lib/records/query.ts.
+import { MCP_SUMMARY } from '#lib/api/mcp-guide.ts';
 import { counted } from '#lib/api/caller.ts';
 import { bodyShape, call, endpointName, operationById, operations } from '#lib/api/openapi.ts';
 import { OPERATORS, QUERY_FIELDS, SORT_HELP } from '#lib/records/query.ts';
@@ -13,7 +14,7 @@ const GUIDE = {
 	}),
 	sorts: SORT_HELP,
 	openapi: '/api/v1/openapi.json',
-	mcp: `${SITE}/mcp: read-only Streamable HTTP MCP server (no key required) exposing search_records, get_record, and list_discussed_records. Claude Code: claude mcp add --transport http open-research-index ${SITE}/mcp`,
+	mcp: `${SITE}/mcp: ${MCP_SUMMARY} Claude Code: claude mcp add --transport http open-research-index ${SITE}/mcp`,
 	ids: 'Every record id is <prefix>/<suffix>: the source prefix followed by its upstream identifier. /id/<id> redirects to the upstream source.',
 	discussion: `A record's discussion[] lists external technical responses (kind x|web, url, author, date; articles include title and a verbatim excerpt in text; X posts include handle and no text, so open url), rechecked daily so deleted posts are removed. stance, assigned by an editor, records what the response does: ${STANCE_LIST}. disputed is true when a response refutes or questions the claim; discussed is the response count. When a response is itself a record in the index, it carries record: <id>, and that record lists the target in discusses[].`,
 	reception: 'Present on reviewed records: a 1-2 sentence status summary approved by a human editor (text, written, links[], reviewed_by). Omitted for unreviewed drafts or when discussion[] changes after review.',

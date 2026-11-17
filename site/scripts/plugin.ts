@@ -115,7 +115,7 @@ if (problems.length) {
 rmSync(zip, { force: true });
 execFileSync('zip', ['-q', '-r', '-X', zip, ...FILES], { cwd: out, stdio: 'inherit' });
 writeFileSync(submission, `${JSON.stringify({
-	$schema: 'https://developers.openai.com/apps-sdk/schemas/chatgpt-app-submission.v1.json', schema_version: 1,
+	$schema: 'https://developers.openai.com/plugins/schemas/chatgpt-app-submission.v1.json', schema_version: 1,
 	app_info: given.app_info, tools, test_cases: given.test_cases, negative_test_cases: given.negative_test_cases,
 }, null, 2).replaceAll('https://delphi.science', SITE)}\n`);
 console.log(`${submission}: ${Object.keys(tools).length} tools, ${given.test_cases.length} test cases, ${given.negative_test_cases.length} negative`);

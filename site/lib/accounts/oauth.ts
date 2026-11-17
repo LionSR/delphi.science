@@ -1,6 +1,6 @@
 // OAuth 2.1 authorization server for the MCP server at /mcp, for clients that sign people in from inside
 // themselves (the ChatGPT and Codex plugin, Claude, MCP Inspector) instead of following the device flow.
-// Public clients only: they register themselves (RFC 7591), the person approves at /oauth/authorize, and the
+// Public clients only: they register themselves (RFC 7591, nothing stored), the person approves at /oauth/authorize, and the
 // client exchanges a one-time code with PKCE S256 for an access token. The access token is an agent key
 // (lib/accounts/keys.ts) named after the client, so everything a device-approved key has holds here too.
 import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
@@ -16,10 +16,8 @@ export const RESOURCE = `${SITE}/mcp`;
 export const KEY_SECONDS = 90 * 86400; // open_index.agent_keys.expires_at's default
 const CODE_SECONDS = 300;
 const MAX_REDIRECTS = 10, MAX_URI = 2000;
-// A registration nobody has approved through is dropped after 90 days (a plugin may register long before its first
-// person signs in), and at most this many may be waiting at once. One that has been used is kept: its client goes on
-// presenting the same client_id.
-const UNUSED_CLIENT_DAYS = 90, MAX_UNUSED_CLIENTS = 5000;
+// A client_id carries its own registration (below), so it is bounded in size.
+const MAX_CLIENT_ID = 1500;
 
 /** An OAuth error reply (RFC 6749 section 5.2): {"error", "error_description"} with this status. */
 export class OAuthError extends Error {
@@ -115,8 +113,15 @@ function clientName(name: unknown, redirect: URL): string {
 	return [...(given || redirect.host || redirect.protocol.replace(':', ''))].slice(0, MAX_AGENT_NAME).join('');
 }
 
+// Registration is open to anyone and vets nothing, so there is nothing to keep secret or to look up: a client_id is
+// the registration itself (the name and the redirect URIs), encoded. No row is stored, so registering cannot fill a
+// table or be used up, and a client_id never expires. What protects the person is the approval page, which shows
+// the name and where they will be returned, and PKCE, which ties the code to the client that asked.
+const CLIENT = 'oic_';
+const encodeClient = (name: string, redirect_uris: string[]) => CLIENT + Buffer.from(JSON.stringify({ n: name, r: redirect_uris })).toString('base64url');
+
 /** Dynamic Client Registration (RFC 7591) for a public client. Returns the registration as the client reads it. */
-export async function registerClient(db: Db, meta: unknown) {
+export function registerClient(meta: unknown) {
 	if (!meta || typeof meta !== 'object' || Array.isArray(meta)) throw new OAuthError('invalid_client_metadata', 'send a JSON object with redirect_uris');
 	const m = meta as Record<string, unknown>;
 	if (!Array.isArray(m.redirect_uris) || !m.redirect_uris.length || m.redirect_uris.length > MAX_REDIRECTS) {
@@ -131,11 +136,8 @@ export async function registerClient(db: Db, meta: unknown) {
 		}
 	}
 	const name = clientName(m.client_name, uris[0]);
-	await db.query(`DELETE FROM open_index.oauth_clients WHERE used_at IS NULL AND created_at < now() - interval '${UNUSED_CLIENT_DAYS} days'`);
-	const waiting = (await db.query<{ n: number }>('SELECT count(*)::int AS n FROM open_index.oauth_clients WHERE used_at IS NULL')).rows[0].n;
-	if (waiting >= MAX_UNUSED_CLIENTS) throw new OAuthError('temporarily_unavailable', 'too many unused client registrations are waiting; try again later', 503);
-	const client_id = `oic_${randomBytes(16).toString('hex')}`;
-	await db.query('INSERT INTO open_index.oauth_clients (client_id, name, redirect_uris) VALUES ($1, $2, $3)', [client_id, name, JSON.stringify(redirect_uris)]);
+	const client_id = encodeClient(name, redirect_uris);
+	if (client_id.length > MAX_CLIENT_ID) throw new OAuthError('invalid_redirect_uri', 'the redirect URIs are too long together; register fewer or shorter ones');
 	return {
 		client_id, client_id_issued_at: Math.floor(Date.now() / 1000), client_name: name, redirect_uris,
 		// A public client: it proves itself with PKCE, not a secret, whatever method it asked for.
@@ -143,11 +145,19 @@ export async function registerClient(db: Db, meta: unknown) {
 	};
 }
 
-export async function client(db: Db, id: unknown): Promise<Client | null> {
-	if (typeof id !== 'string' || !id || id.length > 200) return null;
-	const row = (await db.query<{ client_id: string; name: string; redirect_uris: string }>(
-		'SELECT client_id, name, redirect_uris FROM open_index.oauth_clients WHERE client_id = $1', [id])).rows[0];
-	return row ? { ...row, redirect_uris: JSON.parse(row.redirect_uris) } : null;
+/** The registration a client_id carries, checked as at registration; null for anything else. */
+export function client(id: unknown): Client | null {
+	if (typeof id !== 'string' || !id.startsWith(CLIENT) || id.length > MAX_CLIENT_ID) return null;
+	try {
+		const { n, r } = JSON.parse(Buffer.from(id.slice(CLIENT.length), 'base64url').toString('utf8'));
+		if (typeof n !== 'string' || !Array.isArray(r) || !r.length || r.length > MAX_REDIRECTS) return null;
+		const name = clientName(n, redirectUri(r[0]));
+		r.slice(1).forEach(redirectUri);
+		// Only an id this server would itself have issued for that registration.
+		return encodeClient(name, r) === id ? { client_id: id, name, redirect_uris: r } : null;
+	} catch {
+		return null;
+	}
 }
 
 // ---- Authorization ----
@@ -165,7 +175,7 @@ const resourceOk = (resource: string | undefined) => !resource || [RESOURCE, SIT
  */
 export async function authorization(db: Db, p: AuthorizeParams): Promise<
 	{ show: string } | { refuse: string } | { client: Client; redirect_uri: string; challenge: string; state?: string }> {
-	const c = await client(db, p.client_id);
+	const c = client(p.client_id);
 	if (!c) return { show: 'This app is not registered here. Start the connection again from the app.' };
 	const redirect_uri = p.redirect_uri ?? (c.redirect_uris.length === 1 ? c.redirect_uris[0] : '');
 	if (!redirect_uri || !redirectAllowed(c, redirect_uri)) return { show: 'This request names a return address the app did not register. Start the connection again from the app.' };
@@ -192,7 +202,6 @@ export async function issueCode(db: Db, login: string, request: { client: Client
 	const code = `oac_${randomBytes(24).toString('hex')}`;
 	await db.query('INSERT INTO open_index.oauth_codes (code_hash, client_id, login, redirect_uri, challenge) VALUES ($1, $2, $3, $4, $5)',
 		[sha256(code), request.client.client_id, login, request.redirect_uri, request.challenge]);
-	await db.query('UPDATE open_index.oauth_clients SET used_at = now() WHERE client_id = $1', [request.client.client_id]);
 	return code;
 }
 
@@ -210,25 +219,32 @@ export async function token(db: Db, r: TokenRequest) {
 	}
 	if (!r.code || !r.code_verifier || !r.client_id) throw new OAuthError('invalid_request', 'code, code_verifier and client_id are required');
 	if (!resourceOk(r.resource)) throw new OAuthError('invalid_target', `resource must be ${RESOURCE}`);
-	const hash = sha256(r.code);
-	const row = (await db.query<{ client_id: string; login: string; redirect_uri: string; challenge: string; live: boolean; used: boolean; key_hash: string | null; name: string }>(
-		`SELECT c.client_id, c.login, c.redirect_uri, c.challenge, c.expires_at > now() AS live, c.used_at IS NOT NULL AS used, c.key_hash, k.name
-		 FROM open_index.oauth_codes c JOIN open_index.oauth_clients k USING (client_id) WHERE c.code_hash = $1`, [hash])).rows[0];
+	const hash = sha256(r.code), verifier = r.code_verifier;
 	const invalid = () => new OAuthError('invalid_grant', 'the authorization code is unknown, expired, already used, or was issued to another client');
-	if (!row) throw invalid();
-	if (row.used) {
-		// A code presented twice may have been stolen: what the first exchange got stops working (RFC 6749 section 4.1.2).
-		if (row.key_hash) await db.query('UPDATE open_index.agent_keys SET revoked_at = now() WHERE key_hash = $1 AND revoked_at IS NULL', [row.key_hash]);
-		throw invalid();
-	}
-	if (!row.live || row.client_id !== r.client_id) throw invalid();
-	if (r.redirect_uri !== undefined && r.redirect_uri !== row.redirect_uri) throw invalid();
-	if (!/^[A-Za-z0-9._~-]{43,128}$/.test(r.code_verifier) || !same(s256(r.code_verifier), row.challenge)) throw new OAuthError('invalid_grant', 'code_verifier does not match the code_challenge');
-	const claimed = (await db.query('UPDATE open_index.oauth_codes SET used_at = now() WHERE code_hash = $1 AND used_at IS NULL RETURNING 1', [hash])).rows.length;
-	if (!claimed) throw invalid();
-	const key = await createAgentKey(db, row.login, row.name);
-	await db.query('UPDATE open_index.oauth_codes SET key_hash = $2 WHERE code_hash = $1', [hash, sha256(key)]);
-	return { access_token: key, token_type: 'Bearer', expires_in: KEY_SECONDS, scope: SCOPE };
+	// In one transaction with the code's row locked, so a second request for the same code waits and then sees the
+	// first one's outcome. Refusals are returned, not thrown, so what they did (a revocation) is kept.
+	const exchange = async (tx: Db): Promise<{ key: string } | { refuse: OAuthError }> => {
+		const row = (await tx.query<{ client_id: string; login: string; redirect_uri: string; challenge: string; live: boolean; used: boolean; key_hash: string | null }>(
+			`SELECT client_id, login, redirect_uri, challenge, expires_at > now() AS live, used_at IS NOT NULL AS used, key_hash
+			 FROM open_index.oauth_codes WHERE code_hash = $1 FOR UPDATE`, [hash])).rows[0];
+		const registered = row && client(row.client_id);
+		if (!row || !registered || row.client_id !== r.client_id) return { refuse: invalid() };
+		if (!/^[A-Za-z0-9._~-]{43,128}$/.test(verifier) || !same(s256(verifier), row.challenge)) return { refuse: new OAuthError('invalid_grant', 'code_verifier does not match the code_challenge') };
+		if (row.used) {
+			// The code presented again by someone who holds the client's verifier too: it may have been stolen with it, so
+			// what the first exchange got stops working (RFC 6749 section 4.1.2). A replay without the verifier proved
+			// nothing above and revoked nothing, so knowing a used code alone cannot sign anyone out.
+			if (row.key_hash) await tx.query('UPDATE open_index.agent_keys SET revoked_at = now() WHERE key_hash = $1 AND revoked_at IS NULL', [row.key_hash]);
+			return { refuse: invalid() };
+		}
+		if (!row.live || (r.redirect_uri !== undefined && r.redirect_uri !== row.redirect_uri)) return { refuse: invalid() };
+		const key = await createAgentKey(tx, row.login, registered.name);
+		await tx.query('UPDATE open_index.oauth_codes SET used_at = now(), key_hash = $2 WHERE code_hash = $1', [hash, sha256(key)]);
+		return { key };
+	};
+	const done = await (db.transaction ? db.transaction(exchange) : exchange(db));
+	if ('refuse' in done) throw done.refuse;
+	return { access_token: done.key, token_type: 'Bearer', expires_in: KEY_SECONDS, scope: SCOPE };
 }
 
 /** The revocation endpoint (RFC 7009): the token stops working. Unknown tokens are not an error. */

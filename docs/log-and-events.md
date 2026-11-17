@@ -84,7 +84,7 @@ record and a post on a record are public; a post in a topic is seen by whoever c
 the forum is everyone and for a private space its accepted members. `log()` takes the reader as its second argument
 (`null` for nobody), so no caller can leave it out. The feed and the text forms pass `null` whatever token came with
 the request, so a private space has no feed and no text form. The MCP server reads the same way (`publicOnly`) while
-spaces are closed to it (`spacesOverMcp` in `lib/posts/spaces.ts`), with `@me` in a query still naming the caller.
+spaces are closed to it (`privateOverMcp` in `lib/posts/spaces.ts`), with `@me` in a query still naming the caller.
 
 A post in a private space still gets its row in `events` (the trigger does not know about spaces): a pointer with a
 seq, read only through `log()`. Its `path` column says `forum/<topic>/<post>` for every topic, so `log()` builds the

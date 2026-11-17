@@ -30,11 +30,14 @@ export const CREATABLE: readonly Visibility[] = ['private'];
 /** The longest line of text an invitation may carry; 0 turns invitation notes off. */
 export const MAX_INVITE_NOTE = 200;
 
-/** Whether the MCP server (/mcp) reaches private spaces. Off unless ORI_MCP_SPACES is "true": the plugin directories
- * reviewed tools that read and write public content only, so until their descriptions say otherwise an MCP caller,
- * signed in or not, finds no ws path and reads nothing private (lib/api/mcp-tools.ts). REST, the command line and the
- * website are not affected. Turn it on in the release that carries the reworded tool descriptions. */
-export const spacesOverMcp = (env: Record<string, string | undefined> = process.env) => env.ORI_MCP_SPACES === 'true';
+/** Whether the MCP server (/mcp) reaches what is private: spaces (ws paths) and a person's saved queries (me/queries,
+ * lib/accounts/queries.ts). One switch for both, off unless ORI_MCP_PRIVATE is "true". The plugin directories reviewed
+ * tools whose descriptions say they read and write public, moderated content at the paths they name, so until those
+ * descriptions say otherwise an MCP caller, signed in or not, finds no ws path and no me/queries and reads nothing
+ * private (lib/api/mcp-tools.ts). REST, the command line and the website are not affected. Turn it on in the one
+ * release that carries the reworded tool descriptions. The rule until then: whatever /mcp reaches is public, or the
+ * caller's own identity through get me; moderated where it is text; and named in the tool's description. */
+export const privateOverMcp = (env: Record<string, string | undefined> = process.env) => env.ORI_MCP_PRIVATE === 'true';
 
 /** A person's posts in private spaces in a day, their agents' included: generous, a guard against a broken loop only. */
 export const PRIVATE_POSTS_PER_DAY = 2000;

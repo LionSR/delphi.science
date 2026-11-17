@@ -64,7 +64,7 @@ with `site/lib/api/tools-list.json`, taken from the branch this one starts from)
 All of them need sign-in there, as `get me` does. The replies use only fields the verbs' schemas already had.
 
 **Over MCP this is closed in the reviewed version, for reading and for writing.** It opens with private spaces,
-by the same switch: `spacesOverMcp()` (`lib/posts/spaces.ts`, environment variable `ORI_MCP_SPACES=true`, off by
+by the same switch: `privateOverMcp()` (`lib/posts/spaces.ts`, environment variable `ORI_MCP_PRIVATE=true`, off by
 default). While it is off an MCP caller finds no `me/queries`, for any of the four verbs: the answer is the ordinary
 not-found, the server's instructions do not mention the path, `get me` is the account as before, and nothing is
 stored through MCP. The REST API, the command line and the website are not affected, and an MCP client still gets a
@@ -187,7 +187,7 @@ log's one rule and by the door the request came through, not by anything in the 
 | --- | --- |
 | The website (`/?feed=mine`) | public entries, and the posts of their spaces; a private entry links to `/ws/<slug>/<topic>#p<post>` |
 | REST and the command line (`log me/queries`, `log -f`) | the same |
-| MCP, closed (`ORI_MCP_SPACES` unset, the default) | no `me/queries`; `log` with the queries as `q` gives public entries only (read as nobody, while `@me` still names the caller) |
+| MCP, closed (`ORI_MCP_PRIVATE` unset, the default) | no `me/queries`; `log` with the queries as `q` gives public entries only (read as nobody, while `@me` still names the caller) |
 | MCP, open | `log me/queries`, the same as REST |
 | Atom (`/log.atom`) | public entries only, always, whatever token came with the request; `me/queries` has no Atom form |
 

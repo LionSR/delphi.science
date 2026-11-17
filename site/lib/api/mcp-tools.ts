@@ -14,7 +14,7 @@ import type { Voter } from '#lib/accounts/keys.ts';
 import { comment, post } from '#lib/posts/comments.ts';
 import { editPost } from '#lib/posts/edit.ts';
 import { accept, startTopic, topics, topicWithPosts, votePost, type Topic } from '#lib/posts/forum.ts';
-import { addMember, createSpace, members, mySpaces, noSpace, removeMember, space as spaceOf, spacesOverMcp, topicPath, type Member } from '#lib/posts/spaces.ts';
+import { addMember, createSpace, members, mySpaces, noSpace, removeMember, space as spaceOf, privateOverMcp, topicPath, type Member } from '#lib/posts/spaces.ts';
 import { FORUM, reader } from '#lib/posts/visibility.ts';
 import { log, logEntry, NeedsReader, type LogEntry, type Scope } from '#lib/posts/log.ts';
 import { unvote, vote } from '#lib/records/votes.ts';
@@ -55,10 +55,10 @@ export type Caller = Voter | null;
 export class SignIn extends Error {}
 const signedIn = (who: Caller): Voter => who ?? (() => { throw new SignIn(); })();
 /** The door a call came through: the REST API (and with it the command line and the site's own text forms), or the MCP
- * server. They do the same things, but for one: while spaces are closed to MCP (spacesOverMcp), an MCP caller finds
+ * server. They do the same things, but for one: while spaces are closed to MCP (privateOverMcp), an MCP caller finds
  * no ws path and reads public things only, whoever they are. */
 export type Door = 'rest' | 'mcp';
-const open = (door: Door) => door === 'rest' || spacesOverMcp();
+const open = (door: Door) => door === 'rest' || privateOverMcp();
 /** How a path is read through this door. The saved queries (me/queries) are closed to MCP with spaces, by the same
  * switch: the reviewed descriptions of post and edit say public and moderated, and of get and log name neither path,
  * so both open in the one release that rewords them. */

@@ -47,12 +47,12 @@ const html = (el: Parameters<typeof renderToStaticMarkup>[0]) => renderToStaticM
 const text = (markup: string) => markup.replace(/<[^>]+>/g, ' ').replace(/&#x27;/g, '\'').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 const rejects = async (run: () => Promise<unknown>) => { try { await run(); } catch (e) { return e as QueriesError; } throw new Error('it did not refuse'); };
 
-/** Runs `run` with the MCP server open to spaces and me/queries (ORI_MCP_SPACES), or closed to both as it is by
+/** Runs `run` with the MCP server open to spaces and me/queries (ORI_MCP_PRIVATE), or closed to both as it is by
  * default, and puts the switch back. */
 async function withMcp<T>(open: boolean, run: () => Promise<T>): Promise<T> {
-	const prior = process.env.ORI_MCP_SPACES;
-	if (open) process.env.ORI_MCP_SPACES = 'true'; else delete process.env.ORI_MCP_SPACES;
-	try { return await run(); } finally { if (prior === undefined) delete process.env.ORI_MCP_SPACES; else process.env.ORI_MCP_SPACES = prior; }
+	const prior = process.env.ORI_MCP_PRIVATE;
+	if (open) process.env.ORI_MCP_PRIVATE = 'true'; else delete process.env.ORI_MCP_PRIVATE;
+	try { return await run(); } finally { if (prior === undefined) delete process.env.ORI_MCP_PRIVATE; else process.env.ORI_MCP_PRIVATE = prior; }
 }
 
 const mcpAsSet = async (db: PGlite, key: string | undefined, name: string, args: object) => {

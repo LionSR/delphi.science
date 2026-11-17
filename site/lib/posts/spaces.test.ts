@@ -68,9 +68,9 @@ async function api(method: string, pathAndQuery: string, who?: string, body?: un
 
 /** Runs `run` with the MCP server open to spaces, or closed to them (the default), and puts the switch back. */
 async function mcpSpaces<T>(on: boolean, run: () => Promise<T>): Promise<T> {
-	const prior = process.env.ORI_MCP_SPACES;
-	if (on) process.env.ORI_MCP_SPACES = 'true'; else delete process.env.ORI_MCP_SPACES;
-	try { return await run(); } finally { if (prior === undefined) delete process.env.ORI_MCP_SPACES; else process.env.ORI_MCP_SPACES = prior; }
+	const prior = process.env.ORI_MCP_PRIVATE;
+	if (on) process.env.ORI_MCP_PRIVATE = 'true'; else delete process.env.ORI_MCP_PRIVATE;
+	try { return await run(); } finally { if (prior === undefined) delete process.env.ORI_MCP_PRIVATE; else process.env.ORI_MCP_PRIVATE = prior; }
 }
 
 /** One MCP tool call, as `who` or as nobody: its text, and whether it is an error. */

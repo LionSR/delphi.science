@@ -220,6 +220,18 @@ describe('the life of a space, through the six verbs', () => {
 		assert.deepEqual(await mySpaces(pg, 'alice'), []);
 	});
 
+	test('one generous limit guards against a loop that does not end; public posts keep their own', async () => {
+		const s = await createSpace(pg, eve, { title: 'A runaway notebook' });
+		const t = await startTopic(pg, eve, { title: 'Loop', body: 'First.', space: s.id });
+		// As if her agent had posted all day: one short of the limit, written straight to the table.
+		await pg.query(`INSERT INTO open_index.comments (topic_id, voter, agent, body) SELECT $1, 'eve', 'Claude Code', 'again ' || n FROM generate_series(1, $2::int) n`, [t.id, PRIVATE_POSTS_PER_DAY - 2]);
+		await post(pg, { topic: t.id, space: s.id }, { login: 'eve', agent: 'Claude Code' }, { body: 'The last one today.' });
+		await assert.rejects(post(pg, { topic: t.id, space: s.id }, eve, { body: 'One too many.' }), /2,000 posts in private spaces today, agents included/);
+		await assert.rejects(startTopic(pg, eve, { title: 'Another', body: 'x', space: s.id }), /2,000 posts in private spaces today/);
+		assert.equal((await pg.query('SELECT 1 FROM open_index.moderations WHERE voter = $1', ['eve'])).rows.length, 0, 'none of it counted against the 30 public attempts a day');
+		await deleteSpace(pg, s.id, eve);
+	});
+
 	test('when the last member leaves, the space goes with them', async () => {
 		const s = await createSpace(pg, bob, { title: 'Bob alone' });
 		await addMember(pg, s.id, bob, 'carol', 'join me');

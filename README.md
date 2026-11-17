@@ -153,3 +153,7 @@ cd site && npm test
 - [docs/atomic-vote-if-absent.md](docs/atomic-vote-if-absent.md) — create-only votes
 - [docs/usage-analytics.md](docs/usage-analytics.md) — usage metrics, admin access, retention
 - [docs/release-validation-2026-10-27.md](docs/release-validation-2026-10-27.md), [docs/source-evidence-validation-2026-10-27.md](docs/source-evidence-validation-2026-10-27.md) — dated validation records
+
+## License
+
+Apache-2.0: see [LICENSE](LICENSE). It covers the code in this repository. The indexed records, abstracts and quoted responses belong to their authors and sources.

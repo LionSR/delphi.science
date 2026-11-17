@@ -40,14 +40,14 @@ const connect = async (authProvider) => { const c = new Client({ name: 'e2e', ve
 // 1. Anonymous: connect, list, read, and be asked to sign in for a write.
 const anon = await connect();
 const tools = (await anon.c.listTools()).tools;
-check('anonymous client lists the tools', tools.length === 16, `${tools.length} tools`);
+check('anonymous client lists the tools', tools.length === 6 && tools.map((t) => t.name).join(' ') === 'search get log post edit vote', `${tools.length} tools`);
 const raw = (await fetch(`${B}/mcp`, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' }, body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/list' }) }).then((r) => r.json())).result.tools;
-check('on the wire every tool has securitySchemes (top level and _meta mirror) and the three hints', raw.every((t) => Array.isArray(t.securitySchemes) && JSON.stringify(t.securitySchemes) === JSON.stringify(t._meta.securitySchemes) && ['readOnlyHint', 'destructiveHint', 'openWorldHint'].every((h) => typeof t.annotations[h] === 'boolean')), `${raw.filter((t) => t.securitySchemes[0].type === 'oauth2').length} need sign-in`);
+check('on the wire every tool has securitySchemes (top level and _meta mirror) and the three hints', raw.every((t) => Array.isArray(t.securitySchemes) && JSON.stringify(t.securitySchemes) === JSON.stringify(t._meta.securitySchemes) && ['readOnlyHint', 'destructiveHint', 'openWorldHint'].every((h) => typeof t.annotations[h] === 'boolean')), `${raw.filter((t) => t.securitySchemes.some((x) => x.type === 'oauth2')).length} can use sign-in`);
 check('through the SDK client the _meta mirror survives (the SDK drops fields it does not know)', tools.every((t) => Array.isArray(t._meta?.securitySchemes)));
-const found = await anon.c.callTool({ name: 'search_records', arguments: { limit: 1 } });
+const found = await anon.c.callTool({ name: 'search', arguments: { limit: 1 } });
 const id = found.structuredContent.results[0].id;
-check('anonymous search and read work', !found.isError && (await anon.c.callTool({ name: 'get_record', arguments: { id } })).structuredContent.id === id, id);
-const asked = await anon.c.callTool({ name: 'vote_on_record', arguments: { id, value: 1 } });
+check('anonymous search and read work', !found.isError && (await anon.c.callTool({ name: 'get', arguments: { id } })).structuredContent.id === id, id);
+const asked = await anon.c.callTool({ name: 'vote', arguments: { id, value: 1 } });
 check('a write without sign-in returns the tool-level challenge', asked.isError && /insufficient_scope/.test(asked._meta?.['mcp/www_authenticate']?.[0] ?? ''), asked._meta?.['mcp/www_authenticate']?.[0]);
 
 // 2. Sign in the way an MCP client does. A mixed server gives no 401 to an anonymous client, so the client starts
@@ -78,21 +78,25 @@ check('SDK exchanges the code', await auth(provider, { serverUrl: `${B}/mcp`, au
 
 // 3. Signed in: act, and see it on the site.
 const me = await connect(provider);
-const who = (await me.c.callTool({ name: 'whoami', arguments: {} })).structuredContent;
-check('whoami', who.login === login && who.agent === 'ChatGPT', who.attribution);
-const voted = await me.c.callTool({ name: 'vote_on_record', arguments: { id, value: 1, emoji: '🤔' } });
-check('vote_on_record', !voted.isError && voted.structuredContent.score === 1, JSON.stringify(voted.structuredContent));
+const who = (await me.c.callTool({ name: 'get', arguments: { id: 'me' } })).structuredContent;
+check('get me', who.login === login && who.agent === 'ChatGPT', who.attribution);
+const voted = await me.c.callTool({ name: 'vote', arguments: { id, value: 1, emoji: '🤔' } });
+check('vote', !voted.isError && voted.structuredContent.score === 1, JSON.stringify(voted.structuredContent));
 await page.goto(`${B}/r/${id}`);
 check('the record page shows the vote with its attribution', (await page.locator('body').innerText()).includes(`ChatGPT · @${login}’s team`));
-const kept = await me.c.callTool({ name: 'vote_on_record', arguments: { id, value: -1, if_absent: true } });
+const kept = await me.c.callTool({ name: 'vote', arguments: { id, value: -1, if_absent: true } });
 check('if_absent keeps the existing vote', kept.structuredContent.created === false && kept.structuredContent.score === 1);
-const posted = await me.c.callTool({ name: 'post_comment', arguments: { id, body: 'The bound in Lemma 2 needs $n > 3$; for $n = 3$ the sum diverges.' } });
-out('post_comment', posted.content[0].text.slice(0, 150));
-check('post_comment is either published or refused with a moderation code', !posted.isError || /^moderation_/.test(posted.content[0].text));
-const forum = await me.c.callTool({ name: 'search_forum', arguments: {} });
-check('search_forum', !forum.isError, `${forum.structuredContent.total} topics`);
-const gone = await me.c.callTool({ name: 'remove_record_vote', arguments: { id } });
-check('remove_record_vote', gone.structuredContent.score === 0);
+const posted = await me.c.callTool({ name: 'post', arguments: { id, body: 'The bound in Lemma 2 needs $n > 3$; for $n = 3$ the sum diverges.' } });
+out('post', posted.content[0].text.slice(0, 150));
+check('post is either published or refused with a moderation code', !posted.isError || /^moderation_/.test(posted.content[0].text));
+const forum = await anon.c.callTool({ name: 'search', arguments: { in: 'forum' } });
+check('search in=forum', !forum.isError, `${forum.structuredContent.total} topics`);
+const logged = await anon.c.callTool({ name: 'log', arguments: { path: id } });
+check('log of the record lists its posts, one line each', !logged.isError && logged.content[0].text.split('\n').filter(Boolean).length === logged.structuredContent.entries.length, `${logged.structuredContent.entries.length} posts`);
+const anonMe = await anon.c.callTool({ name: 'get', arguments: { id: 'me' } });
+check('get me without sign-in asks for sign-in', anonMe.isError && Boolean(anonMe._meta?.['mcp/www_authenticate']));
+const gone = await me.c.callTool({ name: 'vote', arguments: { id, value: 0 } });
+check('vote with value 0 takes it back', gone.structuredContent.score === 0);
 const rest = await fetch(`${B}/api/v1/keys`, { headers: { Authorization: `Bearer ${store.tokens.access_token}` } }).then((r) => r.json());
 check('the token is listed as an agent key on the REST API', rest.keys.some((k) => k.current && k.agent === 'ChatGPT'));
 
@@ -104,7 +108,7 @@ const after = await fetch(`${B}/mcp`, { method: 'POST', headers: { Authorization
 check('after revoking at /keys the token gets 401 with a challenge', after.status === 401 && /invalid_token/.test(after.headers.get('www-authenticate') ?? ''));
 let reauth = false; try { store.tokens = { ...store.tokens }; await (await connect({ ...provider, redirectUrl, clientMetadata: provider.clientMetadata, redirectToAuthorization: () => { reauth = true; } })).c.listTools(); } catch (e) { reauth ||= e instanceof UnauthorizedError; }
 check('the SDK client reacts to that 401 by starting sign-in again', reauth);
-check('anonymous reading still works afterwards', !(await anon.c.callTool({ name: 'get_record', arguments: { id } })).isError);
+check('anonymous reading still works afterwards', !(await anon.c.callTool({ name: 'get', arguments: { id } })).isError);
 
 // 5. Denying.
 gotCallback = undefined; const denied = new Promise((r) => { gotCallback = r; });

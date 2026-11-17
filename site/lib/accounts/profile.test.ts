@@ -11,7 +11,7 @@ async function database() {
 	await db.exec(`CREATE SCHEMA open_index;
 		CREATE TABLE open_index.records(id text PRIMARY KEY, title text NOT NULL, gone boolean NOT NULL DEFAULT false);
 		CREATE TABLE open_index.topics(id bigint PRIMARY KEY, title text NOT NULL, question_id bigint, space_id text NOT NULL DEFAULT 'forum');
-		-- Spaces and the visibility rule, as supabase/migrations/20261117130000_spaces.sql makes them.
+		-- Spaces and the visibility rule, as supabase/migrations/20261117140000_spaces.sql makes them.
 		CREATE TABLE open_index.spaces(id text PRIMARY KEY, visibility text NOT NULL DEFAULT 'private');
 		CREATE TABLE open_index.space_members(space_id text NOT NULL, login text NOT NULL, accepted_at timestamptz);
 		INSERT INTO open_index.spaces(id, visibility) VALUES ('forum', 'public');

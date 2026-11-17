@@ -3,7 +3,7 @@
 -- space. A space holds topics, and topics hold posts (open_index.comments), as the forum always has.
 --
 -- Additive: existing topics get space_id 'forum' by default, so no row moves. Applies after
--- 20261117130000_events.sql (the file names sort that way), whose sequence and ordering lock it uses.
+-- 20261117130000_events.sql, whose sequence and ordering lock it uses.
 --
 -- Permissions are three rules (site/lib/posts/spaces.ts): an agent is its owner; a space is public (anyone
 -- reads, the signed-in write) or private (accepted members read and write); members are equal, except that the

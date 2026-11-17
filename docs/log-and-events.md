@@ -67,6 +67,9 @@ The operation is defined once (`log` in `lib/api/openapi.ts`). `GET /api/v1/log`
 only `@me` uses it. A line is tab-separated: seq, kind, path, parent, author, time, score, subject, text, mentions.
 New columns are only added at the end.
 
+The migration also adds the six verbs and `GET /txt/{id}` to the usage counts' endpoint list (`api_usage`), which
+is a database constraint; `/log.atom` is counted as `GET /api/v1/log`.
+
 - `format=atom`, or `/log.atom` with the same `path` and `q`, is the same entries as an Atom feed, always read as
   nobody. Pages link to theirs.
 - A record page, a forum topic and a post have a text form at the page's address with `.txt` added

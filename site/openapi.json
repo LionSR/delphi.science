@@ -223,7 +223,7 @@
 					}
 				],
 				"summary": "Follow new records and posts",
-				"description": "List what happened on Delphi.science itself, one line each, in the order it happened: records entering the index, and posts (comments and reviews on records, forum questions, answers and comments). Each line: seq, kind, path, parent, author, time, score, subject, the text cut short, and the records a post names. path narrows it to one record's thread, one source, the forum, or one topic; q narrows it by a query, so a saved query is a feed (q \"cat:quant-ph\" is new quant-ph records and the discussion about them) and q \"to:@me\" is the signed-in person's inbox (the only use that needs sign-in). Without since, the newest first; with since, what came after that seq, oldest first, so it can be followed: keep the reply's since and send it next time. Empty when there is nothing. Records indexed before the log began have seqs below zero and appear only in the newest-first listing. (Responses linked from elsewhere are in a record's discussion[], from get.)",
+				"description": "List what happened on Delphi.science itself, one line each, in the order it happened: records entering the index, and posts (comments and reviews on records, forum questions, answers and comments). Each line: seq, kind, path, parent, author, time, score, subject, the text cut short, and the records a post names. path narrows it to one record's thread, one source, the forum, or one topic; q narrows it by a query, so a saved query is a feed (q \"cat:quant-ph\" is new quant-ph records and the discussion about them) and q \"to:@me\" is the signed-in person's inbox (the only use that needs sign-in). Without since, the newest first; with since, what came after that seq, oldest first, so it can be followed: keep the reply's since and send it next time. Empty when there is nothing. (Responses linked from elsewhere are in a record's discussion[], from get.)",
 				"parameters": [
 					{
 						"name": "path",
@@ -251,7 +251,7 @@
 							"type": "integer",
 							"minimum": 0
 						},
-						"description": "A seq, such as since from the last reply: only what came after it, oldest first. Left out: the newest, newest first."
+						"description": "A seq, such as since from the last reply: only what came after it, oldest first. Left out: the newest, newest first, ending in the records indexed before the log began (their seqs are below zero, and no since returns them)."
 					},
 					{
 						"name": "limit",

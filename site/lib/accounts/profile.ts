@@ -6,6 +6,7 @@ import type { Db } from '#lib/db.ts';
 import { pageInfo, pageSize, pageStart, type PageRequest } from '#lib/paging.ts';
 import type { FromSchema, Schemas } from '#lib/api/schema.ts';
 import { recordPath } from '#lib/view.ts';
+import { READABLE } from '#lib/posts/visibility.ts';
 
 /** A profile's page size (lib/paging.ts). */
 export const PROFILE_PAGE = pageSize('Items', 50, 20);
@@ -60,6 +61,8 @@ function toPost(row: Row): ProfilePost {
 	};
 }
 
+// A profile is public, so it reads as nobody signed in: a post in a private space is on nobody's profile and in
+// nobody's counts, its author's included (visibility.ts).
 // A login's public posts and the kind of each (the rule in posts/edit.ts, written in SQL). Only posts on a live record,
 // or in a topic whose question exists; a reply counts only if its parent is in the same place.
 const ACTIVITY = `SELECT c.id AS pid, c.id::text AS id, c.voter, c.agent, c.body, c.at,
@@ -72,7 +75,7 @@ const ACTIVITY = `SELECT c.id AS pid, c.id::text AS id, c.voter, c.agent, c.body
 	LEFT JOIN open_index.comments p ON p.id = c.parent_id AND p.record_id IS NOT DISTINCT FROM c.record_id AND p.topic_id IS NOT DISTINCT FROM c.topic_id
 	WHERE lower(c.voter) = $1
 		AND ((c.record_id IS NOT NULL AND c.topic_id IS NULL AND r.id IS NOT NULL)
-			OR (c.topic_id IS NOT NULL AND c.record_id IS NULL AND t.id IS NOT NULL
+			OR (c.topic_id IS NOT NULL AND c.record_id IS NULL AND t.id IS NOT NULL AND ${READABLE('t.space_id', 'NULL')}
 				AND EXISTS (SELECT 1 FROM open_index.comments q WHERE q.topic_id = c.topic_id AND q.parent_id IS NULL AND q.record_id IS NULL)))
 		AND (c.parent_id IS NULL OR p.id IS NOT NULL)`;
 const VOTES = `FROM open_index.votes v JOIN open_index.records r ON r.id = v.record_id AND NOT r.gone WHERE lower(v.voter) = $1`;

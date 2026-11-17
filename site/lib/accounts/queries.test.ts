@@ -14,11 +14,15 @@ import { comment, post } from '#lib/posts/comments.ts';
 import { startTopic } from '#lib/posts/forum.ts';
 import { head, log } from '#lib/posts/log.ts';
 import { load, type Item } from '#lib/records/load.ts';
-import { emptyDb, migratedDb, migrations } from '#lib/testing.ts';
+import { allowRouteImports, emptyDb, migratedDb, migrations, useDb } from '#lib/testing.ts';
+import { addMember, createSpace } from '#lib/posts/spaces.ts';
+import { FeedList } from '#lib/feed-view.ts';
 import { chooseFeed, entryHref, FeedTabs, MyFeedBody, NewInThread, UNREAD } from '#lib/feed-view.ts';
 import { createAgentKey, createSession } from './keys.ts';
 import { formText, saveForm, type QueriesFormState } from './queries-form.ts';
 import { addQueries, checkQueries, isPublicQuery, joined, markSeen, MAX_QUERIES_TEXT, myFeed, newInThread, openFeed, QueriesError, queryLines, replaceQueries, savedQueries } from './queries.ts';
+
+allowRouteImports();
 
 const yes: Moderator = async () => ({ decision: 'ACCEPT', reason: 'Private fixture accepted.', verification_needed: false, fix: '' });
 const item = (id: string, more: Partial<Item> = {}): Item => ({ id, source: id.split('/')[0], title: `On ${id}`, url: `https://example.org/${id}`,
@@ -43,11 +47,22 @@ const html = (el: Parameters<typeof renderToStaticMarkup>[0]) => renderToStaticM
 const text = (markup: string) => markup.replace(/<[^>]+>/g, ' ').replace(/&#x27;/g, '\'').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 const rejects = async (run: () => Promise<unknown>) => { try { await run(); } catch (e) { return e as QueriesError; } throw new Error('it did not refuse'); };
 
-const mcp = async (db: PGlite, key: string | undefined, name: string, args: object) => {
+/** Runs `run` with the MCP server's switches set as given, and puts them back. */
+async function withMcp<T>(on: { queries?: boolean; spaces?: boolean }, run: () => Promise<T>): Promise<T> {
+	const names = { ORI_MCP_QUERIES: on.queries, ORI_MCP_SPACES: on.spaces };
+	const prior = Object.fromEntries(Object.keys(names).map((n) => [n, process.env[n]]));
+	for (const [n, v] of Object.entries(names)) { if (v) process.env[n] = 'true'; else delete process.env[n]; }
+	try { return await run(); } finally { for (const [n, v] of Object.entries(prior)) { if (v === undefined) delete process.env[n]; else process.env[n] = v; } }
+}
+
+const mcpAsSet = async (db: PGlite, key: string | undefined, name: string, args: object) => {
 	const req = new Request('http://localhost/mcp', { method: 'POST', body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name, arguments: args } }),
 		headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream', ...(key ? { Authorization: `Bearer ${key}` } : {}) } });
 	return (await (await handle(req, async () => db)).json()).result as { isError?: boolean; structuredContent?: Record<string, any>; content: { text: string }[]; _meta?: object };
 };
+
+/** One MCP tool call with the server open to me/queries (ORI_MCP_QUERIES), and closed to spaces as it is by default. */
+const mcp = (db: PGlite, key: string | undefined, name: string, args: object) => withMcp({ queries: true }, () => mcpAsSet(db, key, name, args));
 
 describe('the table', () => {
 	test('is private: row level security with no policy, and no grant to the public or to the Data API roles', async () => {
@@ -126,7 +141,7 @@ describe('saved queries belong to the account', () => {
 		assert.equal((await mcp(db, claude, 'edit', { id: 'me/queries', body: 'cat:math', revision: '2' })).structuredContent!.revision, '3');
 		// The feed, for an agent with no file: log at me/queries is the log narrowed to the saved queries, with q inside it.
 		const feed = await mcp(db, codex, 'log', { path: 'me/queries' });
-		assert.deepEqual(seqs(feed.structuredContent!.entries), seqs((await log(db, {}, { q: 'cat:math' })).entries));
+		assert.deepEqual(seqs(feed.structuredContent!.entries), seqs((await log(db, null, {}, { q: 'cat:math' })).entries));
 		assert.deepEqual(seqs((await mcp(db, codex, 'log', { path: 'me/queries', since: 3 })).structuredContent!.entries), [6]);
 		assert.deepEqual(seqs((await mcp(db, codex, 'log', { path: 'me/queries', q: 'kind:record OR cat:quant-ph' })).structuredContent!.entries), [3, 2]);
 		// Another person's key sees and changes its own, which is empty, and nothing of Ada's.
@@ -213,10 +228,10 @@ describe('My feed', () => {
 			await replaceQueries(db, ada, queries.join('\n'));
 			const feed = await myFeed(db, ada);
 			// The command line joins a file's lines as (a) OR (b) and sends that as q (cli/delphi.mjs queries).
-			const asFile = await logTool(db, { q: joined(queries), limit: 50 }, ada);
+			const asFile = await logTool(db, { q: joined(queries), limit: 50 }, ada, 'rest');
 			assert.deepEqual(seqs(feed.entries), seqs(asFile.entries), queries.join(' | '));
 			assert.ok(feed.entries.length > 0 && feed.entries.length < 7, `${queries.join(' | ')} narrows the log`);
-			assert.deepEqual(seqs((await logTool(db, { path: 'me/queries' }, ada)).entries), seqs(feed.entries));
+			assert.deepEqual(seqs((await logTool(db, { path: 'me/queries' }, ada, 'rest')).entries), seqs(feed.entries));
 			assert.deepEqual(feed.queries, queries);
 		}
 		assert.deepEqual(seqs((await myFeed(db, ada)).entries), [7, 5, 4, 1], 'newest first');
@@ -435,6 +450,130 @@ describe('the read position', () => {
 		const note = html(createElement(NewInThread, { ids: new Set([inTopic.id, 3]), order: [1, 2, inTopic.id, 3] }));
 		assert.match(note, new RegExp(`<a href="#p${inTopic.id}">2 new since your last visit</a>`));
 		assert.equal(html(createElement(NewInThread, { ids: new Set<number>(), order: [1, 2] })), '');
+		await db.close();
+	});
+});
+
+describe('the MCP server and me/queries', () => {
+	test('while its switch is off, no verb finds me/queries over MCP and nothing is stored; REST is not affected', async () => {
+		const { db } = await site();
+		const key = await createAgentKey(db, 'Ada', 'Claude Code');
+		await replaceQueries(db, ada, 'cat:quant-ph');
+		await withMcp({}, async () => {
+			for (const [name, args] of [['get', { id: 'me/queries' }], ['log', { path: 'me/queries' }], ['post', { id: 'me/queries', body: 'cat:math' }], ['edit', { id: 'me/queries', body: 'cat:math', revision: '1' }]] as const) {
+				const r = await mcpAsSet(db, key, name, args);
+				assert.ok(r.isError, name);
+				assert.match(r.content[0].text, /^no me\/queries\. A path: /, name);
+			}
+			// get me is as it was, and the server's instructions do not mention a path it does not serve.
+			assert.equal((await mcpAsSet(db, key, 'get', { id: 'me' })).structuredContent!.login, 'Ada');
+		});
+		assert.deepEqual(await savedQueries(db, 'ada').then((q) => [q.text, q.revision]), ['cat:quant-ph', '1']);
+		// The same functions through the REST door, which the command line and the site use, with the switch still off.
+		await withMcp({}, async () => {
+			assert.deepEqual(seqs((await logTool(db, { path: 'me/queries' }, ada, 'rest')).entries), [5, 4, 1]);
+		});
+		const initialize = async () => {
+			const req = new Request('http://localhost/mcp', { method: 'POST', body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 't', version: '1' } } }),
+				headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' } });
+			return String((await (await handle(req, async () => db)).json()).result.instructions);
+		};
+		assert.doesNotMatch(await withMcp({}, initialize), /me\/queries/);
+		assert.match(await withMcp({ queries: true }, initialize), /me\/queries is the signed-in person's saved queries, private to their account and not moderated/);
+		await db.close();
+	});
+});
+
+describe('My feed and private spaces', () => {
+	const SECRET = 'the sharper constant is 7/4';
+	/** The public site, plus a private space of Ada and Bob with a topic and a reply. Eve is in no space. */
+	async function withSpace() {
+		const s = await site();
+		const space = await createSpace(s.db, ada, { title: 'Draft bound' });
+		await addMember(s.db, space.id, ada, 'bob', 'come and check this');
+		await addMember(s.db, space.id, bob, 'bob');
+		const topic = await startTopic(s.db, ada, { title: 'A sharper endpoint constant?', body: `Unpublished: ${SECRET}.`, space: space.id }, yes);
+		const reply = await post(s.db, { topic: topic.id, space: space.id }, bob, { body: `I get the same: ${SECRET}.` }, yes);
+		for (const who of [ada, bob, eve]) await replaceQueries(s.db, who, 'kind:question\nby:@bob');
+		return { ...s, space: space.id, privateTopic: topic, privateReply: reply };
+	}
+	const paths = (entries: { path: string }[]) => entries.map((e) => e.path);
+	const isPrivate = (path: string) => path.startsWith('ws/');
+
+	test('on the web, over REST and on the command line a member sees their spaces\' posts in My feed; somebody else with the same queries does not', async () => {
+		const { db, space, privateTopic, privateReply } = await withSpace();
+		const question = `ws/${space}/${privateTopic.id}/${privateTopic.question.id}`, answer = `ws/${space}/${privateTopic.id}/${privateReply.id}`;
+		for (const member of [ada, bob]) {
+			const feed = await myFeed(db, member);
+			assert.deepEqual(paths(feed.entries).filter(isPrivate), [answer, question], member.login);
+			// The same entries as log for the same queries, read as the same person through the REST door.
+			assert.deepEqual(paths((await logTool(db, { q: joined(feed.queries) }, member, 'rest')).entries), paths(feed.entries));
+			assert.deepEqual(paths((await logTool(db, { path: 'me/queries' }, member, 'rest')).entries), paths(feed.entries));
+		}
+		const outside = await myFeed(db, eve);
+		assert.deepEqual(paths(outside.entries).filter(isPrivate), []);
+		assert.ok(outside.entries.length > 0 && !JSON.stringify(outside.entries).includes(SECRET));
+		// The public part of the feed is the same for all three.
+		assert.deepEqual(paths((await myFeed(db, ada)).entries).filter((x) => !isPrivate(x)), paths(outside.entries));
+		// The page links a private entry to its topic in the space, and carries the line there like any other thread.
+		const page = html(createElement(FeedList, { entries: (await myFeed(db, ada)).entries, line: 7 }));
+		assert.ok(page.includes(`href="/ws/${space}/${privateTopic.id}?new=7#p${privateReply.id}"`));
+		assert.doesNotMatch(page, /href="\/r\/ws/);
+		assert.equal(entryHref({ kind: 'question', path: question }), `/ws/${space}/${privateTopic.id}#p${privateTopic.question.id}`);
+		assert.equal(entryHref({ kind: 'comment', path: `ws/${space}/members/bob` }, 7, true), '/ws');
+		// What is new in the space's topic since a place, for a member; nothing for somebody who cannot read it.
+		assert.deepEqual([...await newInThread(db, ada, { topic: privateTopic.id }, 7)].sort(), [privateTopic.question.id, privateReply.id].sort());
+		assert.deepEqual([...await newInThread(db, eve, { topic: privateTopic.id }, 7)], []);
+		// Saved queries are a query: membership lines are left out, as they are from log with q. One saved line alone is
+		// that query, so the inbox line behaves as log -q 'to:@me' does, invitations included.
+		assert.deepEqual(paths((await myFeed(db, bob)).entries).filter((x) => x.includes('/members/')), []);
+		await replaceQueries(db, bob, 'to:@me');
+		assert.deepEqual(paths((await myFeed(db, bob)).entries), paths((await logTool(db, { q: 'to:@me' }, bob, 'rest')).entries));
+		await db.close();
+	});
+
+	test('through MCP the feed holds nothing private while spaces are closed to it, and a member\'s posts once they are open', async () => {
+		const { db, space } = await withSpace();
+		const key = await createAgentKey(db, 'Ada', 'Claude Code');
+		const publicOnly = paths((await myFeed(db, eve)).entries);
+		// Closed (the default), with me/queries served: the public entries of the same queries, and no trace of the space.
+		const closed = await withMcp({ queries: true }, () => mcpAsSet(db, key, 'log', { path: 'me/queries' }));
+		assert.deepEqual(paths(closed.structuredContent!.entries), publicOnly);
+		assert.ok(!JSON.stringify(closed).includes(SECRET) && !JSON.stringify(closed).includes(`ws/${space}`));
+		for (const args of [{ path: 'me/queries', since: 0 }, { path: 'me/queries', q: 'sharper OR constant' }, { path: 'me/queries', q: 'by:@me OR kind:question' }]) {
+			const r = await withMcp({ queries: true }, () => mcpAsSet(db, key, 'log', args));
+			assert.ok(!JSON.stringify(r).includes(SECRET) && !JSON.stringify(r).includes('ws/'), JSON.stringify(args));
+		}
+		// Open: the member's feed as REST gives it.
+		const opened = await withMcp({ queries: true, spaces: true }, () => mcpAsSet(db, key, 'log', { path: 'me/queries' }));
+		assert.deepEqual(paths(opened.structuredContent!.entries), paths((await myFeed(db, ada)).entries));
+		assert.ok(JSON.stringify(opened).includes(SECRET));
+		await db.close();
+	});
+
+	test('the Atom form never holds a private post, whatever token comes with it, and me/queries has none', async () => {
+		const { db, space } = await withSpace();
+		const key = await createAgentKey(db, 'Ada', 'Claude Code');
+		useDb(db);
+		try {
+			const { GET } = await import('#app/api/v1/log/route.ts');
+			const ask = (query: string, token?: string) => GET(new Request(`http://localhost/api/v1/log?${query}`, { headers: token ? { Authorization: `Bearer ${token}` } : {} }), { params: Promise.resolve({}) });
+			const q = encodeURIComponent(joined(['kind:question', 'by:@bob']));
+			for (const token of [undefined, key]) {
+				const feed = await ask(`q=${q}&format=atom`, token);
+				assert.equal(feed.status, 200);
+				const xml = await feed.text();
+				assert.match(xml, /<entry>/);
+				assert.ok(!xml.includes(SECRET) && !xml.includes(`ws/${space}`) && !xml.includes('Draft bound'), token ? 'with a member\'s key' : 'as nobody');
+			}
+			// The same query as JSON with the member's key does hold them: the difference is the form, not the query.
+			const mine = await (await ask(`q=${q}`, key)).json();
+			assert.ok(JSON.stringify(mine).includes(SECRET));
+			assert.equal((await ask('path=me/queries&format=atom', key)).status, 401);
+			assert.equal((await ask('path=me/queries&format=atom')).status, 401);
+		} finally {
+			useDb();
+		}
 		await db.close();
 	});
 });

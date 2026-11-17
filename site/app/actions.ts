@@ -8,6 +8,9 @@ import { approveDevice, denyDevice } from '#lib/accounts/device.ts';
 import { authorizeRequest, issueCode, redirectBack } from '#lib/accounts/oauth.ts';
 import { editPost } from '#lib/posts/edit.ts';
 import { accept, votePost } from '#lib/posts/forum.ts';
+import { post } from '#lib/posts/comments.ts';
+import { addMember, createSpace, deleteSpace, removeMember, topicPath } from '#lib/posts/spaces.ts';
+import { FORUM } from '#lib/posts/visibility.ts';
 import { editPublicName } from '#lib/accounts/people.ts';
 import { profilePath } from '#lib/accounts/public-author.ts';
 import { postFeedback, type PostFeedback, type PostFormState } from '#lib/posts/feedback.ts';
@@ -39,8 +42,8 @@ export async function savePostEdit(input: { id: number; body: string; revision: 
 		const who = await me();
 		if (!who) return { ok: false, feedback: { code: 'sign_in', message: 'Sign in before saving.', fix: 'Your draft is kept. Sign in as the post owner and try again.' } };
 		const saved = await editPost(await db(), input.id, who, input);
-		revalidatePath(saved.record_id ? recordPath(saved.record_id) : `/forum/${saved.topic_id}`);
-		if (saved.topic_id) revalidatePath('/forum');
+		revalidatePath(saved.record_id ? recordPath(saved.record_id) : `/${topicPath(saved.space ?? FORUM, saved.topic_id!)}`);
+		if (saved.topic_id && saved.space === FORUM) revalidatePath('/forum');
 		revalidatePath(`/u/${encodeURIComponent(who.login)}`);
 		return { ok: true };
 	} catch (error) {
@@ -69,9 +72,10 @@ export async function sendPost(_previous: PostFormState, form: FormData): Promis
 			record: form.has('record') ? String(form.get('record')) : undefined,
 			review: form.get('review') === 'on',
 			retrieveSources,
+			space: form.has('space') ? String(form.get('space')) : undefined,
 		});
 		revalidatePath(location.split('#')[0]);
-		if (kind === 'question') revalidatePath('/forum');
+		if (kind === 'question' && !form.has('space')) revalidatePath('/forum');
 		return { status: 'posted', location };
 	} catch (error) {
 		return { status: 'failed', draft, feedback: postFeedback(error) };
@@ -96,13 +100,57 @@ export async function votePostOn(form: FormData) {
 	const topic = Number(form.get('topic')), back = `/forum/${topic}`;
 	const who = await signedIn(back);
 	const value = Number(form.get('value')), mine = Number(form.get('mine') ?? 0);
-	await thenBack(back, async () => votePost(await db(), topic, Number(form.get('post')), who, value === mine ? 0 : value));
+	await thenBack(back, async () => votePost(await db(), topic, Number(form.get('post')), who, value === mine ? 0 : value, FORUM));
 }
 
 export async function acceptOn(form: FormData) {
 	const topic = Number(form.get('topic')), back = `/forum/${topic}`;
 	const who = await signedIn(back);
-	await thenBack(back, async () => accept(await db(), topic, Number(form.get('post')), who));
+	await thenBack(back, async () => accept(await db(), topic, Number(form.get('post')), who, FORUM));
+}
+
+// ---- Spaces (/ws). Plain forms: each acts and comes back, with no script needed. ----
+
+const slugOf = (form: FormData) => String(form.get('space') ?? '').replace(/[^a-z0-9-]/g, '');
+
+export async function openSpace(form: FormData) {
+	const who = await signedIn('/ws');
+	let to: string;
+	try {
+		to = `/ws/${(await createSpace(await db(), who, { title: String(form.get('title') ?? ''), about: String(form.get('about') ?? '') })).id}`;
+	} catch (e) {
+		if (!(e instanceof QueryError)) throw e;
+		to = `/ws?notice=${encodeURIComponent(e.message)}`;
+	}
+	redirect(to);
+}
+
+/** Invites the login in the form, or with the person's own login accepts their invitation. */
+export async function addToSpace(form: FormData) {
+	const space = slugOf(form), who = await signedIn('/ws');
+	const own = String(form.get('login') ?? '').replace(/^@/, '').toLowerCase() === who.login.toLowerCase();
+	await thenBack(own ? `/ws/${space}` : `/ws/${space}#members`, async () => addMember(await db(), space, who, String(form.get('login') ?? '').trim(), String(form.get('note') ?? '')));
+}
+
+/** Leaves, declines, or as the creator removes: takes the login in the form off the space. */
+export async function removeFromSpace(form: FormData) {
+	const space = slugOf(form), who = await signedIn('/ws');
+	const login = String(form.get('login') ?? '');
+	await thenBack(login.toLowerCase() === who.login.toLowerCase() ? '/ws' : `/ws/${space}#members`, async () => removeMember(await db(), space, who, login));
+}
+
+/** The creator deletes a space, after typing its slug. */
+export async function dropSpace(form: FormData) {
+	const space = slugOf(form), who = await signedIn('/ws');
+	if (String(form.get('confirm') ?? '').trim() !== space) redirect(`/ws/${space}?notice=${encodeURIComponent('Type the space\'s slug exactly to delete it.')}`);
+	await thenBack('/ws', async () => deleteSpace(await db(), space, who));
+}
+
+/** Choosing an option on a card: a reply to that post whose text is the option. */
+export async function chooseOption(form: FormData) {
+	const space = slugOf(form), topic = Number(form.get('topic')), parent = Number(form.get('post'));
+	const back = `/ws/${space}/${topic}`, who = await signedIn(back);
+	await thenBack(back, async () => post(await db(), { topic, space }, who, { body: String(form.get('option') ?? ''), parent }));
 }
 
 export async function signOut() {

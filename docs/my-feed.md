@@ -26,7 +26,8 @@ at either end go; nothing else changes, so a file that is pushed and pulled agai
 
 ## The table
 
-`open_index.saved_queries` (migration `20261117150000_saved_queries.sql`), one row per person:
+`open_index.saved_queries` (migration `20261117150000_saved_queries.sql`, after `…130000_events.sql` and
+`…140000_spaces.sql`), one row per person:
 
 | Column | What |
 | --- | --- |
@@ -62,6 +63,14 @@ with `site/lib/api/tools-list.json`, taken from the branch this one starts from)
 
 All of them need sign-in there, as `get me` does. The replies use only fields the verbs' schemas already had.
 
+**Over MCP this is switched off by default.** `queriesOverMcp()` (`lib/accounts/queries.ts`, environment variable
+`ORI_MCP_QUERIES=true`) decides whether the MCP server serves `me/queries`. While it is off an MCP caller finds no
+such path, for any of the four verbs, and the server's instructions do not mention it; nothing is stored through
+MCP. The REST API, the command line and the website are not affected. The reason is the first point below: the
+plugin directories reviewed tool descriptions that say `post` and `edit` publish moderated text, so storing private
+text through those tools is behaviour to disclose and have signed off before it is live. It is the same kind of
+switch as `spacesOverMcp()` for private spaces, and independent of it.
+
 Two things about the fit are not perfect, and are stated here and in `/llms.txt` instead of in the tool
 descriptions, which cannot change:
 
@@ -89,9 +98,9 @@ second limit is what keeps "the feed equals `log -f`" true for every saved text.
 The home page has two tabs. **Global feed** is the page as it was: the record list, by rank or by a search. **My
 feed** is `log`, read as the signed-in person, narrowed to their saved queries, newest first, 50 to a page.
 
-- **One read function.** The page calls `log()` in `lib/posts/log.ts` with `any` (the saved lines) and `reader` (the
-  person). `visible(reader)` is the first condition there, so the rule for private spaces, when it lands, covers the
-  feed without a change here. A saved query can then match posts in a space the person is in; their feed shows them.
+- **One read function.** The page calls `log(db, who, scope, opts)` in `lib/posts/log.ts` with the person's login as
+  `who` and the saved lines as `opts.any`. `visible(who)` is the first condition there and `any` only narrows what it
+  lets through, so the one rule for private spaces covers the feed. See "Private spaces" below.
 - **The reader's search cannot leave the saved scope.** The saved lines are parsed one by one and joined as one
   parenthesised condition; the search box's query is parsed on its own and is a second condition. They meet in SQL
   as `(saved) AND (search)`, never as text, so an `OR` or an unbalanced parenthesis in the search has nothing to
@@ -163,6 +172,27 @@ the position does not change the queries' `revision`, so a visit to the website 
 The carried line (`line`, `new`) is a display parameter. It decides which of the posts the reader may see anyway
 get a mark; it reads nothing else and stores nothing.
 
+## Private spaces
+
+A saved query can match a post in a private space (`ws/<slug>/<topic>/<post>`). Who then sees it is decided by the
+log's one rule and by the door the request came through, not by anything in the feed:
+
+| Door | What My feed holds for a member |
+| --- | --- |
+| The website (`/?feed=mine`) | public entries, and the posts of their spaces; a private entry links to `/ws/<slug>/<topic>#p<post>` |
+| REST and the command line (`log me/queries`, `log -f`) | the same |
+| MCP, spaces closed (`ORI_MCP_SPACES` unset, the default) | public entries only: the log is read as nobody, while `@me` still names the caller |
+| MCP, spaces open | the same as REST |
+| Atom (`/log.atom`) | public entries only, always, whatever token came with the request; `me/queries` has no Atom form |
+
+Somebody who is not a member, with the same saved queries, gets the public entries and nothing else. The unread
+marks on a space's topic page come from the same read, so they exist only for a member.
+
+Invitations and acceptances are lines of the log that no query matches: `log` leaves them out when a query is given,
+and saved queries count as a query. The one exception is the same as for `q`: a single saved line that is exactly
+`to:@me` (or `to:@login`) is the inbox, and includes the invitations addressed to that person, as `delphi log -q
+'to:@me'` does. So the feed stays equal to `log -f` of the same file in every case.
+
 ## Plans to check on a production-sized copy
 
 PGlite and a small local Postgres say nothing about plans at size. Before this is switched on in production, run
@@ -188,4 +218,4 @@ PGlite and a small local Postgres say nothing about plans at size. Before this i
 
 - No server-side delivery: no email, no push, nothing scheduled. The feed is read when somebody asks.
 - No per-query read positions on the server, and no way for an agent to read or set the person's.
-- No `section:` term and no private spaces yet; both arrive through `log` and need nothing new here.
+- No `section:` term yet; it arrives through `log` and needs nothing new here.

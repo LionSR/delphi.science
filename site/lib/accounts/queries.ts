@@ -6,13 +6,18 @@
 // account, so the person's browser session and any of their agent keys read and replace it (the path me/queries).
 import type { Db } from '#lib/db.ts';
 import { CodedError, QueryError } from '#lib/errors.ts';
-import { checkQuery, head, log, type LogEntry, type Reader } from '#lib/posts/log.ts';
+import { checkQuery, head, log, type LogEntry } from '#lib/posts/log.ts';
 import type { Voter } from './keys.ts';
 
 /** The path of the saved queries, for get, edit and post. */
 export const QUERIES_PATH = 'me/queries';
 /** The file the command line keeps them in. */
 export const QUERIES_FILE = '~/.delphi/queries';
+/** Whether the MCP server (/mcp) reaches me/queries. Off unless ORI_MCP_QUERIES is "true": the descriptions of the
+ * tools, which the plugin directories reviewed, say that post and edit publish moderated text, and at me/queries
+ * they store private text that no model reads. Until that is disclosed there and signed off, an MCP caller finds no
+ * me/queries at all, for any verb. The REST API, the command line and the website are not affected. */
+export const queriesOverMcp = (env: Record<string, string | undefined> = process.env) => env.ORI_MCP_QUERIES === 'true';
 /** The most text that is stored, comments included. */
 export const MAX_QUERIES_TEXT = 4000;
 /** The longest q that log takes (lib/api/openapi.ts): the queries, joined as `delphi log -f` joins them, must fit it,
@@ -49,13 +54,12 @@ export function checkQueries(given: unknown, login: string): string {
 	if ([...text].length > MAX_QUERIES_TEXT) {
 		throw new QueriesError([{ line: 0, text: '', message: `the text is ${[...text].length} characters, more than ${MAX_QUERIES_TEXT}`, fix: `Keep it to ${MAX_QUERIES_TEXT} characters.` }]);
 	}
-	const reader: Reader = { login };
 	const problems: Problem[] = [];
 	text.split('\n').forEach((raw, i) => {
 		const line = raw.trim();
 		if (!line || line.startsWith('#')) return;
 		try {
-			checkQuery(line, reader);
+			checkQuery(line, login);
 		} catch (e) {
 			if (!(e instanceof QueryError)) throw e;
 			problems.push({ line: i + 1, text: line, message: e.message, fix: e.fix });
@@ -154,7 +158,7 @@ export async function myFeed(db: Db, who: Pick<Voter, 'login'>, opts: { q?: stri
 	const queries = queryLines(mine.text);
 	if (!queries.length) return { queries, entries: [], older: null, seen: mine.seen };
 	const limit = opts.limit ?? FEED_PAGE;
-	const { entries } = await log(db, {}, { any: queries, q: opts.q, before: opts.before, limit: limit + 1, reader: { login: who.login } });
+	const { entries } = await log(db, who.login, {}, { any: queries, q: opts.q, before: opts.before, limit: limit + 1 });
 	const page = entries.slice(0, limit);
 	return { queries, entries: page, older: entries.length > limit ? page.at(-1)!.seq : null, seen: mine.seen };
 }
@@ -190,6 +194,6 @@ export async function newInThread(db: Db, who: Pick<Voter, 'login'> | null, scop
 	if (!who) return new Set();
 	const seen = carried ?? (await savedQueries(db, who.login)).seen;
 	if (seen <= 0) return new Set();
-	const { entries } = await log(db, scope, { since: seen, limit: 200, q: 'NOT kind:record', reader: { login: who.login } });
+	const { entries } = await log(db, who.login, scope, { since: seen, limit: 200, q: 'NOT kind:record' });
 	return new Set(entries.map((e) => Number(e.path.slice(e.path.lastIndexOf('/') + 1))));
 }

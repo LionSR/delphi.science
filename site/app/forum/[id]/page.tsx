@@ -5,6 +5,7 @@ import { cache, type ReactNode } from 'react';
 import type { Post } from '#lib/posts/comments.ts';
 import { db } from '#lib/db.ts';
 import { myPostVotes, topicWithPosts } from '#lib/posts/forum.ts';
+import { FORUM } from '#lib/posts/visibility.ts';
 import { me } from '#lib/accounts/session.ts';
 import { publicNames, type PublicName } from '#lib/accounts/people.ts';
 import { date, recordPath } from '#lib/view.ts';
@@ -20,7 +21,8 @@ import { PostText } from '#app/post-text.tsx';
 export const dynamic = 'force-dynamic';
 
 // Read once per request: the metadata and the page both need it.
-const topicById = cache(async (id: number) => topicWithPosts(await db(), id));
+// The public forum's topics only: a private space's topic has its own page (/ws/<slug>/<n>) and is not found here.
+const topicById = cache(async (id: number) => topicWithPosts(await db(), id, null, FORUM));
 
 type Ctx = { params: Promise<{ id: string }>; searchParams: Promise<{ notice?: string; new?: string }> };
 

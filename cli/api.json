@@ -23,7 +23,17 @@
 				"operationId": "search",
 				"summary": "Search",
 				"description": "Search the index with arXiv-style queries. Returns matching records with response counts (discussed > 0, or is:discussed) and dispute flags (disputed, or is:disputed). Returns one page of records with page URL and discussed response count; pass fields=full or get a record for its full discussion[]. Covers records indexed in Delphi.science (AI-generated research releases, Lean formalizations, and this year's arXiv preprints in math, quant-ph, and hep-th). An empty q lists records newest first; q \"is:discussed\" with sort=responded lists the records with the newest expert responses, each with latest_response. With in=forum it searches the research forum's topics instead, by plain words.",
-				"security": [],
+				"security": [
+					{},
+					{
+						"agentKey": []
+					},
+					{
+						"oauth": [
+							"write"
+						]
+					}
+				],
 				"parameters": [
 					{
 						"name": "q",

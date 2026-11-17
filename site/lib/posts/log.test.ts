@@ -40,10 +40,10 @@ describe('events', () => {
 		assert.deepEqual((await events(db)).map((e) => e.path), [QP.id, NT.id, APP.id, direct.id]);
 		// A record removed and listed again keeps its first event; while it is gone the log does not show it.
 		await db.query('DELETE FROM open_index.records WHERE id = $1', [APP.id]);
-		assert.deepEqual((await log(db, { source: 'app' })).entries, []);
+		assert.deepEqual((await log(db, null, { source: 'app' })).entries, []);
 		await load(db, [APP]);
 		assert.deepEqual((await events(db)).map((e) => e.path), [QP.id, NT.id, APP.id, direct.id]);
-		assert.deepEqual((await log(db, { source: 'app' })).entries.map((e) => [e.seq, e.path]), [[3, APP.id]]);
+		assert.deepEqual((await log(db, null, { source: 'app' })).entries.map((e) => [e.seq, e.path]), [[3, APP.id]]);
 		await db.close();
 	});
 
@@ -63,15 +63,15 @@ describe('events', () => {
 			{ seq: 7, kind: 'comment', path: `forum/${topic.id}/${remark.id}`, voter: 'eve' }, { seq: 8, kind: 'answer', path: `forum/${topic.id}/${second.id}`, voter: 'eve' },
 		]);
 		// The log shows what the post says now: rows only point.
-		const revision = (await log(db, { record: QP.id }, { since: 0 })).entries[0].revision;
+		const revision = (await log(db, null, { record: QP.id }, { since: 0 })).entries[0].revision;
 		await editPost(db, review.id, ada, { body: 'Section 2 holds for open boundary conditions only; see (4).', revision }, yes);
 		assert.equal((await events(db)).length, 8);
-		const thread = (await log(db, { record: QP.id }, { since: 0 })).entries;
+		const thread = (await log(db, null, { record: QP.id }, { since: 0 })).entries;
 		assert.deepEqual(thread.map((e) => [e.seq, e.kind, e.parent, e.body]), [
 			[3, 'review', null, 'Section 2 holds for open boundary conditions only; see (4).'], [4, 'comment', `${QP.id}/${review.id}`, 'With periodic ones the constant doubles.']]);
 		await db.query('DELETE FROM open_index.comments WHERE id = $1', [remark.id]);
 		assert.equal((await events(db)).length, 8, 'the row stays');
-		assert.deepEqual((await log(db, { topic: topic.id }, { since: 0 })).entries.map((e) => e.seq), [5, 6, 8]);
+		assert.deepEqual((await log(db, null, { topic: topic.id }, { since: 0 })).entries.map((e) => e.seq), [5, 6, 8]);
 		await db.close();
 	});
 
@@ -79,7 +79,11 @@ describe('events', () => {
 		const db = emptyDb();
 		const all = migrations(), at = all.findIndex((m) => m.name.endsWith('_events.sql'));
 		assert.ok(at > 0);
-		for (const m of all.slice(0, at)) await db.exec(m.sql);
+		// The code that makes the earlier rows here is today's, which reads a topic's space: so the spaces migration goes
+		// in first (it stands without events until someone is invited), and the events migration over the rows after.
+		const spaces = all.findIndex((m) => m.name.endsWith('_spaces.sql'));
+		assert.ok(spaces > at);
+		for (const m of [...all.slice(0, at), all[spaces]]) await db.exec(m.sql);
 		await load(db, [QP, NT, APP]);
 		await db.query("UPDATE open_index.records SET added_at = '2026-11-01'::timestamptz + (CASE id WHEN $1 THEN 1 WHEN $2 THEN 2 ELSE 3 END) * interval '1 day'", [QP.id, NT.id]);
 		// Post ids with gaps, as a live table has them.
@@ -90,26 +94,26 @@ describe('events', () => {
 		const answer = await post(db, { topic: topic.id }, bob, { body: 'An answer from before.' }, yes);
 		assert.deepEqual([first.id, topic.question.id, answer.id].map(Number), [41, 42, 91]);
 
-		for (const m of all.slice(at)) await db.exec(m.sql);
+		for (const m of all.slice(at).filter((m) => m !== all[spaces])) await db.exec(m.sql);
 		assert.deepEqual(await events(db), [
 			{ seq: -3, kind: 'record', path: QP.id, voter: '' }, { seq: -2, kind: 'record', path: NT.id, voter: '' }, { seq: -1, kind: 'record', path: APP.id, voter: '' },
 			{ seq: 41, kind: 'comment', path: `${QP.id}/41`, voter: 'Ada' }, { seq: 42, kind: 'question', path: `forum/${topic.id}/42`, voter: 'Ada' },
 			{ seq: 91, kind: 'answer', path: `forum/${topic.id}/91`, voter: 'bob' },
 		]);
 		// A since a client held (a post id) means what it meant: the posts after it. Zero is every post, and no old record.
-		assert.deepEqual((await log(db, {}, { since: 41 })).entries.map((e) => e.seq), [42, 91]);
-		assert.deepEqual((await log(db, {}, { since: 0 })).entries.map((e) => e.seq), [41, 42, 91]);
+		assert.deepEqual((await log(db, null, {}, { since: 41 })).entries.map((e) => e.seq), [42, 91]);
+		assert.deepEqual((await log(db, null, {}, { since: 0 })).entries.map((e) => e.seq), [41, 42, 91]);
 		// Newest first, the listing ends in the records that were there, the latest added first.
-		const newest = await log(db);
+		const newest = await log(db, null);
 		assert.deepEqual(newest.entries.map((e) => e.seq), [91, 42, 41, -1, -2, -3]);
 		assert.equal(newest.since, 91);
-		assert.deepEqual((await log(db, {}, { q: 'kind:record' })).since, 0, 'only old records: nothing to move a cursor past');
+		assert.deepEqual((await log(db, null, {}, { q: 'kind:record' })).since, 0, 'only old records: nothing to move a cursor past');
 		// What comes next continues after the largest seq, records and posts in one order, and a reload still adds nothing.
 		const late = item('arxiv/2611.00003');
 		await load(db, [QP, NT, APP, late]);
 		const reply = await comment(db, QP.id, bob, { body: 'A reply after the migration.', parent: first.id }, yes);
 		assert.equal(Number(reply.id), 92);
-		assert.deepEqual((await log(db, {}, { since: 91 })).entries.map((e) => [e.seq, e.kind, e.path]), [[92, 'record', late.id], [93, 'comment', `${QP.id}/92`]]);
+		assert.deepEqual((await log(db, null, {}, { since: 91 })).entries.map((e) => [e.seq, e.kind, e.path]), [[92, 'record', late.id], [93, 'comment', `${QP.id}/92`]]);
 		await load(db, [QP, NT, APP, late]);
 		assert.equal((await events(db)).length, 8);
 		await db.close();
@@ -119,8 +123,9 @@ describe('events', () => {
 describe('the log query', () => {
 	let db: PGlite;
 	let paths: Record<string, string>;
-	const found = async (q: string, opts: Parameters<typeof log>[2] = {}, scope: Parameters<typeof log>[1] = {}) =>
-		(await log(db, scope, { since: 0, q, ...opts })).entries.map((e) => Object.entries(paths).find(([, p]) => p === e.path)?.[0] ?? e.path);
+	// `reader` is who is asking (log's second argument): nobody, unless a test names one.
+	const found = async (q: string, { reader = null, ...opts }: Parameters<typeof log>[3] & { reader?: { login: string } | null } = {}, scope: Parameters<typeof log>[2] = {}) =>
+		(await log(db, reader?.login ?? null, scope, { since: 0, q, ...opts })).entries.map((e) => Object.entries(paths).find(([, p]) => p === e.path)?.[0] ?? e.path);
 
 	before(async () => {
 		db = await migratedDb();
@@ -140,7 +145,7 @@ describe('the log query', () => {
 
 	test('no query is everything, in order', async () => {
 		assert.deepEqual(await found(''), ['qp', 'nt', 'app', 'onQp', 'reply', 'review', 'question', 'answer', 'remark', 'own', 'elsewhere']);
-		assert.deepEqual((await log(db, {}, { limit: 3 })).entries.map((e) => e.path), [paths.elsewhere, paths.own, paths.remark]);
+		assert.deepEqual((await log(db, null, {}, { limit: 3 })).entries.map((e) => e.path), [paths.elsewhere, paths.own, paths.remark]);
 	});
 
 	test('kind: is what happened', async () => {
@@ -160,7 +165,7 @@ describe('the log query', () => {
 		assert.deepEqual(await found('re:app/none'), []);
 		await assert.rejects(found('re:'), /re: needs a record id/);
 		// The records a post names are on its line.
-		assert.deepEqual((await log(db, {}, { q: `re:${NT.id}` })).entries[0].mentions, [NT.id]);
+		assert.deepEqual((await log(db, null, {}, { q: `re:${NT.id}` })).entries[0].mentions, [NT.id]);
 	});
 
 	test('to: is what others addressed to a person: replies to their posts, and posts in their topics', async () => {
@@ -225,10 +230,10 @@ describe('the log query', () => {
 		assert.deepEqual(await found('by:@bob', {}, { record: QP.id }), ['reply']);
 		assert.deepEqual(await found('kind:record', {}, { source: 'arxiv' }), ['qp', 'nt']);
 		assert.deepEqual(await found('kind:record', {}, { record: QP.id }), [], 'a record\'s own log is its thread');
-		const first = await log(db, {}, { since: 0, q: 'NOT kind:record', limit: 3 });
+		const first = await log(db, null, {}, { since: 0, q: 'NOT kind:record', limit: 3 });
 		assert.deepEqual(first.entries.map((e) => e.path), [paths.onQp, paths.reply, paths.review]);
-		const next = await log(db, {}, { since: first.since, q: 'NOT kind:record', limit: 3 });
+		const next = await log(db, null, {}, { since: first.since, q: 'NOT kind:record', limit: 3 });
 		assert.deepEqual(next.entries.map((e) => e.path), [paths.question, paths.answer, paths.remark]);
-		assert.equal((await log(db, {}, { since: 1000, q: 'kind:record' })).since, 1000);
+		assert.equal((await log(db, null, {}, { since: 1000, q: 'kind:record' })).since, 1000);
 	});
 });

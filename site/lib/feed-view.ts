@@ -74,6 +74,11 @@ const KIND: Record<string, string> = { record: 'New record', question: 'Question
 /** The page that shows an entry, as a local link. For a post that is new to the reader it carries the line, so the
  * thread can mark the same posts as new that the feed did. */
 export function entryHref(e: Pick<LogEntry, 'kind' | 'path'>, line = 0, isNew = false): string {
+	// A post in a private space: ws/<slug>/<topic>/<post> is on the topic's page. An invitation or an acceptance
+	// (ws/<slug>/members/<login>) is on the list of spaces. Atom's pageOf never meets these: a feed is read as nobody.
+	const ws = e.path.match(/^ws\/([^/]+)\/(\d+)\/(\d+)$/);
+	if (ws) return `/ws/${ws[1]}/${ws[2]}${isNew && line > 0 ? `?new=${line}` : ''}#p${ws[3]}`;
+	if (e.path.startsWith('ws/')) return '/ws';
 	const page = pageOf(e).slice(SITE.length);
 	if (e.kind === 'record' || !isNew || line <= 0) return page;
 	const [path, anchor] = page.split('#');

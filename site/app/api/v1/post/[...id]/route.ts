@@ -8,6 +8,6 @@ import { PRIVATE } from '#lib/api/cache.ts';
 
 export const POST = operation('post', async ({ params, body, voter, req }) => {
 	if (body.retrieve_sources) requireSourceCheckOrigin(req.headers.get('origin'), false);
-	const out = await postTool(await db(), { ...body, ...params }, voter);
+	const out = await postTool(await db(), { ...body, ...params }, voter, 'rest');
 	return Response.json(out, { status: out.status === 'already_listed' ? 200 : 201, headers: PRIVATE });
 });

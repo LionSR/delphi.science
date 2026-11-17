@@ -132,6 +132,10 @@ li.item .vote { float: right; margin: 0 0 0.3rem 0.8rem; }
 .post-comments { margin-top: 0.6rem; font-size: 0.88rem; }
 .post-comments summary { cursor: pointer; color: var(--accent); font-size: var(--small); margin-top: 0.4rem; }
 .post-comment { padding: 0.35rem 0; border-top: 1px solid var(--rule); }
+/* A post that offers options (spaces): its choices as buttons; one already chosen is marked. */
+.post.card { border-left: 3px solid var(--accent); padding-left: 0.8rem; }
+form.options { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+form.options button[aria-pressed='true'] { color: var(--accent); border-color: var(--accent); }
 .post-feedback { border-left: 3px solid var(--warn); padding: 0.6rem 0.9rem; background: var(--surface); }
 .post-feedback p { margin: 0.4rem 0 0; }
 

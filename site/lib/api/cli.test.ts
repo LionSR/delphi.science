@@ -240,7 +240,7 @@ describe('the command line', () => {
 		assert.deepEqual([refused.status, refused.out], [1, '']);
 		assert.equal(refused.err, 'delphi: not posted: REQUEST_REVISION: The comment states no argument. Add the step or reference that supports it.\n');
 		assert.deepEqual(await delphi(['post', RECORD], '  \n'), { status: 2, out: '', err: 'delphi: the text is empty\n' });
-		assert.equal((await delphi(['post', RECORD, '--title', 'T'], 'A reading.')).err, `delphi: title does not apply to "${RECORD}". Leave title out; it is for a new topic (id forum).\n`);
+		assert.equal((await delphi(['post', RECORD, '--title', 'T'], 'A reading.')).err, `delphi: title does not apply to "${RECORD}". Leave title out; it is for a new topic (id forum, or a space) or a new space (id ws).\n`);
 		assert.equal((await (await api('/api/v1/log')).json()).since, before);
 	});
 

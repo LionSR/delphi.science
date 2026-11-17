@@ -450,7 +450,7 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.equal((await call('POST', at, { body })).status, 401);
 		assert.equal((await call('POST', at, { auth: 'oik_unknown', body })).status, 401);
 		assert.deepEqual((await json('POST', at, { auth: author, body: { ...body, title: 'T' } })).error,
-			{ code: 'bad_request', message: `title does not apply to ${JSON.stringify(discussed)}`, fix: 'Leave title out; it is for a new topic (id forum).' });
+			{ code: 'bad_request', message: `title does not apply to ${JSON.stringify(discussed)}`, fix: 'Leave title out; it is for a new topic (id forum, or a space) or a new space (id ws).' });
 		assert.equal((await json('POST', at, { auth: author, body: {} })).error.message, 'the body needs "body"');
 		assert.equal((await json('POST', '/api/v1/post/forum', { auth: author, body })).error.message, 'a new topic needs a title');
 		assert.equal((await call('POST', '/api/v1/post/me', { auth: author, body })).status, 400);

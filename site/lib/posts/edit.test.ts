@@ -125,7 +125,7 @@ test('question, answer, reply and review edits preserve kind, context, votes and
 	for (const p of await thread(pg, { topic: q.id })) await write(p.id, p.revision, `${p.body} Corrected boundary convention.`, { ...owner, login: p.voter }, async value => { seen.push(value); return yes(value); });
 	assert.deepEqual(seen.map(p => p.kind), ['question', 'answer', 'comment']);
 	assert.match(seen[1].context!.question!, /open chain/); assert.match(seen[2].context!.parent!, /telescopes/);
-	const updated = await topicWithPosts(pg, q.id); assert.equal(updated!.accepted_id, Number(a.id)); assert.equal(updated!.answers[0].score, 1);
+	const updated = await topicWithPosts(pg, q.id, null); assert.equal(updated!.accepted_id, Number(a.id)); assert.equal(updated!.answers[0].score, 1);
 	const r = await comment(pg, record, bot, { body: 'Equation 2 omits the endpoint term.', review: true }, yes);
 	const p = (await thread(pg, { record })).find(p => p.id === Number(r.id))!;
 	await write(p.id, p.revision, 'Equation 3 omits the endpoint term.', bot, async value => { assert.equal(value.kind, 'review'); assert.equal((value.context!.record as { id: string }).id, record); return yes(value); });

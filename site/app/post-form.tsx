@@ -10,7 +10,7 @@ import copy from '#lib/posts/copy.json';
 import { PostFeedbackText } from './post-feedback.tsx';
 import { MAX_BODY } from '#lib/posts/limits.ts';
 
-type Props = { kind: PostInput['kind']; owner: string; topic?: number; parent?: number; record?: string;
+type Props = { kind: PostInput['kind']; owner: string; topic?: number; parent?: number; record?: string; space?: string;
 	back: string; label: string; placeholder: string; button: string; rows?: number };
 const initial: PostFormState = { status: 'idle' };
 // A held post (moderation_review_needed) shows its reason instead of a title.
@@ -22,10 +22,10 @@ const TITLES: Record<string, string> = {
 
 export function PostForm(props: Props) {
 	// Remount for a new author or thread so no draft or result carries over.
-	return <Composer key={JSON.stringify([props.owner, props.kind, props.record, props.topic, props.parent])} {...props} />;
+	return <Composer key={JSON.stringify([props.owner, props.kind, props.record, props.topic, props.parent, props.space])} {...props} />;
 }
 
-function Composer({ kind, owner, topic, parent, record, back, label, placeholder, button, rows = 6 }: Props) {
+function Composer({ kind, owner, topic, parent, record, space, back, label, placeholder, button, rows = 6 }: Props) {
 	const router = useRouter();
 	const [result, action, pending] = useActionState(sendPost, initial);
 	// A form sent without JavaScript is drawn again by the server: a post that failed keeps its text.
@@ -33,7 +33,8 @@ function Composer({ kind, owner, topic, parent, record, back, label, placeholder
 	const [alternate, setAlternate] = useState<Draft>();
 	const [ready, setReady] = useState(false);
 	const [saved, setSaved] = useState(false);
-	const formKey = `${kind}:${record ?? topic ?? 'new'}:${parent ?? 'root'}`;
+	// A space's new-topic draft is its own; the forum's keeps the key it always had.
+	const formKey = `${kind}:${record ?? topic ?? (space ? `new@${space}` : 'new')}:${parent ?? 'root'}`;
 	const login = `/auth/github?next=${encodeURIComponent(back)}`;
 	useEffect(() => {
 		try {
@@ -71,6 +72,7 @@ function Composer({ kind, owner, topic, parent, record, back, label, placeholder
 			{topic !== undefined && <input type="hidden" name="topic" value={topic} />}
 			{parent !== undefined && <input type="hidden" name="parent" value={parent} />}
 			{record !== undefined && <input type="hidden" name="record" value={record} />}
+			{space !== undefined && <input type="hidden" name="space" value={space} />}
 			<fieldset disabled={pending}>
 				{kind === 'question' && <input name="title" required maxLength={200} placeholder="The question or topic, in one line" aria-label="Title" className="grow"
 					value={draft.title} onChange={(e) => setDraft({ ...draft, title: e.target.value })} />}

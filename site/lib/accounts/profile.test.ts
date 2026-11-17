@@ -10,7 +10,14 @@ async function database() {
 	const db = new PGlite();
 	await db.exec(`CREATE SCHEMA open_index;
 		CREATE TABLE open_index.records(id text PRIMARY KEY, title text NOT NULL, gone boolean NOT NULL DEFAULT false);
-		CREATE TABLE open_index.topics(id bigint PRIMARY KEY, title text NOT NULL, question_id bigint);
+		CREATE TABLE open_index.topics(id bigint PRIMARY KEY, title text NOT NULL, question_id bigint, space_id text NOT NULL DEFAULT 'forum');
+		-- Spaces and the visibility rule, as supabase/migrations/20261117140000_spaces.sql makes them.
+		CREATE TABLE open_index.spaces(id text PRIMARY KEY, visibility text NOT NULL DEFAULT 'private');
+		CREATE TABLE open_index.space_members(space_id text NOT NULL, login text NOT NULL, accepted_at timestamptz);
+		INSERT INTO open_index.spaces(id, visibility) VALUES ('forum', 'public');
+		CREATE FUNCTION open_index.can_read(space text, reader text) RETURNS boolean LANGUAGE sql STABLE AS $$
+			SELECT EXISTS (SELECT 1 FROM open_index.spaces s WHERE s.id = $1 AND (s.visibility = 'public'
+				OR EXISTS (SELECT 1 FROM open_index.space_members m WHERE m.space_id = s.id AND m.login = lower($2) AND m.accepted_at IS NOT NULL))) $$;
 		CREATE TABLE open_index.votes(record_id text NOT NULL, voter text NOT NULL, agent text NOT NULL DEFAULT '', value smallint, emoji text, note text, at timestamptz NOT NULL DEFAULT now(), PRIMARY KEY (record_id, voter));
 		CREATE TABLE open_index.comments(id bigint PRIMARY KEY, record_id text, topic_id bigint, parent_id bigint, voter text NOT NULL,
 			agent text NOT NULL DEFAULT '', body text NOT NULL, review boolean NOT NULL DEFAULT false, at timestamptz NOT NULL DEFAULT now());

@@ -2,6 +2,7 @@
 import { db } from '#lib/db.ts';
 import { accept } from '#lib/posts/forum.ts';
 import { operation } from '#lib/api/operation.ts';
+import { FORUM } from '#lib/posts/visibility.ts';
 
 export const POST = operation('acceptAnswer', async ({ params, body, voter }) =>
-	Response.json(await accept(await db(), params.id, body.post, voter)));
+	Response.json(await accept(await db(), params.id, body.post, voter, FORUM)));

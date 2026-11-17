@@ -2,7 +2,7 @@
 // Postgres: each verb's text and JSON, sign-in by the device flow, the log cursor, text through stdin, and exit statuses.
 import { strict as assert } from 'node:assert';
 import { spawn } from 'node:child_process';
-import { mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs';
+import { mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { createServer, type Server } from 'node:http';
 import type { AddressInfo } from 'node:net';
 import { tmpdir } from 'node:os';
@@ -140,12 +140,12 @@ describe('the command line', () => {
 	});
 
 	test('exit statuses: 2 for bad usage, 3 when the server is not reached, 4 when sign-in is needed', async () => {
-		for (const args of [['frobnicate'], ['get'], ['get', RECORD, 'extra'], ['log', '--sinse', '3'], ['log', '--since', 'soon'], ['log', '--since'], ['log', '--new', '--since', '3'], ['help', 'frobnicate'], ['logout', 'now']]) {
+		for (const args of [['frobnicate'], ['get'], ['get', RECORD, 'extra'], ['log', '--sinse', '3'], ['log', '--since', 'soon'], ['log', '--since'], ['log', '--new', '--since', '3'], ['log', '-q'], ['log', '-q', 'kind:record', '-f', 'queries'], ['log', '-f', 'no-such-file'], ['help', 'frobnicate'], ['logout', 'now']]) {
 			const r = await delphi(args);
 			assert.deepEqual([r.status, r.out], [2, ''], args.join(' '));
 			assert.match(r.err, /^delphi: /);
 		}
-		assert.match((await delphi(['log', '--sinse', '3'])).err, /log has no --sinse\. It takes: --since, --limit, --json, --new/);
+		assert.match((await delphi(['log', '--sinse', '3'])).err, /log has no --sinse\. It takes: --q, --since, --limit, -f, --json, --new/);
 		const down = await delphi(['get', RECORD], undefined, { DELPHI_URL: 'http://127.0.0.1:9' });
 		assert.deepEqual([down.status, down.out], [3, '']);
 		assert.match(down.err, /^delphi: cannot reach http:\/\/127\.0\.0\.1:9: /);
@@ -289,13 +289,15 @@ describe('the command line', () => {
 		const fresh = (await ok(['log', '--new'])).split('\n');
 		assert.deepEqual(fresh.map((l) => l.split('\t')[2]), [a, b, undefined]);
 		assert.deepEqual(fresh[1].split('\t').slice(1, 5), ['comment', b, a, 'Test CLI · @Ada']);
-		assert.equal(readFileSync(file('cursor'), 'utf8'), `*\t${b.split('/').at(-1)}\n`);
+		// The cursor is the entry's seq (the first column), not the post's number.
+		const seen = fresh[1].split('\t')[0];
+		assert.equal(readFileSync(file('cursor'), 'utf8'), `*\t${seen}\n`);
 		assert.equal(await ok(['log', '--new']), '');
 		// Each path keeps its own place: the forum has not been read yet, and a quiet record starts at nothing.
 		assert.equal(await ok(['log', 'forum', '--new']), await (await api('/api/v1/log?path=forum&format=text')).text());
 		assert.equal(await ok(['log', QUIET, '--new']), '');
 		const forumNewest = (await (await api('/api/v1/log?path=forum')).json()).since;
-		assert.equal(readFileSync(file('cursor'), 'utf8'), `*\t${b.split('/').at(-1)}\nforum\t${forumNewest}\n${QUIET}\t0\n`);
+		assert.equal(readFileSync(file('cursor'), 'utf8'), `*\t${seen}\nforum\t${forumNewest}\n${QUIET}\t0\n`);
 		const c = header(await ok(['post', QUIET], 'The same reversal appears in equation 2 here.'), 'Id')!;
 		assert.deepEqual((await ok(['log', QUIET, '--new'])).split('\n').map((l) => l.split('\t')[2]), [c, undefined]);
 		// More new posts than a page holds are all listed, a page at a time.
@@ -306,6 +308,46 @@ describe('the command line', () => {
 		const kept = readFileSync(file('cursor'), 'utf8');
 		assert.equal((await delphi(['log', 'nowhere', '--new'])).status, 1);
 		assert.equal(readFileSync(file('cursor'), 'utf8'), kept);
+	});
+
+	test('log -q narrows by a query and -f by any of a file\'s; each query keeps its own cursor; to:@me is the inbox', async () => {
+		const q = 'kind:comment by:@ada';
+		const served = async (query: string, more = '') => (await api(`/api/v1/log?q=${encodeURIComponent(query)}${more}&format=text`)).text();
+		const text = await ok(['log', '-q', q]);
+		assert.ok(text.split('\n').filter(Boolean).length >= 3);
+		assert.equal(text, await served(q));
+		for (const args of [['log', '--q', q], ['log', `--q=${q}`], ['log', `-q=${q}`]]) assert.equal(await ok(args), text, args.join(' '));
+		assert.equal(await ok(['log', RECORD, '-q', 'kind:record']), '');
+		assert.deepEqual((await ok(['log', 'app', '-q', 'kind:record'])).split('\n').filter(Boolean).map((l) => l.split('\t')[2]).sort(), [QUIET, RECORD].sort());
+		assert.deepEqual(JSON.parse(await ok(['log', '-q', q, '--json'])), await (await api(`/api/v1/log?q=${encodeURIComponent(q)}`)).json());
+		// A file of queries, one per line: what matches any of them.
+		const list = join(home, 'queries');
+		writeFileSync(list, `# what I follow\nkind:record source:app\n\n  ${q}\n`);
+		const any = `(kind:record source:app) OR (${q})`;
+		assert.equal(await ok(['log', '-f', list]), await served(any));
+		assert.equal(await ok(['log', '-f', '-'], `${q}\n`), text);
+		assert.equal((await ok(['log', '-f', list])).split('\n').filter(Boolean).length, text.split('\n').filter(Boolean).length + 2);
+		// A bad query is the server's message and fix.
+		const bad = await delphi(['log', '-q', 'kind:paper']);
+		assert.equal(bad.status, 1);
+		assert.match(bad.err, /^delphi: unknown kind:paper\. Use kind:record, /);
+		// --new with a query: its own line in the cursor file, the query after the seq.
+		const before = readFileSync(file('cursor'), 'utf8');
+		assert.equal(await ok(['log', '-f', list, '--new']), await served(any));
+		const newest = (await served(any)).split('\t')[0];
+		assert.equal(readFileSync(file('cursor'), 'utf8'), `${before}*\t${newest}\t${any}\n`);
+		assert.equal(await ok(['log', '-f', list, '--new']), '');
+		const d = header(await ok(['post', RECORD], 'Lemma 3 also needs the endpoint term.'), 'Id')!;
+		assert.deepEqual((await ok(['log', '-f', list, '--new'])).split('\n').map((l) => l.split('\t')[2]), [d, undefined]);
+		// The other cursors did not move with it: the unfiltered one still has this post to show.
+		assert.deepEqual((await ok(['log', '--new'])).split('\n').map((l) => l.split('\t')[2]).includes(d), true);
+		assert.equal(await ok(['log', '-f', list, '--new']), '');
+		// The inbox: replies to the signed-in person, by others. Signed out, the server asks for sign-in (status 4).
+		assert.equal(await ok(['log', '-q', 'to:@me']), '');
+		assert.equal(await ok(['log', '-q', 'by:@me', '--limit', '1']), await served('by:@ada', '&limit=1'));
+		const anonymous = await delphi(['log', '-q', 'to:@me'], undefined, { HOME: mkdtempSync(join(tmpdir(), 'delphi-nobody-')) });
+		assert.deepEqual([anonymous.status, anonymous.out], [4, '']);
+		assert.match(anonymous.err, /^delphi: sign-in required\. .*delphi login/);
 	});
 
 	test('logout revokes the key on the server and deletes the file; then acting for a person needs sign-in again', async () => {

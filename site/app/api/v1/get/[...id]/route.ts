@@ -9,7 +9,7 @@ import { SITE } from '#lib/view.ts';
 
 export const GET = operation('get', async ({ params, voter }) => {
 	// me without a token: over MCP a sign-in challenge, here the API's 401.
-	const out = await getTool(await db(), params, voter ?? null).catch((e) => {
+	const out = await getTool(await db(), params, voter ?? null, 'rest').catch((e) => {
 		throw e instanceof SignIn ? new ApiError(401, 'sign_in', 'sign-in required', `Send Authorization: Bearer <agent key>. See ${SITE}/llms.txt for device-authorization instructions.`) : e;
 	});
 	// A reply to a signed-in caller is theirs alone.

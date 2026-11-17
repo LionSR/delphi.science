@@ -13,7 +13,7 @@ export const GET = operation('log', async ({ query: { format, ...args }, voter }
 	// A feed is public: it is read as nobody, whatever token came with the request.
 	const who = format === 'atom' ? null : voter ?? null;
 	// to:@me, or ws, without a token: over MCP a sign-in challenge, here the API's 401.
-	const out = await logTool(await db(), args, who).catch((e) => {
+	const out = await logTool(await db(), args, who, 'rest').catch((e) => {
 		throw e instanceof SignIn ? new ApiError(401, 'sign_in', 'sign-in required', `to:@me, by:@me and ws name the caller: send Authorization: Bearer <agent key> (${SITE}/llms.txt), or name the person, e.g. to:@login.`) : e;
 	});
 	// A reply to a signed-in caller may hold their private spaces' posts: it is theirs alone, and never cached for others.

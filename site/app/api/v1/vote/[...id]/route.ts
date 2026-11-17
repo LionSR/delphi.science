@@ -8,5 +8,5 @@ import { PRIVATE } from '#lib/api/cache.ts';
 
 export const POST = operation('vote', async ({ params, body, voter, req }) => {
 	if (body.retrieve_sources) requireSourceCheckOrigin(req.headers.get('origin'), false);
-	return Response.json(await voteTool(await db(), { ...body, ...params }, voter), { headers: PRIVATE });
+	return Response.json(await voteTool(await db(), { ...body, ...params }, voter, 'rest'), { headers: PRIVATE });
 });

@@ -61,7 +61,7 @@ export async function pathText(db: Db, id: string): Promise<string> {
 	const t = await resolve(db, id, null);
 	if (t.kind !== 'record' && t.kind !== 'topic' && t.kind !== 'post') throw new NotFoundError(`no text form of ${JSON.stringify(id)}`, 'A record, a forum topic and a post have one.');
 	// Through JSON, as the API replies: times become strings.
-	const thing = JSON.parse(JSON.stringify(await getTool(db, { id }, null)));
+	const thing = JSON.parse(JSON.stringify(await getTool(db, { id }, null, 'rest')));
 	if (t.kind === 'post') return show(thing);
 	const thread = JSON.parse(JSON.stringify(await posts(db, t.kind === 'record' ? { record: t.record } : { topic: t.topic, ...(t.space === FORUM ? { forum: true as const } : { space: t.space }) }))) as LogEntry[];
 	if (!thread.length) return show(thing);

@@ -66,6 +66,13 @@ async function api(method: string, pathAndQuery: string, who?: string, body?: un
 	return { status: res.status, text, json, cache: res.headers.get('cache-control') ?? '' };
 }
 
+/** Runs `run` with the MCP server open to spaces, or closed to them (the default), and puts the switch back. */
+async function mcpSpaces<T>(on: boolean, run: () => Promise<T>): Promise<T> {
+	const prior = process.env.ORI_MCP_SPACES;
+	if (on) process.env.ORI_MCP_SPACES = 'true'; else delete process.env.ORI_MCP_SPACES;
+	try { return await run(); } finally { if (prior === undefined) delete process.env.ORI_MCP_SPACES; else process.env.ORI_MCP_SPACES = prior; }
+}
+
 /** One MCP tool call, as `who` or as nobody: its text, and whether it is an error. */
 async function tool(name: string, args: object, who?: string) {
 	const req = new Request('http://localhost/mcp', { method: 'POST', body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name, arguments: args } }),
@@ -198,23 +205,37 @@ describe('the life of a space, through the six verbs', () => {
 		assert.deepEqual(postOptions('Options: only one').options, [], 'one option is no choice');
 	});
 
-	test('anyone leaves; only the creator removes a member or deletes the space', async () => {
-		assert.match((await api('POST', `/api/v1/vote/ws/${slug}/members/alice`, 'bob', { value: 0 })).json.error.message, /only the creator of a space can remove a member/);
-		assert.match((await api('POST', `/api/v1/vote/ws/${slug}`, 'bob', { value: 0 })).json.error.message, /only its creator can delete a space/);
-		assert.match((await api('POST', `/api/v1/vote/ws/${slug}`, 'alice', { value: 1 })).json.error.message, /a space is not voted on/);
-		assert.match((await api('POST', `/api/v1/vote/ws/${slug}/members/bob`, 'alice', { value: 1 })).json.error.message, /a member is not voted on/);
-		// Carol declines her invitation; Bob leaves; Alice invites him back and then removes him.
+	test('anyone leaves by a vote; removing a member and deleting the space are operations of their own, not votes', async () => {
+		// No vote removes someone else or deletes a space, whoever casts it.
+		for (const who of ['alice', 'bob']) {
+			assert.match((await api('POST', `/api/v1/vote/ws/${slug}`, who, { value: 0 })).json.error.message, /a space is not voted on/);
+			assert.match((await api('POST', `/api/v1/vote/ws/${slug}`, who, { value: 1 })).json.error.message, /a space is not voted on/);
+		}
+		assert.match((await api('POST', `/api/v1/vote/ws/${slug}/members/bob`, 'alice', { value: 0 })).json.error.message, /a vote takes back only your own place/);
+		assert.match((await api('POST', `/api/v1/vote/ws/${slug}/members/bob`, 'alice', { value: 0 })).json.error.fix, new RegExp(`DELETE /api/v1/ws/${slug}/members/bob`));
+		assert.match((await api('POST', `/api/v1/vote/ws/${slug}/members/bob`, 'bob', { value: 1 })).json.error.message, /a member is not voted on/);
+		assert.deepEqual((await members(pg, slug, 'alice'))!.map((m) => m.login), ['alice', 'bob', 'carol'], 'and nothing was removed');
+		// Only the creator removes or deletes, by the operations named for it.
+		assert.match((await api('DELETE', `/api/v1/ws/${slug}/members/alice`, 'bob')).json.error.message, /only the creator of a space can remove a member/);
+		assert.match((await api('DELETE', `/api/v1/ws/${slug}`, 'bob')).json.error.message, /only its creator can delete a space/);
+		assert.equal((await api('DELETE', `/api/v1/ws/${slug}`)).status, 401);
+		// Carol declines her invitation and Bob leaves, each by taking back their own place.
 		assert.deepEqual((await api('POST', `/api/v1/vote/ws/${slug}/members/carol`, 'carol', { value: 0 })).json, { id: `ws/${slug}/members/carol` });
 		assert.equal((await api('POST', `/api/v1/vote/ws/${slug}/members/bob`, 'bob', { value: 0 })).status, 200);
 		assert.equal((await api('GET', `/api/v1/get/ws/${slug}`, 'bob')).status, 404, 'having left, he no longer reads it');
+		// Alice invites him back and then removes him; her agent does it for her.
 		await addMember(pg, slug, alice, 'bob');
 		await addMember(pg, slug, bob, 'bob');
-		assert.equal((await api('POST', `/api/v1/vote/ws/${slug}/members/bob`, 'alice-agent', { value: 0 })).status, 200, 'her agent removes for her');
+		assert.deepEqual((await api('DELETE', `/api/v1/ws/${slug}/members/bob`, 'alice-agent')).json, { removed: `ws/${slug}/members/bob` });
 		assert.deepEqual((await members(pg, slug, 'alice'))!.map((m) => m.login), ['alice']);
-		assert.equal((await api('POST', `/api/v1/vote/ws/${slug}/members/bob`, 'alice', { value: 0 })).status, 404, 'nobody to remove');
+		assert.equal((await api('DELETE', `/api/v1/ws/${slug}/members/bob`, 'alice')).status, 404, 'nobody to remove');
+		// The last member does not vote a space away: leaving would delete it, and that is said, not done.
+		const last = await api('POST', `/api/v1/vote/ws/${slug}/members/alice`, 'alice', { value: 0 });
+		assert.match(last.json.error.message, /you are the last member, and leaving would delete the space/);
+		assert.ok(await space(pg, slug, 'alice'));
 		// Deleting takes the topics and posts with it.
 		const topic = (await topics(pg, 'alice', { space: slug })).questions[0].id;
-		assert.deepEqual((await api('POST', `/api/v1/vote/ws/${slug}`, 'alice', { value: 0 })).json, { id: `ws/${slug}` });
+		assert.deepEqual((await api('DELETE', `/api/v1/ws/${slug}`, 'alice')).json, { deleted: `ws/${slug}` });
 		assert.equal(await space(pg, slug, 'alice'), null);
 		assert.equal((await pg.query('SELECT 1 FROM open_index.topics WHERE id = $1 UNION ALL SELECT 1 FROM open_index.comments WHERE topic_id = $1', [topic])).rows.length, 0);
 		assert.deepEqual(await mySpaces(pg, 'alice'), []);
@@ -373,9 +394,12 @@ describe('nothing private leaks', () => {
 					['POST', `vote/ws/${slug}/members/alice`, `vote/ws/${ghost}/members/alice`, { value: 0 }],
 					['POST', `vote/ws/${slug}/members/bob`, `vote/ws/${ghost}/members/bob`, { value: 0 }],
 				];
+				writes.push(['DELETE', `ws/${slug}`, `ws/${ghost}`, {}], ['DELETE', `ws/${slug}/members/alice`, `ws/${ghost}/members/alice`, {}], ['DELETE', `ws/${slug}/members/bob`, `ws/${ghost}/members/bob`, {}]);
 				// Posting their own login to the member list lets nobody in who was not invited. (Carol was: that is her acceptance, tried last.)
-				if (who && who !== 'carol') writes.push(['POST', `post/ws/${slug}/members`, `post/ws/${ghost}/members`, { body: who }], ['POST', `vote/ws/${slug}/members/${who}`, `vote/ws/${ghost}/members/${who}`, { value: 0 }]);
-				for (const [method, real, none, body] of writes) {
+				if (who && who !== 'carol') writes.push(['POST', `post/ws/${slug}/members`, `post/ws/${ghost}/members`, { body: who }], ['POST', `vote/ws/${slug}/members/${who}`, `vote/ws/${ghost}/members/${who}`, { value: 0 }],
+					['DELETE', `ws/${slug}/members/${who}`, `ws/${ghost}/members/${who}`, {}]);
+				for (const [method, real, none, sent] of writes) {
+					const body = method === 'DELETE' ? undefined : sent;
 					const got = await api(method, `/api/v1/${real}`, who, body), absent = await api(method, `/api/v1/${none}`, who, body);
 					assert.equal(got.status, who ? 404 : 401, `${method} ${real}: ${got.text}`);
 					assert.deepEqual(blind(got, slug, topic, firstPost, davePost), blind(absent, ghost, noTopic, noPost), `${method} ${real} answers as ${none}`);
@@ -417,7 +441,7 @@ describe('nothing private leaks', () => {
 				}
 			});
 
-			test('each MCP tool shows and changes nothing of it', async () => {
+			for (const on of [false, true]) test(`each MCP tool shows and changes nothing of it, with spaces ${on ? 'open' : 'closed'} to MCP`, () => mcpSpaces(on, async () => {
 				const ghost = 'reading-group-zzzzz', noTopic = 987654, noPost = 987655;
 				const same = async (name: string, real: object, none: object) => {
 					const got = await tool(name, real, who), absent = await tool(name, none, who);
@@ -443,12 +467,14 @@ describe('nothing private leaks', () => {
 					const got = await tool(name, args, who);
 					assert.equal(got.error, false, `${name} ${JSON.stringify(args)}: ${got.text}`);
 					assert.ok(!JSON.stringify({ ...got.out, query: undefined }).includes(SECRET), `${name} ${JSON.stringify(args)} shows private text`);
-					if (who !== 'carol') assert.ok(!got.text.includes(slug), `${name} ${JSON.stringify(args)} names the space`);
+					if (who !== 'carol' || !on) assert.ok(!got.text.includes(slug), `${name} ${JSON.stringify(args)} names the space`);
 				}
 				const mine = await tool('log', { path: 'ws' }, who), spaces = await tool('get', { id: 'ws' }, who);
-				if (!who) assert.deepEqual([mine.error, spaces.error], [true, true], 'nobody signed in is asked to sign in');
+				if (!who || !on) assert.deepEqual([mine.error, spaces.error], [true, true], 'nobody signed in is asked to sign in; closed, ws names nothing');
+				// Closed to MCP, not even Carol's invitation is there to read.
+				if (!on) for (const args of [{}, { since: 0, limit: 200 }]) assert.ok(!(await tool('log', args, who)).text.includes(slug));
 				for (const got of [mine, spaces]) assert.ok(!got.text.includes(SECRET) && (who === 'carol' || !got.text.includes(slug)));
-			});
+			}));
 
 			test('the log\'s query, its Atom feed and the text forms of pages have nothing of it', async () => {
 				const ghost = 'reading-group-zzzzz', noTopic = 987654, noPost = 987655;
@@ -554,13 +580,16 @@ describe('nothing private leaks', () => {
 			assert.ok((await api('GET', '/api/v1/log?path=ws', who)).json.entries.every((e: { path: string }) => e.path.startsWith('ws/')));
 			assert.ok((await api('GET', '/api/v1/log?path=forum', who)).json.entries.every((e: { path: string }) => e.path.startsWith('forum/')), 'the forum\'s log is the forum\'s');
 			assert.deepEqual((await api('GET', `/api/v1/find?in=forum&q=${SECRET}`, who)).json.results.map((r: { id: string }) => r.id), [`ws/${slug}/${topic}`]);
-			const viaMcp = await tool('get', { id: `ws/${slug}/${topic}` }, who);
-			assert.deepEqual([viaMcp.error, viaMcp.out!.title], [false, `The ${SECRET} lemma`]);
-			assert.equal((await tool('log', { path: `ws/${slug}` }, who)).out!.entries.length, 6, 'three posts, the invitations to Bob and Carol, and Bob\'s acceptance (Dave\'s lines went with him)');
-			assert.equal((await tool('search', { in: 'forum', q: 'lemma' }, who)).out!.results[0].id, `ws/${slug}/${topic}`);
+			await mcpSpaces(true, async () => {
+				const viaMcp = await tool('get', { id: `ws/${slug}/${topic}` }, who);
+				assert.deepEqual([viaMcp.error, viaMcp.out!.title], [false, `The ${SECRET} lemma`]);
+				assert.equal((await tool('log', { path: `ws/${slug}` }, who)).out!.entries.length, 6, 'three posts, the invitations to Bob and Carol, and Bob\'s acceptance (Dave\'s lines went with him)');
+				assert.equal((await tool('search', { in: 'forum', q: 'lemma' }, who)).out!.results[0].id, `ws/${slug}/${topic}`);
+				assert.ok((await tool('log', { since: 0, limit: 200 }, who)).text.includes(SECRET));
+			});
 		}
 		// Writing: a reply from the agent, a vote and an accept from the people.
-		const reply = await tool('post', { id: `ws/${slug}/${topic}`, body: `An agent's ${SECRET} answer.` }, 'alice-agent');
+		const reply = await mcpSpaces(true, () => tool('post', { id: `ws/${slug}/${topic}`, body: `An agent's ${SECRET} answer.` }, 'alice-agent'));
 		assert.equal(reply.error, false, reply.text);
 		const id = reply.out!.id as string;
 		assert.deepEqual((await api('POST', `/api/v1/vote/${id}`, 'bob', { value: 1 })).json, { id, score: 1 });
@@ -583,6 +612,49 @@ describe('nothing private leaks', () => {
 		assert.equal((await api('POST', `/api/v1/forum/${topic}`, 'alice', { body: 'By the forum\'s route.' })).status, 404);
 		assert.equal(moderated.filter((m) => m.includes(SECRET)).length, 0);
 	});
+
+	test('closed to MCP (the default), a member\'s own tools find no ws path and read nothing private; REST is unaffected', () => mcpSpaces(false, async () => {
+		const ghost = 'reading-group-zzzzz', noTopic = 987654, noPost = 987655;
+		const hide = (t: string) => [slug, ghost, topic, noTopic, firstPost, noPost].reduce<string>((x, n) => x.replace(new RegExp(`\\b${n}\\b`, 'g'), '#'), t);
+		const count = async () => (await pg.query<{ n: number }>('SELECT (SELECT count(*) FROM open_index.comments) + (SELECT count(*) FROM open_index.spaces) + (SELECT count(*) FROM open_index.space_members) + (SELECT count(*) FROM open_index.post_votes) AS n')).rows[0].n;
+		const before = await count();
+		for (const who of ['alice', 'alice-agent', 'bob']) {
+			const calls: [string, object, object][] = [
+				['get', { id: 'ws' }, { id: 'zz' }],
+				['get', { id: `ws/${slug}` }, { id: `ws/${ghost}` }], ['get', { id: `ws/${slug}/${topic}` }, { id: `ws/${ghost}/${noTopic}` }],
+				['get', { id: `ws/${slug}/${topic}/${firstPost}` }, { id: `ws/${ghost}/${noTopic}/${noPost}` }], ['get', { id: `ws/${slug}/members` }, { id: `ws/${ghost}/members` }],
+				['get', { id: `forum/${topic}` }, { id: `forum/${noTopic}` }], ['get', { id: `forum/${topic}/${firstPost}` }, { id: `forum/${noTopic}/${noPost}` }],
+				['log', { path: `ws/${slug}` }, { path: `ws/${ghost}` }], ['log', { path: `ws/${slug}/${topic}` }, { path: `ws/${ghost}/${noTopic}` }],
+				['post', { id: 'ws', title: 'A space', body: 'By MCP.' }, { id: 'zz', title: 'A space', body: 'By MCP.' }],
+				['post', { id: `ws/${slug}`, title: 'T', body: 'A topic.' }, { id: `ws/${ghost}`, title: 'T', body: 'A topic.' }],
+				['post', { id: `ws/${slug}/${topic}`, body: 'An answer.' }, { id: `ws/${ghost}/${noTopic}`, body: 'An answer.' }],
+				['post', { id: `forum/${topic}`, body: 'An answer.' }, { id: `forum/${noTopic}`, body: 'An answer.' }],
+				['post', { id: `ws/${slug}/members`, body: 'eve' }, { id: `ws/${ghost}/members`, body: 'eve' }],
+				['edit', { id: `ws/${slug}/${topic}/${firstPost}`, body: 'Mine.', revision: '1' }, { id: `ws/${ghost}/${noTopic}/${noPost}`, body: 'Mine.', revision: '1' }],
+				['vote', { id: `ws/${slug}/${topic}/${firstPost}`, value: 1 }, { id: `ws/${ghost}/${noTopic}/${noPost}`, value: 1 }],
+				['vote', { id: `ws/${slug}/members/bob`, value: 0 }, { id: `ws/${ghost}/members/bob`, value: 0 }],
+				['vote', { id: `ws/${slug}`, value: 0 }, { id: `ws/${ghost}`, value: 0 }],
+			];
+			for (const [name, real, none] of calls) {
+				const got = await tool(name, real, who), absent = await tool(name, none, who);
+				assert.equal(got.error, true, `${name} ${JSON.stringify(real)} as ${who}: ${got.text}`);
+				assert.equal(hide(got.text).replace('no ws.', 'no zz.'), hide(absent.text), `${name} ${JSON.stringify(real)} as ${who} answers as for a path that names nothing`);
+				assert.ok(!got.text.includes('Spaces:'), 'and the refusal does not speak of spaces');
+			}
+			for (const [name, args] of [['search', { in: 'forum' }], ['search', { in: 'forum', q: SECRET }], ['search', { in: 'forum', q: 'lemma' }], ['log', {}], ['log', { since: 0, limit: 200 }],
+				['log', { path: 'forum' }], ['log', { q: SECRET, since: 0 }], ['log', { q: 'to:@me', since: 0 }], ['log', { q: 'by:@me', since: 0 }], ['log', { path: `forum/${topic}` }], ['get', { id: 'me' }]] as [string, object][]) {
+				const got = await tool(name, args, who);
+				assert.equal(got.error, false, `${name} ${JSON.stringify(args)} as ${who}: ${got.text}`);
+				assert.ok(!JSON.stringify({ ...got.out, query: undefined }).includes(SECRET) && !got.text.includes(slug), `${name} ${JSON.stringify(args)} as ${who} reads something private`);
+			}
+			// The public things a signed-in MCP caller did before still work: @me names them, and they post to the forum.
+			assert.ok((await tool('log', { q: 'by:@me', since: 0 }, who)).out!.entries.every((e: { by: string; path: string }) => e.by === (who === 'bob' ? 'bob' : 'alice') && !e.path.startsWith('ws/')));
+			// And the same person by REST, at the same moment, reads their space.
+			assert.equal((await api('GET', `/api/v1/get/ws/${slug}/${topic}`, who)).status, 200);
+		}
+		assert.equal(await count(), before, 'nothing was written through MCP');
+		assert.equal((await tool('get', { id: `forum/${publicTopic}` }, 'alice')).error, false);
+	}));
 
 	test('an invitation, once accepted, opens the whole history; a removed member gets nothing more', async () => {
 		assert.equal((await api('POST', `/api/v1/post/ws/${slug}/members`, 'carol', { body: 'carol' })).status, 201);
@@ -608,6 +680,6 @@ describe('the MCP tools as listed', () => {
 		const req = new Request('http://localhost/mcp', { method: 'POST', body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/list', params: {} }),
 			headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' } });
 		const text = await (await mcp(req, async () => pg)).text();
-		assert.equal(createHash('sha256').update(text).digest('hex'), '53579a04571a5f6346712255acfdedf110f6ff422d139b95f5cb10ab0a31d276');
+		assert.equal(createHash('sha256').update(text).digest('hex'), 'dcddc49cde2488ba3105477e81c74b05141d93a70964c89aa2b3edada6681a12');
 	});
 });

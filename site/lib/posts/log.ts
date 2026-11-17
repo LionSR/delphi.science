@@ -148,7 +148,9 @@ const memberEntry = (e: MemberRow): LogEntry => ({
 	subject: e.title, body: e.accepted ? `@${e.login} accepted the invitation and joined ws/${e.space}` : `invited @${e.login} to ws/${e.space}${e.note ? `: ${e.note}` : ''}`, revision: '0', mentions: [],
 });
 
-export type LogOptions = { since?: number; limit?: number; q?: string };
+export type LogOptions = { since?: number; limit?: number; q?: string;
+	/** Read as nobody, while @me in a query still names `who`: how the MCP server reads while spaces are closed to it. */
+	publicOnly?: boolean };
 
 /** One page of the log in `scope`, as `who` may read it, narrowed by a query: the newest entries, newest first; or
  * with since (a seq), the entries after it, oldest first. The reply's since is the largest seq seen, to send next time. */
@@ -157,7 +159,9 @@ export async function log(db: Db, who: Reader, scope: Scope = {}, opts: LogOptio
 	const since = Number.isSafeInteger(opts.since) ? opts.since : undefined;
 	const direction = since === undefined ? 'DESC' : 'ASC';
 	const c = new EventCompiler(who);
-	const conditions = [visible(c.p(who))];
+	const sees = opts.publicOnly ? null : who;
+	// First in the list, and nothing below loosens it.
+	const conditions = [visible(c.p(sees))];
 	if (since !== undefined) conditions.push(`e.seq > ${c.p(since)}`);
 	// One record's log is its thread: the posts on it. That the record itself came in is not news under its own path.
 	if (scope.record !== undefined) conditions.push(`e.record_id = ${c.p(scope.record)} AND ${POST}`);
@@ -176,8 +180,8 @@ export async function log(db: Db, who: Reader, scope: Scope = {}, opts: LogOptio
 	// about records and posts. Nobody signed in has any.
 	const wholeLog = !Object.keys(scope).length;
 	let events: MemberRow[] = [];
-	if (who !== null && !q && scope.topic === undefined && (wholeLog || scope.spaces || scope.space !== undefined)) {
-		const a: unknown[] = [limit, who];
+	if (sees !== null && !q && scope.topic === undefined && (wholeLog || scope.spaces || scope.space !== undefined)) {
+		const a: unknown[] = [limit, sees];
 		// The person invited reads their invitation; a space's members read its invitations and acceptances.
 		const m = [`((m.login = lower($2) AND NOT e.accepted) OR ${READABLE('m.space_id', '$2')})`, "s.visibility = 'private'"];
 		if (since !== undefined) { a.push(since); m.push(`e.seq > $${a.length}`); }

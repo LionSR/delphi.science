@@ -25,14 +25,17 @@ const SLUG = /^[a-z0-9][a-z0-9-]{0,47}$/;
 const isRecord = async (db: Db, id: string) => (await db.query('SELECT 1 FROM open_index.records WHERE id = $1', [id])).rows.length > 0;
 
 /** What a path names, for `who`. Throws NotFoundError for a path that names nothing here, and the same for a space
- * `who` cannot read, or anything in it. */
-export async function resolve(db: Db, given: unknown, who: Reader): Promise<Target> {
+ * `who` cannot read, or anything in it. With `spaces` false no ws path names anything, for anyone: that is how the
+ * MCP server reads paths while spaces are closed to it (lib/posts/spaces.ts spacesOverMcp). */
+export async function resolve(db: Db, given: unknown, who: Reader, { spaces = true } = {}): Promise<Target> {
 	const path = typeof given === 'string' ? given.trim().replace(/^\/+|\/+$/g, '') : '';
 	if (!path) return { kind: 'all' };
 	if (path.length > 320) throw new QueryError('the path is too long', PATH_HELP);
 	if (path === 'me' || path === 'records' || path === 'forum') return { kind: path };
-	if (path === 'ws') return { kind: 'spaces' };
 	const parts = path.split('/');
+	// Closed: ws is a word like any other that names no source.
+	if (parts[0] === 'ws' && !spaces) throw new NotFoundError(`no ${path}`, PATH_HELP);
+	if (path === 'ws') return { kind: 'spaces' };
 	if (parts[0] === 'ws') {
 		const none = () => new NotFoundError(`no ${path}`, SPACE_HELP);
 		const space = parts[1];

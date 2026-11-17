@@ -6,4 +6,4 @@ import { FORUM, PRIVATE, RECORDS } from '#lib/api/cache.ts';
 
 // With a token, in=forum also finds the topics of the caller's private spaces, and that reply is theirs alone.
 export const GET = operation('search', async ({ query, voter }) =>
-	Response.json(await searchTool(await db(), query, voter ?? null), { headers: voter ? PRIVATE : { ...(query.in === 'forum' ? FORUM : RECORDS), Vary: 'Authorization' } }));
+	Response.json(await searchTool(await db(), query, voter ?? null, 'rest'), { headers: voter ? PRIVATE : { ...(query.in === 'forum' ? FORUM : RECORDS), Vary: 'Authorization' } }));

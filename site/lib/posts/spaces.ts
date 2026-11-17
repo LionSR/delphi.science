@@ -30,6 +30,12 @@ export const CREATABLE: readonly Visibility[] = ['private'];
 /** The longest line of text an invitation may carry; 0 turns invitation notes off. */
 export const MAX_INVITE_NOTE = 200;
 
+/** Whether the MCP server (/mcp) reaches private spaces. Off unless ORI_MCP_SPACES is "true": the plugin directories
+ * reviewed tools that read and write public content only, so until their descriptions say otherwise an MCP caller,
+ * signed in or not, finds no ws path and reads nothing private (lib/api/mcp-tools.ts). REST, the command line and the
+ * website are not affected. Turn it on in the release that carries the reworded tool descriptions. */
+export const spacesOverMcp = (env: Record<string, string | undefined> = process.env) => env.ORI_MCP_SPACES === 'true';
+
 /** A person's posts in private spaces in a day, their agents' included: generous, a guard against a broken loop only. */
 export const PRIVATE_POSTS_PER_DAY = 2000;
 
@@ -152,8 +158,11 @@ export async function acceptInvitation(db: Db, id: string, who: Voter): Promise<
 }
 
 /** Takes a login off a space: a person leaves or declines their own invitation, or the creator removes someone or
- * withdraws an invitation. When the last member leaves, the space goes with them. */
-export async function removeMember(db: Db, id: string, who: Voter, given: string) {
+ * withdraws an invitation. When the last member leaves, the space goes with them.
+ * `ownOnly` is how the six verbs call it (vote, value 0): there a person only takes back their own place, and never
+ * the last one, so no vote removes another person or deletes a space. Those two are for the website and for the
+ * operations named for them (removeSpaceMember, deleteSpace). */
+export async function removeMember(db: Db, id: string, who: Voter, given: string, { ownOnly = false } = {}) {
 	const login = normalizeProfileLogin(given.replace(/^@/, ''));
 	const own = sameLogin(login, who.login);
 	// Their own row is theirs to drop, invited or member. Anyone else's needs a member who can see the list.
@@ -164,8 +173,12 @@ export async function removeMember(db: Db, id: string, who: Voter, given: string
 		throw new NotFoundError(`@${login} is not in ws/${id}`, `get ws/${id}/members lists who is.`);
 	}
 	if (!own) {
+		if (ownOnly) throw new QueryError('a vote takes back only your own place in a space', `Its creator removes a member on the space's page, or with DELETE /api/v1/ws/${id}/members/${login}.`);
 		const s = (await space(db, id, who.login))!;
 		if (!sameLogin(s.creator, who.login)) throw new QueryError('only the creator of a space can remove a member', `Anyone can leave: vote 0 on ws/${id}/members/${who.login.toLowerCase()}.`);
+	}
+	if (ownOnly && m.accepted_at && (await db.query('SELECT 1 FROM open_index.space_members WHERE space_id = $1 AND accepted_at IS NOT NULL AND login <> $2 LIMIT 1', [id, login])).rows.length === 0) {
+		throw new QueryError('you are the last member, and leaving would delete the space', `Delete it on its page, or with DELETE /api/v1/ws/${id}.`);
 	}
 	await db.query('DELETE FROM open_index.space_members WHERE space_id = $1 AND login = $2', [id, login]);
 	await db.query(`DELETE FROM open_index.spaces s WHERE s.id = $1 AND s.id <> '${FORUM}'

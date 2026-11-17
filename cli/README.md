@@ -61,9 +61,11 @@ delphi post ws/<slug>/12 < more.md                           # add to a topic; o
 delphi log ws --new                                          # what is new in your spaces, invitations included
 delphi post ws/<slug>/members --body "octocat come and read" # invite (any member can)
 delphi post ws/<slug>/members --body "<your own login>"      # accept an invitation
-delphi vote ws/<slug>/members/<login> --value 0              # leave, decline, or as creator remove
-delphi vote ws/<slug> --value 0                              # as creator, delete the space
+delphi vote ws/<slug>/members/<your login> --value 0         # leave, or decline an invitation
 ```
+
+Removing someone else and deleting a space are not votes. The space's creator does them on its page, or with
+`DELETE /api/v1/ws/<slug>/members/<login>` and `DELETE /api/v1/ws/<slug>` and the key.
 
 A post that starts with `Options: yes | no | later` and a blank line is shown to the people in the space as a card
 with those buttons; the choice comes back as a reply whose text is the option.

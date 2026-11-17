@@ -297,6 +297,27 @@ const core = {
 				responses: { 200: { description: 'Revoked', content: { 'application/json': { schema: { type: 'object', properties: { revoked: { type: 'string' } } } } } }, 400: err, 401: err, 404: err },
 			},
 		},
+		'/api/v1/ws/{slug}': {
+			delete: {
+				operationId: 'deleteSpace',
+				...write,
+				summary: 'Delete a private space with its topics, posts and member list. Only its creator can, and it cannot be undone. Not one of the six verbs, so that nothing deletes a space by accident.',
+				parameters: [{ name: 'slug', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 48 }, description: 'The space, as in its path ws/<slug>.' }],
+				responses: { 200: { description: 'Deleted', content: { 'application/json': { schema: { type: 'object', required: ['deleted'], properties: { deleted: { type: 'string', description: 'The path of the space that is gone.' } } } } } }, 400: err, 401: err, 404: err },
+			},
+		},
+		'/api/v1/ws/{slug}/members/{login}': {
+			delete: {
+				operationId: 'removeSpaceMember',
+				...write,
+				summary: 'Take a person off a private space: its creator removes a member or withdraws an invitation; anyone removes themselves (when the last member leaves, the space is deleted).',
+				parameters: [
+					{ name: 'slug', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 48 }, description: 'The space, as in its path ws/<slug>.' },
+					{ name: 'login', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 40 }, description: 'GitHub login of the member or invited person.' },
+				],
+				responses: { 200: { description: 'Removed', content: { 'application/json': { schema: { type: 'object', required: ['removed'], properties: { removed: { type: 'string', description: 'The path of the membership that is gone.' } } } } } }, 400: err, 401: err, 404: err },
+			},
+		},
 		'/api/v1/keys/device': {
 			post: {
 				operationId: 'requestAgentKey',

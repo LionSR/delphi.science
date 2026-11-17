@@ -90,7 +90,10 @@ seq, read only through `log()`. Its `path` column says `forum/<topic>/<post>` fo
 path from the topic's space instead (`ws/<slug>/<topic>/<post>`). An invitation to a space and its acceptance are not
 rows of `events`; they are two seqs on the member's row (`open_index.space_members.invited_seq`, `accepted_seq`),
 drawn from the events sequence under the same ordering lock, and `log()` merges them in: the person invited reads
-the invitation, the space's members read both. They are left out when the log is narrowed by a query.
+the invitation, the space's members read both. They are left out when the log is narrowed by a query,
+with one exception: when the whole query is `to:@login` (or `to:@me`), an invitation sent to that person and the
+acceptance of one they sent are included, so the inbox holds invitations. A `to:` inside a larger query is decided
+over posts only.
 
 ## To check on a production-sized copy
 

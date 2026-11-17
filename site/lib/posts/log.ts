@@ -176,16 +176,21 @@ export async function log(db: Db, who: Reader, scope: Scope = {}, opts: LogOptio
 	const rows = (await db.query<Row>(
 		`${EVENTS} AND ${conditions.join(' AND ')} ORDER BY e.seq ${direction} LIMIT ${c.p(limit)}`, c.params)).rows;
 
-	// Membership lines belong to the whole log, to ws, and to one space; not to one topic, and not to a query, which is
-	// about records and posts. Nobody signed in has any.
+	// Membership lines belong to the whole log, to ws, and to one space, not to one topic. A query is about records and
+	// posts and leaves them out, with one exception: the inbox. When the whole query is to:@login (or to:@me), an
+	// invitation sent to that person is addressed to them, and so is the acceptance of one they sent. A to: inside a
+	// larger query (OR, NOT, other terms) is decided over posts only. Nobody signed in has any of these lines.
 	const wholeLog = !Object.keys(scope).length;
+	const named = q?.match(/^to:@?([a-z0-9][a-z0-9_-]*)$/i)?.[1].toLowerCase();
+	const to = named === 'me' ? who?.toLowerCase() : named;
 	let events: MemberRow[] = [];
-	if (sees !== null && !q && scope.topic === undefined && (wholeLog || scope.spaces || scope.space !== undefined)) {
+	if (sees !== null && (!q || to) && scope.topic === undefined && (wholeLog || scope.spaces || scope.space !== undefined)) {
 		const a: unknown[] = [limit, sees];
 		// The person invited reads their invitation; a space's members read its invitations and acceptances.
 		const m = [`((m.login = lower($2) AND NOT e.accepted) OR ${READABLE('m.space_id', '$2')})`, "s.visibility = 'private'"];
 		if (since !== undefined) { a.push(since); m.push(`e.seq > $${a.length}`); }
 		if (scope.space !== undefined) { a.push(scope.space); m.push(`m.space_id = $${a.length}`); }
+		if (to) { a.push(to); m.push(`((NOT e.accepted AND m.login = $${a.length}) OR (e.accepted AND lower(m.invited_by) = $${a.length}))`); }
 		events = (await db.query<MemberRow>(`SELECT * FROM (${MEMBER_EVENTS} AND ${m.join(' AND ')}) x ORDER BY seq ${direction} LIMIT $1`, a)).rows;
 	}
 

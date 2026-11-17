@@ -176,6 +176,15 @@ describe('the life of a space, through the six verbs', () => {
 		assert.match((await api('GET', `/api/v1/get/ws/${slug}/members/bob`, 'bob')).json.body, /To accept, post your login/);
 		assert.equal((await api('GET', `/api/v1/get/ws/${slug}`, 'bob')).status, 404);
 
+		// The invitation is addressed to him: it is in his inbox (to:@me), and in nobody else's who cannot read the space.
+		const inbox = (who: string, q = 'to:@me') => api('GET', `/api/v1/log?since=0&q=${encodeURIComponent(q)}`, who).then((r) => r.json.entries.map((e: Record<string, string>) => e.path));
+		assert.deepEqual(await inbox('bob'), [`ws/${slug}/members/bob`]);
+		assert.deepEqual(await inbox('bob', 'to:@Bob'), [`ws/${slug}/members/bob`]);
+		assert.deepEqual(await inbox('alice', 'to:@bob'), [`ws/${slug}/members/bob`], 'a member of the space sees whom it invited');
+		assert.deepEqual(await inbox('eve', 'to:@bob'), [], 'a stranger asking after Bob learns nothing');
+		assert.deepEqual((await api('GET', '/api/v1/log?since=0&q=to:@bob')).json.entries, []);
+		assert.deepEqual(await inbox('bob', 'to:@me OR kind:review'), [], 'only when to: is the whole query');
+		assert.ok(!(await tool('log', { q: 'to:@me', since: 0 }, 'bob')).text.includes(slug), 'and not through MCP while spaces are closed to it');
 		// He accepts by posting his own login, and reads all of it, earlier posts included.
 		const mark = (await api('GET', '/api/v1/log', 'alice')).json.since;
 		const accepted = await api('POST', `/api/v1/post/ws/${slug}/members`, 'bob', { body: 'bob' });
@@ -183,6 +192,8 @@ describe('the life of a space, through the six verbs', () => {
 		assert.deepEqual((await api('GET', `/api/v1/log?since=${mark}`, 'alice')).json.entries.map((e: Record<string, string>) => [e.path, e.by, e.text]),
 			[[`ws/${slug}/members/bob`, 'bob', `@bob accepted the invitation and joined ws/${slug}`]]);
 		assert.equal((await api('GET', `/api/v1/log?path=ws/${slug}`, 'bob')).json.entries.length, 5, 'three posts, the invitation and the acceptance');
+		assert.deepEqual(await inbox('alice'), [`ws/${slug}/members/bob`], 'the acceptance of an invitation she sent is addressed to her');
+		assert.deepEqual(await inbox('bob'), [`ws/${slug}/members/bob`], 'his invitation stays in his inbox; his own acceptance is not sent to him');
 		assert.deepEqual((await api('GET', `/api/v1/get/ws/${slug}/members`, 'bob')).json.authors, ['alice', 'bob']);
 		// Members are equal: Bob invites too.
 		assert.equal((await api('POST', `/api/v1/post/ws/${slug}/members`, 'bob', { body: 'carol' })).status, 201);
@@ -495,6 +506,8 @@ describe('nothing private leaks', () => {
 				// to:@me is the caller's inbox: nothing of the space in it for an outsider, Dave included, whose post there was replied to.
 				const inbox = await api('GET', '/api/v1/log?since=0&q=to:@me', who);
 				if (!who) assert.equal(inbox.status, 401);
+				// Carol's inbox holds her invitation, and that alone; nobody else's names the space.
+				else if (who === 'carol') assert.deepEqual(inbox.json.entries.map((e: { path: string; text: string }) => [e.path, e.text]), [[`ws/${slug}/members/carol`, `invited @carol to ws/${slug}: come and read with us`]]);
 				else assert.ok(inbox.status === 200 && !inbox.text.includes(SECRET) && !inbox.text.includes(slug));
 				// The feed and the text forms are public: read as nobody, whatever token comes with the request.
 				const { GET: feed } = await import(`${APP.href}/log.atom/route.ts`);

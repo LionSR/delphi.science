@@ -110,7 +110,7 @@ export async function getTool(db: Db, { id }: { id: string }, who: Caller) {
 }
 
 /** A log entry as the tools return it: its text on one line and cut short (get its path for the whole). */
-const logLine = ({ body, revision: _, ...e }: LogEntry) => ({ ...e, text: truncate(body.replace(/\s+/g, ' ').trim(), 280) });
+export const logLine = ({ body, revision: _, ...e }: LogEntry) => ({ ...e, text: truncate(body.replace(/\s+/g, ' ').trim(), 280) });
 
 export type LogArgs = { path?: string; q?: string; since?: number; limit?: number };
 export async function logTool(db: Db, { path = '', q, since, limit }: LogArgs, who: Caller = null) {

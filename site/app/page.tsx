@@ -15,6 +15,12 @@ export const dynamic = 'force-dynamic';
 
 type Params = Promise<{ q?: string; sort?: string; page?: string; notice?: string }>;
 
+// Every query has a feed: the new records that match it and the discussion about them (lib/posts/atom.ts).
+export async function generateMetadata({ searchParams }: { searchParams: Params }) {
+	const q = ((await searchParams).q ?? '').trim();
+	return { alternates: { types: { 'application/atom+xml': `/log.atom${q ? `?q=${encodeURIComponent(q)}` : ''}` } } };
+}
+
 export default async function Home({ searchParams }: { searchParams: Params }) {
 	const { q = '', sort = q ? 'relevance' : 'week', page: rawPage, notice } = await searchParams;
 	const page = pageParam(rawPage);

@@ -29,6 +29,10 @@ const priorFetch = globalThis.fetch, priorKey = process.env.DEEPSEEK_API_KEY;
 function route(path: string) {
 	const verb = path.match(/^\/api\/v1\/(get|post|edit|vote)\/(.+)$/);
 	if (verb) return { file: `/api/v1/${verb[1]}/[...id]`, params: { id: verb[2].split('/').map(decodeURIComponent) } as Record<string, string | string[]> };
+	// The text form of a page (next.config.ts rewrites /r/<id>.txt and /forum/<n>.txt here) and the feed.
+	const txt = path.match(/^\/txt\/(.+)$/);
+	if (txt) return { file: '/txt/[...id]', params: { id: txt[1].split('/') } as Record<string, string | string[]> };
+	if (path === '/log.atom') return { file: '/log.atom', params: {} };
 	const tmpl = Object.keys(spec.paths).filter((p) => new RegExp(`^${p.replace(/\{[^}]+\}/g, '[^/]+')}$`).test(path))
 		.sort((a, b) => (a.match(/\{/g)?.length ?? 0) - (b.match(/\{/g)?.length ?? 0))[0];
 	if (!tmpl) return undefined;
@@ -348,6 +352,60 @@ describe('the command line', () => {
 		const anonymous = await delphi(['log', '-q', 'to:@me'], undefined, { HOME: mkdtempSync(join(tmpdir(), 'delphi-nobody-')) });
 		assert.deepEqual([anonymous.status, anonymous.out], [4, '']);
 		assert.match(anonymous.err, /^delphi: sign-in required\. .*delphi login/);
+	});
+
+	test('the text form of a page is what get prints: a post alone; a thread with a line and then a block for each post', async () => {
+		const text = async (path: string) => { const r = await api(`/txt/${path}`); return { status: r.status, type: r.headers.get('content-type'), body: await r.text() }; };
+		// One post: exactly what get prints, so it can be edited and sent back.
+		const post = await text(comment);
+		assert.deepEqual([post.status, post.type], [200, 'text/plain; charset=utf-8']);
+		assert.equal(post.body, await ok(['get', comment]));
+		// A record with no posts is the record alone.
+		const lone = 'app/cli-lone';
+		await load(pg, [{ id: lone, source: 'app', title: 'A record nobody discussed', url: `https://example.org/${lone}`, summary: 'Nothing was said about it.', published: '2026-11-02' }]);
+		assert.equal((await text(lone)).body, await ok(['get', lone]));
+		// A thread: the record, then the log's line for each post, oldest first, then each post as get prints it.
+		const thread = (await text(RECORD)).body;
+		const lines = await (await api(`/api/v1/log?path=${RECORD}&since=0&limit=200&format=text`)).text();
+		const posts = lines.trimEnd().split('\n').map((l) => l.split('\t')[2]);
+		assert.ok(posts.length >= 3 && posts.includes(comment));
+		const blocks = [await ok(['get', RECORD]), lines];
+		for (const p of posts) blocks.push(await ok(['get', p]));
+		assert.equal(thread, blocks.join('\n'));
+		// A topic the same way: its headers and question, a line for each post, then the posts.
+		const topic = (await ok(['log', 'forum', '--json']).then(JSON.parse)).entries[0].path.split('/').slice(0, 2).join('/');
+		const forum = (await text(topic)).body;
+		assert.ok(forum.startsWith(await ok(['get', topic])));
+		assert.ok(forum.includes(`\n${await (await api(`/api/v1/log?path=${topic}&since=0&format=text`)).text()}\n`));
+		// What has no text form says so, and what is not there is not found.
+		for (const [path, status] of [['forum', 404], ['arxiv', 404], ['me', 404], ['app/none', 404], ['forum/999999', 404], [`${RECORD}/999999`, 404]] as const) {
+			assert.equal((await text(path)).status, status, path);
+		}
+	});
+
+	test('the feed has the entries of log for the same path and query, without sign-in', async () => {
+		const seqs = (xml: string) => [...xml.matchAll(/<entry>\n<id>[^<]*#(-?\d+)<\/id>/g)].map((m) => Number(m[1]));
+		for (const query of ['', `path=${RECORD}`, 'q=kind%3Arecord', `path=forum&q=${encodeURIComponent('by:@ada')}`, 'limit=2']) {
+			const feed = await api(`/log.atom${query && `?${query}`}`);
+			assert.deepEqual([feed.status, feed.headers.get('content-type')], [200, 'application/atom+xml; charset=utf-8'], query);
+			const xml = await feed.text();
+			const page = await (await api(`/api/v1/log${query && `?${query}`}`)).json();
+			assert.deepEqual(seqs(xml), page.entries.map((e: { seq: number }) => e.seq), query);
+			assert.deepEqual(seqs(xml), (await ok(['log', ...(new URLSearchParams(query).get('path') ? [new URLSearchParams(query).get('path')!] : []),
+				...(new URLSearchParams(query).get('q') ? ['-q', new URLSearchParams(query).get('q')!] : []), ...(new URLSearchParams(query).get('limit') ? ['--limit', '2'] : [])]))
+				.split('\n').filter(Boolean).map((l) => Number(l.split('\t')[0])), query);
+			// Well-formed where it matters to a reader: one feed, its own address, a title and link per entry, text escaped.
+			assert.match(xml, /^<\?xml version="1\.0" encoding="utf-8"\?>\n<feed xmlns="http:\/\/www\.w3\.org\/2005\/Atom">/);
+			assert.equal((xml.match(/<entry>/g) ?? []).length, (xml.match(/<\/entry>/g) ?? []).length);
+			assert.ok(!/<(?!\/?(feed|title|id|link|updated|entry|author|name|category|summary)\b|\?xml)/.test(xml), query);
+		}
+		// Every post links to its place on its page, and a record to its page.
+		const xml = await (await api(`/log.atom?path=app`)).text();
+		assert.ok(xml.includes(`href="https://delphi.science/r/${RECORD}"`));
+		assert.match(xml, new RegExp(`href="https://delphi\\.science/r/${RECORD}#p\\d+"`));
+		// The inbox is not public: a feed is read as nobody, with or without a key.
+		assert.equal((await api('/log.atom?q=to%3A%40me')).status, 401);
+		assert.equal((await priorFetch(`${url}/log.atom?q=to%3A%40me`, { headers: { Authorization: `Bearer ${readFileSync(file('key'), 'utf8').trim()}` } })).status, 401);
 	});
 
 	test('logout revokes the key on the server and deletes the file; then acting for a person needs sign-in again', async () => {

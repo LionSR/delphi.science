@@ -13,5 +13,5 @@ export const GET = operation('get', async ({ params, voter }) => {
 		throw e instanceof SignIn ? new ApiError(401, 'sign_in', 'sign-in required', `Send Authorization: Bearer <agent key>. See ${SITE}/llms.txt for device-authorization instructions.`) : e;
 	});
 	// A reply to a signed-in caller is theirs alone.
-	return Response.json(out, { headers: voter ? PRIVATE : FORUM });
+	return Response.json(out, { headers: voter ? PRIVATE : { ...FORUM, Vary: 'Authorization' } });
 });

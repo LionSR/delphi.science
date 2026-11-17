@@ -601,7 +601,8 @@ const refusals = { 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 5
 const verbPaths = {
 	'/api/v1/find': {
 		get: {
-			operationId: 'search', ...open,
+			// A token is optional: with one, in=forum also finds the topics of the caller's private spaces (lib/posts/spaces.ts).
+			operationId: 'search', security: [{}, ...signedIn],
 			summary: 'Search',
 			description: `${searchOp.summary} Returns one page of records with page URL and discussed response count; pass fields=full or get a record for its full discussion[]. ${COVERS} An empty q lists records newest first; q "is:discussed" with sort=responded lists the records with the newest expert responses, each with latest_response. With in=forum it searches the research forum's topics instead, by plain words.`,
 			parameters: [
@@ -612,7 +613,7 @@ const verbPaths = {
 				limitParam, pageParam, cursorParam,
 				{ ...fieldsParam, description: `Records only. ${fieldsParam.description}` },
 			],
-			responses: { 200: json('One page of records, or with in=forum of topics', 'SearchPage'), 400: err },
+			responses: { 200: json('One page of records, or with in=forum of topics', 'SearchPage'), 400: err, 401: err },
 		},
 	},
 	'/api/v1/get/{id}': {
@@ -626,7 +627,8 @@ const verbPaths = {
 	},
 	'/api/v1/log': {
 		get: {
-			operationId: 'log', ...open,
+			// A token is optional: with one, the log also holds the posts of the caller's private spaces and their invitations.
+			operationId: 'log', security: [{}, ...signedIn],
 			summary: 'List posts',
 			description: `List the posts made on ${NAME} itself (comments and reviews on records, forum questions, answers and comments), one line each: seq, kind, path, parent, author, time, score, subject, and the text cut short. path narrows it to one record's thread, one source, the forum, or one topic. Without since, the newest first; with since, the posts after that seq, oldest first, so it can be followed. Empty when there are none. (Responses linked from elsewhere are in a record's discussion[], from get.)`,
 			parameters: [
@@ -637,7 +639,7 @@ const verbPaths = {
 			],
 			responses: { 200: { description: 'The posts, and the seq to send as since next time', content: {
 				'application/json': { schema: { $ref: '#/components/schemas/LogPage' } }, 'text/plain': { schema: { type: 'string' } },
-			} }, 400: err, 404: err },
+			} }, 400: err, 401: err, 404: err },
 		},
 	},
 	'/api/v1/post/{id}': {

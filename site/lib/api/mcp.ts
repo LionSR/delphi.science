@@ -92,7 +92,11 @@ export const TOOLS: Record<string, ToolDef> = Object.fromEntries(VERBS.map((name
 /** How ChatGPT learns which tools need the account linked (Apps SDK: per-tool securitySchemes). Both: usable at once,
  * and linking unlocks more. */
 const NO_AUTH = { type: 'noauth' }, OAUTH = { type: 'oauth2', scopes: [SCOPE] };
-export const securitySchemes = (name: string) => ({ none: [NO_AUTH], required: [OAUTH], optional: [NO_AUTH, OAUTH] })[TOOLS[name]?.auth ?? 'none'];
+// What tools/list declares is what the plugin directories reviewed, and is kept as it was: search and log are listed as
+// needing no account. They do take a token when the client sends one (it adds the caller's private spaces to what they
+// read), which the REST operations declare as optional sign-in.
+const LISTED: Record<string, Auth> = { search: 'none', log: 'none' };
+export const securitySchemes = (name: string) => ({ none: [NO_AUTH], required: [OAUTH], optional: [NO_AUTH, OAUTH] })[LISTED[name] ?? TOOLS[name]?.auth ?? 'none'];
 
 function server(db: () => Promise<Db>, who: Caller): McpServer {
 	const s = new McpServer({ name: 'open-research-index', title: NAME, version: '2.0.0', websiteUrl: SITE }, { instructions: INSTRUCTIONS });

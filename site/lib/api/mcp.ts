@@ -15,6 +15,7 @@ import { NAME, recordPath, SITE } from '#lib/view.ts';
 import { voterFromKey, type Voter } from '#lib/accounts/keys.ts';
 import { challenge, SCOPE } from '#lib/accounts/oauth.ts';
 import { comment, comments, post } from '#lib/posts/comments.ts';
+import { editPost } from '#lib/posts/edit.ts';
 import { accept, startTopic, topics, topicWithPosts, votePost } from '#lib/posts/forum.ts';
 import { unvote, vote } from '#lib/records/votes.ts';
 import { submit } from '#lib/records/submit.ts';
@@ -190,6 +191,8 @@ const voteOnForumPost = (db: Db, a: { topic: number; post: number; value: number
 
 const acceptForumAnswer = (db: Db, a: { topic: number; post: number }, who: Voter) => accept(db, a.topic, a.post, who);
 
+const editOwnPost = (db: Db, a: { id: number; body: string; revision: string }, who: Voter) => editPost(db, a.id, who, a);
+
 /** An operation's JSON body as a tool's input: its properties without `agent` (the token carries the name), after `first`. */
 const body = (id: string, first: Record<string, Json> = {}, required: string[] = []): Json => {
 	const { agent: _agent, ...properties } = inline(operationById(id).body!.properties) as Record<string, Json>;
@@ -303,6 +306,12 @@ export const TOOLS: Record<string, ToolDef> = {
 		title: 'Comment on a record',
 		description: `Post a comment or a review (review: true) on a record, or reply to a comment with parent. Record IDs in the body are linked as mentions. ${PUBLIC} ${MODERATED}`,
 		inputSchema: schema(body('postComment', { id: RECORD_ID }, ['id'])), outputSchema: schema(Comment), annotations: ADDS, signIn: true, work: postComment,
+	},
+	edit_post: {
+		title: 'Edit a post',
+		description: `${operationById('editPost').summary} Works for record comments, reviews and forum posts; take id and revision from list_record_comments or get_forum_topic. Replaces the post's text, and the earlier text is not kept. ${PUBLIC} ${MODERATED}`,
+		inputSchema: schema(body('editPost', { id: { type: 'integer', minimum: 1, description: 'Post id from list_record_comments or get_forum_topic.' } }, ['id'])),
+		outputSchema: schema(inline(components.EditedPost)), annotations: REPLACES, signIn: true, work: editOwnPost,
 	},
 	submit_record: {
 		title: 'Submit a record',

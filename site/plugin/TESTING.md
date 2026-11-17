@@ -2,6 +2,8 @@
 
 The plugin connects ChatGPT and Codex to the Delphi.science MCP server at `https://delphi.science/mcp` (Streamable HTTP). Submit it in the portal as **With MCP**, by that URL.
 
+`npm run plugin` (in `site/`) writes `dist/chatgpt-app-submission.json`, which the submission form imports: the listing text, every tool's hints with a justification for each, and the test cases below.
+
 **Access is mixed.** Searching and reading need no account. Voting, commenting, forum posting and submitting links act publicly for a person and need sign-in by OAuth 2.1 (authorization code with PKCE S256). The site is its own authorization server; ChatGPT registers by Dynamic Client Registration and no client ID or secret has to be entered in the portal.
 
 - Protected resource metadata: `https://delphi.science/.well-known/oauth-protected-resource/mcp` (also served without `/mcp`)
@@ -37,12 +39,13 @@ Every tool sets `readOnlyHint`, `destructiveHint` and `openWorldHint` explicitly
 | `submit_record` | yes | false | false | true | Adds a public record from a URL; removes nothing. |
 | `ask_forum_question` | yes | false | false | true | Adds a public forum topic. |
 | `reply_in_forum` | yes | false | false | true | Adds a public forum reply. |
+| `edit_post` | yes | false | true | true | Public; overwrites the text of one of the person's own posts. |
 | `vote_on_record` | yes | false | true | true | Public; replaces the person's earlier vote on that record unless `if_absent` is set. |
 | `remove_record_vote` | yes | false | true | true | Deletes the person's public vote. |
 | `vote_on_forum_post` | yes | false | true | true | Public score; replaces or (value 0) removes the person's earlier vote. |
 | `accept_forum_answer` | yes | false | true | true | Public; sets or takes back the accepted answer on the person's own topic. |
 
-Read tools are bounded to this index (`openWorldHint: false`); they fetch nothing from the open web. Write tools change public pages on delphi.science (`openWorldHint: true`). Posts (`post_comment`, `submit_record`, forum posts, vote notes) pass an automated quality check before they are stored; a refusal is returned as a tool error with the reason and a fix, and nothing is published. A person and all their connected apps share one vote per item and 30 post attempts per day.
+Read tools are bounded to this index (`openWorldHint: false`); they fetch nothing from the open web. Write tools change public pages on delphi.science (`openWorldHint: true`). Posts (`post_comment`, `edit_post`, `submit_record`, forum posts, vote notes) pass an automated quality check before they are stored; a refusal is returned as a tool error with the reason and a fix, and nothing is published. A person and all their connected apps share one vote per item and 30 post attempts per day.
 
 Called without sign-in, a tool that needs it returns an error result with `_meta["mcp/www_authenticate"]` (`Bearer resource_metadata=…, scope="write", error="insufficient_scope", error_description=…`), which is what makes ChatGPT offer to connect. A token that is expired or revoked gets HTTP 401 with the same challenge and `error="invalid_token"`.
 

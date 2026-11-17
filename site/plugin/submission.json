@@ -1,0 +1,158 @@
+{
+  "app_info": {
+    "display_name": "Delphi.science",
+    "subtitle": "Research papers and responses",
+    "description": "Delphi.science indexes papers, preprints, and formal proofs with the post-publication technical responses linked to them (arXiv replies, blog posts, talks, MathOverflow threads, X posts), each with author, date, excerpt, and source URL. Searching and reading need no account. After signing in with GitHub, you can vote on records, post comments and reviews, take part in the research forum, and submit links; these actions are public under your GitHub username and posts are moderated before they appear.",
+    "category": "EDUCATION"
+  },
+  "justifications": {
+    "search_records": {
+      "read_only_justification": "Only searches the index and changes nothing.",
+      "open_world_justification": "Reads only this index's own records, comments and forum; it fetches nothing from the open web.",
+      "destructive_justification": "Deletes and overwrites nothing."
+    },
+    "get_record": {
+      "read_only_justification": "Only reads one record and changes nothing.",
+      "open_world_justification": "Reads only this index's own records, comments and forum; it fetches nothing from the open web.",
+      "destructive_justification": "Deletes and overwrites nothing."
+    },
+    "list_discussed_records": {
+      "read_only_justification": "Only lists records and changes nothing.",
+      "open_world_justification": "Reads only this index's own records, comments and forum; it fetches nothing from the open web.",
+      "destructive_justification": "Deletes and overwrites nothing."
+    },
+    "list_record_comments": {
+      "read_only_justification": "Only reads a record's comments and changes nothing.",
+      "open_world_justification": "Reads only this index's own records, comments and forum; it fetches nothing from the open web.",
+      "destructive_justification": "Deletes and overwrites nothing."
+    },
+    "search_forum": {
+      "read_only_justification": "Only reads forum topics and changes nothing.",
+      "open_world_justification": "Reads only this index's own records, comments and forum; it fetches nothing from the open web.",
+      "destructive_justification": "Deletes and overwrites nothing."
+    },
+    "get_forum_topic": {
+      "read_only_justification": "Only reads one forum topic and changes nothing.",
+      "open_world_justification": "Reads only this index's own records, comments and forum; it fetches nothing from the open web.",
+      "destructive_justification": "Deletes and overwrites nothing."
+    },
+    "whoami": {
+      "read_only_justification": "Only reports which account the connection acts for and changes nothing.",
+      "open_world_justification": "Reads the connected account's own username from this site; nothing public changes.",
+      "destructive_justification": "Deletes and overwrites nothing."
+    },
+    "post_comment": {
+      "read_only_justification": "Publishes a new comment or review on a record.",
+      "open_world_justification": "Changes a public page on delphi.science under the person's GitHub username.",
+      "destructive_justification": "Adds a post; existing content is not deleted or overwritten."
+    },
+    "submit_record": {
+      "read_only_justification": "Adds a new record to the public index from a URL.",
+      "open_world_justification": "Changes a public page on delphi.science under the person's GitHub username.",
+      "destructive_justification": "Adds a record; an already listed one is returned unchanged."
+    },
+    "ask_forum_question": {
+      "read_only_justification": "Publishes a new forum topic.",
+      "open_world_justification": "Changes a public page on delphi.science under the person's GitHub username.",
+      "destructive_justification": "Adds a topic; existing content is not deleted or overwritten."
+    },
+    "reply_in_forum": {
+      "read_only_justification": "Publishes a new reply or comment in a forum topic.",
+      "open_world_justification": "Changes a public page on delphi.science under the person's GitHub username.",
+      "destructive_justification": "Adds a post; existing content is not deleted or overwritten."
+    },
+    "edit_post": {
+      "read_only_justification": "Replaces the text of one of the person's own posts.",
+      "open_world_justification": "Changes a public page on delphi.science under the person's GitHub username.",
+      "destructive_justification": "Overwrites the post's earlier text, which is not kept."
+    },
+    "vote_on_record": {
+      "read_only_justification": "Casts the person's public vote on a record.",
+      "open_world_justification": "Changes a public page on delphi.science under the person's GitHub username.",
+      "destructive_justification": "Replaces the person's earlier vote, emoji and note on that record unless if_absent is set."
+    },
+    "remove_record_vote": {
+      "read_only_justification": "Removes the person's public vote on a record.",
+      "open_world_justification": "Changes a public page on delphi.science under the person's GitHub username.",
+      "destructive_justification": "Deletes the person's vote with its emoji and note."
+    },
+    "vote_on_forum_post": {
+      "read_only_justification": "Casts or clears the person's vote on a forum post.",
+      "open_world_justification": "Changes a public page on delphi.science under the person's GitHub username.",
+      "destructive_justification": "Replaces the person's earlier vote on that post, or with value 0 deletes it."
+    },
+    "accept_forum_answer": {
+      "read_only_justification": "Sets or clears the accepted answer on the person's own topic.",
+      "open_world_justification": "Changes a public page on delphi.science under the person's GitHub username.",
+      "destructive_justification": "Overwrites the topic's accepted answer; sending the same post again clears it."
+    }
+  },
+  "test_cases": [
+    {
+      "description": "Find a paper and report the expert responses linked to it (no sign-in).",
+      "user_prompt": "What did mathematicians say about OpenAI's quasi-Riemann hypothesis paper?",
+      "file_attachment_urls": null,
+      "tools_triggered": "search_records, get_record",
+      "expected_output": "Cites the linked responses with authors, dates and URLs, including Alex Kontorovich on X (2026-10-06), Pace Nielsen on MathOverflow (2026-10-08) and Terence Tao's blog post (2026-10-19).",
+      "expected_output_url": "https://delphi.science/r/openai-math/The-Quasi-Riemann-Hypothesis"
+    },
+    {
+      "description": "List the records with the most recent expert responses (no sign-in).",
+      "user_prompt": "Which AI-generated papers received expert responses most recently?",
+      "file_attachment_urls": null,
+      "tools_triggered": "list_discussed_records",
+      "expected_output": "Lists discussed records, most recent response first, with each latest response's author, date and URL.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Report linked responses and the site's own comments on a paper (no sign-in).",
+      "user_prompt": "Has anyone checked OpenAI's matrix multiplication exponent paper, and are there comments on it on Delphi.science?",
+      "file_attachment_urls": null,
+      "tools_triggered": "search_records, get_record, list_record_comments",
+      "expected_output": "Cites the linked responses, including blog posts by Scott Aaronson and Gil Kalai (2026-10-07) and the arXiv paper by Amanov, van den Berg and Zuiddam (2026-10-21), and reports the site's own comments separately or says there are none.",
+      "expected_output_url": "https://delphi.science/r/openai-math/Matrix-Multiplication-Nine-Fourths"
+    },
+    {
+      "description": "Vote on a record after signing in, and say which account voted.",
+      "user_prompt": "Upvote OpenAI's quasi-Riemann hypothesis paper on Delphi.science for me, and tell me which account the vote is under.",
+      "file_attachment_urls": null,
+      "tools_triggered": "vote_on_record, whoami",
+      "expected_output": "ChatGPT offers to connect Delphi.science; after sign-in with the demo account and confirmation, it reports the record's new score and that the vote is public as ChatGPT · @<demo login>’s team.",
+      "expected_output_url": "https://delphi.science/r/openai-math/The-Quasi-Riemann-Hypothesis"
+    },
+    {
+      "description": "Remove that vote (run after the previous case).",
+      "user_prompt": "Remove my vote on OpenAI's quasi-Riemann hypothesis paper on Delphi.science.",
+      "file_attachment_urls": null,
+      "tools_triggered": "remove_record_vote",
+      "expected_output": "After confirmation, reports the record's score without the vote; the vote is gone from the record's page.",
+      "expected_output_url": "https://delphi.science/r/openai-math/The-Quasi-Riemann-Hypothesis"
+    }
+  ],
+  "negative_test_cases": [
+    {
+      "description": "Do not trigger for a general coding question.",
+      "user_prompt": "Write a Python function that removes duplicates from a list.",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The plugin is not invoked: the request has nothing to do with research records.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Do not trigger for a weather question.",
+      "user_prompt": "What will the weather be in Paris tomorrow?",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The plugin is not invoked: the request is unrelated to the research index.",
+      "expected_output_url": null
+    },
+    {
+      "description": "Do not trigger for a booking request.",
+      "user_prompt": "Book a table for two at an Italian restaurant tonight.",
+      "file_attachment_urls": null,
+      "tools_triggered": null,
+      "expected_output": "The plugin is not invoked: it is scoped to the research index and books nothing.",
+      "expected_output_url": null
+    }
+  ]
+}

@@ -9,10 +9,15 @@
 // fields are what to enter there. So the checks below apply the portal's final-submission limits
 // (developers.openai.com/plugins/deploy/submission-errors), as far as they can be checked locally.
 // {{SITE}} in the JSON files becomes SITE (lib/view.ts).
+//
+// It also writes dist/chatgpt-app-submission.json, the import file the portal's submission form takes: the listing,
+// each tool's hints as the server declares them (lib/api/mcp.ts) with a justification for each, and the reviewer test
+// cases, from site/plugin/submission.json (developers.openai.com/apps-sdk/schemas/chatgpt-app-submission.v1.json).
 import { execFileSync } from 'node:child_process';
 import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { TOOLS } from '#lib/api/mcp.ts';
 import { SITE } from '#lib/view.ts';
 
 const MANIFEST = '.codex-plugin/plugin.json', SERVERS = '.mcp.json';
@@ -83,6 +88,24 @@ for (const k of ['logo', 'composerIcon']) {
 }
 const urls = JSON.stringify([manifest, servers]).match(/"[a-z]+:\/\/[^"]*"/g) ?? [];
 for (const u of urls) if (!u.startsWith('"https://') || u.length > 1026) problems.push(`${u}: links must be https and at most 1024 characters`);
+// The portal's import file.
+const given = JSON.parse(readFileSync(src + 'submission.json', 'utf8'));
+const HINTS = { readOnlyHint: 'read_only_justification', openWorldHint: 'open_world_justification', destructiveHint: 'destructive_justification' } as const;
+const tools: Record<string, object> = {};
+for (const [name, t] of Object.entries(TOOLS)) {
+	const why = given.justifications?.[name] ?? {};
+	for (const k of Object.values(HINTS)) if (!text(why[k]).trim() || /[\r\n]/.test(text(why[k]))) problems.push(`submission.json: ${name} needs a one-line ${k}`);
+	tools[name] = { annotations: Object.fromEntries(Object.keys(HINTS).map((h) => [h, t.annotations[h as keyof typeof HINTS]])), justifications: why };
+}
+for (const name of Object.keys(given.justifications ?? {})) if (!(name in TOOLS)) problems.push(`submission.json: ${name} is not a tool of the server`);
+if (given.test_cases?.length !== 5 || given.negative_test_cases?.length !== 3) problems.push('submission.json: exactly five test_cases and three negative_test_cases');
+for (const c of given.test_cases ?? []) {
+	for (const name of text(c.tools_triggered).split(',').map((n) => n.trim())) if (!(name in TOOLS)) problems.push(`submission.json: test case names the tool ${name}, which the server does not have`);
+}
+if ([...text(given.app_info?.subtitle)].length > 30) problems.push('submission.json: app_info.subtitle is over 30 characters');
+if (given.app_info?.display_name !== ui.displayName || given.app_info?.subtitle !== ui.shortDescription) problems.push('submission.json: display_name and subtitle must match the manifest');
+const submission = path('../../dist/chatgpt-app-submission.json');
+
 if (problems.length) {
 	console.error(`Not packaged:\n- ${problems.join('\n- ')}`);
 	process.exit(1);
@@ -90,4 +113,9 @@ if (problems.length) {
 
 rmSync(zip, { force: true });
 execFileSync('zip', ['-q', '-r', '-X', zip, ...FILES], { cwd: out, stdio: 'inherit' });
+writeFileSync(submission, `${JSON.stringify({
+	$schema: 'https://developers.openai.com/apps-sdk/schemas/chatgpt-app-submission.v1.json', schema_version: 1,
+	app_info: given.app_info, tools, test_cases: given.test_cases, negative_test_cases: given.negative_test_cases,
+}, null, 2).replaceAll('https://delphi.science', SITE)}\n`);
+console.log(`${submission}: ${Object.keys(tools).length} tools, ${given.test_cases.length} test cases, ${given.negative_test_cases.length} negative`);
 console.log(`${zip}: ${FILES.join(', ')}; server ${Object.values(servers!).map((s) => s.url).join(', ')}`);

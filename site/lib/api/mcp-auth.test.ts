@@ -4,6 +4,7 @@
 // those of a device-approved agent key.
 import { strict as assert } from 'node:assert';
 import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 import { after, before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { load } from '#lib/records/load.ts';
@@ -232,6 +233,7 @@ const WRITES: [string, object][] = [
 	['vote_on_record', { id: RECORD, value: 1 }],
 	['remove_record_vote', { id: RECORD }],
 	['post_comment', { id: RECORD, body: 'The lemma fails for open boundary conditions.' }],
+	['edit_post', { id: 1, body: 'The lemma fails for open boundary conditions only.', revision: '1' }],
 	['submit_record', { url: 'arxiv/2610.20058' }],
 	['ask_forum_question', { title: 'Does the bound hold?', body: 'For which boundary conditions does the bound of app/oauth-plugin hold?' }],
 	['reply_in_forum', { topic: 1, body: 'It holds for periodic ones.' }],
@@ -255,10 +257,13 @@ describe('a caller without a token', () => {
 			assert.equal(t.annotations.openWorldHint, !t.annotations.readOnlyHint, t.name);
 			assert.equal(typeof t.annotations.destructiveHint, 'boolean', t.name);
 		}
+		// The portal import file (scripts/plugin.ts) justifies each hint of each tool, and no others.
+		const submission = JSON.parse(readFileSync(new URL('../../plugin/submission.json', import.meta.url), 'utf8'));
+		assert.deepEqual(Object.keys(submission.justifications).sort(), Object.keys(TOOLS).sort());
 		const byName = Object.fromEntries(tools.map((t) => [t.name, t.annotations]));
 		// Adding a post removes nothing; taking a vote back, replacing one or toggling an acceptance does.
 		for (const name of ['post_comment', 'submit_record', 'ask_forum_question', 'reply_in_forum']) assert.equal(byName[name].destructiveHint, false, name);
-		for (const name of ['vote_on_record', 'remove_record_vote', 'vote_on_forum_post', 'accept_forum_answer']) assert.equal(byName[name].destructiveHint, true, name);
+		for (const name of ['edit_post', 'vote_on_record', 'remove_record_vote', 'vote_on_forum_post', 'accept_forum_answer']) assert.equal(byName[name].destructiveHint, true, name);
 	});
 
 	test('reads records, comments and the forum', async () => {
@@ -328,13 +333,23 @@ describe('a signed-in plugin', () => {
 		const listed = (await ok('list_record_comments', { id: RECORD })).comments;
 		assert.deepEqual(listed.map((c: Json) => [c.id, c.voter, c.agent, c.body]), [[posted.value.id, 'Hypatia', 'Codex', body]]);
 
+		// The person corrects it through another of their connections; the attribution stays, and the revision moves on.
+		const fixed = `${body} Checked for $n \\le 6$.`;
+		const edited = await moderated('ACCEPT', async () => ok('edit_post', { id: posted.value.id, body: fixed, revision: listed[0].revision }, await signIn('Hypatia', 'Claude')));
+		assert.deepEqual([edited.value.body, edited.value.record_id], [fixed, RECORD]);
+		assert.notEqual(edited.value.revision, listed[0].revision);
+		const stale = await moderated('ACCEPT', () => call('edit_post', { id: posted.value.id, body: `${fixed} More.`, revision: listed[0].revision }, plugin));
+		assert.match(stale.value.content[0].text, /^edit_conflict/);
+		assert.match((await call('edit_post', { id: posted.value.id, body: 'Mine now.', revision: edited.value.revision }, await signIn('Mallory'))).content[0].text, /^edit_forbidden/);
+		assert.deepEqual((await ok('list_record_comments', { id: RECORD })).comments.map((c: Json) => [c.agent, c.body]), [['Codex', fixed]]);
+
 		const refusedPost = await moderated('REQUEST_REVISION', () => call('post_comment', { id: RECORD, body: 'Great paper, thanks.' }, plugin));
 		assert.ok(refusedPost.value.isError);
 		assert.match(refusedPost.value.content[0].text, /^moderation_rejected: not posted: REQUEST_REVISION: The comment states no argument\.+ Add the step/);
 		assert.equal((await ok('list_record_comments', { id: RECORD })).comments.length, 1);
 		// Both attempts are in the person's daily ledger under the plugin's name.
 		const attempts = (await pg.query<{ agent: string; publish: boolean }>('SELECT agent, publish FROM open_index.moderations WHERE voter = $1 ORDER BY id', ['Hypatia'])).rows;
-		assert.deepEqual(attempts, [{ agent: 'Codex', publish: true }, { agent: 'Codex', publish: false }]);
+		assert.deepEqual(attempts, [{ agent: 'Codex', publish: true }, { agent: 'Claude', publish: true }, { agent: 'Codex', publish: false }]);
 	});
 
 	test('with no moderation provider nothing is posted', async () => {

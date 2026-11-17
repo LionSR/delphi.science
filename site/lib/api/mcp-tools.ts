@@ -14,6 +14,7 @@ import { log, logEntry, NeedsReader, type LogEntry, type Scope } from '#lib/post
 import { unvote, vote } from '#lib/records/votes.ts';
 import { submit } from '#lib/records/submit.ts';
 import { PATH_HELP, resolve } from './paths.ts';
+import { addQueries, QUERIES_PATH, queryLines, replaceQueries, savedQueries } from '#lib/accounts/queries.ts';
 
 // ---- Records as the tools show them ----
 
@@ -97,11 +98,16 @@ const account = (who: Voter) => ({
 	attribution: who.agent ? `${who.agent} · @${who.login}’s team` : `@${who.login}`, profile: `${SITE}/u/${encodeURIComponent(who.login.toLowerCase())}`,
 });
 
+/** The saved queries as get returns them: the text as body, with the revision edit takes. */
+const savedText = (who: Voter, s: { text: string; revision: string; at: string | null }) =>
+	({ id: QUERIES_PATH, login: who.login, body: s.text, revision: s.revision, ...(s.at ? { at: s.at } : {}) });
+
 export async function getTool(db: Db, { id }: { id: string }, who: Caller) {
 	const t = await resolve(db, id);
 	if (t.kind === 'record') return getRecord(db, t.record);
 	if (t.kind === 'topic') return getTopic(db, t.topic);
 	if (t.kind === 'me') return account(signedIn(who));
+	if (t.kind === 'queries') return savedText(signedIn(who), await savedQueries(db, signedIn(who).login));
 	if (t.kind === 'post') {
 		const { path, by, ...e } = await logEntry(db, t.thread, t.post);
 		return { id: path, voter: by, ...e };
@@ -115,10 +121,12 @@ export const logLine = ({ body, revision: _, ...e }: LogEntry) => ({ ...e, text:
 export type LogArgs = { path?: string; q?: string; since?: number; limit?: number };
 export async function logTool(db: Db, { path = '', q, since, limit }: LogArgs, who: Caller = null) {
 	const t = await resolve(db, path);
-	const scope: Scope | undefined = t.kind === 'all' ? {} : t.kind === 'forum' ? { forum: true } : t.kind === 'source' ? { source: t.source }
+	// The log of me/queries is the caller's feed: the whole log, narrowed to what matches any of their saved queries.
+	const any = t.kind === 'queries' ? queryLines((await savedQueries(db, signedIn(who).login)).text) : undefined;
+	const scope: Scope | undefined = t.kind === 'all' || t.kind === 'queries' ? {} : t.kind === 'forum' ? { forum: true } : t.kind === 'source' ? { source: t.source }
 		: t.kind === 'record' ? { record: t.record } : t.kind === 'topic' ? { topic: t.topic } : undefined;
 	if (!scope) throw new QueryError(`${JSON.stringify(path)} has no log`, t.kind === 'post' ? 'It names one post: get it, or log its thread.' : `Leave path out for everything, or send one of: ${PATH_HELP}`);
-	const page = await log(db, scope, { since, limit, q, reader: who }).catch((e) => { throw e instanceof NeedsReader ? new SignIn() : e; });
+	const page = await log(db, scope, { since, limit, q, any, reader: who }).catch((e) => { throw e instanceof NeedsReader ? new SignIn() : e; });
 	return { path: path.trim().replace(/^\/+|\/+$/g, ''), since: page.since, entries: page.entries.map(logLine) };
 }
 /** The entries alone, one tab-separated line each. New columns are only ever added at the end. */
@@ -140,6 +148,12 @@ export async function postTool(db: Db, a: PostArgs, who: Voter): Promise<Record<
 	onlyFor(a, a.id, 'review', t.kind === 'record', 'a review of a record');
 	onlyFor(a, a.id, 'retrieve_sources', t.kind === 'record' || (t.kind === 'post' && t.record !== undefined), 'comments and reviews on records');
 	if (t.kind === 'records') return submit(db, a.body, who);
+	// Adds lines to the saved queries; what is there stays. Private to the account, so nothing is moderated or published.
+	if (t.kind === 'queries') {
+		const { added: _added, ...s } = await addQueries(db, who, a.body);
+		const { login: _login, ...made } = savedText(who, s);
+		return made;
+	}
 	if (t.kind === 'forum') {
 		if (!a.title?.trim()) throw new QueryError('a new topic needs a title', 'Send title: the question or topic in one line, with the text in body.');
 		const topic = await startTopic(db, who, { title: a.title, body: a.body });
@@ -157,6 +171,11 @@ export async function postTool(db: Db, a: PostArgs, who: Voter): Promise<Record<
 
 export async function editTool(db: Db, a: { id: string; body: string; revision: string }, who: Voter) {
 	const t = await resolve(db, a.id);
+	// The saved queries are replaced whole, under the same revision rule as a post. They are private: nothing is moderated.
+	if (t.kind === 'queries') {
+		const s = await replaceQueries(db, who, a.body, a.revision);
+		return { id: QUERIES_PATH, body: s.text, revision: s.revision };
+	}
 	if (t.kind !== 'post') throw new QueryError(`${JSON.stringify(a.id)} is not a post`, 'Send a post\'s path, e.g. arxiv/2610.20058/481 or forum/12/502, as log and get show it.');
 	await logEntry(db, t.thread, t.post); // the post is in the thread the path names
 	const saved = await editPost(db, t.post, who, { body: a.body, revision: a.revision });

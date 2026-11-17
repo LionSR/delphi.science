@@ -19,6 +19,7 @@ import { recordPath } from '#lib/view.ts';
 import { myVotes, unvote, vote } from '#lib/records/votes.ts';
 import { createSession, revokeAgentKey, revokeKey } from '#lib/accounts/keys.ts';
 import { isReviewer, reviewLogin } from '#lib/accounts/review.ts';
+import { saveForm, type QueriesFormState } from '#lib/accounts/queries-form.ts';
 
 
 // Runs a form action and redirects back, with a QueryError's message as ?notice=.
@@ -170,4 +171,15 @@ export async function savePublicName(form: FormData) {
 		await editPublicName(await db(), who.login, { name: form.get('name') ?? '', affiliation: form.get('affiliation') ?? '' });
 		revalidatePath('/', 'layout');
 	});
+}
+
+/** Saves the saved-queries form (app/me/queries): the text, plus a cat: line for each category chosen. */
+export async function saveQueries(previous: QueriesFormState, form: FormData): Promise<QueriesFormState> {
+	const who = await signedIn('/me/queries');
+	const state = await saveForm(await db(), who.login, previous, {
+		text: String(form.get('queries') ?? ''), revision: String(form.get('revision') ?? '0'),
+		categories: [...form.getAll('cat').map(String), ...String(form.get('codes') ?? '').split(/[\s,]+/)],
+	});
+	if (state.status === 'saved') revalidatePath('/');
+	return state;
 }

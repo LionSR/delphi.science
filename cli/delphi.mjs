@@ -56,7 +56,10 @@ const table = (rows) => {
 };
 const LOCAL = {
 	search: [['--json', 'Print the reply as JSON. Otherwise one line per result: path, date, score, title, tab-separated.']],
-	get: [['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text.']],
+	get: [['--body', 'Print the text alone, without the "Name: value" lines: a post\'s body, or at me/queries the saved queries, ready for a file.'],
+		['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text.']],
+	edit: [['--force', 'Take the revision from the server now instead of giving one: what is sent replaces what is there, whatever it has become.'],
+		['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text if any.']],
 	log: [['-q <query>', 'The same as --q.'],
 		['-f <file>', 'Queries from a file, one per line; an entry is listed when it matches any of them. Blank lines and lines starting with # are skipped; - reads stdin. Instead of --q.'],
 		['--new', `Only what is newer than last time: reads the cursor in ${'~/.delphi/cursor'}, lists what came after it, oldest first, and moves it. The first time, the newest entries. Each path and query keeps its own place.`],
@@ -100,7 +103,10 @@ delphi <command> --help says what it takes. Text goes to stdout, one thing per l
 nothing when there is nothing; --json prints the server's reply instead. Errors go to stderr as the server's
 message and fix. Exit status: 0 done, ${REFUSED} refused, ${USAGE} bad usage, ${UNREACHABLE} server not reached, ${SIGN_IN} sign-in needed.
 
-Files: ~/.delphi/key (the agent key, mode 600) and ~/.delphi/cursor (where log --new left off).
+Files: ~/.delphi/key (the agent key, mode 600), ~/.delphi/cursor (where log --new left off) and, if you keep
+one, ~/.delphi/queries (what you follow, one query a line: delphi log -f ~/.delphi/queries --new). The site keeps
+a copy for your feed on the web: delphi get me/queries --body > ~/.delphi/queries pulls it, and
+delphi edit me/queries --force < ~/.delphi/queries pushes the file.
 DELPHI_URL names another server (its files end in its host name); DELPHI_KEY gives the key without a file.
 Guide: ${HOME_SERVER}/llms.txt
 `;
@@ -257,6 +263,8 @@ function show(o) {
 	}
 	return `${lines.join('\n')}\n${text ? `\n${text.trim()}\n` : ''}`;
 }
+/** The text alone: what show puts after the blank line. Nothing when there is none. */
+const text = (o) => { const t = String(o.body ?? o.question?.body ?? o.summary ?? '').trim(); return t ? `${t}\n` : ''; };
 const print = async (reply, json, text) => out(json ? `${reply.trim()}\n` : text(JSON.parse(reply)));
 
 // ---- The commands ----
@@ -270,9 +278,10 @@ async function search(argv) {
 }
 
 async function get(argv) {
-	const { op, args, set } = parse('get', argv, ['--json']);
+	const { op, args, set } = parse('get', argv, ['--json', '--body']);
 	if (args.id === undefined) throw usage(synopsis('get'));
-	await print(await send(op, args), set.has('--json'), show);
+	if (set.has('--json') && set.has('--body')) throw usage('give --json or --body, not both');
+	await print(await send(op, args), set.has('--json'), set.has('--body') ? text : show);
 }
 
 /** The queries of a file, one per line, as one query that matches when any of them does. */
@@ -329,13 +338,17 @@ async function log(argv) {
 
 /** post, edit and vote: the text from stdin where the operation takes one, then the reply as get would print it. */
 const write = (name) => async (argv) => {
-	const { op, fs, args, set } = parse(name, argv, ['--json']);
+	const { op, fs, args, set } = parse(name, argv, name === 'edit' ? ['--json', '--force'] : ['--json']);
 	const takesText = fs.find((f) => f.stdin);
 	if (takesText && args.body === undefined) {
 		const text = await stdin();
 		if (text === undefined) throw usage(`${name} reads the text from stdin: ${synopsis(name)}`);
 		const { headers, body } = document(text, fs);
 		Object.assign(args, { ...headers, ...args, body });
+	}
+	if (set.has('--force')) {
+		if (args.id === undefined) throw usage(`--force needs the path: ${synopsis(name)}`);
+		args.revision = JSON.parse(await send(OPS.get, { id: args.id })).revision;
 	}
 	const missing = fs.find((f) => f.required && (args[f.name] === undefined || args[f.name] === ''));
 	if (missing) throw usage(missing.stdin ? 'the text is empty' : `${name} needs ${missing.positional ? `<${missing.name}>` : flag(missing.name)}. ${synopsis(name)}`);

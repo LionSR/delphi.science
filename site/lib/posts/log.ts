@@ -126,7 +126,24 @@ const EVENTS = `SELECT e.seq::int, e.kind, e.path, e.at, e.voter, e.record_id, e
 	LEFT JOIN open_index.records r ON r.id = e.record_id
 	WHERE (c.id IS NOT NULL OR (e.post_id IS NULL AND r.id IS NOT NULL))`;
 
-export type LogOptions = { since?: number; limit?: number; q?: string; reader?: Reader };
+export type LogOptions = { since?: number; limit?: number; q?: string; reader?: Reader;
+	/** Saved queries (lib/accounts/queries.ts): only entries that match at least one of them. Each is parsed on its own
+	 * and the whole is one condition beside q, so nothing written in q, an OR included, reaches outside them. An empty
+	 * list matches nothing. */
+	any?: string[];
+	/** Only entries before this seq: the next page of a newest-first listing (the web's My feed). Not with since. */
+	before?: number };
+
+/** Checks one query as log would read it for `reader`, without running it. Throws the QueryError log would throw. */
+export function checkQuery(q: string, reader: Reader = null): void {
+	new EventCompiler(reader).tree(parse(q));
+}
+
+/** The largest seq in the log, 0 when it is empty: where a reader who has seen everything stands. A number only, the
+ * same for every reader, so it says nothing about what any of them may see. */
+export async function head(db: Db): Promise<number> {
+	return (await db.query<{ seq: number }>('SELECT coalesce(max(seq), 0)::int AS seq FROM open_index.events')).rows[0].seq;
+}
 
 /** One page of the log in `scope`, narrowed by a query: the newest entries, newest first; or with since (a seq), the
  * entries after it, oldest first. The reply's since is the largest seq seen, to send next time. */
@@ -137,13 +154,15 @@ export async function log(db: Db, scope: Scope = {}, opts: LogOptions = {}) {
 	const c = new EventCompiler(reader);
 	const conditions = [visible(reader)];
 	if (since !== undefined) conditions.push(`e.seq > ${c.p(since)}`);
+	else if (Number.isSafeInteger(opts.before)) conditions.push(`e.seq < ${c.p(opts.before)}`);
 	// One record's log is its thread: the posts on it. That the record itself came in is not news under its own path.
 	if (scope.record !== undefined) conditions.push(`e.record_id = ${c.p(scope.record)} AND ${POST}`);
 	// A source is one of the fixed prefixes (lib/records/prefixes.json).
 	if (scope.source !== undefined) conditions.push(`split_part(e.record_id, '/', 1) = ${c.p(scope.source)}`);
 	if (scope.topic !== undefined) conditions.push(`e.topic_id = ${c.p(scope.topic)}`);
 	if (scope.forum) conditions.push('e.topic_id IS NOT NULL');
-	if (opts.q?.trim()) conditions.push(c.tree(parse(opts.q)));
+	if (opts.any) conditions.push(opts.any.length ? `(${opts.any.map((q) => `(${c.tree(parse(q))})`).join(' OR ')})` : 'false');
+	if (opts.q?.trim()) conditions.push(`(${c.tree(parse(opts.q))})`);
 	const rows = (await db.query<Row>(
 		`${EVENTS} AND ${conditions.join(' AND ')} ORDER BY e.seq ${since === undefined ? 'DESC' : 'ASC'} LIMIT ${c.p(limit)}`, c.params)).rows;
 	return { entries: rows.map(entry), since: Math.max(since ?? 0, ...rows.map((r) => r.seq)) };

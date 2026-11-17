@@ -160,3 +160,17 @@ table.stats :is(th, td) { text-align: left; padding: 0.25rem 1.2rem 0.25rem 0; b
 table.stats th { font-weight: 500; color: var(--muted); }
 table.stats .num { text-align: right; }
 table.stats :is(th, td):last-child { padding-right: 0; }
+
+/* My feed (lib/feed-view.ts) and the saved queries (app/me/queries) */
+.notice { margin: 1rem 0; padding: 0.7rem 0.9rem; border: 1px solid var(--rule); border-radius: 0.5rem; background: var(--surface); }
+.notice p { margin: 0 0 0.4rem; }
+.notice p:last-child, .notice ul { margin-bottom: 0; }
+.feed-sources { margin: 0.8rem 0 0; font-size: var(--small); color: var(--muted); }
+.feed-sources ul { margin: 0.4rem 0; padding-left: 1.2rem; }
+.feed-sources code { color: var(--ink); }
+ol.feed { list-style: none; padding: 0; }
+ol.feed .snippet { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.875rem; overflow-wrap: anywhere; }
+ol.feed .item.new { border-left: 2px solid var(--accent); padding-left: 0.7rem; }
+ol.feed .unread-line { padding: 0.35rem 0; text-align: center; font-size: var(--small); font-weight: 600; color: var(--accent); border-top: 2px solid var(--accent); border-bottom: 1px solid var(--rule); }
+.badge.new-post { font-size: var(--small); }
+.choices { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; margin: 0.4rem 0; }

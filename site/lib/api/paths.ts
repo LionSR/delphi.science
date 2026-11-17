@@ -3,12 +3,14 @@
 //   forum/12                a forum topic       forum/12/502           a post in it
 //   arxiv                   a source's records  forum                  the forum
 //   records                 where links are submitted                  me   the signed-in account
+//   me/queries              the signed-in person's saved queries (lib/accounts/queries.ts)
 // A record id may itself hold slashes and end in digits, so a path is read as a record first.
 import prefixes from '#lib/records/prefixes.json' with { type: 'json' };
 import { NotFoundError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
+import { QUERIES_PATH } from '#lib/accounts/queries.ts';
 
-export type Target = { kind: 'all' } | { kind: 'me' } | { kind: 'records' } | { kind: 'forum' } | { kind: 'source'; source: string }
+export type Target = { kind: 'all' } | { kind: 'me' } | { kind: 'queries' } | { kind: 'records' } | { kind: 'forum' } | { kind: 'source'; source: string }
 	| { kind: 'record'; record: string } | { kind: 'topic'; topic: number }
 	| { kind: 'post'; post: number; thread: string; record?: string; topic?: number };
 
@@ -22,6 +24,7 @@ export async function resolve(db: Db, given: unknown): Promise<Target> {
 	if (!path) return { kind: 'all' };
 	if (path.length > 320) throw new QueryError('the path is too long', PATH_HELP);
 	if (path === 'me' || path === 'records' || path === 'forum') return { kind: path };
+	if (path === QUERIES_PATH) return { kind: 'queries' };
 	const parts = path.split('/');
 	if (parts[0] === 'forum') {
 		if (parts.length > 3 || !parts.slice(1).every((p) => NUMBER.test(p))) throw new NotFoundError(`no ${path}`, 'A topic is forum/<number> and a post in it forum/<number>/<number>; search with in=forum to find one.');

@@ -2,10 +2,11 @@
 
 `log` lists what happened on the site, in order. A feed is `log` with a query; an inbox is `log` with `to:@me`.
 The server keeps no subscriptions: the reader decides what to read by the query it sends, and remembers one number.
+(It does keep a copy of a person's queries, as text, so the website can show the same feed: [my-feed.md](my-feed.md).)
 
 ```
 delphi log -q 'cat:quant-ph' --new        # new quant-ph records, and the posts about quant-ph records
-delphi log -f ~/.delphi/follow --new      # a file of queries, one per line: what matches any
+delphi log -f ~/.delphi/queries --new     # a file of queries, one per line: what matches any
 delphi log -q 'to:@me' --new              # replies to me, and posts in my topics
 https://delphi.science/log.atom?q=cat:quant-ph      # the first, for a feed reader
 ```

@@ -87,3 +87,10 @@ from open_index.records r;
 select setval(pg_get_serial_sequence('open_index.events', 'seq'),
               greatest((select max(seq) from open_index.events), 1),
               (select coalesce(max(seq), 0) from open_index.events) > 0);
+
+-- Usage counts (open_index.api_usage) take the six verbs over paths and the text form of a page: the endpoint list
+-- is this constraint, so counting a route means naming it here. /log.atom is counted as GET /api/v1/log, which it
+-- is. NOT VALID, as before: existing rows are not read again, and they already fit the longer list.
+ALTER TABLE open_index.api_usage
+ DROP CONSTRAINT api_usage_endpoint_category,
+ ADD CONSTRAINT api_usage_endpoint_category CHECK (endpoint IN ('GET /api/v1/search', 'GET /api/v1/records/{prefix}/{suffix}', 'GET /api/v1/records/{prefix}/{suffix}/comments', 'POST /api/v1/records/{prefix}/{suffix}/comments', 'GET /api/v1/records/{prefix}/{suffix}/vote', 'POST /api/v1/records/{prefix}/{suffix}/vote', 'DELETE /api/v1/records/{prefix}/{suffix}/vote', 'POST /api/v1/submit', 'GET /api/v1/forum', 'POST /api/v1/forum', 'GET /api/v1/forum/{id}', 'POST /api/v1/forum/{id}', 'POST /api/v1/forum/{id}/vote', 'POST /api/v1/forum/{id}/accept', 'GET /api/v1/prefixes', 'GET /api/v1/stats', 'POST /api/v1/keys/device', 'POST /api/v1/keys/token', 'GET /api/v1', 'GET /api/v1/openapi.json', 'GET /llms.txt', 'POST /mcp', 'GET /id/{prefix}/{suffix}', 'GET /sitemap.xml', 'GET /sitemap/{file}', 'GET /api/v1/users/{login}', 'GET /api/v1/profile', 'PATCH /api/v1/profile', 'GET /api/v1/keys', 'DELETE /api/v1/keys/{hash}', 'GET /api/v1/find', 'GET /api/v1/get/{id}', 'GET /api/v1/log', 'POST /api/v1/post/{id}', 'PATCH /api/v1/edit/{id}', 'POST /api/v1/vote/{id}', 'GET /txt/{id}')) NOT VALID;

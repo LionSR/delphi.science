@@ -13,8 +13,7 @@ against the site, and publishes with npm trusted publishing (OIDC). No npm token
 npm sets a trusted publisher in the settings of a package, so the package has to exist first. The first version is
 therefore published from the owner's own machine, and every later one by the workflow.
 
-1. Decide the license and set `"license"` in `cli/package.json`. It says `UNLICENSED` (all rights reserved) because
-   the repository has no license file.
+1. The package is Apache-2.0, as the repository is (`LICENSE`, `cli/LICENSE`, `"license"` in `cli/package.json`).
 2. Check the name is still free: `npm view delphi-science` should answer 404. (`delphi` is taken.)
 3. Publish the first version by hand, from a clean checkout of the commit to release:
 

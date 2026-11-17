@@ -89,6 +89,10 @@ for (const k of ['logo', 'composerIcon']) {
 }
 const urls = JSON.stringify([manifest, servers]).match(/"[a-z]+:\/\/[^"]*"/g) ?? [];
 for (const u of urls) if (!u.startsWith('"https://') || u.length > 1026) problems.push(`${u}: links must be https and at most 1024 characters`);
+// The Claude Code manifest beside it describes the same plugin.
+const claude = JSON.parse(readFileSync(src + '.claude-plugin/plugin.json', 'utf8'));
+for (const k of ['name', 'version', 'description']) if (claude[k] !== JSON.parse(readFileSync(src + MANIFEST, 'utf8'))[k]) problems.push(`.claude-plugin/plugin.json: ${k} differs from ${MANIFEST}`);
+
 // The portal's import file.
 const given = JSON.parse(readFileSync(src + 'submission.json', 'utf8'));
 const HINTS = { readOnlyHint: 'read_only_justification', openWorldHint: 'open_world_justification', destructiveHint: 'destructive_justification' } as const;

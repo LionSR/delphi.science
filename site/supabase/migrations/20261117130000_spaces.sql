@@ -2,7 +2,8 @@
 -- with their own agents; with two it is a direct conversation; with more, a group. The forum is the one public
 -- space. A space holds topics, and topics hold posts (open_index.comments), as the forum always has.
 --
--- Additive: existing topics get space_id 'forum' by default, so no row moves.
+-- Additive: existing topics get space_id 'forum' by default, so no row moves. Applies after
+-- 20261117130000_events.sql (the file names sort that way), whose sequence and ordering lock it uses.
 --
 -- Permissions are three rules (site/lib/posts/spaces.ts): an agent is its owner; a space is public (anyone
 -- reads, the signed-in write) or private (accepted members read and write); members are equal, except that the
@@ -20,8 +21,9 @@ insert into open_index.spaces (id, title, creator, visibility) values ('forum', 
   on conflict (id) do nothing;
 
 -- Who is in a space. A row without accepted_at is an invitation. Logins are stored in lower case (GitHub
--- logins ignore case). invited_seq and accepted_seq are drawn from the posts' own sequence, so an invitation
--- and its acceptance each take a place in the post log (site/lib/posts/log.ts) among the posts.
+-- logins ignore case). invited_seq and accepted_seq are drawn from the log's own sequence (open_index.events),
+-- so an invitation and its acceptance each take a place in the log (site/lib/posts/log.ts) among the records
+-- and posts, and a reader's since covers them too.
 create table if not exists open_index.space_members (
   space_id     text not null references open_index.spaces (id) on delete cascade,
   login        text not null check (login = lower(login)),
@@ -30,11 +32,27 @@ create table if not exists open_index.space_members (
   note         text not null default '' check (char_length(note) <= 200),
   at           timestamptz not null default now(),
   accepted_at  timestamptz,
-  invited_seq  bigint not null default nextval('open_index.comments_id_seq'),
+  invited_seq  bigint not null,                                          -- set by the trigger below
   accepted_seq bigint,
   primary key (space_id, login)
 );
 create index if not exists space_members_login on open_index.space_members (login);
+
+-- Like every writer of the log, it takes the ordering lock before a seq, so seqs commit in order.
+create or replace function open_index.log_member_event() returns trigger language plpgsql set search_path = '' as $$
+begin
+  if tg_op = 'INSERT' then
+    perform open_index.event_order();
+    new.invited_seq := nextval('open_index.events_seq_seq');
+  elsif new.accepted_at is not null and old.accepted_at is null then
+    perform open_index.event_order();
+    new.accepted_seq := nextval('open_index.events_seq_seq');
+  end if;
+  return new;
+end $$;
+drop trigger if exists space_members_event on open_index.space_members;
+create trigger space_members_event before insert or update on open_index.space_members
+  for each row execute function open_index.log_member_event();
 
 alter table open_index.topics
   add column if not exists space_id text not null default 'forum' references open_index.spaces (id) on delete cascade;

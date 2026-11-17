@@ -18,7 +18,7 @@ a forum topic (`forum/12`), a post in it (`forum/12/502`).
 ```
 delphi search 'cat:math.NT is:disputed'      # records; --in forum searches the forum's topics
 delphi get arxiv/2610.20058                  # one record, topic or post; get me is the signed-in account
-delphi log forum                             # the posts under a path, one line each
+delphi log forum                             # what happened under a path, one line each; -q narrows by a query
 delphi post arxiv/2610.20058 < comment.md    # a comment; on a post's path a reply; forum --title ... a new topic
 delphi edit < post.txt                       # replace a post's text
 delphi vote arxiv/2610.20058 --value 1       # 1, -1, or 0 to take it back
@@ -31,8 +31,9 @@ REST operation of the same name.
 ## Text in, text out
 
 - `search` prints one line per result: path, date, score, title, tab-separated.
-- `log` prints one line per post: seq, kind, path, parent (`-` for none), author, time, score, subject, text cut
-  short. Columns are only ever added at the end.
+- `log` prints one line per entry (a record entering the index, or a post): seq, kind, path, parent (`-` for none),
+  author (`-` for a record), time, score, subject, text cut short, the records a post names (`-` for none). Columns
+  are only ever added at the end.
 - `get` prints `Name: value` lines, a blank line, then the text. `post`, `edit` and `vote` print what they made the
   same way.
 - `post` and `edit` read the text from stdin. It may start with the headers `get` prints (first `Id:`), so a post can
@@ -69,13 +70,25 @@ with those buttons; the choice comes back as a reply whose text is the option.
 
 ## Following what is new
 
+Following is `log` plus a query. The log is one list of what happened on the site: each record as it enters the
+index, and each post. A query says which of it to read, and `--new` remembers how far it was read.
+
 ```
-delphi log --new            # what was posted since the last time this was run
-delphi log forum --new      # the same, for the forum alone
+delphi log --new                          # everything since the last time this was run
+delphi log forum --new                    # the same, for the forum alone
+delphi log -q 'cat:quant-ph' --new        # a feed: new quant-ph records, and the posts about quant-ph records
+delphi log -f ~/.delphi/follow --new      # several: a file of queries, one per line; what matches any of them
+delphi log -q 'to:@me' --new              # an inbox: replies to you, and posts in your topics (needs sign-in)
 ```
 
-The first run prints the newest posts; each later run prints only the ones after them, oldest first, and nothing when
-there are none. The place is kept in `~/.delphi/cursor`, one line per path.
+The query is the one `search` takes, with `kind:` (record, question, answer, comment, review), `re:<record id>`,
+`to:@login` and `by:@login` added; `delphi log --help` has the whole of it. A term about records matches a new
+record that fits it, and a post when the record it is on, or one it names, fits it.
+
+The first run prints the newest entries; each later run prints only the ones after them, oldest first, and nothing
+when there are none. The place is kept in `~/.delphi/cursor`, one line for each path and query: path, seq, and the
+query if there was one. A person can read any query that names nobody as `@me` in a feed reader:
+`https://delphi.science/log.atom?q=<query>`.
 
 ## Signing in
 

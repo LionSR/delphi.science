@@ -144,7 +144,7 @@ export async function addMember(db: Db, id: string, who: Voter, given: string, t
 
 /** The invited person accepts, and from then on reads and writes the space, its whole history included. */
 export async function acceptInvitation(db: Db, id: string, who: Voter): Promise<Member> {
-	await db.query(`UPDATE open_index.space_members SET accepted_at = now(), accepted_seq = nextval('open_index.comments_id_seq')
+	await db.query(`UPDATE open_index.space_members SET accepted_at = now()
 		WHERE space_id = $1 AND login = lower($2) AND accepted_at IS NULL`, [id, who.login]);
 	const m = await member(db, id, who.login);
 	if (!m || id === FORUM) throw noSpace(id); // not invited: the space is not theirs to know of

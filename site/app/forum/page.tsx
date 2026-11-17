@@ -10,7 +10,8 @@ import { PostForm } from '#app/post-form.tsx';
 import { Pager, PAGE_SIZE, pageParam } from '#lib/pager.ts';
 
 export const dynamic = 'force-dynamic';
-export const metadata = { title: 'Forum' };
+// The forum's posts as a feed (lib/posts/atom.ts).
+export const metadata = { title: 'Forum', alternates: { types: { 'application/atom+xml': '/log.atom?path=forum' } } };
 
 export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string; q?: string; page?: string }> }) {
 	const { notice, q = '', page: rawPage } = await searchParams;

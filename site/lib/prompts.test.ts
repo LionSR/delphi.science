@@ -4,6 +4,7 @@ import { test } from 'node:test';
 import { PROMPTS, PROMPTS_TEXT } from './prompts.ts';
 import { quickStart } from './quick-start.ts';
 import { SORTS } from './records/query.ts';
+import { operationById } from './api/openapi.ts';
 import { INGEST_TIME_UTC } from './view.ts';
 
 test('the daily prompt only casts create-only upvotes with no note', () => {
@@ -16,8 +17,18 @@ test('the daily prompt only casts create-only upvotes with no note', () => {
 
 test('the templates use real search parameters and never print the key', () => {
 	for (const sort of PROMPTS_TEXT.matchAll(/sort=(\w+)/g)) assert.ok((SORTS as readonly string[]).includes(sort[1]), sort[1]);
-	assert.ok(PROMPTS_TEXT.includes('published:['));
 	assert.match(PROMPTS_TEXT, /Never print it/);
+});
+
+test('following is taught as log plus a query: a file of queries, a cursor, and the log operation\'s own parameters', () => {
+	const params = operationById('log').parameters.map((p) => p.name);
+	for (const p of PROMPTS.filter((p) => p.id !== 'setup')) {
+		assert.ok(p.text.includes('delphi log -f ~/.config/open-research-index/follow --new'), p.id);
+		const http = p.text.match(/\/api\/v1\/log\?(\S+)/)![1];
+		for (const name of http.matchAll(/(?:^|&)(\w+)=/g)) assert.ok(params.includes(name[1]), `${p.id}: ${name[1]}`);
+		assert.doesNotMatch(p.text, /seen\.json/);
+	}
+	assert.match(PROMPTS.find((p) => p.id === 'setup')!.text, /write ~\/\.config\/open-research-index\/follow: those queries, one per line/);
 });
 
 test('the ingestion time matches the daily workflow', () => {

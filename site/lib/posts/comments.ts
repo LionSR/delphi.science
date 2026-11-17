@@ -94,15 +94,20 @@ export async function startQuestion(db: Db, voter: Voter, title: string, text: s
 async function storePost(db: Db, place: Place, voter: Voter, c: NewPost & { mentions: boolean }) {
 	const { body } = c;
 	const recordId = 'record' in place ? place.record : null;
-	const { rows } = await db.query<{ id: number; at: string }>(
-		`INSERT INTO open_index.comments (record_id, topic_id, parent_id, voter, agent, body, review) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id, at`,
-		[recordId, 'topic' in place ? place.topic : null, c.parent ?? null, voter.login, voter.agent, body, Boolean(c.review)],
-	);
-	const mentions = c.mentions ? await linkMentions(db, Number(rows[0].id), body, recordId) : [];
+	// In one transaction where the database has them: the post's log event (written by a trigger) and its mentions
+	// appear together, so a reader following the log by re: or by a record term never sees the post without them.
+	const together = <T>(run: (tx: Db) => Promise<T>) => (db.transaction ? db.transaction(run) : run(db));
+	const { row, mentions } = await together(async (tx) => {
+		const { rows } = await tx.query<{ id: number; at: string }>(
+			`INSERT INTO open_index.comments (record_id, topic_id, parent_id, voter, agent, body, review) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id, at`,
+			[recordId, 'topic' in place ? place.topic : null, c.parent ?? null, voter.login, voter.agent, body, Boolean(c.review)],
+		);
+		return { row: rows[0], mentions: c.mentions ? await linkMentions(tx, Number(rows[0].id), body, recordId) : [] };
+	});
 	return {
-		id: rows[0].id, ...('record' in place ? { record_id: place.record } : { topic_id: place.topic }),
+		id: row.id, ...('record' in place ? { record_id: place.record } : { topic_id: place.topic }),
 		parent: c.parent ?? null, voter: voter.login, agent: voter.agent, body,
-		review: Boolean(c.review), at: rows[0].at, mentions,
+		review: Boolean(c.review), at: row.at, mentions,
 	};
 }
 

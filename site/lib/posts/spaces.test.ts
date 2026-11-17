@@ -450,6 +450,53 @@ describe('nothing private leaks', () => {
 				for (const got of [mine, spaces]) assert.ok(!got.text.includes(SECRET) && (who === 'carol' || !got.text.includes(slug)));
 			});
 
+			test('the log\'s query, its Atom feed and the text forms of pages have nothing of it', async () => {
+				const ghost = 'reading-group-zzzzz', noTopic = 987654, noPost = 987655;
+				// A query looks into posts' text and topics' titles, at who wrote to whom, and at what names a record.
+				const queries = [SECRET, 'lemma', 'sketch', 'by:@alice', 'by:@dave', 'by:@bob', 'to:@dave', 'to:@alice', `re:${RECORD}`, 'kind:question', 'kind:answer OR kind:comment', 'NOT kind:record'];
+				for (const q of queries) {
+					for (const format of ['json', 'text', 'atom']) {
+						const got = await api('GET', `/api/v1/log?since=0&limit=200&format=${format}&q=${encodeURIComponent(q)}`, who);
+						assert.equal(got.status, 200, `log q=${q} ${format}: ${got.text.slice(0, 200)}`);
+						// An Atom feed's own title and address repeat the query; its entries are what must hold nothing.
+						const shown = format === 'atom' ? got.text.slice(got.text.indexOf('<entry>') < 0 ? got.text.length : got.text.indexOf('<entry>')) : got.text;
+						assert.ok(!shown.includes(SECRET) && !got.text.includes(slug), `log q=${q} as ${format} shows something of the space`);
+					}
+					const viaMcp = await tool('log', { q, since: 0, limit: 200 }, who);
+					assert.ok(!viaMcp.error && !viaMcp.text.includes(SECRET) && !viaMcp.text.includes(slug), `the log tool with q=${q}`);
+				}
+				assert.deepEqual((await api('GET', `/api/v1/log?since=0&q=${SECRET}`, who)).json.entries, []);
+				// to:@me is the caller's inbox: nothing of the space in it for an outsider, Dave included, whose post there was replied to.
+				const inbox = await api('GET', '/api/v1/log?since=0&q=to:@me', who);
+				if (!who) assert.equal(inbox.status, 401);
+				else assert.ok(inbox.status === 200 && !inbox.text.includes(SECRET) && !inbox.text.includes(slug));
+				// The feed and the text forms are public: read as nobody, whatever token comes with the request.
+				const { GET: feed } = await import(`${APP.href}/log.atom/route.ts`);
+				const { GET: text } = await import(`${APP.href}/txt/[...id]/route.ts`);
+				const headers = who ? { Authorization: `Bearer ${keys[who]}` } : undefined;
+				const atom = async (query: string) => { const r: Response = await feed(new Request(`http://localhost/log.atom${query}`, { headers })); return { status: r.status, text: await r.text(), cache: r.headers.get('cache-control') ?? '' }; };
+				const txt = async (path: string) => { const r: Response = await text(new Request(`http://localhost/txt/${path}`, { headers }), { params: Promise.resolve({ id: path.split('/') }) }); return { status: r.status, text: await r.text() }; };
+				for (const query of ['', '?path=forum', `?path=${RECORD}`, '?q=kind:question']) {
+					const got = await atom(query);
+					assert.deepEqual([got.status, got.text.includes(SECRET) || got.text.includes(slug)], [200, false], `log.atom${query}`);
+					assert.match(got.cache, /^public/);
+				}
+				const hide = (t: string) => [slug, ghost, topic, noTopic, firstPost, noPost].reduce<string>((x, n) => x.replace(new RegExp(`\\b${n}\\b`, 'g'), '#'), t);
+				for (const [real, none] of [[`ws/${slug}`, `ws/${ghost}`], [`ws/${slug}/${topic}`, `ws/${ghost}/${noTopic}`]]) {
+					const got = await atom(`?path=${real}`), absent = await atom(`?path=${none}`);
+					assert.deepEqual([got.status, hide(got.text)], [404, hide(absent.text)], `log.atom?path=${real}`);
+				}
+				for (const [real, none] of [[`ws/${slug}/${topic}`, `ws/${ghost}/${noTopic}`], [`ws/${slug}/${topic}/${firstPost}`, `ws/${ghost}/${noTopic}/${noPost}`],
+					[`forum/${topic}`, `forum/${noTopic}`], [`forum/${topic}/${firstPost}`, `forum/${noTopic}/${noPost}`]]) {
+					const got = await txt(real), absent = await txt(none);
+					assert.deepEqual([got.status, hide(got.text)], [404, hide(absent.text)], `the text form of ${real}`);
+				}
+				for (const path of [`forum/${publicTopic}`, RECORD]) {
+					const got = await txt(path);
+					assert.deepEqual([got.status, got.text.includes(SECRET) || got.text.includes(slug)], [200, false], `the text form of ${path}`);
+				}
+			});
+
 			test('what the web pages read, the profile, the feed and the sitemap have nothing of it', async () => {
 				const reader = who ?? null;
 				// /ws/<slug> and /ws/<slug>/<n> render from these, and show not-found when they are null.
@@ -519,6 +566,18 @@ describe('nothing private leaks', () => {
 		assert.deepEqual((await api('POST', `/api/v1/vote/${id}`, 'bob', { value: 1 })).json, { id, score: 1 });
 		assert.deepEqual((await api('POST', `/api/v1/vote/${id}`, 'alice', { accept: true })).json, { id, accepted: id });
 		assert.match((await api('POST', `/api/v1/vote/${id}`, 'alice', { value: 1 })).json.error.message, /cannot vote on your own post/);
+		// A member's queries reach the space: a word in it, and Dave's post that Bob replied to (to:@dave).
+		assert.ok((await api('GET', `/api/v1/log?since=0&q=${SECRET}`, 'bob')).json.entries.length >= 3);
+		assert.ok((await api('GET', '/api/v1/log?since=0&q=to:@dave', 'alice')).json.entries.some((e: { path: string }) => e.path.startsWith(`ws/${slug}/`)));
+		// But a feed and a text form are public even for a member with a token: they are read as nobody.
+		const { GET: feed } = await import(`${APP.href}/log.atom/route.ts`);
+		const asAlice = { headers: { Authorization: `Bearer ${keys.alice}` } };
+		const all: Response = await feed(new Request('http://localhost/log.atom', asAlice));
+		assert.ok(all.status === 200 && !(await all.text()).includes(SECRET), 'a member\'s token adds nothing to a feed');
+		assert.equal(((await feed(new Request(`http://localhost/log.atom?path=ws/${slug}`, asAlice))) as Response).status, 404);
+		assert.equal((await api('GET', `/api/v1/log?format=atom&path=ws/${slug}/${topic}`, 'alice')).status, 404);
+		const { GET: text } = await import(`${APP.href}/txt/[...id]/route.ts`);
+		assert.equal(((await text(new Request(`http://localhost/txt/ws/${slug}/${topic}`, asAlice), { params: Promise.resolve({ id: ['ws', slug, String(topic)] }) })) as Response).status, 404);
 		// A private topic is not at the forum's path even for its members: one path each.
 		assert.equal((await api('GET', `/api/v1/get/forum/${topic}`, 'alice')).status, 404);
 		assert.equal((await api('POST', `/api/v1/forum/${topic}`, 'alice', { body: 'By the forum\'s route.' })).status, 404);
@@ -542,12 +601,13 @@ describe('nothing private leaks', () => {
 
 describe('the MCP tools as listed', () => {
 	// What tools/list returns is what the plugin directories reviewed: names, descriptions, input and output schemas,
-	// annotations and security schemes. Spaces changed none of it. If a change here is meant, agree it with whoever
+	// annotations and security schemes. Spaces changed none of it: the hash is that of the log-events branch they were
+	// merged with (before it, of the agent-cli branch: 3c73e545…). If a change here is meant, agree it with whoever
 	// holds the plugin submission, then update the hash.
 	test('tools/list is byte for byte what it was before spaces', async () => {
 		const req = new Request('http://localhost/mcp', { method: 'POST', body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/list', params: {} }),
 			headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' } });
 		const text = await (await mcp(req, async () => pg)).text();
-		assert.equal(createHash('sha256').update(text).digest('hex'), '3c73e54537c152e2dc77eb650c8ce443cf75580b50936449bd8c529f05f0071f');
+		assert.equal(createHash('sha256').update(text).digest('hex'), '53579a04571a5f6346712255acfdedf110f6ff422d139b95f5cb10ab0a31d276');
 	});
 });

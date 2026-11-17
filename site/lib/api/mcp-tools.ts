@@ -16,7 +16,7 @@ import { editPost } from '#lib/posts/edit.ts';
 import { accept, startTopic, topics, topicWithPosts, votePost, type Topic } from '#lib/posts/forum.ts';
 import { addMember, createSpace, deleteSpace, members, mySpaces, noSpace, removeMember, space as spaceOf, topicPath, type Member } from '#lib/posts/spaces.ts';
 import { FORUM, reader } from '#lib/posts/visibility.ts';
-import { log, logEntry, type LogEntry, type Scope } from '#lib/posts/log.ts';
+import { log, logEntry, NeedsReader, type LogEntry, type Scope } from '#lib/posts/log.ts';
 import { unvote, vote } from '#lib/records/votes.ts';
 import { submit } from '#lib/records/submit.ts';
 import { PATH_HELP, resolve, SPACE_HELP } from './paths.ts';
@@ -158,30 +158,32 @@ export async function getTool(db: Db, { id }: { id: string }, who: Caller) {
 	if (t.kind === 'members') return getMembers(db, t.space, who);
 	if (t.kind === 'member') return getMembers(db, t.space, who, t.login);
 	if (t.kind === 'post') {
-		const { seq: _, path, by, ...e } = await logEntry(db, reader(who), t.thread, t.post);
+		const { path, by, ...e } = await logEntry(db, reader(who), t.thread, t.post);
 		return { id: path, voter: by, ...e };
 	}
 	throw new QueryError(`${JSON.stringify(id)} is a list, not one thing`, 'Use log for its posts, or search for its records (in=forum for topics).');
 }
 
-/** A log entry as one line: tab-separated, with the post's text on one line and cut short (get its path for the whole). */
-const logLine = ({ body, revision: _, ...e }: LogEntry) => ({ ...e, text: truncate(body.replace(/\s+/g, ' ').trim(), 280) });
+/** A log entry as the tools return it: its text on one line and cut short (get its path for the whole). */
+export const logLine = ({ body, revision: _, ...e }: LogEntry) => ({ ...e, text: truncate(body.replace(/\s+/g, ' ').trim(), 280) });
 
-/** The posts under a path that the caller can read. Without a path: every public post, and for a member the posts of
- * their spaces and the invitations sent to them. ws: only those of their spaces. */
-export async function logTool(db: Db, { path = '', since, limit }: { path?: string; since?: number; limit?: number }, who: Caller) {
+/** The entries under a path that the caller can read, narrowed by a query. Without a path: everything public, and for
+ * a member the posts of their spaces and the invitations sent to them. ws: only those of their spaces. */
+export type LogArgs = { path?: string; q?: string; since?: number; limit?: number };
+export async function logTool(db: Db, { path = '', q, since, limit }: LogArgs, who: Caller) {
 	const t = await resolve(db, path, reader(who));
 	if (t.kind === 'spaces') signedIn(who);
 	const scope: Scope | undefined = t.kind === 'all' ? {} : t.kind === 'forum' ? { forum: true } : t.kind === 'source' ? { source: t.source }
 		: t.kind === 'record' ? { record: t.record } : t.kind === 'spaces' ? { spaces: true } : t.kind === 'space' ? { space: t.space }
 			// A topic's number alone names it; the space in its path was checked when the path was read, and is checked again here.
 			: t.kind === 'topic' ? { topic: t.topic, ...(t.space === FORUM ? { forum: true as const } : { space: t.space }) } : undefined;
-	if (!scope) throw new QueryError(`${JSON.stringify(path)} has no log`, t.kind === 'post' ? 'It names one post: get it, or log its thread.' : `Leave path out for every post, or send one of: ${PATH_HELP}`);
-	const page = await log(db, reader(who), scope, { since, limit });
+	if (!scope) throw new QueryError(`${JSON.stringify(path)} has no log`, t.kind === 'post' ? 'It names one post: get it, or log its thread.' : `Leave path out for everything, or send one of: ${PATH_HELP}`);
+	const page = await log(db, reader(who), scope, { since, limit, q }).catch((e) => { throw e instanceof NeedsReader ? new SignIn() : e; });
 	return { path: path.trim().replace(/^\/+|\/+$/g, ''), since: page.since, entries: page.entries.map(logLine) };
 }
+/** The entries alone, one tab-separated line each. New columns are only ever added at the end. */
 export const logText = (out: Record<string, any>) => (out.entries as Record<string, unknown>[])
-	.map((e) => [e.seq, e.kind, e.path, e.parent ?? '-', e.agent ? `${e.agent} · @${e.by}` : `@${e.by}`, e.at, e.score, e.subject, e.text].join('\t')).join('\n');
+	.map((e) => [e.seq, e.kind, e.path, e.parent ?? '-', e.agent ? `${e.agent} · @${e.by}` : e.by ? `@${e.by}` : '-', e.at, e.score, e.subject, e.text, (e.mentions as string[]).join(' ') || '-'].join('\t')).join('\n');
 
 type PostArgs = { id: string; body: string; title?: string; review?: boolean; retrieve_sources?: boolean };
 /** Refuses a field that does not apply to the kind of path, saying where it does. */

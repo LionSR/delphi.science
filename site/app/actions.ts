@@ -52,12 +52,14 @@ export async function savePostEdit(input: { id: number; body: string; revision: 
 
 export async function sendPost(_previous: PostFormState, form: FormData): Promise<PostFormState> {
 	const kind = String(form.get('kind')) as PostInput['kind'];
+	// What was sent, to fill the form again if it is not posted: without JavaScript the page is all the author has.
+	const draft = { title: String(form.get('title') ?? ''), body: String(form.get('body') ?? ''), review: form.get('review') === 'on' };
 	if (!(FORM_KINDS as readonly string[]).includes(kind)) {
 		return { status: 'failed', feedback: { code: 'bad_request', message: 'Choose a topic, reply, comment or review form.', fix: 'Open the relevant thread and try again.' } };
 	}
 	try {
 		const who = await me();
-		if (!who) return { status: 'failed', feedback: { code: 'sign_in', message: 'Sign in with GitHub before posting.', fix: 'Your draft is kept. Sign in, review it, then submit.' } };
+		if (!who) return { status: 'failed', draft, feedback: { code: 'sign_in', message: 'Sign in with GitHub before posting.', fix: 'Your draft is kept. Sign in, review it, then submit.' } };
 		const retrieveSources = form.get('retrieve_sources') === 'on';
 		if (kind === 'record' && retrieveSources) requireSourceCheckOrigin((await headers()).get('origin'), true);
 		const location = await submitPostForm(await db(), who, {
@@ -75,7 +77,7 @@ export async function sendPost(_previous: PostFormState, form: FormData): Promis
 		if (kind === 'question' && !form.has('space')) revalidatePath('/forum');
 		return { status: 'posted', location };
 	} catch (error) {
-		return { status: 'failed', feedback: postFeedback(error) };
+		return { status: 'failed', draft, feedback: postFeedback(error) };
 	}
 }
 

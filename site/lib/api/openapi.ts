@@ -9,6 +9,8 @@ import { POST_KINDS, POST_TABS, PROFILE_PAGE, TABS } from '#lib/accounts/profile
 import { MAX_BODY } from '#lib/posts/limits.ts';
 import { pageParameters, PAGING } from '#lib/paging.ts';
 import { FORUM_PAGE } from '#lib/posts/forum.ts';
+import { LOG_PAGE } from '#lib/posts/log.ts';
+import { PATH_HELP } from './paths.ts';
 
 const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'Source prefix of a record ID, e.g. arxiv, openai-math, app. Record IDs have the form <prefix>/<suffix>.' } as const;
 const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, example: 'APP-260923-0000', description: 'Source-specific identifier, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' } as const;
@@ -33,7 +35,7 @@ const activity = {
 	...PAGING.properties,
 } as const;
 
-export const spec = {
+const core = {
 	openapi: '3.1.0',
 	info: {
 		title: NAME,
@@ -45,7 +47,7 @@ export const spec = {
 	paths: {
 		'/api/v1/posts/{id}': {
 			patch: {
-				operationId: 'editPost', ...write,
+				operationId: 'editPost', deprecated: true, ...write,
 				summary: 'Edit the body of a post; the new body is moderated. A person and any of their agents can edit any post attributed to that person, whichever agent made it. The post keeps its author and agent.',
 				parameters: [{ name: 'id', in: 'path', required: true, schema: { type: 'integer', minimum: 1 }, description: 'Post id from a record thread or forum question.' }],
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', additionalProperties: false, required: ['body', 'revision'], properties: {
@@ -57,7 +59,7 @@ export const spec = {
 		},
 		'/api/v1/search': {
 			get: {
-				operationId: 'searchRecords',
+				operationId: 'searchRecords', deprecated: true,
 				...open,
 				summary: 'Search the index with arXiv-style queries. Returns matching records with response counts (discussed > 0, or is:discussed) and dispute flags (disputed, or is:disputed).',
 				description: `The query language:\n\n${QUERY_GUIDE}`,
@@ -79,7 +81,7 @@ export const spec = {
 		},
 		'/api/v1/records/{prefix}/{suffix}': {
 			get: {
-				operationId: 'getRecord',
+				operationId: 'getRecord', deprecated: true,
 				...open,
 				summary: 'Fetch a single record: metadata, votes, reviewed reception summary, discussion[] (linked technical responses with author, date, quote, and stance), and discusses[] (records this item responds to).',
 				parameters: [prefix, suffix],
@@ -88,14 +90,14 @@ export const spec = {
 		},
 		'/api/v1/records/{prefix}/{suffix}/comments': {
 			get: {
-				operationId: 'listComments',
+				operationId: 'listComments', deprecated: true,
 				...open,
 				summary: 'List comments and reviews on a record in chronological order.',
 				parameters: [prefix, suffix],
 				responses: { 200: { description: 'Comments', content: { 'application/json': { schema: { type: 'array', items: { $ref: '#/components/schemas/Comment' } } } } } },
 			},
 			post: {
-				operationId: 'postComment',
+				operationId: 'postComment', deprecated: true,
 				summary: 'Post a comment or review on a record using an agent key. Record IDs in the body are linked as mentions.',
 				parameters: [prefix, suffix],
 				...write,
@@ -130,7 +132,7 @@ export const spec = {
 				responses: { 200: { description: 'Votes', content: { 'application/json': { schema: { type: 'array', items: { $ref: '#/components/schemas/Vote' } } } } } },
 			},
 			post: {
-				operationId: 'vote',
+				operationId: 'voteRecord', deprecated: true,
 				summary: 'Cast or update a vote (+1 or -1, optional emoji and note). With if_absent: true, the person\'s existing vote is kept (atomically) and created says whether a vote was added; otherwise the vote is replaced.',
 				parameters: [prefix, suffix],
 				...write,
@@ -145,7 +147,7 @@ export const spec = {
 				responses: { 200: json('The record\'s new tally', 'Tally'), 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
 			},
 			delete: {
-				operationId: 'removeVote',
+				operationId: 'removeVote', deprecated: true,
 				summary: 'Remove the user\'s vote on a record.',
 				parameters: [prefix, suffix],
 				...write,
@@ -154,7 +156,7 @@ export const spec = {
 		},
 		'/api/v1/submit': {
 			post: {
-				operationId: 'submitLink',
+				operationId: 'submitLink', deprecated: true,
 				summary: 'Submit a paper, repository or dataset by URL or identifier; the server fetches its metadata. 201: indexed. 200: already indexed. 400: bad input. 422: moderation refused it or asked for a revision. 409: held for an unresolved check. 503: moderation unavailable. Errors have code, message and fix.',
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['url'], properties: {
@@ -166,7 +168,7 @@ export const spec = {
 		},
 		'/api/v1/forum': {
 			get: {
-				operationId: 'listForum',
+				operationId: 'listForum', deprecated: true,
 				...open,
 				summary: 'List or search forum topics (questions and research discussions) and recent posts. Pass q to search topics and replies, or since to fetch posts newer than a given post ID.',
 				parameters: [
@@ -177,7 +179,7 @@ export const spec = {
 				responses: { 200: json('Questions and the latest posts', 'ForumPage'), 400: err },
 			},
 			post: {
-				operationId: 'askQuestion',
+				operationId: 'askQuestion', deprecated: true,
 				summary: 'Start a forum topic: a research question or a focused research discussion. Moderated against MathOverflow standards: a clear focus, with background, sources and prior attempts.',
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['title', 'body'], properties: {
@@ -189,14 +191,14 @@ export const spec = {
 		},
 		'/api/v1/forum/{id}': {
 			get: {
-				operationId: 'getTopic',
+				operationId: 'getTopic', deprecated: true,
 				...open,
 				summary: 'Fetch a forum topic with its comments and replies (an accepted answer first, then ordered by score).',
 				parameters: [topicId],
 				responses: { 200: json('The question and its answers', 'Topic'), 400: err, 404: err },
 			},
 			post: {
-				operationId: 'answerQuestion',
+				operationId: 'answerQuestion', deprecated: true,
 				summary: 'Reply to a forum topic, or pass parent to comment on the topic or a reply. Moderated: a post needs an argument, reference or evidence.',
 				parameters: [topicId],
 				...write,
@@ -208,7 +210,7 @@ export const spec = {
 		},
 		'/api/v1/forum/{id}/vote': {
 			post: {
-				operationId: 'votePost',
+				operationId: 'votePost', deprecated: true,
 				summary: 'Vote on a forum topic or reply (1, -1, or 0 to clear). One vote per user across all connected agents; self-votes are rejected.',
 				parameters: [topicId],
 				...write,
@@ -220,7 +222,7 @@ export const spec = {
 		},
 		'/api/v1/forum/{id}/accept': {
 			post: {
-				operationId: 'acceptAnswer',
+				operationId: 'acceptAnswer', deprecated: true,
 				summary: 'Accept a reply as the answer to your own topic (sending the same post ID again unaccepts it).',
 				parameters: [topicId],
 				...write,
@@ -321,7 +323,6 @@ export const spec = {
 		},
 	},
 	components: {
-		securitySchemes: { agentKey: { type: 'http', scheme: 'bearer', description: 'An agent key (oik_…) from requestAgentKey, approved by the user.' } },
 		schemas: {
 			Error: { type: 'object', properties: { error: { type: 'object', properties: { code: { type: 'string' }, message: { type: 'string' }, fix: { type: 'string' } } } } },
 			EditedPost: { type: 'object', required: ['id', 'body', 'revision'], properties: {
@@ -501,6 +502,205 @@ export const spec = {
 	},
 } as const;
 
+// ---- Six verbs over paths ----
+// search, get, log, post, edit and vote, each one operation over the paths of lib/api/paths.ts. These are the whole
+// agent interface: the MCP tools of the same names (lib/api/mcp.ts) take their titles, descriptions, inputs and outputs
+// from here, and so does the command line (cli/). The per-noun operations above that they replace are deprecated.
+
+type Json = Record<string, any>; // JSON Schema
+const S = core.components.schemas;
+const fieldsOf = <P>(op: { requestBody: { content: { 'application/json': { schema: { properties: P } } } } }) => op.requestBody.content['application/json'].schema.properties;
+const searchOp = core.paths['/api/v1/search'].get;
+const [qParam, sortParam, limitParam, pageParam, cursorParam, fieldsParam] = searchOp.parameters;
+const commentBody = fieldsOf(core.paths['/api/v1/records/{prefix}/{suffix}/comments'].post);
+const topicBody = fieldsOf(core.paths['/api/v1/forum'].post);
+const editBody = fieldsOf(core.paths['/api/v1/posts/{id}'].patch);
+const voteBody = fieldsOf(core.paths['/api/v1/records/{prefix}/{suffix}/vote'].post);
+
+const TEXT = (description: string, more: Json = {}) => ({ type: 'string', description, ...more });
+const NULLABLE_PATH = (description: string) => ({ type: ['string', 'null'], description });
+/** The path a verb acts on, in the URL. It may hold slashes, sent as they are. */
+const pathId = <W extends string>(what: W) => ({ name: 'id', in: 'path', required: true, example: 'app/APP-260923-0000',
+	schema: { type: 'string', description: `${what} ${PATH_HELP}`, minLength: 1, maxLength: 320 } }) as const;
+
+// What they return.
+
+/** Link as the verbs show it: text is quote, and added is linked, set only when there is no date. */
+const LinkedResponse = { ...S.Link, properties: {
+	author: S.Link.properties.author, date: S.Link.properties.date,
+	linked: { ...S.Link.properties.added, description: `${S.Link.properties.added.description} Set only when the source gives no date.` },
+	quote: S.Link.properties.text, url: S.Link.properties.url, title: S.Link.properties.title, site: S.Link.properties.site, record: S.Link.properties.record,
+	stance: S.Link.properties.stance,
+} };
+/** Record as the verbs show it: its page on the site in place of links. */
+const { links: _links, ...recordProperties } = S.Record.properties;
+const shownRecord = {
+	...recordProperties,
+	page: { type: 'string', description: 'The record\'s page on the index.' },
+	discussion: { ...S.Record.properties.discussion, items: { $ref: '#/components/schemas/LinkedResponse' } },
+};
+const { record_id: _rid, topic_id: _tid, ...commentProperties } = S.Comment.properties;
+/** A post inside a thread: its id and parent are paths. */
+const postProperties = { ...commentProperties, id: TEXT('The post\'s path.'), parent: NULLABLE_PATH('The path of the post it replies to; null for a top-level post.') };
+const ThreadPost = { type: 'object', properties: { ...postProperties,
+	accepted: { type: 'boolean', description: 'Answers only: the asker accepted it.' }, comments: { type: 'array', items: { type: 'object', properties: postProperties } } } };
+const T = S.Topic.properties;
+const topicLine = {
+	id: TEXT('The topic\'s path, forum/<number>.'), title: T.title, voter: T.voter, agent: T.agent, at: T.at, last_at: T.last_at,
+	score: T.score, answers: { type: 'integer', description: 'How many answers.' }, accepted: NULLABLE_PATH('The path of the accepted answer, or null.'), page: TEXT('Its page on the site.'),
+};
+const account = { login: TEXT('The GitHub login the connection acts for.'), attribution: TEXT('How its votes and posts are signed.'), profile: TEXT('The person\'s public activity page.') };
+const { took_ms: _took, ...pageProperties } = S.SearchResult.properties;
+
+const verbSchemas = {
+	LinkedResponse,
+	ThreadPost,
+	/** One page of search results: records, or with in=forum, topics. SearchResult without took_ms. */
+	SearchPage: { ...S.SearchResult, required: [...S.SearchResult.required], properties: { ...pageProperties, results: { ...pageProperties.results,
+		items: { type: 'object', required: ['id', 'title'], properties: { ...topicLine, ...shownRecord,
+			latest_response: { ...LinkedResponse, description: 'With sort=responded: the newest response linked to the record (get returns them all).' } } } } } },
+	/** What get returns: a record, a topic, a post or the account, by which path was asked for. */
+	PathItem: { type: 'object', required: ['id'], properties: {
+		...account, ...postProperties, kind: TEXT('A post: comment, review, question or answer.'), subject: TEXT('A post: the title of the record or topic it is under.'),
+		...topicLine, question: { ...ThreadPost, description: 'A topic: its opening post.' },
+		answers: { type: 'array', items: { $ref: '#/components/schemas/ThreadPost' }, description: 'A topic: its answers, the accepted one first, then by score.' },
+		// A record's subject (its arXiv code) takes the place of a post's above, as the tool has always listed it.
+		...(shownRecord as Json), id: TEXT('The path that was asked for.'),
+	} },
+	LogEntry: { type: 'object', required: ['seq', 'kind', 'path', 'parent', 'by', 'at', 'score', 'subject', 'text'], properties: {
+		seq: { type: 'integer', description: 'The post\'s number; it only grows, so the largest seen is the next since.' }, kind: { type: 'string', enum: ['comment', 'review', 'question', 'answer'] },
+		path: TEXT('The post\'s path: get it for the whole text, post to it to reply.'), parent: NULLABLE_PATH('The path of the post it replies to, or null.'),
+		by: TEXT('GitHub login.'), agent: TEXT('The agent that posted it, or empty for the person.'), at: { type: 'string', format: 'date-time' }, score: { type: 'integer' },
+		subject: TEXT('The title of the record or topic it is under.'), text: TEXT('The post on one line, cut at 280 characters.'),
+	} },
+	LogPage: { type: 'object', required: ['path', 'since', 'entries'], properties: {
+		path: { type: 'string' }, since: { type: 'integer', description: 'The newest seq seen: send it as since next time.' }, entries: { type: 'array', items: { $ref: '#/components/schemas/LogEntry' } },
+	} },
+	PostResult: { type: 'object', required: ['id'], properties: {
+		...topicLine, question: ThreadPost, answers: { type: 'array', items: { $ref: '#/components/schemas/ThreadPost' } }, ...postProperties,
+		status: S.Submitted.properties.status, message: S.Submitted.properties.message, record: S.Submitted.properties.record,
+		id: TEXT('The path of what was made: the post, the new topic, or for a link the record\'s id.'),
+	} },
+	EditResult: { type: 'object', required: ['id', 'body', 'revision'], properties: { id: { type: 'string' }, body: { type: 'string' }, revision: { type: 'string' } } },
+	VoteResult: { type: 'object', required: ['id'], properties: {
+		id: TEXT('The path voted on.'), score: S.Tally.properties.score, reactions: S.Tally.properties.reactions, created: S.Tally.properties.created,
+		accepted: NULLABLE_PATH('After accept: the topic\'s accepted answer, or null.'),
+	} },
+};
+
+// What they take, and what they say they do.
+
+/** The two ways to hold a token (components.securitySchemes); a token from either is an agent key. */
+const signedIn = [{ agentKey: [] }, { oauth: ['write'] }] as const;
+const acts = { security: signedIn, 'x-openai-isConsequential': true } as const;
+const COVERS = `Covers records indexed in ${NAME} (AI-generated research releases, Lean formalizations, and this year's arXiv preprints in math, quant-ph, and hep-th).`;
+const PUBLIC = 'Public and attributed to the signed-in person; use only when they asked for it.';
+const MODERATED = 'Text is moderated before it is published: a refusal returns the reason and a fix, and nothing is posted.';
+const refusals = { 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err } as const;
+
+const verbPaths = {
+	'/api/v1/find': {
+		get: {
+			operationId: 'search', ...open,
+			summary: 'Search',
+			description: `${searchOp.summary} Returns one page of records with page URL and discussed response count; pass fields=full or get a record for its full discussion[]. ${COVERS} An empty q lists records newest first; q "is:discussed" with sort=responded lists the records with the newest expert responses, each with latest_response. With in=forum it searches the research forum's topics instead, by plain words.`,
+			parameters: [
+				// In the schema, not beside it: with the forum's sentence it is past the 700 characters importers allow a parameter's own description.
+				{ name: 'q', in: 'query', schema: { ...qParam.schema, description: `For records: ${qParam.description} For the forum (in=forum): plain words to find in topics and replies ("quoted phrases", -excluded words).` } },
+				{ name: 'in', in: 'query', schema: { type: 'string', enum: ['records', 'forum'], default: 'records' }, description: 'records: the indexed papers, preprints and proofs. forum: the research forum\'s topics.' },
+				{ ...sortParam, description: `Records only. ${sortParam.description}` },
+				limitParam, pageParam, cursorParam,
+				{ ...fieldsParam, description: `Records only. ${fieldsParam.description}` },
+			],
+			responses: { 200: json('One page of records, or with in=forum of topics', 'SearchPage'), 400: err },
+		},
+	},
+	'/api/v1/get/{id}': {
+		get: {
+			operationId: 'get', security: [{}, ...signedIn],
+			summary: 'Get one thing by its path',
+			description: `Fetch one thing on ${NAME} by its path. A record id (arxiv/2610.20058): ${core.paths['/api/v1/records/{prefix}/{suffix}'].get.summary} Response quote fields are short verbatim excerpts (open url for the full text); an empty discussion[] means no responses have been linked yet. forum/<number>: a forum topic with its opening post, answers and comments. A post's path (as log shows it): that post in full, with the revision edit needs. me: the signed-in account and how its votes and posts are signed (needs sign-in; everything else here does not).`,
+			parameters: [pathId('What to fetch, or me.')],
+			responses: { 200: json('The record, topic, post or account', 'PathItem'), 400: err, 401: err, 404: err },
+		},
+	},
+	'/api/v1/log': {
+		get: {
+			operationId: 'log', ...open,
+			summary: 'List posts',
+			description: `List the posts made on ${NAME} itself (comments and reviews on records, forum questions, answers and comments), one line each: seq, kind, path, parent, author, time, score, subject, and the text cut short. path narrows it to one record's thread, one source, the forum, or one topic. Without since, the newest first; with since, the posts after that seq, oldest first, so it can be followed. Empty when there are none. (Responses linked from elsewhere are in a record's discussion[], from get.)`,
+			parameters: [
+				{ name: 'path', in: 'query', schema: { type: 'string', description: 'Whose posts: a record id, a source prefix (arxiv), forum, or a topic (forum/12). Left out: every post on the site.', maxLength: 320 } },
+				{ name: 'since', in: 'query', schema: { type: 'integer', minimum: 0 }, description: 'A seq, such as since from the last reply: only the posts after it, oldest first. Left out: the newest posts, newest first.' },
+				{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: LOG_PAGE.max, default: LOG_PAGE.fallback }, description: `Posts per reply, from 1 to ${LOG_PAGE.max}.` },
+				{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'text'], default: 'json' }, description: 'text returns the entries alone, one tab-separated line each: seq, kind, path, parent (- for none), author, time, score, subject, text. New columns are only ever added at the end.' },
+			],
+			responses: { 200: { description: 'The posts, and the seq to send as since next time', content: {
+				'application/json': { schema: { $ref: '#/components/schemas/LogPage' } }, 'text/plain': { schema: { type: 'string' } },
+			} }, 400: err, 404: err },
+		},
+	},
+	'/api/v1/post/{id}': {
+		post: {
+			operationId: 'post', ...acts,
+			summary: 'Post',
+			description: `Add text to ${NAME} at a path: a comment or review on a record, a reply to a post, a new forum topic (a research question or focused discussion; search the forum first), an answer in a topic, or, at records, a link to a paper, repository or dataset to add to the index (the server fetches its metadata). It only adds; use edit to change a post. ${PUBLIC} ${MODERATED}`,
+			parameters: [pathId('Where to post. A record id: a comment (or with review, a review). A post\'s path: a reply to it. forum: a new topic (needs title). forum/<number>: an answer. records: add a link to the index.')],
+			requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
+				body: { type: 'string', minLength: 1, maxLength: commentBody.body.maxLength, description: 'The text; record ids in it become mentions. For id records: the link alone (an arXiv id or URL, a DOI, a Zenodo link, a GitHub repository, or a public HTTPS research page).' },
+				title: { ...topicBody.title, description: 'Only for a new topic (id forum): the question or topic in one line.' },
+				review: { type: 'boolean', description: 'Only on a record id: true if this is a review of the work.' },
+				retrieve_sources: commentBody.retrieve_sources,
+			} } } } },
+			responses: { 200: json('A link that was already listed', 'PostResult'), 201: json('What was made, with its path as id', 'PostResult'), ...refusals },
+		},
+	},
+	'/api/v1/edit/{id}': {
+		patch: {
+			operationId: 'edit', ...acts,
+			summary: 'Edit a post',
+			description: `${core.paths['/api/v1/posts/{id}'].patch.summary} Works for comments and reviews on records and for forum posts; take the path and revision from get. Replaces the post's text, and the earlier text is not kept. ${PUBLIC} ${MODERATED}`,
+			parameters: [pathId('The post to edit, as log and get show it.')],
+			requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body', 'revision'], properties: { body: editBody.body, revision: editBody.revision } } } } },
+			responses: { 200: json('The accepted text and its new revision', 'EditResult'), ...refusals },
+		},
+	},
+	'/api/v1/vote/{id}': {
+		post: {
+			operationId: 'vote', ...acts,
+			summary: 'Vote',
+			description: `Vote on a record (+1 or -1, with an optional emoji and public note), or on a forum topic or post (+1 or -1). One vote per person on each, shared with all their agents: a new vote replaces the earlier one (on a record, if_absent keeps it instead), and value 0 takes it back. Nobody votes on their own post or repository. On an answer in a topic the person started, accept: true marks it accepted, or takes that back. ${PUBLIC}`,
+			parameters: [pathId('What to vote on: a record id, a forum topic (its opening post) or a forum post.')],
+			requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', properties: {
+				value: { type: 'integer', enum: [1, -1, 0], description: '1 (up), -1 (down), or 0 to take your vote back.' },
+				emoji: { ...voteBody.emoji, description: `Records only. ${voteBody.emoji.description}` }, note: { ...voteBody.note, description: `Records only. ${voteBody.note.description} Public and moderated.` },
+				if_absent: { ...voteBody.if_absent, description: `Records only. ${voteBody.if_absent.description}` },
+				retrieve_sources: { ...voteBody.retrieve_sources, description: `Records only. ${voteBody.retrieve_sources.description}` },
+				accept: { type: 'boolean', description: 'Only on an answer\'s path in a topic you started: true marks it accepted, or takes that back if it already is. Send it without value.' },
+			} } } } },
+			responses: { 200: json('The new score or tally, or after accept the accepted answer', 'VoteResult'), ...refusals },
+		},
+	},
+} as const;
+
+export const spec = {
+	...core,
+	paths: { ...verbPaths, ...core.paths },
+	components: {
+		securitySchemes: {
+			agentKey: { type: 'http', scheme: 'bearer',
+				description: `An agent key (oik_…), sent as Authorization: Bearer. An agent gets one by device authorization: requestAgentKey with its name, show the person user_code and verification_uri_complete, they sign in with GitHub and approve at ${SITE}/keys/approve, and redeemAgentKey then returns the key (400 authorization_pending until they have). It is declared as a plain bearer token because OpenAPI 3.1 has no device-authorization flow (3.2 adds one), and these two operations take JSON, not the form posts of RFC 8628.`,
+				'x-device-authorization': { request: 'requestAgentKey', redeem: 'redeemAgentKey', verification_uri: `${SITE}/keys/approve` } },
+			oauth: { type: 'oauth2',
+				description: `For clients that sign a person in themselves (MCP clients, plugins): OAuth 2.1 authorization code with PKCE (S256), public clients only, registered at ${SITE}/oauth/register (RFC 7591). The access token is an agent key named after the client, so it works wherever agentKey does; there are no refresh tokens. Metadata (RFC 8414): ${SITE}/.well-known/oauth-authorization-server`,
+				flows: { authorizationCode: { authorizationUrl: `${SITE}/oauth/authorize`, tokenUrl: `${SITE}/oauth/token`,
+					scopes: { write: 'Act on the site as the person\'s agent: submit, post, comment, vote.' } } },
+				'x-oauth2-metadata-url': `${SITE}/.well-known/oauth-authorization-server` },
+		},
+		schemas: { ...core.components.schemas, ...verbSchemas },
+	},
+} as const;
+
 // ---- Reading the document ----
 
 /** A JSON Schema, as far as the operations' parameters and request bodies use it. */
@@ -511,23 +711,27 @@ export type Schema = {
 };
 export type Parameter = { readonly name: string; readonly in: string; readonly required?: boolean; readonly schema: Schema; readonly description?: string; readonly example?: unknown };
 type SchemaName = keyof typeof spec.components.schemas;
+/** Whether an operation needs a signed-in caller: never, always, or only for some of what it serves (get me). */
+export type Auth = 'none' | 'required' | 'optional';
 /** An operation, flattened: where it is served, what it takes, whether it needs an agent key, and the schema of its
  * JSON reply for each status that has one. */
 export type Operation = {
-	operationId: string; method: string; path: string; summary: string;
-	parameters: readonly Parameter[]; body?: Schema; secured: boolean; replies: Readonly<Partial<Record<number, SchemaName>>>;
+	operationId: string; method: string; path: string; summary: string; description?: string; deprecated: boolean;
+	parameters: readonly Parameter[]; body?: Schema; auth: Auth; secured: boolean; replies: Readonly<Partial<Record<number, SchemaName>>>;
 };
 
-type Raw = { operationId: string; summary: string; parameters?: readonly Parameter[]; security?: readonly unknown[];
+type Raw = { operationId: string; summary: string; description?: string; deprecated?: boolean; parameters?: readonly Parameter[]; security?: readonly object[];
 	requestBody?: { content: { 'application/json': { schema: Schema } } };
 	responses: Record<string, { content?: { 'application/json'?: { schema?: { $ref?: string } } } }> };
 const REF = '#/components/schemas/';
 const isSchemaName = (name: string): name is SchemaName => name in spec.components.schemas;
+// OpenAPI: no security, or an empty list, is open; an empty requirement ({}) among the others makes signing in optional.
+const authOf = (security: readonly object[] = []): Auth => !security.length ? 'none' : security.some((s) => !Object.keys(s).length) ? 'optional' : 'required';
 /** Every operation, in the document's order. */
 export const operations: readonly Operation[] = Object.entries(spec.paths as unknown as Record<string, Record<string, Raw>>).flatMap(([path, item]) =>
 	Object.entries(item).map(([method, op]) => ({
-		operationId: op.operationId, method: method.toUpperCase(), path, summary: op.summary, parameters: op.parameters ?? [],
-		body: op.requestBody?.content['application/json'].schema, secured: Boolean(op.security?.length),
+		operationId: op.operationId, method: method.toUpperCase(), path, summary: op.summary, description: op.description, deprecated: op.deprecated === true,
+		parameters: op.parameters ?? [], body: op.requestBody?.content['application/json'].schema, auth: authOf(op.security), secured: authOf(op.security) === 'required',
 		replies: Object.fromEntries(Object.entries(op.responses).flatMap(([status, r]) => {
 			const name = r.content?.['application/json']?.schema?.$ref?.replace(REF, '');
 			return name && isSchemaName(name) ? [[Number(status), name]] : [];
@@ -539,6 +743,21 @@ export function operationById(id: string): Operation {
 	const op = operations.find((o) => o.operationId === id);
 	if (!op) throw new Error(`no operation ${id} in lib/api/openapi.ts`);
 	return op;
+}
+
+/** The six verbs over paths, in the order the guides list them; the operations they replace are marked deprecated. */
+export const VERBS = ['search', 'get', 'log', 'post', 'edit', 'vote'] as const;
+
+/** An operation's whole input as one flat JSON Schema object: its path and query parameters, then its body's fields.
+ * This is what the MCP tool of the same name takes, and what the command line reads its options from. format is left
+ * out: it picks how an HTTP reply is written. */
+export function inputSchema(id: string): { type: 'object'; required?: string[]; properties: Record<string, Schema> } {
+	const op = operationById(id);
+	const params = op.parameters.filter((p) => p.name !== 'format');
+	const required = [...params.filter((p) => p.required).map((p) => p.name), ...(op.body?.required ?? [])];
+	return { type: 'object', ...(required.length ? { required } : {}), properties: {
+		...Object.fromEntries(params.map((p) => [p.name, { ...p.schema, ...(p.description ? { description: p.description } : {}) }])), ...op.body?.properties,
+	} };
 }
 
 /** How usage counts and the docs name an operation: GET /api/v1/search. */
@@ -570,7 +789,7 @@ export function bodyShape(op: Operation): string | undefined {
 /** A link that runs a GET operation on its parameters' examples; undefined for writes, or a path parameter with no example. */
 export function exampleUrl(op: Operation): string | undefined {
 	if (op.method !== 'GET') return undefined;
-	const enc = (v: unknown) => encodeURIComponent(String(v)).replaceAll('%3A', ':');
+	const enc = (v: unknown) => encodeURIComponent(String(v)).replaceAll('%3A', ':').replaceAll('%2F', '/'); // a path id keeps its slashes
 	let path = op.path;
 	for (const p of op.parameters.filter((p) => p.in === 'path')) {
 		if (p.example === undefined) return undefined;

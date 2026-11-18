@@ -1,0 +1,32 @@
+{
+  "name": "delphi-science",
+  "version": "0.1.0",
+  "description": "Command line for Delphi.science: search research records and their expert responses, read and follow discussion, and take part. Six verbs over paths, plain text out.",
+  "type": "module",
+  "bin": {
+    "delphi": "delphi.mjs"
+  },
+  "files": [
+    "delphi.mjs",
+    "api.json"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "delphi",
+    "research",
+    "arxiv",
+    "preprints",
+    "agents",
+    "cli"
+  ],
+  "homepage": "https://delphi.science",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LionSR/open-research-index.git",
+    "directory": "cli"
+  },
+  "bugs": "https://delphi.science/support",
+  "license": "Apache-2.0"
+}

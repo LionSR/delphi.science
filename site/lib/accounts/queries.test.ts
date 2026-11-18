@@ -7,6 +7,7 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
+import type { Db } from '#lib/db.ts';
 import { handle } from '#lib/api/mcp.ts';
 import { logTool } from '#lib/api/mcp-tools.ts';
 import type { Moderator } from '#lib/moderation/moderate.ts';
@@ -345,6 +346,35 @@ describe('which feed a link opens', () => {
 });
 
 describe('the read position', () => {
+	test('an event arriving after the page read stays new on the next visit', async () => {
+		const { db } = await site();
+		try {
+			await replaceQueries(db, ada, 'cat:quant-ph');
+			await openFeed(db, ada); // seen 7
+			let arrived = false;
+			const duringRead: Db = {
+				async query<T>(sql: string, params?: unknown[]) {
+					const result = await db.query<T>(sql, params);
+					if (!arrived && sql.includes('FROM open_index.events e')) {
+						arrived = true;
+						await comment(db, QP.id, eve, { body: 'The endpoint term survives for odd length.' }, yes); // 8
+					}
+					return result;
+				},
+			};
+			const visit = await openFeed(duringRead, ada);
+			assert.equal(arrived, true);
+			assert.deepEqual(seqs(visit.entries), [5, 4, 1]);
+			assert.equal((await savedQueries(db, ada.login)).seen, 7, 'the unseen arrival was not marked read');
+			const next = await openFeed(db, ada);
+			assert.equal(next.line, 7);
+			assert.deepEqual(seqs(next.entries), [8, 5, 4, 1]);
+			assert.equal((await savedQueries(db, ada.login)).seen, 8);
+		} finally {
+			await db.close();
+		}
+	});
+
 	test('the advance rule: the plain first page of My feed moves it to the end of the log; nothing else does', async () => {
 		const { db, topic } = await site();
 		await replaceQueries(db, ada, 'cat:quant-ph');

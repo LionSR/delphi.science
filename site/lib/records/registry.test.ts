@@ -11,6 +11,7 @@ import { screen, type Moderator } from '#lib/moderation/moderate.ts';
 import { load } from './load.ts';
 import { get } from './query.ts';
 import { detect, itemOf, resolve } from './resolve.ts';
+import { resolve as target } from '#lib/api/paths.ts';
 import { submit as actualSubmit } from './submit.ts';
 import { createAgentKey, voterFromKey } from '#lib/accounts/keys.ts';
 import { migratedDb } from '#lib/testing.ts';
@@ -95,6 +96,7 @@ describe('submitting and the forum, on Postgres', () => {
 		await load(db, [kept]);
 		assert.deepEqual((await db.query<{ id: string }>("SELECT id FROM open_index.records WHERE id LIKE 'app/APP-_' ORDER BY id")).rows.map((r) => r.id), ['app/APP-1', 'app/APP-2']);
 		assert.equal((await get(db, 'app/APP-3'))?.id, 'app/APP-2');
+		assert.deepEqual(await target(db, 'app/APP-3'), { kind: 'record', record: 'app/APP-2' });
 	});
 
 	test('a link the site reads is listed at once, with its metadata', async () => {

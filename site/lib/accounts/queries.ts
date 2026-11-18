@@ -163,19 +163,22 @@ export async function myFeed(db: Db, who: Pick<Voter, 'login'>, opts: { q?: stri
  * The line is where the person left off before this visit (or `line`, when a link of this visit carries it: the pager
  * does, so the line stays put from page to page). The advance rule: opening the plain first page (no search, no
  * before, no carried line, and not a browser's prefetch) moves the stored place to the end of the log as it is now.
- * The page is read first, so what arrived since the last visit is still above the line on the page that moved it. */
+ * Capture the end before reading the page: an event arriving after the read must stay new on the next visit.
+ * The page still uses the old position, so this visit shows what arrived since the previous one. */
 export async function openFeed(db: Db, who: Pick<Voter, 'login'>, opts: { q?: string; before?: number; line?: number; prefetch?: boolean } = {}): Promise<Feed & { line: number; advanced: boolean }> {
-	const feed = await myFeed(db, who, { q: opts.q?.trim() || undefined, before: opts.before });
 	const plain = !opts.q?.trim() && opts.before === undefined && opts.line === undefined && !opts.prefetch;
+	const through = plain ? await head(db) : undefined;
+	const feed = await myFeed(db, who, { q: opts.q?.trim() || undefined, before: opts.before });
 	const advanced = plain && feed.queries.length > 0;
-	if (advanced) await markSeen(db, who);
+	if (advanced) await markSeen(db, who, through);
 	return { ...feed, line: opts.line ?? feed.seen, advanced };
 }
 
 /** Records that a person has seen the log up to now, and returns that place. It only moves forward. Called when they
- * open the first page of My feed (docs/my-feed.md, "The read position"); nothing an agent does calls it. */
-export async function markSeen(db: Db, who: Pick<Voter, 'login'>): Promise<number> {
-	const seq = await head(db);
+ * open the first page of My feed (docs/my-feed.md, "The read position"); nothing an agent does calls it.
+ * `through` is the end captured before reading that page, so a later arrival is not marked seen. */
+export async function markSeen(db: Db, who: Pick<Voter, 'login'>, through?: number): Promise<number> {
+	const seq = through ?? await head(db);
 	await db.query(`INSERT INTO open_index.saved_queries AS s (login, seen_seq, seen_at) VALUES ($1, $2, now())
 		ON CONFLICT (login) DO UPDATE SET seen_seq = excluded.seen_seq, seen_at = now() WHERE s.seen_seq < excluded.seen_seq`, [key(who.login), seq]);
 	return seq;

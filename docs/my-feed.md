@@ -145,8 +145,9 @@ server draws the page again from the same reply. The whole flow was run in a bro
 
 `seen_seq` is one number per person: how far into the log they had got the last time they opened My feed.
 
-**The advance rule.** Opening the *plain first page* of My feed moves `seen_seq` to the largest `seq` in the log at
-that moment. Plain means: no search, not an older page, no line carried in the link. Nothing else moves it. In
+**The advance rule.** Opening the *plain first page* of My feed moves `seen_seq` to the largest `seq` captured before
+reading that page. Events that arrive during or after the read therefore stay new on the next visit, even if they
+miss this page. Plain means: no search, not an older page, no line carried in the link. Nothing else moves it. In
 particular these do not: a search within the feed, an older page, a topic or record page, a browser's prefetch or
 prerender of the page (recognised by its `Sec-Purpose` or `Purpose` header), the global feed, and anything an agent
 does. It only moves forward. A person with no saved queries has no feed and no position.

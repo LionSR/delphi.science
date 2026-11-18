@@ -1,7 +1,7 @@
 // One record: metadata, votes, comments and reviews, and external discussion.
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { cache, Fragment } from 'react';
 import { comments } from '#lib/posts/comments.ts';
 import { PublicAuthor } from '#lib/accounts/public-author.ts';
@@ -45,6 +45,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const id = await recordId(ctx);
 	const r = await record(id);
 	if (!r) notFound();
+	if (r.id !== id) permanentRedirect(recordPath(r.id));
 	const d = await db();
 	const [thread, voters, who, { notice }] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams]);
 	const stands = reception(r);

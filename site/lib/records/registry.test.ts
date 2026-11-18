@@ -86,6 +86,17 @@ describe('submitting and the forum, on Postgres', () => {
 		await load(db, [{ id: 'app/APP-1', source: 'app', url: 'https://agenticpapers.app/papers/APP-1/', repo: 'https://github.com/someone/paper', title: 'An APP paper' }]);
 	});
 
+	test('the id of a merged entry gives the record it was merged into, and its own row goes at the next load', async () => {
+		const kept = { id: 'app/APP-2', source: 'app', url: 'https://agenticpapers.app/papers/APP-2/', title: 'Kept' };
+		const merged = { id: 'app/APP-3', source: 'app', url: 'https://agenticpapers.app/papers/APP-3/', title: 'Merged' };
+		await load(db, [kept, merged]);
+		await db.query("INSERT INTO open_index.entries (id, entry) VALUES ('app/APP-3', $1)", [{ key: 'APP-3', source: 'app', merged_into: 'app/APP-2' }]);
+		assert.equal((await get(db, 'app/APP-3'))?.id, 'app/APP-2');
+		await load(db, [kept]);
+		assert.deepEqual((await db.query<{ id: string }>("SELECT id FROM open_index.records WHERE id LIKE 'app/APP-_' ORDER BY id")).rows.map((r) => r.id), ['app/APP-1', 'app/APP-2']);
+		assert.equal((await get(db, 'app/APP-3'))?.id, 'app/APP-2');
+	});
+
 	test('a link the site reads is listed at once, with its metadata', async () => {
 		const r = await submit(db, 'https://arxiv.org/abs/1706.03762v7', bot, SOURCES);
 		assert.equal(r.status, 'listed');

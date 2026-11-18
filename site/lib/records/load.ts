@@ -41,5 +41,7 @@ export async function load(db: Db, items: Item[], batch = 200): Promise<number> 
 			chunk.flat(),
 		);
 	}
+	// An entry merged into another record is not built any more, so its row goes, and its votes and comments with it.
+	await db.query(`DELETE FROM open_index.records r USING open_index.entries e WHERE e.id = r.id AND e.entry->>'merged_into' IS NOT NULL`);
 	return rows.length;
 }

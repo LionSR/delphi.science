@@ -69,7 +69,7 @@ if (MODE === 'review') {
 }
 await page.waitForURL(/\/oauth\/authorize\?/);
 const consent = await page.locator('article').innerText();
-const login = consent.match(/comment as @([\w-]+)/)?.[1];
+const login = consent.match(/\bas @([\w-]+)/)?.[1];
 check('consent page shows who, what and where it returns', Boolean(login) && consent.includes(`127.0.0.1:${server.address().port}`), `@${login}`);
 await page.click('button:has-text("Approve")');
 const back = await callback;

@@ -1,0 +1,59 @@
+# Publishes cli/ to npm as delphi-science when a tag cli-v<version> is pushed. It signs in to npm by trusted
+# publishing (OIDC): there is no npm token in this repository. On npmjs.com the package names this repository and
+# this file (release-cli.yml) as its trusted publisher; see cli/PUBLISHING.md.
+name: Release the command line
+
+on:
+  push:
+    tags:
+      - 'cli-v*'
+
+concurrency:
+  group: release-cli
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          package-manager-cache: false  # nothing cached goes into a release
+      - name: The tag is the version in cli/package.json
+        run: |
+          version="$(node -p "require('./cli/package.json').version")"
+          if [ "$GITHUB_REF_NAME" != "cli-v$version" ]; then
+            echo "::error::tag $GITHUB_REF_NAME, but cli/package.json is version $version"
+            exit 1
+          fi
+      - run: npm ci
+        working-directory: site
+      - name: The command line against the site, and cli/api.json against the OpenAPI document
+        working-directory: site
+        run: node --test --experimental-strip-types lib/api/cli.test.ts lib/api/openapi-file.test.ts
+      - name: What will be published
+        working-directory: cli
+        run: npm pack --dry-run
+
+  publish:
+    needs: test
+    runs-on: ubuntu-latest  # trusted publishing takes GitHub-hosted runners only
+    permissions:
+      contents: read
+      id-token: write  # the OIDC token npm exchanges for the right to publish
+    steps:
+      - uses: actions/checkout@v7
+      # Trusted publishing needs npm 11.5.1 or later and Node 22.14 or later; Node 24 ships such an npm.
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+      # The package has no dependencies and no build, so there is nothing to install. Provenance is attached by npm.
+      - run: npm publish --access public
+        working-directory: cli

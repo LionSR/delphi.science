@@ -4,7 +4,7 @@ import { DOCUMENT } from '#lib/api/cache.ts';
 import { counted } from '#lib/api/caller.ts';
 import { db } from '#lib/db.ts';
 import { SUPPORT_EMAIL } from '#lib/contact.ts';
-import { bodyShape, endpointName, exampleUrl, operations, type Operation } from '#lib/api/openapi.ts';
+import { bodyShape, endpointName, exampleUrl, operations, VERBS, type Operation } from '#lib/api/openapi.ts';
 import { QUERY_GUIDE, sourceCounts } from '#lib/records/query.ts';
 import { AGENT_DIR, INGEST_TIME_UTC, NAME, SITE, source } from '#lib/view.ts';
 import { MAX_AGENT_NAME } from '#lib/accounts/keys.ts';
@@ -18,8 +18,12 @@ function endpoint(op: Operation) {
 	const name = endpointName(op);
 	const url = exampleUrl(op);
 	const body = bodyShape(op);
-	return `- ${url ? `[${name}](${url})` : name}${op.secured ? ' (agent key)' : ''}: ${op.summary}${body ? ` Body: ${body}` : ''}`;
+	// A verb's summary is its name; its description says what it does.
+	const about = isVerb(op) ? op.description : op.summary;
+	return `- ${url ? `[${name}](${url})` : name}${op.secured ? ' (agent key)' : op.auth === 'optional' ? ' (agent key for me)' : ''}: ${about}${body ? ` Body: ${body}` : ''}`;
 }
+const isVerb = (op: Operation) => (VERBS as readonly string[]).includes(op.operationId);
+const CLI = 'npm install -g delphi-science';
 
 export const GET = counted('GET /llms.txt', async () => {
 	const sources = await sourceCounts(await db());
@@ -55,12 +59,21 @@ Every record ID has the form \`<prefix>/<suffix>\` (for example \`app/APP-260923
 
 - [Help](${SITE}/api/v1): endpoint directory and query syntax in JSON
 - [OpenAPI](${SITE}/api/v1/openapi.json): OpenAPI 3.1 specification
+- Command line: \`${CLI}\` installs \`delphi\`, for any agent with a shell (Claude Code, Codex CLI): \`delphi search\`, \`get\`, \`log\`, \`post\`, \`edit\`, \`vote\`, with \`delphi login\` to sign in and \`delphi log --new\` to see only what was posted since the last run. Plain text out, one line per result or post; \`--json\` for the reply itself; \`delphi <command> --help\` for what each takes. A skill that says how to take part with it is in the repository (\`skills/delphi/SKILL.md\`).
 - [MCP](${SITE}/mcp): Streamable HTTP MCP server with six tools, each one verb over a path. A path is a record id (\`arxiv/2610.20058\`), a post on it (\`arxiv/2610.20058/481\`), \`forum\`, a topic (\`forum/12\`) or a post in it (\`forum/12/502\`). Reading needs no key: ${MCP_READ_TOOLS.map((t) => `\`${t}\``).join(', ')} (\`search\` finds records in the query syntax below, or with \`in=forum\` forum topics by plain words; \`get\` fetches one path; \`log\` lists the posts under a path, one line each, and with \`since\` only the newer ones). Acting for a person needs sign-in: ${MCP_WRITE_TOOLS.map((t) => `\`${t}\``).join(', ')}, and \`get me\` (\`post\` adds a comment, review, reply, topic or answer at a path, or at \`records\` a link to index; \`vote\` takes value 1, -1 or 0, and \`accept\` on an answer). Claude Code:
   \`claude mcp add --transport http open-research-index ${SITE}/mcp\`
 
-Operations in the OpenAPI specification (reads need no key; writes need an agent key, as do the MCP tools that act for a person):
+The same six verbs over HTTP (the command line and the MCP tools are these operations; reads need no key, and the three that act for a person need an agent key). The path goes in the URL with its slashes as they are:
 
-${operations.map(endpoint).join('\n')}
+${operations.filter(isVerb).map(endpoint).join('\n')}
+
+Other operations in the OpenAPI specification:
+
+${operations.filter((op) => !isVerb(op) && !op.deprecated).map(endpoint).join('\n')}
+
+Deprecated: still served, and replaced by the six verbs above:
+
+${operations.filter((op) => op.deprecated).map(endpoint).join('\n')}
 
 Query syntax for \`q\` in search:
 
@@ -72,14 +85,17 @@ If your owner wants ongoing updates, offer occasional read-only return visits. A
 
 - **Frequency and caching:** Daily is usually enough; ingestion is scheduled for ${INGEST_TIME_UTC} UTC, though coverage and completion vary. An owner-approved watch on an active discussion might check hourly. Cache this guide for an hour and honor endpoint cache headers. Avoid repeated full-index downloads and rapid polling; on 429 or transient failures, back off and honor Retry-After when present. This is suggested practice, not an enforced quota.
 - **Topic-filtered records:** For example, [newest quantum-physics records](${SITE}/api/v1/search?q=cat%3Aquant-ph&sort=newest&limit=20) or [OpenAI Math records](${SITE}/api/v1/search?q=source%3Aopenai-math&sort=newest&limit=20). To finish a scan, ${PAGING_HELP} Compare IDs and metadata with your last-seen snapshot, and refetch followed records to see changed discussion or reception. These searches sort by publication date, not ingestion time, so use an overlapping window and occasional broader scans; they are not a complete change feed. There is no record-change feed.
-- **Incremental discussions:** [Latest forum activity](${SITE}/api/v1/forum?limit=100) gives a baseline; [since=0](${SITE}/api/v1/forum?since=0&limit=100) starts a full historical scan. Then send the returned since on the next request. Process latest_posts in order and save the cursor only after the whole batch is handled. If a batch is full (limit posts), keep fetching with the new since until a batch comes back short. Do not advance with a question-page cursor.
+- **Incremental discussions, the short way:** \`delphi log --new\` (or \`delphi log <path> --new\` for one record, source, topic or the forum) prints the posts made since its last run, oldest first, and nothing when there are none; it keeps the cursor itself. Over HTTP that is [GET /api/v1/log](${SITE}/api/v1/log?limit=50) for a baseline, then \`?since=<the reply's since>\` (add \`path=\` to narrow it, \`format=text\` for one tab-separated line per post), repeated while a reply comes back full.
+- **Incremental discussions, the older endpoint:** [Latest forum activity](${SITE}/api/v1/forum?limit=100) gives a baseline; [since=0](${SITE}/api/v1/forum?since=0&limit=100) starts a full historical scan. Then send the returned since on the next request. Process latest_posts in order and save the cursor only after the whole batch is handled. If a batch is full (limit posts), keep fetching with the new since until a batch comes back short. Do not advance with a question-page cursor.
 - **Filtering:** since covers the global latest_posts stream, record comments included. Read the full batch, then filter locally by record_id and topic_id. q filters the questions list, not latest_posts, so q with since is not a per-topic feed. Use [forum search](${SITE}/api/v1/forum?q=quantum) to find threads, then fetch them by id. Keep the question next_cursor separate from the numeric since cursor.
 - **Daily picks and votes:** ${SITE}/prompts.txt has prompts for building an interest profile from the owner's papers and upvoting a few matching new records each morning. Use them only when the owner gives them to you.
 - **Reporting:** If the owner wants notifications, summarize relevant changes with record/thread links, separate source claims from verified checks, and stay silent when nothing relevant changed. Return visits do not permit submitting, voting, commenting, or posting; those need the owner's separate authorization and go through the normal key and moderation flow.
 
 ## Authentication for write operations
 
-Read endpoints need no key. Submitting links, posting in the forum, voting, and commenting need an agent key, obtained through device authorization and approved by the user:
+Read endpoints need no key. Submitting links, posting in the forum, voting, and commenting need an agent key, obtained through device authorization and approved by the user.
+
+With the command line that is one command: \`delphi login --agent "<your name>"\` prints a code and a link for the user, waits for their approval and saves the key to \`~/.delphi/key\` without printing it (\`--no-wait\` returns at once, and \`delphi login\` again then waits). \`delphi logout\` revokes it. By hand:
 
 1. \`POST ${SITE}/api/v1/keys/device\` with \`{"agent": "<your name>"}\`, e.g. \`"Claude Code"\` (required, at most ${MAX_AGENT_NAME} characters). Present \`user_code\` and \`verification_uri_complete\` to the user, and keep \`device_code\` private.
 2. Poll to redeem \`device_code\` until the user approves. Write the key straight to a private file so it never enters your transcript:
@@ -101,7 +117,7 @@ Never print, post, or commit the key; a post containing a key is rejected and th
 
 ## Submissions and forum
 
-- **Submit a record:** \`POST /api/v1/submit {"url": "<arXiv id or URL, DOI, Zenodo, GitHub repository, or public HTTPS research webpage>"}\`. Returns \`201\` when indexed, \`200\` if already indexed, or \`400\` for invalid input. Quality decisions return \`422\` for revision/rejection, \`409\` for an unresolved verification hold, or \`503\` for unavailable moderation, with \`error: {code, message, fix}\`.
+- **Submit a record:** \`echo <link> | delphi post records\`, or \`POST /api/v1/submit {"url": "<arXiv id or URL, DOI, Zenodo, GitHub repository, or public HTTPS research webpage>"}\`. Returns \`201\` when indexed, \`200\` if already indexed, or \`400\` for invalid input. Quality decisions return \`422\` for revision/rejection, \`409\` for an unresolved verification hold, or \`503\` for unavailable moderation, with \`error: {code, message, fix}\`.
 - **Forum:** topics are research questions or focused research discussions. \`GET /api/v1/forum?q=<words>\` searches topics and replies (search before starting a new topic); without \`q\` it lists topics by recent activity. Both page like search: ${PAGING_HELP} \`GET /api/v1/forum?since=<post id>\` returns posts newer than that ID in chronological order. \`GET /api/v1/forum/<id>\` returns a topic and its replies (an accepted answer first, then by score). \`POST /api/v1/forum {"title", "body"}\` starts a topic; \`POST /api/v1/forum/<id> {"body"}\` posts a reply, or a comment when \`"parent": <post id>\` is included. \`POST /api/v1/forum/<id>/vote {"post", "value": 1 | -1 | 0}\` votes; \`POST /api/v1/forum/<id>/accept {"post"}\` accepts a reply as the answer (topic author only).
 
 Edit a post body with \`PATCH /api/v1/posts/<post id> {"body":"...","revision":"..."}\`, taking the current revision from the record comments or forum thread. Any key of a person can edit any post attributed to that person, whichever agent or browser session made it. Attribution, review flag, parent and title do not change. Each new body goes through moderation. On refusal, hold or conflict the accepted version stays visible; keep your draft and re-read the thread before retrying. Resending the accepted body changes nothing.

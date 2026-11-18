@@ -7,6 +7,7 @@ import type { PGlite } from '@electric-sql/pglite';
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { load, type Item } from '#lib/records/load.ts';
+import { handle as mcp } from './mcp.ts';
 import { spec } from './openapi.ts';
 import { closed } from './schema.ts';
 import { approveDevice } from '#lib/accounts/device.ts';
@@ -27,7 +28,7 @@ const paths = spec.paths as Record<string, Record<string, Op>>;
 function routes(dir = API, at = '/api/v1'): [string, URL][] {
 	return readdirSync(dir).flatMap((f) => {
 		const u = new URL(f, dir);
-		if (statSync(u).isDirectory()) return routes(new URL(`${f}/`, dir), `${at}/${f.replace(/^\[(.+)\]$/, '{$1}')}`);
+		if (statSync(u).isDirectory()) return routes(new URL(`${f}/`, dir), `${at}/${f.replace(/^\[(?:\.\.\.)?(.+)\]$/, '{$1}')}`);
 		return f === 'route.ts' ? [[at, u] as [string, URL]] : [];
 	});
 }
@@ -110,12 +111,14 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 	// Calls the route as Next does and checks the answer against the document's response for its status.
 	async function call(method: string, path: string, opts: { query?: string; body?: unknown; auth?: boolean | string; params?: Record<string, string>; headers?: Record<string,string> } = {}) {
 		// As Next routes: a static path (/keys/device) wins over a parameter (/keys/{hash}).
-		const tmpl = Object.keys(paths).filter((p) => new RegExp(`^${p.replace(/\{[^}]+\}/g, '[^/]+')}$`).test(path))
+		// A verb's path id is a catch-all ([...id]): Next hands the route its segments, decoded.
+		const verb = path.match(/^\/api\/v1\/(get|post|edit|vote)\/(.+)$/);
+		const tmpl = verb ? `/api/v1/${verb[1]}/{id}` : Object.keys(paths).filter((p) => new RegExp(`^${p.replace(/\{[^}]+\}/g, '[^/]+')}$`).test(path))
 			.sort((a, b) => (a.match(/\{/g)?.length ?? 0) - (b.match(/\{/g)?.length ?? 0))[0]!;
 		const file = routes().find(([p]) => p === tmpl)![1];
 		const ids = tmpl.match(/\{([^}]+)\}/g)?.map((x) => x.slice(1, -1)) ?? [];
 		const values = path.split('/').filter((_, n) => tmpl.split('/')[n]?.startsWith('{'));
-		const params = Promise.resolve(Object.fromEntries(ids.map((k, n) => [k, values[n]])));
+		const params = Promise.resolve<Record<string, string | string[]>>(verb ? { id: verb[2].split('/').map(decodeURIComponent) } : Object.fromEntries(ids.map((k, n) => [k, values[n]])));
 		const req = new Request(`http://test${path}${opts.query ? `?${opts.query}` : ''}`, {
 			method, headers: { 'content-type': 'application/json', ...(opts.auth ? { authorization: `Bearer ${opts.auth === true ? key : opts.auth}` } : {}), ...opts.headers },
 			body: opts.body === undefined ? undefined : JSON.stringify(opts.body),
@@ -396,6 +399,240 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.equal((await call('DELETE', `/api/v1/keys/${'0'.repeat(64)}`, { auth: true })).status, 404);
 		assert.equal((await call('DELETE', `/api/v1/keys/${hash}`, { auth: true })).status, 200);
 		assert.equal((await call('GET', '/api/v1/keys', { auth: spare })).status, 401);
+	});
+
+	// ---- The six verbs over paths: each operation on each kind of path, and the same answers as the MCP tools ----
+
+	const json = async (method: string, path: string, opts: Parameters<typeof call>[2] = {}) => {
+		const r = await call(method, path, opts);
+		return { status: r.status, ...JSON.parse(r.text) };
+	};
+	/** The MCP tool of the same name, called with the same arguments: its structured result, or the text of its refusal. */
+	const tool = async (name: string, args: object, auth?: string) => {
+		const res = await mcp(new Request('http://test/mcp', { method: 'POST', body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name, arguments: args } }),
+			headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream', ...(auth ? { Authorization: `Bearer ${auth}` } : {}) } }), async () => pg);
+		const { result } = await res.json();
+		return result.isError ? { refused: result.content[0].text as string } : { ...result.structuredContent, text: result.content[0].text as string };
+	};
+	/** A REST reply and a tool result are the same thing. */
+	const same = (rest: Record<string, unknown>, fromTool: Record<string, unknown>, what: string) => {
+		// json() adds the HTTP status (a number); a reply's own status (listed) stays.
+		const { text: _text, ...b } = fromTool, a = Object.fromEntries(Object.entries(rest).filter(([k, v]) => k !== 'status' || typeof v !== 'number'));
+		assert.deepEqual(a, b, what);
+	};
+	const enc = (id: string) => id.split('/').map(encodeURIComponent).join('/');
+	// Their own author: a person's 30 posts a day are shared with the tests above.
+	let topic = '', answer = '', comment = '', author = '';
+
+	test('verbs: post makes a comment, a review, a reply, a topic and an answer, each returned with its path', async () => {
+		author = await createAgentKey(pg, 'verb-author', 'Test agent');
+		const c = await json('POST', `/api/v1/post/${enc(discussed)}`, { auth: author, body: { body: 'The second lemma needs the boundary term.' } });
+		assert.equal(c.status, 201);
+		assert.match(c.id, new RegExp(`^${discussed.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/\\d+$`));
+		comment = c.id;
+		const review = await json('POST', `/api/v1/post/${enc(discussed)}`, { auth: author, body: { body: 'Checked sections 2 and 3 line by line.', review: true } });
+		assert.equal(review.review, true);
+		const reply = await json('POST', `/api/v1/post/${enc(comment)}`, { auth: author, body: { body: 'It does: see equation 4.' } });
+		assert.equal(reply.parent, comment);
+		const other = await createAgentKey(pg, 'verb-other', 'Other agent');
+		const t = await json('POST', '/api/v1/post/forum', { auth: author, body: { title: 'Which seed reproduces table 3?', body: `Has anyone rerun ${discussed}?` } });
+		assert.equal(t.status, 201);
+		assert.match(t.id, /^forum\/\d+$/);
+		topic = t.id;
+		const a = await json('POST', `/api/v1/post/${topic}`, { auth: other, body: { body: 'Seed 7 does, to three digits.' } });
+		assert.match(a.id, new RegExp(`^${topic}/\\d+$`));
+		answer = a.id;
+		assert.equal((await json('POST', `/api/v1/post/${answer}`, { auth: author, body: { body: 'On which hardware?' } })).parent, answer);
+	});
+
+	test('verbs: post refuses what the path does not take, a caller without a key, and a path that names nothing', async () => {
+		const at = `/api/v1/post/${enc(discussed)}`, body = { body: 'A reading.' };
+		assert.equal((await call('POST', at, { body })).status, 401);
+		assert.equal((await call('POST', at, { auth: 'oik_unknown', body })).status, 401);
+		assert.deepEqual((await json('POST', at, { auth: author, body: { ...body, title: 'T' } })).error,
+			{ code: 'bad_request', message: `title does not apply to ${JSON.stringify(discussed)}`, fix: 'Leave title out; it is for a new topic (id forum).' });
+		assert.equal((await json('POST', at, { auth: author, body: {} })).error.message, 'the body needs "body"');
+		assert.equal((await json('POST', '/api/v1/post/forum', { auth: author, body })).error.message, 'a new topic needs a title');
+		assert.equal((await call('POST', '/api/v1/post/me', { auth: author, body })).status, 400);
+		assert.equal((await call('POST', '/api/v1/post/app/no-such-record', { auth: author, body })).status, 404);
+		assert.equal((await call('POST', '/api/v1/post/forum/999999', { auth: author, body })).status, 404);
+		assert.equal((await call('POST', at, { auth: author, headers: { Origin: 'https://another.example.org' }, body: { ...body, retrieve_sources: true } })).status, 403);
+	});
+
+	test('verbs: post at records adds a link, and says so when it is already listed', async () => {
+		const atom = `<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom"><entry>
+			<id>http://arxiv.org/abs/1810.04805v2</id><published>2018-10-11T00:50:01Z</published><title>BERT: Pre-training of Deep Bidirectional Transformers</title>
+			<summary>We introduce a new language representation model.</summary><author><name>Jacob Devlin</name></author>
+			<arxiv:primary_category term="cs.CL"/><category term="cs.CL"/></entry></feed>`;
+		const real = globalThis.fetch;
+		globalThis.fetch = (async (url: string | URL | Request, init) => String(url).includes('id_list=1810.04805') ? new Response(atom) : real(url, init)) as typeof fetch;
+		try {
+			const made = await call('POST', '/api/v1/post/records', { auth: author, body: { body: 'arXiv:1810.04805' } });
+			assert.deepEqual([made.status, JSON.parse(made.text).status, JSON.parse(made.text).id], [201, 'listed', 'arxiv/1810.04805']);
+			const again = await call('POST', '/api/v1/post/records', { auth: author, body: { body: 'https://arxiv.org/abs/1810.04805' } });
+			assert.equal(again.status, 200);
+			same(JSON.parse(again.text), await tool('post', { id: 'records', body: 'https://arxiv.org/abs/1810.04805' }, author), 'a link already listed');
+		} finally { globalThis.fetch = real; }
+	});
+
+	test('verbs: get serves a record, a topic, a post and the account, as the tool does', async () => {
+		for (const id of [discussed, topic, answer, comment]) {
+			const got = await json('GET', `/api/v1/get/${enc(id)}`);
+			assert.deepEqual([got.status, got.id], [200, id]);
+			same(got, await tool('get', { id }), id);
+		}
+		// A slash sent encoded reaches the same record.
+		assert.equal((await json('GET', `/api/v1/get/${encodeURIComponent(discussed)}`)).id, discussed);
+		const me = await call('GET', '/api/v1/get/me', { auth: author });
+		assert.equal(me.headers.get('cache-control'), 'private, no-store');
+		same(JSON.parse(me.text), await tool('get', { id: 'me' }, author), 'me');
+		assert.equal(JSON.parse(me.text).login, 'verb-author');
+		assert.deepEqual((await json('GET', '/api/v1/get/me')).error.code, 'sign_in');
+		assert.equal((await call('GET', '/api/v1/get/me')).status, 401);
+		// A key that does not work is refused even where none is needed, as /mcp refuses it.
+		assert.equal((await call('GET', `/api/v1/get/${enc(discussed)}`, { auth: 'oik_unknown' })).status, 401);
+		for (const [id, status] of [['forum', 400], ['records', 400], ['arxiv', 400], ['app/no-such-record', 404], ['forum/999999', 404], ['forum/x', 404], [`${discussed}/999999`, 404], [`${topic}/999999`, 404]] as const) {
+			const r = await json('GET', `/api/v1/get/${enc(id)}`);
+			assert.equal(r.status, status, id);
+			const refused = (await tool('get', { id })).refused;
+			assert.equal(refused, `${r.error.message}. ${r.error.fix}`, id);
+		}
+		assert.equal((await json('GET', `/api/v1/get/${'x'.repeat(321)}`)).error.message, 'id is longer than 320 characters');
+	});
+
+	test('verbs: log lists every post, or those of a record, a source, the forum or a topic, as JSON and as lines', async () => {
+		const source = discussed.split('/')[0];
+		for (const path of [undefined, discussed, source, 'forum', topic]) {
+			const query = path === undefined ? '' : `path=${encodeURIComponent(path)}`;
+			const page = await json('GET', '/api/v1/log', { query });
+			assert.equal(page.status, 200, path ?? 'everything');
+			assert.ok(page.entries.length, path ?? 'everything');
+			const fromTool = await tool('log', path === undefined ? {} : { path });
+			same(page, fromTool, path ?? 'everything');
+			// format=text is the tool's text, one line per post, ending in a newline.
+			const text = await call('GET', '/api/v1/log', { query: `${query}&format=text` });
+			assert.equal(text.headers.get('content-type'), 'text/plain; charset=utf-8');
+			assert.equal(text.text, `${fromTool.text}\n`, path ?? 'everything');
+			assert.deepEqual(text.text.trimEnd().split('\n').map((l) => Number(l.split('\t')[0])), page.entries.map((e: { seq: number }) => e.seq));
+		}
+		// Newest first; with since, the posts after it, oldest first; nothing newer is nothing at all.
+		const all = await json('GET', '/api/v1/log');
+		const seqs = all.entries.map((e: { seq: number }) => e.seq);
+		assert.deepEqual(seqs, [...seqs].sort((a, b) => b - a));
+		assert.equal(all.since, seqs[0]);
+		const after = await json('GET', '/api/v1/log', { query: `since=${seqs.at(-1)}&limit=2` });
+		assert.deepEqual(after.entries.map((e: { seq: number }) => e.seq), seqs.slice(-3, -1).reverse());
+		assert.deepEqual(await json('GET', '/api/v1/log', { query: `since=${all.since}` }), { status: 200, path: '', since: all.since, entries: [] });
+		assert.equal((await call('GET', '/api/v1/log', { query: `since=${all.since}&format=text` })).text, '');
+		const line = (await call('GET', '/api/v1/log', { query: `path=${topic}&format=text` })).text.split('\n').find((l) => l.split('\t')[2] === answer)!.split('\t');
+		assert.deepEqual([line.length, line[1], line[3], line[4], line[6], line[7], line[8]], [9, 'answer', '-', 'Other agent · @verb-other', '0', 'Which seed reproduces table 3?', 'Seed 7 does, to three digits.']);
+		for (const [query, status] of [['path=me', 400], ['path=records', 400], [`path=${encodeURIComponent(answer)}`, 400], ['limit=0', 400], ['since=-1', 400], ['format=tsv', 400], ['path=nowhere', 404], ['path=app/no-such-record', 404]] as const) {
+			assert.equal((await call('GET', '/api/v1/log', { query })).status, status, query);
+		}
+	});
+
+	test('verbs: search finds records and forum topics, as the tool does', async () => {
+		for (const args of [{ q: 'is:discussed', limit: 5 }, { q: `id:${JSON.stringify(discussed)}`, fields: 'full' }, { sort: 'responded', limit: 3 }, { in: 'forum' }, { in: 'forum', q: 'seed' }] as Record<string, string | number>[]) {
+			const found = await json('GET', '/api/v1/find', { query: new URLSearchParams(Object.entries(args).map(([k, v]) => [k, String(v)])).toString() });
+			assert.equal(found.status, 200, JSON.stringify(args));
+			same(found, await tool('search', args), JSON.stringify(args));
+		}
+		assert.deepEqual(JSON.parse((await call('GET', '/api/v1/find', { query: 'in=forum&q=reproduces' })).text).results.map((r: { id: string }) => r.id), [topic]);
+		assert.equal((await json('GET', '/api/v1/find', { query: 'in=forum&sort=newest' })).error.message, 'sort and fields apply to records, not the forum');
+		assert.equal((await call('GET', '/api/v1/find', { query: 'in=everywhere' })).status, 400);
+		assert.equal((await call('GET', '/api/v1/find', { query: 'q=foo:bar' })).status, 400);
+	});
+
+	test('verbs: edit replaces a post\'s text by its path, for its author only, and keeps it through refusals', async () => {
+		const p = await json('GET', `/api/v1/get/${enc(comment)}`);
+		const at = `/api/v1/edit/${enc(comment)}`, body = { body: 'The second lemma needs the boundary term of equation 4.', revision: p.revision };
+		assert.equal((await call('PATCH', at, { body })).status, 401);
+		assert.equal((await call('PATCH', at, { auth: await createAgentKey(pg, 'verb-stranger', 'Test agent'), body })).status, 403);
+		assert.equal((await call('PATCH', at, { auth: author, body: { ...body, revision: '0' } })).status, 409);
+		assert.equal((await json('PATCH', at, { auth: author, body: { body: body.body } })).error.message, 'the body needs "revision"');
+		assert.equal((await json('PATCH', `/api/v1/edit/${enc(discussed)}`, { auth: author, body })).error.message, `${JSON.stringify(discussed)} is not a post`);
+		assert.equal((await call('PATCH', `/api/v1/edit/${enc(discussed)}/999999`, { auth: author, body })).status, 404);
+		// A post's number under another thread's path is not that post.
+		assert.equal((await call('PATCH', `/api/v1/edit/${topic}/${comment.split('/').at(-1)}`, { auth: author, body })).status, 404);
+		try {
+			for (const mode of ['reject', 'review', 'unavailable'] as const) {
+				moderationMode = mode;
+				assert.equal((await call('PATCH', at, { auth: author, body })).status, mode === 'reject' ? 422 : mode === 'review' ? 409 : 503);
+			}
+		} finally { moderationMode = 'accept'; }
+		assert.equal((await json('GET', `/api/v1/get/${enc(comment)}`)).body, p.body);
+		const saved = await json('PATCH', at, { auth: author, body });
+		assert.deepEqual([saved.status, saved.id, saved.body], [200, comment, body.body]);
+		assert.notEqual(saved.revision, p.revision);
+		// The same text again changes nothing, by either door.
+		same(await json('PATCH', at, { auth: author, body: { body: body.body, revision: saved.revision } }), await tool('edit', { id: comment, body: body.body, revision: saved.revision }, author), 'an identical retry');
+	});
+
+	test('verbs: vote on a record, a topic and a forum post, take it back, and accept an answer', async () => {
+		const on = `/api/v1/vote/${enc(discussed)}`;
+		const up = await json('POST', on, { auth: author, body: { value: 1, emoji: '🤔' } });
+		assert.deepEqual([up.status, up.id], [200, discussed]);
+		same(await json('POST', on, { auth: author, body: { value: 1, emoji: '🤔' } }), await tool('vote', { id: discussed, value: 1, emoji: '🤔' }, author), 'the same vote again');
+		assert.equal((await json('POST', on, { auth: author, body: { value: -1, if_absent: true } })).created, false);
+		assert.equal((await json('POST', on, { auth: author, body: { value: 0 } })).status, 200);
+		assert.deepEqual(await json('POST', `/api/v1/vote/${answer}`, { auth: author, body: { value: 1 } }), { status: 200, id: answer, score: 1 });
+		const other = await createAgentKey(pg, 'verb-other', 'Other agent');
+		const opening = (await json('GET', `/api/v1/get/${topic}`)).question.id;
+		assert.deepEqual(await json('POST', `/api/v1/vote/${topic}`, { auth: other, body: { value: 1 } }), { status: 200, id: opening, score: 1 });
+		assert.deepEqual(await json('POST', `/api/v1/vote/${answer}`, { auth: author, body: { accept: true } }), { status: 200, id: answer, accepted: answer });
+		assert.deepEqual(await json('POST', `/api/v1/vote/${answer}`, { auth: author, body: { accept: true } }), { status: 200, id: answer, accepted: null });
+
+		assert.equal((await call('POST', on, { body: { value: 1 } })).status, 401);
+		for (const [path, body, message] of [
+			[answer, {}, /^the vote is empty$/], [answer, { value: 2 }, /^"value" must be 1, -1 or 0$/], [answer, { value: 1, emoji: '🤔' }, /^emoji does not apply/],
+			[comment, { value: 1 }, /^comments on records are not voted on$/], ['forum', { value: 1 }, /cannot be voted on$/], [discussed, { accept: true }, /^accept does not apply/],
+		] as const) {
+			const r = await json('POST', `/api/v1/vote/${enc(path)}`, { auth: author, body });
+			assert.equal(r.status, 400, path);
+			assert.match(r.error.message, message);
+		}
+		assert.equal((await call('POST', '/api/v1/vote/app/no-such-record', { auth: author, body: { value: 1 } })).status, 404);
+		assert.equal((await call('POST', on, { auth: author, headers: { Origin: 'https://another.example.org' }, body: { value: 1, note: 'Which convention?', retrieve_sources: true } })).status, 403);
+	});
+
+	test('verbs: post and vote pass on moderation\'s revision, hold and failure, and nothing is stored', async () => {
+		const before = (await json('GET', '/api/v1/log')).since;
+		author = await createAgentKey(pg, 'verb-refused', 'Test agent');
+		try {
+			for (const mode of ['reject', 'review', 'unavailable'] as const) {
+				moderationMode = mode;
+				for (const [path, body] of [
+					[`/api/v1/post/${enc(discussed)}`, { body: 'Which boundary conditions are assumed for the displayed calculation?' }],
+					[`/api/v1/post/${topic}`, { body: 'Which boundary conditions are assumed for the displayed calculation?' }],
+					['/api/v1/post/forum', { title: 'How are the boundary terms normalized?', body: 'Which boundary conditions are assumed for the displayed calculation?' }],
+					[`/api/v1/vote/${enc(discussed)}`, { value: 1, note: 'The endpoint terms depend on the boundary convention.' }],
+				] as const) {
+					const r = await json('POST', path, { body, auth: author });
+					assert.equal(r.status, mode === 'reject' ? 422 : mode === 'review' ? 409 : 503, path);
+					assert.equal(r.error.code, mode === 'reject' ? 'moderation_rejected' : mode === 'review' ? 'moderation_review_needed' : 'moderation_unavailable');
+					assert.ok(r.error.message && r.error.fix);
+				}
+			}
+		} finally { moderationMode = 'accept'; }
+		assert.equal((await json('GET', '/api/v1/log')).since, before);
+	});
+
+	test('verbs: the document says who must sign in, and the tools say the same', async () => {
+		const { operationById, VERBS } = await import('./openapi.ts');
+		const { TOOLS, securitySchemes } = await import('./mcp.ts');
+		const { authorizationServer } = await import('#lib/accounts/oauth.ts');
+		assert.deepEqual(Object.keys(TOOLS), [...VERBS]);
+		assert.deepEqual(VERBS.map((v) => operationById(v).auth), ['none', 'optional', 'none', 'required', 'required', 'required']);
+		for (const v of VERBS) assert.equal(TOOLS[v].auth, operationById(v).auth, v);
+		assert.deepEqual(securitySchemes('get'), [{ type: 'noauth' }, { type: 'oauth2', scopes: ['write'] }]);
+		// The OAuth scheme names the endpoints the authorization server's own metadata names.
+		const { oauth, agentKey } = spec.components.securitySchemes, as = authorizationServer();
+		assert.deepEqual([oauth.flows.authorizationCode.authorizationUrl, oauth.flows.authorizationCode.tokenUrl, Object.keys(oauth.flows.authorizationCode.scopes)],
+			[as.authorization_endpoint, as.token_endpoint, as.scopes_supported]);
+		assert.deepEqual([agentKey['x-device-authorization'].request, agentKey['x-device-authorization'].redeem].map((id) => operationById(id).path), ['/api/v1/keys/device', '/api/v1/keys/token']);
+		// A token from OAuth sign-in is an agent key, so REST takes it as it takes a device-approved one.
+		const deprecated = Object.values(paths).flatMap((o) => Object.values(o) as unknown as { operationId: string; deprecated?: boolean }[]).filter((o) => o.deprecated).map((o) => o.operationId);
+		assert.deepEqual(deprecated.sort(), ['acceptAnswer', 'answerQuestion', 'askQuestion', 'editPost', 'getRecord', 'getTopic', 'listComments', 'listForum', 'postComment', 'removeVote', 'searchRecords', 'submitLink', 'votePost', 'voteRecord']);
 	});
 
 	test('every documented response was checked', () => {

@@ -2,7 +2,7 @@
 // name read from the user agent (ClaudeBot, python-requests, browser). No IP, full user agent or URL is kept.
 // lib/api/caller.ts counted() counts a call; /api/v1/stats and /stats show the counts.
 import type { Db } from '#lib/db.ts';
-import { endpointName, operations } from './openapi.ts';
+import { endpointName, operations, VERBS } from './openapi.ts';
 
 type Kind = 'ai' | 'search' | 'bot' | 'tool' | 'browser' | 'other';
 
@@ -22,8 +22,10 @@ const KINDS = new Map(KNOWN.flatMap(([kind, names]) => names.map((name) => [name
 const TOOLS = ['curl', 'python-requests', 'python-urllib', 'python-httpx', 'go-http-client', 'node', 'wget', 'axios', 'postmanruntime'];
 // Only these names are stored: an arbitrary token could hold a name, email, key or unique ID.
 export const CLIENTS = [...KINDS.keys(), ...TOOLS, 'browser', 'none', 'other'];
-// Source checks and edits are not counted: the database's endpoint allowlist does not include them.
-export const ENDPOINTS = [...operations.filter((o) => !['checkPublicSources', 'editPost'].includes(o.operationId)).map(endpointName),
+// Source checks, edits and the six verbs over paths are not counted: the database's endpoint allowlist
+// (api_usage_endpoint_category) does not include them, and adding them takes a migration.
+const UNCOUNTED: readonly string[] = ['checkPublicSources', 'editPost', ...VERBS];
+export const ENDPOINTS = [...operations.filter((o) => !UNCOUNTED.includes(o.operationId)).map(endpointName),
 	'GET /api/v1', 'GET /api/v1/openapi.json', 'GET /llms.txt', 'POST /mcp',
 	'GET /id/{prefix}/{suffix}', 'GET /sitemap.xml', 'GET /sitemap/{file}'];
 const RETENTION_DAYS = 90;

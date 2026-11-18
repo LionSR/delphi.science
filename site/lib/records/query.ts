@@ -312,9 +312,13 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	};
 }
 
+/** SQL for the id of the record that $1 names: the record its entry was merged into (entry.merged_into), else $1. */
+export const NAMED = `coalesce((SELECT e.entry->>'merged_into' FROM open_index.entries e WHERE e.id = $1), $1)`;
+
+/** One record, by its id or by the id of an entry merged into it. */
 export async function get(db: Db, id: string) {
 	const rows = (await db.query<{ record: Record<string, unknown> }>(
-		`SELECT ${SERVED} AS record FROM open_index.records r WHERE r.id = $1`, [id])).rows;
+		`SELECT ${SERVED} AS record FROM open_index.records r WHERE r.id = ${NAMED}`, [id])).rows;
 	return rows[0]?.record ?? null;
 }
 

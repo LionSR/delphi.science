@@ -7,6 +7,7 @@
 import prefixes from '#lib/records/prefixes.json' with { type: 'json' };
 import { NotFoundError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
+import { NAMED } from '#lib/records/query.ts';
 
 export type Target = { kind: 'all' } | { kind: 'me' } | { kind: 'records' } | { kind: 'forum' } | { kind: 'source'; source: string }
 	| { kind: 'record'; record: string } | { kind: 'topic'; topic: number }
@@ -14,7 +15,9 @@ export type Target = { kind: 'all' } | { kind: 'me' } | { kind: 'records' } | { 
 
 export const PATH_HELP = 'A path: a record id (arxiv/2610.20058), a post on it (arxiv/2610.20058/481), forum, a forum topic (forum/12) or a post in it (forum/12/502).';
 const NUMBER = /^[1-9][0-9]{0,15}$/;
-const isRecord = async (db: Db, id: string) => (await db.query('SELECT 1 FROM open_index.records WHERE id = $1', [id])).rows.length > 0;
+/** The id of the record a path names, following a merged entry to the record it was merged into; null for none. */
+const recordAt = async (db: Db, id: string) =>
+	(await db.query<{ id: string }>(`SELECT r.id FROM open_index.records r WHERE r.id = ${NAMED}`, [id])).rows[0]?.id ?? null;
 
 /** What a path names. Throws NotFoundError for a path that names nothing here. */
 export async function resolve(db: Db, given: unknown): Promise<Target> {
@@ -32,8 +35,10 @@ export async function resolve(db: Db, given: unknown): Promise<Target> {
 		if (path in prefixes.prefixes) return { kind: 'source', source: path };
 		throw new NotFoundError(`no ${path}`, PATH_HELP);
 	}
-	if (await isRecord(db, path)) return { kind: 'record', record: path };
-	const last = parts.at(-1)!, record = parts.slice(0, -1).join('/');
-	if (parts.length > 2 && NUMBER.test(last) && await isRecord(db, record)) return { kind: 'post', post: Number(last), thread: record, record };
+	const whole = await recordAt(db, path);
+	if (whole) return { kind: 'record', record: whole };
+	const last = parts.at(-1)!;
+	const record = parts.length > 2 && NUMBER.test(last) ? await recordAt(db, parts.slice(0, -1).join('/')) : null;
+	if (record) return { kind: 'post', post: Number(last), thread: record, record };
 	throw new NotFoundError(`no record ${JSON.stringify(path)}`, 'Use an id that search returns, e.g. arxiv/2610.20058.');
 }

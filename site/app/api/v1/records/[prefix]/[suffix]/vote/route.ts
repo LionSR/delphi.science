@@ -8,7 +8,7 @@ import { unvote, vote, votes } from '#lib/records/votes.ts';
 
 export const GET = operation('listVotes', async ({ params }) => Response.json(await votes(await db(), joinId(params))));
 
-export const POST = operation('vote', async ({ params, body, voter, req }) => {
+export const POST = operation('voteRecord', async ({ params, body, voter, req }) => {
 	if (body.retrieve_sources) requireSourceCheckOrigin(req.headers.get('origin'), false);
 	return Response.json(await vote(await db(), joinId(params), voter, { value: body.value, emoji: body.emoji, note: body.note, retrieveSources: body.retrieve_sources, ifAbsent: body.if_absent }));
 });

@@ -173,16 +173,47 @@ export function detect(link: string): { source: Source; key: string } | null {
 export const looksLikeLink = (link: string) => /^\S{1,2000}$/.test(link.trim());
 
 /** Reads the record's entry from its source. Throws NotFound when it does not exist or is not public. */
+const MAX_REDIRECTS = 5, MAX_BYTES = 5_000_000;
+
+/** A redirect target that is an https URL on a named public host: not an IP address, localhost or an internal name. */
+function publicHttps(to: URL, from: string): string {
+	const host = to.hostname.toLowerCase();
+	const internal = host === 'localhost' || /^[\d.]+$/.test(host) || host.includes(':') || !host.includes('.') || /\.(local|localhost|internal|lan|home|corp)$/.test(host);
+	if (to.protocol !== 'https:' || to.username || to.password || (to.port && to.port !== '443') || internal) throw new Error(`${new URL(from).host} redirects to an address that is not read`);
+	return to.href;
+}
+
+/** The reply with its body read up to MAX_BYTES; a longer one is an error, not a truncated record. */
+async function capped(r: Response, url: string): Promise<Response> {
+	const chunks: Uint8Array[] = [];
+	let size = 0;
+	for await (const chunk of (r.body ?? []) as AsyncIterable<Uint8Array>) {
+		if ((size += chunk.byteLength) > MAX_BYTES) throw new Error(`the reply from ${new URL(url).host} is too large`);
+		chunks.push(chunk);
+	}
+	return new Response(Buffer.concat(chunks), { status: r.status, headers: r.headers });
+}
+
 export async function resolve(link: string, fetcher: typeof fetch = fetch, webTransport?: SourceTransport): Promise<Entry | null> {
 	const hit = detect(link);
 	if (!hit) return null;
 	const get: Get = async (url, accept) => {
-		const headers: Record<string, string> = { 'User-Agent': USER_AGENT, ...(accept ? { Accept: accept } : {}) };
-		if (url.startsWith('https://api.github.com/') && process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
-		const r = await fetcher(url, { headers, redirect: 'follow', signal: AbortSignal.timeout(15000) });
-		if (r.status === 404 || r.status === 410) throw new NotFound(url);
-		if (!r.ok) throw new Error(`HTTP ${r.status} from ${new URL(url).host}`);
-		return r;
+		// Redirects are followed by hand, so that each hop is checked: doi.org sends a request on to whatever address the
+		// DOI's registrant gave.
+		for (let at = url, hop = 0; ; hop++) {
+			const headers: Record<string, string> = { 'User-Agent': USER_AGENT, ...(accept ? { Accept: accept } : {}) };
+			if (at.startsWith('https://api.github.com/') && process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+			const r = await fetcher(at, { headers, redirect: 'manual', signal: AbortSignal.timeout(15000) });
+			const to = r.status >= 300 && r.status < 400 ? r.headers.get('location') : null;
+			if (to) {
+				if (hop >= MAX_REDIRECTS) throw new Error(`too many redirects from ${new URL(url).host}`);
+				at = publicHttps(new URL(to, at), url);
+				continue;
+			}
+			if (r.status === 404 || r.status === 410) throw new NotFound(url);
+			if (!r.ok) throw new Error(`HTTP ${r.status} from ${new URL(url).host}`);
+			return capped(r, url);
+		}
 	};
 	return hit.source.read(hit.key, get, link, webTransport);
 }

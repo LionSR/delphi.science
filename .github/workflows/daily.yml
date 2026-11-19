@@ -34,6 +34,8 @@ jobs:
           cache-dependency-path: site/package-lock.json
 
       - run: pip install -r requirements.txt
+        env:
+          SUPABASE_DB_URL: ''  # install scripts of dependencies do not get the database
       - name: Harvest
         run: python3 index.py harvest
       - name: Refresh the stalest entries
@@ -69,7 +71,7 @@ jobs:
       - name: Load into Supabase
         working-directory: site
         run: |
-          npm ci
+          SUPABASE_DB_URL= npm ci  # install scripts of dependencies do not get the database
           node --experimental-strip-types scripts/load-open-index.ts ../dist/index.json
 
       - name: Report attempted classification failure

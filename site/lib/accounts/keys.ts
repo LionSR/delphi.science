@@ -30,15 +30,21 @@ export function profileName(value: unknown): string {
 	return [...value.normalize('NFC').replace(/[\p{Cc}\s]+/gu, ' ').trim()].slice(0, 100).join('');
 }
 
-/** A new session key, with the person's GitHub display name. */
-export async function createSession(db: Db, login: string, name: unknown = ''): Promise<string> {
-	return newKey(db, login, '', profileName(name));
+/** A new session key, with the person's GitHub display name. It lasts `days`, which is as long as its cookie does. */
+export async function createSession(db: Db, login: string, name: unknown = '', days = 90): Promise<string> {
+	return newKey(db, login, '', profileName(name), days);
 }
 
-async function newKey(db: Db, login: string, agent: string, name = '') {
+async function newKey(db: Db, login: string, agent: string, name = '', days = 90) {
 	const key = `oik_${randomBytes(24).toString('hex')}`;
-	await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent, name) VALUES ($1, $2, $3, $4)', [sha256(key), login, agent, name]);
+	await db.query(`INSERT INTO open_index.agent_keys (key_hash, login, agent, name, expires_at) VALUES ($1, $2, $3, $4, now() + make_interval(days => $5))`,
+		[sha256(key), login, agent, name, days]);
 	return key;
+}
+
+/** Signs `login` out everywhere: revokes every browser session, this one included. Agent keys are left alone. Returns how many. */
+export async function revokeSessions(db: Db, login: string): Promise<number> {
+	return (await db.query(`UPDATE open_index.agent_keys SET revoked_at = now() WHERE login = $1 AND agent = '' AND revoked_at IS NULL RETURNING 1`, [login])).rows.length;
 }
 
 /** Revokes one of `login`'s keys, sessions included: by the key itself (signing out) or by its hash. */

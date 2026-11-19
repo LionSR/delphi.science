@@ -249,6 +249,26 @@ class Store(Stored):
             S.BY_NAME["web"] = saved
         self.assertEqual(store.get("web/k")[1]["title"], "A person's edit")
 
+    def test_refresh_keeps_the_moderated_text_of_a_submitted_page_but_follows_a_harvested_one(self) -> None:
+        index.save(Ref("web/mine"), self.entry(source="web", key="mine", title="Moderated", summary="As submitted.", added_by="someone", refreshed="2026-01-01"))
+        index.save(Ref("web/ours"), self.entry(source="web", key="ours", title="Old", added_by="harvest:lab", refreshed="2026-01-01"))
+
+        class Web:
+            def refetch(_, e: dict) -> dict:  # noqa: N805
+                return {**e, "title": "Buy now", "summary": "Changed after it was accepted.", "stars": 7}
+
+        saved = S.BY_NAME["web"]
+        S.BY_NAME["web"] = Web()
+        try:
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()) as log:
+                index.refresh(7, 10, False)
+        finally:
+            S.BY_NAME["web"] = saved
+        mine, ours = store.get("web/mine")[1], store.get("web/ours")[1]
+        self.assertEqual((mine["title"], mine["summary"], mine["stars"]), ("Moderated", "As submitted.", 7))
+        self.assertIn("held     web/mine", log.getvalue())
+        self.assertEqual(ours["title"], "Buy now")
+
     def test_refresh_reads_the_stalest_entries_first(self) -> None:
         for key, day in (("a", "2026-03-01"), ("b", "2026-01-01"), ("c", "2026-02-01"), ("d", S.today())):
             index.save(Ref(f"web/{key}"), self.entry(key, refreshed=day))

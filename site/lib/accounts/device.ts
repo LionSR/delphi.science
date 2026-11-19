@@ -14,6 +14,7 @@ export async function startDevice(db: Db, agent: unknown) {
 	const name = agentName(agent); // validated before anyone is asked to approve it
 	const deviceCode = random(40, '0123456789abcdefghijklmnopqrstuvwxyz');
 	const userCode = `${random(4, LETTERS)}-${random(4, LETTERS)}`;
+	await db.query(`DELETE FROM open_index.device_codes WHERE expires_at < now() - interval '1 day'`); // codes live 10 minutes; keep the table small
 	await db.query('INSERT INTO open_index.device_codes (device_hash, user_code, agent) VALUES ($1, $2, $3)', [sha256(deviceCode), userCode, name]);
 	return { device_code: deviceCode, user_code: userCode, expires_in: 600, interval: 5 };
 }

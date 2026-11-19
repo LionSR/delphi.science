@@ -26,6 +26,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
+        env:
+          SUPABASE_DB_URL: ''  # install scripts of dependencies do not get the database
 
       - name: Find candidates
         run: |

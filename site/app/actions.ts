@@ -15,12 +15,13 @@ import { editPublicName } from '#lib/accounts/people.ts';
 import { profilePath } from '#lib/accounts/public-author.ts';
 import { postFeedback, type PostFeedback, type PostFormState } from '#lib/posts/feedback.ts';
 import { FORM_KINDS, type PostInput, submitPostForm } from '#lib/posts/form-submit.ts';
-import { QueryError } from '#lib/errors.ts';
+import { CodedError, QueryError } from '#lib/errors.ts';
 import { COOKIE, me, safeNext, signedIn } from '#lib/accounts/session.ts';
 import { requireSourceCheckOrigin } from '#lib/moderation/source-check-origin.ts';
 import { recordPath } from '#lib/view.ts';
 import { myVotes, unvote, vote } from '#lib/records/votes.ts';
-import { createSession, revokeAgentKey, revokeKey } from '#lib/accounts/keys.ts';
+import { createSession, revokeAgentKey, revokeKey, revokeSessions } from '#lib/accounts/keys.ts';
+import { attempt, origin } from '#lib/accounts/attempts.ts';
 import { isReviewer, reviewLogin } from '#lib/accounts/review.ts';
 import { saveForm, type QueriesFormState } from '#lib/accounts/queries-form.ts';
 
@@ -161,10 +162,27 @@ export async function signOut() {
 	redirect('/');
 }
 
+// The approval pages show only notices they know by code (NOTICES in each page): text from the URL, above an Approve
+// button, would be an attacker's to write.
 export async function approve(form: FormData) {
 	const code = String(form.get('code') ?? ''), back = `/keys/approve?code=${encodeURIComponent(code)}`;
 	const who = await signedIn(back);
-	await thenBack(back, async () => approveDevice(await db(), code, who.login));
+	let to = back;
+	try {
+		await approveDevice(await db(), code, who.login);
+	} catch (e) {
+		if (!(e instanceof QueryError)) throw e;
+		to = `${back}&notice=expired`;
+	}
+	redirect(to);
+}
+
+/** Signs the person out of every browser, this one included (a lost or stolen session). Agent keys stay. */
+export async function signOutEverywhere() {
+	const who = await signedIn('/keys');
+	await revokeSessions(await db(), who.login);
+	(await cookies()).delete(COOKIE);
+	redirect('/');
 }
 
 export async function deny(form: FormData) {
@@ -176,12 +194,12 @@ export async function deny(form: FormData) {
 /** The plugin reviewers' demo account signs in with its password (lib/accounts/review.ts). */
 export async function reviewSignIn(form: FormData) {
 	const next = safeNext(form.get('next'));
-	const login = reviewLogin();
-	if (!login || !isReviewer(form.get('login'), form.get('password'))) {
-		redirect(`/auth/review?next=${encodeURIComponent(next)}&notice=${encodeURIComponent('That login and password do not match the demo account.')}`);
-	}
+	const login = reviewLogin(), back = `/auth/review?next=${encodeURIComponent(next)}`;
+	const limited = await attempt(await db(), 'review', origin(await headers()), 10, 15).then(() => false, (e) => { if (e instanceof CodedError) return true; throw e; });
+	if (limited) redirect(`${back}&notice=limited`);
+	if (!login || !isReviewer(form.get('login'), form.get('password'))) redirect(`${back}&notice=mismatch`);
 	const secure = (await headers()).get('x-forwarded-proto') !== 'http' && process.env.NODE_ENV === 'production';
-	(await cookies()).set(COOKIE, await createSession(await db(), login, 'Plugin reviewer'), { httpOnly: true, secure, sameSite: 'lax', path: '/', maxAge: 7 * 86400 });
+	(await cookies()).set(COOKIE, await createSession(await db(), login, 'Plugin reviewer', 7), { httpOnly: true, secure, sameSite: 'lax', path: '/', maxAge: 7 * 86400 });
 	redirect(next);
 }
 

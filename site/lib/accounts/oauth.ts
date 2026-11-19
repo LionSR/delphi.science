@@ -76,8 +76,11 @@ export function challenge(error: 'invalid_token' | 'insufficient_scope', descrip
 export type Client = { client_id: string; name: string; redirect_uris: string[] };
 
 const LOOPBACK = new Set(['localhost', '127.0.0.1', '[::1]']);
-// Schemes that run or read something in the browser instead of handing the code to an app.
-const REFUSED_SCHEMES = new Set(['javascript:', 'data:', 'vbscript:', 'file:', 'blob:', 'about:', 'ws:', 'wss:', 'ftp:', 'mailto:']);
+// Schemes that run or open something in the browser or the operating system instead of handing the code to an app.
+// An allowlist would be tighter, but MCP clients register schemes of their own (cursor:, vscode:) that cannot be listed ahead.
+const REFUSED_SCHEMES = new Set(['javascript:', 'data:', 'vbscript:', 'file:', 'blob:', 'about:', 'ws:', 'wss:', 'ftp:', 'mailto:',
+	'intent:', 'tel:', 'sms:', 'view-source:', 'filesystem:', 'jar:', 'resource:', 'chrome:', 'edge:', 'search-ms:']);
+const refusedScheme = (protocol: string) => REFUSED_SCHEMES.has(protocol) || protocol.startsWith('ms-');
 
 /** A redirect URI as registered: https, http on loopback only, or an app's own scheme; no fragment. */
 function redirectUri(value: unknown): URL {
@@ -87,7 +90,7 @@ function redirectUri(value: unknown): URL {
 	try { url = new URL(value); } catch { throw bad('is not an absolute URL'); }
 	if (url.hash || value.includes('#')) throw bad('must not have a fragment');
 	if (url.username || url.password) throw bad('must not carry credentials');
-	if (REFUSED_SCHEMES.has(url.protocol)) throw bad('uses a scheme that cannot receive a code');
+	if (refusedScheme(url.protocol)) throw bad('uses a scheme that cannot receive a code');
 	if (url.protocol === 'http:' && !LOOPBACK.has(url.hostname)) throw bad('must use https (http is for localhost only)');
 	return url;
 }
@@ -208,6 +211,7 @@ export function redirectBack(uri: string, params: Record<string, string | undefi
 /** The person approved: a one-time code for the client, bound to its redirect URI and PKCE challenge. */
 export async function issueCode(db: Db, login: string, request: { client: Client; redirect_uri: string; challenge: string }): Promise<string> {
 	const code = `oac_${randomBytes(24).toString('hex')}`;
+	await db.query(`DELETE FROM open_index.oauth_codes WHERE expires_at < now() - interval '1 day'`); // codes live 5 minutes
 	await db.query('INSERT INTO open_index.oauth_codes (code_hash, client_id, login, redirect_uri, challenge) VALUES ($1, $2, $3, $4, $5)',
 		[sha256(code), request.client.client_id, login, request.redirect_uri, request.challenge]);
 	return code;

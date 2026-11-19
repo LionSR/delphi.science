@@ -16,7 +16,7 @@ import { startTopic } from '#lib/posts/forum.ts';
 import { head, log } from '#lib/posts/log.ts';
 import { load, type Item } from '#lib/records/load.ts';
 import { allowRouteImports, emptyDb, migratedDb, migrations, useDb } from '#lib/testing.ts';
-import { addMember, createSpace } from '#lib/posts/spaces.ts';
+import { acceptInvitation, addMember, createSpace } from '#lib/posts/spaces.ts';
 import { FeedList } from '#lib/feed-view.ts';
 import { chooseFeed, entryHref, FeedTabs, MyFeedBody, NewInThread, UNREAD } from '#lib/feed-view.ts';
 import { createAgentKey, createSession } from './keys.ts';
@@ -346,6 +346,31 @@ describe('which feed a link opens', () => {
 });
 
 describe('the read position', () => {
+	test('invitation-only and acceptance-only activity advances the read position', async () => {
+		const db = await migratedDb();
+		try {
+			const space = await createSpace(db, ada, { title: 'Private notebook' });
+			await replaceQueries(db, bob, 'to:@me');
+			await addMember(db, space.id, ada, bob.login);
+			const invited = (await db.query<{ seq: number }>('SELECT invited_seq::int AS seq FROM open_index.space_members WHERE login = $1', [bob.login])).rows[0].seq;
+			assert.equal(await head(db), invited);
+			const visit = await openFeed(db, bob);
+			assert.ok(visit.entries.some(e => e.seq === invited));
+			assert.equal((await savedQueries(db, bob.login)).seen, invited);
+			assert.equal((await openFeed(db, bob)).line, invited);
+			await acceptInvitation(db, space.id, bob);
+			const accepted = (await db.query<{ seq: number }>('SELECT accepted_seq::int AS seq FROM open_index.space_members WHERE login = $1', [bob.login])).rows[0].seq;
+			assert.ok(accepted > invited);
+			assert.equal(await head(db), accepted);
+			assert.equal(await markSeen(db, bob), accepted);
+			assert.equal((await openFeed(db, bob)).line, accepted);
+			// Allocating a sequence value without a committed log row must not mark future work seen.
+			await db.query("SELECT nextval('open_index.events_seq_seq')");
+			assert.equal(await head(db), accepted);
+			assert.equal((await db.query<{ n: number }>('SELECT count(*)::int AS n FROM open_index.events')).rows[0].n, 0);
+		} finally { await db.close(); }
+	});
+
 	test('an event arriving after the page read stays new on the next visit', async () => {
 		const { db } = await site();
 		try {

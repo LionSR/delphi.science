@@ -141,7 +141,12 @@ export function checkQuery(q: string, reader: Reader = null): void {
 /** The largest seq in the log, 0 when it is empty: where a reader who has seen everything stands. A number only, the
  * same for every reader, so it says nothing about what any of them may see. */
 export async function head(db: Db): Promise<number> {
-	return (await db.query<{ seq: number }>('SELECT coalesce(max(seq), 0)::int AS seq FROM open_index.events')).rows[0].seq;
+	// Invitations and acceptances occupy the same log sequence without an events row. Read committed rows,
+	// not the sequence's last_value: an allocated value need not belong to a visible log entry yet.
+	return (await db.query<{ seq: number }>(`SELECT greatest(0,
+		(SELECT max(seq) FROM open_index.events),
+		(SELECT max(invited_seq) FROM open_index.space_members),
+		(SELECT max(accepted_seq) FROM open_index.space_members))::int AS seq`)).rows[0].seq;
 }
 
 // ---- Invitations and acceptances ----

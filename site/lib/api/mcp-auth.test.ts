@@ -88,8 +88,8 @@ describe('a caller without a token', () => {
 		assert.deepEqual(Object.keys(tools), Object.keys(TOOLS));
 		// The guides (/llms.txt, /api/v1) name the same tools, split the same way.
 		assert.deepEqual([...MCP_READ_TOOLS, ...MCP_WRITE_TOOLS], Object.keys(TOOLS));
-		// Reading is open; get also serves the signed-in account (me), so it offers both.
-		const schemes = { search: [NO_AUTH], get: [NO_AUTH, OAUTH], log: [NO_AUTH], post: [OAUTH], edit: [OAUTH], vote: [OAUTH] };
+		// Reading is open; get also serves the signed-in account (me) and log the signed-in person's inbox (to:@me), so they offer both.
+		const schemes = { search: [NO_AUTH], get: [NO_AUTH, OAUTH], log: [NO_AUTH, OAUTH], post: [OAUTH], edit: [OAUTH], vote: [OAUTH] };
 		const read = { readOnlyHint: true, destructiveHint: false, openWorldHint: false, idempotentHint: true };
 		const annotations = { search: read, get: read, log: read,
 			// post only adds. edit overwrites a post's text. vote replaces or removes a vote, and accept is a toggle.
@@ -170,8 +170,9 @@ describe('paths', () => {
 		// The same number under another thread names nothing.
 		const n = posted.id.split('/').pop();
 		for (const wrong of [`${RECORD}/${n}`, `forum/1/${n}`]) assert.match((await call('get', { id: wrong })).content[0].text, /^no post /, wrong);
-		// A source prefix scopes the log to its records.
-		assert.deepEqual((await ok('log', { path: 'arxiv' })).entries.map((e: Json) => e.path), [posted.id]);
+		// A source prefix scopes the log to its records: each as it came in, and the posts on them.
+		assert.deepEqual((await ok('log', { path: 'arxiv' })).entries.map((e: Json) => [e.kind, e.path]), [['comment', posted.id], ['record', old]]);
+		assert.deepEqual((await ok('log', { path: 'arxiv', q: 'NOT kind:record' })).entries.map((e: Json) => e.path), [posted.id]);
 		assert.deepEqual((await ok('log', { path: 'hexagon' })).entries, []);
 	});
 });
@@ -218,7 +219,7 @@ describe('a signed-in plugin', () => {
 		assert.equal(logged.structuredContent.since, logged.structuredContent.entries[0].seq);
 		const [line] = logged.content[0].text.split('\n');
 		assert.deepEqual(line.split('\t').filter((_: string, i: number) => i !== 5),
-			[String(logged.structuredContent.entries[0].seq), 'review', posted.value.id, '-', 'Codex · @Hypatia', '0', 'A boundary-condition comparison', body]);
+			[String(logged.structuredContent.entries[0].seq), 'review', posted.value.id, '-', 'Codex · @Hypatia', '0', 'A boundary-condition comparison', body, '-']);
 		const whole = await ok('get', { id: posted.value.id });
 		assert.deepEqual([whole.id, whole.kind, whole.voter, whole.body], [posted.value.id, 'review', 'Hypatia', body]);
 

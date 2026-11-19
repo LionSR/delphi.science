@@ -15,6 +15,7 @@ import { publicNames } from '#lib/accounts/people.ts';
 import { myVotes, votes } from '#lib/records/votes.ts';
 import { Vote } from '#app/vote.tsx';
 import { OwnerEdit } from '#app/owner-edit.tsx';
+import { PostText } from '#app/post-text.tsx';
 
 export const dynamic = 'force-dynamic';
 
@@ -36,7 +37,9 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	return {
 		// A reviewed reception summary describes a discussed record better than its abstract.
 		title: String(r.title), description: reception(r)?.text ?? (String(r.summary ?? '').slice(0, 300) || undefined),
-		alternates: { canonical: recordPath(id), types: { 'application/json': apiPath(id) } },
+		// The same page as text, as JSON, and its thread as a feed.
+		alternates: { canonical: recordPath(id), types: { 'application/json': apiPath(id), 'text/plain': `${recordPath(id)}.txt`,
+			'application/atom+xml': `/log.atom?path=${encodeURIComponent(id)}` } },
 		other: cite,
 	};
 }
@@ -122,6 +125,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				{r.pdf ? <a href={String(r.pdf)}>PDF</a> : null}
 				{r.repo ? <a href={String(r.repo)}>Repository</a> : null}
 				<a href={api}>JSON</a>
+				<a href={`${recordPath(id)}.txt`} rel="alternate" type="text/plain">Text</a>
 			</p>
 
 			{discusses.length > 0 && (
@@ -140,6 +144,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 						<span>{date(c.at)}</span>
 						{c.review && <span>review</span>}
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
+						<PostText thread={recordPath(id)} id={c.id} />
 					</p>
 					<Markdown text={c.body} postId={c.id} />
 					<OwnerEdit post={c} owner={owner} />

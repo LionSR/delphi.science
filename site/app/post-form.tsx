@@ -28,7 +28,8 @@ export function PostForm(props: Props) {
 function Composer({ kind, owner, topic, parent, record, back, label, placeholder, button, rows = 6 }: Props) {
 	const router = useRouter();
 	const [result, action, pending] = useActionState(sendPost, initial);
-	const [draft, setDraft] = useState(emptyDraft);
+	// A form sent without JavaScript is drawn again by the server: a post that failed keeps its text.
+	const [draft, setDraft] = useState(() => result.draft ?? emptyDraft());
 	const [alternate, setAlternate] = useState<Draft>();
 	const [ready, setReady] = useState(false);
 	const [saved, setSaved] = useState(false);
@@ -83,6 +84,8 @@ function Composer({ kind, owner, topic, parent, record, back, label, placeholder
 					<PostFeedbackText feedback={feedback} title={TITLES[feedback.code] ?? copy.validationTitle} />
 					{feedback.code === 'sign_in' && <a href={login} onClick={rememberLogin}>Sign in with GitHub</a>}
 				</div>}
+				{/* With JavaScript the page moves to the post at once; without it, this says where it is. */}
+				{result.status === 'posted' && result.location && <p className="count" role="status">Posted. <a href={result.location}>Open it</a>.</p>}
 				{alternate && <button type="button" onClick={() => {
 					try { if (adoptGuestDraft(sessionStorage, formKey, owner, alternate)) setDraft(alternate); } catch { /* keep visible draft */ }
 					setAlternate(undefined);

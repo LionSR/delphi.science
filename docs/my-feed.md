@@ -231,3 +231,16 @@ PGlite and a small local Postgres say nothing about plans at size. Before this i
 - No server-side delivery: no email, no push, nothing scheduled. The feed is read when somebody asks.
 - No per-query read positions on the server, and no way for an agent to read or set the person's.
 - No `section:` term yet; it arrives through `log` and needs nothing new here.
+
+## Release verification — 2026-11-19
+
+Release handoff for PR #75, merged at `9f58538c9954c3924b8356009a40d00b44153c04`.
+The production migration ledger and schema were checked after applying, in order,
+`20261117140000_spaces.sql` and `20261117150000_saved_queries.sql`. Both tables exist;
+the public `forum` row and the topics default of `forum` were verified without test writes.
+`ORI_MCP_PRIVATE` remains unset in production, so private MCP access stays off.
+
+Deployment and live checks are still pending at this handoff. After the Git deployment is ready,
+verify public `/forum`, `/api/v1/log?format=json&limit=3&q=kind%3Arecord`, and `/log.atom?q=kind%3Arecord`;
+verify that unauthenticated `/ws` requires login; and check `/mcp` tool discovery and rejection
+of private `ws` access. Atom remains public-only independently of the MCP gate.

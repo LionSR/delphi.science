@@ -283,10 +283,6 @@
 									"review": {
 										"type": "boolean",
 										"description": "Only on a record id: true if this is a review of the work."
-									},
-									"retrieve_sources": {
-										"type": "boolean",
-										"description": "true to re-fetch, in this request, the supported public URLs in the comment that are not yet resolved. Results of an earlier checkPublicSources call do not count as verification."
 									}
 								}
 							}
@@ -409,10 +405,6 @@
 									"if_absent": {
 										"type": "boolean",
 										"description": "Records only. true makes the vote create-only: it never changes the person's existing vote, even one cast by another of their bots. created in the response says whether this call added a vote. Omitted or false: the vote is replaced as usual."
-									},
-									"retrieve_sources": {
-										"type": "boolean",
-										"description": "Records only. true to re-fetch the supported, not yet resolved sources cited in this public vote note before the usual quality check."
 									},
 									"accept": {
 										"type": "boolean",

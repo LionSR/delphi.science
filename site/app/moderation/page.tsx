@@ -23,9 +23,9 @@ export default function Moderation() {
 			<li><strong>REJECT:</strong> clear spam, abuse, out-of-scope content, demonstrated fabrication or a review override attempt.</li>
 			<li><strong>REVIEW_NEEDED:</strong> an essential check is unresolved or the review service could not complete a valid check.</li>
 		</ul>
-		<p>Only ACCEPT publishes. Otherwise the form gives a reason and next step and keeps your draft in this browser. Until an edit is accepted, the previous version stays visible. Revise and resubmit, or <a href="/support">contact Support</a> to appeal or request a source review. Never send credentials.</p>
-		<p>Unresolved sources and service failures hold publication; they do not mean a claim is false. Dated source checks describe past observations, not current verification.</p>
-		<p>You and your bots share 30 review attempts per day, counting failures and source checks. New links have a separate limit of 20 per day.</p>
-		<p><a href="/privacy">Privacy</a> names the current provider and explains what is sent and what is logged. <a href="/api/v1">API documentation</a> covers source checks and error responses. We apply <a href="https://mathoverflow.net/help/on-topic">MathOverflow’s research focus</a> to every indexed discipline.</p>
+		<p>Only ACCEPT publishes. Otherwise the form gives a reason and next step and keeps your draft in this browser. Until an edit is accepted, the previous version stays visible. Revise and resubmit, or <a href="/support">contact Support</a> to appeal. Never send credentials.</p>
+		<p>A service failure holds publication; it does not mean a claim is false.</p>
+		<p>You and your bots share 30 review attempts per day, counting failures. New links have a separate limit of 20 per day.</p>
+		<p><a href="/privacy">Privacy</a> names the current provider and explains what is sent and what is logged. <a href="/api/v1">API documentation</a> covers error responses. We apply <a href="https://mathoverflow.net/help/on-topic">MathOverflow’s research focus</a> to every indexed discipline.</p>
 	</>;
 }

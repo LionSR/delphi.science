@@ -2,9 +2,7 @@
 import type { Db } from '#lib/db.ts';
 import { ModerationError } from '#lib/errors.ts';
 import type { Voter } from '#lib/accounts/keys.ts';
-import { reserveAttempt, finishAttempt } from './audit.ts';
-import { collectPublicSources, publicEvidence, sourceAudit, safeSourceReference, type SourceRetriever, type CheckBatch } from './source-checks.ts';
-import { citationEvidence, type SourceEvidence } from './citations.ts';
+import { QueryError } from '#lib/errors.ts';
 import { notationVerdict } from './math-notation.ts';
 
 export type Decision = 'ACCEPT' | 'REQUEST_REVISION' | 'REJECT' | 'REVIEW_NEEDED';
@@ -12,7 +10,6 @@ export type Post = {
 	kind: 'submission' | 'question' | 'answer' | 'comment' | 'review' | 'note';
 	on: string; title?: string; body: string; recordId?: string;
 	context?: { record?: unknown; question?: string; parent?: string; previous?: string[] };
-	sources?: SourceEvidence[];
 };
 export type Verdict = { decision: Decision; reason: string; verification_needed: boolean; fix?: string };
 export type Moderator = (post: Post) => Promise<Verdict>;
@@ -113,64 +110,30 @@ const refused = (v: Verdict, unavailable = false) => new ModerationError(
 		? 'Publication is on hold. Resolve the specific check above, then resubmit; no public content was stored.'
 		: `Revise the specific issue above, then resubmit. ${v.reason}`));
 
-type Assessment = { value: Verdict; unavailable?: boolean; checkedSources?: CheckBatch };
-
-/** Resolve the post's citations (retrieving public sources if asked), then ask the moderator. */
-async function assess(db: Db, post: Post, moderate: Moderator | undefined, retrieveSources: boolean, fetchSource?: SourceRetriever): Promise<Assessment> {
-	if (JSON.stringify(post).length > MAX_CONTEXT_CHARS) {
-		return { value: { decision: 'REVIEW_NEEDED', reason: 'The source context is too large for a bounded quality check. Ask for a smaller verified record.', verification_needed: false } };
-	}
-	let sources: SourceEvidence[] = [];
-	// Submissions carry upstream metadata, so the notation and citation checks are for discussion only.
-	if (post.kind !== 'submission') {
-		const text = `${post.title ?? ''}\n${post.body}`;
-		const notation = notationVerdict(text);
-		if (notation) return { value: notation };
-		// Reviewed observations stand in for a source only when no fresh check was requested.
-		sources = await citationEvidence(db, text, retrieveSources ? undefined : post.recordId);
-	}
-	let checkedSources: CheckBatch | undefined;
-	const unresolved = sources.filter((s) => s.status === 'unresolved');
-	if (retrieveSources && post.recordId && ['comment', 'review', 'note'].includes(post.kind) && unresolved.length) {
-		checkedSources = await collectPublicSources(post.recordId, unresolved.map((s) => s.reference), fetchSource);
-		const results = checkedSources.results.values();
-		sources = sources.map((s) => {
-			if (s.status !== 'unresolved') return s;
-			const result = results.next().value!;
-			return publicEvidence(result) ?? { reference: result.reference, status: 'unresolved' as const, check_status: result.status, reason: result.reason, fix: result.fix };
-		});
-	}
-	const pending = sources.filter((s) => s.status === 'unresolved');
-	if (pending.length) {
-		const details = pending.map((s) => `${safeSourceReference(s.reference)} (${('check_status' in s ? s.check_status : undefined) ?? 'unindexed/unrequested'})`).join('; ');
-		return { checkedSources, value: {
-			decision: 'REVIEW_NEEDED', verification_needed: true,
-			reason: `A cited source remains unresolved: ${details}. Missing or unavailable material is not proof a claim is false.`,
-			fix: post.recordId
-				? 'Keep your draft. Request source review through Support, or revise the post with an indexed reference or a self-contained argument.'
-				: 'Provide an indexed research reference or obtain independent source review. Public source checks currently support existing-record comments, reviews and vote notes.',
-		} };
-	}
-	if (JSON.stringify({ ...post, sources }).length > MAX_CONTEXT_CHARS) {
-		return { checkedSources, value: { decision: 'REVIEW_NEEDED', reason: 'The indexed source context is too large for a bounded quality check. Ask for smaller verified metadata.', verification_needed: false } };
-	}
-	const resolved = moderate ? { moderate, unavailable: false } : await resolveModerator(db);
-	const checked = await checkedVerdict(resolved.moderate, { ...post, sources });
-	return { checkedSources, value: checked.value, unavailable: resolved.unavailable || checked.unavailable };
-}
+const MAX_ATTEMPTS_PER_DAY = 30;
 
 /**
- * Screen a submission, discussion post or vote note: reserve a daily attempt, assess the post and
- * record the outcome (never the raw body). Throws a ModerationError unless the verdict is ACCEPT.
- * `reservedAuditId` is an attempt already reserved by server-side submission preparation.
+ * Screen a submission, discussion post or vote note, and log the outcome (never the raw body) in
+ * open_index.moderations. Throws a ModerationError unless the verdict is ACCEPT. Each person, their agents
+ * included, gets 30 attempts a day, since every one is a paid model call.
  */
-export async function screen(db: Db, voter: Voter, post: Post, moderate?: Moderator, retrieveSources = false, fetchSource?: SourceRetriever, reservedAuditId?: number): Promise<Verdict> {
-	if (reservedAuditId !== undefined && !(await db.query("SELECT id FROM open_index.moderations WHERE id=$1 AND voter=$2 AND kind=$3 AND NOT publish AND reason='REVIEW_NEEDED: check pending'", [reservedAuditId, voter.login, post.kind])).rows.length) {
-		throw refused({ decision: 'REVIEW_NEEDED', reason: 'The submission budget reservation is unavailable.', fix: 'Keep your draft and retry later.', verification_needed: false }, true);
-	}
-	const audit = reservedAuditId ?? await reserveAttempt(db, voter, post.kind);
-	const { value: v, unavailable, checkedSources } = await assess(db, post, moderate, retrieveSources, fetchSource);
-	await finishAttempt(db, audit, v.decision === 'ACCEPT', `${v.decision}: ${v.reason}${checkedSources ? ` | sources=${sourceAudit(checkedSources)}` : ''}`);
+export async function screen(db: Db, voter: Voter, post: Post, moderate?: Moderator): Promise<Verdict> {
+	const used = (await db.query<{ n: number }>("SELECT count(*)::int AS n FROM open_index.moderations WHERE voter=$1 AND at>now()-interval '1 day'", [voter.login])).rows[0].n;
+	if (used >= MAX_ATTEMPTS_PER_DAY) throw new QueryError(`@${voter.login} has used ${MAX_ATTEMPTS_PER_DAY} posting attempts today, agents included`, 'Try again tomorrow.');
+	const { value: v, unavailable } = await assess(db, post, moderate);
+	await db.query('INSERT INTO open_index.moderations (voter,agent,kind,publish,reason) VALUES ($1,$2,$3,$4,$5)', [voter.login, voter.agent, post.kind, v.decision === 'ACCEPT', `${v.decision}: ${v.reason}`]);
 	if (v.decision !== 'ACCEPT') throw refused(v, unavailable);
 	return v;
+}
+
+async function assess(db: Db, post: Post, moderate?: Moderator): Promise<{ value: Verdict; unavailable?: boolean }> {
+	if (JSON.stringify(post).length > MAX_CONTEXT_CHARS) {
+		return { value: { decision: 'REVIEW_NEEDED', reason: 'The post and its context are too large for the quality check. Shorten it.', verification_needed: false } };
+	}
+	// Submissions carry upstream metadata, so the notation check is for discussion only.
+	const notation = post.kind === 'submission' ? null : notationVerdict(`${post.title ?? ''}\n${post.body}`);
+	if (notation) return { value: notation };
+	const resolved = moderate ? { moderate, unavailable: false } : await resolveModerator(db);
+	const checked = await checkedVerdict(resolved.moderate, post);
+	return { value: checked.value, unavailable: resolved.unavailable || checked.unavailable };
 }

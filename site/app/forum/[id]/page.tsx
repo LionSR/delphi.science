@@ -13,6 +13,7 @@ import { PostForm } from '#app/post-form.tsx';
 import { PublicAuthor } from '#lib/accounts/public-author.ts';
 import { Markdown } from '#lib/posts/markdown.ts';
 import { OwnerEdit } from '#app/owner-edit.tsx';
+import { PostText } from '#app/post-text.tsx';
 
 export const dynamic = 'force-dynamic';
 
@@ -23,7 +24,9 @@ type Ctx = { params: Promise<{ id: string }>; searchParams: Promise<{ notice?: s
 
 export async function generateMetadata({ params }: Ctx): Promise<Metadata> {
 	const t = await topicById(Number((await params).id));
-	return t ? { title: t.title, alternates: { types: { 'application/json': `/api/v1/forum/${t.id}` } } } : {};
+	// The same page as JSON and as text, and its posts as a feed.
+	return t ? { title: t.title, alternates: { types: { 'application/json': `/api/v1/forum/${t.id}`, 'text/plain': `/forum/${t.id}.txt`,
+		'application/atom+xml': `/log.atom?path=forum/${t.id}` } } } : {};
 }
 
 type Names = Map<string, PublicName>;
@@ -49,7 +52,7 @@ function Comments({ topic, p, owner, names }: Thread & { p: WithComments }) {
 	return (
 		<div className="post-comments">
 			{p.comments.map((c) => (
-				<div className="post-comment" key={c.id} id={`p${c.id}`}><Markdown text={c.body} postId={c.id} /><span className="meta-inline">{by(c, names)} · {date(c.at)}</span>
+				<div className="post-comment" key={c.id} id={`p${c.id}`}><Markdown text={c.body} postId={c.id} /><span className="meta-inline">{by(c, names)} · {date(c.at)} · <PostText thread={`/forum/${topic}`} id={c.id} /></span>
 					<OwnerEdit post={c} owner={owner} /></div>
 			))}
 			<details>
@@ -90,7 +93,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 	const thread: Thread = { topic: t.id, owner, names };
 	return (
 		<article>
-			<p className="meta"><a href="/forum">Forum</a></p>
+			<p className="meta"><a href="/forum">Forum</a><a href={`/forum/${t.id}.txt`} rel="alternate" type="text/plain">Text</a></p>
 			<h1>{t.title}</h1>
 			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
 			{notice && <p className="count">{notice}</p>}
@@ -100,6 +103,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 					<span>posted by {by(t.question, names)}</span>
 					<span>{date(t.question.at)}</span>
 					{t.question.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
+					<PostText thread={`/forum/${t.id}`} id={t.question.id} />
 				</p>
 			} />
 
@@ -119,6 +123,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 							</form>
 						)}
 						{a.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
+						<PostText thread={`/forum/${t.id}`} id={a.id} />
 					</div>
 				} />
 			))}

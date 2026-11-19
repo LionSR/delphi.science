@@ -17,7 +17,7 @@
       "destructive_justification": "Deletes and overwrites nothing."
     },
     "log": {
-      "read_only_justification": "Only lists posts made on the site and changes nothing.",
+      "read_only_justification": "Only lists records added to the index and posts made on the site, optionally narrowed by a query, and changes nothing.",
       "open_world_justification": "Reads only this index's own records, comments and forum; it fetches nothing from the open web.",
       "destructive_justification": "Deletes and overwrites nothing."
     },

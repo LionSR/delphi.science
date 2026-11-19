@@ -7,7 +7,7 @@ import { pageInfo, pageSize, pageStart, type PageRequest } from '#lib/paging.ts'
 import { truncate } from '#lib/view.ts';
 import { divisionOf, isSubjectCode, subjectNamed } from './taxonomy.ts';
 
-type Leaf = { field: string; value: string; phrase: boolean };
+export type Leaf = { field: string; value: string; phrase: boolean };
 type Node = { op: 'AND' | 'OR' | 'NOT'; kids: Tree[] };
 type Tree = Leaf | Node;
 
@@ -132,11 +132,15 @@ function date(s: string, end: boolean): string | null {
 
 
 // The fields suggested when a query uses an unknown one.
-const FIELDS = [...Object.keys(TEXT).filter(Boolean), ...Object.keys(EXACT), 'cat', 'domain', 'is', 'published'].sort();
+export const FIELDS = [...Object.keys(TEXT).filter(Boolean), ...Object.keys(EXACT), 'cat', 'domain', 'is', 'published'].sort();
 
-class Compiler {
+/** Compiles a parsed query to SQL over the records table, aliased r. A subclass adds fields of its own by
+ * overriding leaf (lib/posts/log.ts does, for the log's events). */
+export class Compiler {
 	params: unknown[] = [];
 	ranks: string[] = []; // tsquery expressions of positive text terms, for ranking
+	/** The fields named when a query uses an unknown one. */
+	fields = FIELDS;
 	p(v: unknown) { this.params.push(v); return `$${this.params.length}`; }
 
 	tree(t: Tree, positive = true): string {
@@ -144,22 +148,36 @@ class Compiler {
 			if (t.op === 'NOT') return `NOT (${this.tree(t.kids[0], !positive)})`;
 			return `(${t.kids.map((k) => this.tree(k, positive)).join(` ${t.op} `)})`;
 		}
-		const { field: f, value: v } = t;
-		if (f in TEXT) {
-			const [col, cfg] = TEXT[f];
-			let tsq: string;
-			if (!t.phrase && v.endsWith('*') && v.length > 1) {
-				const stem = v.slice(0, -1).replace(/[^\p{L}\p{N}]/gu, '');
-				if (!stem) throw new QueryError(`cannot search the prefix ${JSON.stringify(v)}`, 'Use letters or digits before *, e.g. grok*.');
-				tsq = `to_tsquery('${cfg}', ${this.p(stem + ':*')})`;
-			} else {
-				tsq = `${t.phrase ? 'phraseto_tsquery' : 'plainto_tsquery'}('${cfg}', ${this.p(v)})`;
-			}
-			if (positive) this.ranks.push(tsq.replace(`'simple'`, `'english'`));
-			// Bare words also match author names as written (the 'simple' config does not stem).
-			if (col === 'all_tsv') return `(r.all_tsv @@ ${tsq} OR r.au_tsv @@ ${tsq.replace(`'english'`, `'simple'`)})`;
-			return `r.${col} @@ ${tsq}`;
+		return this.leaf(t, positive);
+	}
+
+	/** The tsquery of a text term and the column it searches; undefined for a field that is not text. */
+	text(t: Leaf, positive: boolean): { column: string; tsq: string } | undefined {
+		if (!(t.field in TEXT)) return undefined;
+		const [column, cfg] = TEXT[t.field];
+		const v = t.value;
+		let tsq: string;
+		if (!t.phrase && v.endsWith('*') && v.length > 1) {
+			const stem = v.slice(0, -1).replace(/[^\p{L}\p{N}]/gu, '');
+			if (!stem) throw new QueryError(`cannot search the prefix ${JSON.stringify(v)}`, 'Use letters or digits before *, e.g. grok*.');
+			tsq = `to_tsquery('${cfg}', ${this.p(stem + ':*')})`;
+		} else {
+			tsq = `${t.phrase ? 'phraseto_tsquery' : 'plainto_tsquery'}('${cfg}', ${this.p(v)})`;
 		}
+		if (positive) this.ranks.push(tsq.replace(`'simple'`, `'english'`));
+		return { column, tsq };
+	}
+
+	/** A text term over a record. Bare words also match author names as written (the 'simple' config does not stem). */
+	textMatch({ column, tsq }: { column: string; tsq: string }): string {
+		if (column === 'all_tsv') return `(r.all_tsv @@ ${tsq} OR r.au_tsv @@ ${tsq.replace(`'english'`, `'simple'`)})`;
+		return `r.${column} @@ ${tsq}`;
+	}
+
+	leaf(t: Leaf, positive: boolean): string {
+		const { field: f, value: v } = t;
+		const text = this.text(t, positive);
+		if (text) return this.textMatch(text);
 		if (f === 'cat' || f === 'domain') {
 			const fromName = subjectNamed(v);
 			const code = fromName ?? v;
@@ -181,7 +199,7 @@ class Compiler {
 			const conds = [lo && `r.published >= ${this.p(lo)}::date`, hi && `r.published <= ${this.p(hi)}::date`].filter(Boolean);
 			return `(${conds.join(' AND ') || 'true'})`;
 		}
-		throw new QueryError(`unknown field ${f}:`, `Use one of: ${FIELDS.map((x) => x + ':').join(', ')}.`);
+		throw new QueryError(`unknown field ${f}:`, `Use one of: ${this.fields.map((x) => x + ':').join(', ')}.`);
 	}
 }
 

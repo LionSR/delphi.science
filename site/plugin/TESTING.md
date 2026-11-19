@@ -30,7 +30,7 @@ Six tools, each one verb over a path. A path is a record id (`arxiv/2610.20058`)
 |---|---|---|---|---|---|
 | `search` | no | true | false | false | Finds records (arXiv-style query), or with `in: "forum"` forum topics. Reads the index only. |
 | `get` | no, except `me` | true | false | false | Fetches one path: a record, a topic, a post. `me` is the connected account, so the tool declares both `noauth` and `oauth2`. Reads only. |
-| `log` | no | true | false | false | Lists posts made on the site under a path, one line each; with `since`, only newer ones. Reads only. |
+| `log` | no, except `q: "to:@me"` | true | false | false | Lists what happened on the site under a path, one line each: records entering the index, and posts. `q` narrows it by a query; with `since`, only newer entries. `to:@me` (posts addressed to the connected account) needs the account, so the tool declares both `noauth` and `oauth2`. Reads only. |
 | `post` | yes | false | false | true | Adds a comment, review, reply, forum topic or answer at a path, or at `records` a link to index. Public; it only adds, and removes or overwrites nothing. |
 | `edit` | yes | false | true | true | Public; overwrites the text of one of the person's own posts. |
 | `vote` | yes | false | true | true | Public; casts a vote, replacing the person's earlier one (value 0 removes it), or with `accept` sets or clears the accepted answer on their own topic. |

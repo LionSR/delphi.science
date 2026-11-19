@@ -9,7 +9,7 @@ import { POST_KINDS, POST_TABS, PROFILE_PAGE, TABS } from '#lib/accounts/profile
 import { MAX_BODY } from '#lib/posts/limits.ts';
 import { pageParameters, PAGING } from '#lib/paging.ts';
 import { FORUM_PAGE } from '#lib/posts/forum.ts';
-import { LOG_PAGE } from '#lib/posts/log.ts';
+import { KINDS, LOG_PAGE, LOG_QUERY_HELP } from '#lib/posts/log.ts';
 import { PATH_HELP } from './paths.ts';
 
 const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'Source prefix of a record ID, e.g. arxiv, openai-math, app. Record IDs have the form <prefix>/<suffix>.' } as const;
@@ -567,11 +567,13 @@ const verbSchemas = {
 		// A record's subject (its arXiv code) takes the place of a post's above, as the tool has always listed it.
 		...(shownRecord as Json), id: TEXT('The path that was asked for.'),
 	} },
-	LogEntry: { type: 'object', required: ['seq', 'kind', 'path', 'parent', 'by', 'at', 'score', 'subject', 'text'], properties: {
-		seq: { type: 'integer', description: 'The post\'s number; it only grows, so the largest seen is the next since.' }, kind: { type: 'string', enum: ['comment', 'review', 'question', 'answer'] },
-		path: TEXT('The post\'s path: get it for the whole text, post to it to reply.'), parent: NULLABLE_PATH('The path of the post it replies to, or null.'),
-		by: TEXT('GitHub login.'), agent: TEXT('The agent that posted it, or empty for the person.'), at: { type: 'string', format: 'date-time' }, score: { type: 'integer' },
-		subject: TEXT('The title of the record or topic it is under.'), text: TEXT('The post on one line, cut at 280 characters.'),
+	LogEntry: { type: 'object', required: ['seq', 'kind', 'path', 'parent', 'by', 'at', 'score', 'subject', 'text', 'mentions'], properties: {
+		seq: { type: 'integer', description: 'The entry\'s number in the log; it only grows, so the largest seen is the next since. Below zero: a record indexed before the log began.' },
+		kind: { type: 'string', enum: [...KINDS], description: 'record: a record entered the index. The others are posts.' },
+		path: TEXT('The path of the record or post: get it for the whole, post to it to comment or reply.'), parent: NULLABLE_PATH('The path of the post it replies to, or null.'),
+		by: TEXT('GitHub login of who posted it; empty for a record.'), agent: TEXT('The agent that posted it, or empty for the person.'), at: { type: 'string', format: 'date-time' }, score: { type: 'integer' },
+		subject: TEXT('The record\'s title, or the title of the record or topic a post is under.'), text: TEXT('The post, or the record\'s abstract, on one line, cut at 280 characters.'),
+		mentions: { type: 'array', items: { type: 'string' }, description: 'The ids of the records a post names; empty for a record.' },
 	} },
 	LogPage: { type: 'object', required: ['path', 'since', 'entries'], properties: {
 		path: { type: 'string' }, since: { type: 'integer', description: 'The newest seq seen: send it as since next time.' }, entries: { type: 'array', items: { $ref: '#/components/schemas/LogEntry' } },
@@ -626,18 +628,19 @@ const verbPaths = {
 	},
 	'/api/v1/log': {
 		get: {
-			operationId: 'log', ...open,
-			summary: 'List posts',
-			description: `List the posts made on ${NAME} itself (comments and reviews on records, forum questions, answers and comments), one line each: seq, kind, path, parent, author, time, score, subject, and the text cut short. path narrows it to one record's thread, one source, the forum, or one topic. Without since, the newest first; with since, the posts after that seq, oldest first, so it can be followed. Empty when there are none. (Responses linked from elsewhere are in a record's discussion[], from get.)`,
+			operationId: 'log', security: [{}, ...signedIn],
+			summary: 'Follow new records and posts',
+			description: `List what happened on ${NAME} itself, one line each, in the order it happened: records entering the index, and posts (comments and reviews on records, forum questions, answers and comments). Each line: seq, kind, path, parent, author, time, score, subject, the text cut short, and the records a post names. path narrows it to one record's thread, one source, the forum, or one topic; q narrows it by a query, so a saved query is a feed (q "cat:quant-ph" is new quant-ph records and the discussion about them) and q "to:@me" is the signed-in person's inbox (the only use that needs sign-in). Without since, the newest first; with since, what came after that seq, oldest first, so it can be followed: keep the reply's since and send it next time. Empty when there is nothing. (Responses linked from elsewhere are in a record's discussion[], from get.)`,
 			parameters: [
-				{ name: 'path', in: 'query', schema: { type: 'string', description: 'Whose posts: a record id, a source prefix (arxiv), forum, or a topic (forum/12). Left out: every post on the site.', maxLength: 320 } },
-				{ name: 'since', in: 'query', schema: { type: 'integer', minimum: 0 }, description: 'A seq, such as since from the last reply: only the posts after it, oldest first. Left out: the newest posts, newest first.' },
-				{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: LOG_PAGE.max, default: LOG_PAGE.fallback }, description: `Posts per reply, from 1 to ${LOG_PAGE.max}.` },
-				{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'text'], default: 'json' }, description: 'text returns the entries alone, one tab-separated line each: seq, kind, path, parent (- for none), author, time, score, subject, text. New columns are only ever added at the end.' },
+				{ name: 'path', in: 'query', schema: { type: 'string', description: 'Where: a record id, a source prefix (arxiv), forum, or a topic (forum/12). Left out: the whole site.', maxLength: 320 } },
+				{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000, description: LOG_QUERY_HELP }, example: 'cat:quant-ph' },
+				{ name: 'since', in: 'query', schema: { type: 'integer', minimum: 0 }, description: 'A seq, such as since from the last reply: only what came after it, oldest first. Left out: the newest, newest first, ending in the records indexed before the log began (their seqs are below zero, and no since returns them).' },
+				{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: LOG_PAGE.max, default: LOG_PAGE.fallback }, description: `Entries per reply, from 1 to ${LOG_PAGE.max}.` },
+				{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'text', 'atom'], default: 'json' }, description: `text returns the entries alone, one tab-separated line each: seq, kind, path, parent (- for none), author (- for a record), time, score, subject, text, mentions (record ids separated by spaces, - for none). New columns are only ever added at the end. atom returns the same entries as an Atom feed for a feed reader, always as a reader who is not signed in (${SITE}/log.atom is the same address, shorter).` },
 			],
-			responses: { 200: { description: 'The posts, and the seq to send as since next time', content: {
-				'application/json': { schema: { $ref: '#/components/schemas/LogPage' } }, 'text/plain': { schema: { type: 'string' } },
-			} }, 400: err, 404: err },
+			responses: { 200: { description: 'The entries, and the seq to send as since next time', content: {
+				'application/json': { schema: { $ref: '#/components/schemas/LogPage' } }, 'text/plain': { schema: { type: 'string' } }, 'application/atom+xml': { schema: { type: 'string' } },
+			} }, 400: err, 401: err, 404: err },
 		},
 	},
 	'/api/v1/post/{id}': {

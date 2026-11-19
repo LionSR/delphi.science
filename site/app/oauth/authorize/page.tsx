@@ -32,7 +32,7 @@ export default async function Authorize({ searchParams }: { searchParams: Promis
 		return (
 			<article>
 				<h1>Connect an app</h1>
-				<p><b>{request.client.name}</b> is asking to act for you on {NAME}: submit links, post, vote, and comment under your GitHub login. Sign in to review the request; nothing is connected until you approve it.</p>
+				<p><b>{request.client.name}</b> is asking to act for you on {NAME}: submit links, post, vote, and comment in public under your GitHub login, and read and write your private spaces. Sign in to review the request; nothing is connected until you approve it.</p>
 				<p><a href={`/auth/github?next=${back}`}>Sign in with GitHub</a></p>
 				{reviewLogin() && <p className="count">Reviewing the plugin? <a href={`/auth/review?next=${back}`}>Sign in with the demo account</a>.</p>}
 				<p className="count">Only your public GitHub username, name and company are read (<a href="/privacy">Privacy</a>). Reading the index needs no connection.</p>
@@ -43,7 +43,8 @@ export default async function Authorize({ searchParams }: { searchParams: Promis
 	return (
 		<article>
 			<h1>Connect an app</h1>
-			<p><b>{request.client.name}</b> is asking to submit links, post, vote, and comment as @{who.login}. Afterwards you return to <code>{to.host || to.protocol}</code>.</p>
+			<p><b>{request.client.name}</b> is asking to act as @{who.login}: submit links, post, vote, and comment in public, and read and write your private <a href="/ws">spaces</a>. Afterwards you return to <code>{to.host || to.protocol}</code>.</p>
+			<p className="count">A connected app can do what you can here. What it reads, your private spaces included, goes to the app and to whatever model runs it.</p>
 			<p className="count">Approve only if you started this from the app yourself. What it does appears as {request.client.name} · @{who.login}’s team and shares your one vote per item and your daily limits. The connection lasts 90 days and can be revoked at <a href="/keys">/keys</a>. Reading the index needs no connection.</p>
 			<div className="meta">
 				<form action={approveApp}>{hidden}<button>Approve</button></form>

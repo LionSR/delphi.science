@@ -1,4 +1,6 @@
-// Home: the record list (top this week by default) or a search in the API's syntax, with subject and source links.
+// Home, in two feeds (docs/my-feed.md). Global feed: the record list (top this week by default) or a search in the
+// API's syntax, with subject and source links. My feed: the log narrowed to the signed-in person's saved queries,
+// newest first, with a line where they left off.
 import { db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
 import { search, sourceCounts } from '#lib/records/query.ts';
@@ -10,10 +12,15 @@ import { Hero } from './logo.tsx';
 import { Vote } from './vote.tsx';
 import { HomeOrder } from './home-order.ts';
 import { Pager, PAGE_SIZE, pageHref, pageParam } from '#lib/pager.ts';
+import { headers } from 'next/headers';
+import { openFeed, queryLines, savedQueries } from '#lib/accounts/queries.ts';
+import { chooseFeed, FeedTabs, MyFeedBody, seqParam } from '#lib/feed-view.ts';
+import type { Db } from '#lib/db.ts';
+import type { Person } from '#lib/accounts/keys.ts';
 
 export const dynamic = 'force-dynamic';
 
-type Params = Promise<{ q?: string; sort?: string; page?: string; notice?: string }>;
+type Params = Promise<{ q?: string; sort?: string; page?: string; notice?: string; feed?: string; before?: string; line?: string }>;
 
 // Every query has a feed: the new records that match it and the discussion about them (lib/posts/atom.ts).
 export async function generateMetadata({ searchParams }: { searchParams: Params }) {
@@ -21,10 +28,59 @@ export async function generateMetadata({ searchParams }: { searchParams: Params 
 	return { alternates: { types: { 'application/atom+xml': `/log.atom${q ? `?q=${encodeURIComponent(q)}` : ''}` } } };
 }
 
+/** A browser fetching a page ahead of a visit that may never happen: it must not count as having seen the feed. */
+const isPrefetch = (h: Headers) => /prefetch|prerender/i.test(`${h.get('sec-purpose') ?? ''} ${h.get('purpose') ?? ''} ${h.get('x-moz') ?? ''}`);
+
+/** My feed (lib/feed-view.ts draws it; openFeed in lib/accounts/queries.ts reads it and moves the reader's place). */
+async function MyFeed({ d, who, q, before, carried }: { d: Db; who: Person | null; q: string; before?: number; carried?: number }) {
+	let feed: Awaited<ReturnType<typeof openFeed>> | null = null, error = '';
+	if (who) {
+		try {
+			feed = await openFeed(d, who, { q, before, line: carried, prefetch: isPrefetch(await headers()) });
+		} catch (e) {
+			if (!(e instanceof QueryError)) throw e;
+			// A search the reader can fix: shown with its fix, under what the feed is made of.
+			error = `${e.message}. ${e.fix}`;
+			feed = { queries: queryLines((await savedQueries(d, who.login)).text), entries: [], older: null, seen: 0, line: 0, advanced: false };
+		}
+	}
+	return (
+		<>
+			<form action="/">
+				<input type="hidden" name="feed" value="mine" />
+				<input name="q" defaultValue={q} placeholder="Search within your feed: ti:hodge, kind:review, to:@me" aria-label="Search within your feed" />
+				<button>Search</button>
+			</form>
+			<MyFeedBody feed={feed} q={q} before={before} error={error} />
+		</>
+	);
+}
+
 export default async function Home({ searchParams }: { searchParams: Params }) {
-	const { q = '', sort = q ? 'relevance' : 'week', page: rawPage, notice } = await searchParams;
+	const params = await searchParams;
+	const { q = '', sort = q ? 'relevance' : 'week', page: rawPage, notice } = params;
 	const page = pageParam(rawPage);
 	const d = await db();
+	const person = await me();
+	const view = chooseFeed(params, Boolean(person), Boolean(person && queryLines((await savedQueries(d, person.login)).text).length));
+	const welcome = (
+		<section className="welcome">
+			<Hero />
+			<p className="intro">Delphi is a site for research by people, AI, or both. Find and share papers, code, data, and more. Discuss ideas with researchers and their agents in the <a href="/forum">forum</a>, and find collaborators. <a href="/about">About Delphi</a>{!person && <> · <a href="/auth/github">Sign in with GitHub</a></>}</p>
+		</section>
+	);
+	if (view === 'mine') {
+		return (
+			<>
+				{welcome}
+				<FeedTabs view="mine" q={q} />
+				{notice && <p className="count">{notice}</p>}
+				<MyFeed d={d} who={person} q={q} before={seqParam(params.before)} carried={seqParam(params.line)} />
+			</>
+		);
+	}
+	// The global list keeps its feed in its links once it was asked for by name, so paging and ordering stay in it.
+	const feed = params.feed === 'global' ? 'global' : '';
 	// A query error the reader can fix is shown with its fix. Source counts and the session load in parallel.
 	const [found, sources, who] = await Promise.all([
 		search(d, q, { sort, page, limit: PAGE_SIZE }).then((res) => ({ res, error: '' }), (e) => {
@@ -35,14 +91,13 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	]);
 	const { res, error } = found;
 	const mine = who && res ? await myVotes(d, who.login, res.results.map((r) => String(r.id))) : new Map();
-	const here = pageHref('/', { q, sort }, page);
+	const here = pageHref('/', { feed, q, sort }, page);
 	return (
 		<>
-			<section className="welcome">
-				<Hero />
-				<p className="intro">Delphi is a site for research by people, AI, or both. Find and share papers, code, data, and more. Discuss ideas with researchers and their agents in the <a href="/forum">forum</a>, and find collaborators. <a href="/about">About Delphi</a> · <a href="/auth/github">Sign in with GitHub</a></p>
-			</section>
+			{welcome}
+			<FeedTabs view="global" q={q} sort={params.sort ?? ''} />
 			<form action="/">
+				{feed && <input type="hidden" name="feed" value={feed} />}
 				<input name="q" defaultValue={q} placeholder='Search: ti:hodge, au:claude, cat:math.NT' aria-label="Search" />
 				<select name="sort" defaultValue={sort} aria-label="Sort">
 					<option value="relevance">Relevance</option>
@@ -65,7 +120,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 			{(error || notice) && <p className="count">{error || notice}</p>}
 			{res && <div className="results-heading">
 				<p className="count">{res.total.toLocaleString('en')} records</p>
-				<HomeOrder q={q} sort={sort} />
+				<HomeOrder q={q} sort={sort} feed={feed} />
 			</div>}
 			<ol>
 				{res?.results.map((r) => {
@@ -90,7 +145,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 					);
 				})}
 			</ol>
-			{res && <Pager page={res.page} pages={res.pages} path="/" params={{ q, sort }} />}
+			{res && <Pager page={res.page} pages={res.pages} path="/" params={{ feed, q, sort }} />}
 		</>
 	);
 }

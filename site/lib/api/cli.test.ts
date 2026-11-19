@@ -240,7 +240,7 @@ describe('the command line', () => {
 		assert.deepEqual([refused.status, refused.out], [1, '']);
 		assert.equal(refused.err, 'delphi: not posted: REQUEST_REVISION: The comment states no argument. Add the step or reference that supports it.\n');
 		assert.deepEqual(await delphi(['post', RECORD], '  \n'), { status: 2, out: '', err: 'delphi: the text is empty\n' });
-		assert.equal((await delphi(['post', RECORD, '--title', 'T'], 'A reading.')).err, `delphi: title does not apply to "${RECORD}". Leave title out; it is for a new topic (id forum).\n`);
+		assert.equal((await delphi(['post', RECORD, '--title', 'T'], 'A reading.')).err, `delphi: title does not apply to "${RECORD}". Leave title out; it is for a new topic (id forum, or a space) or a new space (id ws).\n`);
 		assert.equal((await (await api('/api/v1/log')).json()).since, before);
 	});
 
@@ -406,6 +406,55 @@ describe('the command line', () => {
 		// The inbox is not public: a feed is read as nobody, with or without a key.
 		assert.equal((await api('/log.atom?q=to%3A%40me')).status, 401);
 		assert.equal((await priorFetch(`${url}/log.atom?q=to%3A%40me`, { headers: { Authorization: `Bearer ${readFileSync(file('key'), 'utf8').trim()}` } })).status, 401);
+	});
+
+	test('saved queries: get me/queries --body pulls the text, edit --force pushes a file, post adds a line, and log me/queries is the feed', async () => {
+		const served = async (query: string) => (await api(`/api/v1/log?q=${encodeURIComponent(query)}&format=text`)).text();
+		const local = join(home, 'my-queries');
+		// Nothing saved yet: the headers alone, and no text to pull.
+		const none = await ok(['get', 'me/queries']);
+		assert.deepEqual([header(none, 'Id'), header(none, 'Login'), header(none, 'Revision')], ['me/queries', 'Ada', '0']);
+		assert.equal(await ok(['get', 'me/queries', '--body']), '');
+		assert.equal(await ok(['log', 'me/queries']), '');
+		// Push a file: the text as it is, notes included. --force takes the revision from the server.
+		writeFileSync(local, '# what I follow\nkind:record source:app\n\nkind:comment by:@ada\n');
+		const pushed = await ok(['edit', 'me/queries', '--force'], readFileSync(local, 'utf8'));
+		assert.deepEqual([header(pushed, 'Id'), header(pushed, 'Revision')], ['me/queries', '1']);
+		// Pull it back: byte for byte what was pushed, so the file and the server copy can be compared with diff.
+		assert.equal(await ok(['get', 'me/queries', '--body']), '# what I follow\nkind:record source:app\n\nkind:comment by:@ada\n');
+		// The feed from the server copy is the feed from the file.
+		const feed = await ok(['log', 'me/queries']);
+		assert.ok(feed.split('\n').filter(Boolean).length >= 5);
+		assert.equal(feed, await ok(['log', '-f', local]));
+		assert.equal(feed, await served('(kind:record source:app) OR (kind:comment by:@ada)'));
+		// A search inside it, and --new with its own cursor line.
+		assert.equal(await ok(['log', 'me/queries', '-q', 'kind:record OR kind:question']), await served('kind:record source:app'));
+		assert.equal(await ok(['log', 'me/queries', '--new']), feed);
+		assert.equal(await ok(['log', 'me/queries', '--new']), '');
+		assert.match(readFileSync(file('cursor'), 'utf8'), /^me\/queries\t\d+$/m);
+		// post adds a line and leaves the rest; the same line again changes nothing.
+		const added = await ok(['post', 'me/queries'], 'to:@me\n');
+		assert.deepEqual([header(added, 'Revision'), added.endsWith('kind:comment by:@ada\nto:@me\n')], ['2', true]);
+		assert.equal(header(await ok(['post', 'me/queries'], 'to:@me\n'), 'Revision'), '2');
+		// Get, change and send back, as with a post: the revision travels in the headers.
+		const edited = await ok(['edit'], (await ok(['get', 'me/queries'])).replace('to:@me', 'to:@me kind:answer'));
+		assert.equal(header(edited, 'Revision'), '3');
+		// A stale revision is refused, with the server's message and fix, and nothing changes.
+		const stale = await delphi(['edit', 'me/queries', '--revision', '1'], 'cat:math\n');
+		assert.equal(stale.status, 1);
+		assert.match(stale.err, /^delphi: The saved queries changed since you read them\. Nothing was saved\. Read them again \(get me\/queries\)/);
+		// A bad line is named with its fix, and nothing is saved: not the good line either.
+		const bad = await delphi(['edit', 'me/queries', '--force'], 'cat:math\nkind:paper\n');
+		assert.equal(bad.status, 1);
+		assert.match(bad.err, /^delphi: line 2 \(kind:paper\): unknown kind:paper\. Use kind:record, .* Nothing was saved\.$/m);
+		assert.match(await ok(['get', 'me/queries', '--body']), /to:@me kind:answer\n$/);
+		// Signed out there is no me: status 4, as for get me. A feed reader, which is nobody, gets no feed from it.
+		const nobody = { HOME: mkdtempSync(join(tmpdir(), 'delphi-nobody-')) };
+		for (const args of [['get', 'me/queries'], ['log', 'me/queries']]) assert.equal((await delphi(args, undefined, nobody)).status, 4, args.join(' '));
+		const key = readFileSync(file('key'), 'utf8').trim();
+		const atom = await priorFetch(`${url}/api/v1/log?path=me/queries&format=atom`, { headers: { Authorization: `Bearer ${key}` } });
+		assert.equal(atom.status, 401, 'Atom is read as nobody, whatever token came with it');
+		assert.deepEqual([(await delphi(['get', 'me/queries', '--body', '--json'])).status, (await delphi(['edit', '--force'], 'cat:math')).status], [2, 2]);
 	});
 
 	test('logout revokes the key on the server and deletes the file; then acting for a person needs sign-in again', async () => {

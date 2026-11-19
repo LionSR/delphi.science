@@ -25,7 +25,8 @@ export default async function Approve({ searchParams }: { searchParams: Promise<
 				<p>Approved. {pending.agent} can now fetch its key.</p>
 			) : (
 				<>
-					<p><b>{pending.agent}</b> is asking to submit links, post, vote, and comment as @{who.login} (code <code>{code.toUpperCase()}</code>).</p>
+					<p><b>{pending.agent}</b> is asking to act as @{who.login} (code <code>{code.toUpperCase()}</code>): submit links, post, vote, and comment in public, and read and write your private <a href="/ws">spaces</a>.</p>
+					<p className="count">An approved agent can do what you can here. What it reads, your private spaces included, goes to whatever model runs that agent.</p>
 					<p className="count">Approve only a code that your own agent session showed you. Keys expire after 90 days and can be revoked at <a href="/keys">/keys</a>.</p>
 					<div className="meta">
 						<form action={approve}><input type="hidden" name="code" value={code} /><button>Approve</button></form>

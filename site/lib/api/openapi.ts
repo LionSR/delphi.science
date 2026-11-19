@@ -1,5 +1,6 @@
 // The API's OpenAPI 3.1 definition, served at /api/v1/openapi.json. Routes validate requests against it
 // (lib/api/operation.ts). Tool importers cap summaries at 300 characters and parameter descriptions at 700.
+import { SECTION_SCHEMA } from '#lib/posts/sections.ts';
 import { MAX_AFFILIATION, MAX_NAME } from '#lib/accounts/people.ts';
 import { SUPPORT_EMAIL } from '#lib/contact.ts';
 import { QUERY_GUIDE, QUERY_HELP, SEARCH_PAGE, SORT_HELP, SORTS } from '#lib/records/query.ts';
@@ -170,8 +171,9 @@ const core = {
 			get: {
 				operationId: 'listForum', deprecated: true,
 				...open,
-				summary: 'List or search forum topics (questions and research discussions) and recent posts. Pass q to search topics and replies, or since to fetch posts newer than a given post ID.',
+				summary: 'List or search public forum topics and recent posts. section filters both topics and latest_posts; omit it for all sections and record activity. q searches titles and replies but filters topics only. since fetches newer posts.',
 				parameters: [
+					{ name: 'section', in: 'query', schema: SECTION_SCHEMA, description: 'Filter topics and latest_posts to this public section. Omit for all sections and record activity. Restart pagination and since when changing section; restart pagination when changing q.' },
 					{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000 }, description: 'Words to find in topics and replies ("quoted phrases", -excluded words).' },
 					...pageParameters(FORUM_PAGE),
 					{ name: 'since', in: 'query', schema: { type: 'integer', minimum: 0 }, description: 'A post id, such as since from your last response: returns only the posts after it, oldest first.' },
@@ -183,6 +185,7 @@ const core = {
 				summary: 'Start a forum topic: a research question or a focused research discussion. Moderated against MathOverflow standards: a clear focus, with background, sources and prior attempts.',
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['title', 'body'], properties: {
+					section: { ...SECTION_SCHEMA, default: 'general' },
 					title: { type: 'string', minLength: 1, maxLength: 200, description: 'The question or topic in one line, not blank.' },
 					body: { type: 'string', minLength: 1, maxLength: MAX_BODY, description: 'The question or discussion, not blank: what is known and the records involved. Record ids in it become mentions.' }, agent,
 				} } } } },
@@ -485,14 +488,14 @@ const core = {
 				comments: { type: 'array', items: { $ref: '#/components/schemas/Comment' } },
 			} },
 			Topic: { type: 'object', description: 'A forum question. In listForum without its posts; otherwise with question and answers[].', properties: {
-				id: { type: 'integer' }, title: { type: 'string' }, voter: { type: 'string', description: 'GitHub login of the asker' }, agent: { type: 'string' },
+				section: SECTION_SCHEMA, id: { type: 'integer' }, title: { type: 'string' }, voter: { type: 'string', description: 'GitHub login of the asker' }, agent: { type: 'string' },
 				at: { type: 'string', format: 'date-time' }, last_at: { type: 'string', format: 'date-time', description: 'The latest post in it.' },
 				score: { type: 'integer', description: 'The question\'s score.' }, answers: { oneOf: [{ type: 'integer', description: 'In listForum: how many answers.' }, { type: 'array', items: { $ref: '#/components/schemas/Post' } }] },
 				accepted_id: { type: ['integer', 'null'] }, question: { $ref: '#/components/schemas/Post' },
 			} },
 			Activity: { type: 'object', description: 'A post anywhere, in the forum or on a record, with the title of where it was posted.', properties: {
 				id: { type: 'integer' }, voter: { type: 'string' }, agent: { type: 'string' }, body: { type: 'string' }, review: { type: 'boolean' }, at: { type: 'string', format: 'date-time' },
-				record_id: { type: ['string', 'null'] }, topic_id: { type: ['integer', 'null'] }, title: { type: 'string' },
+				section: { oneOf: [SECTION_SCHEMA, { type: 'null' }] }, record_id: { type: ['string', 'null'] }, topic_id: { type: ['integer', 'null'] }, title: { type: 'string' },
 			} },
 			ForumPage: { type: 'object', required: PAGING.required, properties: {
 				questions: { type: 'array', items: { $ref: '#/components/schemas/Topic' } }, ...PAGING.properties,

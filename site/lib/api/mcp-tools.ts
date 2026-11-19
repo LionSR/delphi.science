@@ -193,7 +193,7 @@ export async function logTool(db: Db, { path = '', q, since, limit }: LogArgs, w
 	// The log of me/queries is the caller's feed: the whole log as they may read it through this door, narrowed to what
 	// matches any of their saved queries.
 	const any = t.kind === 'queries' ? queryLines((await savedQueries(db, signedIn(who).login)).text) : undefined;
-	const scope: Scope | undefined = t.kind === 'all' || t.kind === 'queries' ? {} : t.kind === 'forum' ? { forum: true } : t.kind === 'source' ? { source: t.source }
+	const scope: Scope | undefined = t.kind === 'all' || t.kind === 'queries' ? {} : t.kind === 'forum' ? { forum: true, section: t.section } : t.kind === 'source' ? { source: t.source }
 		: t.kind === 'record' ? { record: t.record } : t.kind === 'spaces' ? { spaces: true } : t.kind === 'space' ? { space: t.space }
 			// A topic's number alone names it; the space in its path was checked when the path was read, and is checked again here.
 			: t.kind === 'topic' ? { topic: t.topic, ...(t.space === FORUM ? { forum: true as const } : { space: t.space }) } : undefined;
@@ -216,7 +216,7 @@ const posted = (thread: string, { record_id: _r, topic_id: _t, ...c }: { id: num
 
 export async function postTool(db: Db, a: PostArgs, who: Voter, door: Door): Promise<Record<string, unknown>> {
 	const t = await resolve(db, a.id, who.login, at(door));
-	onlyFor(a, a.id, 'title', t.kind === 'forum' || t.kind === 'spaces' || t.kind === 'space', 'a new topic (id forum, or a space) or a new space (id ws)');
+	onlyFor(a, a.id, 'title', t.kind === 'forum' || t.kind === 'spaces' || t.kind === 'space', 'a new topic (id forum, a section of it such as forum/agents, or a space) or a new space (id ws)');
 	onlyFor(a, a.id, 'review', t.kind === 'record', 'a review of a record');
 	onlyFor(a, a.id, 'retrieve_sources', t.kind === 'record' || (t.kind === 'post' && t.record !== undefined), 'comments and reviews on records');
 	if (t.kind === 'records') return submit(db, a.body, who);
@@ -229,7 +229,7 @@ export async function postTool(db: Db, a: PostArgs, who: Voter, door: Door): Pro
 	if (t.kind === 'forum' || t.kind === 'space') {
 		const space = t.kind === 'space' ? t.space : FORUM;
 		if (!a.title?.trim()) throw new QueryError('a new topic needs a title', 'Send title: the question or topic in one line, with the text in body.');
-		const topic = await startTopic(db, who, { title: a.title, body: a.body, space });
+		const topic = await startTopic(db, who, { title: a.title, body: a.body, space, section: t.kind === 'forum' ? t.section : undefined });
 		return getTopic(db, topic.id, space, who);
 	}
 	if (t.kind === 'spaces') {

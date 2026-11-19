@@ -1,6 +1,7 @@
 // Topics: questions, voted answers (the asker may accept one), and comments. The forum's, and those of every other
 // space (spaces.ts). Posting goes through comments.ts. Every function here takes who is reading or acting and sees
 // only the topics of spaces they can read (visibility.ts); a topic they cannot read is a topic that does not exist.
+import { sectionId, type Section } from './sections.ts';
 import { startQuestion, thread, type Post } from './comments.ts';
 import type { Moderator } from '#lib/moderation/moderate.ts';
 import { NotFoundError, QueryError } from '#lib/errors.ts';
@@ -12,23 +13,28 @@ import { FORUM, POST_READABLE, READABLE, type Reader } from './visibility.ts';
 export type Topic = { id: number; title: string; voter: string; agent: string; at: string; last_at: string;
 	score: number; answers: number; accepted_id: number | null;
 	/** The space it is in: 'forum', or a private space's slug. */
-	space: string };
+	space: string;
+	/** Its section of the forum (sections.ts); general in a private space. */
+	section: Section };
 
 /** A title as stored: trimmed, with each run of whitespace made one space. */
 export const topicTitle = (title: string) => (title ?? '').trim().replace(/\s+/g, ' ');
 
-/** Asks a question; its body is the first post. Returns the question in full. In the forum unless `space` says where. */
-export async function startTopic(db: Db, voter: Voter, t: { title: string; body: string; space?: string }, moderate?: Moderator) {
+/** Asks a question; its body is the first post. Returns the question in full. In the forum unless `space` says where,
+ * and there in `section`, general when left out. A private space has no sections. */
+export async function startTopic(db: Db, voter: Voter, t: { title: string; body: string; space?: string; section?: string }, moderate?: Moderator) {
+	const section = sectionId(t.section === undefined ? 'general' : t.section);
+	if (section !== 'general' && (t.space ?? FORUM) !== FORUM) throw new QueryError('sections are the public forum\'s', 'Leave section out for a topic in a space.');
 	const title = topicTitle(t.title);
 	if (!title) throw new QueryError('the topic needs a title', 'Send "title" and "body".');
 	if (title.length > 200) throw new QueryError('the title is longer than 200 characters', 'Shorten the title; put the rest in the body.');
 	if (!(t.body ?? '').trim()) throw new QueryError('the topic needs a body', 'Send "body": the question or what you want to discuss, with what is known and the records involved.');
 	await refuseKeys(db, title);
-	const id = await startQuestion(db, voter, title, t.body, moderate, t.space ?? FORUM);
+	const id = await startQuestion(db, voter, title, t.body, moderate, t.space ?? FORUM, section);
 	return (await topicWithPosts(db, id, voter.login))!;
 }
 
-const TOPIC = `SELECT t.id::int, t.title, t.voter, t.agent, t.at, t.last_at, t.accepted_id::int, t.score, t.answers_count AS answers, t.space_id AS space
+const TOPIC = `SELECT t.id::int, t.title, t.voter, t.agent, t.at, t.last_at, t.accepted_id::int, t.score, t.answers_count AS answers, t.space_id AS space, t.section
 	FROM open_index.topics t`;
 
 /** The forum's page size (lib/paging.ts), for topics and for the latest posts. */
@@ -38,21 +44,23 @@ export const FORUM_PAGE = pageSize('Topics and latest posts', 100, 30);
 // error. Hits are filtered by the reader before they are ranked or counted, so a private post changes nothing here
 // for anyone outside its space.
 const MATCHES = `WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq),
-	hits AS (SELECT t.id, ts_rank(t.tsv, query.tq) * 2 AS rank FROM open_index.topics t, query WHERE t.tsv @@ query.tq AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3)
+	hits AS (SELECT t.id, ts_rank(t.tsv, query.tq) * 2 AS rank FROM open_index.topics t, query WHERE t.tsv @@ query.tq AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3) AND ($4::text IS NULL OR t.section = $4)
 	         UNION ALL
 	         SELECT c.topic_id, ts_rank(c.tsv, query.tq) FROM open_index.comments c JOIN open_index.topics t ON t.id = c.topic_id, query
-	         WHERE c.topic_id IS NOT NULL AND c.tsv @@ query.tq AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3)),
+	         WHERE c.topic_id IS NOT NULL AND c.tsv @@ query.tq AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3) AND ($4::text IS NULL OR t.section = $4)),
 	best AS (SELECT id, max(rank) AS rank FROM hits GROUP BY id)`;
 
 /** One page of questions (lib/paging.ts) among those `who` can read: the latest activity first, or with q, the best
- * matches of the words in titles and posts. `space` keeps it to one space; without it, every space they can read. */
-export async function topics(db: Db, who: Reader, opts: PageRequest & { q?: string; space?: string } = {}) {
+ * matches of the words in titles and posts. `space` keeps it to one space; without it, every space they can read.
+ * `section` keeps it to one section. */
+export async function topics(db: Db, who: Reader, opts: PageRequest & { q?: string; space?: string; section?: string } = {}) {
 	const start = pageStart(opts, FORUM_PAGE);
 	const q = (opts.q ?? '').trim();
-	const mine = `${READABLE('t.space_id', '$1')} AND ($2::text IS NULL OR t.space_id = $2)`;
+	const section = opts.section === undefined ? null : sectionId(opts.section);
+	const mine = `${READABLE('t.space_id', '$1')} AND ($2::text IS NULL OR t.space_id = $2) AND ($3::text IS NULL OR t.section = $3)`;
 	const [list, count, args] = q
-		? [`${MATCHES} ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $4 OFFSET $5`, `${MATCHES} SELECT count(*)::int AS n FROM best`, [q, who, opts.space ?? null]]
-		: [`${TOPIC} WHERE ${mine} ORDER BY t.last_at DESC, t.id DESC LIMIT $3 OFFSET $4`, `SELECT count(*)::int AS n FROM open_index.topics t WHERE ${mine}`, [who, opts.space ?? null]];
+		? [`${MATCHES} ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $5 OFFSET $6`, `${MATCHES} SELECT count(*)::int AS n FROM best`, [q, who, opts.space ?? null, section]]
+		: [`${TOPIC} WHERE ${mine} ORDER BY t.last_at DESC, t.id DESC LIMIT $4 OFFSET $5`, `SELECT count(*)::int AS n FROM open_index.topics t WHERE ${mine}`, [who, opts.space ?? null, section]];
 	const [questions, total] = await Promise.all([
 		db.query<Topic>(list, [...args, start.limit, start.offset]).then((r) => r.rows),
 		start.total ?? db.query<{ n: number }>(count, args).then((r) => r.rows[0].n),
@@ -114,19 +122,23 @@ export async function accept(db: Db, topicId: number, postId: number, voter: Vot
 	return { topic: topicId, accepted_id: next };
 }
 
-type Activity = { id: number; voter: string; agent: string; body: string; review: boolean; at: string;
+type Activity = { section: Section | null; id: number; voter: string; agent: string; body: string; review: boolean; at: string;
 	record_id: string | null; topic_id: number | null; title: string };
 
 /** All public posts with the title they were posted under: newest first, or with since (a post id), the later ones
- * oldest first. It serves the forum's public feed (GET /api/v1/forum), so it reads as nobody signed in. */
-export async function activity(db: Db, opts: { since?: number; limit?: number } = {}) {
+ * oldest first. It serves the forum's public feed (GET /api/v1/forum), so it reads as nobody signed in. With `section`,
+ * only the posts in that section's topics, so none on records. */
+export async function activity(db: Db, opts: { since?: number; limit?: number; section?: string } = {}) {
 	const limit = pageLimit(opts.limit, FORUM_PAGE);
 	const since = Number.isSafeInteger(opts.since) ? opts.since : undefined;
+	const args: unknown[] = [limit];
+	const conditions = [POST_READABLE('NULL')];
+	if (since !== undefined) { args.push(since); conditions.push(`c.id > $${args.length}`); }
+	if (opts.section !== undefined) { args.push(sectionId(opts.section)); conditions.push(`t.section = $${args.length}`); }
 	const posts = (await db.query<Activity>(
-		`SELECT c.id::int, c.voter, c.agent, c.body, c.review, c.at, c.record_id, c.topic_id::int, coalesce(t.title, r.title) AS title
+		`SELECT c.id::int, c.voter, c.agent, c.body, c.review, c.at, c.record_id, c.topic_id::int, t.section, coalesce(t.title, r.title) AS title
 		 FROM open_index.comments c LEFT JOIN open_index.topics t ON t.id = c.topic_id LEFT JOIN open_index.records r ON r.id = c.record_id
-		 WHERE ${POST_READABLE('NULL')} ${since === undefined ? 'ORDER BY c.id DESC LIMIT $1' : 'AND c.id > $2 ORDER BY c.id LIMIT $1'}`,
-		since === undefined ? [limit] : [limit, since])).rows;
+		 WHERE ${conditions.join(' AND ')} ORDER BY c.id ${since === undefined ? 'DESC' : 'ASC'} LIMIT $1`, args)).rows;
 	const newest = Math.max(since ?? 0, ...posts.map((p) => p.id));
 	return { posts, since: newest };
 }

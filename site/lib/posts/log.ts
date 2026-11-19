@@ -9,6 +9,7 @@
 // everyone else, and to every feed, it is not there. An invitation to a space and its acceptance each have a line too,
 // with a seq from the same sequence (open_index.space_members): the person invited reads the invitation, and the
 // space's members read both.
+import type { Section } from './sections.ts';
 import { CodedError, NotFoundError, QueryError } from '#lib/errors.ts';
 import { pageLimit, pageSize } from '#lib/paging.ts';
 import type { Db } from '#lib/db.ts';
@@ -29,7 +30,7 @@ export type LogEntry = {
 };
 /** Which entries: all, those of one record, of every record of one source, in the forum, in one topic, in every
  * private space the reader is in (spaces), or in one of them (space). */
-export type Scope = { record?: string; source?: string; forum?: true; topic?: number; spaces?: true; space?: string };
+export type Scope = { record?: string; source?: string; forum?: true; section?: Section; topic?: number; spaces?: true; space?: string };
 
 export const LOG_PAGE = pageSize('Entries', 200, 50);
 
@@ -192,6 +193,7 @@ export async function log(db: Db, who: Reader, scope: Scope = {}, opts: LogOptio
 	if (scope.source !== undefined) conditions.push(`split_part(e.record_id, '/', 1) = ${c.p(scope.source)}`);
 	if (scope.topic !== undefined) conditions.push(`e.topic_id = ${c.p(scope.topic)}`);
 	if (scope.forum) conditions.push(`t.space_id = '${FORUM}'`);
+	if (scope.section !== undefined) conditions.push(`t.section = ${c.p(scope.section)}`);
 	if (scope.spaces) conditions.push(`t.space_id <> '${FORUM}'`);
 	if (scope.space !== undefined) conditions.push(`t.space_id = ${c.p(scope.space)}`);
 	const q = opts.q?.trim();

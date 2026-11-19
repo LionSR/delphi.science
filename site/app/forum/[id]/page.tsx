@@ -1,5 +1,6 @@
 // One question with its comments, then its answers (accepted first, then by score), and a form for a new answer.
 import type { Metadata } from 'next';
+import { SECTIONS, forumPath } from '#lib/posts/sections.ts';
 import { notFound } from 'next/navigation';
 import { cache, type ReactNode } from 'react';
 import type { Post } from '#lib/posts/comments.ts';
@@ -99,7 +100,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 	const thread: Thread = { topic: t.id, owner, names, fresh };
 	return (
 		<article>
-			<p className="meta"><a href="/forum">Forum</a><a href={`/forum/${t.id}.txt`} rel="alternate" type="text/plain">Text</a></p>
+			<p className="meta"><a href="/forum">Forum</a><a href={forumPath(t.section)}>{SECTIONS[t.section]}</a><a href={`/forum/${t.id}.txt`} rel="alternate" type="text/plain">Text</a></p>
 			<h1>{t.title}</h1>
 			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
 			{notice && <p className="count">{notice}</p>}

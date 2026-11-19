@@ -1,5 +1,6 @@
 'use server';
 // Server actions behind the site's forms.
+import { isSection, type Section } from '#lib/posts/sections.ts';
 import { revalidatePath } from 'next/cache';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
@@ -54,7 +55,8 @@ export async function savePostEdit(input: { id: number; body: string; revision: 
 export async function sendPost(_previous: PostFormState, form: FormData): Promise<PostFormState> {
 	const kind = String(form.get('kind')) as PostInput['kind'];
 	// What was sent, to fill the form again if it is not posted: without JavaScript the page is all the author has.
-	const draft = { title: String(form.get('title') ?? ''), body: String(form.get('body') ?? ''), review: form.get('review') === 'on' };
+	const draft = { title: String(form.get('title') ?? ''), body: String(form.get('body') ?? ''), review: form.get('review') === 'on',
+		...(isSection(form.get('section')) ? { section: form.get('section') as Section } : {}) };
 	if (!(FORM_KINDS as readonly string[]).includes(kind)) {
 		return { status: 'failed', feedback: { code: 'bad_request', message: 'Choose a topic, reply, comment or review form.', fix: 'Open the relevant thread and try again.' } };
 	}
@@ -66,6 +68,7 @@ export async function sendPost(_previous: PostFormState, form: FormData): Promis
 		const location = await submitPostForm(await db(), who, {
 			kind,
 			title: String(form.get('title') ?? ''),
+			section: form.has('section') ? String(form.get('section')) : undefined,
 			body: String(form.get('body') ?? ''),
 			topic: form.has('topic') ? Number(form.get('topic')) : undefined,
 			parent: form.has('parent') ? Number(form.get('parent')) : undefined,

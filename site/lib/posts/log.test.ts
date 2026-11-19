@@ -79,11 +79,12 @@ describe('events', () => {
 		const db = emptyDb();
 		const all = migrations(), at = all.findIndex((m) => m.name.endsWith('_events.sql'));
 		assert.ok(at > 0);
-		// The code that makes the earlier rows here is today's, which reads a topic's space: so the spaces migration goes
-		// in first (it stands without events until someone is invited), and the events migration over the rows after.
-		const spaces = all.findIndex((m) => m.name.endsWith('_spaces.sql'));
-		assert.ok(spaces > at);
-		for (const m of [...all.slice(0, at), all[spaces]]) await db.exec(m.sql);
+		// The code that makes the earlier rows here is today's, which reads a topic's space and section: so the spaces
+		// migration goes in first (it stands without events until someone is invited) with the sections one, and the
+		// events migration over the rows after.
+		const spaces = all.findIndex((m) => m.name.endsWith('_spaces.sql')), sections = all.findIndex((m) => m.name.endsWith('_forum_sections.sql'));
+		assert.ok(spaces > at && sections > at);
+		for (const m of [...all.slice(0, at), all[spaces], all[sections]]) await db.exec(m.sql);
 		await load(db, [QP, NT, APP]);
 		await db.query("UPDATE open_index.records SET added_at = '2026-11-01'::timestamptz + (CASE id WHEN $1 THEN 1 WHEN $2 THEN 2 ELSE 3 END) * interval '1 day'", [QP.id, NT.id]);
 		// Post ids with gaps, as a live table has them.
@@ -94,7 +95,7 @@ describe('events', () => {
 		const answer = await post(db, { topic: topic.id }, bob, { body: 'An answer from before.' }, yes);
 		assert.deepEqual([first.id, topic.question.id, answer.id].map(Number), [41, 42, 91]);
 
-		for (const m of all.slice(at).filter((m) => m !== all[spaces])) await db.exec(m.sql);
+		for (const m of all.slice(at).filter((m) => m !== all[spaces] && m !== all[sections])) await db.exec(m.sql);
 		assert.deepEqual(await events(db), [
 			{ seq: -3, kind: 'record', path: QP.id, voter: '' }, { seq: -2, kind: 'record', path: NT.id, voter: '' }, { seq: -1, kind: 'record', path: APP.id, voter: '' },
 			{ seq: 41, kind: 'comment', path: `${QP.id}/41`, voter: 'Ada' }, { seq: 42, kind: 'question', path: `forum/${topic.id}/42`, voter: 'Ada' },

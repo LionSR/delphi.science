@@ -19,7 +19,9 @@ type Place = { record: string } | { topic: number; space?: string };
 type NewPost = { body: string; review?: boolean; parent?: number; retrieveSources?: boolean };
 
 /** Where moderation is told a post is, for new posts and edits alike. */
-export const moderationPlace = (recordId: string | null) => recordId ? { recordId, on: `the record ${recordId}` } : { on: 'a forum topic' };
+/** Where a post is, as the moderator is told. The agents section is named, since what is on topic there differs (moderate.ts). */
+export const moderationPlace = (recordId: string | null, section?: string) => recordId ? { recordId, on: `the record ${recordId}` }
+	: { on: section === 'agents' ? 'a forum topic in the Agents section' : 'a forum topic' };
 
 /** Trims a body and refuses one that is empty, over MAX_BODY characters or carrying an agent key. */
 async function checkBody(db: Db, text: string) {
@@ -41,9 +43,9 @@ export async function post(db: Db, place: Place, voter: Voter, c: NewPost, moder
 	const onRecord = 'record' in place;
 	const [column, value] = onRecord ? ['record_id', place.record] : ['topic_id', place.topic];
 	// A topic in a space its poster cannot read is no topic at all.
-	const target = !onRecord && !Number.isSafeInteger(place.topic) ? undefined : (await db.query<{ title: string; posts: number; record?: unknown; space?: string; open?: boolean }>(
+	const target = !onRecord && !Number.isSafeInteger(place.topic) ? undefined : (await db.query<{ title: string; posts: number; record?: unknown; space?: string; open?: boolean; section?: string }>(
 		onRecord ? 'SELECT title, 0 AS posts, record FROM open_index.records WHERE id = $1'
-			: `SELECT title, posts_count AS posts, space_id AS space, ${READABLE('space_id', 'NULL')} AS open FROM open_index.topics WHERE id = $1 AND ${READABLE('space_id', '$2')}`,
+			: `SELECT title, posts_count AS posts, space_id AS space, section, ${READABLE('space_id', 'NULL')} AS open FROM open_index.topics WHERE id = $1 AND ${READABLE('space_id', '$2')}`,
 		onRecord ? [value] : [value, voter.login])).rows[0];
 	if (!target || (!onRecord && place.space !== undefined && place.space !== target.space)) {
 		if (onRecord) throw new NotFoundError(`no record ${JSON.stringify(place.record)}`, 'Use an id from a search result.');
@@ -66,21 +68,21 @@ export async function post(db: Db, place: Place, voter: Voter, c: NewPost, moder
 	context.previous = (await db.query<{ body: string }>(`SELECT body FROM open_index.comments WHERE ${column} = $1 ORDER BY id DESC LIMIT 4`, [value])).rows.map((p) => p.body);
 
 	const kind = onRecord ? (c.review ? 'review' : 'comment') : c.parent !== undefined ? 'comment' : Number(target.posts) ? 'answer' : 'question';
-	await screen(db, voter, { kind, ...moderationPlace(onRecord ? place.record : null), title: target.title, body, context },
+	await screen(db, voter, { kind, ...moderationPlace(onRecord ? place.record : null, target.section), title: target.title, body, context },
 		moderate, Boolean(c.retrieveSources), fetchSource);
 	return storePost(db, place, voter, stored);
 }
 
 /** Starts a topic in `space` with its first post. In a public space the question is moderated before its topic row
  * exists; in a private one its poster must be a member. */
-export async function startQuestion(db: Db, voter: Voter, title: string, text: string, moderate?: Moderator, space: string = FORUM) {
+export async function startQuestion(db: Db, voter: Voter, title: string, text: string, moderate?: Moderator, space: string = FORUM, section = 'general') {
 	const body = await checkBody(db, text);
 	const place = (await db.query<{ open: boolean }>(`SELECT ${READABLE('s.id', 'NULL')} AS open FROM open_index.spaces s WHERE s.id = $1 AND ${READABLE('s.id', '$2')}`, [space, voter.login])).rows[0];
 	if (!place) throw new NotFoundError(`no ws/${space}`, 'get ws lists the spaces you are in and your invitations.');
 	if (!place.open) await allowPrivatePost(db, voter);
-	if (place.open || MODERATE_PRIVATE_SPACES) await screen(db, voter, { kind: 'question', ...moderationPlace(null), title, body }, moderate);
-	const id = Number((await db.query<{ id: number }>('INSERT INTO open_index.topics (title, voter, agent, space_id) VALUES ($1, $2, $3, $4) RETURNING id',
-		[title, voter.login, voter.agent, space])).rows[0].id);
+	if (place.open || MODERATE_PRIVATE_SPACES) await screen(db, voter, { kind: 'question', ...moderationPlace(null, section), title, body }, moderate);
+	const id = Number((await db.query<{ id: number }>('INSERT INTO open_index.topics (title, voter, agent, space_id, section) VALUES ($1, $2, $3, $4, $5) RETURNING id',
+		[title, voter.login, voter.agent, space, section])).rows[0].id);
 	try {
 		await storePost(db, { topic: id }, voter, { body, mentions: place.open });
 	} catch (e) {

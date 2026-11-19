@@ -13,7 +13,7 @@ type Stored = {
 	id: number; voter: string; agent: string; body: string; revision: string; record_id: string | null;
 	topic_id: number | null; parent_id: number | null; review: boolean; question_id: number | null; title: string;
 	/** The topic's space; null on a record. `open`: that space is public. */
-	space: string | null; open: boolean | null;
+	space: string | null; open: boolean | null; section: string | null;
 };
 
 const bodyOf = async (db: Db, id: number | null) =>
@@ -26,7 +26,7 @@ export async function editPost(db: Db, id: number, who: Voter, input: { body: st
 		throw new QueryError(`Send a body of 1–${MAX_BODY_SHOWN} characters and its revision.`, 'Reload the thread to read the current revision. Your draft is kept.');
 	}
 	const p = (await db.query<Stored>(`SELECT c.id::int, c.voter, c.agent, c.body, c.xmin::text AS revision, c.record_id, c.topic_id::int, c.parent_id::int,
-		c.review, t.question_id::int, coalesce(t.title,r.title) AS title, t.space_id AS space, ${READABLE('t.space_id', 'NULL')} AS open FROM open_index.comments c
+		c.review, t.question_id::int, coalesce(t.title,r.title) AS title, t.space_id AS space, t.section, ${READABLE('t.space_id', 'NULL')} AS open FROM open_index.comments c
 		LEFT JOIN open_index.topics t ON t.id=c.topic_id LEFT JOIN open_index.records r ON r.id=c.record_id
 		WHERE c.id=$1 AND (c.topic_id IS NULL OR ${READABLE('t.space_id', '$2')})`, [id, who.login])).rows[0];
 	// A post in a space its editor cannot read is not there, whoever wrote it: a member who was removed included.
@@ -50,7 +50,7 @@ export async function editPost(db: Db, id: number, who: Voter, input: { body: st
 		context.previous = (await db.query<{ body: string }>(
 			`SELECT body FROM open_index.comments WHERE ${p.record_id ? 'record_id' : 'topic_id'}=$1 AND id<>$2 ORDER BY id DESC LIMIT 4`,
 			[p.record_id ?? p.topic_id, id])).rows.map((r) => r.body);
-		await screen(db, who, { kind, ...moderationPlace(p.record_id), title: p.title, body, context }, moderate);
+		await screen(db, who, { kind, ...moderationPlace(p.record_id, p.section ?? undefined), title: p.title, body, context }, moderate);
 	}
 	return db.transaction(async tx => {
 		const saved = (await tx.query<{ revision: string }>(`UPDATE open_index.comments SET body=$1

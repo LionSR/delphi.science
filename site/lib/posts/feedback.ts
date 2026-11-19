@@ -1,9 +1,10 @@
+import type { Draft } from './drafts.ts';
 import { CodedError, QueryError } from '#lib/errors.ts';
 
 export type PostFeedback = { code: string; message: string; fix: string };
 /** What a post form shows after it was sent. A form sent without JavaScript is drawn again from this alone, so a post
  * that failed comes back with the text that was sent (`draft`). */
-export type PostFormState = { status: 'idle' | 'failed' | 'posted'; feedback?: PostFeedback; location?: string; draft?: { title: string; body: string; review: boolean } };
+export type PostFormState = { status: 'idle' | 'failed' | 'posted'; feedback?: PostFeedback; location?: string; draft?: Draft };
 
 /** An unexpected error may come after the write, so the author is asked to check the thread before retrying. */
 export function postFeedback(error: unknown): PostFeedback {

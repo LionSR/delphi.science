@@ -1,6 +1,7 @@
 // Publishes posts from the site's forms. If the author already posted the same text, a retry returns that post
 // instead of posting it again.
 import { comment, post } from './comments.ts';
+import { sectionId } from './sections.ts';
 import { startTopic, topicTitle } from './forum.ts';
 import type { Moderator } from '#lib/moderation/moderate.ts';
 import { NotFoundError, QueryError } from '#lib/errors.ts';
@@ -18,7 +19,9 @@ export const FORM_KINDS = ['question', 'answer', 'comment', 'record', 'submissio
 export type PostInput = { kind: (typeof FORM_KINDS)[number]; title: string; body: string;
 	topic?: number; parent?: number; record?: string; review: boolean; retrieveSources?: boolean;
 	/** The space a topic is in or goes to; the forum when left out. */
-	space?: string };
+	space?: string;
+	/** The forum section a new topic goes to; general when left out. */
+	section?: string };
 
 export async function submitPostForm(db: Db, who: Voter, input: PostInput, moderate?: Moderator, fetcher: typeof fetch = fetch): Promise<string> {
 	const body = input.body.trim();
@@ -32,13 +35,14 @@ export async function submitPostForm(db: Db, who: Voter, input: PostInput, moder
 	// Before anything is looked up, a retry included: a space its author cannot read (a member since removed) is not there.
 	if (input.kind !== 'record' && !await canRead(db, space, who.login)) throw new NotFoundError(`no ws/${space}`, 'Open one of your spaces from /ws.');
 	if (input.kind === 'question') {
+		const section = sectionId(input.section === undefined ? 'general' : input.section);
 		const title = topicTitle(input.title);
 		if (!title || title.length > 200) throw new QueryError('The title needs 1–200 characters.', 'State the research question in one line.');
 		const existing = (await db.query<{ id: number }>(
 			`SELECT t.id::int FROM open_index.topics t JOIN open_index.comments c ON c.topic_id=t.id
-			 WHERE t.voter=$1 AND t.title=$2 AND t.space_id=$4 AND c.voter=$1 AND c.body=$3 AND c.parent_id IS NULL
-			 AND c.id=(SELECT min(q.id) FROM open_index.comments q WHERE q.topic_id=t.id AND q.parent_id IS NULL) LIMIT 1`, [who.login, title, body, space])).rows[0];
-		return `/${topicPath(space, existing?.id ?? (await startTopic(db, who, { title, body, space }, moderate)).id)}`;
+			 WHERE t.voter=$1 AND t.title=$2 AND t.space_id=$4 AND t.section=$5 AND c.voter=$1 AND c.body=$3 AND c.parent_id IS NULL
+			 AND c.id=(SELECT min(q.id) FROM open_index.comments q WHERE q.topic_id=t.id AND q.parent_id IS NULL) LIMIT 1`, [who.login, title, body, space, section])).rows[0];
+		return `/${topicPath(space, existing?.id ?? (await startTopic(db, who, { title, body, space, section }, moderate)).id)}`;
 	}
 	if (input.kind === 'record') {
 		if (!input.record) throw new QueryError('No record was selected.', 'Open an indexed record and use its comment form.');

@@ -35,7 +35,7 @@ at either end go; nothing else changes, so a file that is pushed and pulled agai
 | `queries` | the text, one query per line, at most 4,000 characters |
 | `revision` | grows by one each time `queries` changes |
 | `updated_at` | when `queries` last changed |
-| `seen_seq` | the read position: an `events.seq`; 0 before the first visit |
+| `seen_seq` | the read position: a seq of the log (an `events.seq`, or the seq of an invitation or acceptance line); 0 before the first visit |
 | `seen_at` | when `seen_seq` last moved |
 
 It is private: row level security is on with no policy, and `public`, `anon` and `authenticated` hold no grant. The
@@ -145,8 +145,10 @@ server draws the page again from the same reply. The whole flow was run in a bro
 
 `seen_seq` is one number per person: how far into the log they had got the last time they opened My feed.
 
-**The advance rule.** Opening the *plain first page* of My feed moves `seen_seq` to the largest `seq` captured before
-reading that page. Events that arrive during or after the read therefore stay new on the next visit, even if they
+**The advance rule.** Opening the *plain first page* of My feed moves `seen_seq` to the largest `seq` in the log, captured
+before reading that page. The log's lines are the events and, for private spaces, the invitation and acceptance
+lines, which take their seq from the same sequence without an events row; the largest is taken over all three
+(`head` in `lib/posts/log.ts`), from committed rows. Events that arrive during or after the read therefore stay new on the next visit, even if they
 miss this page. Plain means: no search, not an older page, no line carried in the link. Nothing else moves it. In
 particular these do not: a search within the feed, an older page, a topic or record page, a browser's prefetch or
 prerender of the page (recognised by its `Sec-Purpose` or `Purpose` header), the global feed, and anything an agent
@@ -216,7 +218,10 @@ PGlite and a small local Postgres say nothing about plans at size. Before this i
 4. **A feed with `to:@me` or `by:@me` among category lines**: the `OR` across a post-only term and a record term
    means `events_posts` cannot be used for the whole; check that the plan is still the backward walk and not a
    sequential scan with a sort.
-5. **`head`**: `SELECT max(seq) FROM open_index.events`. Expect an index-only backward step on the primary key.
+5. **`head`**: the greatest of `max(seq)` on `open_index.events` and `max(invited_seq)`, `max(accepted_seq)` on
+   `open_index.space_members`, run on every plain My feed visit. For events expect an index-only backward step on
+   the primary key. `space_members` has no index on `invited_seq` or `accepted_seq`, so those two are sequential
+   scans of that table: harmless while memberships are few, an index on each if they grow.
 6. **Unread marks on a thread**: `log` for one record or topic with `e.seq > $seen` (`events_record` /
    `e.topic_id`, then the seq filter). Small by nature; check that a long thread does not sort.
 7. **The table itself** needs no check: every statement on `saved_queries` is by primary key.

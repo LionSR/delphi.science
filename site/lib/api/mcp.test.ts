@@ -20,10 +20,8 @@ const rpc = async (db: Db, method: string, params: object = {}) => {
 		headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' } });
 	return (await (await handle(req, async () => db)).json()).result;
 };
-const without = (o: Json, ...keys: string[]) => Object.fromEntries(Object.entries(o).filter(([k]) => !keys.includes(k)));
 const noDb: Db = { query: async () => { throw new Error('no database in this test'); } };
 const listTools = async (db = noDb) => Object.fromEntries(((await rpc(db, 'tools/list')).tools as Tool[]).map((t) => [t.name, t]));
-
 const without = (o: Json, ...keys: string[]) => Object.fromEntries(Object.entries(o).filter(([k]) => !keys.includes(k)));
 
 const ajv = addFormats(new Ajv2020({ strict: false, allErrors: true }));

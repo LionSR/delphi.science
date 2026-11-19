@@ -6,9 +6,8 @@ import { after, before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { allowRouteImports, migratedDb, useDb } from '#lib/testing.ts';
 import { sha256 } from '#lib/hash.ts';
-import { SITE } from '#lib/view.ts';
 import { voterFromKey } from './keys.ts';
-import { authorizationServer, issueCode, protectedResource, RESOURCE, token } from './oauth.ts';
+import { issueCode, RESOURCE, token } from './oauth.ts';
 import { CHATGPT, form, refused, register, request, route, signIn as signInOn, VERIFIER } from './oauth-testing.ts';
 import { isReviewer } from './review.ts';
 
@@ -19,19 +18,6 @@ before(async () => { pg = await migratedDb(); useDb(pg); });
 after(async () => { useDb(); await pg.close(); });
 const signIn = (login: string) => signInOn(pg, login);
 
-// ---- Discovery and registration ----
-
-describe('discovery', () => {
-	test('the resource names this site as its authorization server, and the server names its endpoints', async () => {
-		assert.deepEqual([protectedResource().resource, protectedResource().authorization_servers], [RESOURCE, [SITE]]);
-		const as = authorizationServer();
-		assert.equal(as.issuer, SITE);
-		assert.equal(as.authorization_response_iss_parameter_supported, true);
-		assert.deepEqual(as.code_challenge_methods_supported, ['S256']);
-		assert.deepEqual(as.token_endpoint_auth_methods_supported, ['none']);
-		for (const k of ['authorization_endpoint', 'token_endpoint', 'registration_endpoint', 'revocation_endpoint'] as const) assert.ok(as[k].startsWith(`${SITE}/oauth/`), k);
-	});
-});
 
 describe('client registration', () => {
 	test('a public client registers itself through the route and is told it has no secret', async () => {

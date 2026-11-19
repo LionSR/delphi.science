@@ -35,10 +35,6 @@ describe('on Postgres', { skip: !existsSync(BUILD) && 'build the index first' },
 		items = buildItems();
 		assert.equal(await load(db, items), items.length);
 	});
-	// Sets a record's links (record.discussion), as index.py discuss does; pair queries two palomar records.
-	const discuss = (id: string, links: object[]) =>
-		db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [id, JSON.stringify(links)]);
-	const pair = (a: string, b: string) => `source:palomar AND (id:${JSON.stringify(a)} OR id:${JSON.stringify(b)})`;
 
 	test('structured filters match the build exactly', async () => {
 		const expect = (pred: (it: Item) => boolean) => items.filter(pred).length;

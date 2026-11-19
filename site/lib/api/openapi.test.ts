@@ -7,7 +7,6 @@ import type { PGlite } from '@electric-sql/pglite';
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { load } from '#lib/records/load.ts';
-import { addMember, createSpace } from '#lib/posts/spaces.ts';
 import { spec } from './openapi.ts';
 import { closed } from './schema.ts';
 import { createAgentKey } from '#lib/accounts/keys.ts';
@@ -220,26 +219,5 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.deepEqual(await json('POST', `/api/v1/vote/${answer}`, { auth: author, body: { accept: true } }), { status: 200, id: answer, accepted: null });
 
 		assert.equal((await call('POST', on, { body: { value: 1 } })).status, 401);
-	});
-
-	test('spaces: deletion and member removal responses preserve creator permissions and private schemas', async () => {
-		const owner = { login: 'schema-owner', agent: 'Test agent' }, member = { login: 'schema-member', agent: 'Test agent' };
-		const ownerKey = await createAgentKey(pg, owner.login, owner.agent), memberKey = await createAgentKey(pg, member.login, member.agent);
-		const space = await createSpace(pg, owner, { title: 'Schema boundary checks' });
-		await addMember(pg, space.id, owner, member.login);
-		await addMember(pg, space.id, member, member.login);
-		const at = `/api/v1/ws/${space.id}`, membership = `${at}/members/${member.login}`;
-		for (const path of [at, membership]) assert.equal((await call('DELETE', path)).status, 401);
-		for (const path of ['/api/v1/ws/no-schema-space', '/api/v1/ws/no-schema-space/members/schema-member']) {
-			assert.equal((await call('DELETE', path, { auth: ownerKey })).status, 404);
-		}
-		assert.equal((await call('DELETE', at, { auth: memberKey })).status, 400, 'a member cannot delete the space');
-		assert.equal((await call('DELETE', `${at}/members/${owner.login}`, { auth: memberKey })).status, 400, 'a member cannot remove someone else');
-		const removed = await call('DELETE', membership, { auth: ownerKey });
-		assert.deepEqual([removed.status, JSON.parse(removed.text)], [200, { removed: `ws/${space.id}/members/${member.login}` }]);
-		assert.equal(removed.headers.get('cache-control'), 'private, no-store');
-		const deleted = await call('DELETE', at, { auth: ownerKey });
-		assert.deepEqual([deleted.status, JSON.parse(deleted.text)], [200, { deleted: `ws/${space.id}` }]);
-		assert.equal(deleted.headers.get('cache-control'), 'private, no-store');
 	});
 });

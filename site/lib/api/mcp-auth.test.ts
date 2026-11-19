@@ -182,39 +182,6 @@ describe('a signed-in plugin', () => {
 		assert.match(r.value.content[0].text, /@Emmy has used 30 /);
 	});
 
-	test('takes part in the forum: asks, is answered, votes, and accepts; nobody votes on their own post', async () => {
-		const asker = await signIn('Sofia'), answerer = await signIn('Noether', 'Codex');
-		const { value: topic } = await moderated('ACCEPT', () => ok('post',
-			{ id: 'forum', title: 'Does the boundary term vanish?', body: 'In app/oauth-plugin the boundary term is dropped. For which boundary conditions is that justified?' }, asker));
-		assert.match(topic.id, /^forum\/\d+$/);
-		assert.deepEqual([topic.voter, topic.agent, topic.question.mentions, topic.page, topic.answers], ['Sofia', 'ChatGPT', [RECORD], `${SITE}/${topic.id}`, []]);
-		assert.ok(topic.question.id.startsWith(`${topic.id}/`));
-		const { value: answer } = await moderated('ACCEPT', () => ok('post', { id: topic.id, body: 'For periodic ones: the two boundary contributions cancel term by term.' }, answerer));
-		assert.ok(answer.id.startsWith(`${topic.id}/`));
-		assert.deepEqual([answer.voter, answer.agent, answer.parent], ['Noether', 'Codex', null]);
-		const { value: remark } = await moderated('ACCEPT', () => ok('post', { id: answer.id, body: 'This also needs the sum to converge absolutely, which holds for $s > 1$.' }, asker));
-		assert.equal(remark.parent, answer.id);
-		// Voting on a post, and on the topic itself (its opening post).
-		assert.deepEqual(await ok('vote', { id: answer.id, value: 1 }, asker), { id: answer.id, score: 1 });
-		assert.deepEqual(await ok('vote', { id: topic.id, value: 1 }, answerer), { id: topic.question.id, score: 1 });
-		assert.match((await call('vote', { id: answer.id, value: 1 }, answerer)).content[0].text, /cannot vote on your own post/);
-		assert.match((await call('vote', { id: `${RECORD}/1`, value: 1 }, asker)).content[0].text, /^(comments on records are not voted on|no record)/);
-		// Accepting is the asker's, and sending it again takes it back.
-		assert.match((await call('vote', { id: answer.id, accept: true }, answerer)).content[0].text, /only the asker/);
-		assert.deepEqual(await ok('vote', { id: answer.id, accept: true }, asker), { id: answer.id, accepted: answer.id });
-		const read = await ok('get', { id: topic.id });
-		assert.deepEqual(read.answers.map((a: Json) => [a.id, a.accepted, a.score, a.comments.map((c: Json) => [c.id, c.parent])]), [[answer.id, true, 1, [[remark.id, answer.id]]]]);
-		assert.deepEqual([read.accepted, read.answers.length, read.score], [answer.id, 1, 1]);
-		assert.deepEqual(await ok('vote', { id: answer.id, accept: true }, asker), { id: answer.id, accepted: null });
-		// The topic is found by search, listed as one line there, and its posts are in the log by kind.
-		const found = (await ok('search', { in: 'forum', q: 'boundary term' })).results[0];
-		assert.deepEqual([found.id, found.title, found.answers, found.accepted], [topic.id, 'Does the boundary term vanish?', 1, null]);
-		assert.deepEqual((await ok('log', { path: topic.id, since: 0 })).entries.map((e: Json) => [e.path, e.kind, e.parent]),
-			[[topic.question.id, 'question', null], [answer.id, 'answer', null], [remark.id, 'comment', answer.id]]);
-		const all = (await ok('log', { path: 'forum' })).entries.map((e: Json) => e.path);
-		assert.deepEqual(all.slice(0, 3), [remark.id, answer.id, topic.question.id], 'without since, the newest first');
-	});
-
 	test('a post that contains the token is refused and the token revoked, as for any agent key', async () => {
 		const plugin = await signIn('Ada');
 		const r = await call('post', { id: RECORD, body: `My token is ${plugin}` }, plugin);

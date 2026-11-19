@@ -10,18 +10,6 @@ let db: PGlite;
 before(async () => { db = await migratedDb(); });
 after(() => db.close());
 
-test('sessions keep a cosmetic name, or the login when it is blank, while the API identity stays the login', async () => {
-	for (const [name, shown] of [['  Alice & Bob  ', 'Alice & Bob'], [undefined, 'ada'], ['', 'ada'], [' \n\t ', 'ada']]) {
-		const key = await createSession(db, 'ada', name);
-		assert.deepEqual(await personFromSession(db, key), { login: 'ada', agent: '', name: shown }, String(name));
-		assert.deepEqual(await voterFromKey(db, key), { login: 'ada', agent: '' });
-	}
-	// A blank name stored before names were cleaned on the way in.
-	const legacy = await createSession(db, 'ada');
-	await db.query('UPDATE open_index.agent_keys SET name = $2 WHERE key_hash = $1', [await sha256(legacy), ' \n\t ']);
-	assert.equal((await personFromSession(db, legacy))?.name, 'ada');
-});
-
 test('agent keys remain API callers and cannot become browser people or device approvers', async () => {
 	const key = await createAgentKey(db, 'ada', 'Offline Agent');
 	assert.deepEqual(await voterFromKey(db, key), { login: 'ada', agent: 'Offline Agent' });

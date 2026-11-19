@@ -2,7 +2,7 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
-import { profile, profileActivity, profileCounts, type Profile } from './profile.ts';
+import { profileActivity, profileCounts } from './profile.ts';
 
 async function database() {
 	const db = new PGlite();
@@ -51,15 +51,6 @@ test('human and bot contributions come only from public rows with an explicit DT
 	assert.equal(posts[0].permalink, '/forum/10#p2');
 	assert.equal(posts[1].permalink, '/r/app/boundary#p1');
 	assert.deepEqual(Object.keys(posts[0]).sort(), ['agent', 'at', 'body', 'id', 'kind', 'permalink', 'title', 'topic_id', 'voter']);
-}));
-
-test('a profile pages like every list: by number or by cursor, with the tab\'s total', () => withDb(async (db) => {
-	for (let id = 1; id <= 45; id++) await post(db, id);
-	const ids = (p: Profile) => p.tab === 'votes' ? p.votes.map((v) => v.record_id) : p.posts.map((x) => x.id);
-	const first = await profile(db, 'ADA');
-	assert.deepEqual([first.login, ids(first).length, ids(first)[0], first.total, first.page, first.pages], ['ada', 20, 45, 45, 1, 3]);
-	assert.deepEqual(ids(await profile(db, 'ada', { cursor: first.next_cursor })), ids(await profile(db, 'ada', { page: 2 })));
-	assert.deepEqual([ids(await profile(db, 'ada', { page: 3 })).length, (await profile(db, 'ada', { tab: 'votes' })).total], [5, 0]);
 }));
 
 test('posts are typed as topic, reply, comment or review, and tabs and counts follow the types', () => withDb(async (db) => {

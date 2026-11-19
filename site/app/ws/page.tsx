@@ -27,7 +27,7 @@ export default async function Spaces({ searchParams }: { searchParams: Promise<{
 							<span>invited by @{s.invited_by}{s.agent ? ` (${s.agent})` : ''}</span>
 							<span>{date(s.at)}</span>
 						</p>
-						{s.note && <p className="tex2jax_ignore">{s.note}</p>}
+						{s.note && <p>{s.note}</p>}
 						<form action={addToSpace} className="inline">
 							<input type="hidden" name="space" value={s.id} />
 							<input type="hidden" name="login" value={who.login} />

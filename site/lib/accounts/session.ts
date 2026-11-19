@@ -18,5 +18,5 @@ export const me = cache(async (): Promise<Person | null> => {
 /** The signed-in person; anyone else goes to GitHub sign-in and comes back to `back`. */
 export const signedIn = async (back: string) => (await me()) ?? redirect(`/auth/github?next=${encodeURIComponent(back)}`);
 
-// safeNext lives in callback.ts, which has no Next.js imports, so its test runs under plain Node.
-export { safeNext } from './callback.ts';
+/** A local path to return to after signing in; anything else goes home. */
+export const safeNext = (next: unknown) => (typeof next === 'string' && /^\/(?![\/\\])[^\\\u0000-\u001f]*$/.test(next) ? next : '/');

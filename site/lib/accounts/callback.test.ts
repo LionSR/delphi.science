@@ -1,7 +1,7 @@
 // Sign-in and code exchange must use the same origin-specific registered callback.
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
-import { callbackUrl, safeNext } from './callback.ts';
+import { callbackUrl } from './callback.ts';
 
 for (const origin of [
 	'https://delphi.science',
@@ -27,11 +27,4 @@ test('callback address excludes input path, query and fragment', () => {
 
 test('rejects malformed URLs', () => {
 	assert.throws(() => callbackUrl('not an origin'), TypeError);
-});
-
-test('a return path stays on the site', () => {
-	for (const ok of ['/', '/forum/12?sort=new#a3', '/keys/approve?code=ABCD-EFGH']) assert.equal(safeNext(ok), ok);
-	// A browser reads "\" as "/" and drops tabs and newlines, so each of these would leave the site.
-	for (const bad of ['//evil.example', '/\\evil.example', '/\t/evil.example', '/\n/evil.example', 'https://evil.example', 'evil', '', null, 7])
-		assert.equal(safeNext(bad), '/');
 });

@@ -86,11 +86,11 @@ describe('the table', () => {
 		await db.close();
 	});
 
-	test('the migration applies after the events it points into, and touches no other table', () => {
+	test('the migration is the last to apply, after the events it points into, and touches no other table', () => {
 		const all = migrations();
-		const at = all.findIndex((m) => /^\d{14}_saved_queries\.sql$/.test(m.name));
-		const mine = all[at]!;
-		assert.ok(at >= 0 && all.findIndex((m) => m.name.endsWith('_events.sql')) < at);
+		const mine = all.at(-1)!;
+		assert.match(mine.name, /^\d{14}_saved_queries\.sql$/);
+		assert.ok(all.findIndex((m) => m.name.endsWith('_events.sql')) < all.length - 1);
 		assert.equal(new Set(all.map((m) => m.name.slice(0, 14))).size, all.length, 'no two migrations share a version');
 		const statements = mine.sql.replace(/--.*$/gm, '');
 		assert.deepEqual([...statements.matchAll(/\bopen_index\.(\w+)/g)].map((m) => m[1]).filter((t) => t !== 'saved_queries'), []);

@@ -37,8 +37,8 @@ test('tabs show counts and mark the current one, and keep the tab across pages; 
 
 test('a known name heads the profile and labels its posts, with the login beside it, then the owner\'s editor', () => {
 	const html = render({ login: 'ada', page, who: { name: 'Ada <Lovelace>', affiliation: 'Analytical Engines' }, editor: createElement('form', { id: 'edit' }) });
-	assert.match(html, /<h1>Ada &lt;Lovelace&gt;<\/h1><p class="meta"><span class="tex2jax_ignore">@ada<\/span><span class="tex2jax_ignore">Analytical Engines<\/span><\/p><form id="edit"><\/form>/);
-	assert.match(html, /title="@Ada">Ada &lt;Lovelace&gt;<\/a>’s team<span class="tex2jax_ignore"> \(Analytical Engines\)<\/span>/);
+	assert.match(html, /<h1>Ada &lt;Lovelace&gt;<\/h1><p class="meta"><span class="tex2jax_ignore">@ada<\/span><span>Analytical Engines<\/span><\/p><form id="edit"><\/form>/);
+	assert.match(html, /title="@Ada">Ada &lt;Lovelace&gt;<\/a>’s team \(Analytical Engines\)/);
 });
 
 test('an empty page says so without paging on; a failed one offers to try again', () => {

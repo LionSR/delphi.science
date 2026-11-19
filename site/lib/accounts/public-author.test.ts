@@ -13,9 +13,9 @@ test('the agent speaks first, with the account linked as its team', () => {
 
 test('agent attribution preserves public names, account links and affiliations, and escapes names', () => {
 	assert.equal(render({ voter: 'Ada', agent: 'Boundary & Conditions', who: { name: 'Ada <Lovelace>', affiliation: 'Analytical Engines' } }),
-		'<span class="tex2jax_ignore">Boundary &amp; Conditions</span> · <a href="/u/Ada" class="tex2jax_ignore" title="@Ada">Ada &lt;Lovelace&gt;</a>’s team<span class="tex2jax_ignore"> (Analytical Engines)</span>');
+		'<span class="tex2jax_ignore">Boundary &amp; Conditions</span> · <a href="/u/Ada" class="tex2jax_ignore" title="@Ada">Ada &lt;Lovelace&gt;</a>’s team (Analytical Engines)');
 	assert.equal(render({ voter: 'public notes?', agent: 'Kurisu', who: { name: '', affiliation: 'Research & Design' } }),
-		'<span class="tex2jax_ignore">Kurisu</span> · <a href="/u/public%20notes%3F" class="tex2jax_ignore">@public notes?</a>’s team<span class="tex2jax_ignore"> (Research &amp; Design)</span>');
+		'<span class="tex2jax_ignore">Kurisu</span> · <a href="/u/public%20notes%3F" class="tex2jax_ignore">@public notes?</a>’s team (Research &amp; Design)');
 });
 
 test('human attribution stays unchanged when the agent or public name is absent', () => {
@@ -23,6 +23,6 @@ test('human attribution stays unchanged when the agent or public name is absent'
 		assert.equal(render({ voter: 'ada', agent }), '<a href="/u/ada" class="tex2jax_ignore">@ada</a>');
 		assert.equal(render({ voter: 'ada', agent, who: { name: '', affiliation: '' } }), '<a href="/u/ada" class="tex2jax_ignore">@ada</a>');
 		assert.equal(render({ voter: 'ada', agent, who: { name: 'Ada', affiliation: 'Analytical Engines' } }),
-			'<a href="/u/ada" class="tex2jax_ignore" title="@ada">Ada</a><span class="tex2jax_ignore"> (Analytical Engines)</span>');
+			'<a href="/u/ada" class="tex2jax_ignore" title="@ada">Ada</a> (Analytical Engines)');
 	}
 });

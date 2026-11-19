@@ -9,12 +9,6 @@ import { NAME } from '#lib/view.ts';
 export const dynamic = 'force-dynamic';
 export const metadata = { title: `Reviewer sign-in · ${NAME}`, robots: { index: false } };
 
-// Notices are named by code, never shown as text from the URL.
-const NOTICES: Record<string, string> = {
-	mismatch: 'That login and password do not match the demo account.',
-	limited: 'Too many attempts. Wait 15 minutes and try again.',
-};
-
 export default async function Review({ searchParams }: { searchParams: Promise<{ next?: string; notice?: string }> }) {
 	if (!reviewLogin()) notFound();
 	const { next, notice } = await searchParams;
@@ -22,7 +16,7 @@ export default async function Review({ searchParams }: { searchParams: Promise<{
 		<article>
 			<h1>Reviewer sign-in</h1>
 			<p className="count">For plugin reviewers, with the demo account from the submission. Everyone else signs in <a href={`/auth/github?next=${encodeURIComponent(safeNext(next))}`}>with GitHub</a>.</p>
-			{notice && NOTICES[notice] && <p className="count">{NOTICES[notice]}</p>}
+			{notice && <p className="count">{notice}</p>}
 			<form action={reviewSignIn}>
 				<input type="hidden" name="next" value={safeNext(next)} />
 				<input name="login" placeholder="Login" aria-label="Login" autoComplete="username" required />

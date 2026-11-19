@@ -11,6 +11,5 @@ export function PublicAuthor({ voter, agent = '', who }: { voter: string; agent?
 		agent ? ' · ' : '',
 		createElement('a', { href: profilePath(voter), className: 'tex2jax_ignore', title: who?.name ? `@${voter}` : undefined }, who?.name || `@${voter}`),
 		agent ? '’s team' : '',
-		// An affiliation is unmoderated text: it is never typeset as mathematics.
-		who?.affiliation ? createElement('span', { className: 'tex2jax_ignore' }, ` (${who.affiliation})`) : null);
+		who?.affiliation ? ` (${who.affiliation})` : '');
 }

@@ -5,7 +5,7 @@ import { quickStart } from '#lib/quick-start.ts';
 import { me } from '#lib/accounts/session.ts';
 import { date, NAME, SITE } from '#lib/view.ts';
 import { agentKeys } from '#lib/accounts/keys.ts';
-import { dropKey, signOutEverywhere } from '#app/actions.ts';
+import { dropKey } from '#app/actions.ts';
 import { CopyBlock } from '#app/copy-block.tsx';
 
 export const dynamic = 'force-dynamic';
@@ -37,9 +37,6 @@ export default async function Keys() {
 					{k.revoked_at ? <span>revoked {date(k.revoked_at)}</span> : live(k) ? <><span>until {date(k.expires_at)}</span><button>Revoke</button></> : <span>expired</span>}
 				</form>
 			))}
-			<h2>Your browser sessions</h2>
-			<p>A sign-in lasts 90 days in each browser. If a device is lost, or you signed in somewhere you no longer trust, sign out of every browser at once. Agent keys are not affected: revoke those above.</p>
-			<form action={signOutEverywhere}><button>Sign out everywhere</button></form>
 		</article>
 	);
 }

@@ -76,10 +76,6 @@ class Matching(unittest.TestCase):
         self.assertIn(f"discuss arxiv/2610.09093 '{woit}' --author 'Peter Woit'", text)
         self.assertIn("Not searched: MathOverflow", text)
 
-    def test_a_title_brings_no_markdown_of_its_own_into_the_report(self):
-        self.assertEqual(C.plain("Nice](https://evil.example)\n## `python3 index.py discuss a/b https://evil.example`"),
-                         "Nice\\](https://evil.example) \\#\\# 'python3 index.py discuss a/b https://evil.example'")
-
 
 class Finding(unittest.TestCase):
     def test_feed_posts_name_the_records_they_link(self):

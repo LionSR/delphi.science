@@ -480,17 +480,6 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
 # ---- refresh ----
 
 
-# Sources where the person who submits a link can also be the one who writes its title and description.
-SELF_DESCRIBED = ("web", "github")
-
-
-def held(e: dict[str, Any]) -> bool:
-    """Whether a refresh keeps this entry's title and summary as they are. A person's submission is moderated once, on
-    the text its page had then (site/lib/records/submit.ts). If the page is theirs to edit, a refresh would publish
-    whatever it says later, unseen; so that text stays, and the job log names the entry for a person to look at."""
-    return e["source"] in SELF_DESCRIBED and not str(e.get("added_by", "")).startswith("harvest:")
-
-
 def refresh(older_than: int, limit: int, dry_run: bool) -> int:
     cutoff = (dt.date.today() - dt.timedelta(days=older_than)).isoformat()
     # Stalest first, so an entry whose source keeps failing does not hold back the rest.
@@ -515,17 +504,9 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
         if e.get("discussion"):
             updated["discussion"] = recheck(e["discussion"])
         if any(updated.get(k) != e.get(k) for k in ("title", "summary")):
-            if held(e):
-                # The text passed moderation when it was submitted; what its page says now has passed nothing.
-                print(f"held     {rid(e)}  {updated['title'][:70]}", file=sys.stderr)
-                updated.update(pick(e, ("title", "summary")))
-                for k in ("title", "summary"):
-                    if k not in e:
-                        updated.pop(k, None)
-            else:
-                updated.pop("review", None)  # the text changed: label it again
-                changed += 1
-                print(f"changed  {rid(e)}  {updated['title'][:70]}")
+            updated.pop("review", None)  # the text changed: label it again
+            changed += 1
+            print(f"changed  {rid(e)}  {updated['title'][:70]}")
         if not dry_run:
             saved(ref, updated)
     print(f"checked {len(stale)}: {changed} changed, {gone} gone")

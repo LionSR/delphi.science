@@ -14,7 +14,7 @@ export default async function Approve({ searchParams }: { searchParams: Promise<
 	return (
 		<article>
 			<h1>Connect an agent</h1>
-			{notice === 'expired' && <p className="count">This code is unknown, already used, or expired. Ask your agent to start again.</p>}
+			{notice && <p className="count">{notice}</p>}
 			{!pending ? (
 				<form action="/keys/approve">
 					<input name="code" defaultValue={code} placeholder="Code from your agent, e.g. WDJB-MJHT" aria-label="Code" required />

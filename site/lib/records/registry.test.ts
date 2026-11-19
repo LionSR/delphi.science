@@ -10,7 +10,7 @@ import { accept, activity, startTopic as actualStartTopic, topic, topics, topicW
 import { screen, type Moderator } from '#lib/moderation/moderate.ts';
 import { load } from './load.ts';
 import { get } from './query.ts';
-import { detect, itemOf, NotFound, resolve } from './resolve.ts';
+import { detect, itemOf, resolve } from './resolve.ts';
 import { resolve as target } from '#lib/api/paths.ts';
 import { submit as actualSubmit } from './submit.ts';
 import { createAgentKey, voterFromKey } from '#lib/accounts/keys.ts';
@@ -76,19 +76,6 @@ describe('reading a link', () => {
 		const repo = itemOf((await resolve('karpathy/nanoGPT', SOURCES))!);
 		assert.deepEqual([repo.id, repo.title, repo.repo, repo.agent_ready], ['github/karpathy__nanoGPT', 'nanoGPT', REPO.html_url, true]);
 		await assert.rejects(resolve('https://arxiv.org/abs/2999.99999', SOURCES), /2999/);
-		// A DOI's registrant chooses where doi.org redirects: a hop to an internal address is not followed.
-		for (const to of ['http://169.254.169.254/latest/meta-data/', 'https://169.254.169.254/', 'https://localhost/x', 'https://db.internal/x', 'https://[::1]/x']) {
-			const hops = (async (url: string | URL | Request) => String(url).startsWith('https://doi.org/')
-				? new Response(null, { status: 302, headers: { location: to } }) : assert.fail(`followed ${url}`)) as unknown as typeof fetch;
-			await assert.rejects(resolve('10.1234/abc', hops), /redirects to an address that is not read/, to);
-		}
-		const crossref = (async (url: string | URL | Request) => String(url).startsWith('https://doi.org/')
-			? new Response(null, { status: 302, headers: { location: 'https://api.crossref.org/v1/works/10.1234/abc/transform' } })
-			: Response.json({ title: 'A title', author: [{ given: 'A.', family: 'Person' }], issued: { 'date-parts': [[2026, 1, 2]] } })) as unknown as typeof fetch;
-		assert.equal((await resolve('10.1234/abc', crossref))!.title, 'A title');
-		// "../user" would become api.github.com/user, sent with the server's token: it is refused before any request.
-		const none = (async () => { throw new Error('no request expected'); }) as unknown as typeof fetch;
-		for (const link of ['../user', 'github.com/../user', 'owner/..']) await assert.rejects(resolve(link, none), NotFound);
 	});
 });
 

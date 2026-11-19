@@ -9,7 +9,7 @@ This repository is the code of a live service, https://delphi.science, which hol
 
 Do not open a public issue, a pull request or a forum post for a vulnerability.
 
-Say what you found, where (a URL, an API operation or a file and line), and how to reproduce it. You get an acknowledgement within 3 working days and a fix or a plan within 14 days. Reporters are credited in the fix unless they ask not to be.
+Say what you found, where (a URL, an API operation or a file and line), and how to reproduce it.
 
 ## Scope
 

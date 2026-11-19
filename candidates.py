@@ -126,6 +126,12 @@ def attached(entries: Iterable[dict[str, Any]]) -> set[tuple[str, str]]:
 COMMAND = re.compile(r"`python3 index\.py discuss (.+?)`")
 
 
+def plain(text: str) -> str:
+    """Text from a feed, a post or a paper as one line of a report, with no Markdown of its own: a title cannot close
+    its link, start a heading or carry a command in backticks (reported() reads those back)."""
+    return re.sub(r"([\\\[\]<>*_#|])", r"\\\1", " ".join(text.replace("`", "'").split()))
+
+
 def reported(folder: Path, start: dt.date, end: dt.date) -> set[tuple[str, str]]:
     """(record id, link identity) for each command in the earlier reports in the folder that overlap the window (named
     by date, from start until before end), so a daily run lists only what they did not."""
@@ -413,10 +419,10 @@ def report(candidates: list[Candidate], matcher: Matcher, linked: dict[str, dict
             lines += ["", "---", "", "The items below name no record. They name an AI lab and share words with these records' titles, so "
                       "check that they are about the record."]
         who = ", ".join(c["authors"][:4]) + (" et al." if len(c["authors"]) > 4 else "")
-        lines += ["", f"## [{c['title'] or S.trim(c['text'], 80)}]({c['url']})", f"{c['where']}, {c['date']}, {who}", ""]
+        lines += ["", f"## [{plain(c['title'] or S.trim(c['text'], 80))}]({c['url'].replace(')', '%29')})", f"{plain(c['where'])}, {c['date']}, {plain(who)}", ""]
         author = f" --author {shlex.quote(c['author'])}" if c["author"] else ""
         for _, how, e in m:
-            lines.append(f"- {how} `{I.rid(e)}`: {e.get('title')}")
+            lines.append(f"- {how} `{I.rid(e)}`: {plain(e.get('title') or '')}")
             lines.append(f"  `python3 index.py discuss {I.rid(e)} {shlex.quote(c['url'])}{author}`")
     return "\n".join(lines) + "\n"
 

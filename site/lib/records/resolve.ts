@@ -107,6 +107,7 @@ const SOURCES: Source[] = [
 		patterns: [/^(?:https?:\/\/)?github\.com\/([\w.-]+\/[\w.-]+?)(?:\.git)?(?:\/.*)?$/, /^(?!10\.\d)([\w.-]+\/[\w.-]+)$/],
 		key: (m) => m[1].replace('/', '__'),
 		async read(key, get) {
+			if (key.split('__').some((part) => /^\.+$/.test(part))) throw new NotFound(key); // "." and ".." would leave /repos/
 			const d = await (await get(`https://api.github.com/repos/${key.replace('__', '/')}`, 'application/vnd.github+json')).json();
 			if (d.private) throw new NotFound(key);
 			const files = await get(`https://api.github.com/repos/${d.full_name}/contents/`, 'application/vnd.github+json')

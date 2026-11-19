@@ -10,7 +10,7 @@ import { accept, activity, startTopic as actualStartTopic, topic, topics, topicW
 import { screen, type Moderator } from '#lib/moderation/moderate.ts';
 import { load } from './load.ts';
 import { get } from './query.ts';
-import { detect, itemOf, resolve } from './resolve.ts';
+import { detect, itemOf, NotFound, resolve } from './resolve.ts';
 import { resolve as target } from '#lib/api/paths.ts';
 import { submit as actualSubmit } from './submit.ts';
 import { createAgentKey, voterFromKey } from '#lib/accounts/keys.ts';
@@ -76,6 +76,9 @@ describe('reading a link', () => {
 		const repo = itemOf((await resolve('karpathy/nanoGPT', SOURCES))!);
 		assert.deepEqual([repo.id, repo.title, repo.repo, repo.agent_ready], ['github/karpathy__nanoGPT', 'nanoGPT', REPO.html_url, true]);
 		await assert.rejects(resolve('https://arxiv.org/abs/2999.99999', SOURCES), /2999/);
+		// "../user" would become api.github.com/user, sent with the server's token: it is refused before any request.
+		const none = (async () => { throw new Error('no request expected'); }) as unknown as typeof fetch;
+		for (const link of ['../user', 'github.com/../user', 'owner/..']) await assert.rejects(resolve(link, none), NotFound);
 	});
 });
 

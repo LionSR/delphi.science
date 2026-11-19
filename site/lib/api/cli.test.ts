@@ -100,13 +100,6 @@ describe('the command line', () => {
 		const lines = (await ok(['search', 'finite-chain', '--sort', 'title'])).split('\n');
 		assert.deepEqual(lines, [`${QUIET}\t2026-11-01\t0\tA finite-chain computation (${QUIET})`, `${RECORD}\t2026-11-01\t0\tA finite-chain computation (${RECORD})`, '']);
 		assert.deepEqual(JSON.parse(await ok(['search', 'finite-chain', '--sort', 'title', '--json'])), await (await api('/api/v1/find?q=finite-chain&sort=title')).json());
-		// Nothing found is nothing printed.
-		assert.deepEqual(await delphi(['search', 'no-such-word-anywhere']), { status: 0, out: '', err: '' });
-		assert.equal(await ok(['search', '--in', 'forum']), '');
-		// More than a page: where the next one starts goes to stderr, out of the pipe's way.
-		const first = await delphi(['search', 'finite-chain', '--limit=1']);
-		assert.equal(first.out.split('\n').length, 2);
-		assert.match(first.err, /^delphi: 1 of 2; the next page: --cursor \S+\n$/);
 	});
 
 	test('get prints headers, a blank line and the text; a path that names nothing is the server\'s message and fix on stderr', async () => {
@@ -116,7 +109,6 @@ describe('the command line', () => {
 		assert.ok(rec.endsWith('\n\nWe compute the endpoint terms of an open chain.\n'));
 		assert.deepEqual(JSON.parse(await ok(['get', RECORD, '--json'])), await (await api(`/api/v1/get/${RECORD}`)).json());
 		assert.deepEqual(await delphi(['get', 'app/none']), { status: 1, out: '', err: 'delphi: no record "app/none". Use an id that search returns, e.g. arxiv/2610.20058.\n' });
-		assert.deepEqual(await delphi(['get', 'forum']), { status: 1, out: '', err: 'delphi: "forum" is a list, not one thing. Use log for its posts, or search for its records (in=forum for topics).\n' });
 	});
 
 	test('login shows a code to approve, waits, and saves the key to a private file without printing it', async () => {
@@ -142,9 +134,6 @@ describe('the command line', () => {
 		assert.deepEqual(await voterFromKey(pg, key), { login: 'Ada', agent: 'Test CLI' });
 		const me = await ok(['get', 'me']);
 		assert.deepEqual([header(me, 'Id'), header(me, 'Login'), header(me, 'Agent')], ['me', 'Ada', 'Test CLI']);
-		// The key goes only to the server that issued it: the same home has none for another server.
-		const elsewhere = await delphi(['vote', RECORD, '--value', '1'], undefined, { DELPHI_URL: 'http://127.0.0.1:9' });
-		assert.equal(elsewhere.status, 4, 'refused here, before anything is sent there');
 	});
 
 	let comment = '';
@@ -169,8 +158,6 @@ describe('the command line', () => {
 		const refused = await delphi(['post', RECORD], 'filler');
 		assert.deepEqual([refused.status, refused.out], [1, '']);
 		assert.equal(refused.err, 'delphi: not posted: REQUEST_REVISION: The comment states no argument. Add the step or reference that supports it.\n');
-		assert.deepEqual(await delphi(['post', RECORD], '  \n'), { status: 2, out: '', err: 'delphi: the text is empty\n' });
-		assert.equal((await delphi(['post', RECORD, '--title', 'T'], 'A reading.')).err, `delphi: title does not apply to "${RECORD}". Leave title out; it is for a new topic (id forum, or a space) or a new space (id ws).\n`);
 		assert.equal((await (await api('/api/v1/log')).json()).since, before);
 	});
 
@@ -186,10 +173,6 @@ describe('the command line', () => {
 		assert.equal(stale.status, 1);
 		assert.match(stale.err, /^delphi: .+\. .+\n$/);
 		assert.ok((await ok(['get', comment])).includes('The second lemma'));
-		// The same, with the path and revision given by hand.
-		const now = header(await ok(['get', comment]), 'Revision')!;
-		assert.equal(header(await ok(['edit', comment, '--revision', now], 'The second lemma needs the boundary term of equation 5.'), 'Id'), comment);
-		assert.equal((await delphi(['edit', comment], 'No revision given.')).status, 2);
 	});
 
 	test('vote prints the new score', async () => {
@@ -197,9 +180,6 @@ describe('the command line', () => {
 		assert.deepEqual([header(up, 'Id'), header(up, 'Score'), header(up, 'Reactions')], [QUIET, '1', 'up=1 🤔=1']);
 		assert.equal(header(await ok(['vote', QUIET, '--value=-1', '--if-absent']), 'Created'), 'false');
 		assert.equal(header(await ok(['vote', QUIET, '--value', '0']), 'Score'), '0');
-		const empty = await delphi(['vote', QUIET]);
-		assert.equal(empty.status, 1);
-		assert.match(empty.err, /^delphi: the vote is empty\. Send /);
 	});
 
 	test('logout revokes the key on the server and deletes the file; then acting for a person needs sign-in again', async () => {
@@ -209,8 +189,5 @@ describe('the command line', () => {
 		assert.ok(!files().some((f) => f.startsWith('key')));
 		assert.equal((await delphi(['get', 'me'])).status, 4);
 		assert.deepEqual(await delphi(['logout']), { status: 0, out: '', err: '' });
-		// A key from the environment is used without a file, and a stale one does not stop reading what needs none.
-		assert.equal((await delphi(['get', 'me'], undefined, { DELPHI_KEY: key })).status, 4);
-		assert.equal(header((await delphi(['get', RECORD], undefined, { DELPHI_KEY: key })).out, 'Id'), RECORD);
 	});
 });

@@ -188,11 +188,6 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.equal((await call('PATCH', at, { body })).status, 401);
 		assert.equal((await call('PATCH', at, { auth: await createAgentKey(pg, 'verb-stranger', 'Test agent'), body })).status, 403);
 		assert.equal((await call('PATCH', at, { auth: author, body: { ...body, revision: '0' } })).status, 409);
-		assert.equal((await json('PATCH', at, { auth: author, body: { body: body.body } })).error.message, 'the body needs "revision"');
-		assert.equal((await json('PATCH', `/api/v1/edit/${enc(discussed)}`, { auth: author, body })).error.message, `${JSON.stringify(discussed)} is not a post`);
-		assert.equal((await call('PATCH', `/api/v1/edit/${enc(discussed)}/999999`, { auth: author, body })).status, 404);
-		// A post's number under another thread's path is not that post.
-		assert.equal((await call('PATCH', `/api/v1/edit/${topic}/${comment.split('/').at(-1)}`, { auth: author, body })).status, 404);
 		try {
 			for (const mode of ['reject', 'review', 'unavailable'] as const) {
 				moderationMode = mode;

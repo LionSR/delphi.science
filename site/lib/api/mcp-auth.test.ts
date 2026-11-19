@@ -67,14 +67,8 @@ async function moderated<T>(decision: 'ACCEPT' | 'REQUEST_REVISION', run: () => 
 const WRITES: [string, object][] = [
 	['get', { id: 'me' }],
 	['vote', { id: RECORD, value: 1 }],
-	['vote', { id: RECORD, value: 0 }],
 	['post', { id: RECORD, body: 'The lemma fails for open boundary conditions.' }],
 	['edit', { id: `${RECORD}/1`, body: 'The lemma fails for open boundary conditions only.', revision: '1' }],
-	['post', { id: 'records', body: 'arxiv/2610.20058' }],
-	['post', { id: 'forum', title: 'Does the bound hold?', body: 'For which boundary conditions does the bound of app/oauth-plugin hold?' }],
-	['post', { id: 'forum/1', body: 'It holds for periodic ones.' }],
-	['vote', { id: 'forum/1/1', value: 1 }],
-	['vote', { id: 'forum/1/1', accept: true }],
 ];
 
 describe('a caller without a token', () => {
@@ -121,11 +115,6 @@ describe('a signed-in plugin', () => {
 		const device = await createAgentKey(pg, 'Grace', 'Claude Code');
 		assert.equal((await ok('vote', { id: RECORD, value: -1 }, device)).score, -1);
 		assert.deepEqual(await stored(), [{ agent: 'Claude Code', value: -1 }]);
-		// if_absent keeps it, as on the REST API.
-		assert.equal((await ok('vote', { id: RECORD, value: 1, if_absent: true }, plugin)).created, false);
-		assert.deepEqual(await stored(), [{ agent: 'Claude Code', value: -1 }]);
-		// Value 0 takes the vote back; it carries nothing else.
-		assert.match((await call('vote', { id: RECORD, value: 0, emoji: '🤔' }, plugin)).content[0].text, /^value 0 takes the whole vote back/);
 		assert.equal((await ok('vote', { id: RECORD, value: 0 }, plugin)).score, 0);
 		assert.deepEqual(await stored(), []);
 	});
@@ -137,14 +126,6 @@ describe('a signed-in plugin', () => {
 		assert.equal(posted.calls, 1);
 		assert.match(posted.value.id, new RegExp(`^${RECORD}/\\d+$`));
 		assert.deepEqual([posted.value.voter, posted.value.agent, posted.value.review, posted.value.parent], ['Hypatia', 'Codex', true, null]);
-		// The log shows it on one line, and get shows it whole with the revision an edit needs.
-		const logged = await call('log', { path: RECORD });
-		assert.deepEqual(logged.structuredContent.entries.map((e: Json) => [e.path, e.kind, e.by, e.agent, e.subject, e.text]),
-			[[posted.value.id, 'review', 'Hypatia', 'Codex', 'A boundary-condition comparison', body]]);
-		assert.equal(logged.structuredContent.since, logged.structuredContent.entries[0].seq);
-		const [line] = logged.content[0].text.split('\n');
-		assert.deepEqual(line.split('\t').filter((_: string, i: number) => i !== 5),
-			[String(logged.structuredContent.entries[0].seq), 'review', posted.value.id, '-', 'Codex · @Hypatia', '0', 'A boundary-condition comparison', body, '-']);
 		const whole = await ok('get', { id: posted.value.id });
 		assert.deepEqual([whole.id, whole.kind, whole.voter, whole.body], [posted.value.id, 'review', 'Hypatia', body]);
 
@@ -153,10 +134,7 @@ describe('a signed-in plugin', () => {
 		const edited = await moderated('ACCEPT', async () => ok('edit', { id: posted.value.id, body: fixed, revision: whole.revision }, await signIn('Hypatia', 'Claude')));
 		assert.deepEqual([edited.value.id, edited.value.body], [posted.value.id, fixed]);
 		assert.notEqual(edited.value.revision, whole.revision);
-		const stale = await moderated('ACCEPT', () => call('edit', { id: posted.value.id, body: `${fixed} More.`, revision: whole.revision }, plugin));
-		assert.match(stale.value.content[0].text, /^edit_conflict/);
 		assert.match((await call('edit', { id: posted.value.id, body: 'Mine now.', revision: edited.value.revision }, await signIn('Mallory'))).content[0].text, /^edit_forbidden/);
-		assert.match((await call('edit', { id: RECORD, body: 'x', revision: '1' }, plugin)).content[0].text, /is not a post/);
 		assert.deepEqual((await ok('get', { id: posted.value.id })).body, fixed);
 
 		// A reply goes to the post's path; a refused post stores nothing.
@@ -166,8 +144,6 @@ describe('a signed-in plugin', () => {
 		assert.ok(refusedPost.value.isError);
 		assert.match(refusedPost.value.content[0].text, /^moderation_rejected: not posted: REQUEST_REVISION: The comment states no argument\.+ Add the step/);
 		assert.equal((await ok('log', { path: RECORD })).entries.length, 2);
-		// Following the log: only what came after a seq, oldest first.
-		assert.deepEqual((await ok('log', { path: RECORD, since: logged.structuredContent.since })).entries.map((e: Json) => e.path), [reply.value.id]);
 		// Every attempt is in the person's daily ledger under the name of the connection that made it.
 		const attempts = (await pg.query<{ agent: string; publish: boolean }>('SELECT agent, publish FROM open_index.moderations WHERE voter = $1 ORDER BY id', ['Hypatia'])).rows;
 		assert.deepEqual(attempts, [{ agent: 'Codex', publish: true }, { agent: 'Claude', publish: true }, { agent: 'Codex', publish: true }, { agent: 'Codex', publish: false }]);

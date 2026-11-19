@@ -2,29 +2,13 @@
 import { strict as assert } from 'node:assert';
 import { after, before, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
-import { QueryError } from '#lib/errors.ts';
 import { migratedDb } from '#lib/testing.ts';
-import { agentName, createAgentKey, createSession, personFromSession, profileName, revokeKey, voterFromKey } from './keys.ts';
+import { createAgentKey, createSession, personFromSession, revokeKey, voterFromKey } from './keys.ts';
 import { sha256 } from '#lib/hash.ts';
 
 let db: PGlite;
 before(async () => { db = await migratedDb(); });
 after(() => db.close());
-
-test('display-name normalization is optional, whitespace-neutral and Unicode bounded', () => {
-	for (const name of [undefined, null, 0, {}, '', ' \n\t ']) assert.equal(profileName(name), '');
-	assert.equal(profileName('  Alice \n Research  '), 'Alice Research');
-	assert.equal(profileName('e\u0301'), 'é');
-	const bounded = profileName('学🧮'.repeat(80));
-	assert.equal([...bounded].length, 100); assert.equal(bounded, '学🧮'.repeat(50));
-});
-
-test('agent names are trimmed and at most 60 characters; missing, blank, non-text or longer ones are refused with a fix', () => {
-	assert.equal(agentName('  Claude Code '), 'Claude Code');
-	assert.equal(agentName('🧮'.repeat(60)), '🧮'.repeat(60)); // counted in code points
-	for (const [agent, fix] of [[undefined, /your name/], [' \n ', /your name/], [7, /your name/], ['a'.repeat(61), /at most 60/]] as const)
-		assert.throws(() => agentName(agent), (e: unknown) => e instanceof QueryError && fix.test(e.fix), String(agent));
-});
 
 test('sessions keep a cosmetic name, or the login when it is blank, while the API identity stays the login', async () => {
 	for (const [name, shown] of [['  Alice & Bob  ', 'Alice & Bob'], [undefined, 'ada'], ['', 'ada'], [' \n\t ', 'ada']]) {

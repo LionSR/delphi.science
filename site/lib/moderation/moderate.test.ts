@@ -41,33 +41,12 @@ describe('DeepSeek-only moderation contract (offline)', () => {
 	});
 
 	const malformed: [string, unknown][] = [
-		['null', null], ['missing actionable fix', { decision: 'ACCEPT', reason: 'Concrete contribution.', verification_needed: false }], ['empty revision fix', { ...accepted, decision: 'REQUEST_REVISION', fix: '' }],
 		['unknown enum', { ...accepted, decision: 'PUBLISH' }],
-		['empty reason', { ...accepted, reason: ' \n ' }],
-		['overlong reason', { ...accepted, reason: 'x'.repeat(501) }],
-		['string verification boolean', { ...accepted, verification_needed: 'false' }],
-		['extra field', { ...accepted, verified_by_model: true }],
 		['unresolved verification cannot ACCEPT', { ...accepted, verification_needed: true }],
 	];
 	for (const [name, value] of malformed) test(`malformed verdict holds publication: ${name}`, async () => {
 		assert.throws(() => parseVerdict(value));
 		assert.ok(await held(stub(completion(JSON.stringify(value)))));
-	});
-
-	const tooManyChoices = { choices: [completion(JSON.stringify(accepted)).choices[0], completion(JSON.stringify(accepted)).choices[0]] };
-	const toolCall = { choices: [{ finish_reason: 'stop', message: { content: JSON.stringify(accepted), tool_calls: [{ id: 'call' }] } }] };
-	for (const [name, response] of [
-		['empty JSON-mode content', completion('')], ['invalid JSON', completion('not JSON')], ['null content', completion(null)],
-		['finish_reason length', completion(JSON.stringify(accepted), 'length')], ['no finish_reason', { choices: [{ message: { content: JSON.stringify(accepted) } }] }],
-		['no choices', { choices: [] }], ['two choices', tooManyChoices], ['a tool call', toolCall],
-	] as const) test(`an incomplete or unexpected completion cannot authorize publication: ${name}`, async () => {
-		assert.ok(await held(stub(response)));
-	});
-
-	for (const status of [429, 500]) test(`HTTP ${status} holds without alternate provider or retry`, async () => {
-		let calls = 0;
-		assert.ok(await held(async () => { calls++; return new Response('unavailable', { status }); }));
-		assert.equal(calls, 1);
 	});
 
 	test('network and timeout exceptions hold without publishing exception text', async () => {

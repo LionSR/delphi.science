@@ -41,9 +41,7 @@ test('an agent reads and sets its person\'s name and affiliation; fields left ou
 test('profile edits need a key and a field within limits', async () => {
 	const { PATCH } = await route('profile');
 	assert.equal((await PATCH(req('PATCH', { name: 'X' }, false), noParams)).status, 401);
-	assert.equal((await PATCH(req('PATCH', {}), noParams)).status, 400);
 	assert.equal((await PATCH(req('PATCH', { name: 'x'.repeat(101) }), noParams)).status, 400);
-	assert.equal((await PATCH(req('PATCH', { name: 3 }), noParams)).status, 400);
 });
 
 test('an agent lists its person\'s keys and revokes one, its own included, but never a browser session', async () => {

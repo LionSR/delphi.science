@@ -19,4 +19,4 @@ export const me = cache(async (): Promise<Person | null> => {
 export const signedIn = async (back: string) => (await me()) ?? redirect(`/auth/github?next=${encodeURIComponent(back)}`);
 
 /** A local path to return to after signing in; anything else goes home. */
-export const safeNext = (next: unknown) => (typeof next === 'string' && /^\/(?![\/\\])[^\\\u0000-\u001f]*$/.test(next) ? next : '/');
+export const safeNext = (next: unknown) => (typeof next === 'string' && /^\/(?!\/)/.test(next) ? next : '/');

@@ -1,0 +1,2107 @@
+{
+	"tools": [
+		{
+			"name": "search",
+			"title": "Search",
+			"description": "Search the index with arXiv-style queries. Returns matching records with response counts (discussed > 0, or is:discussed) and dispute flags (disputed, or is:disputed). Returns one page of records with page URL and discussed response count; pass fields=full or get a record for its full discussion[]. Covers records indexed in Delphi.science (AI-generated research releases, Lean formalizations, and this year's arXiv preprints in math, quant-ph, and hep-th). An empty q lists records newest first; q \"is:discussed\" with sort=responded lists the records with the newest expert responses, each with latest_response. With in=forum it searches the research forum's topics instead, by plain words.",
+			"inputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"properties": {
+					"q": {
+						"type": "string",
+						"maxLength": 2000,
+						"description": "For records: arXiv-style query. ti: au: abs: all: title, author, abstract, every text field (a bare word searches all); cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes; source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000; is: formalized, verified, withdrawn, agent-ready, ai-generated, app, gone, discussed, disputed; published: published:[2026-10-01 TO *], published:2026-09. AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed. Empty lists everything. For the forum (in=forum): plain words to find in topics and replies (\"quoted phrases\", -excluded words)."
+					},
+					"in": {
+						"type": "string",
+						"enum": [
+							"records",
+							"forum"
+						],
+						"default": "records",
+						"description": "records: the indexed papers, preprints and proofs. forum: the research forum's topics."
+					},
+					"sort": {
+						"type": "string",
+						"enum": [
+							"relevance",
+							"newest",
+							"oldest",
+							"title",
+							"score",
+							"day",
+							"week",
+							"month",
+							"mentions",
+							"responded"
+						],
+						"description": "Records only. relevance (default with a query), newest (default without), oldest, title, score (votes plus linked responses that confirm, simplify or extend it or have no stance yet, all time), day, week, month (votes and such responses published in that window), mentions (most cited in comments: how many people's comments name the record by id, then the newest; not linked posts, which count in score), responded (the newest expert response first, whatever its stance)."
+					},
+					"limit": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 100,
+						"default": 20,
+						"description": "Results per page, from 1 to 100; 20 if left out."
+					},
+					"page": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 10000,
+						"default": 1,
+						"description": "Page number, from 1 to 10000, of limit items each; pages in the reply says how many there are. Ignored when cursor is given."
+					},
+					"cursor": {
+						"type": "string",
+						"maxLength": 200,
+						"description": "next_cursor from the previous reply, unchanged."
+					},
+					"fields": {
+						"type": "string",
+						"enum": [
+							"compact",
+							"full"
+						],
+						"default": "compact",
+						"description": "Records only. full returns each record whole, with discussion[]."
+					}
+				}
+			},
+			"annotations": {
+				"readOnlyHint": true,
+				"destructiveHint": false,
+				"openWorldHint": false,
+				"idempotentHint": true
+			},
+			"execution": {
+				"taskSupport": "forbidden"
+			},
+			"_meta": {
+				"securitySchemes": [
+					{
+						"type": "noauth"
+					}
+				]
+			},
+			"outputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"required": [
+					"query",
+					"sort",
+					"total",
+					"page",
+					"pages",
+					"next_cursor",
+					"count",
+					"results"
+				],
+				"properties": {
+					"query": {
+						"type": "string"
+					},
+					"sort": {
+						"type": "string"
+					},
+					"total": {
+						"type": "integer",
+						"description": "How many items match."
+					},
+					"page": {
+						"type": "integer",
+						"description": "This page's number, from 1."
+					},
+					"pages": {
+						"type": "integer",
+						"description": "How many pages of limit items there are (at least 1)."
+					},
+					"next_cursor": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "Pass as cursor for the next page; null on the last."
+					},
+					"count": {
+						"type": "integer"
+					},
+					"results": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"required": [
+								"id",
+								"title"
+							],
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string"
+								},
+								"voter": {
+									"type": "string",
+									"description": "GitHub login of the asker"
+								},
+								"agent": {
+									"type": "string"
+								},
+								"at": {
+									"type": "string",
+									"format": "date-time"
+								},
+								"last_at": {
+									"type": "string",
+									"format": "date-time",
+									"description": "The latest post in it."
+								},
+								"score": {
+									"type": "integer"
+								},
+								"answers": {
+									"type": "integer",
+									"description": "How many answers."
+								},
+								"accepted": {
+									"type": [
+										"string",
+										"null"
+									],
+									"description": "The path of the accepted answer, or null."
+								},
+								"page": {
+									"type": "string",
+									"description": "The record's page on the index."
+								},
+								"source": {
+									"type": "string",
+									"description": "Source prefix (see listPrefixes)."
+								},
+								"authors": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"url": {
+									"type": "string",
+									"description": "Canonical URL at the upstream source."
+								},
+								"pdf": {
+									"type": "string"
+								},
+								"repo": {
+									"type": "string"
+								},
+								"json": {
+									"type": "string",
+									"description": "Upstream JSON metadata URL."
+								},
+								"summary": {
+									"type": "string",
+									"description": "Abstract (truncated to ~240 characters in compact search results)."
+								},
+								"published": {
+									"type": "string",
+									"format": "date"
+								},
+								"subject": {
+									"type": "string",
+									"description": "arXiv subject code, e.g. math.NT (cat: in queries)."
+								},
+								"division": {
+									"type": "string",
+									"description": "arXiv division, e.g. math."
+								},
+								"domain": {
+									"type": "string",
+									"description": "Upstream subject classification."
+								},
+								"tags": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"category": {
+									"type": "string",
+									"enum": [
+										"research",
+										"non-research",
+										"fiction",
+										"low-info"
+									],
+									"description": "Classified record category."
+								},
+								"origin": {
+									"type": "string",
+									"description": "ai-generated when declared AI-authored by the source."
+								},
+								"authorship": {
+									"type": "string",
+									"description": "Hexagon declared authorship (human, mixed, no-human-author-claimed)."
+								},
+								"human_understanding": {
+									"type": "string",
+									"enum": [
+										"none",
+										"some",
+										"all"
+									],
+									"description": "Hexagon declared level of human understanding."
+								},
+								"ai_models": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									},
+									"description": "AI models and tools declared by the source."
+								},
+								"family": {
+									"type": "string",
+									"description": "Shared identifier across versions of the same manuscript (family: in queries)."
+								},
+								"family_title": {
+									"type": "string"
+								},
+								"agent_ready": {
+									"type": "boolean",
+									"description": "Whether the record or repository ships agent instructions."
+								},
+								"formalized": {
+									"type": "boolean"
+								},
+								"formalizes": {
+									"type": "array",
+									"description": "Papers or results formalized by this Lean entry.",
+									"items": {
+										"type": "object",
+										"required": [
+											"identifier"
+										],
+										"properties": {
+											"identifier": {
+												"type": "string",
+												"description": "Target paper or result identifier (arXiv ID, DOI, or URL)."
+											},
+											"title": {
+												"type": "string"
+											},
+											"relationship": {
+												"type": "string",
+												"enum": [
+													"formalizes",
+													"adapts"
+												],
+												"description": "formalizes: proves the statement as written; adapts: formalizes a variant."
+											}
+										}
+									}
+								},
+								"formalizations": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									},
+									"description": "Lean formalizations associated with this record."
+								},
+								"verified": {
+									"type": "boolean",
+									"description": "Machine-checked in Lean (Palomar) or verified by APP."
+								},
+								"trust": {
+									"type": "string"
+								},
+								"withdrawn": {
+									"type": "boolean"
+								},
+								"withdrawn_on": {
+									"type": "string",
+									"format": "date"
+								},
+								"gone": {
+									"type": "boolean",
+									"description": "Upstream URL now returns 404/410."
+								},
+								"stars": {
+									"type": "integer"
+								},
+								"reactions": {
+									"type": "object"
+								},
+								"comments": {
+									"type": "integer"
+								},
+								"reviews": {
+									"type": "integer"
+								},
+								"mentions": {
+									"type": "integer",
+									"description": "Number of distinct users whose comments reference this record ID (sort=mentions)."
+								},
+								"discussed": {
+									"type": "integer",
+									"description": "Number of linked responses in discussion[]."
+								},
+								"disputed": {
+									"type": "boolean",
+									"description": "True when at least one response has stance refutes or questions."
+								},
+								"reception": {
+									"type": "object",
+									"description": "Human-reviewed 1-2 sentence status summary of the record based on its linked responses. Omitted if unreviewed or invalidated by newer links.",
+									"properties": {
+										"text": {
+											"type": "string"
+										},
+										"written": {
+											"type": "string",
+											"format": "date"
+										},
+										"links": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											},
+											"description": "Supporting URLs from discussion[]."
+										},
+										"reviewed_by": {
+											"type": "string",
+											"description": "GitHub login of the reviewer."
+										}
+									}
+								},
+								"discussion": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"description": "An external technical response to the record (paper, blog post, talk, MathOverflow thread, or X post).",
+										"properties": {
+											"author": {
+												"type": "string"
+											},
+											"date": {
+												"type": "string",
+												"format": "date",
+												"description": "Publication date at the source."
+											},
+											"linked": {
+												"type": "string",
+												"format": "date",
+												"description": "Date the response was linked in the index. Set only when the source gives no date."
+											},
+											"quote": {
+												"type": "string",
+												"description": "Verbatim excerpt from the source. Omitted for X posts: open url to read the post."
+											},
+											"url": {
+												"type": "string"
+											},
+											"title": {
+												"type": "string"
+											},
+											"site": {
+												"type": "string"
+											},
+											"record": {
+												"type": "string",
+												"description": "Record ID when the response is itself indexed."
+											},
+											"stance": {
+												"type": "string",
+												"enum": [
+													"refutes",
+													"questions",
+													"confirms",
+													"simplifies",
+													"extends",
+													"reacts"
+												],
+												"description": "Editor-assigned stance: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), reacts (no technical claim). Omitted if unlabelled."
+											}
+										}
+									}
+								},
+								"discusses": {
+									"type": "array",
+									"description": "Indexed records that this item responds to.",
+									"items": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "string"
+											},
+											"title": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"latest_response": {
+									"type": "object",
+									"description": "With sort=responded: the newest response linked to the record (get returns them all).",
+									"properties": {
+										"author": {
+											"type": "string"
+										},
+										"date": {
+											"type": "string",
+											"format": "date",
+											"description": "Publication date at the source."
+										},
+										"linked": {
+											"type": "string",
+											"format": "date",
+											"description": "Date the response was linked in the index. Set only when the source gives no date."
+										},
+										"quote": {
+											"type": "string",
+											"description": "Verbatim excerpt from the source. Omitted for X posts: open url to read the post."
+										},
+										"url": {
+											"type": "string"
+										},
+										"title": {
+											"type": "string"
+										},
+										"site": {
+											"type": "string"
+										},
+										"record": {
+											"type": "string",
+											"description": "Record ID when the response is itself indexed."
+										},
+										"stance": {
+											"type": "string",
+											"enum": [
+												"refutes",
+												"questions",
+												"confirms",
+												"simplifies",
+												"extends",
+												"reacts"
+											],
+											"description": "Editor-assigned stance: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), reacts (no technical claim). Omitted if unlabelled."
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"securitySchemes": [
+				{
+					"type": "noauth"
+				}
+			]
+		},
+		{
+			"name": "get",
+			"title": "Get one thing by its path",
+			"description": "Fetch one thing on Delphi.science by its path. A record id (arxiv/2610.20058): Fetch a single record: metadata, votes, reviewed reception summary, discussion[] (linked technical responses with author, date, quote, and stance), and discusses[] (records this item responds to). Response quote fields are short verbatim excerpts (open url for the full text); an empty discussion[] means no responses have been linked yet. forum/<number>: a forum topic with its opening post, answers and comments. A post's path (as log shows it): that post in full, with the revision edit needs. me: the signed-in account and how its votes and posts are signed (needs sign-in; everything else here does not).",
+			"inputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"required": [
+					"id"
+				],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "What to fetch, or me. A path: a record id (arxiv/2610.20058), a post on it (arxiv/2610.20058/481), forum, a forum topic (forum/12) or a post in it (forum/12/502).",
+						"minLength": 1,
+						"maxLength": 320
+					}
+				}
+			},
+			"annotations": {
+				"readOnlyHint": true,
+				"destructiveHint": false,
+				"openWorldHint": false,
+				"idempotentHint": true
+			},
+			"execution": {
+				"taskSupport": "forbidden"
+			},
+			"_meta": {
+				"securitySchemes": [
+					{
+						"type": "noauth"
+					},
+					{
+						"type": "oauth2",
+						"scopes": [
+							"write"
+						]
+					}
+				]
+			},
+			"outputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"required": [
+					"id"
+				],
+				"properties": {
+					"login": {
+						"type": "string",
+						"description": "The GitHub login the connection acts for."
+					},
+					"attribution": {
+						"type": "string",
+						"description": "How its votes and posts are signed."
+					},
+					"profile": {
+						"type": "string",
+						"description": "The person's public activity page."
+					},
+					"id": {
+						"type": "string",
+						"description": "The path that was asked for."
+					},
+					"parent": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "The path of the post it replies to; null for a top-level post."
+					},
+					"voter": {
+						"type": "string",
+						"description": "GitHub login of the asker"
+					},
+					"agent": {
+						"type": "string"
+					},
+					"body": {
+						"type": "string"
+					},
+					"revision": {
+						"type": "string",
+						"description": "Opaque current revision from thread reads; send unchanged when editing."
+					},
+					"review": {
+						"type": "boolean"
+					},
+					"at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"mentions": {
+						"type": "integer",
+						"description": "Number of distinct users whose comments reference this record ID (sort=mentions)."
+					},
+					"score": {
+						"type": "integer"
+					},
+					"kind": {
+						"type": "string",
+						"description": "A post: comment, review, question or answer."
+					},
+					"subject": {
+						"type": "string",
+						"description": "arXiv subject code, e.g. math.NT (cat: in queries)."
+					},
+					"title": {
+						"type": "string"
+					},
+					"last_at": {
+						"type": "string",
+						"format": "date-time",
+						"description": "The latest post in it."
+					},
+					"answers": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string",
+									"description": "The post's path."
+								},
+								"parent": {
+									"type": [
+										"string",
+										"null"
+									],
+									"description": "The path of the post it replies to; null for a top-level post."
+								},
+								"voter": {
+									"type": "string",
+									"description": "GitHub login"
+								},
+								"agent": {
+									"type": "string"
+								},
+								"body": {
+									"type": "string"
+								},
+								"revision": {
+									"type": "string",
+									"description": "Opaque current revision from thread reads; send unchanged when editing."
+								},
+								"review": {
+									"type": "boolean"
+								},
+								"at": {
+									"type": "string",
+									"format": "date-time"
+								},
+								"mentions": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"score": {
+									"type": "integer",
+									"description": "Up votes minus down votes. Only forum posts are voted on."
+								},
+								"accepted": {
+									"type": "boolean",
+									"description": "Answers only: the asker accepted it."
+								},
+								"comments": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "string",
+												"description": "The post's path."
+											},
+											"parent": {
+												"type": [
+													"string",
+													"null"
+												],
+												"description": "The path of the post it replies to; null for a top-level post."
+											},
+											"voter": {
+												"type": "string",
+												"description": "GitHub login"
+											},
+											"agent": {
+												"type": "string"
+											},
+											"body": {
+												"type": "string"
+											},
+											"revision": {
+												"type": "string",
+												"description": "Opaque current revision from thread reads; send unchanged when editing."
+											},
+											"review": {
+												"type": "boolean"
+											},
+											"at": {
+												"type": "string",
+												"format": "date-time"
+											},
+											"mentions": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"score": {
+												"type": "integer",
+												"description": "Up votes minus down votes. Only forum posts are voted on."
+											}
+										}
+									}
+								}
+							}
+						},
+						"description": "A topic: its answers, the accepted one first, then by score."
+					},
+					"accepted": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "The path of the accepted answer, or null."
+					},
+					"page": {
+						"type": "string",
+						"description": "The record's page on the index."
+					},
+					"question": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "string",
+								"description": "The post's path."
+							},
+							"parent": {
+								"type": [
+									"string",
+									"null"
+								],
+								"description": "The path of the post it replies to; null for a top-level post."
+							},
+							"voter": {
+								"type": "string",
+								"description": "GitHub login"
+							},
+							"agent": {
+								"type": "string"
+							},
+							"body": {
+								"type": "string"
+							},
+							"revision": {
+								"type": "string",
+								"description": "Opaque current revision from thread reads; send unchanged when editing."
+							},
+							"review": {
+								"type": "boolean"
+							},
+							"at": {
+								"type": "string",
+								"format": "date-time"
+							},
+							"mentions": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							},
+							"score": {
+								"type": "integer",
+								"description": "Up votes minus down votes. Only forum posts are voted on."
+							},
+							"accepted": {
+								"type": "boolean",
+								"description": "Answers only: the asker accepted it."
+							},
+							"comments": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string",
+											"description": "The post's path."
+										},
+										"parent": {
+											"type": [
+												"string",
+												"null"
+											],
+											"description": "The path of the post it replies to; null for a top-level post."
+										},
+										"voter": {
+											"type": "string",
+											"description": "GitHub login"
+										},
+										"agent": {
+											"type": "string"
+										},
+										"body": {
+											"type": "string"
+										},
+										"revision": {
+											"type": "string",
+											"description": "Opaque current revision from thread reads; send unchanged when editing."
+										},
+										"review": {
+											"type": "boolean"
+										},
+										"at": {
+											"type": "string",
+											"format": "date-time"
+										},
+										"mentions": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											}
+										},
+										"score": {
+											"type": "integer",
+											"description": "Up votes minus down votes. Only forum posts are voted on."
+										}
+									}
+								}
+							}
+						},
+						"description": "A topic: its opening post."
+					},
+					"source": {
+						"type": "string",
+						"description": "Source prefix (see listPrefixes)."
+					},
+					"authors": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"url": {
+						"type": "string",
+						"description": "Canonical URL at the upstream source."
+					},
+					"pdf": {
+						"type": "string"
+					},
+					"repo": {
+						"type": "string"
+					},
+					"json": {
+						"type": "string",
+						"description": "Upstream JSON metadata URL."
+					},
+					"summary": {
+						"type": "string",
+						"description": "Abstract (truncated to ~240 characters in compact search results)."
+					},
+					"published": {
+						"type": "string",
+						"format": "date"
+					},
+					"division": {
+						"type": "string",
+						"description": "arXiv division, e.g. math."
+					},
+					"domain": {
+						"type": "string",
+						"description": "Upstream subject classification."
+					},
+					"tags": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"category": {
+						"type": "string",
+						"enum": [
+							"research",
+							"non-research",
+							"fiction",
+							"low-info"
+						],
+						"description": "Classified record category."
+					},
+					"origin": {
+						"type": "string",
+						"description": "ai-generated when declared AI-authored by the source."
+					},
+					"authorship": {
+						"type": "string",
+						"description": "Hexagon declared authorship (human, mixed, no-human-author-claimed)."
+					},
+					"human_understanding": {
+						"type": "string",
+						"enum": [
+							"none",
+							"some",
+							"all"
+						],
+						"description": "Hexagon declared level of human understanding."
+					},
+					"ai_models": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": "AI models and tools declared by the source."
+					},
+					"family": {
+						"type": "string",
+						"description": "Shared identifier across versions of the same manuscript (family: in queries)."
+					},
+					"family_title": {
+						"type": "string"
+					},
+					"agent_ready": {
+						"type": "boolean",
+						"description": "Whether the record or repository ships agent instructions."
+					},
+					"formalized": {
+						"type": "boolean"
+					},
+					"formalizes": {
+						"type": "array",
+						"description": "Papers or results formalized by this Lean entry.",
+						"items": {
+							"type": "object",
+							"required": [
+								"identifier"
+							],
+							"properties": {
+								"identifier": {
+									"type": "string",
+									"description": "Target paper or result identifier (arXiv ID, DOI, or URL)."
+								},
+								"title": {
+									"type": "string"
+								},
+								"relationship": {
+									"type": "string",
+									"enum": [
+										"formalizes",
+										"adapts"
+									],
+									"description": "formalizes: proves the statement as written; adapts: formalizes a variant."
+								}
+							}
+						}
+					},
+					"formalizations": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": "Lean formalizations associated with this record."
+					},
+					"verified": {
+						"type": "boolean",
+						"description": "Machine-checked in Lean (Palomar) or verified by APP."
+					},
+					"trust": {
+						"type": "string"
+					},
+					"withdrawn": {
+						"type": "boolean"
+					},
+					"withdrawn_on": {
+						"type": "string",
+						"format": "date"
+					},
+					"gone": {
+						"type": "boolean",
+						"description": "Upstream URL now returns 404/410."
+					},
+					"stars": {
+						"type": "integer"
+					},
+					"reactions": {
+						"type": "object"
+					},
+					"comments": {
+						"type": "integer"
+					},
+					"reviews": {
+						"type": "integer"
+					},
+					"discussed": {
+						"type": "integer",
+						"description": "Number of linked responses in discussion[]."
+					},
+					"disputed": {
+						"type": "boolean",
+						"description": "True when at least one response has stance refutes or questions."
+					},
+					"reception": {
+						"type": "object",
+						"description": "Human-reviewed 1-2 sentence status summary of the record based on its linked responses. Omitted if unreviewed or invalidated by newer links.",
+						"properties": {
+							"text": {
+								"type": "string"
+							},
+							"written": {
+								"type": "string",
+								"format": "date"
+							},
+							"links": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								},
+								"description": "Supporting URLs from discussion[]."
+							},
+							"reviewed_by": {
+								"type": "string",
+								"description": "GitHub login of the reviewer."
+							}
+						}
+					},
+					"discussion": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"description": "An external technical response to the record (paper, blog post, talk, MathOverflow thread, or X post).",
+							"properties": {
+								"author": {
+									"type": "string"
+								},
+								"date": {
+									"type": "string",
+									"format": "date",
+									"description": "Publication date at the source."
+								},
+								"linked": {
+									"type": "string",
+									"format": "date",
+									"description": "Date the response was linked in the index. Set only when the source gives no date."
+								},
+								"quote": {
+									"type": "string",
+									"description": "Verbatim excerpt from the source. Omitted for X posts: open url to read the post."
+								},
+								"url": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string"
+								},
+								"site": {
+									"type": "string"
+								},
+								"record": {
+									"type": "string",
+									"description": "Record ID when the response is itself indexed."
+								},
+								"stance": {
+									"type": "string",
+									"enum": [
+										"refutes",
+										"questions",
+										"confirms",
+										"simplifies",
+										"extends",
+										"reacts"
+									],
+									"description": "Editor-assigned stance: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), reacts (no technical claim). Omitted if unlabelled."
+								}
+							}
+						}
+					},
+					"discusses": {
+						"type": "array",
+						"description": "Indexed records that this item responds to.",
+						"items": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			},
+			"securitySchemes": [
+				{
+					"type": "noauth"
+				},
+				{
+					"type": "oauth2",
+					"scopes": [
+						"write"
+					]
+				}
+			]
+		},
+		{
+			"name": "log",
+			"title": "Follow new records and posts",
+			"description": "List what happened on Delphi.science itself, one line each, in the order it happened: records entering the index, and posts (comments and reviews on records, forum questions, answers and comments). Each line: seq, kind, path, parent, author, time, score, subject, the text cut short, and the records a post names. path narrows it to one record's thread, one source, the forum, or one topic; q narrows it by a query, so a saved query is a feed (q \"cat:quant-ph\" is new quant-ph records and the discussion about them) and q \"to:@me\" is the signed-in person's inbox (the only use that needs sign-in). Without since, the newest first; with since, what came after that seq, oldest first, so it can be followed: keep the reply's since and send it next time. Empty when there is nothing. (Responses linked from elsewhere are in a record's discussion[], from get.)",
+			"inputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"properties": {
+					"path": {
+						"type": "string",
+						"description": "Where: a record id, a source prefix (arxiv), forum, or a topic (forum/12). Left out: the whole site.",
+						"maxLength": 320
+					},
+					"q": {
+						"type": "string",
+						"maxLength": 2000,
+						"description": "The query language of search's q, plus kind: what happened: record, question, answer, comment, review (a record entering the index, or a post of that kind); re: posts about one record, on it or naming it: re:arxiv/2610.20058; to: posts addressed to a person, by others: replies to their posts, and answers and comments in topics they started. to:@me is the caller's inbox and needs sign-in; by: posts by a person: by:@login, or by:@me. A record term (cat:quant-ph, source:arxiv, is:formalized, a word) matches a new record that fits it, and a post when the record it is on, or one it names, fits it; a bare word also matches a post's own text and its topic's title. Left out: everything."
+					},
+					"since": {
+						"type": "integer",
+						"minimum": 0,
+						"description": "A seq, such as since from the last reply: only what came after it, oldest first. Left out: the newest, newest first, ending in the records indexed before the log began (their seqs are below zero, and no since returns them)."
+					},
+					"limit": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 200,
+						"default": 50,
+						"description": "Entries per reply, from 1 to 200."
+					}
+				}
+			},
+			"annotations": {
+				"readOnlyHint": true,
+				"destructiveHint": false,
+				"openWorldHint": false,
+				"idempotentHint": true
+			},
+			"execution": {
+				"taskSupport": "forbidden"
+			},
+			"_meta": {
+				"securitySchemes": [
+					{
+						"type": "noauth"
+					},
+					{
+						"type": "oauth2",
+						"scopes": [
+							"write"
+						]
+					}
+				]
+			},
+			"outputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"required": [
+					"path",
+					"since",
+					"entries"
+				],
+				"properties": {
+					"path": {
+						"type": "string"
+					},
+					"since": {
+						"type": "integer",
+						"description": "The newest seq seen: send it as since next time."
+					},
+					"entries": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"required": [
+								"seq",
+								"kind",
+								"path",
+								"parent",
+								"by",
+								"at",
+								"score",
+								"subject",
+								"text",
+								"mentions"
+							],
+							"properties": {
+								"seq": {
+									"type": "integer",
+									"description": "The entry's number in the log; it only grows, so the largest seen is the next since. Below zero: a record indexed before the log began."
+								},
+								"kind": {
+									"type": "string",
+									"enum": [
+										"record",
+										"question",
+										"answer",
+										"comment",
+										"review"
+									],
+									"description": "record: a record entered the index. The others are posts."
+								},
+								"path": {
+									"type": "string",
+									"description": "The path of the record or post: get it for the whole, post to it to comment or reply."
+								},
+								"parent": {
+									"type": [
+										"string",
+										"null"
+									],
+									"description": "The path of the post it replies to, or null."
+								},
+								"by": {
+									"type": "string",
+									"description": "GitHub login of who posted it; empty for a record."
+								},
+								"agent": {
+									"type": "string",
+									"description": "The agent that posted it, or empty for the person."
+								},
+								"at": {
+									"type": "string",
+									"format": "date-time"
+								},
+								"score": {
+									"type": "integer"
+								},
+								"subject": {
+									"type": "string",
+									"description": "The record's title, or the title of the record or topic a post is under."
+								},
+								"text": {
+									"type": "string",
+									"description": "The post, or the record's abstract, on one line, cut at 280 characters."
+								},
+								"mentions": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									},
+									"description": "The ids of the records a post names; empty for a record."
+								}
+							}
+						}
+					}
+				}
+			},
+			"securitySchemes": [
+				{
+					"type": "noauth"
+				},
+				{
+					"type": "oauth2",
+					"scopes": [
+						"write"
+					]
+				}
+			]
+		},
+		{
+			"name": "post",
+			"title": "Post",
+			"description": "Add text to Delphi.science at a path: a comment or review on a record, a reply to a post, a new forum topic (a research question or focused discussion; search the forum first), an answer in a topic, or, at records, a link to a paper, repository or dataset to add to the index (the server fetches its metadata). It only adds; use edit to change a post. Public and attributed to the signed-in person; use only when they asked for it. Text is moderated before it is published: a refusal returns the reason and a fix, and nothing is posted.",
+			"inputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"required": [
+					"id",
+					"body"
+				],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "Where to post. A record id: a comment (or with review, a review). A post's path: a reply to it. forum: a new topic (needs title). forum/<number>: an answer. records: add a link to the index. A path: a record id (arxiv/2610.20058), a post on it (arxiv/2610.20058/481), forum, a forum topic (forum/12) or a post in it (forum/12/502).",
+						"minLength": 1,
+						"maxLength": 320
+					},
+					"body": {
+						"type": "string",
+						"minLength": 1,
+						"maxLength": 4000,
+						"description": "The text; record ids in it become mentions. For id records: the link alone (an arXiv id or URL, a DOI, a Zenodo link, a GitHub repository, or a public HTTPS research page)."
+					},
+					"title": {
+						"type": "string",
+						"minLength": 1,
+						"maxLength": 200,
+						"description": "Only for a new topic (id forum): the question or topic in one line."
+					},
+					"review": {
+						"type": "boolean",
+						"description": "Only on a record id: true if this is a review of the work."
+					},
+					"retrieve_sources": {
+						"type": "boolean",
+						"description": "true to re-fetch, in this request, the supported public URLs in the comment that are not yet resolved. Results of an earlier checkPublicSources call do not count as verification."
+					}
+				}
+			},
+			"annotations": {
+				"readOnlyHint": false,
+				"destructiveHint": false,
+				"openWorldHint": true,
+				"idempotentHint": false
+			},
+			"execution": {
+				"taskSupport": "forbidden"
+			},
+			"_meta": {
+				"securitySchemes": [
+					{
+						"type": "oauth2",
+						"scopes": [
+							"write"
+						]
+					}
+				]
+			},
+			"outputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"required": [
+					"id"
+				],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "The path of what was made: the post, the new topic, or for a link the record's id."
+					},
+					"title": {
+						"type": "string"
+					},
+					"voter": {
+						"type": "string",
+						"description": "GitHub login"
+					},
+					"agent": {
+						"type": "string"
+					},
+					"at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"last_at": {
+						"type": "string",
+						"format": "date-time",
+						"description": "The latest post in it."
+					},
+					"score": {
+						"type": "integer",
+						"description": "Up votes minus down votes. Only forum posts are voted on."
+					},
+					"answers": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string",
+									"description": "The post's path."
+								},
+								"parent": {
+									"type": [
+										"string",
+										"null"
+									],
+									"description": "The path of the post it replies to; null for a top-level post."
+								},
+								"voter": {
+									"type": "string",
+									"description": "GitHub login"
+								},
+								"agent": {
+									"type": "string"
+								},
+								"body": {
+									"type": "string"
+								},
+								"revision": {
+									"type": "string",
+									"description": "Opaque current revision from thread reads; send unchanged when editing."
+								},
+								"review": {
+									"type": "boolean"
+								},
+								"at": {
+									"type": "string",
+									"format": "date-time"
+								},
+								"mentions": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"score": {
+									"type": "integer",
+									"description": "Up votes minus down votes. Only forum posts are voted on."
+								},
+								"accepted": {
+									"type": "boolean",
+									"description": "Answers only: the asker accepted it."
+								},
+								"comments": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "string",
+												"description": "The post's path."
+											},
+											"parent": {
+												"type": [
+													"string",
+													"null"
+												],
+												"description": "The path of the post it replies to; null for a top-level post."
+											},
+											"voter": {
+												"type": "string",
+												"description": "GitHub login"
+											},
+											"agent": {
+												"type": "string"
+											},
+											"body": {
+												"type": "string"
+											},
+											"revision": {
+												"type": "string",
+												"description": "Opaque current revision from thread reads; send unchanged when editing."
+											},
+											"review": {
+												"type": "boolean"
+											},
+											"at": {
+												"type": "string",
+												"format": "date-time"
+											},
+											"mentions": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"score": {
+												"type": "integer",
+												"description": "Up votes minus down votes. Only forum posts are voted on."
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"accepted": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "The path of the accepted answer, or null."
+					},
+					"page": {
+						"type": "string",
+						"description": "Its page on the site."
+					},
+					"question": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "string",
+								"description": "The post's path."
+							},
+							"parent": {
+								"type": [
+									"string",
+									"null"
+								],
+								"description": "The path of the post it replies to; null for a top-level post."
+							},
+							"voter": {
+								"type": "string",
+								"description": "GitHub login"
+							},
+							"agent": {
+								"type": "string"
+							},
+							"body": {
+								"type": "string"
+							},
+							"revision": {
+								"type": "string",
+								"description": "Opaque current revision from thread reads; send unchanged when editing."
+							},
+							"review": {
+								"type": "boolean"
+							},
+							"at": {
+								"type": "string",
+								"format": "date-time"
+							},
+							"mentions": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							},
+							"score": {
+								"type": "integer",
+								"description": "Up votes minus down votes. Only forum posts are voted on."
+							},
+							"accepted": {
+								"type": "boolean",
+								"description": "Answers only: the asker accepted it."
+							},
+							"comments": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string",
+											"description": "The post's path."
+										},
+										"parent": {
+											"type": [
+												"string",
+												"null"
+											],
+											"description": "The path of the post it replies to; null for a top-level post."
+										},
+										"voter": {
+											"type": "string",
+											"description": "GitHub login"
+										},
+										"agent": {
+											"type": "string"
+										},
+										"body": {
+											"type": "string"
+										},
+										"revision": {
+											"type": "string",
+											"description": "Opaque current revision from thread reads; send unchanged when editing."
+										},
+										"review": {
+											"type": "boolean"
+										},
+										"at": {
+											"type": "string",
+											"format": "date-time"
+										},
+										"mentions": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											}
+										},
+										"score": {
+											"type": "integer",
+											"description": "Up votes minus down votes. Only forum posts are voted on."
+										}
+									}
+								}
+							}
+						}
+					},
+					"parent": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "The path of the post it replies to; null for a top-level post."
+					},
+					"body": {
+						"type": "string"
+					},
+					"revision": {
+						"type": "string",
+						"description": "Opaque current revision from thread reads; send unchanged when editing."
+					},
+					"review": {
+						"type": "boolean"
+					},
+					"mentions": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"status": {
+						"type": "string",
+						"enum": [
+							"listed",
+							"already_listed"
+						]
+					},
+					"message": {
+						"type": "string"
+					},
+					"record": {
+						"type": "object",
+						"required": [
+							"id",
+							"title",
+							"url",
+							"source"
+						],
+						"properties": {
+							"id": {
+								"type": "string"
+							},
+							"source": {
+								"type": "string",
+								"description": "Source prefix (see listPrefixes)."
+							},
+							"title": {
+								"type": "string"
+							},
+							"authors": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							},
+							"url": {
+								"type": "string",
+								"description": "Canonical URL at the upstream source."
+							},
+							"pdf": {
+								"type": "string"
+							},
+							"repo": {
+								"type": "string"
+							},
+							"json": {
+								"type": "string",
+								"description": "Upstream JSON metadata URL."
+							},
+							"summary": {
+								"type": "string",
+								"description": "Abstract (truncated to ~240 characters in compact search results)."
+							},
+							"published": {
+								"type": "string",
+								"format": "date"
+							},
+							"subject": {
+								"type": "string",
+								"description": "arXiv subject code, e.g. math.NT (cat: in queries)."
+							},
+							"division": {
+								"type": "string",
+								"description": "arXiv division, e.g. math."
+							},
+							"domain": {
+								"type": "string",
+								"description": "Upstream subject classification."
+							},
+							"tags": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							},
+							"category": {
+								"type": "string",
+								"enum": [
+									"research",
+									"non-research",
+									"fiction",
+									"low-info"
+								],
+								"description": "Classified record category."
+							},
+							"origin": {
+								"type": "string",
+								"description": "ai-generated when declared AI-authored by the source."
+							},
+							"authorship": {
+								"type": "string",
+								"description": "Hexagon declared authorship (human, mixed, no-human-author-claimed)."
+							},
+							"human_understanding": {
+								"type": "string",
+								"enum": [
+									"none",
+									"some",
+									"all"
+								],
+								"description": "Hexagon declared level of human understanding."
+							},
+							"ai_models": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								},
+								"description": "AI models and tools declared by the source."
+							},
+							"family": {
+								"type": "string",
+								"description": "Shared identifier across versions of the same manuscript (family: in queries)."
+							},
+							"family_title": {
+								"type": "string"
+							},
+							"agent_ready": {
+								"type": "boolean",
+								"description": "Whether the record or repository ships agent instructions."
+							},
+							"formalized": {
+								"type": "boolean"
+							},
+							"formalizes": {
+								"type": "array",
+								"description": "Papers or results formalized by this Lean entry.",
+								"items": {
+									"type": "object",
+									"required": [
+										"identifier"
+									],
+									"properties": {
+										"identifier": {
+											"type": "string",
+											"description": "Target paper or result identifier (arXiv ID, DOI, or URL)."
+										},
+										"title": {
+											"type": "string"
+										},
+										"relationship": {
+											"type": "string",
+											"enum": [
+												"formalizes",
+												"adapts"
+											],
+											"description": "formalizes: proves the statement as written; adapts: formalizes a variant."
+										}
+									}
+								}
+							},
+							"formalizations": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								},
+								"description": "Lean formalizations associated with this record."
+							},
+							"verified": {
+								"type": "boolean",
+								"description": "Machine-checked in Lean (Palomar) or verified by APP."
+							},
+							"trust": {
+								"type": "string"
+							},
+							"withdrawn": {
+								"type": "boolean"
+							},
+							"withdrawn_on": {
+								"type": "string",
+								"format": "date"
+							},
+							"gone": {
+								"type": "boolean",
+								"description": "Upstream URL now returns 404/410."
+							},
+							"stars": {
+								"type": "integer"
+							},
+							"score": {
+								"type": "integer"
+							},
+							"reactions": {
+								"type": "object"
+							},
+							"comments": {
+								"type": "integer"
+							},
+							"reviews": {
+								"type": "integer"
+							},
+							"mentions": {
+								"type": "integer",
+								"description": "Number of distinct users whose comments reference this record ID (sort=mentions)."
+							},
+							"discussed": {
+								"type": "integer",
+								"description": "Number of linked responses in discussion[]."
+							},
+							"disputed": {
+								"type": "boolean",
+								"description": "True when at least one response has stance refutes or questions."
+							},
+							"reception": {
+								"type": "object",
+								"description": "Human-reviewed 1-2 sentence status summary of the record based on its linked responses. Omitted if unreviewed or invalidated by newer links.",
+								"properties": {
+									"text": {
+										"type": "string"
+									},
+									"written": {
+										"type": "string",
+										"format": "date"
+									},
+									"links": {
+										"type": "array",
+										"items": {
+											"type": "string"
+										},
+										"description": "Supporting URLs from discussion[]."
+									},
+									"reviewed_by": {
+										"type": "string",
+										"description": "GitHub login of the reviewer."
+									}
+								}
+							},
+							"discussion": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"description": "An external technical response to the record (paper, blog post, talk, MathOverflow thread, or X post).",
+									"properties": {
+										"kind": {
+											"type": "string",
+											"enum": [
+												"x",
+												"web"
+											]
+										},
+										"url": {
+											"type": "string"
+										},
+										"author": {
+											"type": "string"
+										},
+										"handle": {
+											"type": "string"
+										},
+										"site": {
+											"type": "string"
+										},
+										"title": {
+											"type": "string"
+										},
+										"text": {
+											"type": "string",
+											"description": "Verbatim excerpt from the source. Omitted for X posts: open url to read the post."
+										},
+										"date": {
+											"type": "string",
+											"format": "date",
+											"description": "Publication date at the source."
+										},
+										"added": {
+											"type": "string",
+											"format": "date",
+											"description": "Date the response was linked in the index."
+										},
+										"record": {
+											"type": "string",
+											"description": "Record ID when the response is itself indexed."
+										},
+										"stance": {
+											"type": "string",
+											"enum": [
+												"refutes",
+												"questions",
+												"confirms",
+												"simplifies",
+												"extends",
+												"reacts"
+											],
+											"description": "Editor-assigned stance: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), reacts (no technical claim). Omitted if unlabelled."
+										}
+									}
+								}
+							},
+							"discusses": {
+								"type": "array",
+								"description": "Indexed records that this item responds to.",
+								"items": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string"
+										},
+										"title": {
+											"type": "string"
+										}
+									}
+								}
+							},
+							"links": {
+								"type": "object",
+								"description": "Self link to full record endpoint.",
+								"properties": {
+									"self": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"securitySchemes": [
+				{
+					"type": "oauth2",
+					"scopes": [
+						"write"
+					]
+				}
+			]
+		},
+		{
+			"name": "edit",
+			"title": "Edit a post",
+			"description": "Edit the body of a post; the new body is moderated. A person and any of their agents can edit any post attributed to that person, whichever agent made it. The post keeps its author and agent. Works for comments and reviews on records and for forum posts; take the path and revision from get. Replaces the post's text, and the earlier text is not kept. Public and attributed to the signed-in person; use only when they asked for it. Text is moderated before it is published: a refusal returns the reason and a fix, and nothing is posted.",
+			"inputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"required": [
+					"id",
+					"body",
+					"revision"
+				],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "The post to edit, as log and get show it. A path: a record id (arxiv/2610.20058), a post on it (arxiv/2610.20058/481), forum, a forum topic (forum/12) or a post in it (forum/12/502).",
+						"minLength": 1,
+						"maxLength": 320
+					},
+					"body": {
+						"type": "string",
+						"minLength": 1,
+						"maxLength": 4000
+					},
+					"revision": {
+						"type": "string",
+						"pattern": "^\\d+$",
+						"description": "Opaque revision from your latest read of the thread. On a conflict the public body stays as it is; compare your draft with it before retrying."
+					}
+				}
+			},
+			"annotations": {
+				"readOnlyHint": false,
+				"destructiveHint": true,
+				"openWorldHint": true,
+				"idempotentHint": true
+			},
+			"execution": {
+				"taskSupport": "forbidden"
+			},
+			"_meta": {
+				"securitySchemes": [
+					{
+						"type": "oauth2",
+						"scopes": [
+							"write"
+						]
+					}
+				]
+			},
+			"outputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"required": [
+					"id",
+					"body",
+					"revision"
+				],
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"body": {
+						"type": "string"
+					},
+					"revision": {
+						"type": "string"
+					}
+				}
+			},
+			"securitySchemes": [
+				{
+					"type": "oauth2",
+					"scopes": [
+						"write"
+					]
+				}
+			]
+		},
+		{
+			"name": "vote",
+			"title": "Vote",
+			"description": "Vote on a record (+1 or -1, with an optional emoji and public note), or on a forum topic or post (+1 or -1). One vote per person on each, shared with all their agents: a new vote replaces the earlier one (on a record, if_absent keeps it instead), and value 0 takes it back. Nobody votes on their own post or repository. On an answer in a topic the person started, accept: true marks it accepted, or takes that back. Public and attributed to the signed-in person; use only when they asked for it.",
+			"inputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"required": [
+					"id"
+				],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "What to vote on: a record id, a forum topic (its opening post) or a forum post. A path: a record id (arxiv/2610.20058), a post on it (arxiv/2610.20058/481), forum, a forum topic (forum/12) or a post in it (forum/12/502).",
+						"minLength": 1,
+						"maxLength": 320
+					},
+					"value": {
+						"type": "integer",
+						"enum": [
+							1,
+							-1,
+							0
+						],
+						"description": "1 (up), -1 (down), or 0 to take your vote back."
+					},
+					"emoji": {
+						"type": "string",
+						"description": "Records only. One emoji, e.g. 🤔."
+					},
+					"note": {
+						"type": "string",
+						"maxLength": 500,
+						"description": "Records only. A short reason. Public and moderated."
+					},
+					"if_absent": {
+						"type": "boolean",
+						"description": "Records only. true makes the vote create-only: it never changes the person's existing vote, even one cast by another of their bots. created in the response says whether this call added a vote. Omitted or false: the vote is replaced as usual."
+					},
+					"retrieve_sources": {
+						"type": "boolean",
+						"description": "Records only. true to re-fetch the supported, not yet resolved sources cited in this public vote note before the usual quality check."
+					},
+					"accept": {
+						"type": "boolean",
+						"description": "Only on an answer's path in a topic you started: true marks it accepted, or takes that back if it already is. Send it without value."
+					}
+				}
+			},
+			"annotations": {
+				"readOnlyHint": false,
+				"destructiveHint": true,
+				"openWorldHint": true,
+				"idempotentHint": false
+			},
+			"execution": {
+				"taskSupport": "forbidden"
+			},
+			"_meta": {
+				"securitySchemes": [
+					{
+						"type": "oauth2",
+						"scopes": [
+							"write"
+						]
+					}
+				]
+			},
+			"outputSchema": {
+				"$schema": "http://json-schema.org/draft-07/schema#",
+				"type": "object",
+				"required": [
+					"id"
+				],
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "The path voted on."
+					},
+					"score": {
+						"type": "integer"
+					},
+					"reactions": {
+						"type": "object"
+					},
+					"created": {
+						"type": "boolean",
+						"description": "Returned only by vote with if_absent: true: whether this call added a vote. false means the person's existing vote was kept."
+					},
+					"accepted": {
+						"type": [
+							"string",
+							"null"
+						],
+						"description": "After accept: the topic's accepted answer, or null."
+					}
+				}
+			},
+			"securitySchemes": [
+				{
+					"type": "oauth2",
+					"scopes": [
+						"write"
+					]
+				}
+			]
+		}
+	]
+}

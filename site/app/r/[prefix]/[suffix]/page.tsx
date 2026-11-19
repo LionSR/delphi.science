@@ -4,6 +4,8 @@ import Script from 'next/script';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { cache, Fragment } from 'react';
 import { comments } from '#lib/posts/comments.ts';
+import { newInThread } from '#lib/accounts/queries.ts';
+import { NewInThread, NewMark, seqParam } from '#lib/feed-view.ts';
 import { PublicAuthor } from '#lib/accounts/public-author.ts';
 import { Markdown } from '#lib/posts/markdown.ts';
 import { PostForm } from '#app/post-form.tsx';
@@ -44,13 +46,15 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	};
 }
 
-export default async function Record(ctx: IdParams & { searchParams: Promise<{ notice?: string }> }) {
+export default async function Record(ctx: IdParams & { searchParams: Promise<{ notice?: string; new?: string }> }) {
 	const id = await recordId(ctx);
 	const r = await record(id);
 	if (!r) notFound();
 	if (r.id !== id) permanentRedirect(recordPath(r.id));
 	const d = await db();
-	const [thread, voters, who, { notice }] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams]);
+	const [thread, voters, who, { notice, new: carried }] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams]);
+	// The posts that came after the reader last opened My feed (docs/my-feed.md).
+	const fresh = await newInThread(d, who, { record: id }, seqParam(carried));
 	const stands = reception(r);
 	const owner = who?.login ?? '';
 	const [names, mine] = await Promise.all([
@@ -137,11 +141,13 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 
 			<h2>Comments and reviews</h2>
 			{thread.length === 0 && <p className="count">No comments yet.</p>}
+			<NewInThread ids={fresh} order={thread.map((c) => c.id)} />
 			{thread.map((c) => (
 				<div key={c.id} id={`p${c.id}`} className={c.parent ? 'comment reply' : 'comment'}>
 					<p className="meta">
 						<span><PublicAuthor voter={c.voter} agent={c.agent} who={names.get(c.voter)} /></span>
 						<span>{date(c.at)}</span>
+						<NewMark show={fresh.has(c.id)} />
 						{c.review && <span>review</span>}
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
 						<PostText thread={recordPath(id)} id={c.id} />

@@ -2,10 +2,11 @@
 
 `log` lists what happened on the site, in order. A feed is `log` with a query; an inbox is `log` with `to:@me`.
 The server keeps no subscriptions: the reader decides what to read by the query it sends, and remembers one number.
+(It does keep a copy of a person's queries, as text, so the website can show the same feed: [my-feed.md](my-feed.md).)
 
 ```
 delphi log -q 'cat:quant-ph' --new        # new quant-ph records, and the posts about quant-ph records
-delphi log -f ~/.delphi/follow --new      # a file of queries, one per line: what matches any
+delphi log -f ~/.delphi/queries --new     # a file of queries, one per line: what matches any
 delphi log -q 'to:@me' --new              # replies to me, and posts in my topics
 https://delphi.science/log.atom?q=cat:quant-ph      # the first, for a feed reader
 ```
@@ -77,10 +78,23 @@ is a database constraint; `/log.atom` is counted as `GET /api/v1/log`.
 
 ## Reading events in one place
 
-Every read of `open_index.events` is `log()` in `lib/posts/log.ts`, and `visible(reader)` there is the one condition
-on who may see an event. It is `true` today. The planned private spaces put their membership check there; the feed
-and the text forms already call it as nobody, and no new code assumes that what a signed-in caller can list is
-public. `ws` is not used as the first segment of any path.
+Every read of `open_index.events` is `log()` in `lib/posts/log.ts`, and `visible()` there is the one condition on who
+may see an event. It is the visibility rule of private spaces (`lib/posts/visibility.ts`, `open_index.can_read`): a
+record and a post on a record are public; a post in a topic is seen by whoever can read the topic's space, which for
+the forum is everyone and for a private space its accepted members. `log()` takes the reader as its second argument
+(`null` for nobody), so no caller can leave it out. The feed and the text forms pass `null` whatever token came with
+the request, so a private space has no feed and no text form. The MCP server reads the same way (`publicOnly`) while
+spaces are closed to it (`privateOverMcp` in `lib/posts/spaces.ts`), with `@me` in a query still naming the caller.
+
+A post in a private space still gets its row in `events` (the trigger does not know about spaces): a pointer with a
+seq, read only through `log()`. Its `path` column says `forum/<topic>/<post>` for every topic, so `log()` builds the
+path from the topic's space instead (`ws/<slug>/<topic>/<post>`). An invitation to a space and its acceptance are not
+rows of `events`; they are two seqs on the member's row (`open_index.space_members.invited_seq`, `accepted_seq`),
+drawn from the events sequence under the same ordering lock, and `log()` merges them in: the person invited reads
+the invitation, the space's members read both. They are left out when the log is narrowed by a query,
+with one exception: when the whole query is `to:@login` (or `to:@me`), an invitation sent to that person and the
+acceptance of one they sent are included, so the inbox holds invitations. A `to:` inside a larger query is decided
+over posts only.
 
 ## To check on a production-sized copy
 

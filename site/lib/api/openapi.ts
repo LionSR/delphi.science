@@ -297,6 +297,27 @@ const core = {
 				responses: { 200: { description: 'Revoked', content: { 'application/json': { schema: { type: 'object', properties: { revoked: { type: 'string' } } } } } }, 400: err, 401: err, 404: err },
 			},
 		},
+		'/api/v1/ws/{slug}': {
+			delete: {
+				operationId: 'deleteSpace',
+				...write,
+				summary: 'Delete a private space with its topics, posts and member list. Only its creator can, and it cannot be undone. Not one of the six verbs, so that nothing deletes a space by accident.',
+				parameters: [{ name: 'slug', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 48 }, description: 'The space, as in its path ws/<slug>.' }],
+				responses: { 200: { description: 'Deleted', content: { 'application/json': { schema: { type: 'object', required: ['deleted'], properties: { deleted: { type: 'string', description: 'The path of the space that is gone.' } } } } } }, 400: err, 401: err, 404: err },
+			},
+		},
+		'/api/v1/ws/{slug}/members/{login}': {
+			delete: {
+				operationId: 'removeSpaceMember',
+				...write,
+				summary: 'Take a person off a private space: its creator removes a member or withdraws an invitation; anyone removes themselves (when the last member leaves, the space is deleted).',
+				parameters: [
+					{ name: 'slug', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 48 }, description: 'The space, as in its path ws/<slug>.' },
+					{ name: 'login', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 40 }, description: 'GitHub login of the member or invited person.' },
+				],
+				responses: { 200: { description: 'Removed', content: { 'application/json': { schema: { type: 'object', required: ['removed'], properties: { removed: { type: 'string', description: 'The path of the membership that is gone.' } } } } } }, 400: err, 401: err, 404: err },
+			},
+		},
 		'/api/v1/keys/device': {
 			post: {
 				operationId: 'requestAgentKey',
@@ -603,7 +624,8 @@ const refusals = { 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 5
 const verbPaths = {
 	'/api/v1/find': {
 		get: {
-			operationId: 'search', ...open,
+			// A token is optional: with one, in=forum also finds the topics of the caller's private spaces (lib/posts/spaces.ts).
+			operationId: 'search', security: [{}, ...signedIn],
 			summary: 'Search',
 			description: `${searchOp.summary} Returns one page of records with page URL and discussed response count; pass fields=full or get a record for its full discussion[]. ${COVERS} An empty q lists records newest first; q "is:discussed" with sort=responded lists the records with the newest expert responses, each with latest_response. With in=forum it searches the research forum's topics instead, by plain words.`,
 			parameters: [
@@ -614,7 +636,7 @@ const verbPaths = {
 				limitParam, pageParam, cursorParam,
 				{ ...fieldsParam, description: `Records only. ${fieldsParam.description}` },
 			],
-			responses: { 200: json('One page of records, or with in=forum of topics', 'SearchPage'), 400: err },
+			responses: { 200: json('One page of records, or with in=forum of topics', 'SearchPage'), 400: err, 401: err },
 		},
 	},
 	'/api/v1/get/{id}': {
@@ -628,6 +650,8 @@ const verbPaths = {
 	},
 	'/api/v1/log': {
 		get: {
+			// A token is optional: to:@me and by:@me name the caller, and with one the log also holds the posts of the caller's
+			// private spaces and the invitations sent to them (lib/posts/spaces.ts).
 			operationId: 'log', security: [{}, ...signedIn],
 			summary: 'Follow new records and posts',
 			description: `List what happened on ${NAME} itself, one line each, in the order it happened: records entering the index, and posts (comments and reviews on records, forum questions, answers and comments). Each line: seq, kind, path, parent, author, time, score, subject, the text cut short, and the records a post names. path narrows it to one record's thread, one source, the forum, or one topic; q narrows it by a query, so a saved query is a feed (q "cat:quant-ph" is new quant-ph records and the discussion about them) and q "to:@me" is the signed-in person's inbox (the only use that needs sign-in). Without since, the newest first; with since, what came after that seq, oldest first, so it can be followed: keep the reply's since and send it next time. Empty when there is nothing. (Responses linked from elsewhere are in a record's discussion[], from get.)`,

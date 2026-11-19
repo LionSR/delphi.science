@@ -2,6 +2,7 @@
 import { db } from '#lib/db.ts';
 import { votePost } from '#lib/posts/forum.ts';
 import { operation } from '#lib/api/operation.ts';
+import { FORUM } from '#lib/posts/visibility.ts';
 
 export const POST = operation('votePost', async ({ params, body, voter }) =>
-	Response.json(await votePost(await db(), params.id, body.post, voter, body.value)));
+	Response.json(await votePost(await db(), params.id, body.post, voter, body.value, FORUM)));

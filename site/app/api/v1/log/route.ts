@@ -12,12 +12,12 @@ import { NAME, SITE } from '#lib/view.ts';
 export const GET = operation('log', async ({ query: { format, ...args }, voter }) => {
 	// A feed is public: it is read as nobody, whatever token came with the request.
 	const who = format === 'atom' ? null : voter ?? null;
-	// to:@me without a token: over MCP a sign-in challenge, here the API's 401.
-	const out = await logTool(await db(), args, who).catch((e) => {
-		throw e instanceof SignIn ? new ApiError(401, 'sign_in', 'sign-in required', `to:@me and by:@me name the caller: send Authorization: Bearer <agent key> (${SITE}/llms.txt), or name the person, e.g. to:@login.`) : e;
+	// to:@me, or ws, without a token: over MCP a sign-in challenge, here the API's 401.
+	const out = await logTool(await db(), args, who, 'rest').catch((e) => {
+		throw e instanceof SignIn ? new ApiError(401, 'sign_in', 'sign-in required', `to:@me, by:@me and ws name the caller: send Authorization: Bearer <agent key> (${SITE}/llms.txt), or name the person, e.g. to:@login.`) : e;
 	});
-	// A reply to a signed-in caller is theirs alone.
-	const cache = who ? PRIVATE : FORUM;
+	// A reply to a signed-in caller may hold their private spaces' posts: it is theirs alone, and never cached for others.
+	const cache = who ? PRIVATE : { ...FORUM, Vary: 'Authorization' };
 	if (format === 'json') return Response.json(out, { headers: cache });
 	// Through JSON first, as the tool does: times become strings.
 	const page = JSON.parse(JSON.stringify(out));

@@ -40,6 +40,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 							<a href="/about">About</a>
 							<a href="/submit">Submit</a>
 							<a href="/forum">Forum</a>
+							{who && <a href="/ws">Spaces</a>}
 							<a href="/llms.txt">For agents</a>
 							<a href="/api/v1">API</a>
 							{who ? (

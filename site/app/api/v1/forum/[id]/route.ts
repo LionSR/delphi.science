@@ -6,12 +6,15 @@ import { topicWithPosts } from '#lib/posts/forum.ts';
 import { operation } from '#lib/api/operation.ts';
 import { NotFoundError } from '#lib/errors.ts';
 import { FORUM } from '#lib/api/cache.ts';
+import { FORUM as FORUM_SPACE } from '#lib/posts/visibility.ts';
 
 export const GET = operation('getTopic', async ({ params }) => {
-	const t = await topicWithPosts(await db(), params.id);
-	if (!t) throw new NotFoundError(`no topic ${params.id}`, 'Use a topic id from GET /api/v1/forum.');
+	// The public forum's topic: read as nobody signed in, and only in the forum.
+	const found = await topicWithPosts(await db(), params.id, null, FORUM_SPACE);
+	const { space: _, ...t } = found ?? { space: '' };
+	if (!found) throw new NotFoundError(`no topic ${params.id}`, 'Use a topic id from GET /api/v1/forum.');
 	return Response.json(t, { headers: FORUM });
 });
 
 export const POST = operation('answerQuestion', async ({ params, body, voter }) =>
-	Response.json(await post(await db(), { topic: params.id }, voter, { body: body.body, parent: body.parent }), { status: 201 }));
+	Response.json(await post(await db(), { topic: params.id, space: FORUM_SPACE }, voter, { body: body.body, parent: body.parent }), { status: 201 }));

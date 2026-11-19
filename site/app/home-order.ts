@@ -3,11 +3,11 @@
 import { createElement } from 'react';
 import { pageHref } from '#lib/pager.ts';
 
-const href = (q: string, sort: string) => pageHref('/', { q, sort });
+const href = (q: string, sort: string, feed: string) => pageHref('/', { feed, q, sort });
 
-export function HomeOrder({ q, sort }: { q: string; sort: string }) {
+export function HomeOrder({ q, sort, feed = '' }: { q: string; sort: string; feed?: string }) {
 	return createElement('nav', { className: 'tabs home-order', 'aria-label': 'Order results' },
-		createElement('a', { href: href(q, 'week'), 'aria-current': sort === 'week' ? 'page' : undefined }, 'Top this week'),
-		createElement('a', { href: href(q, 'newest'), 'aria-current': sort === 'newest' ? 'page' : undefined }, 'Newest'),
+		createElement('a', { href: href(q, 'week', feed), 'aria-current': sort === 'week' ? 'page' : undefined }, 'Top this week'),
+		createElement('a', { href: href(q, 'newest', feed), 'aria-current': sort === 'newest' ? 'page' : undefined }, 'Newest'),
 	);
 }

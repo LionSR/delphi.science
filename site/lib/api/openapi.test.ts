@@ -7,6 +7,7 @@ import type { PGlite } from '@electric-sql/pglite';
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { load, type Item } from '#lib/records/load.ts';
+import { addMember, createSpace } from '#lib/posts/spaces.ts';
 import { handle as mcp } from './mcp.ts';
 import { spec } from './openapi.ts';
 import { closed } from './schema.ts';
@@ -450,7 +451,7 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.equal((await call('POST', at, { body })).status, 401);
 		assert.equal((await call('POST', at, { auth: 'oik_unknown', body })).status, 401);
 		assert.deepEqual((await json('POST', at, { auth: author, body: { ...body, title: 'T' } })).error,
-			{ code: 'bad_request', message: `title does not apply to ${JSON.stringify(discussed)}`, fix: 'Leave title out; it is for a new topic (id forum).' });
+			{ code: 'bad_request', message: `title does not apply to ${JSON.stringify(discussed)}`, fix: 'Leave title out; it is for a new topic (id forum, or a space) or a new space (id ws).' });
 		assert.equal((await json('POST', at, { auth: author, body: {} })).error.message, 'the body needs "body"');
 		assert.equal((await json('POST', '/api/v1/post/forum', { auth: author, body })).error.message, 'a new topic needs a title');
 		assert.equal((await call('POST', '/api/v1/post/me', { auth: author, body })).status, 400);
@@ -574,6 +575,7 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.equal((await json('GET', '/api/v1/find', { query: 'in=forum&sort=newest' })).error.message, 'sort and fields apply to records, not the forum');
 		assert.equal((await call('GET', '/api/v1/find', { query: 'in=everywhere' })).status, 400);
 		assert.equal((await call('GET', '/api/v1/find', { query: 'q=foo:bar' })).status, 400);
+		assert.equal((await call('GET', '/api/v1/find', { auth: `oik_${'0'.repeat(48)}` })).status, 401);
 	});
 
 	test('verbs: edit replaces a post\'s text by its path, for its author only, and keeps it through refusals', async () => {
@@ -650,12 +652,33 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.equal((await json('GET', '/api/v1/log')).since, before);
 	});
 
+	test('spaces: deletion and member removal responses preserve creator permissions and private schemas', async () => {
+		const owner = { login: 'schema-owner', agent: 'Test agent' }, member = { login: 'schema-member', agent: 'Test agent' };
+		const ownerKey = await createAgentKey(pg, owner.login, owner.agent), memberKey = await createAgentKey(pg, member.login, member.agent);
+		const space = await createSpace(pg, owner, { title: 'Schema boundary checks' });
+		await addMember(pg, space.id, owner, member.login);
+		await addMember(pg, space.id, member, member.login);
+		const at = `/api/v1/ws/${space.id}`, membership = `${at}/members/${member.login}`;
+		for (const path of [at, membership]) assert.equal((await call('DELETE', path)).status, 401);
+		for (const path of ['/api/v1/ws/no-schema-space', '/api/v1/ws/no-schema-space/members/schema-member']) {
+			assert.equal((await call('DELETE', path, { auth: ownerKey })).status, 404);
+		}
+		assert.equal((await call('DELETE', at, { auth: memberKey })).status, 400, 'a member cannot delete the space');
+		assert.equal((await call('DELETE', `${at}/members/${owner.login}`, { auth: memberKey })).status, 400, 'a member cannot remove someone else');
+		const removed = await call('DELETE', membership, { auth: ownerKey });
+		assert.deepEqual([removed.status, JSON.parse(removed.text)], [200, { removed: `ws/${space.id}/members/${member.login}` }]);
+		assert.equal(removed.headers.get('cache-control'), 'private, no-store');
+		const deleted = await call('DELETE', at, { auth: ownerKey });
+		assert.deepEqual([deleted.status, JSON.parse(deleted.text)], [200, { deleted: `ws/${space.id}` }]);
+		assert.equal(deleted.headers.get('cache-control'), 'private, no-store');
+	});
+
 	test('verbs: the document says who must sign in, and the tools say the same', async () => {
 		const { operationById, VERBS } = await import('./openapi.ts');
 		const { TOOLS, securitySchemes } = await import('./mcp.ts');
 		const { authorizationServer } = await import('#lib/accounts/oauth.ts');
 		assert.deepEqual(Object.keys(TOOLS), [...VERBS]);
-		assert.deepEqual(VERBS.map((v) => operationById(v).auth), ['none', 'optional', 'optional', 'required', 'required', 'required']);
+		assert.deepEqual(VERBS.map((v) => operationById(v).auth), ['optional', 'optional', 'optional', 'required', 'required', 'required']);
 		for (const v of VERBS) assert.equal(TOOLS[v].auth, operationById(v).auth, v);
 		assert.deepEqual(securitySchemes('get'), [{ type: 'noauth' }, { type: 'oauth2', scopes: ['write'] }]);
 		// The OAuth scheme names the endpoints the authorization server's own metadata names.

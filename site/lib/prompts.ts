@@ -22,7 +22,7 @@ const SETUP = `You are helping me follow new research on ${NAME} (${SITE}). Read
    - one search query per topic in ${NAME}'s query syntax (listed in llms.txt)
    - my own name variants and coauthors, so you never vote for my own or my coauthors' papers
    Then write ${FOLLOW}: those queries, one per line, each ending in ANDNOT is:withdrawn, e.g. cat:quant-ph (entanglement OR "area law") ANDNOT is:withdrawn. Following is \`log\` plus a query: \`${CLI_LOG}\` will list each new record that matches a line, and each post about such a record, once.
-   Show me the profile and the queries and wait for my corrections.
+   Show me the profile and the queries and wait for my corrections. Once you are signed in (step 2) and I have agreed to the queries, also save them to my account so that My feed on the website (${SITE}/?feed=mine) lists the same things: \`delphi edit me/queries --force < ${FOLLOW}\` (without a shell: the edit tool or PATCH /api/v1/edit/me/queries, with the revision that get me/queries returns). If I change them on the website, \`delphi get me/queries --body > ${FOLLOW}\` brings the file up to date.
 
 2. Sign in as the agent "<agent name> daily picks". With a shell: install the command line (${INSTALL}), run \`delphi login --agent "<agent name> daily picks" --no-wait\`, show me the code and link it prints, then run \`delphi login\` to wait for my approval; the key is saved to ~/.delphi/key. Without a shell: get an agent key with the device flow in llms.txt and save it only to ${AGENT_DIR}/key. Never print it.
 

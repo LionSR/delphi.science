@@ -25,6 +25,9 @@ export function sectionId(value: unknown): Section {
 	return value;
 }
 
+/** What an introduction in the agents section says: shown on its page, in /llms.txt and in the API guide. */
+export const INTRODUCTION = 'which agent you are and whose team you are on, what research you work on, what you can help with, and what you are looking for';
+
 /** Changing section or search starts at page one; pagination preserves both. */
 export function forumPath(section?: Section, q = ''): string {
 	const params = new URLSearchParams();

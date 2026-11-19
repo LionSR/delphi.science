@@ -9,7 +9,7 @@ import { before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import type { Db } from '#lib/db.ts';
 import { handle } from '#lib/api/mcp.ts';
-import { logTool } from '#lib/api/mcp-tools.ts';
+import { editTool, getTool, logTool, postTool, voteTool } from '#lib/api/mcp-tools.ts';
 import type { Moderator } from '#lib/moderation/moderate.ts';
 import { comment, post } from '#lib/posts/comments.ts';
 import { startTopic } from '#lib/posts/forum.ts';
@@ -608,5 +608,49 @@ describe('My feed and private spaces', () => {
 			useDb();
 		}
 		await db.close();
+	});
+});
+
+describe('the id of a merged entry, through the verbs', () => {
+	test('get, log, post, edit and vote at an old id act on the record it was merged into, for a signed-in caller and for nobody, through both doors', async () => {
+		// The moderation model, faked: it accepts.
+		const priorFetch = globalThis.fetch, priorKey = process.env.DEEPSEEK_API_KEY;
+		process.env.DEEPSEEK_API_KEY = 'offline-fixture';
+		globalThis.fetch = (async () => Response.json({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify({ decision: 'ACCEPT', verification_needed: false, reason: 'A scoped, checkable observation.', fix: '' }) } }] })) as typeof fetch;
+		const { db, review } = await site();
+		try {
+			// CO was found to be the same work as QP: its entry says so. Its record row stays, as the loader leaves it.
+			await db.query('INSERT INTO open_index.entries (id, entry) VALUES ($1, $2)', [CO.id, { key: 'APP-1', source: 'app', merged_into: QP.id }]);
+			const agent = { login: 'Ada', agent: 'Claude Code' };
+			for (const door of ['rest', 'mcp'] as const) {
+				// Reading needs nobody: the old id gives the main record and its thread.
+				for (const who of [null, agent]) {
+					assert.equal((await getTool(db, { id: CO.id }, who, door) as { id: string }).id, QP.id, `get as ${who?.login ?? 'nobody'} by ${door}`);
+					const thread = await logTool(db, { path: CO.id }, who, door);
+					assert.ok(thread.entries.length >= 2 && thread.entries.every((e) => e.path.startsWith(`${QP.id}/`)), 'the main record\'s posts');
+					// A post of the main record, named under the old id.
+					assert.equal((await getTool(db, { id: `${CO.id}/${review.id}` }, who, door) as { id: string }).id, `${QP.id}/${review.id}`);
+				}
+				// Writing: a comment posted to the old id is on the main record, and so is the vote.
+				const made = await postTool(db, { id: CO.id, body: `Checked through the ${door} door: the endpoint term of (4) is bounded as stated.` }, agent, door);
+				assert.match(String(made.id), new RegExp(`^${QP.id}/\\d+$`));
+				const mine = await getTool(db, { id: String(made.id).replace(QP.id, CO.id) }, agent, door) as { id: string; revision: string };
+				assert.equal(mine.id, made.id);
+				const edited = await editTool(db, { id: String(made.id).replace(QP.id, CO.id), body: `Checked through the ${door} door: the endpoint term of (4) is bounded as stated, for even N.`, revision: mine.revision }, agent, door);
+				assert.equal(edited.id, made.id);
+				const voted = await voteTool(db, { id: CO.id, value: 1 }, agent, door);
+				assert.equal(voted.id ?? QP.id, QP.id);
+			}
+			assert.equal((await db.query('SELECT 1 FROM open_index.votes WHERE record_id = $1 AND lower(voter) = $2', [QP.id, 'ada'])).rows.length, 1);
+			assert.equal((await db.query('SELECT 1 FROM open_index.votes WHERE record_id = $1', [CO.id])).rows.length, 0);
+			assert.equal((await db.query('SELECT 1 FROM open_index.comments WHERE record_id = $1', [CO.id])).rows.length, 0);
+			// A saved query that names the old id is still a valid line, and the feed reads as before.
+			await replaceQueries(db, ada, `re:${QP.id}`);
+			assert.ok((await myFeed(db, ada)).entries.length >= 4);
+		} finally {
+			globalThis.fetch = priorFetch;
+			if (priorKey === undefined) delete process.env.DEEPSEEK_API_KEY; else process.env.DEEPSEEK_API_KEY = priorKey;
+			await db.close();
+		}
 	});
 });

@@ -11,6 +11,7 @@ import { screen, type Moderator } from '#lib/moderation/moderate.ts';
 import { load } from './load.ts';
 import { get } from './query.ts';
 import { detect, itemOf, resolve } from './resolve.ts';
+import { resolve as target } from '#lib/api/paths.ts';
 import { submit as actualSubmit } from './submit.ts';
 import { createAgentKey, voterFromKey } from '#lib/accounts/keys.ts';
 import { migratedDb } from '#lib/testing.ts';
@@ -84,6 +85,30 @@ describe('submitting and the forum, on Postgres', () => {
 	before(async () => {
 		db = await migratedDb();
 		await load(db, [{ id: 'app/APP-1', source: 'app', url: 'https://agenticpapers.app/papers/APP-1/', repo: 'https://github.com/someone/paper', title: 'An APP paper' }]);
+	});
+
+	test('the id of a merged entry gives the record it was merged into, and loading preserves its row and interactions', async () => {
+		const kept = { id: 'app/APP-2', source: 'app', url: 'https://agenticpapers.app/papers/APP-2/', title: 'Kept' };
+		const merged = { id: 'app/APP-3', source: 'app', url: 'https://agenticpapers.app/papers/APP-3/', title: 'Merged' };
+		await load(db, [kept, merged]);
+		await db.query("INSERT INTO open_index.votes (record_id, voter, value) VALUES ($1, 'merge-test', 1)", [merged.id]);
+		await db.query("INSERT INTO open_index.comments (record_id, voter, body) VALUES ($1, 'merge-test', 'Keep this discussion')", [merged.id]);
+		const interactions = async () => ({
+			votes: (await db.query("SELECT * FROM open_index.votes WHERE record_id = $1", [merged.id])).rows,
+			comments: (await db.query("SELECT * FROM open_index.comments WHERE record_id = $1", [merged.id])).rows,
+		});
+		const before = await interactions();
+		await db.query("INSERT INTO open_index.entries (id, entry) VALUES ('app/APP-3', $1)", [{ key: 'APP-3', source: 'app', merged_into: 'app/APP-2' }]);
+		assert.equal((await get(db, 'app/APP-3'))?.id, 'app/APP-2');
+		await load(db, [kept]);
+		assert.deepEqual((await db.query<{ id: string }>("SELECT id FROM open_index.records WHERE id LIKE 'app/APP-_' ORDER BY id")).rows.map((r) => r.id), ['app/APP-1', 'app/APP-2', 'app/APP-3']);
+		assert.deepEqual(await interactions(), before);
+		assert.equal((await get(db, 'app/APP-3'))?.id, 'app/APP-2');
+		// Whoever reads, and through either door's way of reading paths.
+		for (const who of [null, 'merge-test']) {
+			assert.deepEqual(await target(db, 'app/APP-3', who), { kind: 'record', record: 'app/APP-2' });
+			assert.deepEqual(await target(db, 'app/APP-3', who, { spaces: false, queries: false }), { kind: 'record', record: 'app/APP-2' });
+		}
 	});
 
 	test('a link the site reads is listed at once, with its metadata', async () => {

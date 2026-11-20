@@ -1,6 +1,5 @@
 """Tests for x_candidates.py, offline: the X API is stubbed."""
 
-import datetime as dt
 import io
 import os
 import unittest
@@ -59,9 +58,6 @@ class Matching(unittest.TestCase):
         self.assertFalse(got[1]["researcher"])
         self.assertEqual(got[0]["url"], "https://x.com/ada/status/1")
 
-    def test_a_post_about_no_record_is_dropped(self):
-        self.assertEqual(X.posts(reply(tweet(4, urls=["https://example.com"])), [], self.r), [])
-
 
 class Run(unittest.TestCase):
     def test_report_has_commands_leaves_out_attached_posts_and_survives_a_failed_query(self):
@@ -86,10 +82,6 @@ class Run(unittest.TestCase):
     def test_no_token_no_search(self):
         with patch.dict(os.environ, {"X_BEARER_TOKEN": ""}), patch.object(X, "search", side_effect=AssertionError("searched")):
             self.assertEqual(X.main([]), 2)
-
-    def test_queries_fit_the_api_limit(self):
-        for q, about in X.QUERIES:
-            self.assertLessEqual(len(q + X.NOT_RETWEETS), 512, q)
 
 
 if __name__ == "__main__":

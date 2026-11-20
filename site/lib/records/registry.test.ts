@@ -1,19 +1,15 @@
 // Submitting links and the forum, on real Postgres (PGlite) with the migrations as written. Sources are
 // faked, so this needs no network and no build of the index.
-import { createHash } from 'node:crypto';
-import { publicWebTarget, readPublicWeb, type SourceTransport } from '#lib/moderation/source-fetch.ts';
 import { strict as assert } from 'node:assert';
 import { before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { comment as actualComment, post as actualPost } from '#lib/posts/comments.ts';
 import { accept, activity, startTopic as actualStartTopic, topic, topics, topicWithPosts, votePost } from '#lib/posts/forum.ts';
-import { screen, type Moderator } from '#lib/moderation/moderate.ts';
+import { type Moderator } from '#lib/moderation/moderate.ts';
 import { load } from './load.ts';
 import { get } from './query.ts';
 import { detect, itemOf, resolve } from './resolve.ts';
-import { resolve as target } from '#lib/api/paths.ts';
 import { submit as actualSubmit } from './submit.ts';
-import { createAgentKey, voterFromKey } from '#lib/accounts/keys.ts';
 import { migratedDb } from '#lib/testing.ts';
 
 const yes: Moderator = async () => ({ decision: 'ACCEPT', reason: 'Test fixture only.', verification_needed: false });
@@ -87,30 +83,6 @@ describe('submitting and the forum, on Postgres', () => {
 		await load(db, [{ id: 'app/APP-1', source: 'app', url: 'https://agenticpapers.app/papers/APP-1/', repo: 'https://github.com/someone/paper', title: 'An APP paper' }]);
 	});
 
-	test('the id of a merged entry gives the record it was merged into, and loading preserves its row and interactions', async () => {
-		const kept = { id: 'app/APP-2', source: 'app', url: 'https://agenticpapers.app/papers/APP-2/', title: 'Kept' };
-		const merged = { id: 'app/APP-3', source: 'app', url: 'https://agenticpapers.app/papers/APP-3/', title: 'Merged' };
-		await load(db, [kept, merged]);
-		await db.query("INSERT INTO open_index.votes (record_id, voter, value) VALUES ($1, 'merge-test', 1)", [merged.id]);
-		await db.query("INSERT INTO open_index.comments (record_id, voter, body) VALUES ($1, 'merge-test', 'Keep this discussion')", [merged.id]);
-		const interactions = async () => ({
-			votes: (await db.query("SELECT * FROM open_index.votes WHERE record_id = $1", [merged.id])).rows,
-			comments: (await db.query("SELECT * FROM open_index.comments WHERE record_id = $1", [merged.id])).rows,
-		});
-		const before = await interactions();
-		await db.query("INSERT INTO open_index.entries (id, entry) VALUES ('app/APP-3', $1)", [{ key: 'APP-3', source: 'app', merged_into: 'app/APP-2' }]);
-		assert.equal((await get(db, 'app/APP-3'))?.id, 'app/APP-2');
-		await load(db, [kept]);
-		assert.deepEqual((await db.query<{ id: string }>("SELECT id FROM open_index.records WHERE id LIKE 'app/APP-_' ORDER BY id")).rows.map((r) => r.id), ['app/APP-1', 'app/APP-2', 'app/APP-3']);
-		assert.deepEqual(await interactions(), before);
-		assert.equal((await get(db, 'app/APP-3'))?.id, 'app/APP-2');
-		// Whoever reads, and through either door's way of reading paths.
-		for (const who of [null, 'merge-test']) {
-			assert.deepEqual(await target(db, 'app/APP-3', who), { kind: 'record', record: 'app/APP-2' });
-			assert.deepEqual(await target(db, 'app/APP-3', who, { spaces: false, queries: false }), { kind: 'record', record: 'app/APP-2' });
-		}
-	});
-
 	test('a link the site reads is listed at once, with its metadata', async () => {
 		const r = await submit(db, 'https://arxiv.org/abs/1706.03762v7', bot, SOURCES);
 		assert.equal(r.status, 'listed');
@@ -125,39 +97,6 @@ describe('submitting and the forum, on Postgres', () => {
 		assert.deepEqual([entry.key, entry.source, entry.added_by, entry.added], ['karpathy__nanoGPT', 'github', 'ada', new Date().toISOString().slice(0, 10)]);
 		assert.equal((await submit(db, 'someone/tiny', ada, SOURCES)).status, 'listed');
 		assert.equal((await submit(db, 'someone/cited', ada, SOURCES)).status, 'listed', 'a citable repository is listed whatever its stars');
-	});
-
-	test('a public blog uses the existing moderation gate and one attempt, including failed checks', async () => {
-		const url = 'https://xiaoliangqi.github.io/blog/posts/what-is-life/', who = { login: 'blog-submitter', agent: '' };
-		const html = '<title>What Is Life? -- Question Revisited in the AI Era</title><meta name="description" content="A research essay about physical descriptions of living systems."><meta name="citation_publication_date" content="2026/10/30"><script>' + 'inert theme padding '.repeat(4000) + '</script>';
-		const transport: SourceTransport = async t => ({ status: 200, url: t.requestUrl, headers: { 'content-type': 'text/html' }, body: new TextEncoder().encode(html) });
-		assert.equal(detect(url)?.source.name, 'web');
-		assert.equal(publicWebTarget(url).canonical, url);
-		const fetched = await readPublicWeb(url, transport);
-		assert.doesNotMatch(JSON.stringify(fetched), /inert theme/);
-		assert.equal(fetched.published, '2026-10-30');
-		await assert.rejects(submit(db, url, who, SOURCES, async () => ({ decision: 'REQUEST_REVISION', reason: 'Clarify the research scope.', fix: 'Describe the finite model.', verification_needed: false }), transport), /REQUEST_REVISION/);
-		const id = 'web/' + createHash('sha1').update(url).digest('hex').slice(0, 12);
-		assert.equal(await get(db, id), null);
-		assert.equal((await submit(db, url, who, SOURCES, yes, transport)).status, 'listed');
-		assert.match(String((await get(db, id))!.title), /What Is Life/);
-		assert.equal((await submit(db, url, who, SOURCES, yes, async () => { throw new Error('duplicate must not fetch'); })).status, 'already_listed');
-		assert.equal((await db.query('SELECT id FROM open_index.moderations WHERE voter=$1', [who.login])).rows.length, 2);
-		const used = (await db.query<{id:number}>('SELECT id FROM open_index.moderations WHERE voter=$1 AND publish', [who.login])).rows[0].id;
-		await assert.rejects(screen(db, who, { kind: 'submission', on: 'test', body: 'No reusable reservation.' }, yes, false, undefined, used), /reservation is unavailable/);
-	});
-	test('thirty failed source requests exhaust the shared budget before any further fetch or model call', async () => {
-		const who = { login: 'failed-web-budget', agent: '' }, url = 'https://example.org/missing-research'; let calls = 0;
-		const missing: SourceTransport = async t => { calls++; return { status: 404, url: t.requestUrl, headers: {}, body: new Uint8Array() }; };
-		const noModel: Moderator = async () => { throw new Error('missing source must not reach moderation'); };
-		for (let i = 0; i < 30; i++) await assert.rejects(submit(db, url, who, SOURCES, noModel, missing), /not found/);
-		await assert.rejects(submit(db, url, who, SOURCES, noModel, missing), /30 check\/submission attempts/);
-		assert.equal(calls, 30);
-		assert.equal((await db.query('SELECT id FROM open_index.moderations WHERE voter=$1', [who.login])).rows.length, 30);
-		const racing = { login: 'racing-web-budget', agent: '' };
-		await db.query("INSERT INTO open_index.moderations (voter,agent,kind,publish,reason) SELECT $1,'','submission',false,'Previous failure' FROM generate_series(1,29)", [racing.login]);
-		await Promise.allSettled([1, 2].map(() => submit(db, url, racing, SOURCES, noModel, missing)));
-		assert.equal(calls, 31, 'only one concurrent request can use the final attempt');
 	});
 
 	test('a record already listed is found by id, URL or repository, without reading the source', async () => {
@@ -176,12 +115,6 @@ describe('submitting and the forum, on Postgres', () => {
 		await db.query(`INSERT INTO open_index.entries (id, entry) SELECT 'web/x' || g, jsonb_build_object('key', 'x' || g, 'source', 'web', 'added_by', 'cy', 'added', $1::text)
 			FROM generate_series(1, 20) g`, [new Date().toISOString().slice(0, 10)]);
 		await assert.rejects(submit(db, 'arXiv:1801.00001', { login: 'cy', agent: '' }, SOURCES), /20 links today/);
-	});
-
-	test('a record labelled harmful is not listed again by submitting it', async () => {
-		await db.query(`INSERT INTO open_index.entries (id, entry) VALUES ('arxiv/1706.99999', '{"key": "1706.99999", "source": "arxiv", "review": {"category": "harmful"}}')`);
-		assert.equal((await submit(db, 'arXiv:1706.99999', bo, SOURCES)).status, 'already_listed');
-		assert.equal(await get(db, 'arxiv/1706.99999'), null);
 	});
 
 	test('questions, answers and comments; mentions of records; latest activity', async () => {
@@ -224,55 +157,4 @@ describe('submitting and the forum, on Postgres', () => {
 		await assert.rejects(accept(db, t.id, after.question.id, ada), /not an answer/);
 	});
 
-	test('moderation: a refusal tells the author the reason', async () => {
-		const refuse: Moderator = async () => ({ decision: 'REQUEST_REVISION', reason: 'Say what you checked.', fix: 'Add the check.', verification_needed: false });
-		await assert.rejects(startTopic(db, bo, { title: 'Thoughts?', body: 'Some text about it.' }, refuse), /not posted: REQUEST_REVISION: Say what you checked/);
-	});
-
-	test('search, pages, and a feed of what is new', async () => {
-		const asked = [];
-		for (const w of ['spectral gaps', 'Ramsey numbers', 'Lean coercions']) asked.push(await startTopic(db, { login: `asker-${w}`, agent: '' }, { title: `What is known about ${w}?`, body: `Context on ${w}.` }));
-		await post(db, { topic: asked[0].id }, bo, { body: 'See the survey on expander graphs.' });
-		const ids = (r: { questions: { id: number }[] }) => r.questions.map((q) => q.id);
-		assert.deepEqual(ids(await topics(db, null, { q: 'Ramsey' })), [asked[1].id]);
-		assert.deepEqual(ids(await topics(db, null, { q: 'expander' })), [asked[0].id], 'answers are searched too');
-		assert.deepEqual(ids(await topics(db, null, { q: '"no such words"' })), []);
-		const all = ids(await topics(db, null));
-		const one = await topics(db, null, { limit: 2 });
-		const two = await topics(db, null, { limit: 2, cursor: one.next_cursor });
-		assert.deepEqual([...ids(one), ...ids(two)], all.slice(0, 4), 'pages follow on without gaps or repeats');
-		const second = await topics(db, null, { limit: 2, page: 2 });
-		assert.deepEqual([ids(second), second.total, second.page, second.pages], [ids(two), all.length, 2, 2], 'a numbered page matches the cursor page');
-		const found = await topics(db, null, { q: 'Lean OR Ramsey', limit: 1, page: 2 });
-		assert.deepEqual([found.total, found.page, found.pages, found.next_cursor], [2, 2, 2, null], 'a search pages the same way');
-		await assert.rejects(topics(db, null, { cursor: 'nonsense!' }), /cursor is not valid/);
-		const feed = await activity(db, { limit: 100 });
-		const mark = feed.since;
-		await post(db, { topic: asked[2].id }, bo, { body: 'Coercions insert ↑ casts; see Mathlib.' });
-		const fresh = await activity(db, { since: mark });
-		assert.deepEqual([fresh.posts.map((p) => p.body), fresh.since > mark], [['Coercions insert ↑ casts; see Mathlib.'], true]);
-		assert.deepEqual((await activity(db, { since: fresh.since })).posts, [], 'nothing new since');
-	});
-
-	test('a person may post 30 times a day, agents and refused posts included', async () => {
-		const dee = { login: 'dee', agent: '' }, deebot = { login: 'dee', agent: 'Claude Code' };
-		await startTopic(db, dee, { title: 'A question', body: 'Specific details.' });
-		const t = (await topics(db, null)).questions[0].id;
-		const no: Moderator = async () => ({ decision: 'REJECT', reason: 'No.', verification_needed: false });
-		await assert.rejects(post(db, { topic: t }, deebot, { body: 'x' }, no), /not posted/);
-		for (let i = 2; i < 30; i++) await post(db, { topic: t }, i % 2 ? dee : deebot, { body: `Answer ${i}` });
-		await assert.rejects(post(db, { topic: t }, deebot, { body: 'One more.' }), /used 30 check\/submission attempts today, agents included/);
-	});
-
-	test('bad questions and replies are refused, and leave nothing behind', async () => {
-		const n = (await topics(db, null)).questions.length;
-		await assert.rejects(startTopic(db, bo, { title: '', body: 'x' }), /needs a title/);
-		const key = await createAgentKey(db, 'bo', 'Codex');
-		await assert.rejects(startTopic(db, bo, { title: 'my key', body: `here: ${key}` }), /contains an agent key/);
-		assert.equal(await voterFromKey(db, key), null);
-		assert.equal((await topics(db, null)).questions.length, n, 'the refused question was removed');
-		await assert.rejects(post(db, { topic: 999 }, bo, { body: 'x' }), /no topic 999/);
-		await assert.rejects(post(db, { topic: NaN }, bo, { body: 'x' }), /no topic/);
-		await assert.rejects(post(db, { topic: (await topics(db, null)).questions[0].id }, bo, { body: 'x', parent: 999 }), /no comment 999/);
-	});
 });

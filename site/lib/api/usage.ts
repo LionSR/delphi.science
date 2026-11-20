@@ -22,9 +22,9 @@ const KINDS = new Map(KNOWN.flatMap(([kind, names]) => names.map((name) => [name
 const TOOLS = ['curl', 'python-requests', 'python-urllib', 'python-httpx', 'go-http-client', 'node', 'wget', 'axios', 'postmanruntime'];
 // Only these names are stored: an arbitrary token could hold a name, email, key or unique ID.
 export const CLIENTS = [...KINDS.keys(), ...TOOLS, 'browser', 'none', 'other'];
-// Source checks and the older edit operation are not counted: the database's endpoint allowlist
+// The older edit operation and two space operations are not counted: the database's endpoint allowlist
 // (api_usage_endpoint_category) does not include them, and adding one takes a migration.
-const UNCOUNTED: readonly string[] = ['checkPublicSources', 'editPost', 'deleteSpace', 'removeSpaceMember'];
+const UNCOUNTED: readonly string[] = ['editPost', 'deleteSpace', 'removeSpaceMember'];
 export const ENDPOINTS = [...operations.filter((o) => !UNCOUNTED.includes(o.operationId)).map(endpointName),
 	'GET /api/v1', 'GET /api/v1/openapi.json', 'GET /llms.txt', 'POST /mcp',
 	'GET /id/{prefix}/{suffix}', 'GET /sitemap.xml', 'GET /sitemap/{file}', 'GET /txt/{id}'];

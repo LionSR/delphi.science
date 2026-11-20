@@ -24,7 +24,6 @@ export class CodedError extends QueryError {
 }
 
 export class EditError extends CodedError {}
-export class SourceCheckError extends CodedError {}
 
 type ModerationCode = 'moderation_rejected' | 'moderation_review_needed' | 'moderation_unavailable';
 

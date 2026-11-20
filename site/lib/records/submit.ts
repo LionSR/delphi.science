@@ -2,7 +2,6 @@
 // and the record is listed at once.
 import { COLUMNS, row } from './load.ts';
 import { screen, type Moderator } from '#lib/moderation/moderate.ts';
-import { finishAttempt, reserveAttempt } from '#lib/moderation/audit.ts';
 import type { SourceTransport } from '#lib/moderation/source-fetch.ts';
 import { QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
@@ -48,12 +47,10 @@ export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof
 
 	const day = today();
 	await checkQuota(db, voter.login, day);
-	const audit = await reserveAttempt(db, voter, 'submission');
 	let found;
 	try {
 		found = await resolve(url, fetcher, webTransport);
 	} catch (e) {
-		await finishAttempt(db, audit, false, 'REVIEW_NEEDED: source metadata could not be read');
 		if (e instanceof NotFound) throw new QueryError('the record was not found or is not public', 'Check the link, and that the record is public.');
 		throw new QueryError(`${hit.source.name} could not be read just now (${e instanceof Error ? e.message : e})`, 'Try again in a few minutes.');
 	}
@@ -63,22 +60,11 @@ export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof
 	check('Entry', entry, `${entry.source}/${entry.key}`);
 	const item = itemOf(entry);
 	const again = await listed(db, item.id, item.url); // the same record by another link
-	if (again) {
-		await finishAttempt(db, audit, false, 'Already listed');
-		return alreadyListed(again);
-	}
+	if (again) return alreadyListed(again);
 	// Moderate before writing the entry: the daily build would publish it.
-	await screen(db, voter, { kind: 'submission', on: item.id, title: String(item.title), body: JSON.stringify(found), context: { record: item } }, moderate, false, undefined, audit);
-	// Moderation takes time, so recheck duplicates and the quota under a per-login lock.
-	const stored = await db.transaction!(async (tx) => {
-		await tx.query('SELECT pg_advisory_xact_lock(hashtextextended($1, 0))', [voter.login]);
-		const existing = await listed(tx, item.id, item.url);
-		if (existing) return { inserted: false, id: existing };
-		await checkQuota(tx, voter.login, day);
-		const { rows } = await tx.query('INSERT INTO open_index.entries (id, entry) VALUES ($1, $2) ON CONFLICT (id) DO NOTHING RETURNING id', [item.id, entry]);
-		return { inserted: rows.length > 0, id: item.id };
-	});
-	if (!stored.inserted) return alreadyListed(stored.id);
+	await screen(db, voter, { kind: 'submission', on: item.id, title: String(item.title), body: JSON.stringify(found), context: { record: item } }, moderate);
+	const { rows } = await db.query('INSERT INTO open_index.entries (id, entry) VALUES ($1, $2) ON CONFLICT (id) DO NOTHING RETURNING id', [item.id, entry]);
+	if (!rows.length) return alreadyListed(item.id);
 	// If this fails, the next build lists the record from its entry.
 	await db.query(`INSERT INTO open_index.records (${COLUMNS.join(', ')}) VALUES (${COLUMNS.map((_, i) => `$${i + 1}`).join(', ')})
 		ON CONFLICT (id) DO NOTHING`, await row(item));

@@ -68,9 +68,8 @@ Submissions, forum questions/answers/comments, record reviews and public vote no
 - Reasons name a concrete defect or contribution. Brevity, non-native English, AI authorship, stated uncertainty and negative results are not defects. This is screening, not peer review.
 - Model: `deepseek-flash`, non-thinking JSON mode. Key from `DEEPSEEK_API_KEY` or the Vault secret `deepseek_api_key`. A missing key, or an empty, malformed or failed response, holds publication; there is no bypass or fallback provider. Tests must inject a mock moderator explicitly.
 - Errors, always `{error:{code,message,fix}}`: 422 `moderation_rejected` (revise/reject), 409 `moderation_review_needed` (verification hold), 503 `moderation_unavailable`.
-- Cited URLs/IDs that are not indexed are held before the model call. Indexed metadata confirms which work is cited, not that the cited claim is true. A hold does not mean the cited work is false. See [docs/public-source-evidence-design.md](docs/public-source-evidence-design.md) for the opt-in public source check on record discussions.
 - Refused bodies are not stored server-side; the browser keeps a local draft per author and form for resubmission.
-- Attempts are reserved atomically before the model call. All gated actions share a 30-attempt daily limit per user and their agents, logged in the private audit table.
+- All gated actions share a 30-attempt daily limit per user and their agents, logged in the private audit table.
 - `index.py add` only inspects (`--dry-run`); it never writes, so nothing bypasses moderation. Operator jobs (harvest, refresh, response curation, build) are separate from public submission.
 
 ## Running it
@@ -147,13 +146,8 @@ cd site && npm test
 
 ## Further docs
 
-- [CONTRIBUTING.md](CONTRIBUTING.md) — pull requests, migrations and what not to change without asking
 - [docs/IDEA.md](docs/IDEA.md) — problem, design and open questions
-- [docs/public-source-evidence-design.md](docs/public-source-evidence-design.md) — public source checks for record discussions
-- [docs/curated-source-review.md](docs/curated-source-review.md) — reviewed historical source observations
-- [docs/atomic-vote-if-absent.md](docs/atomic-vote-if-absent.md) — create-only votes
 - [docs/usage-analytics.md](docs/usage-analytics.md) — usage metrics, admin access, retention
-- [docs/release-validation-2026-10-27.md](docs/release-validation-2026-10-27.md), [docs/source-evidence-validation-2026-10-27.md](docs/source-evidence-validation-2026-10-27.md) — dated validation records
 
 ## License
 

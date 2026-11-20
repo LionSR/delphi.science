@@ -1,36 +1,42 @@
 # Contributing
 
-Bug reports and pull requests are welcome. The [README](README.md#site-and-tests) says how to run the site and the tests on a
-local database; neither needs an account or a key.
+Contributions are welcome: a new source, a fix to the site or the API, a correction to the documentation. For a larger change, open an issue first and say what problem it solves.
 
-## Pull requests
+A vulnerability is not reported here: see [SECURITY.md](SECURITY.md). A wrong record, a missing response or a moderation decision is reported on the site, at https://delphi.science/support.
 
-- The owner merges, by squash. Keep a pull request to one change and say in its description what you ran.
-- The `Commit authors` check fails for commits not authored by the owner. That is expected on an outside pull request and does
-  not block review: the squash commit gets the owner's address.
-- Do not commit production data. `fixtures/entries.jsonl` holds public paper metadata only; accounts, votes, comments,
-  private spaces and keys are never in this repository.
+## Running it
 
-## Database migrations
+Nothing below needs credentials. The site and the tests run on a local PGlite database built from `fixtures/entries.jsonl`.
 
-- A migration is a file in `site/supabase/migrations/`, named by a timestamp no other open branch uses.
-- Merging deploys, so the owner applies a migration to production before merging the code that reads it. Say at the top of the
-  pull request that it carries one.
-- Make it additive: the code already running must keep working after the migration and before the merge.
+```bash
+pip install -r requirements.txt
+cd site && npm ci
+npm run dev                                   # site and API; "Sign in" logs you in as @local-dev
+```
 
-## What reads a record or a post
+Tests, as CI runs them (`.github/workflows/test.yml`):
 
-- Several entry points read the same things (the pages, the REST verbs, `/mcp`, the log, search). A change to what an id means or
-  to who may read something has to reach all of them: look for every direct query on the table, not only the function you
-  started from.
-- Who may read a space is decided in one place, `open_index.can_read` in SQL and `site/lib/posts/visibility.ts`. Call it; do not
-  add a second check.
+```bash
+python3 test_index.py && python3 test_candidates.py && python3 test_x_candidates.py
+cd site && npm test && npx tsc --noEmit -p .
+```
 
-## The six MCP tools
+The site tests read `dist/index.json`. Build it first as the README says under "Site and tests".
 
-The names, descriptions and annotations that `/mcp` lists are what the ChatGPT and Codex plugin was reviewed with, and
-`site/lib/api/tools-list.json` pins them in a test. A change there means a new review, so open an issue before making one.
+## What a change needs
 
-## Security
+- **Tests pass**, and a change in behaviour comes with a test for it.
+- **One definition of the API.** Operations are defined in `site/lib/api/openapi.ts`. After a change there, run `cd site && npm run openapi`, which rewrites `site/openapi.json` and `cli/api.json`; commit both.
+- **A new source** follows "Adding a source" in the README: an adapter in `sources.py`, a prefix in `site/lib/records/prefixes.json`. Prefixes are never reused.
+- **A database change** is a new file in `site/supabase/migrations/`. Do not edit a migration that is already there.
+  Merging deploys, so a maintainer applies the migration to production before merging the code that reads it: say at the top of the pull request that it carries one, and keep it additive so the code already running still works in between.
+- **No secrets and no personal data** in code, fixtures, tests or commit messages. Tests inject a mock moderator; they never call a paid model.
+- **Plain prose** in documentation, comments and site text, as the rest of the repository is written.
 
-Report a vulnerability by email to texra-ai@outlook.com, not in a public issue.
+Pull requests from forks run the tests without any of the repository's secrets, and a maintainer approves the first run.
+
+A maintainer merges by squash. The `Commit authors` check fails on commits that are not the owner's; that is expected on an outside pull request and does not block review.
+
+## Licence
+
+The code is Apache-2.0 ([LICENSE](LICENSE)). By contributing you agree that your contribution is under the same licence. Indexed records, abstracts and quoted responses belong to their authors and sources, and are not covered by it.

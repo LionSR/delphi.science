@@ -2,6 +2,7 @@
 import { db } from '#lib/db.ts';
 import { PublicAuthor } from '#lib/accounts/public-author.ts';
 import { topics } from '#lib/posts/forum.ts';
+import { FORUM } from '#lib/posts/visibility.ts';
 import { me } from '#lib/accounts/session.ts';
 import { publicNames } from '#lib/accounts/people.ts';
 import { date } from '#lib/view.ts';
@@ -9,13 +10,14 @@ import { PostForm } from '#app/post-form.tsx';
 import { Pager, PAGE_SIZE, pageParam } from '#lib/pager.ts';
 
 export const dynamic = 'force-dynamic';
-export const metadata = { title: 'Forum' };
+// The forum's posts as a feed (lib/posts/atom.ts).
+export const metadata = { title: 'Forum', alternates: { types: { 'application/atom+xml': '/log.atom?path=forum' } } };
 
 export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string; q?: string; page?: string }> }) {
 	const { notice, q = '', page: rawPage } = await searchParams;
 	const page = pageParam(rawPage);
 	const d = await db();
-	const [{ questions, total, pages }, who] = await Promise.all([topics(d, { q, page, limit: PAGE_SIZE }), me()]);
+	const [{ questions, total, pages }, who] = await Promise.all([topics(d, null, { q, page, limit: PAGE_SIZE, space: FORUM }), me()]);
 	const names = await publicNames(d, questions.map((t) => t.voter));
 	return (
 		<article>

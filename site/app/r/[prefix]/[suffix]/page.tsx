@@ -4,6 +4,8 @@ import Script from 'next/script';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { cache, Fragment } from 'react';
 import { comments } from '#lib/posts/comments.ts';
+import { newInThread } from '#lib/accounts/queries.ts';
+import { NewInThread, NewMark, seqParam } from '#lib/feed-view.ts';
 import { PublicAuthor } from '#lib/accounts/public-author.ts';
 import { Markdown } from '#lib/posts/markdown.ts';
 import { PostForm } from '#app/post-form.tsx';
@@ -15,6 +17,7 @@ import { publicNames } from '#lib/accounts/people.ts';
 import { myVotes, votes } from '#lib/records/votes.ts';
 import { Vote } from '#app/vote.tsx';
 import { OwnerEdit } from '#app/owner-edit.tsx';
+import { PostText } from '#app/post-text.tsx';
 
 export const dynamic = 'force-dynamic';
 
@@ -36,18 +39,22 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	return {
 		// A reviewed reception summary describes a discussed record better than its abstract.
 		title: String(r.title), description: reception(r)?.text ?? (String(r.summary ?? '').slice(0, 300) || undefined),
-		alternates: { canonical: recordPath(id), types: { 'application/json': apiPath(id) } },
+		// The same page as text, as JSON, and its thread as a feed.
+		alternates: { canonical: recordPath(id), types: { 'application/json': apiPath(id), 'text/plain': `${recordPath(id)}.txt`,
+			'application/atom+xml': `/log.atom?path=${encodeURIComponent(id)}` } },
 		other: cite,
 	};
 }
 
-export default async function Record(ctx: IdParams & { searchParams: Promise<{ notice?: string }> }) {
+export default async function Record(ctx: IdParams & { searchParams: Promise<{ notice?: string; new?: string }> }) {
 	const id = await recordId(ctx);
 	const r = await record(id);
 	if (!r) notFound();
 	if (r.id !== id) permanentRedirect(recordPath(r.id));
 	const d = await db();
-	const [thread, voters, who, { notice }] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams]);
+	const [thread, voters, who, { notice, new: carried }] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams]);
+	// The posts that came after the reader last opened My feed (docs/my-feed.md).
+	const fresh = await newInThread(d, who, { record: id }, seqParam(carried));
 	const stands = reception(r);
 	const owner = who?.login ?? '';
 	const [names, mine] = await Promise.all([
@@ -122,6 +129,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				{r.pdf ? <a href={String(r.pdf)}>PDF</a> : null}
 				{r.repo ? <a href={String(r.repo)}>Repository</a> : null}
 				<a href={api}>JSON</a>
+				<a href={`${recordPath(id)}.txt`} rel="alternate" type="text/plain">Text</a>
 			</p>
 
 			{discusses.length > 0 && (
@@ -133,13 +141,16 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 
 			<h2>Comments and reviews</h2>
 			{thread.length === 0 && <p className="count">No comments yet.</p>}
+			<NewInThread ids={fresh} order={thread.map((c) => c.id)} />
 			{thread.map((c) => (
 				<div key={c.id} id={`p${c.id}`} className={c.parent ? 'comment reply' : 'comment'}>
 					<p className="meta">
 						<span><PublicAuthor voter={c.voter} agent={c.agent} who={names.get(c.voter)} /></span>
 						<span>{date(c.at)}</span>
+						<NewMark show={fresh.has(c.id)} />
 						{c.review && <span>review</span>}
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
+						<PostText thread={recordPath(id)} id={c.id} />
 					</p>
 					<Markdown text={c.body} postId={c.id} />
 					<OwnerEdit post={c} owner={owner} />

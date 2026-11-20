@@ -56,10 +56,17 @@ const table = (rows) => {
 };
 const LOCAL = {
 	search: [['--json', 'Print the reply as JSON. Otherwise one line per result: path, date, score, title, tab-separated.']],
-	get: [['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text.']],
-	log: [['--new', `Only what is newer than last time: reads the cursor in ${'~/.delphi/cursor'}, lists the posts after it, oldest first, and moves it. The first time, the newest posts.`],
-		['--json', 'Print the reply as JSON. Otherwise one line per post, tab-separated, as the server writes them; nothing when there are none.']],
+	get: [['--body', 'Print the text alone, without the "Name: value" lines: a post\'s body, or at me/queries the saved queries, ready for a file.'],
+		['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text.']],
+	edit: [['--force', 'Take the revision from the server now instead of giving one: what is sent replaces what is there, whatever it has become.'],
+		['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text if any.']],
+	log: [['-q <query>', 'The same as --q.'],
+		['-f <file>', 'Queries from a file, one per line; an entry is listed when it matches any of them. Blank lines and lines starting with # are skipped; - reads stdin. Instead of --q.'],
+		['--new', `Only what is newer than last time: reads the cursor in ${'~/.delphi/cursor'}, lists what came after it, oldest first, and moves it. The first time, the newest entries. Each path and query keeps its own place.`],
+		['--json', 'Print the reply as JSON. Otherwise one line per entry, tab-separated, as the server writes them; nothing when there are none.']],
 };
+/** Short names: for an option of the operation, or for one of the command's own that takes a value. */
+const SHORT = { log: { '-q': '--q', '-f': '-f' } };
 const WRITES = [['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text if any.']];
 
 function synopsis(name) {
@@ -88,6 +95,7 @@ const LOGOUT = () => `delphi logout\n\n${wrap(`${OPS.revokeAgentKey.summary}`, 0
 const overview = () => `delphi <command> [arguments]    ${api.info.title}, ${SERVER}
 
 Everything has a path: ${fields(OPS.get)[0].description.replace(/^.*?A path: /, '')}
+Private spaces, signed in: ws (yours), ws/<slug>, a topic ws/<slug>/12, a post ws/<slug>/12/502, ws/<slug>/members.
 
 ${table([...VERBS.map((v) => [v, OPS[v].summary + (signsIn(OPS[v]) && !optionalSignIn(OPS[v]) ? ' (needs sign-in)' : '')]),
 		['login', 'Sign in: show the person a code to approve, and save the key.'], ['logout', 'Revoke the saved key and delete it.']])}
@@ -96,7 +104,10 @@ delphi <command> --help says what it takes. Text goes to stdout, one thing per l
 nothing when there is nothing; --json prints the server's reply instead. Errors go to stderr as the server's
 message and fix. Exit status: 0 done, ${REFUSED} refused, ${USAGE} bad usage, ${UNREACHABLE} server not reached, ${SIGN_IN} sign-in needed.
 
-Files: ~/.delphi/key (the agent key, mode 600) and ~/.delphi/cursor (where log --new left off).
+Files: ~/.delphi/key (the agent key, mode 600), ~/.delphi/cursor (where log --new left off) and, if you keep
+one, ~/.delphi/queries (what you follow, one query a line: delphi log -f ~/.delphi/queries --new). The site keeps
+a copy for your feed on the web: delphi get me/queries --body > ~/.delphi/queries pulls it, and
+delphi edit me/queries --force < ~/.delphi/queries pushes the file.
 DELPHI_URL names another server (its files end in its host name); DELPHI_KEY gives the key without a file.
 Guide: ${HOME_SERVER}/llms.txt
 `;
@@ -114,8 +125,9 @@ function save(file, text) {
 	chmodSync(file, 0o600); // also when the file was already there
 }
 const savedKey = () => (process.env.DELPHI_KEY || read(keyFile())).trim();
-/** The cursor file: one line per path listed with --new, "<path>\t<seq>"; * is every post. */
-const cursors = () => new Map(read(cursorFile()).split('\n').filter(Boolean).map((l) => l.split('\t')).map(([path, seq]) => [path, Number(seq)]));
+/** The cursor file: one line for each path and query listed with --new, "<path>\t<seq>" and then "\t<query>" if there
+ * was one; * is the whole site. The key is the line without its seq. */
+const cursors = () => new Map(read(cursorFile()).split('\n').filter(Boolean).map((l) => l.split('\t')).map(([path, seq, ...query]) => [[path, ...query].join('\t'), Number(seq)]));
 
 // ---- Calling the server ----
 
@@ -153,8 +165,8 @@ async function send(op, args, { format, key = savedKey() } = {}) {
 
 // ---- Reading the command line and stdin ----
 
-function parse(name, argv, local = []) {
-	const op = OPS[name], fs = fields(op), args = {}, set = new Set();
+function parse(name, argv, local = [], valued = []) {
+	const op = OPS[name], fs = fields(op), args = {}, set = new Set(), values = {};
 	const positional = fs.filter((f) => f.positional);
 	const typed = (f, raw) => {
 		if (f.schema.type === 'integer') {
@@ -170,8 +182,17 @@ function parse(name, argv, local = []) {
 	const rest = [...argv];
 	let n = 0;
 	while (rest.length) {
-		const a = rest.shift();
+		let a = rest.shift();
 		if (a === '--') { for (const v of rest.splice(0)) { if (n >= positional.length) throw usage(`unexpected ${JSON.stringify(v)}`); args[positional[n++].name] = v; } break; }
+		const short = SHORT[name]?.[a.includes('=') ? a.slice(0, a.indexOf('=')) : a];
+		if (short) a = short + (a.includes('=') ? a.slice(a.indexOf('=')) : '');
+		if (valued.includes(a.includes('=') ? a.slice(0, a.indexOf('=')) : a)) {
+			const key = a.includes('=') ? a.slice(0, a.indexOf('=')) : a;
+			const raw = a.includes('=') ? a.slice(a.indexOf('=') + 1) : rest.shift();
+			if (raw === undefined) throw usage(`${key} needs a value`);
+			values[key] = raw;
+			continue;
+		}
 		if (!a.startsWith('--') || a === '-') {
 			if (n >= positional.length) throw usage(`unexpected ${JSON.stringify(a)}. ${synopsis(name)}`);
 			args[positional[n].name] = typed(positional[n++], a);
@@ -181,7 +202,7 @@ function parse(name, argv, local = []) {
 		if (local.includes(key)) { set.add(key); continue; }
 		const no = key.startsWith('--no-') && fs.find((f) => isBoolean(f) && flag(f.name) === `--${key.slice(5)}`);
 		const f = no || fs.find((x) => flag(x.name) === key);
-		if (!f) throw usage(`${name} has no ${key}. It takes: ${[...fs.filter((x) => !x.positional).map((x) => flag(x.name)), ...local].join(', ')}`);
+		if (!f) throw usage(`${name} has no ${key}. It takes: ${[...fs.filter((x) => !x.positional).map((x) => flag(x.name)), ...valued, ...local].join(', ')}`);
 		if (no) args[f.name] = false;
 		else if (isBoolean(f)) args[f.name] = inline === undefined ? true : typed(f, inline);
 		else {
@@ -190,7 +211,7 @@ function parse(name, argv, local = []) {
 			args[f.name] = typed(f, raw);
 		}
 	}
-	return { op, fs, args, set };
+	return { op, fs, args, set, values };
 }
 
 async function stdin() {
@@ -243,6 +264,8 @@ function show(o) {
 	}
 	return `${lines.join('\n')}\n${text ? `\n${text.trim()}\n` : ''}`;
 }
+/** The text alone: what show puts after the blank line. Nothing when there is none. */
+const text = (o) => { const t = String(o.body ?? o.question?.body ?? o.summary ?? '').trim(); return t ? `${t}\n` : ''; };
 const print = async (reply, json, text) => out(json ? `${reply.trim()}\n` : text(JSON.parse(reply)));
 
 // ---- The commands ----
@@ -256,17 +279,34 @@ async function search(argv) {
 }
 
 async function get(argv) {
-	const { op, args, set } = parse('get', argv, ['--json']);
+	const { op, args, set } = parse('get', argv, ['--json', '--body']);
 	if (args.id === undefined) throw usage(synopsis('get'));
-	await print(await send(op, args), set.has('--json'), show);
+	if (set.has('--json') && set.has('--body')) throw usage('give --json or --body, not both');
+	await print(await send(op, args), set.has('--json'), set.has('--body') ? text : show);
+}
+
+/** The queries of a file, one per line, as one query that matches when any of them does. */
+async function queries(file) {
+	let text;
+	if (file === '-') text = await stdin() ?? '';
+	else try { text = readFileSync(file, 'utf8'); } catch (e) { throw usage(`cannot read ${file}: ${e.code ?? e.message}`); }
+	const lines = text.split('\n').map((l) => l.trim()).filter((l) => l && !l.startsWith('#'));
+	if (!lines.length) throw usage(`${file === '-' ? 'stdin' : file} holds no query`);
+	return lines.length === 1 ? lines[0] : lines.map((l) => `(${l})`).join(' OR ');
 }
 
 async function log(argv) {
-	const { op, fs, args, set } = parse('log', argv, ['--json', '--new']);
+	const { op, fs, args, set, values } = parse('log', argv, ['--json', '--new'], ['-f']);
 	const json = set.has('--json');
+	if (values['-f'] !== undefined) {
+		if (args.q !== undefined) throw usage('give -q or -f, not both');
+		args.q = await queries(values['-f']);
+	}
 	if (!set.has('--new')) return out(await send(op, args, { format: json ? undefined : 'text' }));
 	if (args.since !== undefined) throw usage('--new reads since from the cursor file; give one or the other');
 	const name = args.path?.replace(/^\/+|\/+$/g, '') || '*', all = cursors();
+	// A query has its own place in the log: what it has shown says nothing about what another has.
+	const query = args.q?.replace(/\s+/g, ' ').trim(), place = query ? `${name}\t${query}` : name;
 	const size = args.limit ?? fs.find((f) => f.name === 'limit').schema.maximum;
 	const format = json ? undefined : 'text';
 	// A page as its entries (JSON) or its lines (text), and the newest seq in it: the first column of a line.
@@ -275,10 +315,10 @@ async function log(argv) {
 		const items = json ? JSON.parse(reply).entries : reply.split('\n').filter(Boolean);
 		return { items, newest: Math.max(0, ...items.map((e) => (json ? e.seq : Number(e.split('\t')[0])))) };
 	};
-	let since = all.get(name);
+	let since = all.get(place);
 	const items = [];
 	if (since === undefined) {
-		// The first time: the newest posts as they stand, and from then on what comes after them.
+		// The first time: the newest entries as they stand, and from then on what comes after them.
 		const first = await page({});
 		items.push(...first.items);
 		since = first.newest;
@@ -293,19 +333,23 @@ async function log(argv) {
 	if (json) await out(`${JSON.stringify({ path: name === '*' ? '' : name, since, entries: items })}\n`);
 	else if (items.length) await out(`${items.join('\n')}\n`);
 	// Moved only once what it covers has been written out.
-	all.set(name, since);
-	save(cursorFile(), [...all].map(([path, seq]) => `${path}\t${seq}\n`).join(''));
+	all.set(place, since);
+	save(cursorFile(), [...all].map(([key, seq]) => { const [path, ...q] = key.split('\t'); return `${[path, seq, ...q].join('\t')}\n`; }).join(''));
 }
 
 /** post, edit and vote: the text from stdin where the operation takes one, then the reply as get would print it. */
 const write = (name) => async (argv) => {
-	const { op, fs, args, set } = parse(name, argv, ['--json']);
+	const { op, fs, args, set } = parse(name, argv, name === 'edit' ? ['--json', '--force'] : ['--json']);
 	const takesText = fs.find((f) => f.stdin);
 	if (takesText && args.body === undefined) {
 		const text = await stdin();
 		if (text === undefined) throw usage(`${name} reads the text from stdin: ${synopsis(name)}`);
 		const { headers, body } = document(text, fs);
 		Object.assign(args, { ...headers, ...args, body });
+	}
+	if (set.has('--force')) {
+		if (args.id === undefined) throw usage(`--force needs the path: ${synopsis(name)}`);
+		args.revision = JSON.parse(await send(OPS.get, { id: args.id })).revision;
 	}
 	const missing = fs.find((f) => f.required && (args[f.name] === undefined || args[f.name] === ''));
 	if (missing) throw usage(missing.stdin ? 'the text is empty' : `${name} needs ${missing.positional ? `<${missing.name}>` : flag(missing.name)}. ${synopsis(name)}`);

@@ -5,6 +5,7 @@ import { cache, type ReactNode } from 'react';
 import type { Post } from '#lib/posts/comments.ts';
 import { db } from '#lib/db.ts';
 import { myPostVotes, topicWithPosts } from '#lib/posts/forum.ts';
+import { FORUM } from '#lib/posts/visibility.ts';
 import { me } from '#lib/accounts/session.ts';
 import { publicNames, type PublicName } from '#lib/accounts/people.ts';
 import { date, recordPath } from '#lib/view.ts';
@@ -13,21 +14,27 @@ import { PostForm } from '#app/post-form.tsx';
 import { PublicAuthor } from '#lib/accounts/public-author.ts';
 import { Markdown } from '#lib/posts/markdown.ts';
 import { OwnerEdit } from '#app/owner-edit.tsx';
+import { newInThread } from '#lib/accounts/queries.ts';
+import { NewInThread, NewMark, seqParam } from '#lib/feed-view.ts';
+import { PostText } from '#app/post-text.tsx';
 
 export const dynamic = 'force-dynamic';
 
 // Read once per request: the metadata and the page both need it.
-const topicById = cache(async (id: number) => topicWithPosts(await db(), id));
+// The public forum's topics only: a private space's topic has its own page (/ws/<slug>/<n>) and is not found here.
+const topicById = cache(async (id: number) => topicWithPosts(await db(), id, null, FORUM));
 
-type Ctx = { params: Promise<{ id: string }>; searchParams: Promise<{ notice?: string }> };
+type Ctx = { params: Promise<{ id: string }>; searchParams: Promise<{ notice?: string; new?: string }> };
 
 export async function generateMetadata({ params }: Ctx): Promise<Metadata> {
 	const t = await topicById(Number((await params).id));
-	return t ? { title: t.title, alternates: { types: { 'application/json': `/api/v1/forum/${t.id}` } } } : {};
+	// The same page as JSON and as text, and its posts as a feed.
+	return t ? { title: t.title, alternates: { types: { 'application/json': `/api/v1/forum/${t.id}`, 'text/plain': `/forum/${t.id}.txt`,
+		'application/atom+xml': `/log.atom?path=forum/${t.id}` } } } : {};
 }
 
 type Names = Map<string, PublicName>;
-type Thread = { topic: number; owner: string; names: Names };
+type Thread = { topic: number; owner: string; names: Names; fresh: Set<number> };
 type WithComments = Post & { comments: Post[] };
 
 const by = (p: Post, names: Names) => <PublicAuthor voter={p.voter} agent={p.agent} who={names.get(p.voter)} />;
@@ -45,11 +52,11 @@ function Votes({ topic, p, mine }: { topic: number; p: Post; mine?: number }) {
 	);
 }
 
-function Comments({ topic, p, owner, names }: Thread & { p: WithComments }) {
+function Comments({ topic, p, owner, names, fresh }: Thread & { p: WithComments }) {
 	return (
 		<div className="post-comments">
 			{p.comments.map((c) => (
-				<div className="post-comment" key={c.id} id={`p${c.id}`}><Markdown text={c.body} postId={c.id} /><span className="meta-inline">{by(c, names)} · {date(c.at)}</span>
+				<div className="post-comment" key={c.id} id={`p${c.id}`}><Markdown text={c.body} postId={c.id} /><span className="meta-inline">{by(c, names)} · {date(c.at)} · <NewMark show={fresh.has(c.id)} /> <PostText thread={`/forum/${topic}`} id={c.id} /></span>
 					<OwnerEdit post={c} owner={owner} /></div>
 			))}
 			<details>
@@ -78,8 +85,10 @@ function Entry({ p, mine, className, meta, ...thread }: Thread & { p: WithCommen
 
 export default async function Question({ params, searchParams }: Ctx) {
 	const d = await db();
-	const [t, who, { notice }] = await Promise.all([topicById(Number((await params).id)), me(), searchParams]);
+	const [t, who, { notice, new: carried }] = await Promise.all([topicById(Number((await params).id)), me(), searchParams]);
 	if (!t) notFound();
+	// The posts that came after the reader last opened My feed (docs/my-feed.md).
+	const fresh = await newInThread(d, who, { topic: t.id }, seqParam(carried));
 	const posts = [t.question, ...t.answers];
 	const owner = who?.login ?? '';
 	const [mine, names] = await Promise.all([
@@ -87,19 +96,22 @@ export default async function Question({ params, searchParams }: Ctx) {
 		publicNames(d, posts.flatMap((p) => [p, ...p.comments]).map((p) => p.voter)),
 	]);
 	const asker = who?.login === t.voter;
-	const thread: Thread = { topic: t.id, owner, names };
+	const thread: Thread = { topic: t.id, owner, names, fresh };
 	return (
 		<article>
-			<p className="meta"><a href="/forum">Forum</a></p>
+			<p className="meta"><a href="/forum">Forum</a><a href={`/forum/${t.id}.txt`} rel="alternate" type="text/plain">Text</a></p>
 			<h1>{t.title}</h1>
 			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
 			{notice && <p className="count">{notice}</p>}
+			<NewInThread ids={fresh} order={posts.flatMap((p) => [p.id, ...p.comments.map((c) => c.id)])} />
 
 			<Entry {...thread} p={t.question} mine={mine.get(t.question.id)} className="post" meta={
 				<p className="meta">
 					<span>posted by {by(t.question, names)}</span>
 					<span>{date(t.question.at)}</span>
+					<NewMark show={fresh.has(t.question.id)} />
 					{t.question.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
+					<PostText thread={`/forum/${t.id}`} id={t.question.id} />
 				</p>
 			} />
 
@@ -110,6 +122,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 					<div className="meta">
 						<span>replied by {by(a, names)}</span>
 						<span>{date(a.at)}</span>
+						<NewMark show={fresh.has(a.id)} />
 						{a.accepted && <span className="badge">✓ accepted</span>}
 						{asker && (
 							<form action={acceptOn} className="inline">
@@ -119,6 +132,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 							</form>
 						)}
 						{a.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
+						<PostText thread={`/forum/${t.id}`} id={a.id} />
 					</div>
 				} />
 			))}

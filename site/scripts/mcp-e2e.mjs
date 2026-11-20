@@ -69,7 +69,7 @@ if (MODE === 'review') {
 }
 await page.waitForURL(/\/oauth\/authorize\?/);
 const consent = await page.locator('article').innerText();
-const login = consent.match(/comment as @([\w-]+)/)?.[1];
+const login = consent.match(/\bas @([\w-]+)/)?.[1];
 check('consent page shows who, what and where it returns', Boolean(login) && consent.includes(`127.0.0.1:${server.address().port}`), `@${login}`);
 await page.click('button:has-text("Approve")');
 const back = await callback;
@@ -93,6 +93,10 @@ const forum = await anon.c.callTool({ name: 'search', arguments: { in: 'forum' }
 check('search in=forum', !forum.isError, `${forum.structuredContent.total} topics`);
 const logged = await anon.c.callTool({ name: 'log', arguments: { path: id } });
 check('log of the record lists its posts, one line each', !logged.isError && logged.content[0].text.split('\n').filter(Boolean).length === logged.structuredContent.entries.length, `${logged.structuredContent.entries.length} posts`);
+const records = await anon.c.callTool({ name: 'log', arguments: { q: 'kind:record', limit: 3 } });
+check('log with a query lists only what matches', !records.isError && records.structuredContent.entries.every((e) => e.kind === 'record'), `${records.structuredContent.entries.length} records`);
+const anonInbox = await anon.c.callTool({ name: 'log', arguments: { q: 'to:@me' } });
+check('log to:@me without sign-in asks for sign-in', anonInbox.isError && Boolean(anonInbox._meta?.['mcp/www_authenticate']));
 const anonMe = await anon.c.callTool({ name: 'get', arguments: { id: 'me' } });
 check('get me without sign-in asks for sign-in', anonMe.isError && Boolean(anonMe._meta?.['mcp/www_authenticate']));
 const gone = await me.c.callTool({ name: 'vote', arguments: { id, value: 0 } });

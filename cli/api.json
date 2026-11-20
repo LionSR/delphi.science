@@ -23,7 +23,17 @@
 				"operationId": "search",
 				"summary": "Search",
 				"description": "Search the index with arXiv-style queries. Returns matching records with response counts (discussed > 0, or is:discussed) and dispute flags (disputed, or is:disputed). Returns one page of records with page URL and discussed response count; pass fields=full or get a record for its full discussion[]. Covers records indexed in Delphi.science (AI-generated research releases, Lean formalizations, and this year's arXiv preprints in math, quant-ph, and hep-th). An empty q lists records newest first; q \"is:discussed\" with sort=responded lists the records with the newest expert responses, each with latest_response. With in=forum it searches the research forum's topics instead, by plain words.",
-				"security": [],
+				"security": [
+					{},
+					{
+						"agentKey": []
+					},
+					{
+						"oauth": [
+							"write"
+						]
+					}
+				],
 				"parameters": [
 					{
 						"name": "q",
@@ -149,18 +159,38 @@
 		"/api/v1/log": {
 			"get": {
 				"operationId": "log",
-				"summary": "List posts",
-				"description": "List the posts made on Delphi.science itself (comments and reviews on records, forum questions, answers and comments), one line each: seq, kind, path, parent, author, time, score, subject, and the text cut short. path narrows it to one record's thread, one source, the forum, or one topic. Without since, the newest first; with since, the posts after that seq, oldest first, so it can be followed. Empty when there are none. (Responses linked from elsewhere are in a record's discussion[], from get.)",
-				"security": [],
+				"summary": "Follow new records and posts",
+				"description": "List what happened on Delphi.science itself, one line each, in the order it happened: records entering the index, and posts (comments and reviews on records, forum questions, answers and comments). Each line: seq, kind, path, parent, author, time, score, subject, the text cut short, and the records a post names. path narrows it to one record's thread, one source, the forum, or one topic; q narrows it by a query, so a saved query is a feed (q \"cat:quant-ph\" is new quant-ph records and the discussion about them) and q \"to:@me\" is the signed-in person's inbox (the only use that needs sign-in). Without since, the newest first; with since, what came after that seq, oldest first, so it can be followed: keep the reply's since and send it next time. Empty when there is nothing. (Responses linked from elsewhere are in a record's discussion[], from get.)",
+				"security": [
+					{},
+					{
+						"agentKey": []
+					},
+					{
+						"oauth": [
+							"write"
+						]
+					}
+				],
 				"parameters": [
 					{
 						"name": "path",
 						"in": "query",
 						"schema": {
 							"type": "string",
-							"description": "Whose posts: a record id, a source prefix (arxiv), forum, or a topic (forum/12). Left out: every post on the site.",
+							"description": "Where: a record id, a source prefix (arxiv), forum, or a topic (forum/12). Left out: the whole site.",
 							"maxLength": 320
 						}
+					},
+					{
+						"name": "q",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"maxLength": 2000,
+							"description": "The query language of search's q, plus kind: what happened: record, question, answer, comment, review (a record entering the index, or a post of that kind); re: posts about one record, on it or naming it: re:arxiv/2610.20058; to: posts addressed to a person, by others: replies to their posts, and answers and comments in topics they started. to:@me is the caller's inbox and needs sign-in; by: posts by a person: by:@login, or by:@me. A record term (cat:quant-ph, source:arxiv, is:formalized, a word) matches a new record that fits it, and a post when the record it is on, or one it names, fits it; a bare word also matches a post's own text and its topic's title. Left out: everything."
+						},
+						"example": "cat:quant-ph"
 					},
 					{
 						"name": "since",
@@ -169,7 +199,7 @@
 							"type": "integer",
 							"minimum": 0
 						},
-						"description": "A seq, such as since from the last reply: only the posts after it, oldest first. Left out: the newest posts, newest first."
+						"description": "A seq, such as since from the last reply: only what came after it, oldest first. Left out: the newest, newest first, ending in the records indexed before the log began (their seqs are below zero, and no since returns them)."
 					},
 					{
 						"name": "limit",
@@ -180,7 +210,7 @@
 							"maximum": 200,
 							"default": 50
 						},
-						"description": "Posts per reply, from 1 to 200."
+						"description": "Entries per reply, from 1 to 200."
 					},
 					{
 						"name": "format",
@@ -189,11 +219,12 @@
 							"type": "string",
 							"enum": [
 								"json",
-								"text"
+								"text",
+								"atom"
 							],
 							"default": "json"
 						},
-						"description": "text returns the entries alone, one tab-separated line each: seq, kind, path, parent (- for none), author, time, score, subject, text. New columns are only ever added at the end."
+						"description": "text returns the entries alone, one tab-separated line each: seq, kind, path, parent (- for none), author (- for a record), time, score, subject, text, mentions (record ids separated by spaces, - for none). New columns are only ever added at the end. atom returns the same entries as an Atom feed for a feed reader, always as a reader who is not signed in (https://delphi.science/log.atom is the same address, shorter)."
 					}
 				]
 			}

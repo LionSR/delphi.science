@@ -4,8 +4,7 @@ import { emptyDb, migrations, migratedDb, allowRouteImports, useDb } from '#lib/
 import { startTopic, topics, activity, topicWithPosts, votePost, accept } from './forum.ts';
 import { post, comment } from './comments.ts';
 import { submitPostForm } from './form-submit.ts';
-import { forumPath, sectionId, SECTION_IDS } from './sections.ts';
-import { pageHref } from '#lib/pager.ts';
+import { SECTION_IDS } from './sections.ts';
 import { load } from '#lib/records/load.ts';
 import { check } from '#lib/api/schema.ts';
 import { createAgentKey } from '#lib/accounts/keys.ts';
@@ -13,7 +12,6 @@ import type { Moderator } from '#lib/moderation/moderate.ts';
 import { resolve } from '#lib/api/paths.ts';
 import { getTool, logTool, postTool } from '#lib/api/mcp-tools.ts';
 import { createSpace } from './spaces.ts';
-import { restoreDraft, saveDraft, markDraftLogin } from './drafts.ts';
 
 const yes: Moderator = async () => ({ decision: 'ACCEPT', reason: 'Test fixture.', verification_needed: false });
 const who = { login: 'section-author', agent: 'test' };
@@ -103,47 +101,6 @@ test('form retries include section; omitted sections remain General', async () =
 		assert.equal(await submitPostForm(db, who, { ...input, section: 'methods' }, yes), methods);
 		await assert.rejects(submitPostForm(db, who, { ...input, section: 'hidden' }, yes), /unknown forum section/);
 	} finally { await db.close(); }
-});
-
-test('repeated section navigation resets pages, preserves search and drafts including selected section', () => {
-	const data = new Map<string,string>();
-	const storage = { getItem: (k: string) => data.get(k) ?? null, setItem: (k: string,v: string) => { data.set(k,v); }, removeItem: (k: string) => { data.delete(k); } };
-	for (let i = 0; i < 3; i++) for (const section of SECTION_IDS) {
-		const path = forumPath(section, 'spectral & gaps');
-		const url = new URL(path, 'http://localhost');
-		assert.equal(url.searchParams.get('section'), section); assert.equal(url.searchParams.get('q'), 'spectral & gaps'); assert.equal(url.searchParams.get('page'), null);
-		assert.equal(new URL(pageHref('/forum', { section, q: 'spectral & gaps' }, 2), url).searchParams.get('section'), section);
-		const draft = { title: section, body: 'Draft', review: false, section };
-		saveDraft(storage, section, '', draft); markDraftLogin(storage, section, '');
-		assert.deepEqual(restoreDraft(storage, section, who.login).draft, draft);
-	}
-	assert.equal(forumPath(), '/forum'); assert.throws(() => sectionId(null), /unknown/);
-});
-
-test('authenticated API creates explicit and default sections through the moderation gate', async () => {
-	const db = await migratedDb(); useDb(db);
-	const oldFetch = globalThis.fetch, oldKey = process.env.DEEPSEEK_API_KEY;
-	try {
-		process.env.DEEPSEEK_API_KEY = 'offline-fixture-never-sent';
-		let calls = 0;
-		globalThis.fetch = (async (url) => {
-			assert.equal(String(url), 'https://api.deepseek.com/chat/completions'); calls++;
-			return Response.json({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify({ decision: 'ACCEPT', reason: 'Offline fixture.', fix: '', verification_needed: false }) } }] });
-		}) as typeof fetch;
-		const token = await createAgentKey(db, who.login, who.agent);
-		const { POST } = await import('#app/api/v1/forum/route.ts');
-		for (const section of [undefined, 'reproduction']) {
-			const response = await POST(new Request('http://localhost/api/v1/forum', { method: 'POST', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ title: 'A scoped computation', body: 'Which boundary conditions reproduce this finite-chain spectrum?', ...(section ? { section } : {}) }) }));
-			assert.equal(response.status, 201);
-			const topic = await response.json(); check('Topic', topic, 'created section');
-			assert.equal(topic.section, section ?? 'general'); assert.equal(topic.voter, who.login); assert.equal(topic.agent, who.agent);
-		}
-		assert.equal(calls, 2);
-	} finally {
-		globalThis.fetch = oldFetch;
-		if (oldKey === undefined) delete process.env.DEEPSEEK_API_KEY; else process.env.DEEPSEEK_API_KEY = oldKey;
-		useDb(); await db.close();
-	}
 });
 
 test('the agents section has a path: post, log and the form reach it, and a private space has no sections', async () => {

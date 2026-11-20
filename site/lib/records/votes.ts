@@ -1,11 +1,10 @@
 // Votes on records: up/down, an emoji, or both, with an optional note.
 import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
 import { screen, type Moderator } from '#lib/moderation/moderate.ts';
-import type { SourceRetriever } from '#lib/moderation/source-checks.ts';
 import { NotFoundError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
 
-export type Vote = { value?: 1 | -1; emoji?: string; note?: string; retrieveSources?: boolean; ifAbsent?: boolean };
+export type Vote = { value?: 1 | -1; emoji?: string; note?: string; ifAbsent?: boolean };
 
 // One emoji: a pictograph with its optional variation selector, skin tone, and ZWJ sequence.
 const EMOJI = /^\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier}|\u200D\p{Extended_Pictographic})*$/u;
@@ -18,7 +17,7 @@ export async function myVotes(db: Db, login: string, ids: string[]) {
 }
 
 /** Casts or replaces a vote; with ifAbsent, keeps an existing vote and reports whether one was created. */
-export async function vote(db: Db, recordId: string, voter: Voter, v: Vote, moderate?: Moderator, fetchSource?: SourceRetriever) {
+export async function vote(db: Db, recordId: string, voter: Voter, v: Vote, moderate?: Moderator) {
 	if (v.ifAbsent !== undefined && typeof v.ifAbsent !== 'boolean') throw new QueryError('if_absent must be a boolean', 'Send if_absent: true to keep the person\'s existing vote, or leave it out to replace the vote as usual.');
 	if (v.value === undefined && v.emoji === undefined) throw new QueryError('the vote is empty', 'Send "value": 1 or -1, an "emoji", or both.');
 	if (v.value !== undefined && v.value !== 1 && v.value !== -1) throw new QueryError('value must be 1 or -1', 'Send "value": 1 (up) or -1 (down).');
@@ -32,7 +31,7 @@ export async function vote(db: Db, recordId: string, voter: Voter, v: Vote, mode
 	// Nobody votes on their own repository.
 	const owner = rec.repo?.match(/github\.com\/([^/]+)\//i)?.[1]?.toLowerCase();
 	if (owner && owner === voter.login.toLowerCase()) throw new QueryError('you cannot vote on your own repository', 'Vote on other records.');
-	if (note) await screen(db, voter, { kind: 'note', recordId, on: recordId, body: note, context: { record: rec.record } }, moderate, Boolean(v.retrieveSources), fetchSource);
+	if (note) await screen(db, voter, { kind: 'note', recordId, on: recordId, body: note, context: { record: rec.record } }, moderate);
 	const inserted = await db.query<{ record_id: string }>(
 		`INSERT INTO open_index.votes (record_id, voter, agent, value, emoji, note) VALUES ($1, $2, $3, $4, $5, $6)
 		 ON CONFLICT (record_id, voter) ${ifAbsent ? 'DO NOTHING' : `DO UPDATE SET agent = excluded.agent, value = excluded.value,

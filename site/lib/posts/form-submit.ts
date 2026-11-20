@@ -17,7 +17,7 @@ import { canRead, FORUM } from './visibility.ts';
 export const FORM_KINDS = ['question', 'answer', 'comment', 'record', 'submission'] as const;
 
 export type PostInput = { kind: (typeof FORM_KINDS)[number]; title: string; body: string;
-	topic?: number; parent?: number; record?: string; review: boolean; retrieveSources?: boolean;
+	topic?: number; parent?: number; record?: string; review: boolean;
 	/** The space a topic is in or goes to; the forum when left out. */
 	space?: string;
 	/** The forum section a new topic goes to; general when left out. */
@@ -49,7 +49,7 @@ export async function submitPostForm(db: Db, who: Voter, input: PostInput, moder
 		const existing = (await db.query<{ id: number }>(
 			`SELECT id::int FROM open_index.comments WHERE record_id=$1 AND voter=$2 AND body=$3 AND review=$4 AND parent_id IS NULL LIMIT 1`,
 			[input.record, who.login, body, input.review])).rows[0];
-		const p = existing ?? await comment(db, input.record, who, { body, review: input.review, retrieveSources: input.retrieveSources }, moderate);
+		const p = existing ?? await comment(db, input.record, who, { body, review: input.review }, moderate);
 		return `${recordPath(input.record)}#p${p.id}`;
 	}
 	const positive = (n: number | undefined) => Number.isSafeInteger(n) && Number(n) >= 1;

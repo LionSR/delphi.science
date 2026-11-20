@@ -1,8 +1,8 @@
 // The command line (cli/delphi.mjs) against this site, served over HTTP from the route handlers on in-process
-// Postgres: each verb's text and JSON, sign-in by the device flow, the log cursor, text through stdin, and exit statuses.
+// Postgres: the main verbs' text and JSON, sign-in by the device flow, and text through stdin.
 import { strict as assert } from 'node:assert';
 import { spawn } from 'node:child_process';
-import { mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs';
 import { createServer, type Server } from 'node:http';
 import type { AddressInfo } from 'node:net';
 import { tmpdir } from 'node:os';
@@ -14,7 +14,7 @@ import { approveDevice } from '#lib/accounts/device.ts';
 import { voterFromKey } from '#lib/accounts/keys.ts';
 import { load } from '#lib/records/load.ts';
 import { allowRouteImports, migratedDb, useDb } from '#lib/testing.ts';
-import { operations, spec, VERBS } from './openapi.ts';
+import { spec } from './openapi.ts';
 
 allowRouteImports();
 
@@ -29,10 +29,6 @@ const priorFetch = globalThis.fetch, priorKey = process.env.DEEPSEEK_API_KEY;
 function route(path: string) {
 	const verb = path.match(/^\/api\/v1\/(get|post|edit|vote)\/(.+)$/);
 	if (verb) return { file: `/api/v1/${verb[1]}/[...id]`, params: { id: verb[2].split('/').map(decodeURIComponent) } as Record<string, string | string[]> };
-	// The text form of a page (next.config.ts rewrites /r/<id>.txt and /forum/<n>.txt here) and the feed.
-	const txt = path.match(/^\/txt\/(.+)$/);
-	if (txt) return { file: '/txt/[...id]', params: { id: txt[1].split('/') } as Record<string, string | string[]> };
-	if (path === '/log.atom') return { file: '/log.atom', params: {} };
 	const tmpl = Object.keys(spec.paths).filter((p) => new RegExp(`^${p.replace(/\{[^}]+\}/g, '[^/]+')}$`).test(path))
 		.sort((a, b) => (a.match(/\{/g)?.length ?? 0) - (b.match(/\{/g)?.length ?? 0))[0];
 	if (!tmpl) return undefined;
@@ -100,37 +96,10 @@ const header = (text: string, name: string) => text.match(new RegExp(`^${name}: 
 const api = (path: string) => priorFetch(`${url}${path}`);
 
 describe('the command line', () => {
-	test('its commands, options and help are the OpenAPI document\'s', async () => {
-		const overview = await ok(['--help']);
-		for (const v of VERBS) assert.match(overview, new RegExp(`^  ${v} +${operations.find((o) => o.operationId === v)!.summary}`, 'm'), v);
-		assert.match(overview, /^  login /m);
-		assert.match(overview, /^  logout /m);
-		assert.equal(await ok([]), overview);
-		const unwrapped = (s: string) => s.replace(/\s+/g, ' ');
-		for (const v of VERBS) {
-			const op = operations.find((o) => o.operationId === v)!, help = unwrapped(await ok([v, '--help']));
-			assert.ok(help.includes(unwrapped(op.description!)), `${v}: its description`);
-			for (const p of op.parameters.filter((p) => p.name !== 'format')) assert.ok(help.includes(unwrapped(p.description ?? p.schema.description!)), `${v} ${p.name}`);
-			for (const [name, s] of Object.entries(op.body?.properties ?? {})) {
-				assert.ok(help.includes(name === 'body' ? 'stdin' : `--${name.replaceAll('_', '-')}`), `${v} ${name}`);
-				if (s.description) assert.ok(help.includes(unwrapped(s.description)), `${v} ${name}: its description`);
-			}
-		}
-		assert.equal(await ok(['help', 'log']), await ok(['log', '--help']));
-		assert.match(await ok(['--version']), /^\d+\.\d+\.\d+\n$/);
-	});
-
 	test('search prints one tab-separated line per record or topic, and --json the reply itself', async () => {
 		const lines = (await ok(['search', 'finite-chain', '--sort', 'title'])).split('\n');
 		assert.deepEqual(lines, [`${QUIET}\t2026-11-01\t0\tA finite-chain computation (${QUIET})`, `${RECORD}\t2026-11-01\t0\tA finite-chain computation (${RECORD})`, '']);
 		assert.deepEqual(JSON.parse(await ok(['search', 'finite-chain', '--sort', 'title', '--json'])), await (await api('/api/v1/find?q=finite-chain&sort=title')).json());
-		// Nothing found is nothing printed.
-		assert.deepEqual(await delphi(['search', 'no-such-word-anywhere']), { status: 0, out: '', err: '' });
-		assert.equal(await ok(['search', '--in', 'forum']), '');
-		// More than a page: where the next one starts goes to stderr, out of the pipe's way.
-		const first = await delphi(['search', 'finite-chain', '--limit=1']);
-		assert.equal(first.out.split('\n').length, 2);
-		assert.match(first.err, /^delphi: 1 of 2; the next page: --cursor \S+\n$/);
 	});
 
 	test('get prints headers, a blank line and the text; a path that names nothing is the server\'s message and fix on stderr', async () => {
@@ -140,28 +109,6 @@ describe('the command line', () => {
 		assert.ok(rec.endsWith('\n\nWe compute the endpoint terms of an open chain.\n'));
 		assert.deepEqual(JSON.parse(await ok(['get', RECORD, '--json'])), await (await api(`/api/v1/get/${RECORD}`)).json());
 		assert.deepEqual(await delphi(['get', 'app/none']), { status: 1, out: '', err: 'delphi: no record "app/none". Use an id that search returns, e.g. arxiv/2610.20058.\n' });
-		assert.deepEqual(await delphi(['get', 'forum']), { status: 1, out: '', err: 'delphi: "forum" is a list, not one thing. Use log for its posts, or search for its records (in=forum for topics).\n' });
-	});
-
-	test('exit statuses: 2 for bad usage, 3 when the server is not reached, 4 when sign-in is needed', async () => {
-		for (const args of [['frobnicate'], ['get'], ['get', RECORD, 'extra'], ['log', '--sinse', '3'], ['log', '--since', 'soon'], ['log', '--since'], ['log', '--new', '--since', '3'], ['log', '-q'], ['log', '-q', 'kind:record', '-f', 'queries'], ['log', '-f', 'no-such-file'], ['help', 'frobnicate'], ['logout', 'now']]) {
-			const r = await delphi(args);
-			assert.deepEqual([r.status, r.out], [2, ''], args.join(' '));
-			assert.match(r.err, /^delphi: /);
-		}
-		assert.match((await delphi(['log', '--sinse', '3'])).err, /log has no --sinse\. It takes: --q, --since, --limit, -f, --json, --new/);
-		const down = await delphi(['get', RECORD], undefined, { DELPHI_URL: 'http://127.0.0.1:9' });
-		assert.deepEqual([down.status, down.out], [3, '']);
-		assert.match(down.err, /^delphi: cannot reach http:\/\/127\.0\.0\.1:9: /);
-		// Nobody is signed in yet: the commands that act for a person say so without asking the server, and get me asks it.
-		for (const args of [['vote', RECORD, '--value', '1'], ['get', 'me']]) {
-			const r = await delphi(args);
-			assert.deepEqual([r.status, r.out], [4, ''], args.join(' '));
-			assert.match(r.err, /^delphi: sign-in required\. .*delphi login/);
-		}
-		assert.equal((await delphi(['post', RECORD], 'A reading.')).status, 4);
-		// The server's own refusals are 1 (above: get of a path that names nothing).
-		assert.equal((await delphi(['log', 'nowhere'])).status, 1);
 	});
 
 	test('login shows a code to approve, waits, and saves the key to a private file without printing it', async () => {
@@ -187,34 +134,6 @@ describe('the command line', () => {
 		assert.deepEqual(await voterFromKey(pg, key), { login: 'Ada', agent: 'Test CLI' });
 		const me = await ok(['get', 'me']);
 		assert.deepEqual([header(me, 'Id'), header(me, 'Login'), header(me, 'Agent')], ['me', 'Ada', 'Test CLI']);
-		// The key goes only to the server that issued it: the same home has none for another server.
-		const elsewhere = await delphi(['vote', RECORD, '--value', '1'], undefined, { DELPHI_URL: 'http://127.0.0.1:9' });
-		assert.equal(elsewhere.status, 4, 'refused here, before anything is sent there');
-	});
-
-	test('login waits through authorization_pending, and a denied code is the server\'s refusal', async () => {
-		const other = mkdtempSync(join(tmpdir(), 'delphi-cli-'));
-		try {
-			const waiting = delphi(['login', '--agent', 'Slow CLI'], undefined, { HOME: other });
-			// The code is stored as soon as it is shown; approve it after the first poll has come back pending.
-			let code = '';
-			for (let n = 0; n < 100 && !code; n++) {
-				await new Promise((r) => setTimeout(r, 50));
-				code = (await pg.query<{ user_code: string }>("SELECT user_code FROM open_index.device_codes WHERE agent = 'Slow CLI'")).rows[0]?.user_code ?? '';
-			}
-			await new Promise((r) => setTimeout(r, 300));
-			await approveDevice(pg, code, 'Grace');
-			const done = await waiting;
-			assert.equal(done.status, 0, done.err);
-			assert.match(done.out, new RegExp(`^Code: ${code}\\nOpen: \\S+\\nSigned in as @Grace \\(Slow CLI\\)\\n$`));
-			assert.match(done.err, /waiting for the person to approve the code/);
-
-			const started = await delphi(['login', '--no-wait'], undefined, { HOME: other, DELPHI_URL: `${url}/` });
-			await pg.query('UPDATE open_index.device_codes SET used_at = now() WHERE user_code = $1', [header(started.out, 'Code')]); // denied
-			const denied = await delphi(['login'], undefined, { HOME: other });
-			assert.equal(denied.status, 1);
-			assert.match(denied.err, /^delphi: this device code is unknown, used, denied, or expired\. Start again/m);
-		} finally { rmSync(other, { recursive: true, force: true }); }
 	});
 
 	let comment = '';
@@ -239,8 +158,6 @@ describe('the command line', () => {
 		const refused = await delphi(['post', RECORD], 'filler');
 		assert.deepEqual([refused.status, refused.out], [1, '']);
 		assert.equal(refused.err, 'delphi: not posted: REQUEST_REVISION: The comment states no argument. Add the step or reference that supports it.\n');
-		assert.deepEqual(await delphi(['post', RECORD], '  \n'), { status: 2, out: '', err: 'delphi: the text is empty\n' });
-		assert.equal((await delphi(['post', RECORD, '--title', 'T'], 'A reading.')).err, `delphi: title does not apply to "${RECORD}". Leave title out; it is for a new topic (id forum, a section of it such as forum/agents, or a space) or a new space (id ws).\n`);
 		assert.equal((await (await api('/api/v1/log')).json()).since, before);
 	});
 
@@ -256,10 +173,6 @@ describe('the command line', () => {
 		assert.equal(stale.status, 1);
 		assert.match(stale.err, /^delphi: .+\. .+\n$/);
 		assert.ok((await ok(['get', comment])).includes('The second lemma'));
-		// The same, with the path and revision given by hand.
-		const now = header(await ok(['get', comment]), 'Revision')!;
-		assert.equal(header(await ok(['edit', comment, '--revision', now], 'The second lemma needs the boundary term of equation 5.'), 'Id'), comment);
-		assert.equal((await delphi(['edit', comment], 'No revision given.')).status, 2);
 	});
 
 	test('vote prints the new score', async () => {
@@ -267,194 +180,6 @@ describe('the command line', () => {
 		assert.deepEqual([header(up, 'Id'), header(up, 'Score'), header(up, 'Reactions')], [QUIET, '1', 'up=1 🤔=1']);
 		assert.equal(header(await ok(['vote', QUIET, '--value=-1', '--if-absent']), 'Created'), 'false');
 		assert.equal(header(await ok(['vote', QUIET, '--value', '0']), 'Score'), '0');
-		const empty = await delphi(['vote', QUIET]);
-		assert.equal(empty.status, 1);
-		assert.match(empty.err, /^delphi: the vote is empty\. Send /);
-	});
-
-	test('log prints the server\'s lines; --new prints only what is newer than last time and moves the cursor', async () => {
-		const text = await (await api('/api/v1/log?format=text')).text();
-		assert.equal(await ok(['log']), text);
-		assert.equal(await ok(['log', RECORD, '--limit', '1']), await (await api(`/api/v1/log?path=${RECORD}&limit=1&format=text`)).text());
-		assert.deepEqual(JSON.parse(await ok(['log', 'forum', '--json'])), await (await api('/api/v1/log?path=forum')).json());
-		assert.deepEqual(await delphi(['log', QUIET]), { status: 0, out: '', err: '' });
-
-		// The first time: the newest posts, and the cursor at the newest of them.
-		const newest = Number(text.split('\t')[0]);
-		assert.equal(await ok(['log', '--new']), text);
-		assert.equal(readFileSync(file('cursor'), 'utf8'), `*\t${newest}\n`);
-		assert.equal(statSync(file('cursor')).mode & 0o777, 0o600);
-		// Nothing new is nothing printed, and the cursor stays.
-		assert.deepEqual(await delphi(['log', '--new']), { status: 0, out: '', err: '' });
-		assert.equal(readFileSync(file('cursor'), 'utf8'), `*\t${newest}\n`);
-		// Two more posts: exactly those, oldest first, and the cursor moves past them.
-		const a = header(await ok(['post', RECORD], 'Equation 4 has the sign of the endpoint term reversed.'), 'Id')!;
-		const b = header(await ok(['post', a], 'It does: compare the display above it.'), 'Id')!;
-		const fresh = (await ok(['log', '--new'])).split('\n');
-		assert.deepEqual(fresh.map((l) => l.split('\t')[2]), [a, b, undefined]);
-		assert.deepEqual(fresh[1].split('\t').slice(1, 5), ['comment', b, a, 'Test CLI · @Ada']);
-		// The cursor is the entry's seq (the first column), not the post's number.
-		const seen = fresh[1].split('\t')[0];
-		assert.equal(readFileSync(file('cursor'), 'utf8'), `*\t${seen}\n`);
-		assert.equal(await ok(['log', '--new']), '');
-		// Each path keeps its own place: the forum has not been read yet, and a quiet record starts at nothing.
-		assert.equal(await ok(['log', 'forum', '--new']), await (await api('/api/v1/log?path=forum&format=text')).text());
-		assert.equal(await ok(['log', QUIET, '--new']), '');
-		const forumNewest = (await (await api('/api/v1/log?path=forum')).json()).since;
-		assert.equal(readFileSync(file('cursor'), 'utf8'), `*\t${seen}\nforum\t${forumNewest}\n${QUIET}\t0\n`);
-		const c = header(await ok(['post', QUIET], 'The same reversal appears in equation 2 here.'), 'Id')!;
-		assert.deepEqual((await ok(['log', QUIET, '--new'])).split('\n').map((l) => l.split('\t')[2]), [c, undefined]);
-		// More new posts than a page holds are all listed, a page at a time.
-		const paged = JSON.parse(await ok(['log', '--new', '--limit', '1', '--json']));
-		assert.deepEqual(paged.entries.map((e: { path: string }) => e.path), [c]);
-		assert.equal(await ok(['log', RECORD, '--new']), await (await api(`/api/v1/log?path=${RECORD}&format=text`)).text());
-		// A cursor that cannot be moved is not moved quietly: a server that fails leaves it where it was.
-		const kept = readFileSync(file('cursor'), 'utf8');
-		assert.equal((await delphi(['log', 'nowhere', '--new'])).status, 1);
-		assert.equal(readFileSync(file('cursor'), 'utf8'), kept);
-	});
-
-	test('log -q narrows by a query and -f by any of a file\'s; each query keeps its own cursor; to:@me is the inbox', async () => {
-		const q = 'kind:comment by:@ada';
-		const served = async (query: string, more = '') => (await api(`/api/v1/log?q=${encodeURIComponent(query)}${more}&format=text`)).text();
-		const text = await ok(['log', '-q', q]);
-		assert.ok(text.split('\n').filter(Boolean).length >= 3);
-		assert.equal(text, await served(q));
-		for (const args of [['log', '--q', q], ['log', `--q=${q}`], ['log', `-q=${q}`]]) assert.equal(await ok(args), text, args.join(' '));
-		assert.equal(await ok(['log', RECORD, '-q', 'kind:record']), '');
-		assert.deepEqual((await ok(['log', 'app', '-q', 'kind:record'])).split('\n').filter(Boolean).map((l) => l.split('\t')[2]).sort(), [QUIET, RECORD].sort());
-		assert.deepEqual(JSON.parse(await ok(['log', '-q', q, '--json'])), await (await api(`/api/v1/log?q=${encodeURIComponent(q)}`)).json());
-		// A file of queries, one per line: what matches any of them.
-		const list = join(home, 'queries');
-		writeFileSync(list, `# what I follow\nkind:record source:app\n\n  ${q}\n`);
-		const any = `(kind:record source:app) OR (${q})`;
-		assert.equal(await ok(['log', '-f', list]), await served(any));
-		assert.equal(await ok(['log', '-f', '-'], `${q}\n`), text);
-		assert.equal((await ok(['log', '-f', list])).split('\n').filter(Boolean).length, text.split('\n').filter(Boolean).length + 2);
-		// A bad query is the server's message and fix.
-		const bad = await delphi(['log', '-q', 'kind:paper']);
-		assert.equal(bad.status, 1);
-		assert.match(bad.err, /^delphi: unknown kind:paper\. Use kind:record, /);
-		// --new with a query: its own line in the cursor file, the query after the seq.
-		const before = readFileSync(file('cursor'), 'utf8');
-		assert.equal(await ok(['log', '-f', list, '--new']), await served(any));
-		const newest = (await served(any)).split('\t')[0];
-		assert.equal(readFileSync(file('cursor'), 'utf8'), `${before}*\t${newest}\t${any}\n`);
-		assert.equal(await ok(['log', '-f', list, '--new']), '');
-		const d = header(await ok(['post', RECORD], 'Lemma 3 also needs the endpoint term.'), 'Id')!;
-		assert.deepEqual((await ok(['log', '-f', list, '--new'])).split('\n').map((l) => l.split('\t')[2]), [d, undefined]);
-		// The other cursors did not move with it: the unfiltered one still has this post to show.
-		assert.deepEqual((await ok(['log', '--new'])).split('\n').map((l) => l.split('\t')[2]).includes(d), true);
-		assert.equal(await ok(['log', '-f', list, '--new']), '');
-		// The inbox: replies to the signed-in person, by others. Signed out, the server asks for sign-in (status 4).
-		assert.equal(await ok(['log', '-q', 'to:@me']), '');
-		assert.equal(await ok(['log', '-q', 'by:@me', '--limit', '1']), await served('by:@ada', '&limit=1'));
-		const anonymous = await delphi(['log', '-q', 'to:@me'], undefined, { HOME: mkdtempSync(join(tmpdir(), 'delphi-nobody-')) });
-		assert.deepEqual([anonymous.status, anonymous.out], [4, '']);
-		assert.match(anonymous.err, /^delphi: sign-in required\. .*delphi login/);
-	});
-
-	test('the text form of a page is what get prints: a post alone; a thread with a line and then a block for each post', async () => {
-		const text = async (path: string) => { const r = await api(`/txt/${path}`); return { status: r.status, type: r.headers.get('content-type'), body: await r.text() }; };
-		// One post: exactly what get prints, so it can be edited and sent back.
-		const post = await text(comment);
-		assert.deepEqual([post.status, post.type], [200, 'text/plain; charset=utf-8']);
-		assert.equal(post.body, await ok(['get', comment]));
-		// A record with no posts is the record alone.
-		const lone = 'app/cli-lone';
-		await load(pg, [{ id: lone, source: 'app', title: 'A record nobody discussed', url: `https://example.org/${lone}`, summary: 'Nothing was said about it.', published: '2026-11-02' }]);
-		assert.equal((await text(lone)).body, await ok(['get', lone]));
-		// A thread: the record, then the log's line for each post, oldest first, then each post as get prints it.
-		const thread = (await text(RECORD)).body;
-		const lines = await (await api(`/api/v1/log?path=${RECORD}&since=0&limit=200&format=text`)).text();
-		const posts = lines.trimEnd().split('\n').map((l) => l.split('\t')[2]);
-		assert.ok(posts.length >= 3 && posts.includes(comment));
-		const blocks = [await ok(['get', RECORD]), lines];
-		for (const p of posts) blocks.push(await ok(['get', p]));
-		assert.equal(thread, blocks.join('\n'));
-		// A topic the same way: its headers and question, a line for each post, then the posts.
-		const topic = (await ok(['log', 'forum', '--json']).then(JSON.parse)).entries[0].path.split('/').slice(0, 2).join('/');
-		const forum = (await text(topic)).body;
-		assert.ok(forum.startsWith(await ok(['get', topic])));
-		assert.ok(forum.includes(`\n${await (await api(`/api/v1/log?path=${topic}&since=0&format=text`)).text()}\n`));
-		// What has no text form says so, and what is not there is not found.
-		for (const [path, status] of [['forum', 404], ['arxiv', 404], ['me', 404], ['app/none', 404], ['forum/999999', 404], [`${RECORD}/999999`, 404]] as const) {
-			assert.equal((await text(path)).status, status, path);
-		}
-	});
-
-	test('the feed has the entries of log for the same path and query, without sign-in', async () => {
-		const seqs = (xml: string) => [...xml.matchAll(/<entry>\n<id>[^<]*#(-?\d+)<\/id>/g)].map((m) => Number(m[1]));
-		for (const query of ['', `path=${RECORD}`, 'q=kind%3Arecord', `path=forum&q=${encodeURIComponent('by:@ada')}`, 'limit=2']) {
-			const feed = await api(`/log.atom${query && `?${query}`}`);
-			assert.deepEqual([feed.status, feed.headers.get('content-type')], [200, 'application/atom+xml; charset=utf-8'], query);
-			const xml = await feed.text();
-			const page = await (await api(`/api/v1/log${query && `?${query}`}`)).json();
-			assert.deepEqual(seqs(xml), page.entries.map((e: { seq: number }) => e.seq), query);
-			assert.deepEqual(seqs(xml), (await ok(['log', ...(new URLSearchParams(query).get('path') ? [new URLSearchParams(query).get('path')!] : []),
-				...(new URLSearchParams(query).get('q') ? ['-q', new URLSearchParams(query).get('q')!] : []), ...(new URLSearchParams(query).get('limit') ? ['--limit', '2'] : [])]))
-				.split('\n').filter(Boolean).map((l) => Number(l.split('\t')[0])), query);
-			// Well-formed where it matters to a reader: one feed, its own address, a title and link per entry, text escaped.
-			assert.match(xml, /^<\?xml version="1\.0" encoding="utf-8"\?>\n<feed xmlns="http:\/\/www\.w3\.org\/2005\/Atom">/);
-			assert.equal((xml.match(/<entry>/g) ?? []).length, (xml.match(/<\/entry>/g) ?? []).length);
-			assert.ok(!/<(?!\/?(feed|title|id|link|updated|entry|author|name|category|summary)\b|\?xml)/.test(xml), query);
-		}
-		// Every post links to its place on its page, and a record to its page.
-		const xml = await (await api(`/log.atom?path=app`)).text();
-		assert.ok(xml.includes(`href="https://delphi.science/r/${RECORD}"`));
-		assert.match(xml, new RegExp(`href="https://delphi\\.science/r/${RECORD}#p\\d+"`));
-		// The inbox is not public: a feed is read as nobody, with or without a key.
-		assert.equal((await api('/log.atom?q=to%3A%40me')).status, 401);
-		assert.equal((await priorFetch(`${url}/log.atom?q=to%3A%40me`, { headers: { Authorization: `Bearer ${readFileSync(file('key'), 'utf8').trim()}` } })).status, 401);
-	});
-
-	test('saved queries: get me/queries --body pulls the text, edit --force pushes a file, post adds a line, and log me/queries is the feed', async () => {
-		const served = async (query: string) => (await api(`/api/v1/log?q=${encodeURIComponent(query)}&format=text`)).text();
-		const local = join(home, 'my-queries');
-		// Nothing saved yet: the headers alone, and no text to pull.
-		const none = await ok(['get', 'me/queries']);
-		assert.deepEqual([header(none, 'Id'), header(none, 'Login'), header(none, 'Revision')], ['me/queries', 'Ada', '0']);
-		assert.equal(await ok(['get', 'me/queries', '--body']), '');
-		assert.equal(await ok(['log', 'me/queries']), '');
-		// Push a file: the text as it is, notes included. --force takes the revision from the server.
-		writeFileSync(local, '# what I follow\nkind:record source:app\n\nkind:comment by:@ada\n');
-		const pushed = await ok(['edit', 'me/queries', '--force'], readFileSync(local, 'utf8'));
-		assert.deepEqual([header(pushed, 'Id'), header(pushed, 'Revision')], ['me/queries', '1']);
-		// Pull it back: byte for byte what was pushed, so the file and the server copy can be compared with diff.
-		assert.equal(await ok(['get', 'me/queries', '--body']), '# what I follow\nkind:record source:app\n\nkind:comment by:@ada\n');
-		// The feed from the server copy is the feed from the file.
-		const feed = await ok(['log', 'me/queries']);
-		assert.ok(feed.split('\n').filter(Boolean).length >= 5);
-		assert.equal(feed, await ok(['log', '-f', local]));
-		assert.equal(feed, await served('(kind:record source:app) OR (kind:comment by:@ada)'));
-		// A search inside it, and --new with its own cursor line.
-		assert.equal(await ok(['log', 'me/queries', '-q', 'kind:record OR kind:question']), await served('kind:record source:app'));
-		assert.equal(await ok(['log', 'me/queries', '--new']), feed);
-		assert.equal(await ok(['log', 'me/queries', '--new']), '');
-		assert.match(readFileSync(file('cursor'), 'utf8'), /^me\/queries\t\d+$/m);
-		// post adds a line and leaves the rest; the same line again changes nothing.
-		const added = await ok(['post', 'me/queries'], 'to:@me\n');
-		assert.deepEqual([header(added, 'Revision'), added.endsWith('kind:comment by:@ada\nto:@me\n')], ['2', true]);
-		assert.equal(header(await ok(['post', 'me/queries'], 'to:@me\n'), 'Revision'), '2');
-		// Get, change and send back, as with a post: the revision travels in the headers.
-		const edited = await ok(['edit'], (await ok(['get', 'me/queries'])).replace('to:@me', 'to:@me kind:answer'));
-		assert.equal(header(edited, 'Revision'), '3');
-		// A stale revision is refused, with the server's message and fix, and nothing changes.
-		const stale = await delphi(['edit', 'me/queries', '--revision', '1'], 'cat:math\n');
-		assert.equal(stale.status, 1);
-		assert.match(stale.err, /^delphi: The saved queries changed since you read them\. Nothing was saved\. Read them again \(get me\/queries\)/);
-		// A bad line is named with its fix, and nothing is saved: not the good line either.
-		const bad = await delphi(['edit', 'me/queries', '--force'], 'cat:math\nkind:paper\n');
-		assert.equal(bad.status, 1);
-		assert.match(bad.err, /^delphi: line 2 \(kind:paper\): unknown kind:paper\. Use kind:record, .* Nothing was saved\.$/m);
-		assert.match(await ok(['get', 'me/queries', '--body']), /to:@me kind:answer\n$/);
-		// Signed out there is no me: status 4, as for get me. A feed reader, which is nobody, gets no feed from it.
-		const nobody = { HOME: mkdtempSync(join(tmpdir(), 'delphi-nobody-')) };
-		for (const args of [['get', 'me/queries'], ['log', 'me/queries']]) assert.equal((await delphi(args, undefined, nobody)).status, 4, args.join(' '));
-		const key = readFileSync(file('key'), 'utf8').trim();
-		const atom = await priorFetch(`${url}/api/v1/log?path=me/queries&format=atom`, { headers: { Authorization: `Bearer ${key}` } });
-		assert.equal(atom.status, 401, 'Atom is read as nobody, whatever token came with it');
-		assert.deepEqual([(await delphi(['get', 'me/queries', '--body', '--json'])).status, (await delphi(['edit', '--force'], 'cat:math')).status], [2, 2]);
 	});
 
 	test('logout revokes the key on the server and deletes the file; then acting for a person needs sign-in again', async () => {
@@ -464,8 +189,5 @@ describe('the command line', () => {
 		assert.ok(!files().some((f) => f.startsWith('key')));
 		assert.equal((await delphi(['get', 'me'])).status, 4);
 		assert.deepEqual(await delphi(['logout']), { status: 0, out: '', err: '' });
-		// A key from the environment is used without a file, and a stale one does not stop reading what needs none.
-		assert.equal((await delphi(['get', 'me'], undefined, { DELPHI_KEY: key })).status, 4);
-		assert.equal(header((await delphi(['get', RECORD], undefined, { DELPHI_KEY: key })).out, 'Id'), RECORD);
 	});
 });

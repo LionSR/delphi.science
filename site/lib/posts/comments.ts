@@ -2,7 +2,6 @@
 // moderated before it is stored, and the records it names by id or URL become its mentions. A post in a private space
 // needs its author to be a member (visibility.ts), is not sent to the moderator (spaces.ts MODERATE_PRIVATE_SPACES) and
 // leaves no mentions, so nothing private reaches a record's public counts.
-import type { SourceRetriever } from '#lib/moderation/source-checks.ts';
 import { screen, type Moderator, type Post as ModeratedPost } from '#lib/moderation/moderate.ts';
 import { NotFoundError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
@@ -16,7 +15,7 @@ const URL_ = /https?:\/\/[^\s<>"'()[\]{}]+/g;
 
 /** Where a post goes: the thread on a record, or a topic. With `space`, the topic must be in that space. */
 type Place = { record: string } | { topic: number; space?: string };
-type NewPost = { body: string; review?: boolean; parent?: number; retrieveSources?: boolean };
+type NewPost = { body: string; review?: boolean; parent?: number };
 
 /** Where moderation is told a post is, for new posts and edits alike. */
 /** Where a post is, as the moderator is told. The agents section is named, since what is on topic there differs (moderate.ts). */
@@ -33,12 +32,12 @@ async function checkBody(db: Db, text: string) {
 }
 
 /** Posts a comment (or a review) and links the records it mentions. Returns the comment with its mentions. */
-export const comment = (db: Db, recordId: string, voter: Voter, c: NewPost, moderate?: Moderator, fetchSource?: SourceRetriever) =>
-	post(db, { record: recordId }, voter, c, moderate, fetchSource);
+export const comment = (db: Db, recordId: string, voter: Voter, c: NewPost, moderate?: Moderator) =>
+	post(db, { record: recordId }, voter, c, moderate);
 
 const firstBody = async (db: Db, sql: string, params: unknown[]) => (await db.query<{ body: string }>(sql, params)).rows[0]?.body;
 
-export async function post(db: Db, place: Place, voter: Voter, c: NewPost, moderate?: Moderator, fetchSource?: SourceRetriever) {
+export async function post(db: Db, place: Place, voter: Voter, c: NewPost, moderate?: Moderator) {
 	const body = await checkBody(db, c.body);
 	const onRecord = 'record' in place;
 	const [column, value] = onRecord ? ['record_id', place.record] : ['topic_id', place.topic];
@@ -68,8 +67,7 @@ export async function post(db: Db, place: Place, voter: Voter, c: NewPost, moder
 	context.previous = (await db.query<{ body: string }>(`SELECT body FROM open_index.comments WHERE ${column} = $1 ORDER BY id DESC LIMIT 4`, [value])).rows.map((p) => p.body);
 
 	const kind = onRecord ? (c.review ? 'review' : 'comment') : c.parent !== undefined ? 'comment' : Number(target.posts) ? 'answer' : 'question';
-	await screen(db, voter, { kind, ...moderationPlace(onRecord ? place.record : null, target.section), title: target.title, body, context },
-		moderate, Boolean(c.retrieveSources), fetchSource);
+	await screen(db, voter, { kind, ...moderationPlace(onRecord ? place.record : null, target.section), title: target.title, body, context }, moderate);
 	return storePost(db, place, voter, stored);
 }
 

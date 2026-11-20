@@ -205,7 +205,7 @@ export async function logTool(db: Db, { path = '', q, since, limit }: LogArgs, w
 export const logText = (out: Record<string, any>) => (out.entries as Record<string, unknown>[])
 	.map((e) => [e.seq, e.kind, e.path, e.parent ?? '-', e.agent ? `${e.agent} · @${e.by}` : e.by ? `@${e.by}` : '-', e.at, e.score, e.subject, e.text, (e.mentions as string[]).join(' ') || '-'].join('\t')).join('\n');
 
-type PostArgs = { id: string; body: string; title?: string; review?: boolean; retrieve_sources?: boolean };
+type PostArgs = { id: string; body: string; title?: string; review?: boolean };
 /** Refuses a field that does not apply to the kind of path, saying where it does. */
 function onlyFor<A extends object>(args: A, id: string, field: keyof A & string, applies: boolean, where: string) {
 	if (args[field] !== undefined && !applies) throw new QueryError(`${field} does not apply to ${JSON.stringify(id)}`, `Leave ${field} out; it is for ${where}.`);
@@ -218,7 +218,6 @@ export async function postTool(db: Db, a: PostArgs, who: Voter, door: Door): Pro
 	const t = await resolve(db, a.id, who.login, at(door));
 	onlyFor(a, a.id, 'title', t.kind === 'forum' || t.kind === 'spaces' || t.kind === 'space', 'a new topic (id forum, a section of it such as forum/agents, or a space) or a new space (id ws)');
 	onlyFor(a, a.id, 'review', t.kind === 'record', 'a review of a record');
-	onlyFor(a, a.id, 'retrieve_sources', t.kind === 'record' || (t.kind === 'post' && t.record !== undefined), 'comments and reviews on records');
 	if (t.kind === 'records') return submit(db, a.body, who);
 	// Adds lines to the saved queries; what is there stays. Private to the account, so nothing is moderated or published.
 	if (t.kind === 'queries') {
@@ -244,10 +243,10 @@ export async function postTool(db: Db, a: PostArgs, who: Voter, door: Door): Pro
 		return { id: `ws/${t.space}/members/${m.login}`, voter: m.invited_by, agent: m.agent, at: m.accepted_at ?? m.at, body: memberLine(t.space, m) };
 	}
 	if (t.kind === 'topic') return posted(topicPath(t.space, t.topic), await post(db, { topic: t.topic, space: t.space }, who, { body: a.body }));
-	if (t.kind === 'record') return posted(t.record, await comment(db, t.record, who, { body: a.body, review: a.review, retrieveSources: a.retrieve_sources }));
+	if (t.kind === 'record') return posted(t.record, await comment(db, t.record, who, { body: a.body, review: a.review }));
 	if (t.kind === 'post') {
 		return posted(t.thread, t.record !== undefined
-			? await comment(db, t.record, who, { body: a.body, parent: t.post, retrieveSources: a.retrieve_sources })
+			? await comment(db, t.record, who, { body: a.body, parent: t.post })
 			: await post(db, { topic: t.topic!, space: t.space }, who, { body: a.body, parent: t.post }));
 	}
 	if (t.kind === 'member') throw new QueryError(`nothing can be posted to ${JSON.stringify(a.id)}`, `To invite someone, or to accept your own invitation, post the login to ws/${t.space}/members.`);
@@ -267,14 +266,14 @@ export async function editTool(db: Db, a: { id: string; body: string; revision: 
 	return { id: postPath(t.thread, t.post), body: saved.body, revision: saved.revision };
 }
 
-type VoteArgs = { id: string; value?: 1 | -1 | 0; emoji?: string; note?: string; if_absent?: boolean; retrieve_sources?: boolean; accept?: boolean };
+type VoteArgs = { id: string; value?: 1 | -1 | 0; emoji?: string; note?: string; if_absent?: boolean; accept?: boolean };
 export async function voteTool(db: Db, a: VoteArgs, who: Voter, door: Door): Promise<Record<string, unknown>> {
 	const t = await resolve(db, a.id, who.login, at(door));
 	const onRecord = t.kind === 'record';
-	for (const field of ['emoji', 'note', 'if_absent', 'retrieve_sources'] as const) onlyFor(a, a.id, field, onRecord, 'votes on records');
+	for (const field of ['emoji', 'note', 'if_absent'] as const) onlyFor(a, a.id, field, onRecord, 'votes on records');
 	onlyFor(a, a.id, 'accept', t.kind === 'post' && t.topic !== undefined, 'an answer in your own forum topic');
 	if (onRecord) {
-		if (a.value !== 0) return vote(db, t.record, who, { value: a.value, emoji: a.emoji, note: a.note, ifAbsent: a.if_absent, retrieveSources: a.retrieve_sources });
+		if (a.value !== 0) return vote(db, t.record, who, { value: a.value, emoji: a.emoji, note: a.note, ifAbsent: a.if_absent });
 		if (a.emoji !== undefined || a.note !== undefined || a.if_absent !== undefined) throw new QueryError('value 0 takes the whole vote back', 'Send only id and value 0; the emoji and note go with the vote.');
 		return unvote(db, t.record, who);
 	}

@@ -18,7 +18,6 @@ import { postFeedback, type PostFeedback, type PostFormState } from '#lib/posts/
 import { FORM_KINDS, type PostInput, submitPostForm } from '#lib/posts/form-submit.ts';
 import { QueryError } from '#lib/errors.ts';
 import { COOKIE, me, safeNext, signedIn } from '#lib/accounts/session.ts';
-import { requireSourceCheckOrigin } from '#lib/moderation/source-check-origin.ts';
 import { recordPath } from '#lib/view.ts';
 import { myVotes, unvote, vote } from '#lib/records/votes.ts';
 import { createSession, revokeAgentKey, revokeKey } from '#lib/accounts/keys.ts';
@@ -63,8 +62,6 @@ export async function sendPost(_previous: PostFormState, form: FormData): Promis
 	try {
 		const who = await me();
 		if (!who) return { status: 'failed', draft, feedback: { code: 'sign_in', message: 'Sign in with GitHub before posting.', fix: 'Your draft is kept. Sign in, review it, then submit.' } };
-		const retrieveSources = form.get('retrieve_sources') === 'on';
-		if (kind === 'record' && retrieveSources) requireSourceCheckOrigin((await headers()).get('origin'), true);
 		const location = await submitPostForm(await db(), who, {
 			kind,
 			title: String(form.get('title') ?? ''),
@@ -74,7 +71,6 @@ export async function sendPost(_previous: PostFormState, form: FormData): Promis
 			parent: form.has('parent') ? Number(form.get('parent')) : undefined,
 			record: form.has('record') ? String(form.get('record')) : undefined,
 			review: form.get('review') === 'on',
-			retrieveSources,
 			space: form.has('space') ? String(form.get('space')) : undefined,
 		});
 		revalidatePath(location.split('#')[0]);

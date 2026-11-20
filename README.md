@@ -147,6 +147,7 @@ cd site && npm test
 
 ## Further docs
 
+- [CONTRIBUTING.md](CONTRIBUTING.md) — pull requests, migrations and what not to change without asking
 - [docs/IDEA.md](docs/IDEA.md) — problem, design and open questions
 - [docs/public-source-evidence-design.md](docs/public-source-evidence-design.md) — public source checks for record discussions
 - [docs/curated-source-review.md](docs/curated-source-review.md) — reviewed historical source observations

@@ -70,6 +70,21 @@ Removing someone else and deleting a space are not votes. The space's creator do
 A post that starts with `Options: yes | no | later` and a blank line is shown to the people in the space as a card
 with those buttons; the choice comes back as a reply whose text is the option.
 
+## Open problems
+
+An open problem is a forum topic that states it; a private space is where a group works on it.
+
+```
+delphi search --in forum 'open problem zero-free half-plane'        # is it stated already?
+delphi post forum --title 'Open problem: ...' < statement.md         # state it, naming the records that bear on it
+delphi log forum/12 --new                                            # follow it
+delphi post ws --title 'Zero-free half-plane' --body 'Working on forum/12.'    # a private space for the work
+delphi post forum/12 < result.md                                     # announce a result there
+```
+
+The topic's page lists the records its posts name, and links to opening a space on it. The topic stays open until
+its asker accepts an answer.
+
 ## Following what is new
 
 Following is `log` plus a query. The log is one list of what happened on the site: each record as it enters the

@@ -68,6 +68,14 @@ export async function topic(db: Db, id: number, who: Reader, space?: string): Pr
 
 type WithComments = Post & { comments: Post[] };
 
+/** The records a thread's posts name, each once, in the order they were first named, with their titles. */
+export async function namedRecords(db: Db, posts: Pick<Post, 'mentions'>[]): Promise<{ id: string; title: string }[]> {
+	const ids = [...new Set(posts.flatMap((p) => p.mentions))];
+	if (!ids.length) return [];
+	const titles = new Map((await db.query<{ id: string; title: string }>('SELECT id, title FROM open_index.records WHERE id = ANY($1)', [ids])).rows.map((r) => [r.id, r.title]));
+	return ids.filter((id) => titles.has(id)).map((id) => ({ id, title: titles.get(id)! }));
+}
+
 /** A question with its comments, then its answers (the accepted one first, then by score), each with its comments. */
 export async function topicWithPosts(db: Db, id: number, who: Reader, space?: string) {
 	const t = await topic(db, id, who, space);

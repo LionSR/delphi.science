@@ -8,9 +8,14 @@ import { addToSpace, openSpace, removeFromSpace } from '#app/actions.ts';
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Spaces' };
 
-export default async function Spaces({ searchParams }: { searchParams: Promise<{ notice?: string }> }) {
-	const who = await signedIn('/ws');
-	const [{ notice }, all] = await Promise.all([searchParams, mySpaces(await db(), who.login)]);
+export default async function Spaces({ searchParams }: { searchParams: Promise<{ notice?: string; title?: string; about?: string }> }) {
+	// A link may fill in the form (a forum topic's "open a private space on it"); nothing is opened until the person submits it.
+	const given = (s: unknown, max: number) => (typeof s === 'string' ? s.slice(0, max) : '');
+	const { notice, ...filled } = await searchParams;
+	const title = given(filled.title, 200), about = given(filled.about, 4000);
+	// Signing in on the way keeps what the link filled in.
+	const who = await signedIn(title || about ? `/ws?${new URLSearchParams({ title, about })}#open` : '/ws');
+	const all = await mySpaces(await db(), who.login);
 	const invitations = all.filter((s) => !s.accepted_at), mine = all.filter((s) => s.accepted_at);
 	return (
 		<article>
@@ -57,10 +62,10 @@ export default async function Spaces({ searchParams }: { searchParams: Promise<{
 				))}
 			</ol>
 
-			<h2>Open a space</h2>
+			<h2 id="open">Open a space</h2>
 			<form action={openSpace} className="comment-form">
-				<input name="title" required maxLength={200} placeholder="What it is for, in one line" aria-label="Title" className="grow" />
-				<textarea name="about" rows={3} maxLength={4000} placeholder="A few words about it (optional)" aria-label="About" />
+				<input name="title" required maxLength={200} defaultValue={title} placeholder="What it is for, in one line" aria-label="Title" className="grow" />
+				<textarea name="about" rows={3} maxLength={4000} defaultValue={about} placeholder="A few words about it (optional)" aria-label="About" />
 				<button>Open a private space</button>
 			</form>
 		</article>

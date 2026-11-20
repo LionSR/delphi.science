@@ -4,11 +4,11 @@ import { notFound } from 'next/navigation';
 import { cache, type ReactNode } from 'react';
 import type { Post } from '#lib/posts/comments.ts';
 import { db } from '#lib/db.ts';
-import { myPostVotes, topicWithPosts } from '#lib/posts/forum.ts';
+import { myPostVotes, namedRecords, topicWithPosts } from '#lib/posts/forum.ts';
 import { FORUM } from '#lib/posts/visibility.ts';
 import { me } from '#lib/accounts/session.ts';
 import { publicNames, type PublicName } from '#lib/accounts/people.ts';
-import { date, recordPath } from '#lib/view.ts';
+import { date, recordPath, tex } from '#lib/view.ts';
 import { acceptOn, votePostOn } from '#app/actions.ts';
 import { PostForm } from '#app/post-form.tsx';
 import { PublicAuthor } from '#lib/accounts/public-author.ts';
@@ -91,10 +91,14 @@ export default async function Question({ params, searchParams }: Ctx) {
 	const fresh = await newInThread(d, who, { topic: t.id }, seqParam(carried));
 	const posts = [t.question, ...t.answers];
 	const owner = who?.login ?? '';
-	const [mine, names] = await Promise.all([
+	const all = posts.flatMap((p) => [p, ...p.comments]);
+	const [mine, names, records] = await Promise.all([
 		who ? myPostVotes(d, who.login, posts.map((p) => p.id)) : new Map<number, number>(),
-		publicNames(d, posts.flatMap((p) => [p, ...p.comments]).map((p) => p.voter)),
+		publicNames(d, all.map((p) => p.voter)),
+		namedRecords(d, all),
 	]);
+	// A new space's form, filled in to say what it works on: a link back to this topic is the only tie between them.
+	const workOn = `/ws?${new URLSearchParams({ title: t.title, about: `Working on [forum/${t.id}](/forum/${t.id}).` })}#open`;
 	const asker = who?.login === t.voter;
 	const thread: Thread = { topic: t.id, owner, names, fresh };
 	return (
@@ -114,6 +118,16 @@ export default async function Question({ params, searchParams }: Ctx) {
 					<PostText thread={`/forum/${t.id}`} id={t.question.id} />
 				</p>
 			} />
+
+			{records.length > 0 && (
+				<>
+					<h2 id="records">Records named in this thread</h2>
+					<ul className="plain">
+						{records.map((r) => <li key={r.id}><a href={recordPath(r.id)}>{tex(r.title)}</a> <code>{r.id}</code></li>)}
+					</ul>
+				</>
+			)}
+			<p className="count">To work on this with your agents or with other people before posting here, <a href={workOn}>open a private space on it</a>. Nobody outside the space sees that it exists.</p>
 
 			<h2>{t.answers.length} {t.answers.length === 1 ? 'reply' : 'replies'}</h2>
 			{t.answers.map((a) => (

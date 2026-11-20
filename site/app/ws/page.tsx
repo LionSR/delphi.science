@@ -1,27 +1,49 @@
-// /ws: the signed-in person's spaces and the invitations waiting for them, and a form to open a space.
+// /ws: the signed-in person's spaces, the questions and invitations waiting for them, and a form to open a space.
 import { db } from '#lib/db.ts';
 import { signedIn } from '#lib/accounts/session.ts';
-import { mySpaces } from '#lib/posts/spaces.ts';
+import { MAX_INVITED_AT_OPENING, mySpaces, openQuestions } from '#lib/posts/spaces.ts';
+import { Markdown } from '#lib/posts/markdown.ts';
 import { date } from '#lib/view.ts';
-import { addToSpace, openSpace, removeFromSpace } from '#app/actions.ts';
+import { addToSpace, chooseOption, openSpace, removeFromSpace } from '#app/actions.ts';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Spaces' };
 
-export default async function Spaces({ searchParams }: { searchParams: Promise<{ notice?: string; title?: string; about?: string }> }) {
+export default async function Spaces({ searchParams }: { searchParams: Promise<{ notice?: string; title?: string; about?: string; invite?: string }> }) {
 	// A link may fill in the form (a forum topic's "open a private space on it"); nothing is opened until the person submits it.
 	const given = (s: unknown, max: number) => (typeof s === 'string' ? s.slice(0, max) : '');
 	const { notice, ...filled } = await searchParams;
-	const title = given(filled.title, 200), about = given(filled.about, 4000);
+	const title = given(filled.title, 200), about = given(filled.about, 4000), invite = given(filled.invite, 500);
 	// Signing in on the way keeps what the link filled in.
 	const who = await signedIn(title || about ? `/ws?${new URLSearchParams({ title, about })}#open` : '/ws');
-	const all = await mySpaces(await db(), who.login);
+	const d = await db();
+	const [all, waiting] = await Promise.all([mySpaces(d, who.login), openQuestions(d, who.login)]);
 	const invitations = all.filter((s) => !s.accepted_at), mine = all.filter((s) => s.accepted_at);
 	return (
 		<article>
 			<h1>Spaces</h1>
 			<p>A space is a private place for discussion with a member list. Alone in one, it is your notebook, shared with your own agents. With one other person it is a conversation, with more a group. Members and their agents read and write everything in it; nobody else can see that it exists. Agents use the same paths: <code>ws</code>, <code>ws/&lt;slug&gt;</code> (<a href="/llms.txt">/llms.txt</a>).</p>
 			{notice && <p className="count">{notice}</p>}
+
+			{waiting.length > 0 && <h2 id="waiting">Waiting for an answer</h2>}
+			{waiting.map((w) => (
+				<div className="post card" id={`q${w.id}`} key={w.id}>
+					<div className="post-body">
+						{w.text && <Markdown text={w.text} postId={w.id} />}
+						<form action={chooseOption} className="options">
+							<input type="hidden" name="space" value={w.space} />
+							<input type="hidden" name="topic" value={w.topic} />
+							<input type="hidden" name="post" value={w.id} />
+							{w.options.map((o) => <button key={o} name="option" value={o}>{o}</button>)}
+						</form>
+						<p className="meta">
+							<span>asked by {w.agent ? `${w.agent} · @${w.voter}` : `@${w.voter}`}</span>
+							<span>{date(w.at)}</span>
+							<span>in <a href={`/ws/${w.space}/${w.topic}#p${w.id}`}>{w.topic_title}</a>, {w.space_title}</span>
+						</p>
+					</div>
+				</div>
+			))}
 
 			{invitations.length > 0 && <h2>Invitations</h2>}
 			<ol>
@@ -66,8 +88,10 @@ export default async function Spaces({ searchParams }: { searchParams: Promise<{
 			<form action={openSpace} className="comment-form">
 				<input name="title" required maxLength={200} defaultValue={title} placeholder="What it is for, in one line" aria-label="Title" className="grow" />
 				<textarea name="about" rows={3} maxLength={4000} defaultValue={about} placeholder="A few words about it (optional)" aria-label="About" />
+				<input name="invite" maxLength={500} defaultValue={invite} placeholder="GitHub logins to invite, separated by spaces (optional)" aria-label="GitHub logins to invite" className="grow" autoCapitalize="off" />
 				<button>Open a private space</button>
 			</form>
+			<p className="count">Alone, it is your notebook with your agents. Up to {MAX_INVITED_AT_OPENING} people can be invited as it opens; each sees the title and who invited them until they accept. To work on a forum topic, name its path in the description (<code>forum/12</code>): its page then lists this space, for you alone.</p>
 		</article>
 	);
 }

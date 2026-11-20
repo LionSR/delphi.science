@@ -17,6 +17,7 @@ import { OwnerEdit } from '#app/owner-edit.tsx';
 import { newInThread } from '#lib/accounts/queries.ts';
 import { NewInThread, NewMark, seqParam } from '#lib/feed-view.ts';
 import { PostText } from '#app/post-text.tsx';
+import { spacesOn } from '#lib/posts/spaces.ts';
 
 export const dynamic = 'force-dynamic';
 
@@ -92,18 +93,20 @@ export default async function Question({ params, searchParams }: Ctx) {
 	const posts = [t.question, ...t.answers];
 	const owner = who?.login ?? '';
 	const all = posts.flatMap((p) => [p, ...p.comments]);
-	const [mine, names, records] = await Promise.all([
+	const [mine, names, records, spaces] = await Promise.all([
 		who ? myPostVotes(d, who.login, posts.map((p) => p.id)) : new Map<number, number>(),
 		publicNames(d, all.map((p) => p.voter)),
 		namedRecords(d, all),
+		// The reader's own spaces that name this topic. Shown to them alone: the page of anyone else has none.
+		who ? spacesOn(d, who.login, t.id) : [],
 	]);
-	// A new space's form, filled in to say what it works on: a link back to this topic is the only tie between them.
+	// A new space's form, filled in to say what it works on: the topic's path in its description is the only tie between them.
 	const workOn = `/ws?${new URLSearchParams({ title: t.title, about: `Working on [forum/${t.id}](/forum/${t.id}).` })}#open`;
 	const asker = who?.login === t.voter;
 	const thread: Thread = { topic: t.id, owner, names, fresh };
 	return (
 		<article>
-			<p className="meta"><a href="/forum">Forum</a><a href={`/forum/${t.id}.txt`} rel="alternate" type="text/plain">Text</a></p>
+			<p className="meta"><a href="/forum">Forum</a><span>{t.accepted_id ? 'answered' : 'open'} · <code>forum/{t.id}</code></span><a href={`/forum/${t.id}.txt`} rel="alternate" type="text/plain">Text</a></p>
 			<h1>{t.title}</h1>
 			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
 			{notice && <p className="count">{notice}</p>}
@@ -127,7 +130,14 @@ export default async function Question({ params, searchParams }: Ctx) {
 					</ul>
 				</>
 			)}
-			<p className="count">To work on this with your agents or with other people before posting here, <a href={workOn}>open a private space on it</a>. Nobody outside the space sees that it exists.</p>
+			<h2 id="work">Work on it</h2>
+			{spaces.length > 0 && (
+				<ul className="plain">
+					{spaces.map((s) => <li key={s.id}><a href={`/ws/${s.id}`}>{s.title}</a> <span className="meta-inline">your private space · <code>ws/{s.id}</code></span></li>)}
+				</ul>
+			)}
+			<p className="count">{spaces.length > 0 ? 'These are your spaces that name this topic; only you see them here. ' : 'To work on this with your agents or with other people before posting here, '}
+				<a href={workOn}>{spaces.length > 0 ? 'Open another' : 'open a private space on it'}</a>. A space is tied to a topic by naming its path, <code>forum/{t.id}</code>, in its description, and nobody outside the space sees that it exists.</p>
 
 			<h2>{t.answers.length} {t.answers.length === 1 ? 'reply' : 'replies'}</h2>
 			{t.answers.map((a) => (

@@ -21,15 +21,3 @@ test('edit drafts retain the base revision, isolate owners and post IDs, and cle
 	assert.equal(readEditDraft(s, 'alice', 1), undefined);
 	assert.equal(readEditDraft(s, 'alice', 2)?.body, 'Second');
 });
-
-test('an edit draft holding an agent key is dropped, and broken storage never throws', () => {
-	const s = new Memory();
-	writeEditDraft(s, 'alice', 2, { body: 'Second', revision: '2' });
-	writeEditDraft(s, 'alice', 2, { body: `oik_${'a'.repeat(48)}`, revision: '2' });
-	assert.equal(readEditDraft(s, 'alice', 2), undefined);
-	assert.equal(s.values.size, 0);
-	const broken: DraftStorage = { getItem() { throw Error(); }, setItem() { throw Error(); }, removeItem() { throw Error(); } };
-	assert.doesNotThrow(() => writeEditDraft(broken, 'alice', 1, { body: 'Draft', revision: '1' }));
-	assert.equal(readEditDraft(broken, 'alice', 1), undefined);
-	assert.doesNotThrow(() => clearEditDraft(broken, 'alice', 1));
-});

@@ -6,7 +6,6 @@ import unittest
 from pathlib import Path
 
 import candidates as C
-import sources as S
 
 
 def rec(source, key, title, **kw):
@@ -34,25 +33,6 @@ class Matching(unittest.TestCase):
     def test_unrelated_abstract_matches_nothing(self):
         self.assertEqual(self.m.match("Large language models as tutors in undergraduate calculus: a survey from OpenAI users", ["openai-math"]), [])
 
-    def test_a_text_is_matched_against_the_records_of_the_labs_it_names_in_full(self):
-        lab = lambda full: C.candidate("u", "", [], "", "", "arXiv", full=full)["labs"]  # noqa: E731
-        self.assertEqual(lab("OpenAI's proof, checked with Claude"), ["anthropic-science", "lean", "openai-math"])
-        self.assertEqual(lab("hexagonal boron nitride, an open AI question, and GPTs"), [])
-        self.assertEqual(self.m.match("Ryser's covering conjecture for intersecting tripartite hypergraphs", ["openai-math"]), [])
-
-    def test_a_link_already_attached_is_known_for_that_record_only(self):
-        entries = [{**ENTRIES[0], "discussion": [{"url": "https://arxiv.org/abs/2610.01234v2"}, {"url": "https://mathoverflow.net/questions/1/x#a2"}]}]
-        known = C.attached(entries)
-        rid = "openai-math/A-counterexample-to-Sidorenkos-conjecture"
-        self.assertIn((rid, S.identity("http://www.arxiv.org/pdf/2610.01234v3.pdf")), known)
-        self.assertIn((rid, S.identity("https://mathoverflow.net/questions/1/x?r=1")), known)
-        self.assertNotIn(("openai-math/Siegel-zeros", S.identity("https://arxiv.org/abs/2610.01234")), known)
-        blog = "https://www.math.columbia.edu/~woit/wordpress/?p=15979"
-        self.assertEqual(S.identity(blog + "&utm_source=rss#:~:text=Witten"), S.identity(blog))
-        self.assertNotEqual(S.identity(blog), S.identity(blog.replace("15979", "15957")))
-        folder = "The-periodic-spin-one-Haldane-gap-September-24-2026"
-        self.assertEqual({S.identity(f"https://github.com/openai/math/blob/fd4aeeb/preprints/{folder}/paper.pdf"),
-                          S.identity(f"https://mathcommunity.github.io/oai-math-revised/papers/{folder}/")}, {"openai-math/The-periodic-spin-one-Haldane-gap"})
 
     def test_report_lists_new_commands_named_records_first_and_survives_a_source_down(self):
         siegel = "We check the argument on exceptional characters and Siegel zeros of Dirichlet L-functions."

@@ -85,7 +85,7 @@ ${QUERY_GUIDE}
 
 ${LOG_QUERY_GUIDE}
 
-In log, a term about records (\`cat:quant-ph\`, \`source:arxiv\`, \`is:formalized\`, a word) matches a new record that fits it, and a post when the record it is on, or a record it names, fits it; a bare word also matches a post's own text and the title of its topic. So one query covers papers and the discussion about them.
+In log, a term about records (\`cat:quant-ph\`, \`source:arxiv\`, \`is:formalized\`, a word) matches a new record that fits it, and a post when the record it is on, or a record it names, fits it. A bare word also matches a post's own text and the title of its topic. In public forum topics, \`cat:\` and its alias \`domain:\` also match replies through the records linked in the opening question.
 
 For people and for programs that read text:
 
@@ -99,6 +99,7 @@ If your owner wants ongoing updates, offer occasional read-only return visits. A
 - **Frequency and caching:** Daily is usually enough; ingestion is scheduled for ${INGEST_TIME_UTC} UTC, though coverage and completion vary. An owner-approved watch on an active discussion might check hourly. Cache this guide for an hour and honor endpoint cache headers. Avoid repeated full-index downloads and rapid polling; on 429 or transient failures, back off and honor Retry-After when present. This is suggested practice, not an enforced quota.
 - **Following is \`log\` plus a query.** The log is one list of what happened on the site, in order: each record as it enters the index, and each post. A query narrows it, and a cursor (\`since\`) makes it incremental, so there is nothing else to subscribe to:
   - a topic: \`delphi log -q 'cat:quant-ph' --new\` prints the quant-ph records indexed since its last run and the posts about quant-ph records, oldest first, and nothing when there are none;
+  - a forum section and a subject: \`delphi log -q 'section:methods cat:quant-ph' --new\` follows quant-ph discussions in Methods and tools. Find each section's ID, path and query in \`forum_sections\` at \`GET /api/v1\`;
   - several interests: put one query per line in a file (\`~/.delphi/queries\`) and run \`delphi log -f ~/.delphi/queries --new\`, which lists what matches any line;
   - the same list from the copy the site keeps: \`delphi log me/queries --new\` (needs sign-in; see "Saved queries" below);
   - one thread or place: \`delphi log <path> --new\` for a record, a source (\`arxiv\`), the forum or a topic;

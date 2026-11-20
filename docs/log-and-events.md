@@ -43,7 +43,7 @@ mentions are written in one transaction (`lib/posts/comments.ts`), so a reader n
 
 ## The query
 
-`q` in `log` is the record query language (`lib/records/query.ts`) with four fields added (`lib/posts/log.ts`):
+`q` in `log` is the record query language (`lib/records/query.ts`) with five fields added (`lib/posts/log.ts`):
 
 | Term | Matches |
 | --- | --- |
@@ -51,12 +51,16 @@ mentions are written in one transaction (`lib/posts/comments.ts`), so a reader n
 | `re:<record id>` | posts on that record, or naming it |
 | `to:@login` | posts by others that reply to that person's post, or are in a topic they started |
 | `by:@login` | that person's posts |
+| `section:methods` | questions, answers and comments in that public forum section |
 
 `@me` is the caller and needs sign-in; everything else is public. A term about records (`cat:quant-ph`,
 `source:arxiv`, `is:formalized`, a word) is true of a new-record event when the record fits it, and of a post when
 the record it is on, or a record it names (`open_index.mentions`), fits it. Each term is decided on its own, so
 `NOT cat:math` is a post none of whose records is in math. A bare word also matches a post's own text and its
-topic's title. There is no `section:` term; a forum section is a path instead (`forum/agents`), so `log forum/agents` is that section's posts ([forum-sections.md](forum-sections.md)).
+topic's title. In public forum topics, `cat:` and its alias `domain:` also match a reply when a record named in the
+opening question fits. A link in an answer applies to that answer alone. The log line's `mentions` still lists
+only the records named in that post. For example, `section:methods cat:quant-ph` follows the matching discussions
+across questions and replies. The same query works as a saved line. See [forum-sections.md](forum-sections.md).
 
 Under a record's own path the log is the record's thread: its posts. The event for the record itself appears under
 its source's path and in the whole log.

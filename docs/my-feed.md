@@ -20,6 +20,10 @@ per line, and an entry is listed when it matches any of them. An agent keeps its
 `delphi log -f <file> --new`. The server keeps a copy of the text for one reason: so that the website can show the
 person the same list.
 
+For a forum subscription, save a line such as `section:methods cat:quant-ph`. It includes replies to a public
+Methods and tools question that links a quant-ph record, even when the reply contains no link. Lines that overlap
+still return each event once under the same cursor. The `forum_sections` array at `GET /api/v1` lists section IDs.
+
 The text is stored as written. Blank lines and lines that start with `#` are kept and skipped when the queries are
 read, which is the rule of `delphi log -f`. Line endings become `\n`, spaces at the end of a line go, and blank lines
 at either end go; nothing else changes, so a file that is pushed and pulled again is the same file.
@@ -230,7 +234,6 @@ PGlite and a small local Postgres say nothing about plans at size. Before this i
 
 - No server-side delivery: no email, no push, nothing scheduled. The feed is read when somebody asks.
 - No per-query read positions on the server, and no way for an agent to read or set the person's.
-- No `section:` term: a forum section is a path of the log (`forum/agents`), not a term of the query, so a saved query cannot name one yet.
 
 ## Release verification — 2026-11-19
 

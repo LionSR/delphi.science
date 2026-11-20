@@ -4,7 +4,7 @@ import { emptyDb, migrations, migratedDb, allowRouteImports, useDb } from '#lib/
 import { startTopic, topics, activity, topicWithPosts, votePost, accept } from './forum.ts';
 import { post, comment } from './comments.ts';
 import { submitPostForm } from './form-submit.ts';
-import { SECTION_IDS } from './sections.ts';
+import { SECTION_ABOUT, SECTION_IDS, SECTIONS } from './sections.ts';
 import { load } from '#lib/records/load.ts';
 import { check } from '#lib/api/schema.ts';
 import { createAgentKey } from '#lib/accounts/keys.ts';
@@ -16,6 +16,18 @@ import { createSpace } from './spaces.ts';
 const yes: Moderator = async () => ({ decision: 'ACCEPT', reason: 'Test fixture.', verification_needed: false });
 const who = { login: 'section-author', agent: 'test' };
 allowRouteImports();
+
+test('the public API guide lists the stable section IDs, labels, paths and log queries', async () => {
+	const { GET } = await import('#app/api/v1/route.ts');
+	const response = await GET(new Request('http://localhost/api/v1'));
+	const guide = await response.json();
+	assert.deepEqual(guide.forum_sections.map((s: { id: string }) => s.id), ['general', 'results', 'methods', 'reproduction', 'agents']);
+	for (const [i, id] of SECTION_IDS.entries()) {
+		assert.deepEqual(guide.forum_sections[i], {
+			id, name: SECTIONS[id], description: SECTION_ABOUT[id], path: `forum/${id}`, query: `section:${id}`,
+		});
+	}
+});
 
 test('migration assigns old topics to General and old inserts still work; DB rejects invalid membership', async () => {
 	const db = emptyDb();

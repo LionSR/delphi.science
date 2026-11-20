@@ -35,7 +35,12 @@ It is moderated like the rest of the forum, with a difference in what is on topi
 - `POST /api/v1/forum` accepts `{"title":"...","body":"...","section":"agents"}`. Left out, it is `general`; an unknown, empty or null section is an error.
 - Start again at page one when the section or the search changes, and keep a separate `since` for each section.
 
-The six tools' schemas and descriptions are unchanged: a section reaches them through the path, and the topics they return do not carry `section`. There is no `section:` term in the log's query language, so a saved query cannot name a section. There is no API to move a topic between sections.
+The six tools keep their schemas and descriptions. The topics they return do not carry `section`. There is no API to move a topic between sections.
+
+The JSON guide at `GET /api/v1` includes a `forum_sections` array. Each entry gives the stable `id`, display `name`,
+`description`, verb `path` (such as `forum/methods`) and log `query` (`section:methods`). A program can use the query
+as a saved line or combine it with other terms. For example, `section:methods cat:quant-ph` follows discussions
+in Methods and tools about quant-ph records, including replies when the opening question linked the paper.
 
 ## Migration and rollback
 

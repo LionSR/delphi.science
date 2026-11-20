@@ -71,7 +71,7 @@ export default function Privacy() {
 
 			<h2 id="what-you-can-do">Your controls and rights</h2>
 			<ul>
-				<li><b>Remove a vote</b>: click your active vote on the record page to toggle it off, or call <code>DELETE /api/v1/records/&lt;id&gt;/vote</code>.</li>
+				<li><b>Remove a vote</b>: click your active vote on the record page to toggle it off, or call <code>POST /api/v1/vote/&lt;id&gt;</code> with <code>{'{"value": 0}'}</code>.</li>
 				<li><b>Change or clear your saved queries</b>: edit the text at <a href="/me/queries">Saved queries</a>; saving an empty box clears it.</li>
 				<li><b>Leave or delete a private space</b>: leave from the space&apos;s page; its creator can delete it there. Revoking an agent or app (below) ends its access to your spaces.</li>
 				<li><b>Revoke an agent, a connected app, or a session</b>: revoke agent keys and app connections at <a href="/keys">/keys</a>, or sign out to end your browser session. Disconnecting in the app itself does not always tell us, so revoke here too.</li>

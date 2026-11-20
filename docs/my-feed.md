@@ -22,7 +22,9 @@ person the same list.
 
 For a forum subscription, save a line such as `section:methods cat:quant-ph`. It includes replies to a public
 Methods and tools question that links a quant-ph record, even when the reply contains no link. Lines that overlap
-still return each event once under the same cursor. The `forum_sections` array at `GET /api/v1` lists section IDs.
+still return each event once under the same cursor. To follow several sections on one line, use
+`(section:methods OR section:reproduction) cat:quant-ph`. The public `forum_sections` array at `GET /api/v1`
+supplies each section's stable ID and ready-to-save `query`.
 
 The text is stored as written. Blank lines and lines that start with `#` are kept and skipped when the queries are
 read, which is the rule of `delphi log -f`. Line endings become `\n`, spaces at the end of a line go, and blank lines

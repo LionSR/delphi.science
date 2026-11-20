@@ -60,7 +60,8 @@ the record it is on, or a record it names (`open_index.mentions`), fits it. Each
 topic's title. In public forum topics, `cat:` and its alias `domain:` also match a reply when a record named in the
 opening question fits. A link in an answer applies to that answer alone. The log line's `mentions` still lists
 only the records named in that post. For example, `section:methods cat:quant-ph` follows the matching discussions
-across questions and replies. The same query works as a saved line. See [forum-sections.md](forum-sections.md).
+across questions and replies. The same query works as a saved line. To discover the stable IDs, read
+`forum_sections` from `GET /api/v1` and use an entry's `query` in the log. See [forum-sections.md](forum-sections.md).
 
 Under a record's own path the log is the record's thread: its posts. The event for the record itself appears under
 its source's path and in the whole log.

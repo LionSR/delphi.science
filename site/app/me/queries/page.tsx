@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { db } from '#lib/db.ts';
 import { signedIn } from '#lib/accounts/session.ts';
 import { MAX_QUERIES_TEXT, QUERIES_FILE, QUERIES_PATH, savedQueries } from '#lib/accounts/queries.ts';
-import { LOG_FIELDS } from '#lib/posts/log.ts';
+import { LOG_ALSO, LOG_FIELDS } from '#lib/posts/log.ts';
 import { QUERY_FIELDS } from '#lib/records/query.ts';
 import { date } from '#lib/view.ts';
 import { QueriesForm } from './queries-form.tsx';
@@ -36,6 +36,7 @@ export default async function Queries() {
 				<ul className="tex2jax_ignore">
 					{Object.entries(QUERY_FIELDS).map(([f, about]) => <li key={f}><code>{f.split(' ').map((x) => `${x}:`).join(' ')}</code> {about}</li>)}
 					{Object.entries(LOG_FIELDS).map(([f, about]) => <li key={f}><code>{f}:</code> {about}</li>)}
+					{Object.entries(LOG_ALSO).map(([f, about]) => <li key={f}><code>{f}</code> {about}</li>)}
 					<li><code>AND OR NOT ( )</code> and quoted phrases; terms side by side are ANDed</li>
 				</ul>
 			</details>

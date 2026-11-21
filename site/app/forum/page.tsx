@@ -1,7 +1,7 @@
 // The forum: research questions and discussions, moderated MathOverflow-style.
 import { db } from '#lib/db.ts';
 import { PublicAuthor } from '#lib/accounts/public-author.ts';
-import { topics } from '#lib/posts/forum.ts';
+import { topicQuery, topics, type TopicState } from '#lib/posts/forum.ts';
 import { FORUM } from '#lib/posts/visibility.ts';
 import { me } from '#lib/accounts/session.ts';
 import { publicNames } from '#lib/accounts/people.ts';
@@ -19,6 +19,9 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 	const d = await db();
 	const [{ questions, total, pages }, who] = await Promise.all([topics(d, null, { q, page, limit: PAGE_SIZE, space: FORUM }), me()]);
 	const names = await publicNames(d, questions.map((t) => t.voter));
+	// Open and answered are terms of the search (is:open, is:answered), so a tab is a link to that search and the box shows it.
+	const { words, state } = topicQuery(q);
+	const tab = (to: TopicState | null) => `/forum${words || to ? `?${new URLSearchParams({ q: [to && `is:${to}`, words].filter(Boolean).join(' ') })}` : ''}`;
 	return (
 		<article>
 			<h1>Forum</h1>
@@ -27,6 +30,11 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 			{notice && <p className="count">{notice}</p>}
 
 			<h2>Topics</h2>
+			<nav className="tabs" aria-label="Topics by state">
+				<a href={tab(null)} aria-current={state === null ? 'page' : undefined}>All</a>
+				<a href={tab('open')} aria-current={state === 'open' ? 'page' : undefined}>Open</a>
+				<a href={tab('answered')} aria-current={state === 'answered' ? 'page' : undefined}>Answered</a>
+			</nav>
 			<form action="/forum">
 				<input name="q" defaultValue={q} placeholder="Search the forum before you post" aria-label="Search the forum" className="grow" />
 				<button>Search</button>

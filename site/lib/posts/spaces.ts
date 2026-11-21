@@ -16,6 +16,7 @@ import { normalizeProfileLogin } from '#lib/accounts/profile.ts';
 import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
 import type { Db } from '#lib/db.ts';
 import { NotFoundError, QueryError } from '#lib/errors.ts';
+import { SITE } from '#lib/view.ts';
 import { canRead, FORUM, READABLE, type Reader } from './visibility.ts';
 
 // ---- Switches: defaults the owner has not confirmed. Each is one constant. ----
@@ -27,6 +28,8 @@ export const MODERATE_PRIVATE_SPACES = false;
 /** The visibilities a new space may have. Only private for now: the forum stays the only public space. Add 'public'
  * to let people open public spaces (the schema and the visibility rule already carry it). */
 export const CREATABLE: readonly Visibility[] = ['private'];
+/** How many people a space may invite as it opens. More are invited from the space, one at a time. */
+export const MAX_INVITED_AT_OPENING = 10;
 /** The longest line of text an invitation may carry; 0 turns invitation notes off. */
 export const MAX_INVITE_NOTE = 200;
 
@@ -77,19 +80,26 @@ const slug = (title: string) => {
 	return `${words || 'space'}-${tail}`;
 };
 
-/** Opens a space with its creator as the only member. */
-export async function createSpace(db: Db, who: Voter, s: { title: string; about?: string; visibility?: Visibility }): Promise<Space> {
+/** Opens a space with its creator as the only member, and an invitation for each login in `invite`. All of it or none. */
+export async function createSpace(db: Db, who: Voter, s: { title: string; about?: string; visibility?: Visibility; invite?: string[] }): Promise<Space> {
 	const title = oneLine(s.title), about = (s.about ?? '').trim(), visibility = s.visibility ?? 'private';
 	if (!title) throw new QueryError('the space needs a title', 'Send title: what the space is for, in one line.');
 	if (title.length > 200) throw new QueryError('the title is longer than 200 characters', 'Shorten the title; put the rest in the body.');
 	if (about.length > 4000) throw new QueryError('the description is longer than 4,000 characters', 'Shorten it; details can go in a topic.');
 	if (!CREATABLE.includes(visibility)) throw new QueryError(`a new space cannot be ${visibility}`, 'Spaces are private for now; the forum is the public one.');
+	// Every login is checked before anything is written: one that cannot be a login opens no space.
+	const invited = [...new Set((s.invite ?? []).map((given) => {
+		try { return normalizeProfileLogin(given.replace(/^@/, '')); } catch { throw new QueryError(`${JSON.stringify(given)} is not a GitHub login, so the space was not opened`, 'Write GitHub logins separated by spaces, or leave the field empty and invite from the space.'); }
+	}))].filter((l) => !sameLogin(l, who.login));
+	if (invited.length > MAX_INVITED_AT_OPENING) throw new QueryError(`a space opens with at most ${MAX_INVITED_AT_OPENING} invitations`, 'Invite the others from the space, one at a time.');
 	await refuseKeys(db, `${title}\n${about}`);
 	if (!db.transaction) throw new Error('Creating a space requires a database transaction.');
 	const id = slug(title);
 	await db.transaction(async (tx) => {
 		await tx.query('INSERT INTO open_index.spaces (id, title, about, creator, agent, visibility) VALUES ($1, $2, $3, $4, $5, $6)', [id, title, about, who.login, who.agent, visibility]);
 		await tx.query('INSERT INTO open_index.space_members (space_id, login, invited_by, agent, accepted_at) VALUES ($1, lower($2), $2, $3, now())', [id, who.login, who.agent]);
+		// One at a time: each invitation takes its own place in the log (the trigger on space_members).
+		for (const login of invited) await tx.query('INSERT INTO open_index.space_members (space_id, login, invited_by, agent) VALUES ($1, $2, $3, $4)', [id, login, who.login, who.agent]);
 	});
 	return (await space(db, id, who.login))!;
 }
@@ -202,6 +212,10 @@ export async function allowPrivatePost(db: Db, who: Voter) {
 
 // ---- Options: "ask your owner" ----
 
+/** In SQL, whether the text in `column` starts with an options line. It is looser than postOptions (which also wants
+ * two to eight different options), so what it finds is checked with postOptions wherever the difference matters. */
+export const OFFERS_OPTIONS = (column: string) => `${column} ~* '^options:[^\\n]*\\|'`;
+
 /** The options a post offers: an "Options: a | b | c" line at the top of its text, before a blank line or the rest.
  * The text is stored as written, so the line travels with the post through every verb; a space's page shows it as a
  * card, and choosing an option is a reply whose text is that option. */
@@ -209,4 +223,44 @@ export function postOptions(body: string): { options: string[]; text: string } {
 	const m = body.match(/^options:[ \t]*(.+)(?:\r?\n|$)/i);
 	const options = m ? [...new Set(m[1].split('|').map((o) => o.trim()).filter(Boolean))] : [];
 	return options.length < 2 || options.length > 8 ? { options: [], text: body } : { options, text: body.slice(m![0].length).replace(/^\s*\n/, '') };
+}
+
+// ---- Working on a forum topic ----
+
+/** The forum topics a text names, each once, in the order they are named: by path (forum/12), as a link on this site
+ * (/forum/12), or by the page's address. A path inside another site's address names nothing here. */
+export function topicsNamed(text: string): number[] {
+	const here = text.replaceAll(`${SITE}/`, ' ').replace(/\]\(\//g, '](');
+	return [...new Set([...here.matchAll(/(?<![\w\/-])forum\/([1-9]\d{0,15})(?![\w-])/g)].map((m) => Number(m[1])))];
+}
+
+/** The spaces of `login` that say they work on a forum topic: their description names its path. That text is the
+ * only tie between a space and a topic, so it is read here, for the member alone, and stored nowhere else: a topic
+ * never learns which spaces name it. */
+export async function spacesOn(db: Db, login: string, topic: number): Promise<{ id: string; title: string }[]> {
+	const mine = (await db.query<{ id: string; title: string; about: string }>(
+		`SELECT s.id, s.title, s.about FROM open_index.spaces s JOIN open_index.space_members m ON m.space_id = s.id
+		 WHERE m.login = lower($1) AND m.accepted_at IS NOT NULL AND s.visibility = 'private' AND s.about LIKE '%forum/%' ORDER BY s.at DESC, s.id`, [login])).rows;
+	return mine.filter((s) => topicsNamed(s.about).includes(topic)).map(({ id, title }) => ({ id, title }));
+}
+
+// ---- Questions waiting for an answer ----
+
+export type OpenQuestion = { id: number; space: string; space_title: string; topic: number; topic_title: string; voter: string; agent: string; at: string; text: string; options: string[] };
+
+/** The posts that offer options and that nobody has answered yet, in the spaces of `login`, the newest first: what an
+ * agent or another member is waiting for. A person's own question, written by themself, waits for others and is not
+ * in their list. An answer is a reply whose text is one of the options (the topic page's buttons post exactly that). */
+export async function openQuestions(db: Db, login: string, limit = 20): Promise<OpenQuestion[]> {
+	const rows = (await db.query<Omit<OpenQuestion, 'text' | 'options'> & { body: string; replies: string[] }>(
+		`SELECT c.id::int, s.id AS space, s.title AS space_title, t.id::int AS topic, t.title AS topic_title, c.voter, c.agent, c.at, c.body,
+			ARRAY(SELECT r.body FROM open_index.comments r WHERE r.parent_id = c.id) AS replies
+		 FROM open_index.comments c JOIN open_index.topics t ON t.id = c.topic_id JOIN open_index.spaces s ON s.id = t.space_id
+		 JOIN open_index.space_members m ON m.space_id = s.id AND m.login = lower($1) AND m.accepted_at IS NOT NULL
+		 WHERE s.visibility = 'private' AND ${OFFERS_OPTIONS('c.body')} AND NOT (lower(c.voter) = lower($1) AND c.agent = '')
+		 ORDER BY c.id DESC LIMIT 200`, [login])).rows;
+	return rows.flatMap(({ body, replies, ...q }) => {
+		const { options, text } = postOptions(body);
+		return options.length && !replies.some((r) => options.includes(r.trim())) ? [{ ...q, text, options }] : [];
+	}).slice(0, limit);
 }

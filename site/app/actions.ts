@@ -111,12 +111,16 @@ const slugOf = (form: FormData) => String(form.get('space') ?? '').replace(/[^a-
 
 export async function openSpace(form: FormData) {
 	const who = await signedIn('/ws');
+	const title = String(form.get('title') ?? ''), about = String(form.get('about') ?? '');
 	let to: string;
 	try {
-		to = `/ws/${(await createSpace(await db(), who, { title: String(form.get('title') ?? ''), about: String(form.get('about') ?? '') })).id}`;
+		// Logins to invite as the space opens, separated by spaces or commas.
+		const invite = String(form.get('invite') ?? '').split(/[\s,]+/).filter(Boolean);
+		to = `/ws/${(await createSpace(await db(), who, { title, about, invite })).id}`;
 	} catch (e) {
 		if (!(e instanceof QueryError)) throw e;
-		to = `/ws?notice=${encodeURIComponent(e.message)}`;
+		// Back to the form with what was typed, so a mistyped login costs nothing.
+		to = `/ws?${new URLSearchParams({ notice: e.message, title, about, invite: String(form.get('invite') ?? '') })}#open`;
 	}
 	redirect(to);
 }

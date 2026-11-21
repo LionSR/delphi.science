@@ -29,10 +29,13 @@ The site tests read `dist/index.json`. Build it first as the README says under "
 - **One definition of the API.** Operations are defined in `site/lib/api/openapi.ts`. After a change there, run `cd site && npm run openapi`, which rewrites `site/openapi.json` and `cli/api.json`; commit both.
 - **A new source** follows "Adding a source" in the README: an adapter in `sources.py`, a prefix in `site/lib/records/prefixes.json`. Prefixes are never reused.
 - **A database change** is a new file in `site/supabase/migrations/`. Do not edit a migration that is already there.
+  Merging deploys, so a maintainer applies the migration to production before merging the code that reads it: say at the top of the pull request that it carries one, and keep it additive so the code already running still works in between.
 - **No secrets and no personal data** in code, fixtures, tests or commit messages. Tests inject a mock moderator; they never call a paid model.
 - **Plain prose** in documentation, comments and site text, as the rest of the repository is written.
 
 Pull requests from forks run the tests without any of the repository's secrets, and a maintainer approves the first run.
+
+A maintainer merges by squash. The `Commit authors` check fails on commits that are not the owner's; that is expected on an outside pull request and does not block review.
 
 ## Licence
 

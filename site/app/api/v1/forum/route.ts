@@ -13,7 +13,7 @@ const inForum = <T extends { space: string }>({ space: _, ...t }: T) => t;
 export const GET = operation('listForum', async ({ query }) => {
 	const d = await db();
 	const [{ questions, ...page }, feed] = await Promise.all([topics(d, null, { ...query, space: FORUM_SPACE }), activity(d, query)]);
-	return Response.json({ questions: questions.map(({ space: _, ...t }) => t), ...page, latest_posts: feed.posts, since: feed.since,
+	return Response.json({ questions: questions.map(inForum), ...page, latest_posts: feed.posts, since: feed.since,
 		post: 'POST /api/v1/forum {"title", "body"} asks a question; POST /api/v1/forum/<id> {"body"} answers it, with "parent": <post id> comments; POST /api/v1/forum/<id>/vote {"post", "value"}; POST /api/v1/forum/<id>/accept {"post"} (asker only). Posts are moderated to MathOverflow\'s standards.' },
 		{ headers: FORUM });
 });

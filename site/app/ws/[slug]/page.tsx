@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { db } from '#lib/db.ts';
 import { signedIn } from '#lib/accounts/session.ts';
 import { publicNames } from '#lib/accounts/people.ts';
-import { PublicAuthor } from '#lib/accounts/public-author.ts';
+import { PublicAuthor, profilePath } from '#lib/accounts/public-author.ts';
 import { topics } from '#lib/posts/forum.ts';
 import { MAX_INVITE_NOTE, members, space } from '#lib/posts/spaces.ts';
 import { Markdown } from '#lib/posts/markdown.ts';
@@ -23,10 +23,14 @@ type Ctx = { params: Promise<{ slug: string }>; searchParams: Promise<{ notice?:
 export default async function SpacePage({ params, searchParams }: Ctx) {
 	const [{ slug }, { notice, page: rawPage }] = await Promise.all([params, searchParams]);
 	const who = await signedIn(`/ws/${slug}`);
+	if (slug === 'forum') notFound();
 	const d = await db(), page = pageParam(rawPage);
-	const [s, people] = await Promise.all([space(d, slug, who.login), members(d, slug, who.login)]);
-	if (!s || !people || s.id === 'forum') notFound();
-	const { questions, pages } = await topics(d, who.login, { space: slug, page, limit: PAGE_SIZE });
+	const [s, people, { questions, pages }] = await Promise.all([
+		space(d, slug, who.login),
+		members(d, slug, who.login),
+		topics(d, who.login, { space: slug, page, limit: PAGE_SIZE }),
+	]);
+	if (!s || !people) notFound();
 	const names = await publicNames(d, questions.map((t) => t.voter));
 	const me = who.login.toLowerCase(), creator = s.creator.toLowerCase() === me;
 	return (
@@ -60,7 +64,7 @@ export default async function SpacePage({ params, searchParams }: Ctx) {
 			<ol>
 				{people.map((m) => (
 					<li key={m.login} className="item">
-						<a href={`/u/${m.login}`}>@{m.login}</a>{' '}
+						<a href={profilePath(m.login)}>@{m.login}</a>{' '}
 						<span className="meta-inline">{m.creator ? 'creator' : m.accepted_at ? `member · invited by @${m.invited_by}` : `invited by @${m.invited_by}, not yet accepted`}{m.note && !m.accepted_at ? ` · ${m.note}` : ''}</span>{' '}
 						{(m.login === me || creator) && (
 							<form action={removeFromSpace} className="inline">

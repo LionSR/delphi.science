@@ -4,7 +4,7 @@ import { SECTIONS, SECTION_IDS, type Section } from '#lib/posts/sections.ts';
 import { useActionState, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { sendPost } from './actions.ts';
-import { adoptGuestDraft, clearDraft, emptyDraft, markDraftLogin, restoreDraft, saveDraft, type Draft } from '#lib/posts/drafts.ts';
+import { adoptGuestDraft, clearDraft, emptyDraft, markDraftLogin, restoreDraft, saveDraft, stored, type Draft } from '#lib/posts/drafts.ts';
 import type { PostFormState } from '#lib/posts/feedback.ts';
 import type { PostInput } from '#lib/posts/form-submit.ts';
 import copy from '#lib/posts/copy.json';
@@ -40,31 +40,26 @@ function Composer({ kind, owner, topic, parent, record, space, section, back, la
 	const formKey = `${kind}:${record ?? topic ?? (space ? `new@${space}` : 'new')}:${parent ?? 'root'}${section && section !== 'general' ? `:${section}` : ''}`;
 	const login = `/auth/github?next=${encodeURIComponent(back)}`;
 	useEffect(() => {
-		try {
-			const restored = restoreDraft(sessionStorage, formKey, owner);
-			setDraft(restored.draft);
-			setAlternate(restored.alternate);
-		} catch { /* sessionStorage may be blocked */ }
+		const restored = stored(() => restoreDraft(sessionStorage, formKey, owner));
+		if (restored) { setDraft(restored.draft); setAlternate(restored.alternate); }
 		setReady(true);
 	}, [formKey, owner]);
 	useEffect(() => {
 		if (!ready) return;
-		try { setSaved(saveDraft(sessionStorage, formKey, owner, draft)); } catch { setSaved(false); }
+		setSaved(stored(() => saveDraft(sessionStorage, formKey, owner, draft)) ?? false);
 	}, [draft, formKey, owner, ready]);
 	useEffect(() => {
 		if (result.status !== 'posted' || !result.location) return;
-		try { clearDraft(sessionStorage, formKey, owner); } catch { /* visible form still clears */ }
+		stored(() => clearDraft(sessionStorage, formKey, owner));
 		setDraft(emptyDraft());
 		setAlternate(undefined);
 		router.push(result.location);
 		router.refresh();
 	}, [result, formKey, owner, router]);
-	const rememberLogin = () => {
-		try {
-			saveDraft(sessionStorage, formKey, owner, draft);
-			markDraftLogin(sessionStorage, formKey, owner);
-		} catch { /* keep current form */ }
-	};
+	const rememberLogin = () => stored(() => {
+		saveDraft(sessionStorage, formKey, owner, draft);
+		markDraftLogin(sessionStorage, formKey, owner);
+	});
 	const feedback = result.feedback;
 	return (
 		<form action={action} className="comment-form tex2jax_ignore" onSubmit={(event) => {
@@ -96,7 +91,7 @@ function Composer({ kind, owner, topic, parent, record, space, section, back, la
 				{/* With JavaScript the page moves to the post at once; without it, this says where it is. */}
 				{result.status === 'posted' && result.location && <p className="count" role="status">Posted. <a href={result.location}>Open it</a>.</p>}
 				{alternate && <button type="button" onClick={() => {
-					try { if (adoptGuestDraft(sessionStorage, formKey, owner, alternate)) setDraft(alternate); } catch { /* keep visible draft */ }
+					if (stored(() => adoptGuestDraft(sessionStorage, formKey, owner, alternate))) setDraft(alternate);
 					setAlternate(undefined);
 				}}>{copy.restoreDraft}</button>}
 				<button disabled={pending}>{pending ? copy.pending : owner ? button : `Sign in and ${button.toLowerCase()}`}</button>

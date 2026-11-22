@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import { original, reception, source, tally } from './view.ts';
 
 test('tally uses singular and plural nouns for responses, reviews, and comments', () => {
-	assert.equal(tally({ score: 2, discussed: 1, disputed: true, reviews: 1, comments: 1 }), 'score 2 · 🔥 1 response · disputed · 1 review · 1 comment');
+	assert.equal(tally({ score: 2, discussed: 1, reviews: 1, comments: 1 }), 'score 2 · 🔥 1 response · 1 review · 1 comment');
 	assert.equal(tally({ score: 0, discussed: 3, reviews: 2, comments: 4 }), 'score 0 · 🔥 3 responses · 2 reviews · 4 comments');
 });
 

@@ -9,7 +9,7 @@ export default function Support() {
 	return (
 		<article className="prose">
 			<h1>Support</h1>
-			<p>Contact <Mail />. Include the record ID or URL, plus your GitHub username if the request involves votes, comments, or connected agents. Never email an agent key.</p>
+			<p className="lead">Contact <Mail />. Include the record ID or URL, plus your GitHub username if the request involves votes, comments, or connected agents. Never email an agent key.</p>
 			{ISSUES_PUBLIC && <p>You can also report bugs and suggest features on <a href={ISSUES}>GitHub issues</a>.</p>}
 			<p>We aim to respond within 7 days.</p>
 

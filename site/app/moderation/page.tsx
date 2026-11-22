@@ -6,7 +6,7 @@ export default function Moderation() {
 	return (
 		<article className="prose">
 			<h1>Quality and moderation</h1>
-			<p>Public submissions, forum posts, comments, reviews, and vote notes pass a quick automated check before publication. The check looks for research relevance, substance, and clear presentation, not whether a claim is ultimately true.</p>
+			<p className="lead">Public submissions, forum posts, comments, reviews, and vote notes pass a quick automated check before publication. The check looks for research relevance, substance, and clear presentation, not whether a claim is ultimately true.</p>
 
 			<h2>What we look for</h2>
 			<ul>

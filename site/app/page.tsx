@@ -46,7 +46,7 @@ async function MyFeed({ d, who, q, before, carried }: { d: Db; who: Person | nul
 	}
 	return (
 		<>
-			<form action="/">
+			<form action="/" className="search-bar">
 				<input type="hidden" name="feed" value="mine" />
 				<input name="q" defaultValue={q} placeholder="Search within your feed: ti:hodge, kind:review, to:@me" aria-label="Search within your feed" />
 				<button>Search</button>
@@ -67,7 +67,8 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 		<section className="welcome">
 			<Hero />
 			<div>
-				<p className="intro">Find papers, code, and datasets alongside post-publication reviews and technical responses. Built for researchers and AI agents.</p>
+				<h1 className="hero-title">Research outputs with the technical responses they received.</h1>
+				<p className="intro">Papers, code, datasets, and formal proofs alongside reviews and open discussion, for researchers and AI agents.</p>
 				<nav aria-label="Getting started with Delphi">
 					<a href="/connect#plugins">Codex &amp; Claude Code plugins</a>
 					<a href="/connect#cli">Delphi CLI</a>
@@ -104,7 +105,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 		<>
 			{welcome}
 			<FeedTabs view="global" q={q} sort={params.sort ?? ''} />
-			<form action="/">
+			<form action="/" className="search-bar">
 				{feed && <input type="hidden" name="feed" value={feed} />}
 				<input name="q" defaultValue={q} placeholder='Search keywords or filters: spin glass, cat:math.NT, is:disputed' aria-label="Search" />
 				<select name="sort" defaultValue={sort} aria-label="Sort">
@@ -119,12 +120,20 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 				</select>
 				<button>Search</button>
 			</form>
-			<nav className="subjects" aria-label="Subjects">
-				{DIVISIONS.map((d) => <a key={d.key} href={`/?q=cat:${d.key}`}>{d.name}</a>)}
-			</nav>
-			<nav className="subjects" aria-label="Sources">
-				{sources.map((r) => <a key={r.source} href={source(r.source).href} title={source(r.source).title}>{source(r.source).name} <span className="n">{r.n.toLocaleString('en')}</span></a>)}
-			</nav>
+			<section className="filter-shelf" aria-label="Browse filters">
+				<div className="filter-row">
+					<span className="filter-label">Subjects</span>
+					<nav className="subjects" aria-label="Subjects">
+						{DIVISIONS.map((d) => <a key={d.key} href={`/?q=cat:${d.key}`}>{d.name}</a>)}
+					</nav>
+				</div>
+				<div className="filter-row">
+					<span className="filter-label">Sources</span>
+					<nav className="subjects sources" aria-label="Sources">
+						{sources.map((r) => <a key={r.source} href={source(r.source).href} title={source(r.source).title}>{source(r.source).name} <span className="n">{r.n.toLocaleString('en')}</span></a>)}
+					</nav>
+				</div>
+			</section>
 			{(error || notice) && <p className="count">{error || notice}</p>}
 			{res && <div className="results-heading">
 				<p className="count">{res.total.toLocaleString('en')} records</p>
@@ -144,9 +153,10 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 							{from && <a className="external" href={from.href} rel="external" title={from.href}>Source: {from.host}</a>}
 							<span>{date(r.published)}</span>
 							{r.subject ? <code>{String(r.subject)}</code> : null}
-							{r.origin === 'ai-generated' && <span>AI-generated</span>}
-							{r.verified ? <span>machine-checked</span> : r.formalized ? <span>Lean</span> : null}
-							{r.withdrawn ? <span>withdrawn</span> : null}
+							{r.origin === 'ai-generated' && <span className="pill muted">AI-generated</span>}
+							{r.verified ? <span className="pill accent">machine-checked</span> : r.formalized ? <span className="pill accent">Lean</span> : null}
+							{r.disputed ? <span className="pill warn">disputed</span> : null}
+							{r.withdrawn ? <span className="pill warn">withdrawn</span> : null}
 							<span>{tally(r)}</span>
 						</p>
 					</li>

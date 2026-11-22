@@ -19,7 +19,7 @@ export default async function Queries() {
 		<article>
 			<p className="meta"><a href="/?feed=mine">My feed</a><a href="/?feed=global">Global feed</a></p>
 			<h1>Saved queries</h1>
-			<p>Add one query per line. <a href="/?feed=mine">My feed</a> shows new records and discussions matching any line, newest first. Blank lines and lines starting with <code>#</code> are ignored.</p>
+			<p className="lead">Add one query per line. <a href="/?feed=mine">My feed</a> shows new records and discussions matching any line, newest first. Blank lines and lines starting with <code>#</code> are ignored.</p>
 			<QueriesForm text={saved.text} revision={saved.revision} max={MAX_QUERIES_TEXT} />
 			{saved.at && <p className="count">Last changed {date(saved.at)}.</p>}
 
@@ -31,7 +31,7 @@ export default async function Queries() {
 				<li><code>kind:question</code> new forum topics; <code>kind:review cat:quant-ph</code> reviews of quantum physics records</li>
 				<li><code>source:openai-math OR is:formalized</code> multiple filters on one line</li>
 			</ul>
-			<details>
+			<details className="panel">
 				<summary>Full query syntax</summary>
 				<ul className="tex2jax_ignore">
 					{Object.entries(QUERY_FIELDS).map(([f, about]) => <li key={f}><code>{f.split(' ').map((x) => `${x}:`).join(' ')}</code> {about}</li>)}

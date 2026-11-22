@@ -46,7 +46,7 @@ export default async function Authorize({ searchParams }: { searchParams: Promis
 			<p><b>{request.client.name}</b> wants to act as @{who.login}: submit links, post, vote, comment, and access your private <a href="/ws">spaces</a>. Afterwards you will return to <code>{to.host || to.protocol}</code>.</p>
 			<p className="count">Actions appear as {request.client.name} · @{who.login}’s team and share your daily limits. Anything the app reads is sent to its provider. Connections last 90 days and can be revoked anytime in <a href="/keys">Connections</a>.</p>
 			<div className="meta">
-				<form action={approveApp}>{hidden}<button>Approve</button></form>
+				<form action={approveApp}>{hidden}<button className="btn-primary">Approve</button></form>
 				<form action={denyApp}>{hidden}<button>Deny</button></form>
 			</div>
 		</article>

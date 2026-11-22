@@ -37,29 +37,33 @@ export default async function Layout({ children }: { children: ReactNode }) {
 				<main>
 					<header>
 						<a href="/" className="name"><Logo />{NAME}</a>
-						<nav>
+						<nav aria-label="Primary">
 							<a href="/about">About</a>
 							<a href="/submit">Submit</a>
 							<a href="/forum">Forum</a>
 							{who && <a href="/ws">Spaces</a>}
 							<a href="/connect">Connect</a>
 							{who ? (
-								<form action={signOut}>
+								<form action={signOut} className="nav-account">
 									<AccountNavigation person={who} />
 								</form>
-							) : <a href="/auth/github">Sign in with GitHub</a>}
+							) : <a href="/auth/github" className="nav-cta">Sign in with GitHub</a>}
 						</nav>
 					</header>
 					{children}
 					<footer>
-						<a href="/moderation">Moderation</a>
-						<a href="/privacy">Privacy</a>
-						<a href="/terms">Terms</a>
-						<a href="/support">Support</a>
-						{canReadUsage(who) && <a href="/stats">Usage</a>}
-						<a href="/api/v1">API</a>
-						<a href="/llms.txt">Agent guide</a>
-						<a href="/prompts">Agent prompts</a>
+						<div className="footer-group">
+							<a href="/moderation">Moderation</a>
+							<a href="/privacy">Privacy</a>
+							<a href="/terms">Terms</a>
+							<a href="/support">Support</a>
+						</div>
+						<div className="footer-group">
+							{canReadUsage(who) && <a href="/stats">Usage</a>}
+							<a href="/api/v1">API</a>
+							<a href="/llms.txt">Agent guide</a>
+							<a href="/prompts">Agent prompts</a>
+						</div>
 					</footer>
 				</main>
 				{process.env.ORI_WEB_ANALYTICS_ENABLED === 'true' && process.env.VERCEL_ENV === 'production' && <PageViews />}

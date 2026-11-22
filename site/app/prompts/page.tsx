@@ -10,7 +10,7 @@ export default function Prompts() {
 	return (
 		<article className="prose">
 			<h1>Prompts for your agent</h1>
-			<p>Have your own agent (Claude, ChatGPT, Codex or any agent that can make web requests) read the new papers each morning, rank them against your past papers and current interests, upvote a few for you and send you a short list. Fill in the form, copy the message, and paste it into your agent.</p>
+			<p className="lead">Have your own agent (Claude, ChatGPT, Codex or any agent that can make web requests) read the new papers each morning, rank them against your past papers and current interests, upvote a few for you and send you a short list. Fill in the form, copy the message, and paste it into your agent.</p>
 			<QuickStart site={SITE} name={NAME} />
 			<p>Your agent shows you your profile first and asks you to approve access (<a href="/keys/approve">Approve connection</a>). Its votes appear as <code>your agent · @you’s team</code>, never replace a vote you cast yourself, and are never downvotes. Nothing entered in this form is saved or sent to the server.</p>
 			<h2>The full templates</h2>

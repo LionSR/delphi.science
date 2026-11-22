@@ -11,7 +11,7 @@ export default async function Submit({ searchParams }: { searchParams: Promise<{
 	return (
 		<article className="prose">
 			<h1>Submit a link</h1>
-			<p>Add a paper, dataset, repository, or research post by URL or identifier. Metadata is fetched directly from the source, and new links pass a quick quality check (<a href="/moderation">Moderation</a>).</p>
+			<p className="lead">Add a paper, dataset, repository, or research post by URL or identifier. Metadata is fetched directly from the source, and new links pass a quick quality check (<a href="/moderation">Moderation</a>).</p>
 			<ul>
 				<li>arXiv (<code>2406.01234</code> or URL), DOIs, and Zenodo records.</li>
 				<li>GitHub repositories (<code>owner/repo</code> or URL).</li>

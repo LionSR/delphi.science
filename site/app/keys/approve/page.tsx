@@ -28,7 +28,7 @@ export default async function Approve({ searchParams }: { searchParams: Promise<
 					<p><b>{pending.agent}</b> wants to act as @{who.login} (code <code>{code.toUpperCase()}</code>): submit links, post, vote, comment, and access your private <a href="/ws">spaces</a>.</p>
 					<p className="count">Approve only a code from your own session. Anything the agent reads is sent to its model provider. Connections last 90 days and can be revoked anytime in <a href="/keys">Connections</a>.</p>
 					<div className="meta">
-						<form action={approve}><input type="hidden" name="code" value={code} /><button>Approve</button></form>
+						<form action={approve}><input type="hidden" name="code" value={code} /><button className="btn-primary">Approve</button></form>
 						<form action={deny}><input type="hidden" name="code" value={code} /><button>Deny</button></form>
 					</div>
 				</>

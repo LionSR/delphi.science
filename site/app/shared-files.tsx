@@ -73,7 +73,7 @@ function Row({ v }: { v: Version }) {
 export function SharedFiles({ artifacts }: { artifacts: Artifact[] }) {
 	if (!artifacts.length) return null;
 	return (
-		<section aria-label="Files and checks">
+		<section className="record-section" aria-label="Files and checks">
 			<h2>Files and checks</h2>
 			<p className="count">Peer-shared files and independent Lean verification checks linked to this record via <code>delphi-p2p</code> (<a href="https://github.com/LionSR/delphi.science/tree/main/client">client guide</a>). Files are hosted by peers and each check is signed by the verifying client’s key.</p>
 			{artifacts.map((a) => {

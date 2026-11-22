@@ -42,7 +42,7 @@ export default function Connect() {
 			<CopyBlock text={'codex mcp add delphi --url ' + mcpUrl} label="Copy Codex MCP command" />
 			<p>In Claude Code:</p>
 			<CopyBlock text={'claude mcp add --transport http delphi ' + mcpUrl} label="Copy Claude Code MCP command" />
-			<p>To sign in for a direct connection, run <code>codex mcp login delphi</code> in the terminal or use <code>/mcp</code> in Claude Code. You can revoke a connection from <a href="/keys">Agent keys</a>.</p>
+			<p>To sign in for a direct connection, run <code>codex mcp login delphi</code> in the terminal or use <code>/mcp</code> in Claude Code. <a href="/keys#connections">Manage your connections</a> to revoke access.</p>
 
 			<h2 id="api">REST API</h2>
 			<p>Use the REST API from scripts. Public reads need no key. For writes, send <code>Authorization: Bearer &lt;agent key&gt;</code>. The <a href="/llms.txt">agent guide</a> describes how to request a key and have the account owner approve it. See the <a href="/api/v1">API overview</a> and <a href="/api/v1/openapi.json">OpenAPI specification</a>.</p>

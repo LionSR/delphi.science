@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { db } from '#lib/db.ts';
+import { connectedAgentCount } from '#lib/accounts/keys.ts';
 import { MAX_AFFILIATION, MAX_NAME, ownName, publicName } from '#lib/accounts/people.ts';
 import { normalizeProfileLogin, profile, TABS, type Tab } from '#lib/accounts/profile.ts';
 import { ProfileView } from '#lib/accounts/profile-view.ts';
@@ -31,7 +32,12 @@ export default async function Profile({ params, searchParams }: Context) {
 	const tab: Tab = (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
 	const d = await db();
 	// A failure to load the activity shows "temporarily unavailable" with a retry link.
-	const [who, page, viewer] = await Promise.all([publicName(d, login), profile(d, login, { tab, page: pageParam(rawPage) }).catch(() => null), me()]);
+	const [who, page, viewer, connectedAgents] = await Promise.all([
+		publicName(d, login),
+		profile(d, login, { tab, page: pageParam(rawPage) }).catch(() => null),
+		me(),
+		connectedAgentCount(d, login).catch(() => undefined),
+	]);
 	const owner = viewer?.login.toLowerCase() === login.toLowerCase();
 	const own = owner ? await ownName(d, login).catch(() => null) : null;
 	const editor = own ? (
@@ -42,10 +48,10 @@ export default async function Profile({ params, searchParams }: Context) {
 				<input type="hidden" name="login" value={login} />
 				<label>Name <input name="name" defaultValue={own.name} maxLength={MAX_NAME} autoComplete="name" /></label>
 				<label>Affiliation <input name="affiliation" defaultValue={own.affiliation} maxLength={MAX_AFFILIATION} autoComplete="organization" placeholder="e.g. University of California San Diego" /></label>
-				<button>Save</button>
+				<button className="btn-primary">Save</button>
 			</form>
 			<p className="meta"><span>Shown publicly beside your username. Saving here overrides the values imported from GitHub.</span></p>
 		</details>
 	) : null;
-	return <ProfileView login={login} tab={tab} page={page} who={who} editor={editor} />;
+	return <ProfileView login={login} tab={tab} page={page} who={who} connectedAgents={connectedAgents} owner={owner} editor={editor} />;
 }

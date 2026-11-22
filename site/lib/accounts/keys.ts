@@ -57,6 +57,14 @@ export async function agentKeys(db: Db, login: string) {
 		 WHERE login = $1 AND agent <> '' ORDER BY created_at DESC`, [login])).rows;
 }
 
+/** Count of distinct active connected agents for `login` (non-revoked, unexpired; browser sessions excluded). */
+export async function connectedAgentCount(db: Db, login: string): Promise<number> {
+	const rows = (await db.query<{ agent: string }>(
+		`SELECT agent FROM open_index.agent_keys
+		 WHERE lower(login) = lower($1) AND agent <> '' AND revoked_at IS NULL AND expires_at > now()`, [login])).rows;
+	return new Set(rows.map((r) => agentDisplayName(r.agent))).size;
+}
+
 /** Revokes one of `login`'s agent keys (not a browser session) by hash; false if it is not theirs or already revoked. */
 export async function revokeAgentKey(db: Db, login: string, hash: string): Promise<boolean> {
 	return (await db.query<{ key_hash: string }>(`UPDATE open_index.agent_keys SET revoked_at = now()

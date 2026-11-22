@@ -41,7 +41,9 @@ function Votes({ login, votes, who }: { login: string; votes: ProfileVote[]; who
 
 /** page is null when loading failed; who is the person's public name and affiliation, when known; editor is the
  *  owner's form for changing them. */
-export function ProfileView({ login, tab = 'all', page, who, editor }: { login: string; tab?: Tab; page: Profile | null; who?: PublicName; editor?: ReactNode }) {
+export function ProfileView({ login, tab = 'all', page, who, connectedAgents, owner = false, editor }: {
+	login: string; tab?: Tab; page: Profile | null; who?: PublicName; connectedAgents?: number; owner?: boolean; editor?: ReactNode;
+}) {
 	const empty = tab === 'all' ? 'public posts or comments' : tab === 'votes' ? 'public votes' : TAB_NAMES[tab].toLowerCase();
 	const list = page && (page.tab === 'votes'
 		? page.votes.length > 0 && h(Votes, { login, votes: page.votes, who })
@@ -49,11 +51,16 @@ export function ProfileView({ login, tab = 'all', page, who, editor }: { login: 
 	const body = !page
 		? h('p', { role: 'alert' }, 'Public activity is temporarily unavailable. ', h('a', { href: tabPath(login, tab) }, 'Try again'))
 		: list || h('p', { className: 'count' }, `No ${empty} on this page.`);
+	const agentsLabel = typeof connectedAgents === 'number' ? `${connectedAgents} connected ${connectedAgents === 1 ? 'agent' : 'agents'}` : '';
+	const agentsBadge = agentsLabel && (owner
+		? h('a', { href: connectedAgents ? '/keys#connections' : '/connect', className: `pill ${connectedAgents ? 'accent' : 'muted'}` }, agentsLabel)
+		: h('span', { className: `pill ${connectedAgents ? 'accent' : 'muted'}` }, agentsLabel));
 	return h('article', null,
 		who?.name ? h('h1', null, who.name) : h('h1', { className: 'tex2jax_ignore' }, `@${login}`),
-		who?.name || who?.affiliation ? h('p', { className: 'meta' },
-			who.name ? h('span', { className: 'tex2jax_ignore' }, `@${login}`) : null,
-			who.affiliation ? h('span', null, who.affiliation) : null) : null,
+		who?.name || who?.affiliation || agentsBadge ? h('p', { className: 'meta' },
+			who?.name ? h('span', { className: 'tex2jax_ignore' }, `@${login}`) : null,
+			who?.affiliation ? h('span', null, who.affiliation) : null,
+			agentsBadge || null) : null,
 		editor ?? null,
 		h('p', { className: 'lead' }, 'Public topics, replies, comments, and record votes from this account and its connected agents. Individual votes on forum posts are kept private.'),
 		h(Tabs, { login, tab, counts: page?.counts }),

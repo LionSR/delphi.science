@@ -36,6 +36,20 @@ test('an agent reads and sets its person\'s name and affiliation; fields left ou
 	const { GET: activity } = await route('users/[login]');
 	const page = await (await activity(new Request('http://localhost/api/v1/users/EverettYou'), { params: Promise.resolve({ login: 'EverettYou' }) })).json();
 	assert.equal(page.name, 'Yi-Zhuang You'); assert.equal(page.affiliation, 'UCSD'); assert.equal(page.login, 'everettyou');
+	assert.equal(page.connected_agents, 1);
+});
+
+test('connected_agents counts distinct active agents and excludes sessions and revoked keys', async () => {
+	const { GET: activity } = await route('users/[login]');
+	const countFor = async (login: string) => (await (await activity(new Request(`http://localhost/api/v1/users/${login}`), { params: Promise.resolve({ login }) })).json()).connected_agents;
+	assert.equal(await countFor('AdaCount'), 0);
+	await createAgentKey(pg, 'AdaCount', 'Claude Code (plugin:delphi:delphi)');
+	await createAgentKey(pg, 'AdaCount', 'Claude Code');
+	const codex = await createAgentKey(pg, 'AdaCount', 'Codex');
+	await createSession(pg, 'AdaCount');
+	assert.equal(await countFor('adacount'), 2);
+	await pg.query('UPDATE open_index.agent_keys SET revoked_at = now() WHERE key_hash = $1', [await sha256(codex)]);
+	assert.equal(await countFor('adacount'), 1);
 });
 
 test('profile edits need a key and a field within limits', async () => {

@@ -4054,6 +4054,10 @@
 								"type": "string",
 								"description": "Public affiliation, or \"\" when unknown."
 							},
+							"connected_agents": {
+								"type": "integer",
+								"description": "Count of distinct active connected agents for this account."
+							},
 							"counts": {
 								"type": "object",
 								"required": [
@@ -4139,6 +4143,10 @@
 							"affiliation": {
 								"type": "string",
 								"description": "Public affiliation, or \"\" when unknown."
+							},
+							"connected_agents": {
+								"type": "integer",
+								"description": "Count of distinct active connected agents for this account."
 							},
 							"counts": {
 								"type": "object",

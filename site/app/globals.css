@@ -37,6 +37,8 @@ ul.plain li { margin: 0.2rem 0; }
 .pill.warn { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 35%, transparent); background: color-mix(in srgb, var(--warn) 9%, transparent); }
 .pill.accent { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 32%, transparent); background: color-mix(in srgb, var(--accent) 9%, transparent); }
 .pill.muted { color: var(--subtle); }
+a.pill { text-decoration: none; transition: border-color var(--motion), background-color var(--motion); }
+a.pill:hover { border-color: var(--accent); }
 
 /* Callouts, panels & card grids */
 .callout { margin: 1.1rem 0; padding: 0.85rem 1.05rem; border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: var(--radius); background: var(--surface); font-size: 0.94rem; }

@@ -27,6 +27,7 @@ const HEX64 = '^[0-9a-f]{64}$';
 const activity = {
 	login: { type: 'string', description: 'The login, lowercased.' },
 	name: { type: 'string', description: 'Public name, or "" when unknown.' }, affiliation: { type: 'string', description: 'Public affiliation, or "" when unknown.' },
+	connected_agents: { type: 'integer', description: 'Count of distinct active connected agents for this account.' },
 	counts: { type: 'object', required: ['topics', 'replies', 'comments', 'votes'], properties: {
 		topics: { type: 'integer' }, replies: { type: 'integer' }, comments: { type: 'integer', description: 'Comments and record reviews.' }, votes: { type: 'integer', description: 'Votes on live records.' },
 	} },

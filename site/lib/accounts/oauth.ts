@@ -7,8 +7,7 @@ import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
 import type { Db } from '#lib/db.ts';
 import { sha256 } from '#lib/hash.ts';
 import { SITE } from '#lib/view.ts';
-import { createAgentKey, MAX_AGENT_NAME, profileName } from './keys.ts';
-import { agentDisplayName } from './agent-display.ts';
+import { agentDisplayName, createAgentKey, MAX_AGENT_NAME, profileName } from './keys.ts';
 
 /** The one scope: act on the site as the person's agent (submit, post, comment, vote). */
 export const SCOPE = 'write';

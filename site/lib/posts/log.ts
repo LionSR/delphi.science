@@ -10,7 +10,6 @@
 // with a seq from the same sequence (open_index.space_members): the person invited reads the invitation, and the
 // space's members read both.
 import { sectionId, type Section } from './sections.ts';
-import { agentDisplayName } from '#lib/accounts/agent-display.ts';
 import { CodedError, NotFoundError, QueryError } from '#lib/errors.ts';
 import { pageLimit, pageSize } from '#lib/paging.ts';
 import type { Db } from '#lib/db.ts';
@@ -149,7 +148,7 @@ export const threadPath = (p: { record_id: string | null; topic_id: number | nul
 
 // The path is built here from the topic's space, not read from events.path, which knows the forum's paths only.
 const entry = (e: Row): LogEntry => ({
-	seq: e.seq, kind: e.kind, path: e.post_id === null ? e.record_id! : `${threadPath(e)}/${e.post_id}`, parent: e.parent === null ? null : `${threadPath(e)}/${e.parent}`, by: e.voter, agent: agentDisplayName(e.agent ?? ''),
+	seq: e.seq, kind: e.kind, path: e.post_id === null ? e.record_id! : `${threadPath(e)}/${e.post_id}`, parent: e.parent === null ? null : `${threadPath(e)}/${e.parent}`, by: e.voter, agent: e.agent ?? '',
 	at: e.at, score: e.score ?? 0, subject: e.title ?? '', body: e.body ?? '', revision: e.revision ?? '', mentions: e.mentions,
 });
 
@@ -269,6 +268,6 @@ export async function logEntry(db: Db, who: Reader, thread: string, id: number):
 		 FROM open_index.comments c LEFT JOIN open_index.topics t ON t.id = c.topic_id LEFT JOIN open_index.records r ON r.id = c.record_id WHERE c.id = $1 AND ${POST_READABLE('$2')}`, [id, who])).rows[0] : undefined;
 	if (!p || threadPath(p) !== thread) throw new NotFoundError(`no post ${thread}/${id}`, `List the thread's posts with log ${thread}.`);
 	const kind: Kind = p.record_id ? (p.review ? 'review' : 'comment') : p.parent !== null ? 'comment' : p.opening ? 'question' : 'answer';
-	return { kind, path: `${thread}/${p.id}`, parent: p.parent === null ? null : `${thread}/${p.parent}`, by: p.voter, agent: agentDisplayName(p.agent),
+	return { kind, path: `${thread}/${p.id}`, parent: p.parent === null ? null : `${thread}/${p.parent}`, by: p.voter, agent: p.agent,
 		at: p.at, score: p.score, subject: p.title ?? '', body: p.body, revision: p.revision };
 }

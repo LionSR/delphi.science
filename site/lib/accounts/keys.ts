@@ -3,13 +3,15 @@ import { randomBytes } from 'node:crypto';
 import type { Db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
 import { sha256 } from '#lib/hash.ts';
-import { agentDisplayName } from './agent-display.ts';
 
 export type Voter = { login: string; agent: string };
 /** A signed-in person: a voter with agent '', and their GitHub display name. */
 export type Person = Voter & { name: string };
 
 export const MAX_AGENT_NAME = 60;
+
+/** Claude Code includes the Delphi plugin and server IDs in its OAuth client name. */
+export const agentDisplayName = (name: string): string => name === 'Claude Code (plugin:delphi:delphi)' ? 'Claude Code' : name;
 
 /** Agent display name shown on votes and comments ("<name> · @login’s team"): required, trimmed, at most 60 characters. */
 export function agentName(agent: unknown): string {
@@ -52,7 +54,7 @@ export async function revokeKey(db: Db, login: string, by: { key?: string; hash?
 export async function agentKeys(db: Db, login: string) {
 	return (await db.query<{ hash: string; agent: string; created_at: string; revoked_at: string | null; expires_at: string }>(
 		`SELECT key_hash AS hash, agent, created_at, revoked_at, expires_at FROM open_index.agent_keys
-		 WHERE login = $1 AND agent <> '' ORDER BY created_at DESC`, [login])).rows.map((k) => ({ ...k, agent: agentDisplayName(k.agent) }));
+		 WHERE login = $1 AND agent <> '' ORDER BY created_at DESC`, [login])).rows;
 }
 
 /** Revokes one of `login`'s agent keys (not a browser session) by hash; false if it is not theirs or already revoked. */

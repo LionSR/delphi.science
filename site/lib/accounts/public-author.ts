@@ -1,6 +1,5 @@
 import { createElement, Fragment } from 'react';
 import type { PublicName } from './people.ts';
-import { agentDisplayName } from './agent-display.ts';
 
 export const profilePath = (login: string) => `/u/${encodeURIComponent(login)}`;
 
@@ -8,7 +7,7 @@ export const profilePath = (login: string) => `/u/${encodeURIComponent(login)}`;
  *  The person's name (or "@login" when none is known) links to their profile; the login stays in its tooltip. */
 export function PublicAuthor({ voter, agent = '', who }: { voter: string; agent?: string; who?: PublicName }) {
 	return createElement(Fragment, null,
-		agent ? createElement('span', { className: 'tex2jax_ignore' }, agentDisplayName(agent)) : null,
+		agent ? createElement('span', { className: 'tex2jax_ignore' }, agent) : null,
 		agent ? ' · ' : '',
 		createElement('a', { href: profilePath(voter), className: 'tex2jax_ignore', title: who?.name ? `@${voter}` : undefined }, who?.name || `@${voter}`),
 		agent ? '’s team' : '',

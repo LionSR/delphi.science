@@ -2,13 +2,14 @@
 // without a token can and cannot do, that a signed-in plugin's actions are attributed, moderated and limited
 // like those of a device-approved agent key, and expiry and revocation. Sign-in itself is in lib/accounts/oauth.test.ts.
 import { strict as assert } from 'node:assert';
+import { readFileSync } from 'node:fs';
 import { after, before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { load } from '#lib/records/load.ts';
 import { allowRouteImports, migratedDb, useDb } from '#lib/testing.ts';
 import { createAgentKey, createSession, revokeAgentKey } from '#lib/accounts/keys.ts';
 import { RESOURCE_METADATA } from '#lib/accounts/oauth.ts';
-import { signIn as signInOn } from '#lib/accounts/oauth-testing.ts';
+import { route, signIn as signInOn } from '#lib/accounts/oauth-testing.ts';
 import { sha256 } from '#lib/hash.ts';
 import { SITE } from '#lib/view.ts';
 import { handle } from './mcp.ts';
@@ -119,7 +120,7 @@ describe('a signed-in plugin', () => {
 		assert.deepEqual(await stored(), []);
 	});
 
-	test('an existing Claude Code plugin key and its past comments show the short client name', async () => {
+	test('existing Claude Code connections and comments use the same name in MCP and REST', async () => {
 		const legacyName = 'Claude Code (plugin:delphi:delphi)';
 		const key = await createAgentKey(pg, 'Noether', legacyName);
 		const me = await ok('get', { id: 'me' }, key);
@@ -128,9 +129,28 @@ describe('a signed-in plugin', () => {
 		const { rows: [post] } = await pg.query<{ id: number }>(
 			'INSERT INTO open_index.comments (record_id, voter, agent, body) VALUES ($1, $2, $3, $4) RETURNING id::int',
 			[OTHER, 'Noether', legacyName, body]);
+		await pg.query('INSERT INTO open_index.comments (record_id, voter, agent, body) VALUES ($1, $2, $3, $4)',
+			[OTHER, 'Noether', 'Claude Code daily voter', 'A separate connection.']);
+		const migration = readFileSync(new URL('../../supabase/migrations/20261122180657_normalize_claude_code_attribution.sql', import.meta.url), 'utf8');
+		const before = await ok('log', { path: OTHER });
+		await pg.exec(migration);
+		await pg.exec(migration);
 		const read = await ok('get', { id: `${OTHER}/${post.id}` });
 		assert.deepEqual([read.voter, read.agent, read.body], ['Noether', 'Claude Code', body]);
-		assert.equal((await ok('log', { path: OTHER })).entries[0].agent, 'Claude Code');
+		const log = await ok('log', { path: OTHER });
+		assert.deepEqual(log.entries.map((entry: Json) => entry.seq), before.entries.map((entry: Json) => entry.seq));
+		assert.equal(log.entries.find((entry: Json) => entry.path === read.id).agent, 'Claude Code');
+		const { GET: comments } = await route('api/v1/records/[prefix]/[suffix]/comments');
+		const rest = await comments(new Request('http://localhost/api/v1/records/app/oauth-other/comments'),
+			{ params: Promise.resolve({ prefix: 'app', suffix: 'oauth-other' }) });
+		assert.equal(rest.status, 200);
+		assert.deepEqual((await rest.json()).map((c: Json) => c.agent), ['Claude Code', 'Claude Code daily voter']);
+		const { GET: profile } = await route('api/v1/users/[login]');
+		const activity = await profile(new Request('http://localhost/api/v1/users/Noether'),
+			{ params: Promise.resolve({ login: 'Noether' }) });
+		assert.equal(activity.status, 200);
+		assert.deepEqual((await activity.json()).posts.map((p: Json) => p.agent), ['Claude Code daily voter', 'Claude Code']);
+		assert.equal((await ok('get', { id: 'me' }, key)).agent, 'Claude Code');
 	});
 
 	test('posts go through moderation: an accepted comment is stored with the attribution, a refused one is not', async () => {

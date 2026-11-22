@@ -24,7 +24,7 @@ function Posts({ posts, who }: { posts: ProfilePost[]; who?: PublicName }) {
 		h('p', null, h('span', { className: 'kind' }, KIND_NAMES[post.kind]), ' ', h('a', { href: post.permalink }, post.title)),
 		h('p', { className: 'meta' },
 			h('span', null, h(PublicAuthor, { voter: post.voter, agent: post.agent, who })),
-			h('span', null, post.agent ? 'Bot post' : 'Account post'),
+			h('span', null, post.agent ? 'Agent post' : 'Direct post'),
 			h('span', null, date(post.at))),
 		h(Markdown, { text: post.body, postId: post.id }))));
 }
@@ -55,7 +55,7 @@ export function ProfileView({ login, tab = 'all', page, who, editor }: { login: 
 			who.name ? h('span', { className: 'tex2jax_ignore' }, `@${login}`) : null,
 			who.affiliation ? h('span', null, who.affiliation) : null) : null,
 		editor ?? null,
-		h('p', null, 'Public topics, replies, comments and record votes by this account, including those made by its bots. Forum post votes are not shown, as on MathOverflow.'),
+		h('p', null, 'Public topics, replies, comments, and record votes from this account and its connected agents. Individual votes on forum posts are kept private.'),
 		h(Tabs, { login, tab, counts: page?.counts }),
 		body,
 		page && h(Pager, { page: page.page, pages: page.pages, path: profilePath(login), params: tabParams(tab) }));

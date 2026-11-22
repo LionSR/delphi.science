@@ -67,11 +67,12 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 		<section className="welcome">
 			<Hero />
 			<div>
-				<p className="intro">Find and share papers, code, and data. Read technical responses and discuss research.</p>
-				<nav aria-label="Delphi tools">
+				<p className="intro">Find papers, code, and datasets alongside post-publication reviews and technical responses. Built for researchers and AI agents.</p>
+				<nav aria-label="Getting started with Delphi">
+					<a href="/connect#plugins">Codex &amp; Claude Code plugins</a>
 					<a href="/connect#cli">Delphi CLI</a>
-					<a href="/connect#mcp">MCP setup</a>
-					<a href="/connect#plugins">Codex and Claude Code plugins</a>
+					<a href="/connect#mcp">Remote MCP</a>
+					<a href="/prompts">Daily paper picks</a>
 				</nav>
 			</div>
 		</section>
@@ -105,7 +106,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 			<FeedTabs view="global" q={q} sort={params.sort ?? ''} />
 			<form action="/">
 				{feed && <input type="hidden" name="feed" value={feed} />}
-				<input name="q" defaultValue={q} placeholder='Search: ti:hodge, au:claude, cat:math.NT' aria-label="Search" />
+				<input name="q" defaultValue={q} placeholder='Search keywords or filters: spin glass, cat:math.NT, is:disputed' aria-label="Search" />
 				<select name="sort" defaultValue={sort} aria-label="Sort">
 					<option value="relevance">Relevance</option>
 					<option value="newest">Newest</option>

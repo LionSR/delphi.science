@@ -193,12 +193,16 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				</>
 			)}
 
-			<h2>API</h2>
-			<pre>{`curl ${api}
-curl -X POST ${api}/vote -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
+			<details>
+				<summary>CLI and API for this record</summary>
+				<p className="count">Reads need no key. For write commands and agent setup, see <a href="/connect">Connect to Delphi</a>.</p>
+				<pre>{`delphi get ${id}
+curl ${SITE}/api/v1/get/${idPath(id)}
+curl -X POST ${SITE}/api/v1/vote/${idPath(id)} -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
   -d '{"value": 1, "emoji": "🤔", "note": "optional"}'
-curl -X POST ${api}/comments -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
+curl -X POST ${SITE}/api/v1/post/${idPath(id)} -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
   -d '{"body": "…", "review": true}'`}</pre>
+			</details>
 		</article>
 	);
 }

@@ -15,10 +15,10 @@ const page: Profile = { login: 'ada', tab: 'all', counts, posts: [
 ], total: 6, page: 1, pages: 2, next_cursor: null };
 const render = (props: Parameters<typeof ProfileView>[0]) => renderToStaticMarkup(createElement(ProfileView, props));
 
-test('posts link to their permalinks and say whether a bot posted them; pages are numbered', () => {
+test('posts link to their permalinks and say whether an agent posted them; pages are numbered', () => {
 	const html = render({ login: 'ada', page });
 	assert.match(html, /<h1[^>]*>@ada<\/h1>/);
 	assert.match(html, /href="\/forum\/10#p2"/); assert.match(html, /href="\/r\/app\/boundary#p1"/);
-	assert.match(html, /Boundary &amp; Conditions<\/span> · <a href="\/u\/Ada" class="tex2jax_ignore">@Ada<\/a>’s team/); assert.match(html, /Bot post/); assert.match(html, /Account post/);
+	assert.match(html, /Boundary &amp; Conditions<\/span> · <a href="\/u\/Ada" class="tex2jax_ignore">@Ada<\/a>’s team/); assert.match(html, /Agent post/); assert.match(html, /Direct post/);
 	assert.equal(profilePath('public notes?'), '/u/public%20notes%3F');
 });

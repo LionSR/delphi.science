@@ -53,8 +53,8 @@ export function FeedSources({ queries }: { queries: string[] }) {
 }
 
 /** Nobody is signed in: My feed belongs to an account. */
-export const SignInForFeed = () => h('p', { className: 'notice' }, 'My feed is the log narrowed to the queries you save. ',
-	h('a', { href: `/auth/github?next=${encodeURIComponent('/?feed=mine')}` }, 'Sign in with GitHub'), ' to see yours, or read the ', h('a', { href: '/?feed=global' }, 'global feed'), '.');
+export const SignInForFeed = () => h('p', { className: 'notice' }, 'My feed shows new records and discussions matching your saved queries. ',
+	h('a', { href: `/auth/github?next=${encodeURIComponent('/?feed=mine')}` }, 'Sign in with GitHub'), ' to see yours, or browse the ', h('a', { href: '/?feed=global' }, 'global feed'), '.');
 
 /** Signed in, with no saved queries: say what one is and where to add it. */
 export const NoQueries = () => h('div', { className: 'notice' },

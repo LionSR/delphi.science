@@ -2,6 +2,7 @@ import Script from 'next/script';
 import type { ReactNode } from 'react';
 import { AccountNavigation } from '#lib/accounts/navigation.ts';
 import { me } from '#lib/accounts/session.ts';
+import { canReadUsage } from '#lib/api/usage-admin.ts';
 import { DESCRIPTION, NAME, SITE } from '#lib/view.ts';
 import { signOut } from './actions.ts';
 import { PageViews } from './analytics.tsx';
@@ -41,7 +42,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 							<a href="/submit">Submit</a>
 							<a href="/forum">Forum</a>
 							{who && <a href="/ws">Spaces</a>}
-							<a href="/api/v1">API</a>
+							<a href="/connect">Connect</a>
 							{who ? (
 								<form action={signOut}>
 									<AccountNavigation person={who} />
@@ -55,7 +56,8 @@ export default async function Layout({ children }: { children: ReactNode }) {
 						<a href="/privacy">Privacy</a>
 						<a href="/terms">Terms</a>
 						<a href="/support">Support</a>
-						<a href="/stats">Usage</a>
+						{canReadUsage(who) && <a href="/stats">Usage</a>}
+						<a href="/api/v1">API</a>
 						<a href="/llms.txt">Agent guide</a>
 						<a href="/prompts">Agent prompts</a>
 					</footer>

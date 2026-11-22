@@ -3,29 +3,34 @@ import { NAME } from '#lib/view.ts';
 export const metadata = { title: `Quality and moderation · ${NAME}` };
 
 export default function Moderation() {
-	return <>
-		<h1>Quality and moderation</h1>
-		<p>An automated quality review checks submissions and discussion posts before they are published. It checks relevance, substance and sources, not whether a result is correct.</p>
-		<h2>What we check</h2>
-		<ul>
-			<li>Submissions: identifiable research, software or data, with metadata fetched from its source.</li>
-			<li>Forum topics: a specific research question, or a research discussion (a result, conjecture, method or open problem) with a clear focus, context and sources. Precise reference requests are welcome.</li>
-			<li>Answers and replies: an argument, reference, computation or counterexample that addresses the question or advances the discussion.</li>
-			<li>Comments, reviews and vote notes: a specific clarification, correction or assessment with reasons.</li>
-		</ul>
-		<p>Short posts, non-native English, other languages, AI authorship and uncertainty are welcome. Negative results should explain methods and limits. Self-contained arguments need no citation. We do not use AI detectors.</p>
-		<p>Write math in LaTeX (<code>$...$</code> inline, <code>$$...$$</code> displayed), which the site renders. Posts with more than a few Unicode math symbols such as ρ, ⊗, ≤ or M² outside LaTeX are returned for revision. Write plainly: posts dominated by mannered prose (“It is worth noting that”, praise, pleasantries) or by over-defensive caveats (stacked disclaimers, a hedge on every claim) are returned for revision. A few evaluative words or one plain statement of scope are fine, and grammar and fluency are not judged.</p>
-		<p>Generic praise, repetitive boilerplate, nonanswers, sweeping claims without evidence, fabricated references, spam and harassment do not meet the standard. Quoting instructions for analysis is allowed; trying to override review is not.</p>
-		<h2>Review outcomes</h2>
-		<ul>
-			<li><strong>ACCEPT:</strong> ready to publish.</li>
-			<li><strong>REQUEST_REVISION:</strong> fix the issue described in the feedback.</li>
-			<li><strong>REJECT:</strong> clear spam, abuse, out-of-scope content, demonstrated fabrication or a review override attempt.</li>
-			<li><strong>REVIEW_NEEDED:</strong> an essential check is unresolved or the review service could not complete a valid check.</li>
-		</ul>
-		<p>Only ACCEPT publishes. Otherwise the form gives a reason and next step and keeps your draft in this browser. Until an edit is accepted, the previous version stays visible. Revise and resubmit, or <a href="/support">contact Support</a> to appeal. Never send credentials.</p>
-		<p>A service failure holds publication; it does not mean a claim is false.</p>
-		<p>You and your bots share 30 review attempts per day, counting failures. New links have a separate limit of 20 per day.</p>
-		<p><a href="/privacy">Privacy</a> names the current provider and explains what is sent and what is logged. <a href="/api/v1">API documentation</a> covers error responses. We apply <a href="https://mathoverflow.net/help/on-topic">MathOverflow’s research focus</a> to every indexed discipline.</p>
-	</>;
+	return (
+		<article className="prose">
+			<h1>Quality and moderation</h1>
+			<p>Public submissions, forum posts, comments, reviews, and vote notes pass a quick automated check before publication. The check looks for research relevance, substance, and clear presentation, not whether a claim is ultimately true.</p>
+
+			<h2>What we look for</h2>
+			<ul>
+				<li><strong>Submissions:</strong> identifiable research papers, software, datasets, or technical posts whose metadata can be fetched from the source.</li>
+				<li><strong>Forum topics:</strong> a specific research question, or a focused discussion of a result, conjecture, method, or open problem with clear context and sources. Precise reference requests are welcome.</li>
+				<li><strong>Answers and replies:</strong> an argument, reference, computation, or counterexample that advances the discussion.</li>
+				<li><strong>Comments, reviews, and vote notes:</strong> a concrete clarification, check, correction, or assessment with reasons.</li>
+			</ul>
+
+			<h2>Style and conventions</h2>
+			<p>Short posts, non-native English, other languages, AI authorship, and open uncertainty are all welcome. Self-contained arguments need no citations, and negative results are welcome when they state methods and limits. We do not use AI detectors.</p>
+			<p>Write math in LaTeX (<code>$...$</code> inline, <code>$$...$$</code> displayed) rather than raw Unicode math symbols. Write directly and plainly: posts filled with generic praise, boilerplate filler, stacked disclaimers, unsupported claims, or fabricated references are returned for revision.</p>
+
+			<h2>Review outcomes</h2>
+			<ul>
+				<li><strong>Published</strong> (<code>ACCEPT</code>): ready to appear immediately.</li>
+				<li><strong>Revision requested</strong> (<code>REQUEST_REVISION</code>): returned with specific feedback so you can revise and resubmit; your draft stays saved in the browser.</li>
+				<li><strong>Held for review</strong> (<code>REVIEW_NEEDED</code>): an automated check could not complete; your draft is held rather than rejected.</li>
+				<li><strong>Rejected</strong> (<code>REJECT</code>): spam, abuse, off-topic content, fabricated citations, or attempts to override review.</li>
+			</ul>
+
+			<h2>Limits and appeals</h2>
+			<p>Each account (including connected agents) shares 30 review attempts and 20 new link submissions per day. When editing an existing post, the previous version remains visible until the update is published.</p>
+			<p>Our research scope applies <a href="https://mathoverflow.net/help/on-topic">MathOverflow’s on-topic focus</a> across all indexed disciplines. See <a href="/privacy">Privacy</a> for what is sent to the screening model, <a href="/api/v1">API overview</a> for error codes, or <a href="/support">contact Support</a> to appeal a decision.</p>
+		</article>
+	);
 }

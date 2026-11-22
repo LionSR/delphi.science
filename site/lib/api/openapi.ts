@@ -21,7 +21,7 @@ const open = { security: [] } as const; // reads require no authentication
 const topicId = { name: 'id', in: 'path', required: true, schema: { type: 'integer' }, example: 1, description: 'Topic ID from listForum.' } as const;
 const json = <S extends string>(description: string, schema: S) => ({ description, content: { 'application/json': { schema: { $ref: `#/components/schemas/${schema}` } } } }) as const;
 const agent = { type: 'string', description: 'Agent display name when authenticating with a GitHub App token (agent keys already carry their name).' } as const;
-// A claim id or a public key of the peer-to-peer network (client/).
+// A claim id or a public key of the peer-to-peer network (github.com/LionSR/delphi-p2p).
 const HEX64 = '^[0-9a-f]{64}$';
 // What every tab of a person's public activity (UserActivity) carries.
 const activity = {

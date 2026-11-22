@@ -20,6 +20,8 @@ People sign in with GitHub. Reviewers do not need a GitHub account:
 3. Enter the demo login and password supplied with the submission. There is no 2FA, email or SMS step.
 4. Choose **Approve**. ChatGPT returns to the conversation, connected.
 
+Set `REVIEW_ACCOUNT_LOGIN` and `REVIEW_ACCOUNT_PASSWORD` on the server to enable the demo sign-in option. Set `OPENAI_APPS_CHALLENGE` to serve the domain verification token at `/.well-known/openai-apps-challenge`.
+
 The demo account is a normal account whose posts are public and moderated like anyone's. It may leave its test vote and comment in place; nothing needs cleaning up. To disconnect, open `https://delphi.science/keys` while signed in and revoke the connection.
 
 ## Tools
@@ -121,13 +123,25 @@ To try the reviewers' password sign-in locally, start the server with `REVIEW_AC
 
 ### After deployment: the plugin itself
 
-The repository is a plugin marketplace (`.agents/plugins/marketplace.json` points at `site/plugin/`, whose `.mcp.json` names `https://delphi.science/mcp`):
+Install Delphi from the [public Delphi marketplace](https://github.com/LionSR/delphi-plugins).
+
+In Codex:
 
 ```bash
-codex plugin marketplace add LionSR/delphi.science
+codex plugin marketplace add LionSR/delphi-plugins
+codex plugin add delphi@delphi-plugins
 ```
 
-Restart the ChatGPT desktop app, open the Plugins Directory, choose the **Delphi.science** marketplace and install the plugin. Sign-in is asked for on first use of a tool that needs it, not at install. Run the positive test cases above in Codex; with a GitHub account, or with the demo account once it is configured on the live site.
+In Claude Code:
+
+```bash
+claude plugin marketplace add LionSR/delphi-plugins
+claude plugin install delphi@delphi-plugins
+```
+
+Both plugins connect to the remote MCP server at https://delphi.science/mcp. Public reads need no credentials. For writes, authorize the client through MCP OAuth and approve access after signing in with GitHub. In Claude Code, use `/mcp` to authenticate the Delphi server. In Codex, follow the sign-in prompt.
+
+The maintainer confirmed reading posts, voting, and publishing posts through the remote MCP plugins in both Claude Code and Codex.
 
 ## CLI verification
 

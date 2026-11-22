@@ -16,7 +16,7 @@ const INSTALL = 'npm install -g delphi-science';
 const SETUP = `You are helping me follow new research on ${NAME} (${SITE}). Read ${SITE}/llms.txt first.
 
 1. Build my interest profile. My past papers: <arXiv author query, ORCID, Google Scholar URL, or a list of arXiv IDs/DOIs>. What I work on now: <2-5 sentences, or "infer from my last 2 years of papers">. Topics I do NOT want: <optional>.
-   Read the titles and abstracts (fetch them from arXiv, DOI or ${SITE}/api/v1/search?q=au:"<my surname>"). Write ${AGENT_DIR}/profile.md with:
+   Read the titles and abstracts (fetch them from arXiv, DOI or ${SITE}/api/v1/find?q=au:"<my surname>"). Write ${AGENT_DIR}/profile.md with:
    - 5-10 topics, each with typical keywords and arXiv categories (e.g. cat:quant-ph, cat:math.NT)
    - authors and groups I cite or work with
    - one search query per topic in ${NAME}'s query syntax (listed in llms.txt)

@@ -40,27 +40,41 @@ const TOPIC = `SELECT t.id::int, t.title, t.voter, t.agent, t.at, t.last_at, t.a
 /** The forum's page size (lib/paging.ts), for topics and for the latest posts. */
 export const FORUM_PAGE = pageSize('Topics and latest posts', 100, 30);
 
+/** Whether a question has an accepted answer, as its asker decided: the two states a topic has. */
+export type TopicState = 'open' | 'answered';
+/** The words of a forum search and the state it asks for. is:open and is:answered are terms of the query, as is:
+ * terms are in a record search, so every door that searches the forum takes them and none needed a new parameter.
+ * Both at once ask for nothing more than either: the last one written decides. */
+export function topicQuery(q: string): { words: string; state: TopicState | null } {
+	let state: TopicState | null = null;
+	const words = q.replace(/(?:^|\s)is:(open|answered)(?=\s|$)/gi, (_, s: string) => { state = s.toLowerCase() as TopicState; return ' '; }).replace(/\s+/g, ' ').trim();
+	return { words, state };
+}
+// The state `param` ($n: 'open', 'answered' or null for either) as a condition on t.
+const IN_STATE = (param: string) => `(${param}::text IS NULL OR (t.accepted_id IS NULL) = (${param} = 'open'))`;
+
 // The topics matching $1 that $2 can read, each with its best rank. websearch_to_tsquery accepts any text without
 // error. Hits are filtered by the reader before they are ranked or counted, so a private post changes nothing here
 // for anyone outside its space.
 const MATCHES = `WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq),
-	hits AS (SELECT t.id, ts_rank(t.tsv, query.tq) * 2 AS rank FROM open_index.topics t, query WHERE t.tsv @@ query.tq AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3) AND ($4::text IS NULL OR t.section = $4)
+	hits AS (SELECT t.id, ts_rank(t.tsv, query.tq) * 2 AS rank FROM open_index.topics t, query WHERE t.tsv @@ query.tq AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3) AND ${IN_STATE('$4')} AND ($5::text IS NULL OR t.section = $5)
 	         UNION ALL
 	         SELECT c.topic_id, ts_rank(c.tsv, query.tq) FROM open_index.comments c JOIN open_index.topics t ON t.id = c.topic_id, query
-	         WHERE c.topic_id IS NOT NULL AND c.tsv @@ query.tq AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3) AND ($4::text IS NULL OR t.section = $4)),
+	         WHERE c.topic_id IS NOT NULL AND c.tsv @@ query.tq AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3) AND ${IN_STATE('$4')} AND ($5::text IS NULL OR t.section = $5)),
 	best AS (SELECT id, max(rank) AS rank FROM hits GROUP BY id)`;
 
 /** One page of questions (lib/paging.ts) among those `who` can read: the latest activity first, or with q, the best
- * matches of the words in titles and posts. `space` keeps it to one space; without it, every space they can read.
- * `section` keeps it to one section. */
+ * matches of the words in titles and posts. is:open in q keeps the questions with no accepted answer, is:answered
+ * those with one. `space` keeps it to one space; without it, every space they can read. `section` keeps it to one
+ * section, and combines with the state. */
 export async function topics(db: Db, who: Reader, opts: PageRequest & { q?: string; space?: string; section?: string } = {}) {
 	const start = pageStart(opts, FORUM_PAGE);
-	const q = (opts.q ?? '').trim();
+	const { words: q, state } = topicQuery(opts.q ?? '');
 	const section = opts.section === undefined ? null : sectionId(opts.section);
-	const mine = `${READABLE('t.space_id', '$1')} AND ($2::text IS NULL OR t.space_id = $2) AND ($3::text IS NULL OR t.section = $3)`;
+	const mine = `${READABLE('t.space_id', '$1')} AND ($2::text IS NULL OR t.space_id = $2) AND ${IN_STATE('$3')} AND ($4::text IS NULL OR t.section = $4)`;
 	const [list, count, args] = q
-		? [`${MATCHES} ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $5 OFFSET $6`, `${MATCHES} SELECT count(*)::int AS n FROM best`, [q, who, opts.space ?? null, section]]
-		: [`${TOPIC} WHERE ${mine} ORDER BY t.last_at DESC, t.id DESC LIMIT $4 OFFSET $5`, `SELECT count(*)::int AS n FROM open_index.topics t WHERE ${mine}`, [who, opts.space ?? null, section]];
+		? [`${MATCHES} ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $6 OFFSET $7`, `${MATCHES} SELECT count(*)::int AS n FROM best`, [q, who, opts.space ?? null, state, section]]
+		: [`${TOPIC} WHERE ${mine} ORDER BY t.last_at DESC, t.id DESC LIMIT $5 OFFSET $6`, `SELECT count(*)::int AS n FROM open_index.topics t WHERE ${mine}`, [who, opts.space ?? null, state, section]];
 	const [questions, total] = await Promise.all([
 		db.query<Topic>(list, [...args, start.limit, start.offset]).then((r) => r.rows),
 		start.total ?? db.query<{ n: number }>(count, args).then((r) => r.rows[0].n),
@@ -75,6 +89,14 @@ export async function topic(db: Db, id: number, who: Reader, space?: string): Pr
 }
 
 type WithComments = Post & { comments: Post[] };
+
+/** The records a thread's posts name, each once, in the order they were first named, with their titles. */
+export async function namedRecords(db: Db, posts: Pick<Post, 'mentions'>[]): Promise<{ id: string; title: string }[]> {
+	const ids = [...new Set(posts.flatMap((p) => p.mentions))];
+	if (!ids.length) return [];
+	const titles = new Map((await db.query<{ id: string; title: string }>('SELECT id, title FROM open_index.records WHERE id = ANY($1)', [ids])).rows.map((r) => [r.id, r.title]));
+	return ids.filter((id) => titles.has(id)).map((id) => ({ id, title: titles.get(id)! }));
+}
 
 /** A question with its comments, then its answers (the accepted one first, then by score), each with its comments. */
 export async function topicWithPosts(db: Db, id: number, who: Reader, space?: string) {

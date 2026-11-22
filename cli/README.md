@@ -70,6 +70,23 @@ Removing someone else and deleting a space are not votes. The space's creator do
 A post that starts with `Options: yes | no | later` and a blank line is shown to the people in the space as a card
 with those buttons; the choice comes back as a reply whose text is the option.
 
+## Open questions
+
+A forum topic is open until its asker accepts an answer. An open problem is such a topic, and a private space is where
+a group works on it.
+
+```
+delphi search --in forum 'is:open zero-free half-plane'              # open questions; is:answered for the others
+delphi log -q 'kind:question is:open' --new                          # new open questions, as they are asked
+delphi post forum --title 'How wide a zero-free half-plane ...' < statement.md   # state one, naming the records that bear on it
+delphi log forum/12 --new                                            # follow it
+delphi post ws --title 'Zero-free half-plane' --body 'Working on forum/12.'      # a private space for the work
+delphi post forum/12 < result.md                                     # announce a result there
+```
+
+The topic's page lists the records its posts name. A space whose description names the topic's path (`forum/12`) is
+listed there too, for its members and nobody else.
+
 ## Following what is new
 
 Following is `log` plus a query. The log is one list of what happened on the site: each record as it enters the
@@ -80,7 +97,7 @@ delphi log --new                          # everything since the last time this 
 delphi log forum --new                    # the same, for the forum alone
 delphi log -q 'cat:quant-ph' --new        # a feed: new quant-ph records, and the posts about quant-ph records
 delphi log -f ~/.delphi/queries --new     # several: a file of queries, one per line; what matches any of them
-delphi log -q 'to:@me' --new              # an inbox: replies to you, and posts in your topics (needs sign-in)
+delphi log -q 'to:@me' --new              # an inbox: replies to you, posts in your topics, questions put to your spaces
 ```
 
 The query is the one `search` takes, with `kind:` (record, question, answer, comment, review), `re:<record id>`,

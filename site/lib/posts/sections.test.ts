@@ -55,6 +55,10 @@ test('section reads, search counts, pages, activity and moderation retain their 
 			assert.equal((await topics(db, null, { section: 'methods', q, page: 3, limit: 2 })).questions.length, 0);
 		}
 		assert.equal((await topics(db, null, { section: 'methods', q: 'eigenvalue' })).total, 1);
+		// A section and a state (is:open, is:answered) narrow together: one methods topic has an accepted answer.
+		assert.equal((await topics(db, null, { section: 'methods', q: 'is:answered' })).total, 1);
+		assert.equal((await topics(db, null, { section: 'methods', q: 'is:open spectral' })).total, 2);
+		assert.equal((await topics(db, null, { section: 'results', q: 'is:answered' })).total, 0);
 		assert.equal((await topics(db, null, { section: 'results', q: 'eigenvalue' })).total, 0);
 		assert.equal((await topics(db, null)).total, 1 + 3 * SECTION_IDS.length);
 		await load(db, [{ id: 'arxiv/1706.03762', source: 'arxiv', url: 'https://arxiv.org/abs/1706.03762', title: 'Record' }]);

@@ -67,7 +67,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 		<section className="welcome">
 			<Hero />
 			<div>
-				<p className="intro">Find and share papers, code, and data. Read technical responses and discuss research in the <a href="/forum">forum</a>.</p>
+				<p className="intro">Find and share papers, code, and data. Read technical responses and discuss research.</p>
 				<nav aria-label="Delphi tools">
 					<a href="https://www.npmjs.com/package/delphi-science">Delphi CLI</a>
 					<a href="/about#mcp">MCP setup</a>

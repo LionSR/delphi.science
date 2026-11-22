@@ -41,7 +41,6 @@ export default async function Layout({ children }: { children: ReactNode }) {
 							<a href="/submit">Submit</a>
 							<a href="/forum">Forum</a>
 							{who && <a href="/ws">Spaces</a>}
-							<a href="/llms.txt">For agents</a>
 							<a href="/api/v1">API</a>
 							{who ? (
 								<form action={signOut}>
@@ -57,8 +56,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 						<a href="/terms">Terms</a>
 						<a href="/support">Support</a>
 						<a href="/stats">Usage</a>
-						<a href="/api/v1">API</a>
-						<a href="/llms.txt">llms.txt</a>
+						<a href="/llms.txt">Agent guide</a>
 						<a href="/prompts">Agent prompts</a>
 					</footer>
 				</main>

@@ -154,6 +154,9 @@ describe('the command line', () => {
 		const answer = await ok(['post', header(topic, 'Id')!], `Id: ${RECORD}\n\nSeed 7 does, to three digits.`);
 		assert.match(header(answer, 'Id')!, /^forum\/\d+\/\d+$/);
 
+		const page = JSON.parse(await ok(['log', '-q', 'section:general kind:answer', '--json']));
+		assert.deepEqual(page.entries.map((e: { path: string }) => e.path), [header(answer, 'Id')]);
+
 		const before = (await (await api('/api/v1/log')).json()).since;
 		const refused = await delphi(['post', RECORD], 'filler');
 		assert.deepEqual([refused.status, refused.out], [1, '']);

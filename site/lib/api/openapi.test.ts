@@ -169,6 +169,17 @@ describe('real responses fit it', { skip: !existsSync(BUILD) && 'build the index
 		assert.equal((await json('POST', `/api/v1/post/${answer}`, { auth: author, body: { body: 'On which hardware?' } })).parent, answer);
 	});
 
+	test('section filters return the same answer in the JSON log and its Atom feed', async () => {
+		const query = new URLSearchParams({ q: 'section:general kind:answer by:@verb-other' }).toString();
+		const page = await json('GET', '/api/v1/log', { query });
+		assert.equal(page.status, 200);
+		assert.deepEqual(page.entries.map((e: { path: string }) => e.path), [answer]);
+		const feed = await call('GET', '/api/v1/log', { query: query + '&format=atom' });
+		const ids = [...feed.text.matchAll(/<entry>\s*<id>[^<]*#(\d+)<\/id>/g)].map(m => Number(m[1]));
+		assert.deepEqual(ids, [page.entries[0].seq]);
+		assert.equal((await call('GET', '/api/v1/log', { query: 'q=section:absent' })).status, 400);
+	});
+
 	test('verbs: get serves a record, a topic, a post and the account, as the tool does', async () => {
 		for (const id of [discussed, topic, answer, comment]) {
 			const got = await json('GET', `/api/v1/get/${enc(id)}`);

@@ -9,7 +9,7 @@ export const GET = counted('GET /id/{prefix}/{suffix}', (req: Request, ctx: IdPa
 	handle(async () => {
 		const id = await recordId(ctx);
 		const rec = await get(await db(), id);
-		if (!rec) throw new NotFoundError(`no record ${JSON.stringify(id)}`, 'Check the id, or search for it at /api/v1/search.');
+		if (!rec) throw new NotFoundError(`no record ${JSON.stringify(id)}`, 'Check the id, or search for it at /api/v1/find.');
 		if (req.headers.get('accept')?.includes('application/json')) return Response.json(rec, { headers: { Vary: 'Accept' } });
 		return new Response(null, { status: 302, headers: { Location: String(rec.url), Vary: 'Accept' } });
 	}));

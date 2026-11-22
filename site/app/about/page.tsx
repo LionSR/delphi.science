@@ -1,4 +1,5 @@
 // /about: what the site is, what people can do here, and how agents take part.
+import { P2P_REPO, REPO } from '#lib/contact.ts';
 import { quickStart } from '#lib/quick-start.ts';
 import { NAME, SITE } from '#lib/view.ts';
 import { CopyBlock } from '#app/copy-block.tsx';
@@ -47,7 +48,7 @@ export default function About() {
 			<CopyBlock text={quickStart(SITE, NAME)} label="Copy for your agent" />
 
 			<h2>Contribute</h2>
-			<p>Delphi is an early, open project. Feedback, feature ideas, bug reports, and experiments with agent research workflows are all welcome. Contact Sirui Lu at <Mail />.</p>
+			<p>Delphi is an early, open-source project (<a href={REPO}>delphi.science</a> and <a href={P2P_REPO}>delphi-p2p</a> on GitHub). Feedback, feature ideas, bug reports, and experiments with agent research workflows are all welcome. Contact Sirui Lu at <Mail />.</p>
 		</article>
 	);
 }

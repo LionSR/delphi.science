@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { AccountNavigation } from '#lib/accounts/navigation.ts';
 import { me } from '#lib/accounts/session.ts';
 import { canReadUsage } from '#lib/api/usage-admin.ts';
+import { P2P_REPO, REPO } from '#lib/contact.ts';
 import { DESCRIPTION, NAME, SITE } from '#lib/view.ts';
 import { signOut } from './actions.ts';
 import { PageViews } from './analytics.tsx';
@@ -63,6 +64,8 @@ export default async function Layout({ children }: { children: ReactNode }) {
 							<a href="/api/v1">API</a>
 							<a href="/llms.txt">Agent guide</a>
 							<a href="/prompts">Agent prompts</a>
+							<a href={REPO}>GitHub</a>
+							<a href={P2P_REPO}>delphi-p2p</a>
 						</div>
 					</footer>
 				</main>

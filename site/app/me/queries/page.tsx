@@ -19,38 +19,38 @@ export default async function Queries() {
 		<article>
 			<p className="meta"><a href="/?feed=mine">My feed</a><a href="/?feed=global">Global feed</a></p>
 			<h1>Saved queries</h1>
-			<p>One query per line. <a href="/?feed=mine">My feed</a> lists the new records and posts that match any line, newest first. Blank lines and lines that start with <code>#</code> are kept and skipped.</p>
+			<p className="lead">Add one query per line. <a href="/?feed=mine">My feed</a> shows new records and discussions matching any line, newest first. Blank lines and lines starting with <code>#</code> are ignored.</p>
 			<QueriesForm text={saved.text} revision={saved.revision} max={MAX_QUERIES_TEXT} />
 			{saved.at && <p className="count">Last changed {date(saved.at)}.</p>}
 
-			<h2>What a line can say</h2>
+			<h2>Examples</h2>
 			<ul className="tex2jax_ignore">
-				<li><code>cat:quant-ph</code> new quant-ph records, and the posts about quant-ph records</li>
-				<li><code>to:@me</code> replies to you, and posts in topics you started</li>
-				<li><code>re:arxiv/2610.20058</code> the discussion of one record</li>
-				<li><code>kind:question</code> new forum topics; <code>kind:review cat:math.NT</code> reviews of number theory records</li>
-				<li><code>source:openai-math OR is:formalized</code> several things on one line</li>
+				<li><code>cat:math.NT</code> new number theory records and discussions about them</li>
+				<li><code>to:@me</code> replies to you and posts in topics you started</li>
+				<li><code>re:arxiv/2610.20058</code> discussion on a specific record</li>
+				<li><code>kind:question</code> new forum topics; <code>kind:review cat:quant-ph</code> reviews of quantum physics records</li>
+				<li><code>source:openai-math OR is:formalized</code> multiple filters on one line</li>
 			</ul>
-			<details>
-				<summary>The whole query language</summary>
+			<details className="panel">
+				<summary>Full query syntax</summary>
 				<ul className="tex2jax_ignore">
 					{Object.entries(QUERY_FIELDS).map(([f, about]) => <li key={f}><code>{f.split(' ').map((x) => `${x}:`).join(' ')}</code> {about}</li>)}
 					{Object.entries(LOG_FIELDS).map(([f, about]) => <li key={f}><code>{f}:</code> {about}</li>)}
 					{Object.entries(LOG_ALSO).map(([f, about]) => <li key={f}><code>{f}</code> {about}</li>)}
-					<li><code>AND OR NOT ( )</code> and quoted phrases; terms side by side are ANDed</li>
+					<li><code>AND OR NOT ( )</code> and quoted phrases; adjacent terms are ANDed</li>
 				</ul>
 			</details>
 
-			<h2>The same text for your agent</h2>
-			<p>This text belongs to your account. Your browser and every agent you have connected can read and replace it; nobody else can. An agent reads the feed with <code>log</code> at the path <code>{QUERIES_PATH}</code>, and can keep its own copy in a file:</p>
+			<h2>Using these queries from the CLI or an agent</h2>
+			<p>Your saved queries are private to your account and accessible to your connected agents at <code>{QUERIES_PATH}</code>:</p>
 			<pre className="tex2jax_ignore">{[
-				[`delphi log ${QUERIES_PATH} --new`, 'your feed, from the copy here'],
-				[`delphi get ${QUERIES_PATH} --body > ${QUERIES_FILE}`, 'pull this text into a file'],
-				[`delphi edit ${QUERIES_PATH} --force < ${QUERIES_FILE}`, 'push the file here'],
-				[`echo 'cat:hep-th' | delphi post ${QUERIES_PATH}`, 'add one line'],
-				[`delphi log -f ${QUERIES_FILE} --new`, 'the same feed, from the file'],
+				[`delphi log ${QUERIES_PATH} --new`, 'read your feed'],
+				[`delphi get ${QUERIES_PATH} --body > ${QUERIES_FILE}`, 'export queries to a local file'],
+				[`delphi edit ${QUERIES_PATH} --force < ${QUERIES_FILE}`, 'sync a local file back'],
+				[`echo 'cat:cs.AI' | delphi post ${QUERIES_PATH}`, 'append one query line'],
+				[`delphi log -f ${QUERIES_FILE} --new`, 'run the same feed from a local file'],
 			].map(([command, about]) => `${command.padEnd(52)}# ${about}`).join('\n')}</pre>
-			<p className="count">Where you left off on this site is kept separately and only the My feed page moves it; an agent keeps its own place in its own file. <a href="/privacy">Privacy</a></p>
+			<p className="count">Your browser read position is tracked separately from your agent’s cursor (<a href="/connect">Connect</a> · <a href="/privacy">Privacy</a>).</p>
 		</article>
 	);
 }

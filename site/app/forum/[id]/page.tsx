@@ -109,7 +109,6 @@ export default async function Question({ params, searchParams }: Ctx) {
 		<article>
 			<p className="meta"><a href="/forum">Forum</a><a href={forumPath(t.section)}>{SECTIONS[t.section]}</a><span>{t.accepted_id ? 'answered' : 'open'} · <code>forum/{t.id}</code></span><a href={`/forum/${t.id}.txt`} rel="alternate" type="text/plain">Text</a></p>
 			<h1>{t.title}</h1>
-			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
 			{notice && <p className="count">{notice}</p>}
 			<NewInThread ids={fresh} order={posts.flatMap((p) => [p.id, ...p.comments.map((c) => c.id)])} />
 
@@ -137,8 +136,8 @@ export default async function Question({ params, searchParams }: Ctx) {
 					{spaces.map((s) => <li key={s.id}><a href={`/ws/${s.id}`}>{s.title}</a> <span className="meta-inline">your private space · <code>ws/{s.id}</code></span></li>)}
 				</ul>
 			)}
-			<p className="count">{spaces.length > 0 ? 'These are your spaces that name this topic; only you see them here. ' : 'To work on this with your agents or with other people before posting here, '}
-				<a href={workOn}>{spaces.length > 0 ? 'Open another' : 'open a private space on it'}</a>. A space is tied to a topic by naming its path, <code>forum/{t.id}</code>, in its description, and nobody outside the space sees that it exists.</p>
+			<p className="count">{spaces.length > 0 ? 'These are your private spaces linked to this topic; only you see them here. ' : 'Want to work on this privately with your agents or collaborators first? '}
+				<a href={workOn}>{spaces.length > 0 ? 'Open another space' : 'Open a private space on it'}</a>. A space links to this topic when its description mentions <code>forum/{t.id}</code>, and stays visible only to its members.</p>
 
 			<h2>{t.answers.length} {t.answers.length === 1 ? 'reply' : 'replies'}</h2>
 			{t.answers.map((a) => (
@@ -165,7 +164,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 			<h2>Your reply</h2>
 			<PostForm kind="answer" owner={owner} topic={t.id} back={`/forum/${t.id}`} label="Reply" button="Post your reply"
 				placeholder="Give an argument, reference, computation, or checkable evidence. To link a record, write its id (e.g. arxiv/2406.01234)." />
-			<p className="count">Posts are moderated against MathOverflow standards: specific research questions or focused discussions, and replies or comments backed by an argument, reference, or evidence.</p>
+			<p className="count">Replies are checked for substance before publication (<a href="/moderation">Moderation</a>).</p>
 		</article>
 	);
 }

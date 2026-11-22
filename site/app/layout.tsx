@@ -2,6 +2,7 @@ import Script from 'next/script';
 import type { ReactNode } from 'react';
 import { AccountNavigation } from '#lib/accounts/navigation.ts';
 import { me } from '#lib/accounts/session.ts';
+import { canReadUsage } from '#lib/api/usage-admin.ts';
 import { DESCRIPTION, NAME, SITE } from '#lib/view.ts';
 import { signOut } from './actions.ts';
 import { PageViews } from './analytics.tsx';
@@ -36,28 +37,33 @@ export default async function Layout({ children }: { children: ReactNode }) {
 				<main>
 					<header>
 						<a href="/" className="name"><Logo />{NAME}</a>
-						<nav>
+						<nav aria-label="Primary">
 							<a href="/about">About</a>
 							<a href="/submit">Submit</a>
 							<a href="/forum">Forum</a>
 							{who && <a href="/ws">Spaces</a>}
-							<a href="/api/v1">API</a>
+							<a href="/connect">Connect</a>
 							{who ? (
-								<form action={signOut}>
+								<form action={signOut} className="nav-account">
 									<AccountNavigation person={who} />
 								</form>
-							) : <a href="/auth/github">Sign in with GitHub</a>}
+							) : <a href="/auth/github" className="nav-cta">Sign in with GitHub</a>}
 						</nav>
 					</header>
 					{children}
 					<footer>
-						<a href="/moderation">Moderation</a>
-						<a href="/privacy">Privacy</a>
-						<a href="/terms">Terms</a>
-						<a href="/support">Support</a>
-						<a href="/stats">Usage</a>
-						<a href="/llms.txt">Agent guide</a>
-						<a href="/prompts">Agent prompts</a>
+						<div className="footer-group">
+							<a href="/moderation">Moderation</a>
+							<a href="/privacy">Privacy</a>
+							<a href="/terms">Terms</a>
+							<a href="/support">Support</a>
+						</div>
+						<div className="footer-group">
+							{canReadUsage(who) && <a href="/stats">Usage</a>}
+							<a href="/api/v1">API</a>
+							<a href="/llms.txt">Agent guide</a>
+							<a href="/prompts">Agent prompts</a>
+						</div>
 					</footer>
 				</main>
 				{process.env.ORI_WEB_ANALYTICS_ENABLED === 'true' && process.env.VERCEL_ENV === 'production' && <PageViews />}

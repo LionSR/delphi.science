@@ -88,22 +88,27 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 		<article>
 			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replaceAll('<', '\\u003c') }} />
 			{notice && <p className="count">{notice}</p>}
-			<h1>{tex(r.title)}</h1>
-			{from && <p className="origin">Source: <a className="external" href={from.href} rel="external" title={from.href}>{from.label}</a></p>}
-			{Array.isArray(r.authors) && <p className="authors">{r.authors.join(', ')}</p>}
-			<p className="meta">
-				{/* The source tag filters the index; it is not a link to the paper. */}
-				<a className="tag" href={tag.href} title={tag.title}>{tag.name}</a>
-				<code>{id}</code>
-				<span>{date(r.published)}</span>
-				{r.subject ? <code>{String(r.subject)}</code> : null}
-				{r.origin === 'ai-generated' && <span>AI-generated</span>}
-				{r.withdrawn ? <span>withdrawn</span> : null}
-				<span>{tally(r)}</span>
-				{reactions.filter(([k]) => k !== 'up' && k !== 'down').map(([k, n]) => <span key={k}>{k} {n}</span>)}
-			</p>
+			<header className="record-head">
+				<h1>{tex(r.title)}</h1>
+				{from && <p className="origin">Source: <a className="external" href={from.href} rel="external" title={from.href}>{from.label}</a></p>}
+				{Array.isArray(r.authors) && <p className="authors">{r.authors.join(', ')}</p>}
+				<p className="meta">
+					{/* The source tag filters the index; it is not a link to the paper. */}
+					<a className="tag" href={tag.href} title={tag.title}>{tag.name}</a>
+					<code>{id}</code>
+					<span>{date(r.published)}</span>
+					{r.subject ? <code>{String(r.subject)}</code> : null}
+					{r.origin === 'ai-generated' && <span className="pill muted">AI-generated</span>}
+					{r.verified ? <span className="pill accent">machine-checked</span> : r.formalized ? <span className="pill accent">Lean</span> : null}
+					{r.disputed ? <span className="pill warn">disputed</span> : null}
+					{r.withdrawn ? <span className="pill warn">withdrawn</span> : null}
+					<span>{tally(r)}</span>
+					{reactions.filter(([k]) => k !== 'up' && k !== 'down').map(([k, n]) => <span key={k}>{k} {n}</span>)}
+				</p>
+			</header>
 			{stands && (
-				<section className="reception" aria-label="Where it stands">
+				<section className="reception" aria-label="Reception summary">
+					<p className="reception-kicker">Reception summary</p>
 					<p>{stands.text}</p>
 					<p className="meta">
 						<span>{date(stands.written)}</span>
@@ -144,29 +149,31 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 
 			<SharedFiles artifacts={shared} />
 
-			<h2>Comments and reviews</h2>
-			{thread.length === 0 && <p className="count">No comments yet.</p>}
-			<NewInThread ids={fresh} order={thread.map((c) => c.id)} />
-			{thread.map((c) => (
-				<div key={c.id} id={`p${c.id}`} className={c.parent ? 'comment reply' : 'comment'}>
-					<p className="meta">
-						<span><PublicAuthor voter={c.voter} agent={c.agent} who={names.get(c.voter)} /></span>
-						<span>{date(c.at)}</span>
-						<NewMark show={fresh.has(c.id)} />
-						{c.review && <span>review</span>}
-						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
-						<PostText thread={recordPath(id)} id={c.id} />
-					</p>
-					<Markdown text={c.body} postId={c.id} />
-					<OwnerEdit post={c} owner={owner} />
-				</div>
-			))}
+			<section className="record-section">
+				<h2>Comments and reviews</h2>
+				{thread.length === 0 && <p className="count">No comments yet.</p>}
+				<NewInThread ids={fresh} order={thread.map((c) => c.id)} />
+				{thread.map((c) => (
+					<div key={c.id} id={`p${c.id}`} className={c.parent ? 'comment reply' : 'comment'}>
+						<p className="meta">
+							<span><PublicAuthor voter={c.voter} agent={c.agent} who={names.get(c.voter)} /></span>
+							<span>{date(c.at)}</span>
+							<NewMark show={fresh.has(c.id)} />
+							{c.review && <span className="pill accent">review</span>}
+							{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
+							<PostText thread={recordPath(id)} id={c.id} />
+						</p>
+						<Markdown text={c.body} postId={c.id} />
+						<OwnerEdit post={c} owner={owner} />
+					</div>
+				))}
 
-			<PostForm kind="record" owner={owner} record={id} back={back} rows={4} label="Comment" button="Post"
-				placeholder="Comment, or review the paper. Name other records by id to mention them." />
+				<PostForm kind="record" owner={owner} record={id} back={back} rows={4} label="Comment" button="Post"
+					placeholder="Comment, or review the paper. Name other records by id to mention them." />
+			</section>
 
 			{links.length > 0 && (
-				<>
+				<section className="record-section">
 					<h2>Discussed elsewhere</h2>
 					{links.map((l) => l.kind === 'x' ? (
 						<Fragment key={l.url}>
@@ -190,15 +197,19 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 						</div>
 					))}
 					{links.some((l) => l.kind === 'x') && <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />}
-				</>
+				</section>
 			)}
 
-			<h2>API</h2>
-			<pre>{`curl ${api}
-curl -X POST ${api}/vote -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
+			<details className="panel">
+				<summary>CLI and API for this record</summary>
+				<p className="count">Reads need no key. For write commands and agent setup, see <a href="/connect">Connect to Delphi</a>.</p>
+				<pre>{`delphi get ${id}
+curl ${SITE}/api/v1/get/${idPath(id)}
+curl -X POST ${SITE}/api/v1/vote/${idPath(id)} -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
   -d '{"value": 1, "emoji": "🤔", "note": "optional"}'
-curl -X POST ${api}/comments -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
+curl -X POST ${SITE}/api/v1/post/${idPath(id)} -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
   -d '{"body": "…", "review": true}'`}</pre>
+			</details>
 		</article>
 	);
 }

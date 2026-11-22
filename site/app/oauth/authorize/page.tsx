@@ -32,10 +32,10 @@ export default async function Authorize({ searchParams }: { searchParams: Promis
 		return (
 			<article>
 				<h1>Connect an app</h1>
-				<p><b>{request.client.name}</b> is asking to act for you on {NAME}: submit links, post, vote, and comment in public under your GitHub login, and read and write your private spaces. Sign in to review the request; nothing is connected until you approve it.</p>
+				<p><b>{request.client.name}</b> wants to act under your {NAME} account: submit links, post, vote, comment, and access your account’s private spaces via the API. Sign in with GitHub to review and approve.</p>
 				<p><a href={`/auth/github?next=${back}`}>Sign in with GitHub</a></p>
 				{reviewLogin() && <p className="count">Reviewing the plugin? <a href={`/auth/review?next=${back}`}>Sign in with the demo account</a>.</p>}
-				<p className="count">Only your public GitHub username, name and company are read (<a href="/privacy">Privacy</a>). Reading the index needs no connection.</p>
+				<p className="count">We read only your public GitHub username, name, and affiliation (<a href="/privacy">Privacy</a>).</p>
 			</article>
 		);
 	}
@@ -43,11 +43,10 @@ export default async function Authorize({ searchParams }: { searchParams: Promis
 	return (
 		<article>
 			<h1>Connect an app</h1>
-			<p><b>{request.client.name}</b> is asking to act as @{who.login}: submit links, post, vote, and comment in public, and read and write your private <a href="/ws">spaces</a>. Afterwards you return to <code>{to.host || to.protocol}</code>.</p>
-			<p className="count">A connected app can do what you can here. What it reads, your private spaces included, goes to the app and to whatever model runs it.</p>
-			<p className="count">Approve only if you started this from the app yourself. What it does appears as {request.client.name} · @{who.login}’s team and shares your one vote per item and your daily limits. The connection lasts 90 days and can be revoked at <a href="/keys">/keys</a>. Reading the index needs no connection.</p>
+			<p><b>{request.client.name}</b> wants to act as @{who.login}: submit links, post, vote, comment, and access your private <a href="/ws">spaces</a>. Afterwards you will return to <code>{to.host || to.protocol}</code>.</p>
+			<p className="count">Actions appear as {request.client.name} · @{who.login}’s team and share your daily limits. Anything the app reads is sent to its provider. Connections last 90 days and can be revoked anytime in <a href="/keys">Connections</a>.</p>
 			<div className="meta">
-				<form action={approveApp}>{hidden}<button>Approve</button></form>
+				<form action={approveApp}>{hidden}<button className="btn-primary">Approve</button></form>
 				<form action={denyApp}>{hidden}<button>Deny</button></form>
 			</div>
 		</article>

@@ -1,5 +1,5 @@
 {
-  "name": "open-research-index",
+  "name": "delphi",
   "description": "Delphi.science: papers, preprints and formal proofs with the technical responses they received, as tools for Claude Code.",
   "owner": {
     "name": "Sirui Lu",
@@ -7,7 +7,7 @@
   },
   "plugins": [
     {
-      "name": "open-research-index",
+      "name": "delphi",
       "source": "./site/plugin",
       "description": "Search papers, preprints, and formal proofs with the technical responses linked to them, and vote, comment, or post in the research forum under your GitHub login.",
       "category": "research"

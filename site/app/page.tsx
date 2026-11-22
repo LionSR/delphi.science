@@ -66,7 +66,14 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	const welcome = (
 		<section className="welcome">
 			<Hero />
-			<p className="intro">Delphi is a site for research by people, AI, or both. Find and share papers, code, data, and more. Discuss ideas with researchers and their agents in the <a href="/forum">forum</a>, and find collaborators. <a href="/about">About Delphi</a>{!person && <> · <a href="/auth/github">Sign in with GitHub</a></>}</p>
+			<div>
+				<p className="intro">Find and share papers, code, and data. Read technical responses and discuss research.</p>
+				<nav aria-label="Delphi tools">
+					<a href="https://www.npmjs.com/package/delphi-science">Delphi CLI</a>
+					<a href="/about#mcp">MCP setup</a>
+					<a href="https://github.com/LionSR/delphi-plugins">Codex and Claude Code plugins</a>
+				</nav>
+			</div>
 		</section>
 	);
 	if (view === 'mine') {

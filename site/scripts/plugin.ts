@@ -1,4 +1,4 @@
-// Packages site/plugin/ as dist/open-research-index-plugin.zip, in the layout OpenAI's plugin docs give
+// Packages site/plugin/ as dist/delphi-plugin.zip, in the layout OpenAI's plugin docs give
 // (developers.openai.com/plugins/build/plugins): .codex-plugin/plugin.json, with .mcp.json and assets/ beside it. Needs `zip`.
 //
 //   npm run plugin
@@ -26,7 +26,7 @@ const FILES = [MANIFEST, SERVERS, 'assets/icon.png'];
 const CATEGORIES = ['Productivity', 'Creativity', 'Developer Tools', 'Business & Operations', 'Data & Analytics', 'Communication',
 	'Education & Research', 'Security', 'Finance', 'Healthcare', 'Travel', 'Entertainment', 'Other'];
 const path = (rel: string) => fileURLToPath(new URL(rel, import.meta.url));
-const src = path('../plugin/'), out = path('../../dist/plugin/'), zip = path('../../dist/open-research-index-plugin.zip');
+const src = path('../plugin/'), out = path('../../dist/plugin/'), zip = path('../../dist/delphi-plugin.zip');
 
 rmSync(out, { recursive: true, force: true });
 for (const f of FILES) {

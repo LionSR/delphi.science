@@ -7,7 +7,7 @@ import { logTool } from '#lib/api/mcp-tools.ts';
 import type { Moderator } from '#lib/moderation/moderate.ts';
 import { comment, post } from '#lib/posts/comments.ts';
 import { startTopic } from '#lib/posts/forum.ts';
-import { head } from '#lib/posts/log.ts';
+import { head, log } from '#lib/posts/log.ts';
 import { load, type Item } from '#lib/records/load.ts';
 import { allowRouteImports, migratedDb } from '#lib/testing.ts';
 import { addMember, createSpace } from '#lib/posts/spaces.ts';
@@ -129,6 +129,43 @@ describe('saving', () => {
 	});
 });
 
+test('overlapping section and subject subscriptions page the public thread once, including replies without links', async () => {
+	const { db, topic, answer } = await site();
+	try {
+		const space = await createSpace(db, ada, { title: 'Notebook', about: '' });
+		const privateTopic = await startTopic(db, ada, { title: 'Private math question', body: `Compare ${NT.id}`, space: space.id }, yes);
+		const privatePath = `ws/${space.id}/${privateTopic.id}/${privateTopic.question.id}`;
+		const nested = await post(db, { topic: topic.id }, eve, { body: `Compare ${NT.id} and ${CO.id}`, parent: answer.id }, yes);
+		const later = await post(db, { topic: topic.id }, bob, { body: 'This also follows by induction.', parent: nested.id }, yes);
+		const expected = [topic.question.id, answer.id, nested.id, later.id].map(id => `forum/${topic.id}/${id}`);
+		const lines = ['section:general cat:math', 'section:general by:@bob'];
+		await replaceQueries(db, ada, lines.join('\n'));
+		await assert.rejects(replaceQueries(db, ada, 'section:methods\nsection:absent'), /line 2.*unknown forum section/);
+		assert.deepEqual((await savedQueries(db, ada.login)).text, lines.join('\n'));
+
+		const all = await logTool(db, { q: joined(lines), since: 0 }, ada, 'rest');
+		assert.deepEqual(all.entries.map(e => e.path), expected);
+		const publicLog = await mcpAsSet(db, undefined, 'log', { q: joined(lines), since: 0 });
+		assert.deepEqual(publicLog.structuredContent!.entries, JSON.parse(JSON.stringify(all.entries)));
+		assert.deepEqual(all.entries.map(e => e.mentions), [[NT.id], [], [CO.id, NT.id], []]);
+		assert.deepEqual((await myFeed(db, ada)).entries.map(e => e.seq), seqs(all.entries).reverse());
+		const first = await logTool(db, { path: 'me/queries', since: 0, limit: 2 }, ada, 'rest');
+		const next = await logTool(db, { path: 'me/queries', since: first.since, limit: 2 }, ada, 'rest');
+		assert.deepEqual([...first.entries, ...next.entries], all.entries);
+		const end = await logTool(db, { path: 'me/queries', since: next.since }, ada, 'rest');
+		assert.deepEqual([end.entries, end.since], [[], all.since]);
+		// The nested comment links a math.CO paper. Its own reply inherits only the opening question's math.NT.
+		assert.deepEqual((await log(db, null, {}, { q: 'section:general cat:math.CO' })).entries.map(e => e.path), [expected[2]]);
+
+		assert.ok((await log(db, ada.login)).entries.some(e => e.path === privatePath));
+		for (const reader of [null, eve.login, ada.login]) {
+			assert.deepEqual((await log(db, reader, {}, { q: 'section:general', since: 0 })).entries.map(e => e.path), expected);
+			assert.deepEqual((await log(db, reader, { section: 'general' }, { since: 0 })).entries.map(e => e.path), expected);
+		}
+		assert.ok(!(await log(db, eve.login, {}, { q: 'section:general OR kind:question' })).entries.some(e => e.path === privatePath));
+	} finally { await db.close(); }
+});
+
 describe('My feed', () => {
 	let s: Awaited<ReturnType<typeof site>>;
 	before(async () => { s = await site(); });
@@ -145,7 +182,7 @@ describe('My feed', () => {
 			assert.deepEqual(seqs((await logTool(db, { path: 'me/queries' }, ada, 'rest')).entries), seqs(feed.entries));
 			assert.deepEqual(feed.queries, queries);
 		}
-		assert.deepEqual(seqs((await myFeed(db, ada)).entries), [7, 5, 4, 1], 'newest first');
+		assert.deepEqual(seqs((await myFeed(db, ada)).entries), [5, 4, 1], 'NOT cat:math excludes replies to the math question');
 		// Notes and blank lines in the text are not queries.
 		await replaceQueries(db, ada, '# what I follow\n\ncat:quant-ph\n');
 		assert.deepEqual(seqs((await myFeed(db, ada)).entries), [5, 4, 1]);

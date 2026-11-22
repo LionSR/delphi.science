@@ -9,7 +9,7 @@
 // everyone else, and to every feed, it is not there. An invitation to a space and its acceptance each have a line too,
 // with a seq from the same sequence (open_index.space_members): the person invited reads the invitation, and the
 // space's members read both.
-import type { Section } from './sections.ts';
+import { sectionId, type Section } from './sections.ts';
 import { CodedError, NotFoundError, QueryError } from '#lib/errors.ts';
 import { pageLimit, pageSize } from '#lib/paging.ts';
 import type { Db } from '#lib/db.ts';
@@ -43,16 +43,20 @@ export class NeedsReader extends CodedError {
 
 // ---- The query ----
 
-/** The fields the log adds to the record query language, as the docs describe them (OpenAPI, /llms.txt, the CLI). */
-export const LOG_FIELDS: Record<string, string> = {
+// The published OpenAPI/CLI parameter help is also the reviewed MCP tool description.
+const PUBLISHED_LOG_FIELDS = {
 	kind: `what happened: ${KINDS.join(', ')} (a record entering the index, or a post of that kind)`,
 	re: 'posts about one record, on it or naming it: re:arxiv/2610.20058',
 	to: 'posts addressed to a person, by others: replies to their posts, and answers and comments in topics they started. to:@me is the caller\'s inbox and needs sign-in',
 	by: 'posts by a person: by:@login, or by:@me',
 };
-export const LOG_QUERY_HELP = `The query language of search's q, plus ${Object.entries(LOG_FIELDS).map(([f, about]) => `${f}: ${about}`).join('; ')}. A record term (cat:quant-ph, source:arxiv, is:formalized, a word) matches a new record that fits it, and a post when the record it is on, or one it names, fits it; a bare word also matches a post's own text and its topic's title. Left out: everything.`;
-/** What the query also takes, said in /llms.txt, the skill and the saved-queries page. It is kept out of LOG_FIELDS,
- * which is the text of the log operation's description: that text is what the plugin directories reviewed. */
+export const LOG_QUERY_HELP = `The query language of search's q, plus ${Object.entries(PUBLISHED_LOG_FIELDS).map(([f, about]) => `${f}: ${about}`).join('; ')}. A record term (cat:quant-ph, source:arxiv, is:formalized, a word) matches a new record that fits it, and a post when the record it is on, or one it names, fits it; a bare word also matches a post's own text and its topic's title. Left out: everything.`;
+export const LOG_FIELDS: Record<string, string> = {
+	...PUBLISHED_LOG_FIELDS,
+	section: 'posts in a public forum section, e.g. section:methods. GET /api/v1 lists the stable IDs in forum_sections.',
+};
+/** What the query also takes, said in /llms.txt, the skill and the saved-queries page. It is separate from the log field list and
+ * does not change the log operation's reviewed description. */
 export const LOG_ALSO: Record<string, string> = {
 	'is:open, is:answered': 'posts in a topic whose question has no accepted answer yet, or has one. With kind:question, the questions themselves',
 	'to: (questions)': 'to:@login also holds each question put to a private space that person is in: a post that starts with an options line, their own agents\' included. Only the space\'s members read these',
@@ -60,8 +64,11 @@ export const LOG_ALSO: Record<string, string> = {
 export const LOG_QUERY_GUIDE = Object.entries(LOG_FIELDS).map(([f, about]) => `- ${f}: ${about}`).join('\n');
 
 const POST = 'e.post_id IS NOT NULL';
+const PUBLIC_FORUM = `t.space_id = '${FORUM}'`;
+// POST permits the events_posts index. The topic guard also makes NOT section match record comments.
+const inSection = (param: string) => `(${POST} AND e.topic_id IS NOT NULL AND ${PUBLIC_FORUM} AND t.section = ${param})`;
 // The same term over a record a post names (open_index.mentions). Inside, r is that record.
-const mentioned = (sql: string) => `EXISTS (SELECT 1 FROM open_index.mentions m JOIN open_index.records r ON r.id = m.record_id WHERE m.comment_id = e.post_id AND ${sql})`;
+const mentioned = (sql: string, post: 'e.post_id' | 't.question_id' = 'e.post_id') => `EXISTS (SELECT 1 FROM open_index.mentions m JOIN open_index.records r ON r.id = m.record_id WHERE m.comment_id = ${post} AND ${sql})`;
 
 /** Compiles a query over events e, joined to the post c, its topic t and the record r the event is on. */
 class EventCompiler extends Compiler {
@@ -80,6 +87,7 @@ class EventCompiler extends Compiler {
 
 	leaf(t: Leaf, positive: boolean): string {
 		const { field: f, value: v } = t;
+		if (f === 'section') return inSection(this.p(sectionId(v)));
 		if (f === 'kind') {
 			const kind = v.toLowerCase();
 			if (!(KINDS as readonly string[]).includes(kind)) throw new QueryError(`unknown kind:${v}`, `Use ${KINDS.map((k) => 'kind:' + k).join(', ')}.`);
@@ -118,7 +126,10 @@ class EventCompiler extends Compiler {
 			return `((r.id IS NOT NULL AND ${about}) OR ${mentioned(about)}${own})`;
 		}
 		const about = super.leaf(t, positive);
-		return `((r.id IS NOT NULL AND ${about}) OR ${mentioned(about)})`;
+		// Only the opening question supplies subjects to the thread. Links in a reply describe that reply.
+		const topicSubject = f === 'cat' || f === 'domain'
+			? ` OR (${PUBLIC_FORUM} AND t.question_id <> e.post_id AND ${mentioned(about, 't.question_id')})` : '';
+		return `((r.id IS NOT NULL AND ${about}) OR ${mentioned(about)}${topicSubject})`;
 	}
 }
 
@@ -209,8 +220,8 @@ export async function log(db: Db, who: Reader, scope: Scope = {}, opts: LogOptio
 	// A source is one of the fixed prefixes (lib/records/prefixes.json).
 	if (scope.source !== undefined) conditions.push(`split_part(e.record_id, '/', 1) = ${c.p(scope.source)}`);
 	if (scope.topic !== undefined) conditions.push(`e.topic_id = ${c.p(scope.topic)}`);
-	if (scope.forum) conditions.push(`t.space_id = '${FORUM}'`);
-	if (scope.section !== undefined) conditions.push(`t.section = ${c.p(scope.section)}`);
+	if (scope.section !== undefined) conditions.push(inSection(c.p(scope.section)));
+	else if (scope.forum) conditions.push(PUBLIC_FORUM);
 	if (scope.spaces) conditions.push(`t.space_id <> '${FORUM}'`);
 	if (scope.space !== undefined) conditions.push(`t.space_id = ${c.p(scope.space)}`);
 	const q = opts.q?.trim();

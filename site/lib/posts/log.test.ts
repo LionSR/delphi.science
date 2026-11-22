@@ -64,7 +64,7 @@ describe('the log query', () => {
 		const onQp = await comment(db, QP.id, ada, { body: 'The area law here is sharp.' }, yes);
 		const reply = await comment(db, QP.id, bob, { body: 'It fails at criticality.', parent: onQp.id }, yes);
 		const review = await comment(db, APP.id, bob, { body: `The lemma is the one in ${NT.id}, restated.`, review: true }, yes);
-		const topic = await startTopic(db, ada, { title: 'Is grokking a phase transition?', body: `Compare ${QP.id} on entanglement.` }, yes);
+		const topic = await startTopic(db, ada, { title: 'Is grokking a phase transition?', body: `Compare ${QP.id} on entanglement.`, section: 'methods' }, yes);
 		const answer = await post(db, { topic: topic.id }, bob, { body: 'The order parameter is not defined.' }, yes);
 		const remark = await post(db, { topic: topic.id }, eve, { body: 'It is, in the mean-field limit.', parent: answer.id }, yes);
 		const own = await post(db, { topic: topic.id }, ada, { body: 'Thanks; I will read the mean-field paper.', parent: answer.id }, yes);
@@ -77,6 +77,21 @@ describe('the log query', () => {
 	test('no query is everything, in order', async () => {
 		assert.deepEqual(await found(''), ['qp', 'nt', 'app', 'onQp', 'reply', 'review', 'question', 'answer', 'remark', 'own', 'elsewhere']);
 		assert.deepEqual((await log(db, null, {}, { limit: 3 })).entries.map((e) => e.path), [paths.elsewhere, paths.own, paths.remark]);
+	});
+
+	test('section is a boolean predicate on public topics and composes with other log terms', async () => {
+		const methods = ['question', 'answer', 'remark', 'own'];
+		assert.deepEqual(await found('section:methods'), methods);
+		assert.deepEqual(await found('cat:quant-ph'), ['qp', 'onQp', 'reply', ...methods]);
+		assert.deepEqual(await found(`re:${QP.id}`), ['onQp', 'reply', 'question']);
+		assert.deepEqual(await found('', {}, { forum: true, section: 'methods' }), methods);
+		assert.deepEqual(await found('NOT section:methods'), ['qp', 'nt', 'app', 'onQp', 'reply', 'review', 'elsewhere']);
+		assert.deepEqual(await found('(section:methods OR section:general) kind:question'), ['question', 'elsewhere']);
+		assert.deepEqual(await found('section:methods domain:quant-ph by:@bob'), ['answer']);
+		assert.deepEqual(await found('section:methods NOT cat:quant-ph'), []);
+		for (const q of ['section:', 'section:unknown', 'section:GENERAL']) {
+			await assert.rejects(found(q), /unknown forum section/);
+		}
 	});
 
 	test('to: is what others addressed to a person: replies to their posts, and posts in their topics', async () => {

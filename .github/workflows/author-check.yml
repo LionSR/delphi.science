@@ -1,5 +1,5 @@
-# Vercel deploys commits of this private repository only if the author is a Vercel team member.
-# Checks each new commit's author email against VERCEL_TEAM_EMAILS (space-separated; default: the owner).
+# Checks each new commit's author email against VERCEL_TEAM_EMAILS (space-separated; default: the owner)
+# so automated pushes and maintainer merges stay deployable on Vercel. Outside PRs are squash-merged by a maintainer.
 name: Commit authors
 
 on:

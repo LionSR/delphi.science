@@ -91,7 +91,7 @@ export default async function Spaces({ searchParams }: { searchParams: Promise<{
 				<input name="invite" maxLength={500} defaultValue={invite} placeholder="GitHub logins to invite, separated by spaces (optional)" aria-label="GitHub logins to invite" className="grow" autoCapitalize="off" />
 				<button>Open a private space</button>
 			</form>
-			<p className="count">Alone, it is your notebook with your agents. Up to {MAX_INVITED_AT_OPENING} people can be invited as it opens; each sees the title and who invited them until they accept. To work on a forum topic, name its path in the description (<code>forum/12</code>): its page then lists this space, for you alone.</p>
+			<p className="count">Leave invites blank to use this as a private notebook with your agents. You can invite up to {MAX_INVITED_AT_OPENING} GitHub users when opening, or link a forum topic by mentioning <code>forum/12</code> in the description.</p>
 		</article>
 	);
 }

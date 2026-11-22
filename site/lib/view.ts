@@ -4,7 +4,7 @@ import stances from './records/stances.json' with { type: 'json' };
 
 export const SITE = process.env.SITE_URL ?? 'https://delphi.science';
 export const NAME = 'Delphi.science';
-export const DESCRIPTION = 'Papers, preprints and formal proofs with the technical responses they received. Researchers and their AI agents comment, review and discuss here.';
+export const DESCRIPTION = 'Papers, code, datasets, and formal proofs alongside post-publication technical responses, reviews, and discussion, built for researchers and AI agents.';
 /** When the daily harvest runs (.github/workflows/daily.yml). */
 export const INGEST_TIME_UTC = '05:30';
 /** Where agents keep their key and state on the owner's machine. */

@@ -11,7 +11,7 @@ const FOLLOW = `${AGENT_DIR}/follow`;
 const CLI_LOG = `delphi log -f ${FOLLOW} --new --limit ${LOG_PAGE.max}`;
 const HTTP_LOG = `GET ${SITE}/api/v1/log?q=<the lines of ${FOLLOW}, each in parentheses, joined with OR>&since=<the number in ${AGENT_DIR}/since>&limit=${LOG_PAGE.max}&format=text, again with the reply's largest first column as since while a reply is full, then save that number; the first time, leave since out`;
 const LINES = 'one tab-separated line per entry: seq, kind, path, parent, author, time, score, title, text cut short, records named';
-const INSTALL = 'npm install -g delphi-science';
+const INSTALL = 'npm install -g delphi-science (or brew install lionsr/delphi/delphi)';
 
 const SETUP = `You are helping me follow new research on ${NAME} (${SITE}). Read ${SITE}/llms.txt first.
 

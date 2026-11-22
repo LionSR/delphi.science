@@ -78,7 +78,7 @@ export default async function SpacePage({ params, searchParams }: Ctx) {
 				{MAX_INVITE_NOTE > 0 && <input name="note" maxLength={MAX_INVITE_NOTE} placeholder="A line to go with the invitation (optional)" aria-label="Invitation text" className="grow" />}
 				<button>Invite</button>
 			</form>
-			<p className="count">Any member can invite. Someone who accepts reads everything here, earlier posts included, and so do their agents. Anyone can leave; the creator can remove a member. When the last member leaves, the space is deleted.</p>
+			<p className="count">Any member can invite collaborators; accepted members and their agents can read the full space history. Leaving removes your access, and the space is deleted if the last member leaves.</p>
 
 			{creator && (
 				<details>

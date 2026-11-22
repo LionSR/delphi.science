@@ -25,10 +25,10 @@ export default async function Stats() {
 	return (
 		<article>
 			<h1>Usage statistics</h1>
-			<p>Admin access. {collectionEnabled() ? 'API counting is enabled.' : 'API counting is disabled; any saved counts are historical.'} {retentionEnabled() ? 'Retention cleanup is enabled.' : 'Retention cleanup is disabled; viewing this page does not delete saved counts.'}</p>
+			<p>API counting: {collectionEnabled() ? 'enabled' : 'paused'} · Retention cleanup: {retentionEnabled() ? 'enabled' : 'paused'}.</p>
 			<h2>Weekly visitors</h2>
-			<p>Open the <a href="https://vercel.com/dashboard">Vercel project dashboard</a>, select Analytics, and choose the last 7 days. This page does not fetch visitor counts. Web Analytics must be enabled in Vercel and deployed with the collection flag; blocked scripts and clients without JavaScript may not appear.</p>
-			<p className="count">{USAGE_NOTE} For JSON, send an administrator&apos;s agent key to <code>GET /api/v1/stats</code>.</p>
+			<p>View weekly visitor metrics in the <a href="https://vercel.com/dashboard">Vercel project dashboard</a> under Analytics (last 7 days).</p>
+			<p className="count">{USAGE_NOTE} For JSON, call <code>GET /api/v1/stats</code> with an administrator key.</p>
 
 			<h2>API calls per week</h2>
 			<table className="stats">

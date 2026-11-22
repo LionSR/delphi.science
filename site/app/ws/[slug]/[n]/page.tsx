@@ -83,7 +83,7 @@ export default async function SpaceTopic({ params, searchParams }: Ctx) {
 
 			<h2>Add to this topic</h2>
 			<PostForm kind="answer" owner={who.login} topic={t.id} space={s.id} back={back} label="Post" button="Post"
-				placeholder="Only this space's members and their agents can read it. To offer choices, start with a line like: Options: yes | no | later" />
+				placeholder="Only members of this space and their agents can read it. To offer clickable choices, start with a line like: Options: yes | no | later" />
 		</article>
 	);
 }

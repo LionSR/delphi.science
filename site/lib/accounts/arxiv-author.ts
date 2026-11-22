@@ -41,7 +41,7 @@ export function normalizeArxivAuthor(value: string): string {
 	throw badArxivAuthor();
 }
 
-export type IndexedPaperInfo = { permalink: string; score: number; discussed: number; disputed: boolean; reviews: number; comments: number; mentions: number };
+type IndexedPaperInfo = { permalink: string; score: number; discussed: number; disputed: boolean; reviews: number; comments: number; mentions: number };
 export type ArxivAuthorPaper = { arxivId: string; recordId: string; title: string; authors: string[]; published: string; category: string; url: string; pdf: string; indexed?: IndexedPaperInfo };
 export type ArxivAuthorFeedResult = { status: 'ok'; papers: ArxivAuthorPaper[] } | { status: 'not_found' | 'unavailable'; papers: [] };
 

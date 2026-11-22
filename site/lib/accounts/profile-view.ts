@@ -2,14 +2,13 @@
 import { createElement as h, type ReactNode } from 'react';
 import { Markdown } from '#lib/posts/markdown.ts';
 import { arxivAuthorUrl, isOrcid, orcidUrl, type ArxivAuthorFeedResult, type ArxivAuthorPaper } from './arxiv-author.ts';
-import type { PostKind, Profile, ProfilePost, ProfileSubmission, ProfileVote, Tab } from './profile.ts';
+import { TABS, type PostKind, type Profile, type ProfilePost, type ProfileSubmission, type ProfileVote, type Tab } from './profile.ts';
 import { PublicAuthor, profilePath } from './public-author.ts';
 import type { PublicProfile } from './people.ts';
 import { date, original, source, tally, tex, voteMark } from '#lib/view.ts';
 import { Pager, pageHref } from '#lib/pager.ts';
 
 export type ProfileTab = Tab | 'papers';
-const BASE_TABS: Tab[] = ['all', 'topics', 'replies', 'comments', 'submissions', 'votes'];
 const TAB_NAMES: Record<ProfileTab, string> = {
 	all: 'All', topics: 'Topics', replies: 'Replies', comments: 'Comments', submissions: 'Submissions', votes: 'Votes', papers: 'Papers',
 };
@@ -21,7 +20,7 @@ const tabPath = (login: string, tab: ProfileTab) => pageHref(profilePath(login),
 function Tabs({ login, tab, counts, showPapers, papersCount }: {
 	login: string; tab: ProfileTab; counts?: Profile['counts']; showPapers: boolean; papersCount?: number;
 }) {
-	const tabs: ProfileTab[] = showPapers ? [...BASE_TABS, 'papers'] : BASE_TABS;
+	const tabs: readonly ProfileTab[] = showPapers ? [...TABS, 'papers'] : TABS;
 	return h('nav', { className: 'tabs', 'aria-label': 'Profile sections' }, ...tabs.map((t) => {
 		const count = t === 'papers' ? papersCount : (counts && t !== 'all' ? counts[t] : undefined);
 		return h('a', { key: t, href: tabPath(login, t), 'aria-current': t === tab ? 'page' : undefined },
@@ -120,8 +119,8 @@ function ActivityBody({ login, tab, page, who }: { login: string; tab: Tab; page
 
 /** page is null when loading failed; who is the person's public profile fields when known; editor is the
  *  owner's form for changing them. */
-export function ProfileView({ login, tab = 'all', page, who, papers, connectedAgents, owner = false, editor }: {
-	login: string; tab?: ProfileTab; page: Profile | null; who?: Partial<PublicProfile>; papers?: ArxivAuthorFeedResult | null;
+export function ProfileView({ login, tab = 'all', page, counts, who, papers, connectedAgents, owner = false, editor }: {
+	login: string; tab?: ProfileTab; page: Profile | null; counts?: Profile['counts']; who?: Partial<PublicProfile>; papers?: ArxivAuthorFeedResult | null;
 	connectedAgents?: number; owner?: boolean; editor?: ReactNode;
 }) {
 	const arxivId = who?.arxiv_id ?? '';
@@ -145,7 +144,7 @@ export function ProfileView({ login, tab = 'all', page, who, papers, connectedAg
 		links.length ? h('p', { className: 'profile-links' }, ...links) : null,
 		who?.bio ? h('p', { className: 'profile-bio' }, who.bio) : null,
 		editor ?? null,
-		h(Tabs, { login, tab, counts: page?.counts, showPapers: Boolean(arxivId || owner || tab === 'papers'), papersCount: papers?.status === 'ok' ? papers.papers.length : undefined }),
+		h(Tabs, { login, tab, counts: counts ?? page?.counts, showPapers: Boolean(arxivId || owner || tab === 'papers'), papersCount: papers?.status === 'ok' ? papers.papers.length : undefined }),
 		tab === 'papers' ? h(PapersTab, { arxivId, owner, result: papers }) : h(ActivityBody, { login, tab, page, who }),
 		tab !== 'papers' && page ? h(Pager, { page: page.page, pages: page.pages, path: profilePath(login), params: tabParams(tab) }) : null);
 }

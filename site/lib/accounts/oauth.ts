@@ -13,7 +13,8 @@ import { agentDisplayName, createAgentKey, MAX_AGENT_NAME, profileName } from '.
 export const SCOPE = 'write';
 /** The protected resource tokens are issued for (RFC 8707, RFC 9728). */
 export const RESOURCE = `${SITE}/mcp`;
-export const KEY_SECONDS = 90 * 86400; // open_index.agent_keys.expires_at's default
+const KEY_SECONDS = 90 * 86400; // open_index.agent_keys.expires_at's default
+const PKCE_RE = /^[A-Za-z0-9._~-]{43,128}$/;
 const MAX_REDIRECTS = 10, MAX_URI = 2000;
 // A client_id carries its own registration (below), so it is bounded in size.
 const MAX_CLIENT_ID = 1500;
@@ -65,15 +66,13 @@ export const RESOURCE_METADATA = `${SITE}/.well-known/oauth-protected-resource/m
 
 /** A WWW-Authenticate challenge for /mcp (RFC 9728 section 5.1, RFC 6750 section 3). */
 export function challenge(error: 'invalid_token' | 'insufficient_scope', description: string): string {
-	const quoted = (s: string) => s.replace(/[^\x20-\x7e]/g, '').replace(/["\\]/g, '');
-	const parts = [`resource_metadata="${RESOURCE_METADATA}"`, `scope="${SCOPE}"`];
-	parts.push(`error="${error}"`, `error_description="${quoted(description)}"`);
-	return `Bearer ${parts.join(', ')}`;
+	const quoted = description.replace(/[^\x20-\x7e]/g, '').replace(/["\\]/g, '');
+	return `Bearer resource_metadata="${RESOURCE_METADATA}", scope="${SCOPE}", error="${error}", error_description="${quoted}"`;
 }
 
 // ---- Clients ----
 
-export type Client = { client_id: string; name: string; redirect_uris: string[] };
+type Client = { client_id: string; name: string; redirect_uris: string[] };
 
 const LOOPBACK = new Set(['localhost', '127.0.0.1', '[::1]']);
 // Schemes that run or read something in the browser instead of handing the code to an app.
@@ -95,7 +94,7 @@ function redirectUri(value: unknown): URL {
 const isLoopback = (u: URL) => u.protocol === 'http:' && LOOPBACK.has(u.hostname);
 
 /** Whether `sent` is one of the client's redirect URIs: the same string, or on loopback the same but for the port (RFC 8252 section 7.3). */
-export function redirectAllowed(client: Client, sent: string): boolean {
+function redirectAllowed(client: Client, sent: string): boolean {
 	if (client.redirect_uris.includes(sent)) return true;
 	let url: URL;
 	try { url = redirectUri(sent); } catch { return false; }
@@ -145,13 +144,13 @@ export function registerClient(meta: unknown) {
 }
 
 /** The registration a client_id carries, checked as at registration; null for anything else. */
-export function client(id: unknown): Client | null {
+function client(id: unknown): Client | null {
 	if (typeof id !== 'string' || !id.startsWith(CLIENT) || id.length > MAX_CLIENT_ID) return null;
 	try {
 		const { n, r } = JSON.parse(Buffer.from(id.slice(CLIENT.length), 'base64url').toString('utf8'));
 		if (typeof n !== 'string' || !Array.isArray(r) || !r.length || r.length > MAX_REDIRECTS) return null;
-		const name = clientName(n, redirectUri(r[0]));
-		r.slice(1).forEach(redirectUri);
+		const uris = r.map(redirectUri);
+		const name = clientName(n, uris[0]);
 		// Only an id this server would itself have issued for that registration.
 		return encodeClient(name, r) === id ? { client_id: id, name: agentDisplayName(name), redirect_uris: r } : null;
 	} catch {
@@ -163,7 +162,7 @@ export function client(id: unknown): Client | null {
 
 const AUTHORIZE_PARAMS = ['response_type', 'client_id', 'redirect_uri', 'state', 'scope', 'code_challenge', 'code_challenge_method', 'resource'] as const;
 /** An authorization request (the query of /oauth/authorize), as received. */
-export type AuthorizeParams = Partial<Record<(typeof AUTHORIZE_PARAMS)[number], string>>;
+type AuthorizeParams = Partial<Record<(typeof AUTHORIZE_PARAMS)[number], string>>;
 
 /** The resource a request names, if any, must be this MCP server (or the site it is on). */
 const resourceOk = (resource: string | undefined) => !resource || [RESOURCE, SITE].includes(resource.replace(/\/$/, ''));
@@ -180,7 +179,7 @@ export function authorization(p: AuthorizeParams): { show: string } | { refuse: 
 	const refuse = (error: string, description: string) => ({ refuse: redirectBack(redirect_uri, { error, error_description: description, state: p.state }) });
 	if ((p.state ?? '').length > 2000) return { show: 'This request is malformed. Start the connection again from the app.' };
 	if (p.response_type !== 'code') return refuse('unsupported_response_type', 'response_type must be code');
-	if (!p.code_challenge || !/^[A-Za-z0-9._~-]{43,128}$/.test(p.code_challenge)) return refuse('invalid_request', 'code_challenge (PKCE) is required');
+	if (!p.code_challenge || !PKCE_RE.test(p.code_challenge)) return refuse('invalid_request', 'code_challenge (PKCE) is required');
 	if (p.code_challenge_method !== 'S256') return refuse('invalid_request', 'code_challenge_method must be S256');
 	if (!resourceOk(p.resource)) return refuse('invalid_target', `resource must be ${RESOURCE}`);
 	return { client: c, redirect_uri, challenge: p.code_challenge, state: p.state };
@@ -237,7 +236,7 @@ export async function token(db: Db, r: TokenRequest) {
 			 FROM open_index.oauth_codes WHERE code_hash = $1 FOR UPDATE`, [hash])).rows[0];
 		const registered = row && client(row.client_id);
 		if (!row || !registered || row.client_id !== r.client_id) return { refuse: invalid() };
-		if (!/^[A-Za-z0-9._~-]{43,128}$/.test(verifier) || !same(s256(verifier), row.challenge)) return { refuse: new OAuthError('invalid_grant', 'code_verifier does not match the code_challenge') };
+		if (!PKCE_RE.test(verifier) || !same(s256(verifier), row.challenge)) return { refuse: new OAuthError('invalid_grant', 'code_verifier does not match the code_challenge') };
 		if (row.used) {
 			// The code presented again by someone who holds the client's verifier too: it may have been stolen with it, so
 			// what the first exchange got stops working (RFC 6749 section 4.1.2). A replay without the verifier proved

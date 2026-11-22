@@ -8,9 +8,8 @@
 import type { Db } from '#lib/db.ts';
 import { NotFoundError } from '#lib/errors.ts';
 import { log, type LogEntry, type Scope } from '#lib/posts/log.ts';
-import { getTool, logLine, logText } from './mcp-tools.ts';
+import { getResolved, logLine, logText, topicScope } from './mcp-tools.ts';
 import { resolve } from './paths.ts';
-import { FORUM } from '#lib/posts/visibility.ts';
 
 type Thing = Record<string, any>;
 const oneLine = (v: unknown) => String(v).replace(/\s+/g, ' ').trim();
@@ -24,7 +23,7 @@ function brief(v: any): string {
 }
 
 /** One thing as "Name: value" lines, a blank line, then its text: a post's body, a topic's question, a record's abstract. */
-export function show(o: Thing): string {
+function show(o: Thing): string {
 	const text = o.body ?? o.question?.body ?? o.summary ?? '';
 	const textKey = o.body !== undefined ? 'body' : o.question?.body !== undefined ? undefined : 'summary';
 	const lines: string[] = [];
@@ -35,7 +34,10 @@ export function show(o: Thing): string {
 			if (!v.length) continue;
 			if (v.every((x) => x === null || typeof x !== 'object')) lines.push(`${name(k)}: ${v.map(oneLine).join(', ')}`);
 			else for (const x of v) lines.push(`${name(k)}: ${brief(x)}`);
-		} else if (brief(v)) lines.push(`${name(k)}: ${brief(v)}`); // an empty tally ({}) says nothing
+		} else {
+			const s = brief(v);
+			if (s) lines.push(`${name(k)}: ${s}`); // an empty tally ({}) says nothing
+		}
 	}
 	return `${lines.join('\n')}\n${text ? `\n${String(text).trim()}\n` : ''}`;
 }
@@ -48,7 +50,7 @@ async function posts(db: Db, scope: Scope): Promise<LogEntry[]> {
 	const all: LogEntry[] = [];
 	// Up to 10,000 posts, a page at a time.
 	for (let since = 0, n = 0; n < 50; n++) {
-		const page = await log(db, null, { ...scope }, { since, limit: 200, q: 'NOT kind:record' });
+		const page = await log(db, null, scope, { since, limit: 200, q: 'NOT kind:record' });
 		all.push(...page.entries);
 		if (page.entries.length < 200) break;
 		since = page.since;
@@ -61,9 +63,9 @@ export async function pathText(db: Db, id: string): Promise<string> {
 	const t = await resolve(db, id, null);
 	if (t.kind !== 'record' && t.kind !== 'topic' && t.kind !== 'post') throw new NotFoundError(`no text form of ${JSON.stringify(id)}`, 'A record, a forum topic and a post have one.');
 	// Through JSON, as the API replies: times become strings.
-	const thing = JSON.parse(JSON.stringify(await getTool(db, { id }, null, 'rest')));
+	const thing = JSON.parse(JSON.stringify(await getResolved(db, t, id, null, 'rest')));
 	if (t.kind === 'post') return show(thing);
-	const thread = JSON.parse(JSON.stringify(await posts(db, t.kind === 'record' ? { record: t.record } : { topic: t.topic, ...(t.space === FORUM ? { forum: true as const } : { space: t.space }) }))) as LogEntry[];
+	const thread = JSON.parse(JSON.stringify(await posts(db, t.kind === 'record' ? { record: t.record } : topicScope(t.topic, t.space)))) as LogEntry[];
 	if (!thread.length) return show(thing);
 	return [show(thing), `${logText({ entries: thread.map(logLine) })}\n`, ...thread.map((e) => show(whole(e)))].join('\n');
 }

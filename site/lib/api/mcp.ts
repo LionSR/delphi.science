@@ -42,10 +42,10 @@ const inline = (s: unknown): any => {
 };
 
 /** A zod schema for validation that reports the original JSON Schema in tools/list. */
-function schema(json: Json, given?: z.ZodType): z.ZodType {
+function schema(json: Json): z.ZodType {
 	// Built without the top-level description: zod attaches one to a copy, which the override below would not cover.
 	const { description: _description, ...rest } = json;
-	const s = given ?? z.fromJSONSchema(rest as z.core.JSONSchema.JSONSchema);
+	const s = z.fromJSONSchema(rest as z.core.JSONSchema.JSONSchema);
 	s._zod.toJSONSchema = () => structuredClone(json); // a copy, because zod modifies the object it is given
 	return s;
 }
@@ -98,7 +98,7 @@ const NO_AUTH = { type: 'noauth' }, OAUTH = { type: 'oauth2', scopes: [SCOPE] };
 // needing no account. It does take a token when the client sends one (with in=forum it adds the topics of the caller's
 // private spaces), which the REST operation declares as optional sign-in.
 const LISTED: Record<string, Auth> = { search: 'none' };
-export const securitySchemes = (name: string) => ({ none: [NO_AUTH], required: [OAUTH], optional: [NO_AUTH, OAUTH] })[LISTED[name] ?? TOOLS[name]?.auth ?? 'none'];
+const securitySchemes = (name: string) => ({ none: [NO_AUTH], required: [OAUTH], optional: [NO_AUTH, OAUTH] })[LISTED[name] ?? TOOLS[name]?.auth ?? 'none'];
 
 function server(db: () => Promise<Db>, who: Caller): McpServer {
 	const s = new McpServer({ name: 'delphi', title: NAME, version: '2.0.0', websiteUrl: SITE }, { instructions: instructions() });
@@ -110,7 +110,7 @@ function server(db: () => Promise<Db>, who: Caller): McpServer {
 }
 
 /** Who a request's Bearer token belongs to; null with no Authorization header; 'invalid' for a token that does not work. */
-export async function caller(req: Request, db: () => Promise<Db>): Promise<Caller | 'invalid'> {
+async function caller(req: Request, db: () => Promise<Db>): Promise<Caller | 'invalid'> {
 	const header = req.headers.get('authorization');
 	if (!header) return null;
 	const token = header.match(/^Bearer\s+(\S+)$/i)?.[1];

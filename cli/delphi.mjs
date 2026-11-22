@@ -39,6 +39,7 @@ const isBoolean = (f) => f.schema.type === 'boolean';
 const takes = (f) => f.schema.enum ? f.schema.enum.join('|') : f.schema.type === 'integer' ? 'n' : 'text';
 const signsIn = (op) => (op.security ?? []).some((s) => Object.keys(s).length);
 const optionalSignIn = (op) => (op.security ?? []).some((s) => !Object.keys(s).length);
+const needsSignIn = (op) => signsIn(op) && !optionalSignIn(op);
 
 // ---- Help ----
 
@@ -54,50 +55,51 @@ const table = (rows) => {
 	const w = Math.max(...rows.map(([a]) => a.length)) + 2;
 	return rows.map(([a, b]) => `  ${a.padEnd(w)}${wrap(b, w + 2)}`).join('\n');
 };
+const WRITES = [['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text if any.']];
 const LOCAL = {
 	search: [['--json', 'Print the reply as JSON. Otherwise one line per result: path, date, score, title, tab-separated.']],
 	get: [['--body', 'Print the text alone, without the "Name: value" lines: a post\'s body, or at me/queries the saved queries, ready for a file.'],
 		['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text.']],
 	edit: [['--force', 'Take the revision from the server now instead of giving one: what is sent replaces what is there, whatever it has become.'],
-		['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text if any.']],
+		...WRITES],
 	log: [['-q <query>', 'The same as --q.'],
 		['-f <file>', 'Queries from a file, one per line; an entry is listed when it matches any of them. Blank lines and lines starting with # are skipped; - reads stdin. Instead of --q.'],
-		['--new', `Only what is newer than last time: reads the cursor in ${'~/.delphi/cursor'}, lists what came after it, oldest first, and moves it. The first time, the newest entries. Each path and query keeps its own place.`],
+		['--new', 'Only what is newer than last time: reads the cursor in ~/.delphi/cursor, lists what came after it, oldest first, and moves it. The first time, the newest entries. Each path and query keeps its own place.'],
 		['--json', 'Print the reply as JSON. Otherwise one line per entry, tab-separated, as the server writes them; nothing when there are none.']],
 };
 /** Short names: for an option of the operation, or for one of the command's own that takes a value. */
-const SHORT = { log: { '-q': '--q', '-f': '-f' } };
-const WRITES = [['--json', 'Print the reply as JSON. Otherwise "Name: value" lines, a blank line, then the text if any.']];
+const SHORT = { log: { '-q': '--q' } };
 
 function synopsis(name) {
-	const parts = fields(OPS[name]).filter((f) => !f.stdin).map((f) => {
+	const fs = fields(OPS[name]);
+	const parts = fs.filter((f) => !f.stdin).map((f) => {
 		const s = f.positional ? `<${f.name}>` : isBoolean(f) ? flag(f.name) : `${flag(f.name)} <${takes(f)}>`;
 		return f.required ? s : `[${s}]`;
 	});
-	return `delphi ${name} ${parts.join(' ')}${fields(OPS[name]).some((f) => f.stdin) ? ' < text' : ''}`;
+	return `delphi ${name} ${parts.join(' ')}${fs.some((f) => f.stdin) ? ' < text' : ''}`;
 }
 function help(name) {
 	const op = OPS[name], fs = fields(op);
 	const rows = fs.map((f) => [f.stdin ? 'stdin' : f.positional ? `<${f.name}>` : flag(f.name), f.stdin
 		? `${f.description} It may start with headers as get prints them (first "Id: <path>", then any of ${fs.filter((x) => !x.stdin).map((x) => x.name[0].toUpperCase() + x.name.slice(1).replaceAll('_', '-')).join(', ')}), a blank line, then the text; what the command line gives wins. ${flag(f.name)} <text> gives it without stdin.`
 		: f.description]);
-	return `${synopsis(name)}\n\n${wrap(op.description ?? op.summary, 0)}\n\n${table([...rows, ...(LOCAL[name] ?? WRITES)])}\n${signsIn(op) && !optionalSignIn(op) ? '\nNeeds sign-in: delphi login.\n' : ''}`;
+	return `${synopsis(name)}\n\n${wrap(op.description ?? op.summary, 0)}\n\n${table([...rows, ...(LOCAL[name] ?? WRITES)])}\n${needsSignIn(op) ? '\nNeeds sign-in: delphi login.\n' : ''}`;
 }
 const tilde = (file) => file.replace(homedir(), '~');
 const LOGIN = () => {
 	const agent = fields(OPS.requestAgentKey).find((f) => f.name === 'agent');
-	return `delphi login [--agent <name>] [--no-wait]\n\n${wrap(`Sign in, so that post, edit and vote can act for a person. Prints a code and a link for the person to open; they sign in with GitHub and approve it there. Then the key is saved to ${tilde(keyFile())} (mode 600). It is never printed.`, 0)}\n\n${table([
+	return `delphi login [--agent <name>] [--no-wait]\n\n${wrap(`Sign in, so that post, edit and vote can act for a person. Prints a code and a link for the person to open; they sign in with GitHub and approve it there. Then the key is saved to ${tilde(KEY_FILE)} (mode 600). It is never printed.`, 0)}\n\n${table([
 		['--agent', `${agent.description} Default: Delphi CLI.`],
 		['--no-wait', 'Print the code and link and return at once. Run delphi login again to wait for the approval: it takes up the same code.'],
 	])}\n`;
 };
-const LOGOUT = () => `delphi logout\n\n${wrap(`${OPS.revokeAgentKey.summary}`, 0)}\n\nRevokes the saved key on the server and deletes ${tilde(keyFile())}.\n`;
+const LOGOUT = () => `delphi logout\n\n${wrap(OPS.revokeAgentKey.summary, 0)}\n\nRevokes the saved key on the server and deletes ${tilde(KEY_FILE)}.\n`;
 const overview = () => `delphi <command> [arguments]    ${api.info.title}, ${SERVER}
 
 Everything has a path: ${fields(OPS.get)[0].description.replace(/^.*?A path: /, '')}
 Private spaces, signed in: ws (yours), ws/<slug>, a topic ws/<slug>/12, a post ws/<slug>/12/502, ws/<slug>/members.
 
-${table([...VERBS.map((v) => [v, OPS[v].summary + (signsIn(OPS[v]) && !optionalSignIn(OPS[v]) ? ' (needs sign-in)' : '')]),
+${table([...VERBS.map((v) => [v, OPS[v].summary + (needsSignIn(OPS[v]) ? ' (needs sign-in)' : '')]),
 		['login', 'Sign in: show the person a code to approve, and save the key.'], ['logout', 'Revoke the saved key and delete it.']])}
 
 delphi <command> --help says what it takes. Text goes to stdout, one thing per line where there are many, and
@@ -117,17 +119,17 @@ Guide: ${HOME_SERVER}/llms.txt
 const DIR = join(homedir(), '.delphi');
 // Another server keeps its own files, so a key is only ever sent to the server that issued it.
 const SUFFIX = SERVER === HOME_SERVER ? '' : `.${new URL(SERVER).host.replace(/[^A-Za-z0-9.-]/g, '-')}`;
-const keyFile = () => join(DIR, `key${SUFFIX}`), cursorFile = () => join(DIR, `cursor${SUFFIX}`), pendingFile = () => join(DIR, `pending${SUFFIX}`);
+const KEY_FILE = join(DIR, `key${SUFFIX}`), CURSOR_FILE = join(DIR, `cursor${SUFFIX}`), PENDING_FILE = join(DIR, `pending${SUFFIX}`);
 const read = (file) => { try { return readFileSync(file, 'utf8'); } catch { return ''; } };
 function save(file, text) {
 	mkdirSync(DIR, { recursive: true, mode: 0o700 });
 	writeFileSync(file, text, { mode: 0o600 });
 	chmodSync(file, 0o600); // also when the file was already there
 }
-const savedKey = () => (process.env.DELPHI_KEY || read(keyFile())).trim();
+const savedKey = () => (process.env.DELPHI_KEY || read(KEY_FILE)).trim();
 /** The cursor file: one line for each path and query listed with --new, "<path>\t<seq>" and then "\t<query>" if there
  * was one; * is the whole site. The key is the line without its seq. */
-const cursors = () => new Map(read(cursorFile()).split('\n').filter(Boolean).map((l) => l.split('\t')).map(([path, seq, ...query]) => [[path, ...query].join('\t'), Number(seq)]));
+const cursors = () => new Map(read(CURSOR_FILE).split('\n').filter(Boolean).map((l) => l.split('\t')).map(([path, seq, ...query]) => [[path, ...query].join('\t'), Number(seq)]));
 
 // ---- Calling the server ----
 
@@ -150,8 +152,7 @@ async function send(op, args, { format, key = savedKey() } = {}) {
 			...(withKey ? { Authorization: `Bearer ${key}` } : {}) },
 		body: op.requestBody ? JSON.stringify(body) : undefined,
 	}).catch((e) => { throw new Failure(UNREACHABLE, `cannot reach ${SERVER}: ${e.cause?.code ?? e.cause?.message ?? e.message}`); });
-	const needsKey = signsIn(op) && !optionalSignIn(op);
-	if (needsKey && !key) throw new Failure(SIGN_IN, 'sign-in required. Run delphi login, and approve the code it prints.');
+	if (needsSignIn(op) && !key) throw new Failure(SIGN_IN, 'sign-in required. Run delphi login, and approve the code it prints.');
 	let res = await call(signsIn(op) && Boolean(key));
 	// A saved key that no longer works should not stop reading what needs none.
 	if (res.status === 401 && key && optionalSignIn(op) && args.id !== 'me') res = await call(false);
@@ -182,23 +183,23 @@ function parse(name, argv, local = [], valued = []) {
 	const rest = [...argv];
 	let n = 0;
 	while (rest.length) {
-		let a = rest.shift();
+		const a = rest.shift();
 		if (a === '--') { for (const v of rest.splice(0)) { if (n >= positional.length) throw usage(`unexpected ${JSON.stringify(v)}`); args[positional[n++].name] = v; } break; }
-		const short = SHORT[name]?.[a.includes('=') ? a.slice(0, a.indexOf('=')) : a];
-		if (short) a = short + (a.includes('=') ? a.slice(a.indexOf('=')) : '');
-		if (valued.includes(a.includes('=') ? a.slice(0, a.indexOf('=')) : a)) {
-			const key = a.includes('=') ? a.slice(0, a.indexOf('=')) : a;
-			const raw = a.includes('=') ? a.slice(a.indexOf('=') + 1) : rest.shift();
+		const eq = a.indexOf('=');
+		const head = eq < 0 ? a : a.slice(0, eq);
+		const key = SHORT[name]?.[head] ?? head;
+		const inline = eq < 0 ? undefined : a.slice(eq + 1);
+		if (valued.includes(key)) {
+			const raw = inline ?? rest.shift();
 			if (raw === undefined) throw usage(`${key} needs a value`);
 			values[key] = raw;
 			continue;
 		}
-		if (!a.startsWith('--') || a === '-') {
+		if (!key.startsWith('--')) {
 			if (n >= positional.length) throw usage(`unexpected ${JSON.stringify(a)}. ${synopsis(name)}`);
 			args[positional[n].name] = typed(positional[n++], a);
 			continue;
 		}
-		const [key, inline] = a.includes('=') ? [a.slice(0, a.indexOf('=')), a.slice(a.indexOf('=') + 1)] : [a, undefined];
 		if (local.includes(key)) { set.add(key); continue; }
 		const no = key.startsWith('--no-') && fs.find((f) => isBoolean(f) && flag(f.name) === `--${key.slice(5)}`);
 		const f = no || fs.find((x) => flag(x.name) === key);
@@ -260,7 +261,10 @@ function show(o) {
 			if (!v.length) continue;
 			if (v.every((x) => x === null || typeof x !== 'object')) lines.push(`${name(k)}: ${v.map(oneLine).join(', ')}`);
 			else for (const x of v) lines.push(`${name(k)}: ${brief(x)}`);
-		} else if (brief(v)) lines.push(`${name(k)}: ${brief(v)}`); // an empty tally ({}) says nothing
+		} else {
+			const s = brief(v);
+			if (s) lines.push(`${name(k)}: ${s}`); // an empty tally ({}) says nothing
+		}
 	}
 	return `${lines.join('\n')}\n${text ? `\n${text.trim()}\n` : ''}`;
 }
@@ -273,9 +277,10 @@ const print = async (reply, json, text) => out(json ? `${reply.trim()}\n` : text
 async function search(argv) {
 	const { op, args, set } = parse('search', argv, ['--json']);
 	const reply = await send(op, args);
-	await print(reply, set.has('--json'), (r) => r.results.map((x) => [x.id, x.published ?? x.last_at ?? '', x.score ?? 0, oneLine(x.title)].join('\t')).join('\n') + (r.results.length ? '\n' : ''));
+	if (set.has('--json')) return out(`${reply.trim()}\n`);
 	const r = JSON.parse(reply);
-	if (r.next_cursor && !set.has('--json')) process.stderr.write(`delphi: ${r.results.length} of ${r.total}; the next page: --cursor ${r.next_cursor}\n`);
+	await out(r.results.map((x) => [x.id, x.published ?? x.last_at ?? '', x.score ?? 0, oneLine(x.title)].join('\t')).join('\n') + (r.results.length ? '\n' : ''));
+	if (r.next_cursor) process.stderr.write(`delphi: ${r.results.length} of ${r.total}; the next page: --cursor ${r.next_cursor}\n`);
 }
 
 async function get(argv) {
@@ -297,18 +302,17 @@ async function queries(file) {
 
 async function log(argv) {
 	const { op, fs, args, set, values } = parse('log', argv, ['--json', '--new'], ['-f']);
-	const json = set.has('--json');
+	const json = set.has('--json'), format = json ? undefined : 'text';
 	if (values['-f'] !== undefined) {
 		if (args.q !== undefined) throw usage('give -q or -f, not both');
 		args.q = await queries(values['-f']);
 	}
-	if (!set.has('--new')) return out(await send(op, args, { format: json ? undefined : 'text' }));
+	if (!set.has('--new')) return out(await send(op, args, { format }));
 	if (args.since !== undefined) throw usage('--new reads since from the cursor file; give one or the other');
 	const name = args.path?.replace(/^\/+|\/+$/g, '') || '*', all = cursors();
 	// A query has its own place in the log: what it has shown says nothing about what another has.
 	const query = args.q?.replace(/\s+/g, ' ').trim(), place = query ? `${name}\t${query}` : name;
 	const size = args.limit ?? fs.find((f) => f.name === 'limit').schema.maximum;
-	const format = json ? undefined : 'text';
 	// A page as its entries (JSON) or its lines (text), and the newest seq in it: the first column of a line.
 	const page = async (more) => {
 		const reply = await send(op, { ...args, ...more }, { format });
@@ -334,7 +338,7 @@ async function log(argv) {
 	else if (items.length) await out(`${items.join('\n')}\n`);
 	// Moved only once what it covers has been written out.
 	all.set(place, since);
-	save(cursorFile(), [...all].map(([key, seq]) => { const [path, ...q] = key.split('\t'); return `${[path, seq, ...q].join('\t')}\n`; }).join(''));
+	save(CURSOR_FILE, [...all].map(([key, seq]) => { const [path, ...q] = key.split('\t'); return `${[path, seq, ...q].join('\t')}\n`; }).join(''));
 }
 
 /** post, edit and vote: the text from stdin where the operation takes one, then the reply as get would print it. */
@@ -360,11 +364,11 @@ const sleep = (ms) => new Promise((done) => setTimeout(done, ms));
 async function login(argv) {
 	const { args, set } = parse('requestAgentKey', argv, ['--no-wait']);
 	let pending;
-	try { pending = JSON.parse(read(pendingFile())); } catch { /* none */ }
+	try { pending = JSON.parse(read(PENDING_FILE)); } catch { /* none */ }
 	if (!pending || pending.expires_at < Date.now() + 5000) {
 		const d = JSON.parse(await send(OPS.requestAgentKey, { agent: args.agent ?? process.env.DELPHI_AGENT ?? 'Delphi CLI' }));
 		pending = { ...d, expires_at: Date.now() + d.expires_in * 1000 };
-		save(pendingFile(), JSON.stringify(pending));
+		save(PENDING_FILE, JSON.stringify(pending));
 	}
 	await out(`Code: ${pending.user_code}\nOpen: ${pending.verification_uri_complete}\n`);
 	if (set.has('--no-wait')) return void process.stderr.write('delphi: show the person the code and the link, then run delphi login again to wait for their approval.\n');
@@ -372,22 +376,22 @@ async function login(argv) {
 	while (Date.now() < pending.expires_at) {
 		try {
 			const r = JSON.parse(await send(OPS.redeemAgentKey, { device_code: pending.device_code }));
-			save(keyFile(), `${r.key}\n`);
-			rmSync(pendingFile(), { force: true });
+			save(KEY_FILE, `${r.key}\n`);
+			rmSync(PENDING_FILE, { force: true });
 			return out(`Signed in as @${r.login} (${r.agent})\n`);
 		} catch (e) {
-			if (e.code !== 'authorization_pending') { rmSync(pendingFile(), { force: true }); throw e; }
+			if (e.code !== 'authorization_pending') { rmSync(PENDING_FILE, { force: true }); throw e; }
 		}
 		await sleep((pending.interval ?? 5) * 1000);
 	}
-	rmSync(pendingFile(), { force: true });
+	rmSync(PENDING_FILE, { force: true });
 	throw new Failure(REFUSED, 'the code expired before it was approved. Run delphi login again for a new one.');
 }
 
 async function logout(argv) {
 	if (argv.length) throw usage('delphi logout takes nothing');
-	const key = read(keyFile()).trim();
-	rmSync(pendingFile(), { force: true });
+	const key = read(KEY_FILE).trim();
+	rmSync(PENDING_FILE, { force: true });
 	if (!key) return;
 	try {
 		const { keys } = JSON.parse(await send(OPS.listAgentKeys, {}, { key }));
@@ -395,22 +399,23 @@ async function logout(argv) {
 		if (current) await send(OPS.revokeAgentKey, { hash: current.hash }, { key });
 	} catch (e) {
 		// A key the server no longer knows is as signed out as it gets.
-		if (e.status !== SIGN_IN) { rmSync(keyFile(), { force: true }); throw new Failure(e.status ?? REFUSED, `${e.message}. The key file is deleted, but the key was not revoked: revoke it at ${SERVER}/keys.`); }
+		if (e.status !== SIGN_IN) { rmSync(KEY_FILE, { force: true }); throw new Failure(e.status ?? REFUSED, `${e.message}. The key file is deleted, but the key was not revoked: revoke it at ${SERVER}/keys.`); }
 	}
-	rmSync(keyFile(), { force: true });
+	rmSync(KEY_FILE, { force: true });
 }
 
 const COMMANDS = { search, get, log, post: write('post'), edit: write('edit'), vote: write('vote'), login, logout };
 const HELP = { ...Object.fromEntries(VERBS.map((v) => [v, () => help(v)])), login: LOGIN, logout: LOGOUT };
+const noCommand = (c) => usage(`no command ${JSON.stringify(c)}. Commands: ${Object.keys(COMMANDS).join(', ')}`);
 
 async function main([name, ...argv]) {
 	if (name === '--version' || name === '-V') return out(`${VERSION}\n`);
 	if (name === undefined || name === '--help' || name === '-h' || name === 'help') {
 		const about = name === 'help' ? argv[0] : undefined;
-		if (about && !HELP[about]) throw usage(`no command ${JSON.stringify(about)}. Commands: ${Object.keys(COMMANDS).join(', ')}`);
+		if (about && !HELP[about]) throw noCommand(about);
 		return out(about ? HELP[about]() : overview());
 	}
-	if (!COMMANDS[name]) throw usage(`no command ${JSON.stringify(name)}. Commands: ${Object.keys(COMMANDS).join(', ')}`);
+	if (!COMMANDS[name]) throw noCommand(name);
 	if (argv.includes('--help') || argv.includes('-h')) return out(HELP[name]());
 	return COMMANDS[name](argv);
 }

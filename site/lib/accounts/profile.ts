@@ -22,8 +22,6 @@ export const TABS = [...POST_TABS, 'submissions', 'votes'] as const;
 export type Tab = (typeof TABS)[number];
 type PostTab = (typeof POST_TABS)[number];
 const TAB_KINDS: Record<Exclude<PostTab, 'all'>, PostKind[]> = { topics: ['question'], replies: ['answer'], comments: ['comment', 'review'] };
-/** The tabs that each hold one group of post kinds; together they hold every post once. */
-const KIND_TABS = TABS.filter((t): t is keyof typeof TAB_KINDS => t in TAB_KINDS);
 
 // The types are the API's schemas (lib/api/openapi.ts), so what this module returns is what the API documents.
 export type ProfilePost = FromSchema<Schemas['ActivityPost']>;
@@ -40,9 +38,7 @@ type SubmissionRow = { id: string; record_id: string; title: string; agent: stri
 type VoteRow = { record_id: string; title: string; agent: string; value: 1 | -1 | null; emoji: string | null; note: string | null; at: string | Date };
 
 const badLogin = () => new QueryError('Use a valid GitHub login.', 'Use 1–39 ASCII letters/digits or single internal hyphens; account paths and display names are not handles.');
-/** The database could not answer; the API reports it as 503. */
-export class ProfileUnavailable extends CodedError {}
-const unavailable = () => new ProfileUnavailable(503, 'unavailable', 'Public activity is temporarily unavailable.', 'Try this public activity page again later.');
+const unavailable = () => new CodedError(503, 'unavailable', 'Public activity is temporarily unavailable.', 'Try this public activity page again later.');
 
 export function normalizeProfileLogin(value: unknown): string {
 	if (typeof value !== 'string') throw badLogin();
@@ -87,21 +83,25 @@ const VOTES = `FROM open_index.votes v JOIN open_index.records r ON r.id = v.rec
 // A slice of a login's list, as profile() pages it.
 type Slice = { offset?: number; limit?: number };
 
-/** A slice of a login's public posts, newest first: all of them, or one tab's kinds. */
-export async function profileActivity(db: Db, handle: unknown, { tab = 'all', offset = 0, limit = PROFILE_PAGE.fallback }: Slice & { tab?: PostTab } = {}): Promise<ProfilePost[]> {
+async function queryProfile<T>(handle: unknown, run: (login: string) => Promise<T>): Promise<T> {
 	const login = normalizeProfileLogin(handle);
 	try {
-		return (await db.query<Row>(`SELECT * FROM (${ACTIVITY}) a WHERE ($2::text[] IS NULL OR a.kind = ANY($2::text[]))
-			ORDER BY a.pid DESC LIMIT $3 OFFSET $4`, [login, tab === 'all' ? null : TAB_KINDS[tab], limit, offset])).rows.map(toPost);
+		return await run(login);
 	} catch {
 		throw unavailable();
 	}
 }
 
+/** A slice of a login's public posts, newest first: all of them, or one tab's kinds. */
+export function profileActivity(db: Db, handle: unknown, { tab = 'all', offset = 0, limit = PROFILE_PAGE.fallback }: Slice & { tab?: PostTab } = {}): Promise<ProfilePost[]> {
+	return queryProfile(handle, async (login) =>
+		(await db.query<Row>(`SELECT * FROM (${ACTIVITY}) a WHERE ($2::text[] IS NULL OR a.kind = ANY($2::text[]))
+			ORDER BY a.pid DESC LIMIT $3 OFFSET $4`, [login, tab === 'all' ? null : TAB_KINDS[tab], limit, offset])).rows.map(toPost));
+}
+
 /** How many public posts of each kind, submitted records, and record votes a login has. */
-export async function profileCounts(db: Db, handle: unknown): Promise<ProfileCounts> {
-	const login = normalizeProfileLogin(handle);
-	try {
+export function profileCounts(db: Db, handle: unknown): Promise<ProfileCounts> {
+	return queryProfile(handle, async (login) => {
 		// One pass over the activity, counting each tab's kinds.
 		const row = (await db.query<Record<string, string | number>>(`SELECT
 				count(*) FILTER (WHERE a.kind = ANY($2::text[])) AS topics,
@@ -111,37 +111,27 @@ export async function profileCounts(db: Db, handle: unknown): Promise<ProfileCou
 				(SELECT count(*) ${VOTES}) AS votes
 			FROM (${ACTIVITY}) a`, [login, TAB_KINDS.topics, TAB_KINDS.replies, TAB_KINDS.comments])).rows[0];
 		return { topics: Number(row.topics), replies: Number(row.replies), comments: Number(row.comments), submissions: Number(row.submissions), votes: Number(row.votes) };
-	} catch {
-		throw unavailable();
-	}
+	});
 }
 
 /** A slice of a login's submitted live records, newest first. */
-export async function profileSubmissions(db: Db, handle: unknown, { offset = 0, limit = PROFILE_PAGE.fallback }: Slice = {}): Promise<ProfileSubmission[]> {
-	const login = normalizeProfileLogin(handle);
-	try {
-		return (await db.query<SubmissionRow>(`SELECT s.id::text AS id, s.record_id, r.title, s.agent, s.at ${SUBMISSIONS}
+export function profileSubmissions(db: Db, handle: unknown, { offset = 0, limit = PROFILE_PAGE.fallback }: Slice = {}): Promise<ProfileSubmission[]> {
+	return queryProfile(handle, async (login) =>
+		(await db.query<SubmissionRow>(`SELECT s.id::text AS id, s.record_id, r.title, s.agent, s.at ${SUBMISSIONS}
 			ORDER BY s.at DESC, s.id DESC LIMIT $2 OFFSET $3`, [login, limit, offset])).rows.map((s): ProfileSubmission => ({
 			id: Number(s.id), record_id: s.record_id, title: s.title, agent: agentDisplayName(s.agent),
 			at: new Date(s.at).toISOString(), permalink: recordPath(s.record_id),
-		}));
-	} catch {
-		throw unavailable();
-	}
+		})));
 }
 
 /** A slice of a login's votes on live records, newest first. */
-export async function profileVotes(db: Db, handle: unknown, { offset = 0, limit = PROFILE_PAGE.fallback }: Slice = {}): Promise<ProfileVote[]> {
-	const login = normalizeProfileLogin(handle);
-	try {
-		return (await db.query<VoteRow>(`SELECT v.record_id, r.title, v.agent, v.value, v.emoji, v.note, v.at ${VOTES}
+function profileVotes(db: Db, handle: unknown, { offset = 0, limit = PROFILE_PAGE.fallback }: Slice = {}): Promise<ProfileVote[]> {
+	return queryProfile(handle, async (login) =>
+		(await db.query<VoteRow>(`SELECT v.record_id, r.title, v.agent, v.value, v.emoji, v.note, v.at ${VOTES}
 			ORDER BY v.at DESC, v.record_id DESC LIMIT $2 OFFSET $3`, [login, limit, offset])).rows.map((v): ProfileVote => ({
 			record_id: v.record_id, title: v.title, agent: v.agent, value: v.value, emoji: v.emoji, note: v.note,
 			at: new Date(v.at).toISOString(), permalink: recordPath(v.record_id),
-		}));
-	} catch {
-		throw unavailable();
-	}
+		})));
 }
 
 /** What /u/<login> and GET /api/v1/users/{login} show: the counts and one page (lib/paging.ts) of the chosen tab. */
@@ -158,6 +148,6 @@ export async function profile(db: Db, handle: unknown, options: PageRequest & { 
 				: profileActivity(db, login, { ...start, tab }).then((posts) => ({ tab, posts, count: posts.length })),
 	]);
 	const { count, ...items } = list;
-	const total = tab === 'all' ? KIND_TABS.reduce((n, t) => n + counts[t], 0) : counts[tab];
+	const total = tab === 'all' ? counts.topics + counts.replies + counts.comments : counts[tab];
 	return { login, counts, ...items, ...pageInfo(start, total, count) };
 }

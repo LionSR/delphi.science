@@ -17,7 +17,7 @@ export const QUERIES_FILE = '~/.delphi/queries';
 export const MAX_QUERIES_TEXT = 4000;
 /** The longest q that log takes (lib/api/openapi.ts): the queries, joined as `delphi log -f` joins them, must fit it,
  * so the saved feed can always be asked for through any door. */
-export const MAX_JOINED = 2000;
+const MAX_JOINED = 2000;
 
 /** The queries of a text: its lines, without blank lines and comments. The rule of `delphi log -f` (cli/delphi.mjs). */
 export const queryLines = (text: string) => text.split('\n').map((l) => l.trim()).filter((l) => l && !l.startsWith('#'));
@@ -43,11 +43,12 @@ const tidy = (text: string) => text.replace(/\r\n?/g, '\n').split('\n').map((l) 
 
 /** Checks a text of queries for `login` and returns it as it will be stored. Each query is compiled as log would
  * compile it for that person (so to:@me is theirs); every bad line is reported, with its number and its fix. */
-export function checkQueries(given: unknown, login: string): string {
+function checkQueries(given: unknown, login: string): string {
 	if (typeof given !== 'string') throw new QueriesError([{ line: 0, text: '', message: 'the queries are text', fix: 'Send one query per line.' }]);
 	const text = tidy(given);
-	if ([...text].length > MAX_QUERIES_TEXT) {
-		throw new QueriesError([{ line: 0, text: '', message: `the text is ${[...text].length} characters, more than ${MAX_QUERIES_TEXT}`, fix: `Keep it to ${MAX_QUERIES_TEXT} characters.` }]);
+	const len = [...text].length;
+	if (len > MAX_QUERIES_TEXT) {
+		throw new QueriesError([{ line: 0, text: '', message: `the text is ${len} characters, more than ${MAX_QUERIES_TEXT}`, fix: `Keep it to ${MAX_QUERIES_TEXT} characters.` }]);
 	}
 	const problems: Problem[] = [];
 	text.split('\n').forEach((raw, i) => {
@@ -80,7 +81,7 @@ export function isPublicQuery(q: string): boolean {
 	}
 }
 
-export type Saved = { text: string; revision: string; at: string | null; seen: number };
+type Saved = { text: string; revision: string; at: string | null; seen: number };
 type Row = { queries: string; revision: string; updated_at: string; seen_seq: number };
 const NONE: Saved = { text: '', revision: '0', at: null, seen: 0 };
 const saved = (r: Row | undefined): Saved => r ? { text: r.queries, revision: r.revision, at: r.updated_at, seen: r.seen_seq } : NONE;
@@ -96,11 +97,7 @@ export async function savedQueries(db: Db, login: string): Promise<Saved> {
 const conflict = () => new CodedError(409, 'edit_conflict', 'The saved queries changed since you read them',
 	`Nothing was saved. Read them again (get ${QUERIES_PATH}), merge your change, and send the new revision.`);
 
-/** Replaces a person's saved queries with `text`, all of it or none: one bad line and nothing changes. With a
- * revision, only if that is still the current one (409 edit_conflict otherwise); the same text again is always fine. */
-export async function replaceQueries(db: Db, who: Pick<Voter, 'login'>, given: unknown, revision?: string): Promise<Saved> {
-	const text = checkQueries(given, who.login);
-	const now = await savedQueries(db, who.login);
+async function writeQueries(db: Db, who: Pick<Voter, 'login'>, text: string, now: Saved, revision?: string): Promise<Saved> {
 	if (now.text === text) return now;
 	if (revision !== undefined && revision !== now.revision) throw conflict();
 	// The revision read above is part of the condition, so of two writers at once one finds no row and is told.
@@ -109,6 +106,13 @@ export async function replaceQueries(db: Db, who: Pick<Voter, 'login'>, given: u
 		RETURNING ${COLUMNS}`, [key(who.login), text, now.revision])).rows[0];
 	if (!row) throw conflict();
 	return saved(row);
+}
+
+/** Replaces a person's saved queries with `text`, all of it or none: one bad line and nothing changes. With a
+ * revision, only if that is still the current one (409 edit_conflict otherwise); the same text again is always fine. */
+export async function replaceQueries(db: Db, who: Pick<Voter, 'login'>, given: unknown, revision?: string): Promise<Saved> {
+	const text = checkQueries(given, who.login);
+	return writeQueries(db, who, text, await savedQueries(db, who.login), revision);
 }
 
 /** Adds queries to the end of a person's saved queries: each line of `given` that is not there already. It removes
@@ -122,8 +126,9 @@ export async function addQueries(db: Db, who: Pick<Voter, 'login'>, given: unkno
 		const have = new Set(queryLines(now.text));
 		const fresh = [...new Set(lines)].filter((l) => !have.has(l));
 		if (!fresh.length) return { ...now, added: 0 };
+		const combined = checkQueries([now.text, ...fresh].filter(Boolean).join('\n'), who.login);
 		try {
-			return { ...await replaceQueries(db, who, [now.text, ...fresh].filter(Boolean).join('\n'), now.revision), added: fresh.length };
+			return { ...await writeQueries(db, who, combined, now, now.revision), added: fresh.length };
 		} catch (e) {
 			if (!(e instanceof CodedError && e.code === 'edit_conflict') || attempt >= 3) throw e;
 		}
@@ -133,7 +138,7 @@ export async function addQueries(db: Db, who: Pick<Voter, 'login'>, given: unkno
 // ---- My feed ----
 
 /** How many entries the web shows to a page. */
-export const FEED_PAGE = 50;
+const FEED_PAGE = 50;
 
 export type Feed = {
 	/** The saved queries the feed is made of; none means there is no feed yet, and entries is empty. */
@@ -170,18 +175,11 @@ export async function openFeed(db: Db, who: Pick<Voter, 'login'>, opts: { q?: st
 	const through = plain ? await head(db) : undefined;
 	const feed = await myFeed(db, who, { q: opts.q?.trim() || undefined, before: opts.before });
 	const advanced = plain && feed.queries.length > 0;
-	if (advanced) await markSeen(db, who, through);
+	if (advanced) {
+		await db.query(`INSERT INTO open_index.saved_queries AS s (login, seen_seq, seen_at) VALUES ($1, $2, now())
+			ON CONFLICT (login) DO UPDATE SET seen_seq = excluded.seen_seq, seen_at = now() WHERE s.seen_seq < excluded.seen_seq`, [key(who.login), through]);
+	}
 	return { ...feed, line: opts.line ?? feed.seen, advanced };
-}
-
-/** Records that a person has seen the log up to now, and returns that place. It only moves forward. Called when they
- * open the first page of My feed (docs/my-feed.md, "The read position"); nothing an agent does calls it.
- * `through` is the end captured before reading that page, so a later arrival is not marked seen. */
-export async function markSeen(db: Db, who: Pick<Voter, 'login'>, through?: number): Promise<number> {
-	const seq = through ?? await head(db);
-	await db.query(`INSERT INTO open_index.saved_queries AS s (login, seen_seq, seen_at) VALUES ($1, $2, now())
-		ON CONFLICT (login) DO UPDATE SET seen_seq = excluded.seen_seq, seen_at = now() WHERE s.seen_seq < excluded.seen_seq`, [key(who.login), seq]);
-	return seq;
 }
 
 /** The numbers of the posts in a thread that are new to a person: those after the place they left off, or after

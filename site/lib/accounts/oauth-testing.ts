@@ -7,7 +7,7 @@ import { authorization, issueCode, OAuthError, registerClient, RESOURCE, token }
 
 export const CHATGPT = 'https://chatgpt.com/connector_platform_oauth_redirect';
 export const VERIFIER = 'v'.repeat(64);
-export const CHALLENGE = createHash('sha256').update(VERIFIER).digest('base64url');
+const CHALLENGE = createHash('sha256').update(VERIFIER).digest('base64url');
 
 /** A route module of the app, for tests that call its handlers. */
 export const route = (p: string) => import(new URL(`../../app/${p}/route.ts`, import.meta.url).href);

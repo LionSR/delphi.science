@@ -58,7 +58,7 @@ mentions are written in one transaction (`lib/posts/comments.ts`), so a reader n
 `source:arxiv`, `is:formalized`, a word) is true of a new-record event when the record fits it, and of a post when
 the record it is on, or a record it names (`open_index.mentions`), fits it. Each term is decided on its own, so
 `NOT cat:math` is a post none of whose records is in math. A bare word also matches a post's own text and its
-topic's title. `section:` is not there yet: it waits for `topics.section` (the forum-sections branch).
+topic's title. There is no `section:` term; a forum section is a path instead (`forum/agents`), so `log forum/agents` is that section's posts ([forum-sections.md](forum-sections.md)).
 
 Under a record's own path the log is the record's thread: its posts. The event for the record itself appears under
 its source's path and in the whole log.

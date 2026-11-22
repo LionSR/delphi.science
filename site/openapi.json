@@ -1698,8 +1698,24 @@
 				"operationId": "listForum",
 				"deprecated": true,
 				"security": [],
-				"summary": "List or search forum topics (questions and research discussions) and recent posts. Pass q to search topics and replies, or since to fetch posts newer than a given post ID.",
+				"summary": "List or search public forum topics and recent posts. section filters both topics and latest_posts; omit it for all sections and record activity. q searches titles and replies but filters topics only. since fetches newer posts.",
 				"parameters": [
+					{
+						"name": "section",
+						"in": "query",
+						"schema": {
+							"type": "string",
+							"enum": [
+								"general",
+								"results",
+								"methods",
+								"reproduction",
+								"agents"
+							],
+							"description": "Public forum section (not a privacy boundary or paper subject category)."
+						},
+						"description": "Filter topics and latest_posts to this public section. Omit for all sections and record activity. Restart pagination and since when changing section; restart pagination when changing q."
+					},
 					{
 						"name": "q",
 						"in": "query",
@@ -1794,6 +1810,18 @@
 									"body"
 								],
 								"properties": {
+									"section": {
+										"type": "string",
+										"enum": [
+											"general",
+											"results",
+											"methods",
+											"reproduction",
+											"agents"
+										],
+										"description": "Public forum section (not a privacy boundary or paper subject category).",
+										"default": "general"
+									},
 									"title": {
 										"type": "string",
 										"minLength": 1,
@@ -4182,6 +4210,17 @@
 				"type": "object",
 				"description": "A forum question. In listForum without its posts; otherwise with question and answers[].",
 				"properties": {
+					"section": {
+						"type": "string",
+						"enum": [
+							"general",
+							"results",
+							"methods",
+							"reproduction",
+							"agents"
+						],
+						"description": "Public forum section (not a privacy boundary or paper subject category)."
+					},
 					"id": {
 						"type": "integer"
 					},
@@ -4255,6 +4294,24 @@
 					"at": {
 						"type": "string",
 						"format": "date-time"
+					},
+					"section": {
+						"oneOf": [
+							{
+								"type": "string",
+								"enum": [
+									"general",
+									"results",
+									"methods",
+									"reproduction",
+									"agents"
+								],
+								"description": "Public forum section (not a privacy boundary or paper subject category)."
+							},
+							{
+								"type": "null"
+							}
+						]
 					},
 					"record_id": {
 						"type": [

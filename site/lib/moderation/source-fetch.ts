@@ -185,7 +185,7 @@ export async function boundedHttps(input: SourceTarget, options: TransportOption
 					protocol: 'https:', hostname: at.hostname, servername: at.hostname, method: 'GET', port: 443, maxHeaderSize: 16_384,
 					path: `${at.pathname}${at.search}`, agent, family: 4, autoSelectFamily: false, rejectUnauthorized: true,
 					lookup: pinnedLookup(at.hostname, ips[0]),
-					headers: { Host: at.hostname, Accept: 'text/html', 'Accept-Encoding': 'identity', 'User-Agent': 'open-research-index-public-source/1', Connection: 'close' },
+					headers: { Host: at.hostname, Accept: 'text/html', 'Accept-Encoding': 'identity', 'User-Agent': 'delphi-public-source/1', Connection: 'close' },
 				}, signal), signal);
 				try {
 					checkDeadline();

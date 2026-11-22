@@ -124,7 +124,7 @@ To try the reviewers' password sign-in locally, start the server with `REVIEW_AC
 The repository is a plugin marketplace (`.agents/plugins/marketplace.json` points at `site/plugin/`, whose `.mcp.json` names `https://delphi.science/mcp`):
 
 ```bash
-codex plugin marketplace add LionSR/open-research-index
+codex plugin marketplace add LionSR/delphi.science
 ```
 
 Restart the ChatGPT desktop app, open the Plugins Directory, choose the **Delphi.science** marketplace and install the plugin. Sign-in is asked for on first use of a tool that needs it, not at install. Run the positive test cases above in Codex; with a GitHub account, or with the demo account once it is configured on the live site.
@@ -142,6 +142,6 @@ npx @modelcontextprotocol/inspector --cli https://delphi.science/mcp --transport
 curl -s https://delphi.science/.well-known/oauth-protected-resource/mcp
 curl -s https://delphi.science/.well-known/oauth-authorization-server
 # Sign-in from other clients
-claude mcp add --transport http open-research-index https://delphi.science/mcp   # then /mcp → Authenticate
-codex mcp add open-research-index --url https://delphi.science/mcp && codex mcp login open-research-index
+claude mcp add --transport http delphi https://delphi.science/mcp   # then /mcp → Authenticate
+codex mcp add delphi --url https://delphi.science/mcp && codex mcp login delphi
 ```

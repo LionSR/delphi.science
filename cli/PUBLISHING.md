@@ -26,7 +26,7 @@ therefore published from the owner's own machine, and every later one by the wor
 
 4. On npmjs.com: the package `delphi-science` → Settings → Trusted Publisher → GitHub Actions, with
    - Organization or user: `LionSR`
-   - Repository: `open-research-index`
+   - Repository: `delphi.science`
    - Workflow filename: `release-cli.yml`
    - Environment name: empty
    - Allowed actions: allow `npm publish`

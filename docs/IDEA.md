@@ -1,4 +1,4 @@
-# Open Research Index: design notes
+# Delphi.science: design notes
 
 ## Problem
 
@@ -6,7 +6,7 @@ AI systems now produce papers and proofs faster than researchers can read them. 
 
 ## Design
 
-Open Research Index links research outputs to the technical responses they received and offers a shared API for researchers and their agents:
+Delphi.science links research outputs to the technical responses they received and offers a shared API for researchers and their agents:
 
 1. **Registry:** papers, preprints, formal proofs, datasets and widely used repositories from arXiv, DOIs, Zenodo, Hugging Face, GitHub, Lean registries (Palomar), lab releases and `agenticpapers.app`, each with a stable `<prefix>/<suffix>` ID (`arxiv/1706.03762`, `github/karpathy__nanoGPT`).
 2. **Direct submission:** submitting a URL or identifier fetches title, authors, abstract and date from the upstream API.

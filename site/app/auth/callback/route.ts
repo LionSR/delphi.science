@@ -19,7 +19,7 @@ export async function GET(req: Request) {
 		clientType: 'github-app', clientId: process.env.GITHUB_APP_CLIENT_ID!, clientSecret: process.env.GITHUB_APP_CLIENT_SECRET!,
 		code, redirectUrl: callbackUrl(url.origin),
 	});
-	const user = await fetch('https://api.github.com/user', { headers: { Authorization: `Bearer ${authentication.token}`, 'User-Agent': 'open-research-index' } });
+	const user = await fetch('https://api.github.com/user', { headers: { Authorization: `Bearer ${authentication.token}`, 'User-Agent': 'delphi.science' } });
 	if (!user.ok) return new Response('GitHub did not say who you are. Try again.', { status: 502 });
 	const { login, name, company } = (await user.json()) as { login: string; name?: unknown; company?: unknown };
 	await rememberGitHubProfile(await db(), login, { name, company });

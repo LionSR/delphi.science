@@ -9,7 +9,7 @@ import { pageHref } from '#lib/pager.ts';
 import { date, SITE, tex, truncate } from '#lib/view.ts';
 
 export type FeedView = 'mine' | 'global';
-export const EDITOR = `/${QUERIES_PATH}`;
+const EDITOR = `/${QUERIES_PATH}`;
 
 /** Which feed a request for the home page opens. A feed that is asked for is the one shown. With none asked for, a
  * link that carries a search, an order or a page opens the global list, so the same link shows everyone the same
@@ -39,7 +39,7 @@ export function FeedTabs({ view, q, sort = '' }: { view: FeedView; q: string; so
 const atomHref = (q: string) => `/log.atom?q=${encodeURIComponent(q)}`;
 
 /** What the feed is made of: the saved queries, the same feed as a command, and as Atom where anyone may read it. */
-export function FeedSources({ queries }: { queries: string[] }) {
+function FeedSources({ queries }: { queries: string[] }) {
 	const everyonePublic = queries.every(isPublicQuery);
 	return h('details', { className: 'feed-sources', open: queries.length <= 6 },
 		h('summary', null, queries.length === 1 ? 'Showing what matches your saved query' : `Showing what matches any of your ${queries.length} saved queries`),
@@ -53,17 +53,17 @@ export function FeedSources({ queries }: { queries: string[] }) {
 }
 
 /** Nobody is signed in: My feed belongs to an account. */
-export const SignInForFeed = () => h('p', { className: 'notice' }, 'My feed shows new records and discussions matching your saved queries. ',
+const SignInForFeed = () => h('p', { className: 'notice' }, 'My feed shows new records and discussions matching your saved queries. ',
 	h('a', { href: `/auth/github?next=${encodeURIComponent('/?feed=mine')}` }, 'Sign in with GitHub'), ' to see yours, or browse the ', h('a', { href: '/?feed=global' }, 'global feed'), '.');
 
 /** Signed in, with no saved queries: say what one is and where to add it. */
-export const NoQueries = () => h('div', { className: 'notice' },
+const NoQueries = () => h('div', { className: 'notice' },
 	h('p', null, h('strong', null, 'You have no saved queries yet.'), ' Add one topic or filter per line (such as ', h('code', null, 'cat:math.NT'), ', ', h('code', null, 'spin glass'), ', or ', h('code', null, 'to:@me'),
 		') to follow matching new records and discussions here or from your agent.'),
 	h('p', null, h('a', { href: EDITOR }, 'Add saved queries'), ' · ', h('a', { href: '/?feed=global' }, 'Global feed')));
 
 /** Saved queries, and nothing matches. The global list is offered as a link, never shown in its place. */
-export function NoMatches({ q, older }: { q: string; older: boolean }) {
+function NoMatches({ q, older }: { q: string; older: boolean }) {
 	return h('p', { className: 'notice' },
 		older ? 'Nothing older in your feed.' : q ? h(Fragment, null, 'Nothing in your feed matches ', h('code', { className: 'tex2jax_ignore' }, q), '.') : 'Nothing matches your saved queries yet.',
 		' ', q && !older ? h('a', { href: pageHref('/', { feed: 'global', q }) }, 'Search everything for it') : h('a', { href: EDITOR }, 'Edit your saved queries'), '.');
@@ -73,7 +73,7 @@ const KIND: Record<string, string> = { record: 'New record', question: 'Question
 
 /** The page that shows an entry, as a local link. For a post that is new to the reader it carries the line, so the
  * thread can mark the same posts as new that the feed did. */
-export function entryHref(e: Pick<LogEntry, 'kind' | 'path'>, line = 0, isNew = false): string {
+function entryHref(e: Pick<LogEntry, 'kind' | 'path'>, line = 0, isNew = false): string {
 	// A post in a private space: ws/<slug>/<topic>/<post> is on the topic's page. An invitation or an acceptance
 	// (ws/<slug>/members/<login>) is on the list of spaces. Atom's pageOf never meets these: a feed is read as nobody.
 	const ws = e.path.match(/^ws\/([^/]+)\/(\d+)\/(\d+)$/);
@@ -85,11 +85,11 @@ export function entryHref(e: Pick<LogEntry, 'kind' | 'path'>, line = 0, isNew = 
 	return `${path}?new=${line}#${anchor}`;
 }
 
-export const UNREAD = 'New since your last visit';
+const UNREAD = 'New since your last visit';
 
 /** The entries, newest first, with one line drawn where the reader left off: above it is what came after `line`.
  * No line is drawn when there is no earlier visit (line 0), or when the page lies wholly on one side of it. */
-export function FeedList({ entries, line }: { entries: LogEntry[]; line: number }) {
+function FeedList({ entries, line }: { entries: LogEntry[]; line: number }) {
 	const firstSeen = line > 0 ? entries.findIndex((e) => e.seq <= line) : -1;
 	const items: ReactNode[] = [];
 	entries.forEach((e, i) => {
@@ -112,7 +112,7 @@ export function FeedList({ entries, line }: { entries: LogEntry[]; line: number 
 }
 
 /** One sentence above the first page: how much is new. */
-export function NewCount({ entries, line, more }: { entries: LogEntry[]; line: number; more: boolean }) {
+function NewCount({ entries, line, more }: { entries: LogEntry[]; line: number; more: boolean }) {
 	if (line <= 0) return null;
 	const n = entries.filter((e) => e.seq > line).length;
 	const all = n === entries.length && more;
@@ -120,7 +120,7 @@ export function NewCount({ entries, line, more }: { entries: LogEntry[]; line: n
 }
 
 /** Newer and older pages of My feed. The line travels with the links, so it stays where it was for the whole visit. */
-export function FeedPager({ q, before, older, line }: { q: string; before?: number; older: number | null; line: number }) {
+function FeedPager({ q, before, older, line }: { q: string; before?: number; older: number | null; line: number }) {
 	if (before === undefined && older === null) return null;
 	return h('nav', { className: 'pager', 'aria-label': 'Pages' },
 		before !== undefined && h('a', { href: mineHref(q, line > 0 ? { line: String(line) } : {}), rel: 'prev' }, 'Newest'),

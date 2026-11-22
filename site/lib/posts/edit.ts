@@ -7,16 +7,16 @@ import type { Db } from '#lib/db.ts';
 import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
 import { MAX_BODY, MAX_BODY_SHOWN } from './limits.ts';
 import { MODERATE_PRIVATE_SPACES } from './spaces.ts';
-import { READABLE } from './visibility.ts';
+import { POST_READABLE, READABLE } from './visibility.ts';
 
 type Stored = {
-	id: number; voter: string; agent: string; body: string; revision: string; record_id: string | null;
+	id: number; voter: string; agent: string; body: string; revision: string; record_id: string | null; record: unknown;
 	topic_id: number | null; parent_id: number | null; review: boolean; question_id: number | null; title: string;
 	/** The topic's space; null on a record. `open`: that space is public. */
 	space: string | null; open: boolean | null; section: string | null;
 };
 
-const bodyOf = async (db: Db, id: number | null) =>
+const bodyOf = async (db: Db, id: number) =>
 	(await db.query<{ body: string }>('SELECT body FROM open_index.comments WHERE id=$1', [id])).rows[0]?.body;
 
 export async function editPost(db: Db, id: number, who: Voter, input: { body: string; revision: string }, moderate?: Moderator) {
@@ -25,10 +25,10 @@ export async function editPost(db: Db, id: number, who: Voter, input: { body: st
 	if (!body || body.length > MAX_BODY || typeof input.revision !== 'string' || !/^\d+$/.test(input.revision)) {
 		throw new QueryError(`Send a body of 1–${MAX_BODY_SHOWN} characters and its revision.`, 'Reload the thread to read the current revision. Your draft is kept.');
 	}
-	const p = (await db.query<Stored>(`SELECT c.id::int, c.voter, c.agent, c.body, c.xmin::text AS revision, c.record_id, c.topic_id::int, c.parent_id::int,
+	const p = (await db.query<Stored>(`SELECT c.id::int, c.voter, c.agent, c.body, c.xmin::text AS revision, c.record_id, r.record, c.topic_id::int, c.parent_id::int,
 		c.review, t.question_id::int, coalesce(t.title,r.title) AS title, t.space_id AS space, t.section, ${READABLE('t.space_id', 'NULL')} AS open FROM open_index.comments c
 		LEFT JOIN open_index.topics t ON t.id=c.topic_id LEFT JOIN open_index.records r ON r.id=c.record_id
-		WHERE c.id=$1 AND (c.topic_id IS NULL OR ${READABLE('t.space_id', '$2')})`, [id, who.login])).rows[0];
+		WHERE c.id=$1 AND ${POST_READABLE('$2')}`, [id, who.login])).rows[0];
 	// A post in a space its editor cannot read is not there, whoever wrote it: a member who was removed included.
 	if (!p) throw new NotFoundError(`no post ${id}`, 'Reload the thread. Your draft is kept.');
 	// A person and every one of their agents may edit any post attributed to that person, whichever agent made it.
@@ -43,13 +43,19 @@ export async function editPost(db: Db, id: number, who: Voter, input: { body: st
 	const isPublic = p.record_id !== null || p.open === true;
 	if (isPublic || MODERATE_PRIVATE_SPACES) {
 		const kind = p.record_id ? (p.review ? 'review' : 'comment') : p.parent_id !== null ? 'comment' : p.question_id === id ? 'question' : 'answer';
-		const context: NonNullable<ModeratedPost['context']> = {};
-		if (p.record_id) context.record = (await db.query<{ record: unknown }>('SELECT record FROM open_index.records WHERE id=$1', [p.record_id])).rows[0]?.record;
-		else context.question = await bodyOf(db, p.question_id);
-		if (p.parent_id !== null) context.parent = await bodyOf(db, p.parent_id);
-		context.previous = (await db.query<{ body: string }>(
-			`SELECT body FROM open_index.comments WHERE ${p.record_id ? 'record_id' : 'topic_id'}=$1 AND id<>$2 ORDER BY id DESC LIMIT 4`,
-			[p.record_id ?? p.topic_id, id])).rows.map((r) => r.body);
+		const questionLoad = !p.record_id && p.question_id !== null
+			? (p.question_id === id ? Promise.resolve(p.body) : bodyOf(db, p.question_id)) : undefined;
+		const [question, parent, previous] = await Promise.all([
+			questionLoad,
+			p.parent_id === null ? undefined : p.parent_id === p.question_id && questionLoad ? questionLoad : bodyOf(db, p.parent_id),
+			db.query<{ body: string }>(
+				`SELECT body FROM open_index.comments WHERE ${p.record_id ? 'record_id' : 'topic_id'}=$1 AND id<>$2 ORDER BY id DESC LIMIT 4`,
+				[p.record_id ?? p.topic_id, id]).then((r) => r.rows.map((row) => row.body)),
+		]);
+		const context: NonNullable<ModeratedPost['context']> = { previous };
+		if (p.record_id) context.record = p.record;
+		else context.question = question;
+		if (p.parent_id !== null) context.parent = parent;
 		await screen(db, who, { kind, ...moderationPlace(p.record_id, p.section ?? undefined), title: p.title, body, context }, moderate);
 	}
 	return db.transaction(async tx => {

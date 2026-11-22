@@ -67,7 +67,7 @@ export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof
 	if (!rows.length) return alreadyListed(item.id);
 	// If this fails, the next build lists the record from its entry.
 	await db.query(`INSERT INTO open_index.records (${COLUMNS.join(', ')}) VALUES (${COLUMNS.map((_, i) => `$${i + 1}`).join(', ')})
-		ON CONFLICT (id) DO NOTHING`, await row(item));
+		ON CONFLICT (id) DO NOTHING`, row(item));
 	await db.query('INSERT INTO open_index.submissions (url, record_id, voter, agent) VALUES ($1, $2, $3, $4)', [url, item.id, voter.login, voter.agent]);
 	return { status: 'listed', id: item.id, record: item, message: `Listed as ${item.id}, with its metadata from ${hit.source.name}.` };
 }

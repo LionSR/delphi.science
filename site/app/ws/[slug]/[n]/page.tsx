@@ -27,12 +27,15 @@ export default async function SpaceTopic({ params, searchParams }: Ctx) {
 	const [{ slug, n }, { notice, new: carried }] = await Promise.all([params, searchParams]);
 	const back = `/ws/${slug}/${n}`;
 	const who = await signedIn(back);
+	if (slug === 'forum' || !/^[1-9]\d{0,15}$/.test(n)) notFound();
 	const d = await db();
-	const [s, t] = await Promise.all([space(d, slug, who.login), /^[1-9]\d{0,15}$/.test(n) ? topicThread(d, Number(n), who.login, slug) : null]);
-	if (!s || !t || s.id === 'forum') notFound();
-	const names = await publicNames(d, t.posts.map((p) => p.voter));
-	// The posts that came after the reader last opened My feed (docs/my-feed.md).
-	const fresh = await newInThread(d, who, { topic: t.id }, seqParam(carried));
+	const [s, t] = await Promise.all([space(d, slug, who.login), topicThread(d, Number(n), who.login, slug)]);
+	if (!s || !t) notFound();
+	const [names, fresh] = await Promise.all([
+		publicNames(d, t.posts.map((p) => p.voter)),
+		// The posts that came after the reader last opened My feed (docs/my-feed.md).
+		newInThread(d, who, { topic: t.id }, seqParam(carried)),
+	]);
 	const byId = new Map(t.posts.map((p) => [p.id, p]));
 	// Who chose what: a reply to a card whose text is one of its options.
 	const chosen = (card: Post, option: string) => t.posts.filter((r) => r.parent === card.id && r.body.trim() === option);

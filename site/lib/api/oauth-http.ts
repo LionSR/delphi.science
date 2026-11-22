@@ -8,6 +8,7 @@ export const CORS = {
 	'Access-Control-Allow-Headers': 'Content-Type, Authorization, Mcp-Protocol-Version',
 };
 const NO_STORE = { 'Cache-Control': 'no-store', Pragma: 'no-cache' };
+const REPLY_HEADERS = { ...CORS, ...NO_STORE };
 const MAX_BODY_BYTES = 20_000;
 
 export const preflight = () => new Response(null, { status: 204, headers: CORS });
@@ -33,9 +34,9 @@ export async function fields(req: Request): Promise<Record<string, unknown>> {
 export async function oauthReply(run: () => Promise<Response | object>, status = 200): Promise<Response> {
 	try {
 		const out = await run();
-		return out instanceof Response ? out : Response.json(out, { status, headers: { ...CORS, ...NO_STORE } });
+		return out instanceof Response ? out : Response.json(out, { status, headers: REPLY_HEADERS });
 	} catch (e) {
 		if (!(e instanceof OAuthError)) throw e;
-		return Response.json({ error: e.error, error_description: e.message }, { status: e.status, headers: { ...CORS, ...NO_STORE } });
+		return Response.json({ error: e.error, error_description: e.message }, { status: e.status, headers: REPLY_HEADERS });
 	}
 }

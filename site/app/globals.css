@@ -57,7 +57,6 @@ a.pill:hover { border-color: var(--accent); }
 .feature-card { background: var(--surface); }
 .feature-card strong { display: block; font-size: 0.96rem; margin-bottom: 0.25rem; color: var(--ink); }
 :is(.option-card, .feature-card) p { margin: 0; font-size: var(--small); color: var(--muted); line-height: 1.48; }
-@media (max-width: 640px) { .option-grid, .feature-grid { grid-template-columns: 1fr; } }
 
 details.panel { margin: 1.5rem 0 0; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); padding: 0.65rem 0.95rem; }
 details.panel summary { cursor: pointer; font-weight: 500; font-size: var(--small); color: var(--ink); }
@@ -97,7 +96,6 @@ input[name='q'], input.grow { flex: 1 1 16rem; min-width: 0; }
 .profile-edit label.full { grid-column: 1 / -1; }
 .profile-edit :is(input, textarea) { width: 100%; }
 .profile-edit textarea { resize: vertical; font-size: var(--control-text); line-height: 1.5; }
-@media (max-width: 640px) { .profile-edit-grid { grid-template-columns: 1fr; } }
 .profile-bio { max-width: 68ch; margin: 0.65rem 0 0; line-height: 1.55; white-space: pre-line; }
 .profile-links { display: flex; flex-wrap: wrap; gap: 0.3rem 0.9rem; margin: 0.45rem 0 0; font-size: var(--small); }
 .copy-block { position: relative; width: 100%; margin: 0.5rem 0 1rem; }
@@ -125,11 +123,6 @@ main > header a.nav-cta:hover { border-color: var(--subtle); background: var(--s
 .welcome nav { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.8rem; font-size: 0.82rem; }
 .welcome nav a { display: inline-flex; align-items: center; padding: 0.26rem 0.68rem; border: 1px solid var(--rule); border-radius: var(--round); background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 500; transition: border-color var(--motion), background-color var(--motion), color var(--motion); }
 .welcome nav a:hover { border-color: var(--accent); color: var(--accent); background: var(--bg); }
-@media (max-width: 640px) {
-	main > header .nav-account { border-left: 0; padding-left: 0; }
-	.welcome { flex-direction: column; align-items: flex-start; gap: 0.85rem; margin: 1.1rem 0 0.9rem; padding-bottom: 1rem; }
-	.hero { width: 190px; }
-}
 
 footer { display: flex; justify-content: space-between; gap: 0.6rem 1.5rem; flex-wrap: wrap; margin-top: 3.5rem; padding-top: 1.1rem; border-top: 1px solid var(--rule); font-size: var(--small); color: var(--muted); }
 footer .footer-group { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; }
@@ -147,7 +140,6 @@ footer a:hover { color: var(--ink); text-decoration: underline; }
 .subjects.sources a { font-size: 0.8rem; color: var(--muted); }
 .subjects.sources a:hover { color: var(--ink); }
 .subjects .n { color: var(--subtle); font-variant-numeric: tabular-nums; font-size: 0.78rem; }
-@media (max-width: 640px) { .filter-row { flex-direction: column; gap: 0.25rem; } }
 
 .count { color: var(--muted); font-size: var(--small); margin: 0.8rem 0 0; }
 .results-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem 1rem; flex-wrap: wrap; margin-top: 1.1rem; border-bottom: 1px solid var(--rule); }
@@ -209,7 +201,8 @@ li.item .vote { float: right; margin: 0 0 0.3rem 0.8rem; }
 
 /* Forum */
 .post { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
-.post.accepted { border-left: 3px solid var(--accent); padding-left: 0.85rem; }
+/* Accepted answers and space option cards share the left accent stripe. */
+.post:is(.accepted, .card) { border-left: 3px solid var(--accent); padding-left: 0.85rem; }
 .post-votes { flex-direction: column; align-items: center; gap: 0.15rem; margin: 0; flex: none; width: 2.6rem; }
 .post-votes button { min-width: 2.4rem; padding: 0.2rem; }
 .post-votes span { font-weight: 600; }
@@ -218,8 +211,7 @@ li.item .vote { float: right; margin: 0 0 0.3rem 0.8rem; }
 .post-comments summary { cursor: pointer; color: var(--accent); font-size: var(--small); margin-top: 0.4rem; }
 .post-comment { padding: 0.35rem 0; border-top: 1px solid var(--rule); }
 /* A post that offers options (spaces): its choices as buttons; one already chosen is marked. */
-.post.card { border-left: 3px solid var(--accent); padding-left: 0.85rem; }
-form.options { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+form.options { margin: 0.6rem 0; }
 form.options button[aria-pressed='true'] { color: var(--accent); border-color: var(--accent); }
 .post-feedback { border-left: 3px solid var(--warn); padding: 0.65rem 0.95rem; background: var(--surface); border-radius: var(--radius); }
 .post-feedback p { margin: 0.4rem 0 0; }
@@ -275,10 +267,6 @@ table.stats :is(th, td):last-child { padding-right: 0; }
 .versions .opened .count { margin-top: 0.1rem; max-width: 68ch; }
 .versions tr.removed td:first-child { text-decoration: line-through; color: var(--muted); }
 .versions tr:is(.added, .changed, .removed) td:last-child { font-weight: 600; }
-@media (max-width: 640px) {
-	.versions summary { grid-template-columns: 1fr 1fr; }
-	.versions summary > :first-child { grid-column: 1 / -1; }
-}
 
 /* My feed (lib/feed-view.ts) and the saved queries (app/me/queries) */
 .notice { margin: 1rem 0; padding: 0.8rem 1rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); }
@@ -287,9 +275,18 @@ table.stats :is(th, td):last-child { padding-right: 0; }
 .feed-sources { margin: 0.8rem 0 0; font-size: var(--small); color: var(--muted); }
 .feed-sources ul { margin: 0.4rem 0; padding-left: 1.2rem; }
 .feed-sources code { color: var(--ink); }
-ol.feed { list-style: none; padding: 0; }
 ol.feed .snippet { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.875rem; overflow-wrap: anywhere; }
 ol.feed .item.new { border-left: 2px solid var(--accent); padding-left: 0.7rem; }
 ol.feed .unread-line { padding: 0.35rem 0; text-align: center; font-size: var(--small); font-weight: 600; color: var(--accent); border-top: 2px solid var(--accent); border-bottom: 1px solid var(--rule); }
 .badge.new-post { font-size: var(--small); }
 .choices { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; margin: 0.4rem 0; }
+
+@media (max-width: 640px) {
+	.option-grid, .feature-grid, .profile-edit-grid { grid-template-columns: 1fr; }
+	main > header .nav-account { border-left: 0; padding-left: 0; }
+	.welcome { flex-direction: column; align-items: flex-start; gap: 0.85rem; margin: 1.1rem 0 0.9rem; padding-bottom: 1rem; }
+	.hero { width: 190px; }
+	.filter-row { flex-direction: column; gap: 0.25rem; }
+	.versions summary { grid-template-columns: 1fr 1fr; }
+	.versions summary > :first-child { grid-column: 1 / -1; }
+}

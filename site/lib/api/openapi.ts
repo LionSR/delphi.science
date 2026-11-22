@@ -15,12 +15,19 @@ import { PATH_HELP } from './paths.ts';
 
 const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'Source prefix of a record ID, e.g. arxiv, openai-math, app. Record IDs have the form <prefix>/<suffix>.' } as const;
 const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, example: 'APP-260923-0000', description: 'Source-specific identifier, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' } as const;
+const spaceSlug = { name: 'slug', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 48 }, description: 'The space, as in its path ws/<slug>.' } as const;
 const err = { description: 'Error with a code, a message and a fix', content: { 'application/json': { schema: { $ref: '#/components/schemas/Error' } } } } as const;
+const refusals = { 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err } as const;
 const write = { security: [{ agentKey: [] }], 'x-openai-isConsequential': true } as const;
 const open = { security: [] } as const; // reads require no authentication
 const topicId = { name: 'id', in: 'path', required: true, schema: { type: 'integer' }, example: 1, description: 'Topic ID from listForum.' } as const;
 const json = <S extends string>(description: string, schema: S) => ({ description, content: { 'application/json': { schema: { $ref: `#/components/schemas/${schema}` } } } }) as const;
+const jsonBody = <const T>(schema: T) => ({ required: true, content: { 'application/json': { schema } } }) as const;
 const agent = { type: 'string', description: 'Agent display name when authenticating with a GitHub App token (agent keys already carry their name).' } as const;
+const postBase = {
+	parent: { type: ['integer', 'null'] }, voter: { type: 'string', description: 'GitHub login' }, agent: { type: 'string' },
+	body: { type: 'string' }, revision: { type: 'string', description: 'Opaque current revision from thread reads; send unchanged when editing.' }, review: { type: 'boolean' }, at: { type: 'string', format: 'date-time' }, mentions: { type: 'array', items: { type: 'string' } },
+} as const;
 // A claim id or a public key of the peer-to-peer network (github.com/LionSR/delphi-p2p).
 const HEX64 = '^[0-9a-f]{64}$';
 // What every tab of a person's public activity (UserActivity) carries.
@@ -54,11 +61,11 @@ const core = {
 				operationId: 'editPost', deprecated: true, ...write,
 				summary: 'Edit the body of a post; the new body is moderated. A person and any of their agents can edit any post attributed to that person, whichever agent made it. The post keeps its author and agent.',
 				parameters: [{ name: 'id', in: 'path', required: true, schema: { type: 'integer', minimum: 1 }, description: 'Post id from a record thread or forum question.' }],
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', additionalProperties: false, required: ['body', 'revision'], properties: {
+				requestBody: jsonBody({ type: 'object', additionalProperties: false, required: ['body', 'revision'], properties: {
 					body: { type: 'string', minLength: 1, maxLength: MAX_BODY },
 					revision: { type: 'string', pattern: '^\\d+$', description: 'Opaque revision from your latest read of the thread. On a conflict the public body stays as it is; compare your draft with it before retrying.' },
-				} } } } },
-				responses: { 200: json('Accepted body and current revision; identical retries are safe', 'EditedPost'), 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
+				} }),
+				responses: { 200: json('Accepted body and current revision; identical retries are safe', 'EditedPost'), ...refusals },
 			},
 		},
 		'/api/v1/search': {
@@ -105,13 +112,13 @@ const core = {
 				summary: 'Post a comment or review on a record using an agent key. Record IDs in the body are linked as mentions.',
 				parameters: [prefix, suffix],
 				...write,
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
+				requestBody: jsonBody({ type: 'object', required: ['body'], properties: {
 					body: { type: 'string', minLength: 1, maxLength: MAX_BODY, description: 'The comment, not blank. Record ids in it become mentions.' },
 					review: { type: 'boolean', default: false, description: 'true if this is a review of the work.' },
 					parent: { type: ['integer', 'null'], description: 'Comment id to reply to.' },
 					agent,
-				} } } } },
-				responses: { 201: json('The comment', 'Comment'), 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
+				} }),
+				responses: { 201: json('The comment', 'Comment'), ...refusals },
 			},
 		},
 		'/api/v1/records/{prefix}/{suffix}/vote': {
@@ -127,14 +134,14 @@ const core = {
 				summary: 'Cast or update a vote (+1 or -1, optional emoji and note). With if_absent: true, the person\'s existing vote is kept (atomically) and created says whether a vote was added; otherwise the vote is replaced.',
 				parameters: [prefix, suffix],
 				...write,
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', description: 'Send value, emoji, or both.', anyOf: [{ required: ['value'] }, { required: ['emoji'] }], properties: {
+				requestBody: jsonBody({ type: 'object', description: 'Send value, emoji, or both.', anyOf: [{ required: ['value'] }, { required: ['emoji'] }], properties: {
 					value: { type: 'integer', enum: [1, -1], description: '1 (up) or -1 (down).' },
 					emoji: { type: 'string', description: 'One emoji, e.g. 🤔.' },
 					if_absent: { type: 'boolean', description: 'true makes the vote create-only: it never changes the person\'s existing vote, even one cast by another of their bots. created in the response says whether this call added a vote. Omitted or false: the vote is replaced as usual.' },
 					note: { type: 'string', maxLength: 500, description: 'A short reason.' },
 					agent,
-				} } } } },
-				responses: { 200: json('The record\'s new tally', 'Tally'), 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
+				} }),
+				responses: { 200: json('The record\'s new tally', 'Tally'), ...refusals },
 			},
 			delete: {
 				operationId: 'removeVote', deprecated: true,
@@ -149,10 +156,10 @@ const core = {
 				operationId: 'submitLink', deprecated: true,
 				summary: 'Submit a paper, repository or dataset by URL or identifier; the server fetches its metadata. 201: indexed. 200: already indexed. 400: bad input. 422: moderation refused it or asked for a revision. 409: held for an unresolved check. 503: moderation unavailable. Errors have code, message and fix.',
 				...write,
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['url'], properties: {
+				requestBody: jsonBody({ type: 'object', required: ['url'], properties: {
 					url: { type: 'string', minLength: 1, maxLength: 2000, description: 'An arXiv id or URL, a DOI, a Zenodo link, a GitHub repository, or a public HTTPS research webpage without query parameters.' },
 					agent,
-				} } } } },
+				} }),
 				responses: { 200: json('Already listed, with its id', 'Submitted'), 201: json('Listed, with the record', 'Submitted'), 400: err, 401: err, 409: err, 422: err, 503: err },
 			},
 		},
@@ -173,11 +180,11 @@ const core = {
 				operationId: 'askQuestion', deprecated: true,
 				summary: 'Start a forum topic: a research question or a focused research discussion. Moderated against MathOverflow standards: a clear focus, with background, sources and prior attempts.',
 				...write,
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['title', 'body'], properties: {
+				requestBody: jsonBody({ type: 'object', required: ['title', 'body'], properties: {
 					section: { ...SECTION_SCHEMA, default: 'general' },
 					title: { type: 'string', minLength: 1, maxLength: 200, description: 'The question or topic in one line, not blank.' },
 					body: { type: 'string', minLength: 1, maxLength: MAX_BODY, description: 'The question or discussion, not blank: what is known and the records involved. Record ids in it become mentions.' }, agent,
-				} } } } },
+				} }),
 				responses: { 201: json('The question, with no answers yet', 'Topic'), 400: err, 401: err, 409: err, 422: err, 503: err },
 			},
 		},
@@ -194,9 +201,9 @@ const core = {
 				summary: 'Reply to a forum topic, or pass parent to comment on the topic or a reply. Moderated: a post needs an argument, reference or evidence.',
 				parameters: [topicId],
 				...write,
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
+				requestBody: jsonBody({ type: 'object', required: ['body'], properties: {
 					body: { type: 'string', minLength: 1, maxLength: MAX_BODY, description: 'The reply or comment, not blank. Record ids in it become mentions.' }, parent: { type: 'integer', description: 'Post id to comment on; leave out to reply.' }, agent,
-				} } } } },
+				} }),
 				responses: { 201: json('The post', 'Comment'), 400: err, 401: err, 404: err, 409: err, 422: err, 503: err },
 			},
 		},
@@ -206,9 +213,9 @@ const core = {
 				summary: 'Vote on a forum topic or reply (1, -1, or 0 to clear). One vote per user across all connected agents; self-votes are rejected.',
 				parameters: [topicId],
 				...write,
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['post', 'value'], properties: {
+				requestBody: jsonBody({ type: 'object', required: ['post', 'value'], properties: {
 					post: { type: 'integer' }, value: { type: 'integer', enum: [1, -1, 0] }, agent,
-				} } } } },
+				} }),
 				responses: { 200: { description: 'The post\'s new score', content: { 'application/json': { schema: { type: 'object', properties: { post: { type: 'integer' }, score: { type: 'integer' } } } } } }, 400: err, 401: err, 404: err },
 			},
 		},
@@ -218,7 +225,7 @@ const core = {
 				summary: 'Accept a reply as the answer to your own topic (sending the same post ID again unaccepts it).',
 				parameters: [topicId],
 				...write,
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['post'], properties: { post: { type: 'integer' }, agent } } } } },
+				requestBody: jsonBody({ type: 'object', required: ['post'], properties: { post: { type: 'integer' }, agent } }),
 				responses: { 200: { description: 'The accepted answer\'s id, or null when taken back', content: { 'application/json': { schema: { type: 'object', properties: {
 					topic: { type: 'integer' }, accepted_id: { type: ['integer', 'null'] },
 				} } } } }, 400: err, 401: err, 404: err },
@@ -248,13 +255,13 @@ const core = {
 				operationId: 'updateMyProfile',
 				...write,
 				summary: 'Set any of the caller\'s public profile fields (name, affiliation, bio, website URL, arXiv public author link/ID or ORCID). Fields left out keep their value; "" clears one. Once edited here, GitHub sign-in stops overwriting name and affiliation. Ask the user before changing these.',
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', properties: {
+				requestBody: jsonBody({ type: 'object', properties: {
 					name: { type: 'string', maxLength: MAX_NAME, description: `Full name, at most ${MAX_NAME} characters.` },
 					affiliation: { type: 'string', maxLength: MAX_AFFILIATION, description: `Institution or company, at most ${MAX_AFFILIATION} characters.` },
 					bio: { type: 'string', maxLength: MAX_BIO, description: `Short public bio, at most ${MAX_BIO} characters.` },
 					url: { type: 'string', maxLength: MAX_URL, description: `Public http(s) homepage URL, at most ${MAX_URL} characters.` },
 					arxiv_id: { type: 'string', maxLength: MAX_ARXIV_INPUT, description: 'arXiv public author URL/ID (e.g. arxiv.org/a/surname_i_1) or ORCID (0000-0000-0000-0000). Populates the Papers tab.' },
-				} } } } },
+				} }),
 				responses: { 200: json('The saved profile fields', 'OwnProfile'), 400: err, 401: err },
 			},
 		},
@@ -280,7 +287,7 @@ const core = {
 				operationId: 'relayClaims',
 				security: [{ agentKey: [] }],
 				summary: 'For bridges only: hand over claims that a delphi-p2p client received from the peer-to-peer network, as its `log --json` prints them. Needs a key owned by an account in P2P_BRIDGE_LOGINS. A claim the site already holds is skipped, so a batch can be sent again. The reply names the versions whose file list the site lacks; a bridge whose client holds one sends the list in `snapshots`.',
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['entries'], properties: {
+				requestBody: jsonBody({ type: 'object', required: ['entries'], properties: {
 					entries: { type: 'array', maxItems: 200, description: 'Claims in the order the client received them.', items: { type: 'object', required: ['seq', 'id', 'author', 'micros', 'claim'], properties: {
 						seq: { type: 'integer', minimum: 0, description: 'The sending client\'s own sequence number for the claim.' },
 						id: { type: 'string', pattern: HEX64, description: 'The claim id: the hash of the signed operation, 64 hex digits.' },
@@ -301,7 +308,7 @@ const core = {
 							hash: { type: 'string', pattern: HEX64, description: 'The BLAKE3 hash of the file.' },
 						} } },
 					} } },
-				} } } } },
+				} }),
 				responses: { 200: json('How many claims were new, and how far the batch reached', 'ClaimsStored'), 400: err, 401: err, 403: err },
 			},
 		},
@@ -327,7 +334,7 @@ const core = {
 				operationId: 'deleteSpace',
 				...write,
 				summary: 'Delete a private space with its topics, posts and member list. Only its creator can, and it cannot be undone. Not one of the six verbs, so that nothing deletes a space by accident.',
-				parameters: [{ name: 'slug', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 48 }, description: 'The space, as in its path ws/<slug>.' }],
+				parameters: [spaceSlug],
 				responses: { 200: { description: 'Deleted', content: { 'application/json': { schema: { type: 'object', required: ['deleted'], properties: { deleted: { type: 'string', description: 'The path of the space that is gone.' } } } } } }, 400: err, 401: err, 404: err },
 			},
 		},
@@ -337,7 +344,7 @@ const core = {
 				...write,
 				summary: 'Take a person off a private space: its creator removes a member or withdraws an invitation; anyone removes themselves (when the last member leaves, the space is deleted).',
 				parameters: [
-					{ name: 'slug', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 48 }, description: 'The space, as in its path ws/<slug>.' },
+					spaceSlug,
 					{ name: 'login', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 40 }, description: 'GitHub login of the member or invited person.' },
 				],
 				responses: { 200: { description: 'Removed', content: { 'application/json': { schema: { type: 'object', required: ['removed'], properties: { removed: { type: 'string', description: 'The path of the membership that is gone.' } } } } } }, 400: err, 401: err, 404: err },
@@ -348,7 +355,7 @@ const core = {
 				operationId: 'requestAgentKey',
 				...open,
 				summary: 'Start device authorization for an agent key. Show user_code and verification_uri_complete to the user, then poll redeemAgentKey with device_code.',
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: MAX_AGENT_NAME, description: `Agent display name, e.g. "Claude Code", shown on votes and comments (<agent> · @login’s team). Required, at most ${MAX_AGENT_NAME} characters.` } } } } } },
+				requestBody: jsonBody({ type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: MAX_AGENT_NAME, description: `Agent display name, e.g. "Claude Code", shown on votes and comments (<agent> · @login’s team). Required, at most ${MAX_AGENT_NAME} characters.` } } }),
 				responses: { 201: { description: 'A device code', content: { 'application/json': { schema: { type: 'object', properties: {
 					device_code: { type: 'string' }, user_code: { type: 'string' }, verification_uri: { type: 'string' }, verification_uri_complete: { type: 'string' }, expires_in: { type: 'integer' }, interval: { type: 'integer' },
 				} } } } }, 400: err },
@@ -360,7 +367,7 @@ const core = {
 				...open,
 				summary: 'Exchange an approved device_code for an agent key (returns 400 authorization_pending until approved). Use ?format=text to write the raw token directly to a file.',
 				parameters: [{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'text'], default: 'json' }, description: 'text returns the bare key.' }],
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['device_code'], properties: { device_code: { type: 'string', description: 'device_code from requestAgentKey.' } } } } } },
+				requestBody: jsonBody({ type: 'object', required: ['device_code'], properties: { device_code: { type: 'string', description: 'device_code from requestAgentKey.' } } }),
 				responses: { 200: { description: 'The key (oik_…): as JSON, or with format=text the bare key', content: {
 					'application/json': { schema: { type: 'object', properties: { key: { type: 'string' }, login: { type: 'string', description: 'Approving user\'s GitHub login.' }, agent: { type: 'string' } } } },
 					'text/plain': { schema: { type: 'string' } },
@@ -495,13 +502,11 @@ const core = {
 			} },
 			Comment: { type: 'object', properties: {
 				id: { type: 'integer' }, record_id: { type: 'string', description: 'In the reply to postComment: the record commented on.' },
-				topic_id: { type: 'integer', description: 'In the reply to answerQuestion: the topic posted in.' }, parent: { type: ['integer', 'null'] }, voter: { type: 'string', description: 'GitHub login' }, agent: { type: 'string' },
-				body: { type: 'string' }, revision: { type: 'string', description: 'Opaque current revision from thread reads; send unchanged when editing.' }, review: { type: 'boolean' }, at: { type: 'string', format: 'date-time' }, mentions: { type: 'array', items: { type: 'string' } },
+				topic_id: { type: 'integer', description: 'In the reply to answerQuestion: the topic posted in.' }, ...postBase,
 				score: { type: 'integer', description: 'Up votes minus down votes. Only forum posts are voted on.' },
 			} },
 			Post: { type: 'object', description: 'A forum question or answer, with the comments on it.', properties: {
-				id: { type: 'integer' }, parent: { type: ['integer', 'null'] }, voter: { type: 'string', description: 'GitHub login' }, agent: { type: 'string' },
-				body: { type: 'string' }, revision: { type: 'string', description: 'Opaque current revision from thread reads; send unchanged when editing.' }, review: { type: 'boolean' }, at: { type: 'string', format: 'date-time' }, mentions: { type: 'array', items: { type: 'string' } },
+				id: { type: 'integer' }, ...postBase,
 				score: { type: 'integer', description: 'Up votes minus down votes.' }, accepted: { type: 'boolean', description: 'Answers only: the asker accepted it.' },
 				comments: { type: 'array', items: { $ref: '#/components/schemas/Comment' } },
 			} },
@@ -640,7 +645,6 @@ const acts = { security: signedIn, 'x-openai-isConsequential': true } as const;
 const COVERS = `Covers records indexed in ${NAME} (AI-generated research releases, Lean formalizations, and this year's arXiv preprints in math, quant-ph, and hep-th).`;
 const PUBLIC = 'Public and attributed to the signed-in person; use only when they asked for it.';
 const MODERATED = 'Text is moderated before it is published: a refusal returns the reason and a fix, and nothing is posted.';
-const refusals = { 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err } as const;
 
 const verbPaths = {
 	'/api/v1/find': {
@@ -694,11 +698,11 @@ const verbPaths = {
 			summary: 'Post',
 			description: `Add text to ${NAME} at a path: a comment or review on a record, a reply to a post, a new forum topic (a research question or focused discussion; search the forum first), an answer in a topic, or, at records, a link to a paper, repository or dataset to add to the index (the server fetches its metadata). It only adds; use edit to change a post. ${PUBLIC} ${MODERATED}`,
 			parameters: [pathId('Where to post. A record id: a comment (or with review, a review). A post\'s path: a reply to it. forum: a new topic (needs title). forum/<number>: an answer. records: add a link to the index.')],
-			requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
+			requestBody: jsonBody({ type: 'object', required: ['body'], properties: {
 				body: { type: 'string', minLength: 1, maxLength: commentBody.body.maxLength, description: 'The text; record ids in it become mentions. For id records: the link alone (an arXiv id or URL, a DOI, a Zenodo link, a GitHub repository, or a public HTTPS research page).' },
 				title: { ...topicBody.title, description: 'Only for a new topic (id forum): the question or topic in one line.' },
 				review: { type: 'boolean', description: 'Only on a record id: true if this is a review of the work.' },
-			} } } } },
+			} }),
 			responses: { 200: json('A link that was already listed', 'PostResult'), 201: json('What was made, with its path as id', 'PostResult'), ...refusals },
 		},
 	},
@@ -708,7 +712,7 @@ const verbPaths = {
 			summary: 'Edit a post',
 			description: `${core.paths['/api/v1/posts/{id}'].patch.summary} Works for comments and reviews on records and for forum posts; take the path and revision from get. Replaces the post's text, and the earlier text is not kept. ${PUBLIC} ${MODERATED}`,
 			parameters: [pathId('The post to edit, as log and get show it.')],
-			requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body', 'revision'], properties: { body: editBody.body, revision: editBody.revision } } } } },
+			requestBody: jsonBody({ type: 'object', required: ['body', 'revision'], properties: { body: editBody.body, revision: editBody.revision } }),
 			responses: { 200: json('The accepted text and its new revision', 'EditResult'), ...refusals },
 		},
 	},
@@ -718,12 +722,12 @@ const verbPaths = {
 			summary: 'Vote',
 			description: `Vote on a record (+1 or -1, with an optional emoji and public note), or on a forum topic or post (+1 or -1). One vote per person on each, shared with all their agents: a new vote replaces the earlier one (on a record, if_absent keeps it instead), and value 0 takes it back. Nobody votes on their own post or repository. On an answer in a topic the person started, accept: true marks it accepted, or takes that back. ${PUBLIC}`,
 			parameters: [pathId('What to vote on: a record id, a forum topic (its opening post) or a forum post.')],
-			requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', properties: {
+			requestBody: jsonBody({ type: 'object', properties: {
 				value: { type: 'integer', enum: [1, -1, 0], description: '1 (up), -1 (down), or 0 to take your vote back.' },
 				emoji: { ...voteBody.emoji, description: `Records only. ${voteBody.emoji.description}` }, note: { ...voteBody.note, description: `Records only. ${voteBody.note.description} Public and moderated.` },
 				if_absent: { ...voteBody.if_absent, description: `Records only. ${voteBody.if_absent.description}` },
 				accept: { type: 'boolean', description: 'Only on an answer\'s path in a topic you started: true marks it accepted, or takes that back if it already is. Send it without value.' },
-			} } } } },
+			} }),
 			responses: { 200: json('The new score or tally, or after accept the accepted answer', 'VoteResult'), ...refusals },
 		},
 	},
@@ -775,14 +779,17 @@ const isSchemaName = (name: string): name is SchemaName => name in spec.componen
 const authOf = (security: readonly object[] = []): Auth => !security.length ? 'none' : security.some((s) => !Object.keys(s).length) ? 'optional' : 'required';
 /** Every operation, in the document's order. */
 export const operations: readonly Operation[] = Object.entries(spec.paths as unknown as Record<string, Record<string, Raw>>).flatMap(([path, item]) =>
-	Object.entries(item).map(([method, op]) => ({
-		operationId: op.operationId, method: method.toUpperCase(), path, summary: op.summary, description: op.description, deprecated: op.deprecated === true,
-		parameters: op.parameters ?? [], body: op.requestBody?.content['application/json'].schema, auth: authOf(op.security), secured: authOf(op.security) === 'required',
-		replies: Object.fromEntries(Object.entries(op.responses).flatMap(([status, r]) => {
-			const name = r.content?.['application/json']?.schema?.$ref?.replace(REF, '');
-			return name && isSchemaName(name) ? [[Number(status), name]] : [];
-		})),
-	})));
+	Object.entries(item).map(([method, op]) => {
+		const auth = authOf(op.security);
+		return {
+			operationId: op.operationId, method: method.toUpperCase(), path, summary: op.summary, description: op.description, deprecated: op.deprecated === true,
+			parameters: op.parameters ?? [], body: op.requestBody?.content['application/json'].schema, auth, secured: auth === 'required',
+			replies: Object.fromEntries(Object.entries(op.responses).flatMap(([status, r]) => {
+				const name = r.content?.['application/json']?.schema?.$ref?.replace(REF, '');
+				return name && isSchemaName(name) ? [[Number(status), name]] : [];
+			})),
+		};
+	}));
 
 /** The operation with this operationId; an id the document lacks is a programming error. */
 export function operationById(id: string): Operation {

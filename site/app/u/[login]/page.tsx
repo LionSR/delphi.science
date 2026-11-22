@@ -4,7 +4,7 @@ import { db } from '#lib/db.ts';
 import { fetchArxivAuthorPapers } from '#lib/accounts/arxiv-author.ts';
 import { connectedAgentCount } from '#lib/accounts/keys.ts';
 import { MAX_AFFILIATION, MAX_ARXIV_INPUT, MAX_BIO, MAX_NAME, MAX_URL, ownName, toPublicProfile, type OwnProfile } from '#lib/accounts/people.ts';
-import { normalizeProfileLogin, profile, TABS, type Tab } from '#lib/accounts/profile.ts';
+import { normalizeProfileLogin, profile, profileCounts, TABS, type Tab } from '#lib/accounts/profile.ts';
 import { ProfileView, type ProfileTab } from '#lib/accounts/profile-view.ts';
 import { me } from '#lib/accounts/session.ts';
 import { savePublicName } from '#app/actions.ts';
@@ -56,9 +56,10 @@ export default async function Profile({ params, searchParams }: Context) {
 	const tab: ProfileTab = rawTab === 'papers' ? 'papers' : (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
 	const d = await db();
 	// A failure to load the activity shows "temporarily unavailable" with a retry link.
-	const [row, page, viewer, connectedAgents] = await Promise.all([
+	const [row, page, counts, viewer, connectedAgents] = await Promise.all([
 		readProfile(login),
-		profile(d, login, { tab: tab === 'papers' ? 'all' : tab, page: tab === 'papers' ? 1 : pageParam(rawPage) }).catch(() => null),
+		tab === 'papers' ? Promise.resolve(null) : profile(d, login, { tab, page: pageParam(rawPage) }).catch(() => null),
+		tab === 'papers' ? profileCounts(d, login).catch(() => undefined) : Promise.resolve(undefined),
 		me(),
 		connectedAgentCount(d, login).catch(() => undefined),
 	]);
@@ -66,5 +67,5 @@ export default async function Profile({ params, searchParams }: Context) {
 	const owner = viewer?.login.toLowerCase() === login.toLowerCase();
 	const papers = tab === 'papers' && who?.arxiv_id ? await fetchArxivAuthorPapers(d, who.arxiv_id) : null;
 	const editor = owner && row ? <ProfileEditor login={login} own={row} notice={notice} /> : null;
-	return <ProfileView login={login} tab={tab} page={page} who={who} papers={papers} connectedAgents={connectedAgents} owner={owner} editor={editor} />;
+	return <ProfileView login={login} tab={tab} page={page} counts={counts} who={who} papers={papers} connectedAgents={connectedAgents} owner={owner} editor={editor} />;
 }

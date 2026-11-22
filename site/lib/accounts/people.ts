@@ -2,7 +2,7 @@
 // authorization and attribution always use the GitHub login.
 import { QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
-import { MAX_ARXIV_ID, MAX_ARXIV_INPUT, normalizeArxivAuthor } from './arxiv-author.ts';
+import { MAX_ARXIV_INPUT, normalizeArxivAuthor } from './arxiv-author.ts';
 import { profileName } from './keys.ts';
 
 /** What is shown for a person besides their login on posts/comments; either part may be ''. */
@@ -16,22 +16,22 @@ export const MAX_NAME = 100;
 export const MAX_AFFILIATION = 100;
 export const MAX_BIO = 400;
 export const MAX_URL = 200;
-export { MAX_ARXIV_ID, MAX_ARXIV_INPUT };
+export { MAX_ARXIV_INPUT };
 
 const EMPTY_PROFILE: PublicProfile = { name: '', affiliation: '', bio: '', url: '', arxiv_id: '' };
 
 /** A GitHub "company", shown but never used for identity: profileName rules, without GitHub's leading "@" on organization mentions. */
-export const profileAffiliation = (value: unknown) => profileName(value).replace(/^@(?=\S)/, '');
+const profileAffiliation = (value: unknown) => profileName(value).replace(/^@(?=\S)/, '');
 
 /** Multi-line bio text: strips control characters other than newlines, trims, and caps length. */
-export function normalizeBio(value: string): string {
+function normalizeBio(value: string): string {
 	const clean = value.replace(/\r\n?/g, '\n').replace(/[\x00-\x09\x0b-\x1f\x7f]/g, '').replace(/\n{3,}/g, '\n\n').trim();
 	if ([...clean].length > MAX_BIO) throw new QueryError(`Bio is longer than ${MAX_BIO} characters.`, 'Shorten the bio.');
 	return clean;
 }
 
 /** Public homepage URL (http/https only, no credentials). Bare hostnames default to https://. */
-export function normalizeProfileUrl(value: string): string {
+function normalizeProfileUrl(value: string): string {
 	const raw = value.trim();
 	if (!raw) return '';
 	if ([...raw].length > MAX_URL) throw new QueryError(`Website URL is longer than ${MAX_URL} characters.`, 'Use a shorter URL.');

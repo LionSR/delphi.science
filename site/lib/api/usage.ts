@@ -19,13 +19,14 @@ const KNOWN: [Kind, string[]][] = [
 	['bot', ['HeadlessChrome']],
 ];
 const KINDS = new Map(KNOWN.flatMap(([kind, names]) => names.map((name) => [name, kind] as const)));
+const KNOWN_LOWER = [...KINDS.keys()].map((name) => [name, name.toLowerCase()] as const);
 const TOOLS = ['curl', 'python-requests', 'python-urllib', 'python-httpx', 'go-http-client', 'node', 'wget', 'axios', 'postmanruntime'];
 // Only these names are stored: an arbitrary token could hold a name, email, key or unique ID.
-export const CLIENTS = [...KINDS.keys(), ...TOOLS, 'browser', 'none', 'other'];
+const CLIENTS = [...KINDS.keys(), ...TOOLS, 'browser', 'none', 'other'];
 // The older edit operation and two space operations are not counted: the database's endpoint allowlist
 // (api_usage_endpoint_category) does not include them, and adding one takes a migration.
 const UNCOUNTED: readonly string[] = ['editPost', 'deleteSpace', 'removeSpaceMember'];
-export const ENDPOINTS = [...operations.filter((o) => !UNCOUNTED.includes(o.operationId)).map(endpointName),
+const ENDPOINTS = [...operations.filter((o) => !UNCOUNTED.includes(o.operationId)).map(endpointName),
 	'GET /api/v1', 'GET /api/v1/openapi.json', 'GET /llms.txt', 'POST /mcp',
 	'GET /id/{prefix}/{suffix}', 'GET /sitemap.xml', 'GET /sitemap/{file}', 'GET /txt/{id}'];
 const RETENTION_DAYS = 90;
@@ -42,7 +43,7 @@ export function client(ua: string | null | undefined): string {
 	// Match whole product tokens, not substrings inside a unique/custom product or URL.
 	const products = new Set([...low.matchAll(/(?:^|[\s;(])([a-z][a-z0-9._-]*)(?=\/|[\s;)]|$)/g)].map((m) => m[1]));
 	if (products.has('codex_cli_rs')) return 'codex';
-	const known = [...KINDS.keys()].find((name) => products.has(name.toLowerCase()));
+	const known = KNOWN_LOWER.find(([, token]) => products.has(token))?.[0];
 	if (known) return known;
 	if (/^(mozilla|opera)\//i.test(s)) return 'browser';
 	const first = low.split(/[\s/;(]/, 1)[0];
@@ -50,7 +51,7 @@ export function client(ua: string | null | undefined): string {
 }
 
 /** What sort of client a name from client() is. */
-export function kind(name: string): Kind {
+function kind(name: string): Kind {
 	return KINDS.get(name) ?? (name === 'browser' ? 'browser' : TOOLS.includes(name) ? 'tool' : 'other');
 }
 
@@ -95,7 +96,10 @@ export async function usage(db: Db, weeks = 8, now = new Date()) {
 		 AND day <= (now() AT TIME ZONE 'utc')::date AND endpoint = ANY($2::text[]) AND client = ANY($3::text[])
 		 GROUP BY 1, 2, 3`, [from, ENDPOINTS, CLIENTS])).rows;
 	const weekly = new Map<string, { week: string; calls: number; ai: number }>();
-	for (let w = weeks; w > 0; w--) weekly.set(since(w, now), { week: since(w, now), calls: 0, ai: 0 });
+	for (let w = weeks; w > 0; w--) {
+		const week = since(w, now);
+		weekly.set(week, { week, calls: 0, ai: 0 });
+	}
 	const endpoints = new Map<string, number>(), clients = new Map<string, number>();
 	for (const r of rows) {
 		const w = weekly.get(r.week);

@@ -89,12 +89,12 @@ export default async function Question({ params, searchParams }: Ctx) {
 	const d = await db();
 	const [t, who, { notice, new: carried }] = await Promise.all([topicById(Number((await params).id)), me(), searchParams]);
 	if (!t) notFound();
-	// The posts that came after the reader last opened My feed (docs/my-feed.md).
-	const fresh = await newInThread(d, who, { topic: t.id }, seqParam(carried));
 	const posts = [t.question, ...t.answers];
 	const owner = who?.login ?? '';
 	const all = posts.flatMap((p) => [p, ...p.comments]);
-	const [mine, names, records, spaces] = await Promise.all([
+	const [fresh, mine, names, records, spaces] = await Promise.all([
+		// The posts that came after the reader last opened My feed (docs/my-feed.md).
+		newInThread(d, who, { topic: t.id }, seqParam(carried)),
 		who ? myPostVotes(d, who.login, posts.map((p) => p.id)) : new Map<number, number>(),
 		publicNames(d, all.map((p) => p.voter)),
 		namedRecords(d, all),
@@ -110,7 +110,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 			<p className="meta"><a href="/forum">Forum</a><a href={forumPath(t.section)}>{SECTIONS[t.section]}</a><span>{t.accepted_id ? 'answered' : 'open'} · <code>forum/{t.id}</code></span><a href={`/forum/${t.id}.txt`} rel="alternate" type="text/plain">Text</a></p>
 			<h1>{t.title}</h1>
 			{notice && <p className="count">{notice}</p>}
-			<NewInThread ids={fresh} order={posts.flatMap((p) => [p.id, ...p.comments.map((c) => c.id)])} />
+			<NewInThread ids={fresh} order={all.map((p) => p.id)} />
 
 			<Entry {...thread} p={t.question} mine={mine.get(t.question.id)} className="post" meta={
 				<p className="meta">

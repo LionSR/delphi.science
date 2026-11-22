@@ -52,15 +52,17 @@ export function topicQuery(q: string): { words: string; state: TopicState | null
 }
 // The state `param` ($n: 'open', 'answered' or null for either) as a condition on t.
 const IN_STATE = (param: string) => `(${param}::text IS NULL OR (t.accepted_id IS NULL) = (${param} = 'open'))`;
+const topicFilter = (who: string, space: string, state: string, section: string) =>
+	`${READABLE('t.space_id', who)} AND (${space}::text IS NULL OR t.space_id = ${space}) AND ${IN_STATE(state)} AND (${section}::text IS NULL OR t.section = ${section})`;
 
 // The topics matching $1 that $2 can read, each with its best rank. websearch_to_tsquery accepts any text without
 // error. Hits are filtered by the reader before they are ranked or counted, so a private post changes nothing here
 // for anyone outside its space.
 const MATCHES = `WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq),
-	hits AS (SELECT t.id, ts_rank(t.tsv, query.tq) * 2 AS rank FROM open_index.topics t, query WHERE t.tsv @@ query.tq AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3) AND ${IN_STATE('$4')} AND ($5::text IS NULL OR t.section = $5)
+	hits AS (SELECT t.id, ts_rank(t.tsv, query.tq) * 2 AS rank FROM open_index.topics t, query WHERE t.tsv @@ query.tq AND ${topicFilter('$2', '$3', '$4', '$5')}
 	         UNION ALL
 	         SELECT c.topic_id, ts_rank(c.tsv, query.tq) FROM open_index.comments c JOIN open_index.topics t ON t.id = c.topic_id, query
-	         WHERE c.topic_id IS NOT NULL AND c.tsv @@ query.tq AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3) AND ${IN_STATE('$4')} AND ($5::text IS NULL OR t.section = $5)),
+	         WHERE c.topic_id IS NOT NULL AND c.tsv @@ query.tq AND ${topicFilter('$2', '$3', '$4', '$5')}),
 	best AS (SELECT id, max(rank) AS rank FROM hits GROUP BY id)`;
 
 /** One page of questions (lib/paging.ts) among those `who` can read: the latest activity first, or with q, the best
@@ -71,7 +73,7 @@ export async function topics(db: Db, who: Reader, opts: PageRequest & { q?: stri
 	const start = pageStart(opts, FORUM_PAGE);
 	const { words: q, state } = topicQuery(opts.q ?? '');
 	const section = opts.section === undefined ? null : sectionId(opts.section);
-	const mine = `${READABLE('t.space_id', '$1')} AND ($2::text IS NULL OR t.space_id = $2) AND ${IN_STATE('$3')} AND ($4::text IS NULL OR t.section = $4)`;
+	const mine = topicFilter('$1', '$2', '$3', '$4');
 	const [list, count, args] = q
 		? [`${MATCHES} ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $6 OFFSET $7`, `${MATCHES} SELECT count(*)::int AS n FROM best`, [q, who, opts.space ?? null, state, section]]
 		: [`${TOPIC} WHERE ${mine} ORDER BY t.last_at DESC, t.id DESC LIMIT $5 OFFSET $6`, `SELECT count(*)::int AS n FROM open_index.topics t WHERE ${mine}`, [who, opts.space ?? null, state, section]];
@@ -120,8 +122,10 @@ export async function topicThread(db: Db, id: number, who: Reader, space: string
 /** Votes on a post in a topic: 1 or -1, or 0 to take the vote back. Returns the post's new score. */
 export async function votePost(db: Db, topicId: number, postId: number, voter: Voter, value: number, space?: string) {
 	if (![1, -1, 0].includes(value)) throw new QueryError('value must be 1, -1 or 0', 'Send "value": 1 (up), -1 (down) or 0 (take it back).');
-	const p = !await topic(db, topicId, voter.login, space) ? undefined
-		: (await db.query<{ voter: string }>('SELECT voter FROM open_index.comments WHERE id = $1 AND topic_id = $2', [postId, topicId])).rows[0];
+	const p = !Number.isSafeInteger(topicId) || !Number.isSafeInteger(postId) ? undefined : (await db.query<{ voter: string }>(
+		`SELECT c.voter FROM open_index.comments c JOIN open_index.topics t ON t.id = c.topic_id
+		 WHERE c.id = $1 AND c.topic_id = $2 AND ${READABLE('t.space_id', '$3')} AND ($4::text IS NULL OR t.space_id = $4)`,
+		[postId, topicId, voter.login, space ?? null])).rows[0];
 	if (!p) throw new NotFoundError(`no post ${postId} in topic ${topicId}`, 'Use a post id from GET /api/v1/forum/<id>.');
 	if (p.voter === voter.login) throw new QueryError('you cannot vote on your own post', 'Vote on other posts.');
 	if (value === 0) await db.query('DELETE FROM open_index.post_votes WHERE comment_id = $1 AND voter = $2', [postId, voter.login]);
@@ -135,10 +139,14 @@ export async function votePost(db: Db, topicId: number, postId: number, voter: V
 
 /** The asker accepts an answer, or takes the acceptance back by accepting it again. */
 export async function accept(db: Db, topicId: number, postId: number, voter: Voter, space?: string) {
-	const t = await topicWithPosts(db, topicId, voter.login, space);
+	const t = !Number.isSafeInteger(topicId) ? undefined : (await db.query<{ voter: string; accepted_id: number | null; is_answer: boolean }>(
+		`SELECT t.voter, t.accepted_id::int,
+		        EXISTS (SELECT 1 FROM open_index.comments c WHERE c.id = $4 AND c.topic_id = t.id AND c.parent_id IS NULL AND c.id IS DISTINCT FROM t.question_id) AS is_answer
+		 FROM open_index.topics t WHERE t.id = $1 AND ${READABLE('t.space_id', '$2')} AND ($3::text IS NULL OR t.space_id = $3)`,
+		[topicId, voter.login, space ?? null, Number.isSafeInteger(postId) ? postId : null])).rows[0];
 	if (!t) throw new NotFoundError(`no topic ${topicId}`, 'Use a topic id from GET /api/v1/forum.');
 	if (t.voter !== voter.login) throw new QueryError('only the asker can accept an answer', 'Vote on it instead.');
-	if (!t.answers.some((a) => a.id === postId)) throw new QueryError(`post ${postId} is not an answer to this question`, 'Accept an id from answers[].');
+	if (!t.is_answer) throw new QueryError(`post ${postId} is not an answer to this question`, 'Accept an id from answers[].');
 	const next = t.accepted_id === postId ? null : postId;
 	await db.query('UPDATE open_index.topics SET accepted_id = $1 WHERE id = $2', [next, topicId]);
 	return { topic: topicId, accepted_id: next };
@@ -167,6 +175,7 @@ export async function activity(db: Db, opts: { since?: number; limit?: number; s
 
 /** The voter's own votes on these posts, by post id. */
 export async function myPostVotes(db: Db, login: string, ids: number[]) {
+	if (!ids.length) return new Map<number, number>();
 	const rows = (await db.query<{ id: number; value: number }>(
 		'SELECT comment_id::int AS id, value FROM open_index.post_votes WHERE voter = $1 AND comment_id = ANY($2)', [login, ids])).rows;
 	return new Map(rows.map((r) => [r.id, r.value]));

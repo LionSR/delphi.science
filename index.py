@@ -156,7 +156,7 @@ def add(url: str, by: str, dry_run: bool) -> int:
     try:
         source, key = S.detect(url)
         print(f"{url} → {source.name}:{key}")
-        entry = S.fetch(url)
+        entry = source.fetch_url(url.strip())
     except S.NotFound as e:
         print(f"rejected: the record was not found or is not public ({e})")
         return 2
@@ -276,11 +276,13 @@ def generation_settings() -> tuple[bool, Decimal]:
     return enabled, limit
 
 
-def dollar_option(value: str) -> Decimal:
-    try:
-        return parse_usd(value, "budget must be a finite nonnegative USD amount")
-    except ValueError as err:
-        raise argparse.ArgumentTypeError(str(err)) from None
+def _arg_type(fn, *args):
+    def parse(value: str):
+        try:
+            return fn(value, *args)
+        except ValueError as err:
+            raise argparse.ArgumentTypeError(str(err)) from None
+    return parse
 
 
 def validate_labeler(labeler: str, allow_none: bool = False) -> str:
@@ -288,24 +290,6 @@ def validate_labeler(labeler: str, allow_none: bool = False) -> str:
     if labeler == "deepseek" or (allow_none and labeler == "none") or canned:
         return labeler
     raise ValueError("labeler must be deepseek" + (", none" if allow_none else "") + ", or canned:<file.json>; no other provider is supported")
-
-
-def labeler_option(allow_none: bool = False):
-    def parse(value: str) -> str:
-        try:
-            return validate_labeler(value, allow_none)
-        except ValueError as err:
-            raise argparse.ArgumentTypeError(str(err)) from None
-    return parse
-
-
-def run_generation(run) -> int:
-    try:
-        return run()
-    finally:
-        if GENERATION_BUDGET.calls:
-            print(f"DeepSeek run budget: ${GENERATION_BUDGET.used} of ${GENERATION_BUDGET.limit} "
-                  f"used/reserved across {len(GENERATION_BUDGET.calls)} requests (unknown usage retains reservation)", file=sys.stderr)
 
 
 @functools.cache
@@ -392,20 +376,20 @@ def ask(prompt_file: str, name: str, data: Any) -> Any:
         raise RuntimeError("DeepSeek gave no results array")
     replies = value["results"]
     if prompt_file == "label-prompt.md":
-        expected = [entry["key"] for entry in data]
-        if len(set(expected)) != len(expected):
+        expected = {entry["key"] for entry in data}
+        if len(expected) != len(data):
             raise RuntimeError("ambiguous entry keys in classification batch; split the batch")
         for r in replies:
             _check_label(r)
         returned = [r["key"] for r in replies]
     elif prompt_file == "stance-prompt.md":
-        expected = list({r["url"] for entry in data for r in entry["responses"]})
+        expected = {r["url"] for entry in data for r in entry["responses"]}
         for r in replies:
             _check_stance(r)
         returned = [r["url"] for r in replies]
     else:
         raise RuntimeError("unsupported structured DeepSeek prompt")
-    if len(returned) != len(expected) or len(set(returned)) != len(returned) or set(returned) != set(expected):
+    if len(returned) != len(expected) or set(returned) != expected:
         raise RuntimeError("DeepSeek omitted, duplicated or invented a result identity")
     return replies
 
@@ -414,9 +398,9 @@ def ask(prompt_file: str, name: str, data: Any) -> Any:
 LABELER_ERRORS = (RuntimeError, json.JSONDecodeError, urllib.error.URLError, TimeoutError)
 
 
-def canned_replies(labeler: str) -> Any:
+def canned_replies(labeler: str, allow_none: bool = False) -> Any:
     """For --labeler canned:<file.json> (tests), the replies in that file; else None."""
-    validate_labeler(labeler, allow_none=True)
+    validate_labeler(labeler, allow_none)
     return json.loads(Path(labeler.split(":", 1)[1]).read_text()) if labeler.startswith("canned:") else None
 
 
@@ -425,23 +409,8 @@ def canned_replies(labeler: str) -> Any:
 BATCH = 20
 
 
-def label_batch(batch: list[dict[str, Any]], labeler: str, canned: dict[str, Any]) -> dict[str, dict[str, Any]]:
-    """{key: {category, subject, tags, reason}} for the batch."""
-    if labeler == "none":
-        return {}
-    if labeler == "canned":
-        return {e["key"]: canned[e["key"]] for e in batch if e["key"] in canned}
-    validate_labeler(labeler)
-    data = [{"key": e["key"], "source": e["source"], "title": e["title"], "authors": e.get("authors", [])[:6],
-             "summary": e.get("summary", ""), "tags": e.get("tags", [])[:8]} for e in batch]
-    return {r["key"]: r for r in ask("label-prompt.md", "ENTRIES", data)}
-
-
 def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_subject: bool = False) -> int:
-    validate_labeler(labeler, allow_none=True)
-    canned: dict[str, Any] = canned_replies(labeler) or {}
-    if labeler.startswith("canned:"):
-        labeler = "canned"
+    canned: dict[str, Any] | None = canned_replies(labeler, allow_none=True)
     if missing_subject:
         todo = [(p, e) for p, e in load() if not TX.subject_of(e.get("domain"), e.get("review", {}).get("subject"))][:limit]
     elif relabel_all:
@@ -453,7 +422,14 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
     for i in range(0, len(todo), BATCH):
         chunk = todo[i : i + BATCH]
         try:
-            replies = label_batch([e for _, e in chunk], labeler, canned)
+            if labeler == "none":
+                replies: dict[str, Any] = {}
+            elif canned is not None:
+                replies = canned
+            else:
+                data = [{"key": e["key"], "source": e["source"], "title": e["title"], "authors": e.get("authors", [])[:6],
+                         "summary": e.get("summary", ""), "tags": e.get("tags", [])[:8]} for _, e in chunk]
+                replies = {r["key"]: r for r in ask("label-prompt.md", "ENTRIES", data)}
         except LABELER_ERRORS as err:
             print(f"batch {i // BATCH + 1}: {err}", file=sys.stderr)
             failed = True
@@ -466,7 +442,7 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
                 "subject": str(r.get("subject", ""))[:24],
                 "tags": [str(t) for t in r.get("tags", [])][:6],
                 "reason": str(r.get("reason", ""))[:200],
-                "by": MODEL if labeler == "deepseek" else labeler,
+                "by": "canned" if canned is not None else MODEL,
                 "at": S.today(),
             })
             if saved(ref, e):
@@ -539,8 +515,10 @@ def unlabelled(e: dict[str, Any]) -> list[dict[str, Any]]:
     return [d for d in e.get("discussion") or [] if "stance" not in d]
 
 
-def with_stance(link: dict[str, Any], stance: str) -> dict[str, Any]:
-    """The link with that stance; "none" clears it."""
+def with_stance(link: dict[str, Any], stance: str | None) -> dict[str, Any]:
+    """The link with that stance; "none" clears it, None leaves it unchanged."""
+    if not stance:
+        return link
     out = {k: v for k, v in link.items() if k != "stance"}
     return out if stance == "none" else {**out, "stance": stance}
 
@@ -570,7 +548,6 @@ def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
 def propose_stances(records: list[str], labeler: str) -> int:
     """Prints a proposed `discuss --stance` command for each unlabelled link; writes nothing.
     canned:<file.json> reads {url: {stance, reason}}."""
-    validate_labeler(labeler)
     canned = canned_replies(labeler)
     todo = [e for _, e in load(DISCUSSED) if (not records or rid(e) in records) and unlabelled(e)]
     batches: list[list[dict[str, Any]]] = [[]]
@@ -622,7 +599,7 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str
     """Attaches links about a record, or removes them with drop. With a stance, new links get it, and links
     already attached get it without being read again. `described` (--title, --author, --date) supplies what a
     page does not say about itself, as with a PDF; a web page with no title is not attached."""
-    described = {k: v for k, v in (described or {}).items() if v}
+    described = _drop_empty(described or {})
     if not urls:
         print("name the links to attach, or use --recheck")
         return 2
@@ -634,25 +611,26 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str
         gone = {S.identity(u) for u in urls}
         links = [x for x in links if S.identity(x["url"]) not in gone]
         print(f"{len(e.get('discussion', [])) - len(links)} dropped")
-    for url in [] if drop else urls:
-        old = next((x for x in links if S.identity(x["url"]) == S.identity(url)), None)
-        if old and (stance or described):
-            changed = with_stance({**old, **described}, stance) if stance else {**old, **described}
-            links = [changed if x is old else x for x in links]
-            print(f"= {stance or 'described':<10} {old['url']}")
-            continue
-        try:
-            d = S.discussion_link(url)
-        except (ValueError, S.NotFound, S.SourceError) as err:
-            print(f"skipped {url}: {err}", file=sys.stderr)
-            continue
-        if d.get("kind") == "web" and not (described.get("title") or d.get("title")):
-            print(f"skipped {url}: the page gives no title (a PDF?); give --title and --author", file=sys.stderr)
-            continue
-        same = next((x for x in links if S.identity(x["url"]) == S.identity(d["url"])), None)
-        new = {**d, **described, "added": S.today(), **pick(old or same or {}, KEPT)}
-        links = [x for x in links if x is not same and x is not old] + [with_stance(new, stance) if stance else new]
-        print(f"+ {d.get('author') or d.get('site')}: {(d.get('text') or d.get('title') or d['url'])[:90]}")
+    else:
+        for url in urls:
+            old = next((x for x in links if S.identity(x["url"]) == S.identity(url)), None)
+            if old and (stance or described):
+                changed = with_stance({**old, **described}, stance)
+                links = [changed if x is old else x for x in links]
+                print(f"= {stance or 'described':<10} {old['url']}")
+                continue
+            try:
+                d = S.discussion_link(url)
+            except (ValueError, S.NotFound, S.SourceError) as err:
+                print(f"skipped {url}: {err}", file=sys.stderr)
+                continue
+            if d.get("kind") == "web" and not (described.get("title") or d.get("title")):
+                print(f"skipped {url}: the page gives no title (a PDF?); give --title and --author", file=sys.stderr)
+                continue
+            same = next((x for x in links if S.identity(x["url"]) == S.identity(d["url"])), None)
+            new = {**d, **described, "added": S.today(), **pick(old or same or {}, KEPT)}
+            links = [x for x in links if x is not same and x is not old] + [with_stance(new, stance)]
+            print(f"+ {d.get('author') or d.get('site')}: {(d.get('text') or d.get('title') or d['url'])[:90]}")
     e["discussion"] = sorted(links, key=lambda d: d.get("date", ""))
     if not dry_run:
         save(ref, e)
@@ -872,7 +850,7 @@ def parser() -> argparse.ArgumentParser:
 
     lb = sub.add_parser("label")
     lb.add_argument("--all", action="store_true")
-    lb.add_argument("--labeler", default="deepseek", type=labeler_option(True))
+    lb.add_argument("--labeler", default="deepseek", type=_arg_type(validate_labeler, True))
     lb.add_argument("--limit", type=int)
     lb.add_argument("--missing-subject", action="store_true")
 
@@ -892,7 +870,7 @@ def parser() -> argparse.ArgumentParser:
     d.add_argument("--author", help="who wrote it, for a page that does not say (a PDF)")
     d.add_argument("--date", type=lambda s: dt.date.fromisoformat(s).isoformat(), help="YYYY-MM-DD, for a page that does not say")
     d.add_argument("--propose-stances", action="store_true", help="the labelling agent proposes stances for unlabelled links (or the named records'); prints them as commands, writes nothing")
-    d.add_argument("--labeler", default="deepseek", type=labeler_option(), help="for --propose-stances: deepseek, or canned:<file.json>")
+    d.add_argument("--labeler", default="deepseek", type=_arg_type(validate_labeler), help="for --propose-stances: deepseek, or canned:<file.json>")
 
     rc = sub.add_parser("reception")
     rc.add_argument("record", nargs="?")
@@ -900,12 +878,13 @@ def parser() -> argparse.ArgumentParser:
     rc.add_argument("--text")
     rc.add_argument("--reviewed-by", help="the GitHub login of the person who checked the text against its links; publishes it")
     rc.add_argument("--links", nargs="+", help="the links the text is based on (default: all of the record's links)")
-    rc.add_argument("--labeler", default="deepseek", type=labeler_option())
+    rc.add_argument("--labeler", default="deepseek", type=_arg_type(validate_labeler))
     rc.add_argument("--dry-run", action="store_true")
 
     for p in (lb, d, rc):
         p.add_argument("--allow-paid-deepseek", action="store_true", help="explicitly authorize DeepSeek generation for this run; requires a positive USD cap")
-        p.add_argument("--max-cost-usd", type=dollar_option, help="total run cap; absent ORI_DEEPSEEK_MAX_RUN_USD defaults to 0 (disabled)")
+        p.add_argument("--max-cost-usd", type=_arg_type(parse_usd, "budget must be a finite nonnegative USD amount"),
+                       help="total run cap; absent ORI_DEEPSEEK_MAX_RUN_USD defaults to 0 (disabled)")
 
     sub.add_parser("build")
     return ap
@@ -915,7 +894,8 @@ def main(argv: Iterable[str] | None = None) -> int:
     global GENERATION_BUDGET
     ap = parser()
     args = ap.parse_args(list(argv) if argv is not None else None)
-    if args.cmd == "label" or (args.cmd == "discuss" and args.propose_stances) or (args.cmd == "reception" and args.draft):
+    uses_generation = args.cmd == "label" or (args.cmd == "discuss" and args.propose_stances) or (args.cmd == "reception" and args.draft)
+    if uses_generation:
         try:
             enabled, limit = generation_settings()
         except ValueError as err:
@@ -924,28 +904,32 @@ def main(argv: Iterable[str] | None = None) -> int:
         GENERATION_BUDGET = GenerationBudget(enabled or args.allow_paid_deepseek,
                                              limit if args.max_cost_usd is None else args.max_cost_usd)
     S.TOKEN = github_token()
-    if args.cmd == "add":
-        return add(args.url, args.by, args.dry_run)
-    if args.cmd == "harvest":
-        return harvest(args.source, args.limit, args.dry_run)
-    if args.cmd == "label":
-        return run_generation(functools.partial(label, args.all, args.labeler, args.limit, args.missing_subject))
-    if args.cmd == "refresh":
-        return refresh(args.older_than, args.limit, args.dry_run)
-    if args.cmd == "discuss":
-        named = [x for x in [args.record, *args.urls] if x]
-        if args.recheck:
-            return recheck_all(named, args.dry_run)
-        if args.propose_stances:
-            return run_generation(functools.partial(propose_stances, named, args.labeler))
-        if not args.record:
-            ap.error("discuss needs a record id, or --recheck or --propose-stances")
-        return discuss(args.record, args.urls, args.drop, args.dry_run, args.stance,
-                       {"title": args.title, "author": args.author, "date": args.date})
-    if args.cmd == "reception":
-        run = functools.partial(reception, args.record, args.draft, args.text, args.reviewed_by, args.links, args.labeler, args.dry_run)
-        return run_generation(run) if args.draft else run()
-    return build()
+    try:
+        if args.cmd == "add":
+            return add(args.url, args.by, args.dry_run)
+        if args.cmd == "harvest":
+            return harvest(args.source, args.limit, args.dry_run)
+        if args.cmd == "label":
+            return label(args.all, args.labeler, args.limit, args.missing_subject)
+        if args.cmd == "refresh":
+            return refresh(args.older_than, args.limit, args.dry_run)
+        if args.cmd == "discuss":
+            named = [x for x in [args.record, *args.urls] if x]
+            if args.recheck:
+                return recheck_all(named, args.dry_run)
+            if args.propose_stances:
+                return propose_stances(named, args.labeler)
+            if not args.record:
+                ap.error("discuss needs a record id, or --recheck or --propose-stances")
+            return discuss(args.record, args.urls, args.drop, args.dry_run, args.stance,
+                           {"title": args.title, "author": args.author, "date": args.date})
+        if args.cmd == "reception":
+            return reception(args.record, args.draft, args.text, args.reviewed_by, args.links, args.labeler, args.dry_run)
+        return build()
+    finally:
+        if uses_generation and GENERATION_BUDGET.calls:
+            print(f"DeepSeek run budget: ${GENERATION_BUDGET.used} of ${GENERATION_BUDGET.limit} "
+                  f"used/reserved across {len(GENERATION_BUDGET.calls)} requests (unknown usage retains reservation)", file=sys.stderr)
 
 
 if __name__ == "__main__":

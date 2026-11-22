@@ -15,7 +15,7 @@ import { get } from '#lib/records/query.ts';
 import { me } from '#lib/accounts/session.ts';
 import { date, idPath, original, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams, voteMark } from '#lib/view.ts';
 import { publicNames } from '#lib/accounts/people.ts';
-import { myVotes, votes } from '#lib/records/votes.ts';
+import { votes } from '#lib/records/votes.ts';
 import { artifacts } from '#lib/p2p/claims.ts';
 import { SharedFiles } from '#app/shared-files.tsx';
 import { RecordBadges } from '#app/record-badges.tsx';
@@ -35,16 +35,17 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	const id = await recordId(ctx);
 	const r = await record(id);
 	if (!r) return {};
+	const path = recordPath(id);
 	const authors = Array.isArray(r.authors) ? r.authors.map(String) : [];
 	const cite: Record<string, string | string[]> = { citation_title: String(r.title), citation_author: authors,
-		citation_abstract_html_url: `${SITE}${recordPath(id)}` };
+		citation_abstract_html_url: `${SITE}${path}` };
 	if (r.published) cite.citation_publication_date = String(r.published).replaceAll('-', '/');
 	if (r.pdf) cite.citation_pdf_url = String(r.pdf);
 	return {
 		// A reviewed reception summary describes a discussed record better than its abstract.
 		title: String(r.title), description: reception(r)?.text ?? (String(r.summary ?? '').slice(0, 300) || undefined),
 		// The same page as text, as JSON, and its thread as a feed.
-		alternates: { canonical: recordPath(id), types: { 'application/json': apiPath(id), 'text/plain': `${recordPath(id)}.txt`,
+		alternates: { canonical: path, types: { 'application/json': apiPath(id), 'text/plain': `${path}.txt`,
 			'application/atom+xml': `/log.atom?path=${encodeURIComponent(id)}` } },
 		other: cite,
 	};
@@ -57,15 +58,15 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	if (r.id !== id) permanentRedirect(recordPath(r.id));
 	const d = await db();
 	const [thread, voters, who, { notice, new: carried }, shared] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams, artifacts(d, id)]);
-	// The posts that came after the reader last opened My feed (docs/my-feed.md).
-	const fresh = await newInThread(d, who, { record: id }, seqParam(carried));
 	const stands = reception(r);
 	const owner = who?.login ?? '';
-	const [names, mine] = await Promise.all([
+	const mine = who ? voters.find((v) => v.voter === who.login) : undefined;
+	const [fresh, names] = await Promise.all([
+		// The posts that came after the reader last opened My feed (docs/my-feed.md).
+		newInThread(d, who, { record: id }, seqParam(carried)),
 		publicNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter), ...(stands?.reviewed_by ? [String(stands.reviewed_by)] : [])]),
-		who ? myVotes(d, who.login, [id]).then((m) => m.get(id)) : undefined,
 	]);
-	const back = recordPath(id);
+	const back = recordPath(id), slug = idPath(id);
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
 	// External posts and articles about the record (index.py discuss).
 	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string; stance?: string }[];
@@ -76,12 +77,12 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 		const l = links.find((x) => x.url === url);
 		return l?.author || l?.site || url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
 	};
-	const api = apiPath(id);
+	const api = `/api/v1/records/${slug}`;
 	// The original work at its upstream site.
 	const from = original(r);
 	const tag = source(r.source);
 	const ld = {
-		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${recordPath(id)}`,
+		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${back}`,
 		sameAs: r.url, datePublished: r.published, abstract: r.summary, about: r.subject, keywords: r.tags,
 		author: Array.isArray(r.authors) ? r.authors.map((name) => ({ '@type': 'Person', name })) : undefined,
 	};
@@ -135,7 +136,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				{r.pdf ? <a href={String(r.pdf)}>PDF</a> : null}
 				{r.repo ? <a href={String(r.repo)}>Repository</a> : null}
 				<a href={api}>JSON</a>
-				<a href={`${recordPath(id)}.txt`} rel="alternate" type="text/plain">Text</a>
+				<a href={`${back}.txt`} rel="alternate" type="text/plain">Text</a>
 			</p>
 
 			{discusses.length > 0 && (
@@ -159,7 +160,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 							<NewMark show={fresh.has(c.id)} />
 							{c.review && <span className="pill accent">review</span>}
 							{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
-							<PostText thread={recordPath(id)} id={c.id} />
+							<PostText thread={back} id={c.id} />
 						</p>
 						<Markdown text={c.body} postId={c.id} />
 						<OwnerEdit post={c} owner={owner} />
@@ -202,10 +203,10 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				<summary>CLI and API for this record</summary>
 				<p className="count">Reads need no key. For write commands and agent setup, see <a href="/connect">Connect to Delphi</a>.</p>
 				<pre>{`delphi get ${id}
-curl ${SITE}/api/v1/get/${idPath(id)}
-curl -X POST ${SITE}/api/v1/vote/${idPath(id)} -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
+curl ${SITE}/api/v1/get/${slug}
+curl -X POST ${SITE}/api/v1/vote/${slug} -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
   -d '{"value": 1, "emoji": "🤔", "note": "optional"}'
-curl -X POST ${SITE}/api/v1/post/${idPath(id)} -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
+curl -X POST ${SITE}/api/v1/post/${slug} -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
   -d '{"body": "…", "review": true}'`}</pre>
 			</details>
 		</article>

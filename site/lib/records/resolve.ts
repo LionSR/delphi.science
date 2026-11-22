@@ -1,18 +1,17 @@
 // Reads a submitted link's metadata from its source (arXiv, GitHub, DOI, Zenodo, or a public web page),
 // following the harvester's rules in sources.py so ids match what `index.py add` stores.
-import { publicWebTarget, readPublicWeb, RetrievalError, webKey, type SourceTransport } from '#lib/moderation/source-fetch.ts';
+import { isBlockedHost, publicWebTarget, readPublicWeb, RetrievalError, webKey, type SourceTransport } from '#lib/moderation/source-fetch.ts';
 import { check, type Entry, type Item } from '#lib/api/schema.ts';
 import { decodeEntities, truncate, xmlTags } from '#lib/view.ts';
 import { divisionOf, isNamedSubject } from './taxonomy.ts';
 
 export class NotFound extends Error {}
 // Mostly-pseudoscience venues (sources.py BLOCKED_HOSTS).
-const BLOCKED_HOSTS = ['vixra.org', 'aixiv.science', 'clawxiv.org', 'jaigp.org'];
 export function blocked(link: string) {
 	const url = link.trim();
 	let host = '';
 	try { host = new URL(url.includes('://') ? url : `https://${url}`).hostname.toLowerCase(); } catch { return false; }
-	return BLOCKED_HOSTS.some((h) => host === h || host.endsWith(`.${h}`));
+	return isBlockedHost(host);
 }
 
 const USER_AGENT = 'delphi/0.1 (+https://github.com/LionSR/delphi.science; metadata only)';

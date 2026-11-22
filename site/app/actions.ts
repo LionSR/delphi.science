@@ -25,6 +25,8 @@ import { isReviewer, reviewLogin } from '#lib/accounts/review.ts';
 import { saveForm, type QueriesFormState } from '#lib/accounts/queries-form.ts';
 
 
+const text = (form: FormData, name: string, fallback = '') => String(form.get(name) ?? fallback);
+
 // Runs a form action and redirects back, with a QueryError's message as ?notice=.
 async function thenBack(back: string, act: () => Promise<unknown>) {
 	let to = back;
@@ -44,7 +46,7 @@ export async function savePostEdit(input: { id: number; body: string; revision: 
 		const saved = await editPost(await db(), input.id, who, input);
 		revalidatePath(saved.record_id ? recordPath(saved.record_id) : `/${topicPath(saved.space ?? FORUM, saved.topic_id!)}`);
 		if (saved.topic_id && saved.space === FORUM) revalidatePath('/forum');
-		revalidatePath(`/u/${encodeURIComponent(who.login)}`);
+		revalidatePath(profilePath(who.login));
 		return { ok: true };
 	} catch (error) {
 		return { ok: false, feedback: postFeedback(error) };
@@ -53,9 +55,10 @@ export async function savePostEdit(input: { id: number; body: string; revision: 
 
 export async function sendPost(_previous: PostFormState, form: FormData): Promise<PostFormState> {
 	const kind = String(form.get('kind')) as PostInput['kind'];
+	const title = text(form, 'title'), body = text(form, 'body'), review = form.get('review') === 'on';
+	const rawSection = form.get('section');
 	// What was sent, to fill the form again if it is not posted: without JavaScript the page is all the author has.
-	const draft = { title: String(form.get('title') ?? ''), body: String(form.get('body') ?? ''), review: form.get('review') === 'on',
-		...(isSection(form.get('section')) ? { section: form.get('section') as Section } : {}) };
+	const draft = { title, body, review, ...(isSection(rawSection) ? { section: rawSection as Section } : {}) };
 	if (!(FORM_KINDS as readonly string[]).includes(kind)) {
 		return { status: 'failed', feedback: { code: 'bad_request', message: 'Choose a topic, reply, comment or review form.', fix: 'Open the relevant thread and try again.' } };
 	}
@@ -63,14 +66,11 @@ export async function sendPost(_previous: PostFormState, form: FormData): Promis
 		const who = await me();
 		if (!who) return { status: 'failed', draft, feedback: { code: 'sign_in', message: 'Sign in with GitHub before posting.', fix: 'Your draft is kept. Sign in, review it, then submit.' } };
 		const location = await submitPostForm(await db(), who, {
-			kind,
-			title: String(form.get('title') ?? ''),
-			section: form.has('section') ? String(form.get('section')) : undefined,
-			body: String(form.get('body') ?? ''),
+			kind, title, body, review,
+			section: rawSection !== null ? String(rawSection) : undefined,
 			topic: form.has('topic') ? Number(form.get('topic')) : undefined,
 			parent: form.has('parent') ? Number(form.get('parent')) : undefined,
 			record: form.has('record') ? String(form.get('record')) : undefined,
-			review: form.get('review') === 'on',
 			space: form.has('space') ? String(form.get('space')) : undefined,
 		});
 		revalidatePath(location.split('#')[0]);
@@ -110,20 +110,20 @@ export async function acceptOn(form: FormData) {
 
 // ---- Spaces (/ws). Plain forms: each acts and comes back, with no script needed. ----
 
-const slugOf = (form: FormData) => String(form.get('space') ?? '').replace(/[^a-z0-9-]/g, '');
+const slugOf = (form: FormData) => text(form, 'space').replace(/[^a-z0-9-]/g, '');
 
 export async function openSpace(form: FormData) {
 	const who = await signedIn('/ws');
-	const title = String(form.get('title') ?? ''), about = String(form.get('about') ?? '');
+	const title = text(form, 'title'), about = text(form, 'about'), rawInvite = text(form, 'invite');
 	let to: string;
 	try {
 		// Logins to invite as the space opens, separated by spaces or commas.
-		const invite = String(form.get('invite') ?? '').split(/[\s,]+/).filter(Boolean);
+		const invite = rawInvite.split(/[\s,]+/).filter(Boolean);
 		to = `/ws/${(await createSpace(await db(), who, { title, about, invite })).id}`;
 	} catch (e) {
 		if (!(e instanceof QueryError)) throw e;
 		// Back to the form with what was typed, so a mistyped login costs nothing.
-		to = `/ws?${new URLSearchParams({ notice: e.message, title, about, invite: String(form.get('invite') ?? '') })}#open`;
+		to = `/ws?${new URLSearchParams({ notice: e.message, title, about, invite: rawInvite })}#open`;
 	}
 	redirect(to);
 }
@@ -131,21 +131,22 @@ export async function openSpace(form: FormData) {
 /** Invites the login in the form, or with the person's own login accepts their invitation. */
 export async function addToSpace(form: FormData) {
 	const space = slugOf(form), who = await signedIn('/ws');
-	const own = String(form.get('login') ?? '').replace(/^@/, '').toLowerCase() === who.login.toLowerCase();
-	await thenBack(own ? `/ws/${space}` : `/ws/${space}#members`, async () => addMember(await db(), space, who, String(form.get('login') ?? '').trim(), String(form.get('note') ?? '')));
+	const login = text(form, 'login').trim();
+	const own = login.replace(/^@/, '').toLowerCase() === who.login.toLowerCase();
+	await thenBack(own ? `/ws/${space}` : `/ws/${space}#members`, async () => addMember(await db(), space, who, login, text(form, 'note')));
 }
 
 /** Leaves, declines, or as the creator removes: takes the login in the form off the space. */
 export async function removeFromSpace(form: FormData) {
 	const space = slugOf(form), who = await signedIn('/ws');
-	const login = String(form.get('login') ?? '');
+	const login = text(form, 'login');
 	await thenBack(login.toLowerCase() === who.login.toLowerCase() ? '/ws' : `/ws/${space}#members`, async () => removeMember(await db(), space, who, login));
 }
 
 /** The creator deletes a space, after typing its slug. */
 export async function dropSpace(form: FormData) {
 	const space = slugOf(form), who = await signedIn('/ws');
-	if (String(form.get('confirm') ?? '').trim() !== space) redirect(`/ws/${space}?notice=${encodeURIComponent('Type the space\'s slug exactly to delete it.')}`);
+	if (text(form, 'confirm').trim() !== space) redirect(`/ws/${space}?notice=${encodeURIComponent('Type the space\'s slug exactly to delete it.')}`);
 	await thenBack('/ws', async () => deleteSpace(await db(), space, who));
 }
 
@@ -153,7 +154,7 @@ export async function dropSpace(form: FormData) {
 export async function chooseOption(form: FormData) {
 	const space = slugOf(form), topic = Number(form.get('topic')), parent = Number(form.get('post'));
 	const back = `/ws/${space}/${topic}`, who = await signedIn(back);
-	await thenBack(back, async () => post(await db(), { topic, space }, who, { body: String(form.get('option') ?? ''), parent }));
+	await thenBack(back, async () => post(await db(), { topic, space }, who, { body: text(form, 'option'), parent }));
 }
 
 export async function signOut() {
@@ -165,14 +166,14 @@ export async function signOut() {
 }
 
 export async function approve(form: FormData) {
-	const code = String(form.get('code') ?? ''), back = `/keys/approve?code=${encodeURIComponent(code)}`;
+	const code = text(form, 'code'), back = `/keys/approve?code=${encodeURIComponent(code)}`;
 	const who = await signedIn(back);
 	await thenBack(back, async () => approveDevice(await db(), code, who.login));
 }
 
 export async function deny(form: FormData) {
 	await signedIn('/keys');
-	await denyDevice(await db(), String(form.get('code') ?? ''));
+	await denyDevice(await db(), text(form, 'code'));
 	redirect('/keys');
 }
 
@@ -216,7 +217,7 @@ export async function dropKey(form: FormData) {
 
 /** The signed-in person's own public profile fields, from their profile page. */
 export async function savePublicName(form: FormData) {
-	const back = profilePath(String(form.get('login') ?? ''));
+	const back = profilePath(text(form, 'login'));
 	const who = await signedIn(back);
 	await thenBack(profilePath(who.login.toLowerCase()), async () => {
 		await editPublicName(await db(), who.login, {
@@ -234,8 +235,8 @@ export async function savePublicName(form: FormData) {
 export async function saveQueries(previous: QueriesFormState, form: FormData): Promise<QueriesFormState> {
 	const who = await signedIn('/me/queries');
 	const state = await saveForm(await db(), who.login, previous, {
-		text: String(form.get('queries') ?? ''), revision: String(form.get('revision') ?? '0'),
-		categories: [...form.getAll('cat').map(String), ...String(form.get('codes') ?? '').split(/[\s,]+/)],
+		text: text(form, 'queries'), revision: text(form, 'revision', '0'),
+		categories: [...form.getAll('cat').map(String), ...text(form, 'codes').split(/[\s,]+/)],
 	});
 	if (state.status === 'saved') revalidatePath('/');
 	return state;

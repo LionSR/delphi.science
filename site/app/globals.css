@@ -164,6 +164,27 @@ table.stats :is(th, td) { text-align: left; padding: 0.25rem 1.2rem 0.25rem 0; b
 table.stats th { font-weight: 500; color: var(--muted); }
 table.stats .num { text-align: right; }
 table.stats :is(th, td):last-child { padding-right: 0; }
+/* Files and checks (app/shared-files.tsx): one row per version, which opens to its files */
+.artifact { margin-top: 0.9rem; }
+.versions { margin: 0.4rem 0 0; border-top: 1px solid var(--rule); font-size: var(--small); }
+.versions details { border-bottom: 1px solid var(--rule); }
+.versions summary { display: grid; grid-template-columns: minmax(11.5rem, 1.3fr) 7rem minmax(7.5rem, 1fr) 5rem minmax(9rem, 1.5fr); gap: 0.1rem 1rem; align-items: baseline; position: relative; padding: 0.45rem 0 0.45rem 1.2rem; cursor: pointer; list-style: none; }
+.versions summary::-webkit-details-marker { display: none; }
+.versions summary::before { content: ''; position: absolute; left: 0.25rem; top: 0.85rem; border: 0.3rem solid transparent; border-left-color: var(--muted); border-right-width: 0; transition: transform var(--motion); }
+.versions details[open] > summary::before { transform: rotate(90deg); }
+.versions summary:hover { background: var(--surface); }
+.versions .state { display: inline-block; min-width: 3.4rem; margin-right: 0.6rem; padding: 0 0.45rem; border: 1px solid var(--rule); border-radius: var(--round); background: var(--surface); color: var(--muted); text-align: center; }
+.versions .state.current { border-color: var(--accent); background: none; color: var(--accent); font-weight: 600; }
+.versions .none { color: var(--muted); }
+.versions .failed, .versions tr.removed td:last-child { color: var(--warn); }
+.versions .opened { padding: 0 0 0.9rem 1.2rem; }
+.versions .opened .count { margin-top: 0.1rem; max-width: 68ch; }
+.versions tr.removed td:first-child { text-decoration: line-through; color: var(--muted); }
+.versions tr:is(.added, .changed, .removed) td:last-child { font-weight: 600; }
+@media (max-width: 640px) {
+	.versions summary { grid-template-columns: 1fr 1fr; }
+	.versions summary > :first-child { grid-column: 1 / -1; }
+}
 
 /* My feed (lib/feed-view.ts) and the saved queries (app/me/queries) */
 .notice { margin: 1rem 0; padding: 0.7rem 0.9rem; border: 1px solid var(--rule); border-radius: 0.5rem; background: var(--surface); }

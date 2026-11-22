@@ -28,8 +28,8 @@ jobs:
           BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
           HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
-          # New branch or force push: no usable base, so check only the head commit.
-          if [ -z "$BASE" ] || ! git cat-file -e "$BASE^{commit}" 2>/dev/null; then range="$HEAD -1"; else range="$BASE..$HEAD"; fi
+          # New branch or force push: no usable ancestor base, so check only the head commit.
+          if [ -z "$BASE" ] || ! git merge-base --is-ancestor "$BASE" "$HEAD" 2>/dev/null; then range="$HEAD -1"; else range="$BASE..$HEAD"; fi
           bad=$(git log --format='%h %ae %s' $range | awk -v ok=" $TEAM_EMAILS " 'index(ok, " " $2 " ") == 0')
           if [ -n "$bad" ]; then
             echo "::error::These commits are not authored by a member of the Vercel team ($TEAM_EMAILS), so Vercel will not deploy them:"

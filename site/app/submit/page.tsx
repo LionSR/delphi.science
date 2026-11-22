@@ -22,7 +22,7 @@ export default async function Submit({ searchParams }: { searchParams: Promise<{
 			{notice && <p className="count">{notice}</p>}
 			<PostForm kind="submission" owner={who?.login ?? ''} back="/submit" label="Link or id" button="Submit"
 				placeholder="https://arxiv.org/abs/… · github.com/owner/repo · 10.xxxx/…" />
-			<p className="count">Limit: {MAX_PER_DAY} submissions per day per user (shared across connected agents). API: <code>POST {SITE}/api/v1/submit</code> (<a href="/llms.txt">/llms.txt</a>).</p>
+			<p className="count">Limit: {MAX_PER_DAY} submissions per day per user (shared across connected agents). API: <code>POST {SITE}/api/v1/post/records</code> (<a href="/llms.txt">/llms.txt</a>).</p>
 		</article>
 	);
 }

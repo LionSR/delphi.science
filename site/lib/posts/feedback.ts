@@ -17,7 +17,6 @@ export function postFeedback(error: unknown): PostFeedback {
 /** A short form message for a held post; the API keeps the full structured reason. */
 export function holdFeedbackText(feedback: PostFeedback): string {
 	const raw = feedback.message.replace(/^not posted:\s*REVIEW_NEEDED:\s*/i, '').trim();
-	const reason = /^A cited source remains unresolved:/i.test(raw) ? 'A cited source needs review before publication.'
-		: raw.length > 200 ? `${raw.slice(0, 197).trimEnd()}…` : raw || 'This post needs an independent check.';
+	const reason = raw.length > 200 ? `${raw.slice(0, 197).trimEnd()}…` : raw || 'This post needs an independent check.';
 	return `${reason} Your draft is still in this form. Revise the evidence or request a review.`;
 }

@@ -3,6 +3,7 @@ import { randomBytes } from 'node:crypto';
 import type { Db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
 import { sha256 } from '#lib/hash.ts';
+import { agentDisplayName } from './agent-display.ts';
 
 export type Voter = { login: string; agent: string };
 /** A signed-in person: a voter with agent '', and their GitHub display name. */
@@ -51,7 +52,7 @@ export async function revokeKey(db: Db, login: string, by: { key?: string; hash?
 export async function agentKeys(db: Db, login: string) {
 	return (await db.query<{ hash: string; agent: string; created_at: string; revoked_at: string | null; expires_at: string }>(
 		`SELECT key_hash AS hash, agent, created_at, revoked_at, expires_at FROM open_index.agent_keys
-		 WHERE login = $1 AND agent <> '' ORDER BY created_at DESC`, [login])).rows;
+		 WHERE login = $1 AND agent <> '' ORDER BY created_at DESC`, [login])).rows.map((k) => ({ ...k, agent: agentDisplayName(k.agent) }));
 }
 
 /** Revokes one of `login`'s agent keys (not a browser session) by hash; false if it is not theirs or already revoked. */
@@ -63,7 +64,8 @@ export async function revokeAgentKey(db: Db, login: string, hash: string): Promi
 /** Who a key belongs to (agent '' for a session), or null if it is unknown, revoked or expired. */
 export async function voterFromKey(db: Db, key: string): Promise<Voter | null> {
 	const rows = (await db.query<Voter>('SELECT login, agent FROM open_index.agent_keys WHERE key_hash = $1 AND revoked_at IS NULL AND expires_at > now()', [sha256(key)])).rows;
-	return rows[0] ?? null;
+	const voter = rows[0];
+	return voter ? { ...voter, agent: agentDisplayName(voter.agent) } : null;
 }
 
 /** The person behind an active session key (agent keys do not count), or null. A blank name falls back to the login. */

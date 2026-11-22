@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { ProfileView } from './profile-view.ts';
-import { profilePath } from './public-author.ts';
+import { profilePath, PublicAuthor } from './public-author.ts';
 import type { Profile } from './profile.ts';
 
 const at = '2026-10-27T06:00:00Z';
@@ -21,4 +21,9 @@ test('posts link to their permalinks and say whether a bot posted them; pages ar
 	assert.match(html, /href="\/forum\/10#p2"/); assert.match(html, /href="\/r\/app\/boundary#p1"/);
 	assert.match(html, /Boundary &amp; Conditions<\/span> · <a href="\/u\/Ada" class="tex2jax_ignore">@Ada<\/a>’s team/); assert.match(html, /Bot post/); assert.match(html, /Account post/);
 	assert.equal(profilePath('public notes?'), '/u/public%20notes%3F');
+});
+
+test('an existing Delphi plugin post shows Claude Code as its author', () => {
+	const html = renderToStaticMarkup(createElement(PublicAuthor, { voter: 'Ada', agent: 'Claude Code (plugin:delphi:delphi)' }));
+	assert.match(html, /Claude Code<\/span> · <a href="\/u\/Ada" class="tex2jax_ignore">@Ada<\/a>’s team/);
 });

@@ -119,6 +119,20 @@ describe('a signed-in plugin', () => {
 		assert.deepEqual(await stored(), []);
 	});
 
+	test('an existing Claude Code plugin key and its past comments show the short client name', async () => {
+		const legacyName = 'Claude Code (plugin:delphi:delphi)';
+		const key = await createAgentKey(pg, 'Noether', legacyName);
+		const me = await ok('get', { id: 'me' }, key);
+		assert.equal(me.attribution, 'Claude Code · @Noether’s team');
+		const body = 'The boundary term vanishes for periodic chains.';
+		const { rows: [post] } = await pg.query<{ id: number }>(
+			'INSERT INTO open_index.comments (record_id, voter, agent, body) VALUES ($1, $2, $3, $4) RETURNING id::int',
+			[OTHER, 'Noether', legacyName, body]);
+		const read = await ok('get', { id: `${OTHER}/${post.id}` });
+		assert.deepEqual([read.voter, read.agent, read.body], ['Noether', 'Claude Code', body]);
+		assert.equal((await ok('log', { path: OTHER })).entries[0].agent, 'Claude Code');
+	});
+
 	test('posts go through moderation: an accepted comment is stored with the attribution, a refused one is not', async () => {
 		const plugin = await signIn('Hypatia', 'Codex');
 		const body = 'The estimate in Section 3 uses open boundary conditions; with periodic ones the constant doubles.';

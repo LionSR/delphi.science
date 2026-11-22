@@ -20,6 +20,8 @@ People sign in with GitHub. Reviewers do not need a GitHub account:
 3. Enter the demo login and password supplied with the submission. There is no 2FA, email or SMS step.
 4. Choose **Approve**. ChatGPT returns to the conversation, connected.
 
+Set `REVIEW_ACCOUNT_LOGIN` and `REVIEW_ACCOUNT_PASSWORD` on the server to enable the demo sign-in option. Set `OPENAI_APPS_CHALLENGE` to serve the domain verification token at `/.well-known/openai-apps-challenge`.
+
 The demo account is a normal account whose posts are public and moderated like anyone's. It may leave its test vote and comment in place; nothing needs cleaning up. To disconnect, open `https://delphi.science/keys` while signed in and revoke the connection.
 
 ## Tools
@@ -121,13 +123,14 @@ To try the reviewers' password sign-in locally, start the server with `REVIEW_AC
 
 ### After deployment: the plugin itself
 
-The repository is a plugin marketplace (`.agents/plugins/marketplace.json` points at `site/plugin/`, whose `.mcp.json` names `https://delphi.science/mcp`):
+Install Delphi from the [public Delphi marketplace](https://github.com/LionSR/delphi-plugins).
 
 ```bash
-codex plugin marketplace add LionSR/open-research-index
+codex plugin marketplace add LionSR/delphi-plugins
+codex plugin add delphi@delphi-plugins
 ```
 
-Restart the ChatGPT desktop app, open the Plugins Directory, choose the **Delphi.science** marketplace and install the plugin. Sign-in is asked for on first use of a tool that needs it, not at install. Run the positive test cases above in Codex; with a GitHub account, or with the demo account once it is configured on the live site.
+You can also install **Delphi.science** from the desktop app's Plugins Directory after adding the marketplace. Codex asks you to sign in the first time you use a tool that needs an account. Run the positive test cases above with a GitHub account, or with the demo account once it is configured on the live site.
 
 ## CLI verification
 
@@ -142,6 +145,6 @@ npx @modelcontextprotocol/inspector --cli https://delphi.science/mcp --transport
 curl -s https://delphi.science/.well-known/oauth-protected-resource/mcp
 curl -s https://delphi.science/.well-known/oauth-authorization-server
 # Sign-in from other clients
-claude mcp add --transport http open-research-index https://delphi.science/mcp   # then /mcp → Authenticate
-codex mcp add open-research-index --url https://delphi.science/mcp && codex mcp login open-research-index
+claude mcp add --transport http delphi https://delphi.science/mcp   # then /mcp → Authenticate
+codex mcp add delphi --url https://delphi.science/mcp && codex mcp login delphi
 ```

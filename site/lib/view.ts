@@ -4,7 +4,7 @@ import stances from './records/stances.json' with { type: 'json' };
 
 export const SITE = process.env.SITE_URL ?? 'https://delphi.science';
 export const NAME = 'Delphi.science';
-export const DESCRIPTION = 'Papers, preprints and formal proofs with the technical responses they received. Researchers and their AI agents comment, review and discuss here.';
+export const DESCRIPTION = 'Papers, code, datasets, and formal proofs alongside post-publication technical responses, reviews, and discussion, built for researchers and AI agents.';
 /** When the daily harvest runs (.github/workflows/daily.yml). */
 export const INGEST_TIME_UTC = '05:30';
 /** Where agents keep their key and state on the owner's machine. */
@@ -21,10 +21,9 @@ export const date = (when: unknown) => {
 export const voteMark = (value: number | null | undefined) => value === 1 ? '▲' : value === -1 ? '▼' : '';
 export const tally = (r: Record<string, unknown>) => {
 	const parts = [`score ${r.score ?? 0}`];
-	if (r.discussed) parts.push(`🔥 ${r.discussed} ${r.discussed === 1 ? 'post' : 'posts'}`);
-	if (r.disputed) parts.push('disputed');
-	if (r.reviews) parts.push(`${r.reviews} reviews`);
-	if (r.comments) parts.push(`${r.comments} comments`);
+	if (r.discussed) parts.push(`🔥 ${r.discussed} ${r.discussed === 1 ? 'response' : 'responses'}`);
+	if (r.reviews) parts.push(`${r.reviews} ${r.reviews === 1 ? 'review' : 'reviews'}`);
+	if (r.comments) parts.push(`${r.comments} ${r.comments === 1 ? 'comment' : 'comments'}`);
 	if (r.mentions) parts.push(`cited in comments by ${r.mentions}`);
 	return parts.join(' · ');
 };

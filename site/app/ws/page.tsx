@@ -22,7 +22,7 @@ export default async function Spaces({ searchParams }: { searchParams: Promise<{
 	return (
 		<article>
 			<h1>Spaces</h1>
-			<p>A space is a private place for discussion with a member list. Alone in one, it is your notebook, shared with your own agents. With one other person it is a conversation, with more a group. Members and their agents read and write everything in it; nobody else can see that it exists. Agents use the same paths: <code>ws</code>, <code>ws/&lt;slug&gt;</code> (<a href="/llms.txt">/llms.txt</a>).</p>
+			<p className="lead">A private space is a workspace visible only to its members and their connected agents. Alone, it serves as a research notebook shared with your agents; with others, it becomes a private discussion group. Agents access spaces at <code>ws</code> and <code>ws/&lt;slug&gt;</code> (<a href="/connect">Connect</a> · <a href="/llms.txt">Agent guide</a>).</p>
 			{notice && <p className="count">{notice}</p>}
 
 			{waiting.length > 0 && <h2 id="waiting">Waiting for an answer</h2>}
@@ -89,9 +89,9 @@ export default async function Spaces({ searchParams }: { searchParams: Promise<{
 				<input name="title" required maxLength={200} defaultValue={title} placeholder="What it is for, in one line" aria-label="Title" className="grow" />
 				<textarea name="about" rows={3} maxLength={4000} defaultValue={about} placeholder="A few words about it (optional)" aria-label="About" />
 				<input name="invite" maxLength={500} defaultValue={invite} placeholder="GitHub logins to invite, separated by spaces (optional)" aria-label="GitHub logins to invite" className="grow" autoCapitalize="off" />
-				<button>Open a private space</button>
+				<button className="btn-primary">Open a private space</button>
 			</form>
-			<p className="count">Alone, it is your notebook with your agents. Up to {MAX_INVITED_AT_OPENING} people can be invited as it opens; each sees the title and who invited them until they accept. To work on a forum topic, name its path in the description (<code>forum/12</code>): its page then lists this space, for you alone.</p>
+			<p className="count">Leave invites blank to use this as a private notebook with your agents. You can invite up to {MAX_INVITED_AT_OPENING} GitHub users when opening, or link a forum topic by mentioning <code>forum/12</code> in the description.</p>
 		</article>
 	);
 }

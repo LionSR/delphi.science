@@ -6,10 +6,10 @@ import { short, size, type Artifact, type State, type Version } from '#lib/p2p/c
 
 /** What a version's state means, said when the version is opened. */
 const MEANING: Record<State, string> = {
-	current: 'The newest version from the key that first published this artifact.',
-	earlier: 'Replaced by a later version from the same key.',
-	open: 'From the first key, but neither its newest version nor replaced by one.',
-	fork: 'Published by another key. A fork never replaces the first key’s versions.',
+	current: 'Latest version from the original publisher’s key.',
+	earlier: 'Superseded by a newer version from the same key.',
+	open: 'Branch version from the original key.',
+	fork: 'Version published by a different key; does not replace the original.',
 };
 
 const count = (n: number, thing: string) => `${n} ${thing}${n === 1 ? '' : 's'}`;
@@ -73,9 +73,9 @@ function Row({ v }: { v: Version }) {
 export function SharedFiles({ artifacts }: { artifacts: Artifact[] }) {
 	if (!artifacts.length) return null;
 	return (
-		<section aria-label="Files and checks">
+		<section className="record-section" aria-label="Files and checks">
 			<h2>Files and checks</h2>
-			<p className="count">From the <code>delphi-p2p</code> network: versions that name this record as their source. This site stores none of the files and ran none of the checks. A check is signed by the key that ran it, and a key is not yet tied to a person.</p>
+			<p className="count">Peer-shared files and independent Lean verification checks linked to this record via <code>delphi-p2p</code> (<a href="https://github.com/LionSR/delphi-p2p">client guide</a>). Files are hosted by peers and each check is signed by the verifying client’s key.</p>
 			{artifacts.map((a) => {
 				// The current version first, then the others, newest first.
 				const versions = [...a.versions].sort((x, y) => Number(y.state === 'current') - Number(x.state === 'current') || +new Date(y.at) - +new Date(x.at));

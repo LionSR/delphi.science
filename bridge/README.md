@@ -1,39 +1,43 @@
-# The bridge from the peer-to-peer network to the site
+# P2P website bridge
 
-[`delphi-p2p`](https://github.com/LionSR/delphi-p2p) is the peer-to-peer client: people and their agents use it to
-publish research files, fetch them by hash and sign the result of re-running a Lean proof. It has its own repository
-and works without this site. This directory holds the one piece that connects the two.
+[`delphi-p2p`](https://github.com/LionSR/delphi-p2p) is the standalone peer-to-peer client for publishing research
+files, fetching snapshots by hash, and signing sandboxed Lean check verdicts independently of `delphi.science`. This
+directory contains the bridge that relays claims and file manifests from a `delphi-p2p` node to the website.
 
-A website has no process that stays up, so it cannot be a client. `bridge.py` runs beside a client that does and
-hands that client's log to the site:
+## Running the bridge
+
+Because a serverless website has no persistent daemon, `bridge.py` runs alongside a serving `delphi-p2p` node and
+relays its claim log over HTTP:
 
 ```bash
 delphi-p2p serve --mirror &
 python3 bridge.py --site https://delphi.science --key-file bridge.key --cursor bridge.cursor
 ```
 
-It needs Python 3.9 or later and no packages. `--home` names the client's directory and `--client` its binary when
-they are not the defaults. It was written against `delphi-p2p` 0.1.0 and reads two of its outputs,
-`delphi-p2p log --json` and `delphi-p2p files <id> --exact --json`; a change to either has to be followed here.
+Requires Python 3.9 or later with no external packages. Pass `--home` to specify a non-default `delphi-p2p` data
+directory and `--client` to point to a custom binary path. The bridge targets `delphi-p2p` 0.1.0 and parses
+`delphi-p2p log --json` and `delphi-p2p files <id> --exact --json`.
 
-## What it sends
+## What the bridge relays
 
-- **Claims.** It reads `delphi-p2p log --json --since <cursor>` and posts the claims to `POST /api/v1/claims`
-  (`site/lib/p2p/claims.ts`). The key is an agent key of an account the site lists in `P2P_BRIDGE_LOGINS`. Claims go
-  one way, from the network to the site, and the site keeps the first copy of each id, so sending twice is harmless.
-- **File lists.** The site's reply names the versions whose file list it lacks. For those the client holds, the
-  bridge sends each file's path, size and hash. The files stay with the clients. A publish claim signs one hash for
-  the whole directory and that hash fixes the list, so the list is not a claim and needs no signature. A list of
-  more than 10,000 files is not sent.
+- **Claims:** Reads `delphi-p2p log --json --since <cursor>` and posts entries to `POST /api/v1/claims`
+  (`site/lib/p2p/claims.ts`), authenticated with an agent key for an account listed in `P2P_BRIDGE_LOGINS`. Syncing is
+  one-way from the P2P network to the website and idempotent by claim ID.
+- **File manifests:** When the API response lists version IDs missing file manifests, the bridge uploads the path,
+  size, and hash of each file for versions held locally (snapshots over 10,000 files are skipped). Actual file contents
+  stay on peers. Because the signed `publish` claim commits to the snapshot's BLAKE3 root hash, the manifest does not
+  need a separate signature.
 
-## What the site shows
+## What the website displays
 
-A record's page shows the artifacts whose first version names that record as its source: each version, whether it is
-current, earlier or a fork, how many keys hold its files, how many keys passed or failed it, and its files with those
-that changed since the version before (`site/app/shared-files.tsx`).
+Record pages display artifacts whose initial version references that record via `--source`: each version's state
+(`current`, `earlier`, `open`, or `fork`), holder counts, pass/fail check counts, and file diffs
+(`site/app/shared-files.tsx`).
 
-A claim's title, note and author names are written by strangers and are not shown. File names are too: one is shown
-only if it is made of letters, digits and `. _ + -` between slashes, and the rest are counted.
+Untrusted free-text fields from claims (title, note, and author names) are not rendered on the site. Only file paths
+composed of ASCII letters, digits, `.`, `_`, `+`, `-`, and `/` are shown; any other paths are counted without
+displaying their names.
 
-The site does not verify signatures: it trusts its bridge, whose client verified each claim on arrival. Anyone can
-run a client and a bridge to a site of their own and get the same pages from the same claims.
+The website trusts its configured bridge rather than re-verifying p2panda signatures server-side, since the bridge's
+local `delphi-p2p` node verifies every claim on receipt. Anyone can run a node and bridge against another site instance
+to display the same data.

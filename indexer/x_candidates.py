@@ -2,10 +2,10 @@
 
 Needs an X API bearer token in X_BEARER_TOKEN (recent search covers the last 7 days). Prints a Markdown
 report: each post with its author's name, handle and bio, the record it is about, and the
-`python3 index.py discuss` command to attach it after review. Nothing is attached, and nothing is
+`python3 indexer/index.py discuss` command to attach it after review. Nothing is attached, and nothing is
 written to disk: a post's text is not kept anywhere, as the README promises for X.
 
-  python3 x_candidates.py [--days 4] [--max-results 25]
+  python3 indexer/x_candidates.py [--days 4] [--max-results 25]
 
 A post is about a record when it links the record (its GitHub folder, page or mirror) or matches one of
 the QUERIES below. Each run reads at most len(QUERIES) * --max-results posts from the API's monthly quota.
@@ -143,7 +143,7 @@ def report(found: list[dict[str, Any]], records: Records, start: dt.date, end: d
                   f"> {S.trim(p['bio'], 200)}", "", S.trim(p["text"], 300), ""]
         for rid in p["records"]:
             lines.append(f"- `{rid}`: {records.by_id[rid].get('title', '')[:90]}")
-            lines.append(f"  `python3 index.py discuss {rid} {p['url']}`")
+            lines.append(f"  `python3 indexer/index.py discuss {rid} {p['url']}`")
     return "\n".join(lines) + "\n"
 
 

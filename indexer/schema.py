@@ -9,7 +9,8 @@ import json
 from pathlib import Path
 from typing import Any
 
-SPEC = json.loads((Path(__file__).resolve().parent / "site" / "openapi.json").read_text())
+ROOT = Path(__file__).resolve().parent.parent
+SPEC = json.loads((ROOT / "site" / "openapi.json").read_text())
 TYPES: dict[str, type | tuple[type, ...]] = {"object": dict, "array": list, "string": str, "integer": int, "number": (int, float),
                                             "boolean": bool, "null": type(None)}
 

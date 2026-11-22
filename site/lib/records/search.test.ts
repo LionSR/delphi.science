@@ -1,4 +1,4 @@
-// Search and votes on PGlite with the migrations. Needs a build: python3 index.py build.
+// Search and votes on PGlite with the migrations. Needs a build: python3 indexer/index.py build.
 import { strict as assert } from 'node:assert';
 import { existsSync } from 'node:fs';
 import { before, describe, test } from 'node:test';

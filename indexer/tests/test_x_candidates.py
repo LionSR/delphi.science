@@ -2,11 +2,14 @@
 
 import io
 import os
+import sys
 import unittest
 from contextlib import redirect_stdout
+from pathlib import Path
 from unittest.mock import patch
 
-import x_candidates as X
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import x_candidates as X  # noqa: E402
 
 ENTRIES = [
     {"source": "openai-math", "key": "The-Unique-Games-Theorem", "title": "The Unique Games Theorem",
@@ -75,7 +78,7 @@ class Run(unittest.TestCase):
             self.assertEqual(X.main(["--days", "3"]), 0)
         text = out.getvalue()
         self.assertEqual(len(calls), len(X.QUERIES))
-        self.assertIn("python3 index.py discuss lean/anthropics__formal-math__3sum-apsp https://x.com/ada/status/5", text)
+        self.assertIn("python3 indexer/index.py discuss lean/anthropics__formal-math__3sum-apsp https://x.com/ada/status/5", text)
         self.assertNotIn("status/7`", text)  # already attached
         self.assertIn("Not searched: X API HTTP 429", text)
 

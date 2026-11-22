@@ -94,9 +94,9 @@ Codex signs in to an MCP server itself (`codex mcp login`, or **Authenticate** u
 From the repository root (the index build needs network access to the sources):
 
 ```bash
-pip install -r requirements.txt && (cd site && npm ci)
+pip install -r indexer/requirements.txt && (cd site && npm ci)
 node --experimental-strip-types site/scripts/db.ts --entries fixtures/entries.jsonl > db.url &
-sleep 5 && SUPABASE_DB_URL="$(head -1 db.url)" python3 index.py build      # writes dist/index.json
+sleep 5 && SUPABASE_DB_URL="$(head -1 db.url)" python3 indexer/index.py build      # writes dist/index.json
 cd site && SITE_URL=http://localhost:3000 npm run dev                       # leave running
 ```
 

@@ -1,8 +1,8 @@
-// A temporary Postgres server (PGlite with all migrations) for index.py, used by test_index.py and CI.
+// A temporary Postgres server (PGlite with all migrations) for indexer/index.py, used by indexer/tests/test_index.py and CI.
 // Prints its URL on the first line and serves until stopped.
 //
 //   node --experimental-strip-types scripts/db.ts [--entries ../fixtures/entries.jsonl]
-//   SUPABASE_DB_URL=<the URL it prints> python3 index.py build
+//   SUPABASE_DB_URL=<the URL it prints> python3 indexer/index.py build
 import { readFileSync } from 'node:fs';
 import { createServer } from 'node:net';
 import { parseArgs } from 'node:util';

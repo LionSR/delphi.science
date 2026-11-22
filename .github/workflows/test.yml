@@ -28,7 +28,7 @@ jobs:
           cache: npm
           cache-dependency-path: site/package-lock.json
 
-      - run: pip install -r requirements.txt
+      - run: pip install -r indexer/requirements.txt
       - run: npm ci
         working-directory: site
 
@@ -36,12 +36,12 @@ jobs:
         run: |
           node --experimental-strip-types site/scripts/db.ts --entries fixtures/entries.jsonl > db.url &
           for i in $(seq 60); do [ -s db.url ] && break; sleep 1; done
-          SUPABASE_DB_URL="$(head -1 db.url)" python3 index.py build
+          SUPABASE_DB_URL="$(head -1 db.url)" python3 indexer/index.py build
       - name: Harvester tests
         run: |
-          python3 test_index.py
-          python3 test_candidates.py
-          python3 test_x_candidates.py
+          python3 indexer/tests/test_index.py
+          python3 indexer/tests/test_candidates.py
+          python3 indexer/tests/test_x_candidates.py
       - name: Site tests
         working-directory: site
         run: |

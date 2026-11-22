@@ -1,5 +1,5 @@
 {
- "about": "Editor-assigned stances for linked responses (record.discussion[].stance), used by index.py, lib/view.ts, and lib/records/query.ts. Stances in upvoting (plus unlabelled links when unlabelled_upvotes is true) count positively in popularity rankings; stances in disputing mark the record disputed (is:disputed). Synchronized with supabase/migrations/20261026000000_stance.sql and stance-prompt.md (verified by test_index.py).",
+ "about": "Editor-assigned stances for linked responses (record.discussion[].stance), used by indexer/index.py, lib/view.ts, and lib/records/query.ts. Stances in upvoting (plus unlabelled links when unlabelled_upvotes is true) count positively in popularity rankings; stances in disputing mark the record disputed (is:disputed). Synchronized with supabase/migrations/20261026000000_stance.sql and indexer/prompts/stance.md (verified by indexer/tests/test_index.py).",
  "stances": {
   "refutes": "finds an error that breaks the main result",
   "questions": "a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority",

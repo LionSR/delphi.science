@@ -24,8 +24,9 @@ from pathlib import Path
 from typing import Any, Iterator
 
 HERE = Path(__file__).resolve().parent
-CACHE = HERE / ".cache"
-USER_AGENT = "open-index-prototype/0.1 (+https://agenticpapers.app; research index, metadata only)"
+ROOT = HERE.parent
+CACHE = ROOT / ".cache"
+USER_AGENT = "delphi/0.1 (+https://github.com/LionSR/delphi.science; research index, metadata only)"
 SUMMARY_CHARS = 600
 
 
@@ -885,7 +886,7 @@ class Web(Source):
     def fetch_url(self, url: str) -> dict[str, Any]:
         try:
             result = subprocess.run(["node", "--experimental-strip-types", "site/scripts/read-web.ts"],
-                                    cwd=HERE, input=json.dumps({"url": url}), text=True, capture_output=True, timeout=12)
+                                    cwd=ROOT, input=json.dumps({"url": url}), text=True, capture_output=True, timeout=12)
             if result.returncode or len(result.stdout) > 16_384:
                 raise SourceError("bounded webpage retrieval could not complete")
             data = json.loads(result.stdout)

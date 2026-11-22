@@ -3,7 +3,7 @@
 
 Entries go to a fresh PGlite database (site/scripts/db.ts), which needs node and `cd site && npm ci`.
 
-    python test_index.py
+    python3 indexer/tests/test_index.py
 """
 
 from __future__ import annotations
@@ -20,14 +20,16 @@ from decimal import Decimal
 from unittest.mock import patch
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+INDEXER = Path(__file__).resolve().parent.parent
+ROOT = INDEXER.parent
+sys.path.insert(0, str(INDEXER))
 import index  # noqa: E402
 import schema as S_  # noqa: E402
 import sources as S  # noqa: E402
 import store  # noqa: E402
 from store import Ref  # noqa: E402
 
-SITE = Path(__file__).resolve().parent / "site"
+SITE = ROOT / "site"
 _server: subprocess.Popen[str] | None = None
 
 
@@ -366,7 +368,7 @@ class Reception(Entries):
 class RecordShape(unittest.TestCase):
     """Every field the built items carry, at every depth, must be in the API's Record schema (site/openapi.json)."""
 
-    ROOT = Path(__file__).resolve().parent
+    ROOT = Path(__file__).resolve().parent.parent.parent
 
     def check(self, items: list[dict]) -> None:
         record = {"$ref": "#/components/schemas/Record"}
@@ -377,7 +379,7 @@ class RecordShape(unittest.TestCase):
     def test_the_whole_build_fits_the_record_schema(self) -> None:
         built = self.ROOT / "dist" / "index.json"
         if not built.exists():
-            self.skipTest("no dist/index.json: python3 index.py build")
+            self.skipTest("no dist/index.json: python3 indexer/index.py build")
         self.check(json.loads(built.read_text())["items"])
 
 

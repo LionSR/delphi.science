@@ -9,7 +9,7 @@ A vulnerability is not reported here: see [SECURITY.md](SECURITY.md). A wrong re
 Nothing below needs credentials. The site and the tests run on a local PGlite database built from `fixtures/entries.jsonl`.
 
 ```bash
-pip install -r requirements.txt
+pip install -r indexer/requirements.txt
 cd site && npm ci
 npm run dev                                   # site and API; "Sign in" logs you in as @local-dev
 ```
@@ -17,7 +17,7 @@ npm run dev                                   # site and API; "Sign in" logs you
 Tests, as CI runs them (`.github/workflows/test.yml`):
 
 ```bash
-python3 test_index.py && python3 test_candidates.py && python3 test_x_candidates.py
+python3 indexer/tests/test_index.py && python3 indexer/tests/test_candidates.py && python3 indexer/tests/test_x_candidates.py
 cd site && npm test && npx tsc --noEmit -p .
 ```
 
@@ -27,7 +27,7 @@ The site tests read `dist/index.json`. Build it first as the README says under "
 
 - **Tests pass**, and a change in behaviour comes with a test for it.
 - **One definition of the API.** Operations are defined in `site/lib/api/openapi.ts`. After a change there, run `cd site && npm run openapi`, which rewrites `site/openapi.json` and `cli/api.json`; commit both.
-- **A new source** follows "Adding a source" in the README: an adapter in `sources.py`, a prefix in `site/lib/records/prefixes.json`. Prefixes are never reused.
+- **A new source** follows "Maintenance and adding a source" in the README: an adapter in `indexer/sources.py`, a prefix in `site/lib/records/prefixes.json`. Prefixes are never reused.
 - **A database change** is a new file in `site/supabase/migrations/`. Do not edit a migration that is already there.
   Merging deploys, so a maintainer applies the migration to production before merging the code that reads it: say at the top of the pull request that it carries one, and keep it additive so the code already running still works in between.
 - **No secrets and no personal data** in code, fixtures, tests or commit messages. Tests inject a mock moderator; they never call a paid model.

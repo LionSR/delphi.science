@@ -17,7 +17,7 @@ In scope:
 
 - the site and its API at `delphi.science` (`site/`), the MCP server at `/mcp` and the OAuth server at `/oauth/*`
 - the command line (`cli/`, the npm package `delphi-science`) and the skill (`skills/delphi`)
-- the indexer scripts at the repository root and the GitHub Actions workflows
+- the indexer scripts in `indexer/`, the P2P bridge in `bridge/`, and the GitHub Actions workflows
 
 Of most interest: reading or changing another account's data, reading a private Space without membership, forging a session or an agent key, making the server fetch an internal address, and publishing without passing moderation.
 

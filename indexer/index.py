@@ -4,15 +4,15 @@
 Entries are stored in Postgres (open_index.entries, via store.py) keyed by <source>/<key>.
 APP papers are read from the published APP registry index at build time.
 
-    python index.py add <url or id> --dry-run  # inspect only; submit through authenticated API
-    python index.py harvest [--source NAME] [--limit N] [--dry-run]
-    python index.py label [--all] [--labeler deepseek|none|canned:<file.json>]
-    python index.py refresh [--older-than DAYS] [--limit N] [--dry-run]
-    python index.py discuss <record id> <url>... [--stance STANCE] [--drop] [--dry-run]
-    python index.py discuss --recheck [<record id>...] [--dry-run]
-    python index.py discuss --propose-stances [<record id>...] [--labeler deepseek|canned:<file.json>]
-    python index.py reception [<record id>] [--draft [--labeler ...] | --text TEXT] [--reviewed-by LOGIN] [--links URL...]
-    python index.py build
+    python3 indexer/index.py add <url or id> --dry-run  # inspect only; submit through authenticated API
+    python3 indexer/index.py harvest [--source NAME] [--limit N] [--dry-run]
+    python3 indexer/index.py label [--all] [--labeler deepseek|none|canned:<file.json>]
+    python3 indexer/index.py refresh [--older-than DAYS] [--limit N] [--dry-run]
+    python3 indexer/index.py discuss <record id> <url>... [--stance STANCE] [--drop] [--dry-run]
+    python3 indexer/index.py discuss --recheck [<record id>...] [--dry-run]
+    python3 indexer/index.py discuss --propose-stances [<record id>...] [--labeler deepseek|canned:<file.json>]
+    python3 indexer/index.py reception [<record id>] [--draft [--labeler ...] | --text TEXT] [--reviewed-by LOGIN] [--links URL...]
+    python3 indexer/index.py build
 """
 
 from __future__ import annotations
@@ -42,7 +42,8 @@ import taxonomy as TX
 from store import Conflict, Ref
 
 HERE = Path(__file__).resolve().parent
-DIST = HERE / "dist"
+ROOT = HERE.parent
+DIST = ROOT / "dist"
 SITE = "https://agenticpapers.app"
 APP_INDEX = f"{SITE}/papers/index.json"
 
@@ -369,20 +370,20 @@ def _check_stance(r: Any) -> None:
 
 def ask(prompt_file: str, name: str, data: Any) -> Any:
     """The model's validated JSON reply to a prompt file, given the data between BEGIN_<name> and END_<name>."""
-    value = json.loads(chat((HERE / prompt_file).read_text(), f"BEGIN_{name}\n{json.dumps(data, ensure_ascii=False)}\nEND_{name}"))
-    if prompt_file == "reception-prompt.md":
+    value = json.loads(chat((HERE / "prompts" / prompt_file).read_text(), f"BEGIN_{name}\n{json.dumps(data, ensure_ascii=False)}\nEND_{name}"))
+    if prompt_file == "reception.md":
         return _check_reception(value, data)
     if not isinstance(value, dict) or set(value) != {"results"} or not isinstance(value["results"], list):
         raise RuntimeError("DeepSeek gave no results array")
     replies = value["results"]
-    if prompt_file == "label-prompt.md":
+    if prompt_file == "label.md":
         expected = {entry["key"] for entry in data}
         if len(expected) != len(data):
             raise RuntimeError("ambiguous entry keys in classification batch; split the batch")
         for r in replies:
             _check_label(r)
         returned = [r["key"] for r in replies]
-    elif prompt_file == "stance-prompt.md":
+    elif prompt_file == "stance.md":
         expected = {r["url"] for entry in data for r in entry["responses"]}
         for r in replies:
             _check_stance(r)
@@ -429,7 +430,7 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
             else:
                 data = [{"key": e["key"], "source": e["source"], "title": e["title"], "authors": e.get("authors", [])[:6],
                          "summary": e.get("summary", ""), "tags": e.get("tags", [])[:8]} for _, e in chunk]
-                replies = {r["key"]: r for r in ask("label-prompt.md", "ENTRIES", data)}
+                replies = {r["key"]: r for r in ask("label.md", "ENTRIES", data)}
         except LABELER_ERRORS as err:
             print(f"batch {i // BATCH + 1}: {err}", file=sys.stderr)
             failed = True
@@ -496,7 +497,7 @@ DESCRIBED = ("title", "author", "date")  # a web link's description; discuss --t
 DISCUSSED = "jsonb_typeof(entry->'discussion') = 'array' AND jsonb_array_length(entry->'discussion') > 0"
 
 # Stances, which count as upvotes and which mark a record disputed; shared with the site.
-STANCE_FILE = json.loads((HERE / "site" / "lib" / "records" / "stances.json").read_text())
+STANCE_FILE = json.loads((ROOT / "site" / "lib" / "records" / "stances.json").read_text())
 STANCES: dict[str, str] = STANCE_FILE["stances"]
 UPVOTING = set(STANCE_FILE["upvoting"])
 DISPUTING = set(STANCE_FILE["disputing"])
@@ -560,7 +561,7 @@ def propose_stances(records: list[str], labeler: str) -> int:
         data = [{"id": rid(e), "title": e["title"], "summary": e.get("summary", ""),
                  "responses": [pick(d, ("url", "kind", "author", "title", "text")) for d in unlabelled(e)]} for e in batch]
         try:
-            replies = canned if canned is not None else {r["url"]: r for r in ask("stance-prompt.md", "RECORDS", data)}
+            replies = canned if canned is not None else {r["url"]: r for r in ask("stance.md", "RECORDS", data)}
         except LABELER_ERRORS as err:
             print(f"skipped {len(batch)} records: {err}", file=sys.stderr)
             failed = True
@@ -571,7 +572,7 @@ def propose_stances(records: list[str], labeler: str) -> int:
                 p = replies.get(d["url"]) or {}
                 if p.get("stance") in STANCES:
                     n += 1
-                    print(f"python3 index.py discuss {shlex.quote(r['id'])} {shlex.quote(d['url'])} --stance {p['stance']}"
+                    print(f"python3 indexer/index.py discuss {shlex.quote(r['id'])} {shlex.quote(d['url'])} --stance {p['stance']}"
                           f"   # {str(p.get('reason', ''))[:120]}")
                 else:
                     print(f"# no proposal, open it: {d['url']}")
@@ -677,7 +678,7 @@ def draft_reception(e: dict[str, Any], labeler: str) -> dict[str, Any]:
     else:
         data = {"id": rid(e), "title": e["title"], "summary": e.get("summary", ""), "withdrawn": e.get("withdrawn_on") or bool(e.get("withdrawn")),
                 "responses": [pick(d, ("url", "kind", "author", "site", "date", "stance", "title", "text")) for d in labelled]}
-        reply = ask("reception-prompt.md", "RECORD", data)
+        reply = ask("reception.md", "RECORD", data)
     if not isinstance(reply, dict):
         raise ValueError("the labeler did not reply with an object")
     text = S.clean(str(reply.get("text", "")))
@@ -743,7 +744,7 @@ def reception(record: str | None, draft: bool, text: str | None, reviewed_by: st
         return 2
     e["reception"] = _drop_empty({**new, "written": S.today(), "reviewed_by": None if draft else reviewed_by, "basis": basis(attached)})
     print(json.dumps(e["reception"], indent=2, ensure_ascii=False))
-    print(f"state: {reception_state(e)}" + ("" if reviewed_by else f"; a person publishes it with: python3 index.py reception {record} --reviewed-by <login>"))
+    print(f"state: {reception_state(e)}" + ("" if reviewed_by else f"; a person publishes it with: python3 indexer/index.py reception {record} --reviewed-by <login>"))
     if not dry_run:
         save(ref, e)
     return 0
@@ -755,7 +756,7 @@ def reception(record: str | None, draft: bool, text: str | None, reviewed_by: st
 PASSTHROUGH = ("source", "url", "title", "authors", "summary", "domain", "origin", "agent_ready", "gone", "stars", "pdf",
                "family", "family_title", "formalized", "withdrawn", "withdrawn_on", "verified", "trust", "ai_models",
                "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json")
-PREFIXES = json.loads((HERE / "site" / "lib" / "records" / "prefixes.json").read_text())["prefixes"]
+PREFIXES = json.loads((ROOT / "site" / "lib" / "records" / "prefixes.json").read_text())["prefixes"]
 # An X post's text is shown by X's own embed, so it is never served.
 X_FIELDS = ("kind", "url", "author", "handle", "date", "added", "stance")
 
@@ -830,7 +831,7 @@ def build() -> int:
     print(f"built dist/index.json: {len(all_items)} items " + ", ".join(f"{names.get(k, k)} {v}" for k, v in counts.most_common()))
     if stale := [rid(e) for e in entries if reception_state(e) == "stale"]:
         print(f"{len(stale)} receptions not published, their links changed after they were written: {', '.join(stale)}."
-              " Review each again: python3 index.py reception <id> --reviewed-by <login> (or --text, or --draft)", file=sys.stderr)
+              " Review each again: python3 indexer/index.py reception <id> --reviewed-by <login> (or --text, or --draft)", file=sys.stderr)
     return 0
 
 

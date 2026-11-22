@@ -75,7 +75,7 @@ FROM_NAME = {
 
 CODE = re.compile(r"^(?:[a-z]+(?:-[a-z]+)?)(?:\.[A-Za-z-]+)?$")
 # The site's search (site/lib/records/query.ts) reads these rules from this file.
-JSON_PATH = Path(__file__).resolve().parent / "site" / "lib" / "records" / "taxonomy.json"
+JSON_PATH = Path(__file__).resolve().parent.parent / "site" / "lib" / "records" / "taxonomy.json"
 
 
 def division_of(code: str) -> str:

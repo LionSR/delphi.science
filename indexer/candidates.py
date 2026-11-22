@@ -1,14 +1,14 @@
-"""Finds new items that may respond to indexed records: posts on the research blogs in blogs.json, arXiv papers that
+"""Finds new items that may respond to indexed records: posts on the research blogs in indexer/blogs.json, arXiv papers that
 name an AI lab or cite a record and name it in their abstract, MathOverflow, CSTheory and Physics Stack Exchange
 posts, and Bluesky posts that link the labs' records.
 
 An item names its records when it links them (any URL or arXiv id that an adapter in sources.py recognizes) or cites
 them; for an arXiv paper that names a lab, that includes the AI-made records its bibliography links. An item that
 names no record but names a lab is matched against the titles of that lab's records, ranked by IDF-weighted title
-overlap. Writes a Markdown report with the `python3 index.py discuss` command that attaches each match after review,
+overlap. Writes a Markdown report with the `python3 indexer/index.py discuss` command that attaches each match after review,
 leaving out what the earlier reports in the same folder already listed. Nothing is attached.
 
-  python3 candidates.py [--days 7] [--until 2026-10-25] [--out reports/responses/2026-10-25.md]
+  python3 indexer/candidates.py [--days 7] [--until 2026-10-25] [--out reports/responses/2026-10-25.md]
 
 Citations of physics papers come from INSPIRE, and of the others from Semantic Scholar, whose keyless rate limit is
 shared by everyone: set S2_API_KEY to use a key.
@@ -123,7 +123,7 @@ def attached(entries: Iterable[dict[str, Any]]) -> set[tuple[str, str]]:
     return {(I.rid(e), S.identity(d["url"])) for e in entries for d in e.get("discussion") or []}
 
 
-COMMAND = re.compile(r"`python3 index\.py discuss (.+?)`")
+COMMAND = re.compile(r"`python3 (?:indexer/)?index\.py discuss (.+?)`")
 
 
 def reported(folder: Path, start: dt.date, end: dt.date) -> set[tuple[str, str]]:
@@ -417,7 +417,7 @@ def report(candidates: list[Candidate], matcher: Matcher, linked: dict[str, dict
         author = f" --author {shlex.quote(c['author'])}" if c["author"] else ""
         for _, how, e in m:
             lines.append(f"- {how} `{I.rid(e)}`: {e.get('title')}")
-            lines.append(f"  `python3 index.py discuss {I.rid(e)} {shlex.quote(c['url'])}{author}`")
+            lines.append(f"  `python3 indexer/index.py discuss {I.rid(e)} {shlex.quote(c['url'])}{author}`")
     return "\n".join(lines) + "\n"
 
 

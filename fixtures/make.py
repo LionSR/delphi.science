@@ -15,7 +15,7 @@ from collections import Counter
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE.parent))
+sys.path.insert(0, str(HERE.parent / "indexer"))
 import sources as S  # noqa: E402
 import store  # noqa: E402
 

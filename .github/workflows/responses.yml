@@ -25,12 +25,12 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - run: pip install -r requirements.txt
+      - run: pip install -r indexer/requirements.txt
 
       - name: Find candidates
         run: |
           out="reports/responses/$(date -u +%F).md"
-          python3 candidates.py --days 4 --out "$out"
+          python3 indexer/candidates.py --days 4 --out "$out"
           cat "$out" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit the report

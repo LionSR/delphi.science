@@ -1,5 +1,5 @@
 // The MCP tools' real results fit their output schemas (objects closed).
-// Needs a build: python3 index.py build.
+// Needs a build: python3 indexer/index.py build.
 import { strict as assert } from 'node:assert';
 import { existsSync } from 'node:fs';
 import { before, describe, test } from 'node:test';

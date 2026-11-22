@@ -1,11 +1,13 @@
 """Tests for candidates.py, offline: no source is fetched."""
 
 import datetime as dt
+import sys
 import tempfile
 import unittest
 from pathlib import Path
 
-import candidates as C
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import candidates as C  # noqa: E402
 
 
 def rec(source, key, title, **kw):
@@ -46,11 +48,12 @@ class Matching(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             earlier = Path(d, "2026-11-03.md")
             earlier.write_text("  `python3 index.py discuss openai-math/Siegel-zeros https://arxiv.org/abs/2610.00002`\n")
-            Path(d, "2026-11-06.md").write_text("  `python3 index.py discuss arxiv/2610.09093 'https://example.org/today'`\n")
+            Path(d, "2026-11-04.md").write_text("  `python3 indexer/index.py discuss hexagon/HEX-1 https://example.org/prev`\n")
+            Path(d, "2026-11-06.md").write_text("  `python3 indexer/index.py discuss arxiv/2610.09093 'https://example.org/today'`\n")
             seen = C.reported(Path(d), *WEEK)
-        self.assertEqual(seen, {("openai-math/Siegel-zeros", "arxiv/2610.00002")})
+        self.assertEqual(seen, {("openai-math/Siegel-zeros", "arxiv/2610.00002"), ("hexagon/HEX-1", "https://example.org/prev")})
         text = C.report(cands, self.m, {"arxiv/2610.09093": CRAIG}, seen, *WEEK, ["MathOverflow (down)"])
-        self.assertIn("python3 index.py discuss openai-math/Siegel-zeros https://arxiv.org/abs/2610.00001", text)
+        self.assertIn("python3 indexer/index.py discuss openai-math/Siegel-zeros https://arxiv.org/abs/2610.00001", text)
         self.assertNotIn("2610.00002", text)
         self.assertLess(text.index("- links `arxiv/2610.09093`"), text.index("- title "))
         self.assertIn(f"discuss arxiv/2610.09093 '{woit}' --author 'Peter Woit'", text)

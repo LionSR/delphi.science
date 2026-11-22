@@ -1,5 +1,5 @@
 // Every route is documented, and the main operations' real responses fit their schemas (objects closed).
-// Needs a build: python3 index.py build.
+// Needs a build: python3 indexer/index.py build.
 import { strict as assert } from 'node:assert';
 import { existsSync, readdirSync, statSync } from 'node:fs';
 import { after, before, describe, test } from 'node:test';

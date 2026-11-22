@@ -125,12 +125,23 @@ To try the reviewers' password sign-in locally, start the server with `REVIEW_AC
 
 Install Delphi from the [public Delphi marketplace](https://github.com/LionSR/delphi-plugins).
 
+In Codex:
+
 ```bash
 codex plugin marketplace add LionSR/delphi-plugins
 codex plugin add delphi@delphi-plugins
 ```
 
-You can also install **Delphi.science** from the desktop app's Plugins Directory after adding the marketplace. Codex asks you to sign in the first time you use a tool that needs an account. Run the positive test cases above with a GitHub account, or with the demo account once it is configured on the live site.
+In Claude Code:
+
+```bash
+claude plugin marketplace add LionSR/delphi-plugins
+claude plugin install delphi@delphi-plugins
+```
+
+Both plugins connect to the remote MCP server at https://delphi.science/mcp. Public reads need no credentials. For writes, authorize the client through MCP OAuth and approve access after signing in with GitHub. In Claude Code, use `/mcp` to authenticate the Delphi server. In Codex, follow the sign-in prompt.
+
+The maintainer confirmed reading posts, voting, and publishing posts through the remote MCP plugins in both Claude Code and Codex.
 
 ## CLI verification
 

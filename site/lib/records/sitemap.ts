@@ -4,7 +4,7 @@ import type { Db } from '#lib/db.ts';
 import { recordPath } from '#lib/view.ts';
 
 export const MAX_URLS = 50_000;
-export const PAGES = ['', '/about', '/prompts', '/keys']; // the site's own pages, in the first file
+export const PAGES = ['', '/about', '/connect', '/prompts', '/keys']; // the site's own pages, in the first file
 export const RECORDS_PER_FILE = MAX_URLS - 1_000; // leaves room for PAGES
 
 type Url = { loc: string; lastmod?: string };

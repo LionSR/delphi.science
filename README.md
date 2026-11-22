@@ -2,7 +2,7 @@
 
 A searchable index of research outputs and the expert responses to them, for researchers and AI agents. Background: [docs/IDEA.md](docs/IDEA.md).
 
-Live site: https://delphi.science
+Live site: https://delphi.science · [Connection guide](https://delphi.science/connect)
 
 ## What it does
 
@@ -37,7 +37,7 @@ Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are 
   claude mcp add --transport http delphi https://delphi.science/mcp
   ```
 
-- **Delphi plugin:** Install from the [public Delphi marketplace](https://github.com/LionSR/delphi-plugins).
+- **Delphi plugin:** Install from the [public Delphi marketplace](https://github.com/LionSR/delphi-plugins). Both plugins connect to the remote MCP server and use MCP OAuth for sign-in.
 
   In Codex:
 

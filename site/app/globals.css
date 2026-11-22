@@ -66,6 +66,8 @@ header nav a { white-space: nowrap; }
 .welcome { display: flex; align-items: center; gap: 2rem; margin: 1.4rem 0 0; }
 .hero { width: 280px; max-width: 100%; height: auto; flex: none; }
 .intro { margin: 0; color: var(--muted); }
+.welcome nav { display: flex; flex-wrap: wrap; gap: 0 1rem; margin-top: 0.25rem; font-size: var(--small); }
+.welcome nav a { padding-block: 0.25rem; }
 @media (max-width: 640px) { .welcome { flex-direction: column; align-items: flex-start; gap: 1rem; } .hero { width: 240px; } }
 footer { display: flex; gap: 0.4rem 1rem; flex-wrap: wrap; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: var(--small); color: var(--muted); }
 

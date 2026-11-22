@@ -4,6 +4,11 @@ import { MAX_BODY } from './limits.ts';
 export type Draft = { title: string; body: string; review: boolean; section?: Section };
 export type DraftStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
 
+/** Runs a browser-storage operation, returning undefined when storage is unavailable or throws. */
+export function stored<T>(use: () => T): T | undefined {
+	try { return use(); } catch { return undefined; }
+}
+
 /** Whether text contains an agent key; such drafts are never stored. */
 export const hasKey = (text: string) => /oik_[0-9a-f]{48}/.test(text);
 

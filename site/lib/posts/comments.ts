@@ -7,7 +7,7 @@ import { NotFoundError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
 import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
 import { MAX_BODY, MAX_BODY_SHOWN } from './limits.ts';
-import { allowPrivatePost, MODERATE_PRIVATE_SPACES } from './spaces.ts';
+import { allowPrivatePost, MODERATE_PRIVATE_SPACES, noSpace } from './spaces.ts';
 import { FORUM, READABLE } from './visibility.ts';
 
 const ID = /\b[a-z][a-z0-9-]*\/[^\s<>"'()[\]{},;/]+/g;
@@ -17,7 +17,6 @@ const URL_ = /https?:\/\/[^\s<>"'()[\]{}]+/g;
 type Place = { record: string } | { topic: number; space?: string };
 type NewPost = { body: string; review?: boolean; parent?: number };
 
-/** Where moderation is told a post is, for new posts and edits alike. */
 /** Where a post is, as the moderator is told. The agents section is named, since what is on topic there differs (moderate.ts). */
 export const moderationPlace = (recordId: string | null, section?: string) => recordId ? { recordId, on: `the record ${recordId}` }
 	: { on: section === 'agents' ? 'a forum topic in the Agents section' : 'a forum topic' };
@@ -42,9 +41,9 @@ export async function post(db: Db, place: Place, voter: Voter, c: NewPost, moder
 	const onRecord = 'record' in place;
 	const [column, value] = onRecord ? ['record_id', place.record] : ['topic_id', place.topic];
 	// A topic in a space its poster cannot read is no topic at all.
-	const target = !onRecord && !Number.isSafeInteger(place.topic) ? undefined : (await db.query<{ title: string; posts: number; record?: unknown; space?: string; open?: boolean; section?: string }>(
+	const target = !onRecord && !Number.isSafeInteger(place.topic) ? undefined : (await db.query<{ title: string; posts: number; record?: unknown; space?: string; open?: boolean; section?: string; question_id?: number | null }>(
 		onRecord ? 'SELECT title, 0 AS posts, record FROM open_index.records WHERE id = $1'
-			: `SELECT title, posts_count AS posts, space_id AS space, section, ${READABLE('space_id', 'NULL')} AS open FROM open_index.topics WHERE id = $1 AND ${READABLE('space_id', '$2')}`,
+			: `SELECT title, posts_count AS posts, space_id AS space, section, question_id::int, ${READABLE('space_id', 'NULL')} AS open FROM open_index.topics WHERE id = $1 AND ${READABLE('space_id', '$2')}`,
 		onRecord ? [value] : [value, voter.login])).rows[0];
 	if (!target || (!onRecord && place.space !== undefined && place.space !== target.space)) {
 		if (onRecord) throw new NotFoundError(`no record ${JSON.stringify(place.record)}`, 'Use an id from a search result.');
@@ -62,9 +61,15 @@ export async function post(db: Db, place: Place, voter: Voter, c: NewPost, moder
 	// Nothing of a private thread goes to the moderation provider: not the post, not the thread around it.
 	if (!moderated) return storePost(db, place, voter, stored);
 
+	const [question, previous] = await Promise.all([
+		onRecord ? undefined
+			: c.parent !== undefined && c.parent === target.question_id ? context.parent
+			: target.question_id != null ? firstBody(db, 'SELECT body FROM open_index.comments WHERE id = $1', [target.question_id]) : undefined,
+		db.query<{ body: string }>(`SELECT body FROM open_index.comments WHERE ${column} = $1 ORDER BY id DESC LIMIT 4`, [value]).then((r) => r.rows.map((p) => p.body)),
+	]);
 	if (onRecord) context.record = target.record;
-	else context.question = await firstBody(db, 'SELECT body FROM open_index.comments WHERE topic_id = $1 AND parent_id IS NULL ORDER BY id LIMIT 1', [place.topic]);
-	context.previous = (await db.query<{ body: string }>(`SELECT body FROM open_index.comments WHERE ${column} = $1 ORDER BY id DESC LIMIT 4`, [value])).rows.map((p) => p.body);
+	else context.question = question;
+	context.previous = previous;
 
 	const kind = onRecord ? (c.review ? 'review' : 'comment') : c.parent !== undefined ? 'comment' : Number(target.posts) ? 'answer' : 'question';
 	await screen(db, voter, { kind, ...moderationPlace(onRecord ? place.record : null, target.section), title: target.title, body, context }, moderate);
@@ -76,7 +81,7 @@ export async function post(db: Db, place: Place, voter: Voter, c: NewPost, moder
 export async function startQuestion(db: Db, voter: Voter, title: string, text: string, moderate?: Moderator, space: string = FORUM, section = 'general') {
 	const body = await checkBody(db, text);
 	const place = (await db.query<{ open: boolean }>(`SELECT ${READABLE('s.id', 'NULL')} AS open FROM open_index.spaces s WHERE s.id = $1 AND ${READABLE('s.id', '$2')}`, [space, voter.login])).rows[0];
-	if (!place) throw new NotFoundError(`no ws/${space}`, 'get ws lists the spaces you are in and your invitations.');
+	if (!place) throw noSpace(space);
 	if (!place.open) await allowPrivatePost(db, voter);
 	if (place.open || MODERATE_PRIVATE_SPACES) await screen(db, voter, { kind: 'question', ...moderationPlace(null, section), title, body }, moderate);
 	const id = Number((await db.query<{ id: number }>('INSERT INTO open_index.topics (title, voter, agent, space_id, section) VALUES ($1, $2, $3, $4, $5) RETURNING id',
@@ -118,11 +123,16 @@ export async function linkMentions(db: Db, id: number, body: string, recordId: s
 	const strip = (s: string) => s.replace(/[.:!?]+$/, '');
 	const ids = [...new Set((body.match(ID) ?? []).map(strip))];
 	const urls = [...new Set((body.match(URL_) ?? []).map(strip))];
+	if (!ids.length && !urls.length) return [];
+	const params: unknown[] = [id, recordId];
+	const match: string[] = [];
+	if (ids.length) { params.push(ids); match.push(`r.id = ANY($${params.length})`); }
+	if (urls.length) { params.push(urls); match.push(`r.url = ANY($${params.length})`); }
 	return (await db.query<{ id: string }>(
 		`INSERT INTO open_index.mentions (comment_id, record_id)
-		 SELECT $1, r.id FROM open_index.records r WHERE (r.id = ANY($2) OR r.url = ANY($3)) AND r.id IS DISTINCT FROM $4
+		 SELECT $1, r.id FROM open_index.records r WHERE (${match.join(' OR ')}) AND r.id IS DISTINCT FROM $2
 		 ON CONFLICT DO NOTHING RETURNING record_id AS id`,
-		[id, ids, urls, recordId],
+		params,
 	)).rows.map((r) => r.id);
 }
 

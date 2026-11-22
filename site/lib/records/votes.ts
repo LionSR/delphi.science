@@ -11,6 +11,7 @@ const EMOJI = /^\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier}|\u200D\p{E
 
 /** The voter's own votes on these records, by record id. */
 export async function myVotes(db: Db, login: string, ids: string[]) {
+	if (!ids.length) return new Map<string, { record_id: string; value: number | null; emoji: string | null; note: string | null }>();
 	const rows = (await db.query<{ record_id: string; value: number | null; emoji: string | null; note: string | null }>(
 		'SELECT record_id, value, emoji, note FROM open_index.votes WHERE voter = $1 AND record_id = ANY($2)', [login, ids])).rows;
 	return new Map(rows.map((r) => [r.record_id, r]));

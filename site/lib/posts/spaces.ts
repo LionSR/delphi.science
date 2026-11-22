@@ -45,14 +45,10 @@ export const privateOverMcp = (env: Record<string, string | undefined> = process
 /** A person's posts in private spaces in a day, their agents' included: generous, a guard against a broken loop only. */
 export const PRIVATE_POSTS_PER_DAY = 2000;
 
-// ---- The visibility rule (visibility.ts) ----
-
-export { canRead, FORUM, POST_READABLE, READABLE, reader, type Reader } from './visibility.ts';
 export type Visibility = 'public' | 'private';
 
 /** The path of a topic: forum/12 in the forum, ws/<slug>/12 in any other space. */
 export const topicPath = (space: string, topic: number) => (space === FORUM ? `forum/${topic}` : `ws/${space}/${topic}`);
-export const spacePath = (space: string) => (space === FORUM ? 'forum' : `ws/${space}`);
 
 const SPACES_HELP = 'get ws lists the spaces you are in and your invitations.';
 /** The not-found a caller gets for a space they cannot read, the same as for one that does not exist. */
@@ -95,13 +91,15 @@ export async function createSpace(db: Db, who: Voter, s: { title: string; about?
 	await refuseKeys(db, `${title}\n${about}`);
 	if (!db.transaction) throw new Error('Creating a space requires a database transaction.');
 	const id = slug(title);
-	await db.transaction(async (tx) => {
-		await tx.query('INSERT INTO open_index.spaces (id, title, about, creator, agent, visibility) VALUES ($1, $2, $3, $4, $5, $6)', [id, title, about, who.login, who.agent, visibility]);
+	return db.transaction(async (tx) => {
+		const created = (await tx.query<Space>(
+			'INSERT INTO open_index.spaces (id, title, about, creator, agent, visibility) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id, title, about, creator, agent, visibility, at, at AS last_at, 0::int AS topics',
+			[id, title, about, who.login, who.agent, visibility])).rows[0];
 		await tx.query('INSERT INTO open_index.space_members (space_id, login, invited_by, agent, accepted_at) VALUES ($1, lower($2), $2, $3, now())', [id, who.login, who.agent]);
 		// One at a time: each invitation takes its own place in the log (the trigger on space_members).
 		for (const login of invited) await tx.query('INSERT INTO open_index.space_members (space_id, login, invited_by, agent) VALUES ($1, $2, $3, $4)', [id, login, who.login, who.agent]);
+		return created;
 	});
-	return (await space(db, id, who.login))!;
 }
 
 /** The creator deletes the space, with its topics, posts and members. */
@@ -162,11 +160,12 @@ export async function addMember(db: Db, id: string, who: Voter, given: string, t
 }
 
 /** The invited person accepts, and from then on reads and writes the space, its whole history included. */
-export async function acceptInvitation(db: Db, id: string, who: Voter): Promise<Member> {
+async function acceptInvitation(db: Db, id: string, who: Voter): Promise<Member> {
+	if (id === FORUM) throw noSpace(id);
 	await db.query(`UPDATE open_index.space_members SET accepted_at = now()
 		WHERE space_id = $1 AND login = lower($2) AND accepted_at IS NULL`, [id, who.login]);
 	const m = await member(db, id, who.login);
-	if (!m || id === FORUM) throw noSpace(id); // not invited: the space is not theirs to know of
+	if (!m) throw noSpace(id); // not invited: the space is not theirs to know of
 	return m;
 }
 
@@ -178,8 +177,10 @@ export async function acceptInvitation(db: Db, id: string, who: Voter): Promise<
 export async function removeMember(db: Db, id: string, who: Voter, given: string, { ownOnly = false } = {}) {
 	const login = normalizeProfileLogin(given.replace(/^@/, ''));
 	const own = sameLogin(login, who.login);
+	if (id === FORUM) throw noSpace(id);
 	// Their own row is theirs to drop, invited or member. Anyone else's needs a member who can see the list.
-	if (id === FORUM || (!own && !await canRead(db, id, who.login))) throw noSpace(id);
+	const creator = own ? null : (await db.query<{ creator: string }>(`SELECT creator FROM open_index.spaces WHERE id = $1 AND ${READABLE('id', '$2')}`, [id, who.login])).rows[0]?.creator;
+	if (!own && !creator) throw noSpace(id);
 	const m = await member(db, id, login);
 	if (!m) {
 		if (own) throw noSpace(id);
@@ -187,8 +188,7 @@ export async function removeMember(db: Db, id: string, who: Voter, given: string
 	}
 	if (!own) {
 		if (ownOnly) throw new QueryError('a vote takes back only your own place in a space', `Its creator removes a member on the space's page, or with DELETE /api/v1/ws/${id}/members/${login}.`);
-		const s = (await space(db, id, who.login))!;
-		if (!sameLogin(s.creator, who.login)) throw new QueryError('only the creator of a space can remove a member', `Anyone can leave: vote 0 on ws/${id}/members/${who.login.toLowerCase()}.`);
+		if (!sameLogin(creator!, who.login)) throw new QueryError('only the creator of a space can remove a member', `Anyone can leave: vote 0 on ws/${id}/members/${who.login.toLowerCase()}.`);
 	}
 	if (ownOnly && m.accepted_at && (await db.query('SELECT 1 FROM open_index.space_members WHERE space_id = $1 AND accepted_at IS NOT NULL AND login <> $2 LIMIT 1', [id, login])).rows.length === 0) {
 		throw new QueryError('you are the last member, and leaving would delete the space', `Delete it on its page, or with DELETE /api/v1/ws/${id}.`);

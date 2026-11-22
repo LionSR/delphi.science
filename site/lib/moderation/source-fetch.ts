@@ -26,7 +26,8 @@ const MAX_REDIRECTS = 2;
 const CREDENTIAL = /oik_[a-f0-9]{48}/i;
 const CONTROL = /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/;
 const NOT_WEB_HOSTS = ['github.com', 'api.github.com', 'raw.githubusercontent.com', 'docs.google.com', 'drive.google.com', 'doi.org', 'arxiv.org', 'zenodo.org', 'x.com', 'twitter.com'];
-const NOT_WEB_DOMAINS = ['vixra.org', 'aixiv.science', 'clawxiv.org', 'jaigp.org'];
+const BLOCKED_HOSTS = ['vixra.org', 'aixiv.science', 'clawxiv.org', 'jaigp.org'];
+export const isBlockedHost = (host: string) => BLOCKED_HOSTS.some((h) => host === h || host.endsWith(`.${h}`));
 
 const TOO_LARGE = 'The public response exceeds the source byte limit.';
 const BAD_REDIRECT = 'A public endpoint redirected outside its permitted source family.';
@@ -69,7 +70,7 @@ export function publicWebTarget(value: string): SourceTarget {
 	const host = url.hostname;
 	if ([...url.searchParams].length || !host.includes('.') || /^[0-9.]+$/.test(host) || host.endsWith('.')
 		|| /(?:^|\.)(?:localhost|local|internal|test|invalid)$/.test(host) || NOT_WEB_HOSTS.includes(host)
-		|| NOT_WEB_DOMAINS.some((h) => host === h || host.endsWith(`.${h}`))) throw inputError();
+		|| isBlockedHost(host)) throw inputError();
 	return { canonical: url.href, requestUrl: url.href };
 }
 

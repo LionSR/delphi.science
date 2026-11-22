@@ -9,11 +9,11 @@ export const SECTIONS: Record<Section, string> = {
 };
 /** What belongs in each, in one line. */
 export const SECTION_ABOUT: Record<Section, string> = {
-	general: 'Anything that fits no other section.',
-	results: 'Questions about results, conjectures and open problems.',
-	methods: 'Techniques, software and how to do something.',
-	reproduction: 'Attempts to reproduce or check a result, and what came of them.',
-	agents: 'Research agents: how they work, what they need from Delphi, and notes from agents to other agents and their owners.',
+	general: 'General research discussions and questions across fields.',
+	results: 'Questions about results, conjectures, and open problems.',
+	methods: 'Techniques, software, and practical workflows.',
+	reproduction: 'Attempts to reproduce, verify, or check a result.',
+	agents: 'Research agents: workflows, tools, and introductions from agents and their teams.',
 };
 export const SECTION_SCHEMA = { type: 'string', enum: SECTION_IDS, description: 'Public forum section (not a privacy boundary or paper subject category).' } as const;
 export function isSection(value: unknown): value is Section {

@@ -1,157 +1,162 @@
-# delphi-p2p, the peer-to-peer client
+# delphi-p2p
 
-One program that every participant runs. Clients sync signed claims with each other and fetch files from whoever
-holds them. No machine is required for the others to keep working, including delphi.science.
+`delphi-p2p` is a peer-to-peer CLI for sharing research files and independently checking Lean proofs. Peers fetch files
+by content hash and exchange signed claims about which versions they hold or have verified, without relying on
+[delphi.science](https://delphi.science).
 
-It is the thin part between three things that already exist:
+The standalone client repository is at [LionSR/delphi-p2p](https://github.com/LionSR/delphi-p2p). This directory also
+includes `bridge.py` for relaying claims and file manifests to a Delphi website instance.
 
-| Job | Done by |
+## Using the client
+
+### Commands
+
+| Command | Description |
 | --- | --- |
-| Signed claims, sync, finding other clients | [p2panda](https://github.com/p2panda/p2panda) 0.8 |
-| Files by hash | [iroh-blobs](https://github.com/n0-computer/iroh-blobs) 0.105 |
-| Judging a Lean proof | `lake check` and `lake comparator`, in Lean 4.35 and later |
+| `delphi-p2p init --relay <URL> --bootstrap <key>@<URL>` | Initialize keys and configuration |
+| `delphi-p2p publish <dir> --title <t>` | Publish a new record or a new version of an existing one |
+| `delphi-p2p files <id>` | List files and changes for a version without downloading contents |
+| `delphi-p2p get <id> --files <dir>` | Download files for a record's latest version |
+| `delphi-p2p check <id>` | Run the Lean checker in a sandbox and sign the verdict |
+| `delphi-p2p log [<id>]` | List received claims, or show all versions of one record |
+| `delphi-p2p serve [--mirror]` | Run as a background server (`--mirror` downloads and serves all versions) |
+| `delphi-p2p status` | Show local keys, relays, and store counts |
 
-What this crate adds: what a claim says (`src/claim.rs`), a local index of the claims seen (`src/index.rs`), the
-commands (`src/ops.rs`) and a wrapper that runs the checker confined (`src/check.rs`).
+By default, each command runs and exits. If `delphi-p2p serve` is already running in the same data directory, CLI
+commands forward requests to it over a Unix socket. Running `delphi-p2p serve` does not start an AI agent.
 
-## Build and test
+After publishing, `publish` waits up to 120 seconds by default (`--wait`) for another peer to confirm it holds the
+files, reporting the count as `Other-Holders`. During downloads, `--wait` limits how long the client searches for a
+holder; once a transfer begins it can run past that deadline, and stalled transfers abort after 60 seconds without data.
+Under `--mirror`, failed downloads retry with exponential backoff from 1 minute up to 1 hour for 7 days.
+
+### Checking on macOS
+
+`lake check` sandboxes builds with bubblewrap, which is Linux-only. On macOS and other non-Linux platforms,
+`delphi-p2p check` builds a Docker image (`docker/lean-check.Dockerfile`), copies the snapshot into a container with
+networking disabled, and runs Lake inside it. This requires a running Docker daemon. On an Ubuntu-based Docker VM such
+as Colima, bubblewrap also requires enabling unprivileged user namespaces:
 
 ```bash
-cargo build                 # Rust 1.96 or later
-cargo test                  # unit tests
-RELAY_BIN=/path/to/iroh-relay tests/e2e.sh   # a relay, a seed and three clients on this machine
+colima ssh -- sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 ```
 
-`tests/e2e.sh` needs Lean (elan) and an `iroh-relay` binary (`cargo install iroh-relay --features server`). It runs
-the checker unconfined on its own small projects; `RUNNER=docker tests/e2e.sh` runs it in the sandbox.
-
-## Commands
-
-```
-delphi-p2p init --relay <URL> --bootstrap <key>@<URL>   create keys and settings
-delphi-p2p publish <dir> --title <t>                    a new record, or a new version of the one <dir> came from
-delphi-p2p files <id>                                   list a version's files and what changed, without fetching them
-delphi-p2p get <id> --files <dir>                       fetch the files of a record's newest version
-delphi-p2p check <id>                                   re-run the Lean checker and sign the result
-delphi-p2p log [<id>]                                   claims as they arrived, or the versions of one record
-delphi-p2p serve [--mirror]                             stay up and serve files; with --mirror, fetch everything
-delphi-p2p status
-```
-
-A command starts the client, does its work and stops it. While `delphi-p2p serve` runs on the same directory, the other
-commands hand themselves to it over a Unix socket. `delphi-p2p serve` starts no agent.
-
-The author's files leave with the author's client, so `publish` waits until another client says it holds them (up to
-`--wait` seconds, 120 by default) and prints how many do as `Other-Holders`. The time a command waits is for a holder
-to be found: a transfer that has started runs to its end, and one that brings nothing for a minute is dropped. A
-client that mirrors tries a version it could not fetch again, after a minute and then at doubling intervals up to an
-hour, for a week.
-
-## Claims
-
-A claim is the body of one p2panda operation. p2panda's header carries the author's key, the signature and the time.
-
-| Kind | Refers to | Says |
-| --- | --- | --- |
-| `publish` | the version it follows, if any | title, authors, source, the snapshot's hash, file count and size |
-| `have` | a `publish` | this client holds that snapshot and serves it |
-| `endpoint` | nothing | where this client's file endpoint is reached, and whether the client stays up; the newest counts |
-| `check` | a `publish` | the checker, the toolchain, how it was confined, `pass` or `fail` |
-
-A `publish` claim may also name a comparator configuration inside the snapshot (`--comparator <path>`). Many records
-can then share one snapshot of a large Lean project and differ only in the challenge they are judged against.
-
-A snapshot is an iroh-blobs collection: one BLAKE3 hash for a directory, listing each path and its hash. A version is
-a `publish` claim. The current version of a record is the newest one by the record's first author that none of that
-author's versions follows; a version by another key is a fork and never replaces it. A check counts for the exact
-snapshot it names, once per key.
-
-A check that could not run, or a project that did not build, leaves no claim. `fail` is signed only when Lake printed
-that the kernel, the axioms or the comparison with the challenge rejected the project.
-
-## On disk
-
-`~/.delphi/p2p`, or `$DELPHI_P2P_HOME`, or `--home`. It sits beside the files of `delphi`, the command line for
-the website (`~/.delphi/key`), and shares nothing with them yet:
-
-| File | What |
-| --- | --- |
-| `keys.json` | the two secrets: the key that signs claims, and the key of the file endpoint. Mode 600. |
-| `config.json` | relays, bootstrap clients, the agent's name |
-| `claims.sqlite` | p2panda's store of signed operations |
-| `index.sqlite` | the claims as a table the commands query |
-| `blobs/` | the iroh-blobs file store |
-| `work/` | where `check` unpacks a snapshot |
+The container runs with Docker's seccomp and AppArmor profiles disabled so bubblewrap can create namespaces inside it.
+Project code still runs inside bubblewrap as an unprivileged user without network access.
 
 ## Running a network
 
-A network needs one relay that clients behind home routers can meet through, and it is better with a client that is
-always on.
+A network requires a relay server so peers behind NAT or firewalls can connect, plus at least one always-on node to
+bootstrap discovery and mirror files:
 
 ```bash
-iroh-relay --config relay.toml                      # the relay: iroh's own program
-delphi-p2p init --relay https://relay.example           # the seed
-delphi-p2p serve --mirror
+iroh-relay --config relay.toml                  # run an iroh relay server
+delphi-p2p init --relay https://relay.example   # initialize the seed node
+delphi-p2p serve --mirror                       # serve and mirror files
 ```
 
-Everyone else runs `delphi-p2p init --relay https://relay.example --bootstrap <seed key>@https://relay.example`. More
-than one `--relay` and `--bootstrap` may be given. Without a relay, clients find each other on the local network
-only.
+Other participants join with:
 
-The seed is where a new client starts, and nothing more. A client that runs `delphi-p2p serve` says so in its `endpoint`
-claim, and every client starts its search for peers from the always-on clients it has heard of as well as from its
-settings. Once a second client serves, the seed can go and the rest still find each other. Only the author of a
-record and the always-on clients announce that they hold its files: a client that stops after one command cannot
-serve them.
+```bash
+delphi-p2p init --relay https://relay.example --bootstrap <seed-key>@https://relay.example
+```
 
-## Showing the network on a website
+Both `--relay` and `--bootstrap` can be passed multiple times. Without a relay, discovery is limited to the local
+network via mDNS.
 
-A website has no process that stays up, so it cannot be a client. `bridge.py` runs beside a client that does and
-hands that client's log to the site:
+New nodes bootstrap from the configured seed and from `endpoint` claims published by running servers. Once a node
+discovers another serving peer, it can reconnect without the seed. Publishers and serving nodes advertise the snapshots
+they hold via `have` claims.
+
+### Website bridge
+
+Because a serverless website has no persistent daemon, `bridge.py` runs alongside a serving `delphi-p2p` node and
+relays its claims to the site:
 
 ```bash
 delphi-p2p serve --mirror &
 python3 bridge.py --site https://delphi.science --key-file bridge.key --cursor bridge.cursor
 ```
 
-It reads `delphi-p2p log --json --since <cursor>` and posts the claims to `POST /api/v1/claims`
-(`site/lib/p2p/claims.ts`). The key is an agent key of an account the site lists in `P2P_BRIDGE_LOGINS`. Claims go
-one way, from the network to the site, and the site keeps the first copy of each id, so sending twice is harmless.
+`bridge.py` reads `delphi-p2p log --json --since <cursor>` and posts claims to `POST /api/v1/claims`
+(`site/lib/p2p/claims.ts`), authenticated with an agent key for an account listed in `P2P_BRIDGE_LOGINS`. Syncing is
+one-way from the P2P network to the website and idempotent by claim ID.
 
-The site's reply names the versions whose file list it lacks. For those the client holds, the bridge sends the output
-of `delphi-p2p files <id> --exact --json`: each file's path, size and hash. The files stay with the clients. A
-publish claim signs one hash for the whole directory and that hash fixes the list, so the list is not a claim and
-needs no signature. A list of more than 10,000 files is not sent.
+When the API response lists version IDs missing file manifests, the bridge uploads `delphi-p2p files <id> --exact --json`
+for any version held locally (path, size, and hash per file; snapshots over 10,000 files are skipped) while file
+contents remain on peers. Because the signed `publish` claim commits to the snapshot's BLAKE3 root hash, the manifest
+needs no separate signature. Record pages show artifacts whose first version links that record via `--source` (version
+states, holder counts, check counts, and file diffs) while omitting untrusted free-text fields (title, note, author
+names) and showing only paths composed of ASCII letters, digits, `.`, `_`, `+`, `-`, and `/`.
 
-A record's page then shows the artifacts whose first version names that record with `--source`: each version, whether
-it is current, earlier or a fork, how many keys hold its files, how many keys passed or failed it, and its files
-with those that changed since the version before. A claim's title, note and author names are written by strangers
-and are not shown. File names are too: one is shown only if it is made of letters, digits and `. _ + -` between
-slashes, and the rest are counted.
+The website trusts its configured bridge rather than re-verifying p2panda signatures server-side, as the bridge's local
+node verifies every claim on receipt. Anyone can run a node and bridge against their own site instance to display the
+same records.
 
-The site does not verify signatures: it trusts its bridge, whose client verified each claim on arrival. Anyone can
-run a client and a bridge to a site of their own and get the same pages from the same claims.
+## Technical reference
 
-## Checking on a Mac
+- **Discovery and claim sync:** [p2panda](https://github.com/p2panda/p2panda) 0.8
+- **File transfer:** [iroh-blobs](https://github.com/n0-computer/iroh-blobs) 0.105
+- **Lean verification:** `lake check` and `lake comparator` in a sandbox (Lean 4.35 or later)
 
-`lake check` confines the project with bubblewrap, which is Linux only. Elsewhere `delphi-p2p check` builds a small
-image (`docker/lean-check.Dockerfile`), copies the snapshot into a container with the network off, and runs the same
-command there. It needs a running Docker. On an Ubuntu-based Docker machine such as colima, bubblewrap also needs:
+### Claims and versions
+
+Each claim is stored as the payload of a p2panda operation; the p2panda header holds the author's public key, signature,
+and timestamp.
+
+| Claim | Reference | Contents |
+| --- | --- | --- |
+| `publish` | Parent version ID, if any | Title, authors, source URL, snapshot hash, file count, and total size |
+| `have` | `publish` claim ID | Snapshot hash held and served by the signing peer |
+| `endpoint` | None | File-transfer endpoint address and serving status (latest claim applies) |
+| `check` | `publish` claim ID | Checker command, Lean toolchain, sandbox runner, and `pass` or `fail` verdict |
+
+A snapshot is an iroh-blobs collection identified by a single BLAKE3 root hash over all file paths and content hashes.
+Each `publish` claim creates a version. A record's current version is the latest unsuperseded version from the original
+author; versions signed by other keys are forks and never replace it.
+
+A `publish` claim can also specify a comparator configuration path inside the snapshot (`--comparator <path>`), allowing
+multiple records to share one large Lean snapshot while checking different challenge specifications. Check verdicts
+apply only to the exact snapshot referenced and are counted once per signing key. If the checker fails to run or the
+project fails to compile, no claim is published; `fail` is signed only when Lake explicitly reports a kernel rejection,
+a disallowed axiom, or a challenge mismatch.
+
+### Local storage
+
+The default data directory is `~/.delphi/p2p` (override with `$DELPHI_P2P_HOME` or `--home`). The website CLI
+(`delphi`) stores its credentials separately in `~/.delphi/key`.
+
+| Path | Contents |
+| --- | --- |
+| `keys.json` | Private keys for claim signing and the file-transfer endpoint (mode `0600`) |
+| `config.json` | Configured relays, bootstrap peers, and default agent name |
+| `claims.sqlite` | p2panda store of signed operations |
+| `index.sqlite` | SQLite index of claims queried by CLI commands |
+| `blobs/` | iroh-blobs content-addressed file store |
+| `work/` | Temporary directory where `check` unpacks snapshots |
+
+### Current limitations
+
+- **Single topic:** Every peer syncs all claims; p2panda sync overhead grows with the number of authors in a topic.
+- **File-level deduplication only:** iroh-blobs deduplicates whole files rather than chunks, so modifying a file transfers the full file again.
+- **Lean 4.35 or later only:** Older toolchains do not include `lake check` (for example, the OpenAI formalizations target Lean 4.34.1).
+- **Single relay per network:** Peers announce their configured relay URL, and migrating a network to another relay is not yet supported.
+- **External dependencies require `--network`:** Projects with external packages need `--network` during `check`, and Mathlib-scale builds have not yet been benchmarked.
+- **3,000-byte claim limit:** Claims are capped at 3,000 bytes to fit within p2panda's default gossip message size.
+- **Per-key check counts:** Signing keys are not yet linked to verified identities, so multiple keys controlled by the same person count separately.
+- **Pre-1.0 dependencies:** Both `p2panda` and `iroh-blobs` are pre-1.0; breaking changes to p2panda's operation format will require re-signing claims.
+
+## Development
+
+Core modules: `src/claim.rs` (claim schema), `src/index.rs` (local SQLite index), `src/ops.rs` (CLI commands),
+and `src/check.rs` (sandboxed Lean checker).
 
 ```bash
-colima ssh -- sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+cargo build                                  # Rust 1.96 or later
+cargo test                                   # unit tests
+RELAY_BIN=/path/to/iroh-relay tests/e2e.sh   # local relay, seed peer, and three clients
 ```
 
-The container runs with Docker's seccomp and AppArmor profiles off, because bubblewrap needs to create namespaces
-inside it. The project's code still runs inside bubblewrap, as an unprivileged user, with no network.
-
-## Limits of this version
-
-- **One topic.** Every client syncs every claim. p2panda's sync cost grows with the number of authors in a topic.
-- **A changed file is sent whole.** iroh-blobs deduplicates by file, not by chunk.
-- **Lean 4.35 and later only.** Older toolchains have no `lake check`. The OpenAI formalizations are on 4.34.1.
-- **One relay per network in practice.** Clients announce the relay they use; nothing yet moves a network to another.
-- **A project with dependencies needs `--network`** while it is checked, and a Mathlib-sized build has not been timed.
-- **Claims are at most 3000 bytes**, to fit p2panda's default gossip message.
-- **Checks are counted per key.** Nothing yet ties a key to a person, so one person with two keys counts twice.
-- **Both libraries are before 1.0.** A change of p2panda's operation format means signing the claims again.
+`tests/e2e.sh` requires Lean (`elan`) and an `iroh-relay` binary (`cargo install iroh-relay --features server`).
+By default it runs checks without a sandbox on its generated test projects; set `RUNNER=docker` to test inside the
+Docker sandbox.

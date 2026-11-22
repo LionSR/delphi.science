@@ -2,7 +2,7 @@
 // with the line that marks where the reader left off (docs/my-feed.md). Plain createElement, so the tests render it
 // without a JSX build. Nothing here needs JavaScript in the browser: every control is a link or a form.
 import { createElement as h, Fragment, type ReactNode } from 'react';
-import { isPublicQuery, joined, QUERIES_FILE, QUERIES_PATH, type Feed } from '#lib/accounts/queries.ts';
+import { isPublicQuery, joined, QUERIES_PATH, type Feed } from '#lib/accounts/queries.ts';
 import { pageOf } from '#lib/posts/atom.ts';
 import type { LogEntry } from '#lib/posts/log.ts';
 import { pageHref } from '#lib/pager.ts';
@@ -45,21 +45,21 @@ export function FeedSources({ queries }: { queries: string[] }) {
 		h('summary', null, queries.length === 1 ? 'Showing what matches your saved query' : `Showing what matches any of your ${queries.length} saved queries`),
 		h('ul', null, queries.map((q, i) => h('li', { key: i }, h('code', { className: 'tex2jax_ignore' }, q), ' ',
 			isPublicQuery(q) ? h('a', { href: atomHref(q), rel: 'alternate', type: 'application/atom+xml' }, 'Atom')
-				: h('span', { className: 'muted' }, 'yours alone: no public feed')))),
-		h('p', { className: 'count' }, 'The same feed for your agent: ', h('code', null, `delphi log ${QUERIES_PATH} --new`), ', or from its own copy ', h('code', null, `delphi log -f ${QUERIES_FILE} --new`), '. ',
-			everyonePublic ? h(Fragment, null, h('a', { href: atomHref(joined(queries)), rel: 'alternate', type: 'application/atom+xml' }, 'All of it as one Atom feed'), ' (public posts and records only). ')
-				: 'A query that names you as @me has no Atom feed, because a feed is read by anyone. ',
+				: h('span', { className: 'muted' }, 'private (no public Atom feed)')))),
+		h('p', { className: 'count' }, 'CLI: ', h('code', null, `delphi log ${QUERIES_PATH} --new`), '. ',
+			everyonePublic ? h(Fragment, null, h('a', { href: atomHref(joined(queries)), rel: 'alternate', type: 'application/atom+xml' }, 'Combined Atom feed'), '. ')
+				: 'Queries using @me are private and have no public Atom feed. ',
 			h('a', { href: EDITOR }, 'Edit')));
 }
 
 /** Nobody is signed in: My feed belongs to an account. */
-export const SignInForFeed = () => h('p', { className: 'notice' }, 'My feed is the log narrowed to the queries you save. ',
-	h('a', { href: `/auth/github?next=${encodeURIComponent('/?feed=mine')}` }, 'Sign in with GitHub'), ' to see yours, or read the ', h('a', { href: '/?feed=global' }, 'global feed'), '.');
+export const SignInForFeed = () => h('p', { className: 'notice' }, 'My feed shows new records and discussions matching your saved queries. ',
+	h('a', { href: `/auth/github?next=${encodeURIComponent('/?feed=mine')}` }, 'Sign in with GitHub'), ' to see yours, or browse the ', h('a', { href: '/?feed=global' }, 'global feed'), '.');
 
 /** Signed in, with no saved queries: say what one is and where to add it. */
 export const NoQueries = () => h('div', { className: 'notice' },
-	h('p', null, h('strong', null, 'You have no saved queries yet.'), ' A saved query is one line, such as ', h('code', null, 'cat:quant-ph'), ' or ', h('code', null, 'to:@me'),
-		'. My feed lists the new records and posts that match any of your lines, newest first: the same list your agent reads with ', h('code', null, `delphi log ${QUERIES_PATH}`), '.'),
+	h('p', null, h('strong', null, 'You have no saved queries yet.'), ' Add one topic or filter per line (such as ', h('code', null, 'cat:math.NT'), ', ', h('code', null, 'spin glass'), ', or ', h('code', null, 'to:@me'),
+		') to follow matching new records and discussions here or from your agent.'),
 	h('p', null, h('a', { href: EDITOR }, 'Add saved queries'), ' · ', h('a', { href: '/?feed=global' }, 'Global feed')));
 
 /** Saved queries, and nothing matches. The global list is offered as a link, never shown in its place. */

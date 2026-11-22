@@ -100,7 +100,9 @@ function Composer({ kind, owner, topic, parent, record, space, section, back, la
 					setAlternate(undefined);
 				}}>{copy.restoreDraft}</button>}
 				<button disabled={pending}>{pending ? copy.pending : owner ? button : `Sign in and ${button.toLowerCase()}`}</button>
-				<p className="count" aria-live="polite">{!ready ? 'Drafts stay in this tab.' : saved ? copy.draftSaved : 'Your text stays in this form. Browser draft storage is unavailable.'}</p>
+				{ready && (draft.title || draft.body) && (
+					<p className="count" aria-live="polite">{saved ? copy.draftSaved : 'Draft stays in this form while open.'}</p>
+				)}
 			</fieldset>
 		</form>
 	);

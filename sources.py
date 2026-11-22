@@ -135,12 +135,14 @@ class MetaParser(HTMLParser):
     """Collects <meta name|property=… content=…> (repeated names become lists), <title>, and the first
     <h1> and <p>, for pages that carry no metadata at all."""
 
-    def __init__(self) -> None:
+    def __init__(self, text: str = "") -> None:
         super().__init__()
         self.meta: dict[str, list[str]] = {}
         self.title = self.h1 = self.p = ""
         self._in_title = False
         self._in = ""  # "h1" or "p" while inside the first of each
+        if text:
+            self.feed(text)
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         a = dict(attrs)
@@ -166,12 +168,6 @@ class MetaParser(HTMLParser):
     def one(self, name: str) -> str:
         """The first value of a meta tag, or ''."""
         return (self.meta.get(name) or [""])[0]
-
-
-def page_meta(url: str) -> MetaParser:
-    p = MetaParser()
-    p.feed(get_text(url))
-    return p
 
 
 # ---- Discussion: posts and articles about a record ----
@@ -294,8 +290,7 @@ def web_link(url: str, parts: urllib.parse.SplitResult, host: str) -> dict[str, 
     who, quoted = passage(page, parts.fragment[len(":~:text="):]) if parts.fragment.startswith(":~:text=") else ("", "")
     if who:  # the URL keeps only the passage; the name goes in author
         url = urllib.parse.urlunsplit(parts._replace(fragment=":~:text=" + parts.fragment.split("-,", 1)[1]))
-    m = MetaParser()
-    m.feed(page)
+    m = MetaParser(page)
     one = m.one
     extra = youtube(url, page) if host in YOUTUBE_HOSTS else stackexchange(host, url) if host in STACKEXCHANGE else {}
     author = who or page_author(m)
@@ -520,8 +515,8 @@ class OpenAIMath(Source):
     # Any branch or commit of the repository, and the community's mirror with its reactions to each paper.
     patterns = [r"^(?:https?://)?(?:github\.com/openai/math/(?:blob|tree)|raw\.githubusercontent\.com/openai/math)/[^/]+/preprints/([^/]+?)(?:/.*)?$",
                 r"^(?:https?://)?mathcommunity\.github\.io/oai-math-revised/papers/([^/]+?)(?:/.*)?$"]
-    DATED = re.compile(r"-(January|February|March|April|May|June|July|August|September|October|November|December)-(\d{1,2})-(\d{4})$")
     MONTHS = "January February March April May June July August September October November December".split()
+    DATED = re.compile(rf"-({'|'.join(MONTHS)})-(\d{{1,2}})-(\d{{4}})$")
 
     def key_of(self, m: re.Match[str]) -> str:
         return self.DATED.sub("", m.group(1))
@@ -764,7 +759,7 @@ class AnthropicScience(Source):
 
     def fetch(self, key: str) -> dict[str, Any]:
         url = f"https://www.anthropic.com/research/{key}"
-        m = page_meta(url)
+        m = MetaParser(get_text(url))
         one = m.one
         return self.entry(
             key, url=url, title=clean(one("og:title") or m.title), authors=["Anthropic"],
@@ -847,8 +842,9 @@ class Hexagon(Source):
                 except (NotFound, SourceError):
                     pass  # the list record is enough to index it
                 yield self._entry(w)
-            cursor = (page.get("page") or {}).get("next_cursor")
-            if not (page.get("page") or {}).get("has_more") or not cursor:
+            pg = page.get("page") or {}
+            cursor = pg.get("next_cursor")
+            if not pg.get("has_more") or not cursor:
                 return
 
 
@@ -948,11 +944,6 @@ def identity(url: str) -> str:
     host = "x.com" if u.hostname in X_HOSTS else u.hostname or ""
     query = urllib.parse.urlencode([(k, v) for k, v in urllib.parse.parse_qsl(u.query) if not TRACKING.fullmatch(k)])
     return urllib.parse.urlunsplit(("https", host, u.path.rstrip("/"), query, ""))
-
-
-def fetch(url: str) -> dict[str, Any]:
-    s, _ = detect(url)
-    return s.fetch_url(url.strip())
 
 
 def today() -> str:

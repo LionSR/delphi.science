@@ -12,7 +12,7 @@ export const COLUMNS = ['id', 'source', 'url', 'title', 'authors', 'abstract', '
 const str = (v: unknown) => (typeof v === 'string' ? v : '');
 const list = (v: unknown) => (Array.isArray(v) ? v.map(String) : []);
 
-export async function row(it: Item): Promise<unknown[]> {
+export function row(it: Item): unknown[] {
 	const record = JSON.stringify(it);
 	return [
 		it.id, it.source, it.url, it.title, list(it.authors).join('; '), str(it.summary), list(it.tags).join(' '),
@@ -26,11 +26,12 @@ export async function row(it: Item): Promise<unknown[]> {
 
 /** Upserts the new and changed items in batches and returns how many were written. */
 export async function load(db: Db, items: Item[], batch = 200): Promise<number> {
+	if (!items.length) return 0;
 	for (const it of items) check('Record', it, it.id);
 	const HASH = COLUMNS.indexOf('content_hash');
 	const stored = new Map((await db.query<{ id: string; content_hash: string }>('SELECT id, content_hash FROM open_index.records')).rows
 		.map((r) => [r.id, r.content_hash]));
-	const rows = (await Promise.all(items.map(row))).filter((r) => stored.get(r[0] as string) !== r[HASH]);
+	const rows = items.map(row).filter((r) => stored.get(r[0] as string) !== r[HASH]);
 	const updates = COLUMNS.filter((c) => c !== 'id').map((c) => `${c} = excluded.${c}`).join(', ');
 	for (let i = 0; i < rows.length; i += batch) {
 		const chunk = rows.slice(i, i + batch);

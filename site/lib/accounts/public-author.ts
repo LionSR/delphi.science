@@ -5,7 +5,7 @@ export const profilePath = (login: string) => `/u/${encodeURIComponent(login)}`;
 
 /** Agent first, with the person's team as its affiliation. Human posts keep the person's name and affiliation.
  *  The person's name (or "@login" when none is known) links to their profile; the login stays in its tooltip. */
-export function PublicAuthor({ voter, agent = '', who }: { voter: string; agent?: string; who?: PublicName }) {
+export function PublicAuthor({ voter, agent = '', who }: { voter: string; agent?: string; who?: Partial<PublicName> }) {
 	return createElement(Fragment, null,
 		agent ? createElement('span', { className: 'tex2jax_ignore' }, agent) : null,
 		agent ? ' · ' : '',

@@ -1,18 +1,17 @@
 // Reads a submitted link's metadata from its source (arXiv, GitHub, DOI, Zenodo, or a public web page),
 // following the harvester's rules in sources.py so ids match what `index.py add` stores.
-import { publicWebTarget, readPublicWeb, RetrievalError, webKey, type SourceTransport } from '#lib/moderation/source-fetch.ts';
+import { isBlockedHost, publicWebTarget, readPublicWeb, RetrievalError, webKey, type SourceTransport } from '#lib/moderation/source-fetch.ts';
 import { check, type Entry, type Item } from '#lib/api/schema.ts';
-import { truncate } from '#lib/view.ts';
+import { decodeEntities, truncate, xmlTags } from '#lib/view.ts';
 import { divisionOf, isNamedSubject } from './taxonomy.ts';
 
 export class NotFound extends Error {}
 // Mostly-pseudoscience venues (sources.py BLOCKED_HOSTS).
-const BLOCKED_HOSTS = ['vixra.org', 'aixiv.science', 'clawxiv.org', 'jaigp.org'];
 export function blocked(link: string) {
 	const url = link.trim();
 	let host = '';
 	try { host = new URL(url.includes('://') ? url : `https://${url}`).hostname.toLowerCase(); } catch { return false; }
-	return BLOCKED_HOSTS.some((h) => host === h || host.endsWith(`.${h}`));
+	return isBlockedHost(host);
 }
 
 const USER_AGENT = 'delphi/0.1 (+https://github.com/LionSR/delphi.science; metadata only)';
@@ -32,13 +31,7 @@ type Get = (url: string, accept?: string) => Promise<Response>;
 
 // ---- Text cleanup, as in sources.py ----
 
-const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
-const clean = (text: unknown) =>
-	String(text ?? '').replace(/<[^>]+>/g, ' ')
-		.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e: string) => e[0] === '#'
-			? String.fromCodePoint(e[1].toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10))
-			: ENTITIES[e.toLowerCase()] ?? m)
-		.replace(/\s+/g, ' ').trim();
+const clean = (text: unknown) => decodeEntities(String(text ?? '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 const summarize = (text: unknown) => truncate(clean(text), SUMMARY_CHARS);
 const isoDate = (text: unknown) => String(text ?? '').match(/(\d{4})[-/](\d{2})[-/](\d{2})/)?.slice(1).join('-') ?? '';
 const subject = (domain: string) => (isNamedSubject(domain) ? { subject: domain, division: divisionOf(domain) } : {});
@@ -70,22 +63,20 @@ export function itemOf(e: Entry): Item {
 
 // ---- The sources ----
 
-const xml = (s: string, tag: string) => [...s.matchAll(new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)</${tag}>`, 'g'))].map((m) => m[1]);
-
 const SOURCES: Source[] = [
 	{
 		name: 'arxiv',
 		patterns: [/^(?:https?:\/\/)?(?:www\.)?arxiv\.org\/(?:abs|pdf|html)\/([\w./-]+?)(?:v\d+)?(?:\.pdf)?\/?$/, /^(?:arXiv:)?(\d{4}\.\d{4,5})(?:v\d+)?$/],
 		async read(key, get) {
 			const feed = await (await get(`https://export.arxiv.org/api/query?id_list=${encodeURIComponent(key)}`)).text();
-			const e = xml(feed, 'entry').find((x) => xml(x, 'title').length);
+			const e = xmlTags(feed, 'entry').find((x) => xmlTags(x, 'title').length);
 			if (!e) throw new NotFound(`arXiv:${key}`);
-			const id = (xml(e, 'id')[0] ?? '').trim().split('/abs/').pop()!.replace(/v\d+$/, '');
+			const id = (xmlTags(e, 'id')[0] ?? '').trim().split('/abs/').pop()!.replace(/v\d+$/, '');
 			const domain = e.match(/<arxiv:primary_category[^>]*term="([^"]+)"/)?.[1] ?? '';
 			return entry('arxiv', id, {
-				url: `https://arxiv.org/abs/${id}`, title: clean(xml(e, 'title')[0]),
-				authors: xml(e, 'author').map((a) => clean(xml(a, 'name')[0])).filter(Boolean), summary: summarize(xml(e, 'summary')[0]), domain,
-				tags: [...e.matchAll(/<category[^>]*term="([^"]+)"/g)].map((m) => m[1]), published: isoDate(xml(e, 'published')[0]),
+				url: `https://arxiv.org/abs/${id}`, title: clean(xmlTags(e, 'title')[0]),
+				authors: xmlTags(e, 'author').map((a) => clean(xmlTags(a, 'name')[0])).filter(Boolean), summary: summarize(xmlTags(e, 'summary')[0]), domain,
+				tags: [...e.matchAll(/<category[^>]*term="([^"]+)"/g)].map((m) => m[1]), published: isoDate(xmlTags(e, 'published')[0]),
 			});
 		},
 	},

@@ -5,7 +5,7 @@ import type { Db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
 import { pageInfo, pageSize, pageStart, type PageRequest } from '#lib/paging.ts';
 import { truncate } from '#lib/view.ts';
-import { divisionOf, isSubjectCode, subjectNamed } from './taxonomy.ts';
+import { isSubjectCode, subjectNamed } from './taxonomy.ts';
 
 export type Leaf = { field: string; value: string; phrase: boolean };
 type Node = { op: 'AND' | 'OR' | 'NOT'; kids: Tree[] };
@@ -33,7 +33,7 @@ export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'day', 
 export const SEARCH_PAGE = pageSize('Results', 100, 20);
 
 // The query language as the docs describe it (OpenAPI, /api/v1, /llms.txt, MCP).
-export const IS: Record<string, string> = Object.fromEntries(Object.entries(IS_FLAGS).map(([k, [, meaning]]) => [k, meaning]));
+const IS: Record<string, string> = Object.fromEntries(Object.entries(IS_FLAGS).map(([k, [, meaning]]) => [k, meaning]));
 export const QUERY_FIELDS: Record<string, string> = {
 	'ti au abs all': 'title, author, abstract, every text field (a bare word searches all)',
 	cat: 'arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes',

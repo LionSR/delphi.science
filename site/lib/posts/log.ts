@@ -144,7 +144,7 @@ type Row = { seq: number; kind: Kind; at: string; voter: string; record_id: stri
 	parent: number | null; agent: string | null; score: number | null; title: string | null; body: string | null; revision: string | null; mentions: string[] };
 
 /** The path of the thread a post is in: a record's id, forum/<topic>, or ws/<slug>/<topic>. */
-export const threadPath = (p: { record_id: string | null; topic_id: number | null; space: string | null }) => p.record_id ?? topicPath(p.space ?? FORUM, p.topic_id!);
+const threadPath = (p: { record_id: string | null; topic_id: number | null; space: string | null }) => p.record_id ?? topicPath(p.space ?? FORUM, p.topic_id!);
 
 // The path is built here from the topic's space, not read from events.path, which knows the forum's paths only.
 const entry = (e: Row): LogEntry => ({
@@ -230,8 +230,7 @@ export async function log(db: Db, who: Reader, scope: Scope = {}, opts: LogOptio
 	// What was asked for, as far as membership lines go (below). Saved queries count as a query: one saved line alone
 	// is that query, as `delphi log -f` sends it; several, or a search within them, are a larger query.
 	const asked = opts.any ? (opts.any.length === 1 && !q ? opts.any[0].trim() : '(saved queries)') : q;
-	const rows = (await db.query<Row>(
-		`${EVENTS} AND ${conditions.join(' AND ')} ORDER BY e.seq ${direction} LIMIT ${c.p(limit)}`, c.params)).rows;
+	const eventsQuery = db.query<Row>(`${EVENTS} AND ${conditions.join(' AND ')} ORDER BY e.seq ${direction} LIMIT ${c.p(limit)}`, c.params).then((r) => r.rows);
 
 	// Membership lines belong to the whole log, to ws, and to one space, not to one topic. A query is about records and
 	// posts and leaves them out, with one exception: the inbox. When the whole query is to:@login (or to:@me), an
@@ -240,7 +239,7 @@ export async function log(db: Db, who: Reader, scope: Scope = {}, opts: LogOptio
 	const wholeLog = !Object.keys(scope).length;
 	const named = asked?.match(/^to:@?([a-z0-9][a-z0-9_-]*)$/i)?.[1].toLowerCase();
 	const to = named === 'me' ? who?.toLowerCase() : named;
-	let events: MemberRow[] = [];
+	let memberQuery: Promise<MemberRow[]> | undefined;
 	if (sees !== null && (!asked || to) && scope.topic === undefined && (wholeLog || scope.spaces || scope.space !== undefined)) {
 		const a: unknown[] = [limit, sees];
 		// The person invited reads their invitation; a space's members read its invitations and acceptances.
@@ -249,8 +248,9 @@ export async function log(db: Db, who: Reader, scope: Scope = {}, opts: LogOptio
 		else if (Number.isSafeInteger(opts.before)) { a.push(opts.before); m.push(`e.seq < $${a.length}`); }
 		if (scope.space !== undefined) { a.push(scope.space); m.push(`m.space_id = $${a.length}`); }
 		if (to) { a.push(to); m.push(`((NOT e.accepted AND m.login = $${a.length}) OR (e.accepted AND lower(m.invited_by) = $${a.length}))`); }
-		events = (await db.query<MemberRow>(`SELECT * FROM (${MEMBER_EVENTS} AND ${m.join(' AND ')}) x ORDER BY seq ${direction} LIMIT $1`, a)).rows;
+		memberQuery = db.query<MemberRow>(`SELECT * FROM (${MEMBER_EVENTS} AND ${m.join(' AND ')}) x ORDER BY seq ${direction} LIMIT $1`, a).then((r) => r.rows);
 	}
+	const [rows, events] = await Promise.all([eventsQuery, memberQuery ?? []]);
 
 	const entries = [...rows.map(entry), ...events.map(memberEntry)].sort((x, y) => (since === undefined ? y.seq - x.seq : x.seq - y.seq)).slice(0, limit);
 	return { entries, since: Math.max(since ?? 0, ...entries.map((e) => e.seq)) };

@@ -11,8 +11,8 @@ import { FORUM as FORUM_SPACE } from '#lib/posts/visibility.ts';
 export const GET = operation('getTopic', async ({ params }) => {
 	// The public forum's topic: read as nobody signed in, and only in the forum.
 	const found = await topicWithPosts(await db(), params.id, null, FORUM_SPACE);
-	const { space: _, ...t } = found ?? { space: '' };
 	if (!found) throw new NotFoundError(`no topic ${params.id}`, 'Use a topic id from GET /api/v1/forum.');
+	const { space: _, ...t } = found;
 	return Response.json(t, { headers: FORUM });
 });
 

@@ -9,6 +9,7 @@ import { me } from '#lib/accounts/session.ts';
 import { date, original, recordPath, source, tally, tex } from '#lib/view.ts';
 import { myVotes } from '#lib/records/votes.ts';
 import { Hero } from './logo.tsx';
+import { RecordBadges } from './record-badges.tsx';
 import { Vote } from './vote.tsx';
 import { HomeOrder } from './home-order.ts';
 import { Pager, PAGE_SIZE, pageHref, pageParam } from '#lib/pager.ts';
@@ -62,7 +63,10 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	const page = pageParam(rawPage);
 	const d = await db();
 	const person = await me();
-	const view = chooseFeed(params, Boolean(person), Boolean(person && queryLines((await savedQueries(d, person.login)).text).length));
+	let view = chooseFeed(params, Boolean(person), false);
+	if (person && view !== chooseFeed(params, true, true)) {
+		view = chooseFeed(params, true, queryLines((await savedQueries(d, person.login)).text).length > 0);
+	}
 	const welcome = (
 		<section className="welcome">
 			<Hero />
@@ -90,16 +94,16 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	}
 	// The global list keeps its feed in its links once it was asked for by name, so paging and ordering stay in it.
 	const feed = params.feed === 'global' ? 'global' : '';
-	// A query error the reader can fix is shown with its fix. Source counts and the session load in parallel.
-	const [found, sources, who] = await Promise.all([
+	// A query error the reader can fix is shown with its fix. Source counts load in parallel with search.
+	const [found, sources] = await Promise.all([
 		search(d, q, { sort, page, limit: PAGE_SIZE }).then((res) => ({ res, error: '' }), (e) => {
 			if (!(e instanceof QueryError)) throw e;
 			return { res: null, error: `${e.message}. ${e.fix}` };
 		}),
-		sourceCounts(d), me(),
+		sourceCounts(d),
 	]);
 	const { res, error } = found;
-	const mine = who && res ? await myVotes(d, who.login, res.results.map((r) => String(r.id))) : new Map();
+	const mine = person && res?.results.length ? await myVotes(d, person.login, res.results.map((r) => String(r.id))) : new Map();
 	const here = pageHref('/', { feed, q, sort }, page);
 	return (
 		<>
@@ -130,7 +134,10 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 				<div className="filter-row">
 					<span className="filter-label">Sources</span>
 					<nav className="subjects sources" aria-label="Sources">
-						{sources.map((r) => <a key={r.source} href={source(r.source).href} title={source(r.source).title}>{source(r.source).name} <span className="n">{r.n.toLocaleString('en')}</span></a>)}
+						{sources.map((r) => {
+							const tag = source(r.source);
+							return <a key={r.source} href={tag.href} title={tag.title}>{tag.name} <span className="n">{r.n.toLocaleString('en')}</span></a>;
+						})}
 					</nav>
 				</div>
 			</section>
@@ -141,7 +148,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 			</div>}
 			<ol>
 				{res?.results.map((r) => {
-					const from = original(r);
+					const from = original(r), tag = source(r.source);
 					return (
 					<li key={String(r.id)} className="item">
 						<Vote id={String(r.id)} reactions={r.reactions} mine={mine.get(String(r.id))?.value} back={here} />
@@ -149,14 +156,11 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 						{Array.isArray(r.authors) && r.authors.length > 0 && <p className="authors">{r.authors.slice(0, 8).join(', ')}</p>}
 						<p className="meta">
 							{/* The source tag filters the list; the Source link opens the original work. */}
-							<a className="tag" href={source(r.source).href} title={source(r.source).title}>{source(r.source).name}</a>
+							<a className="tag" href={tag.href} title={tag.title}>{tag.name}</a>
 							{from && <a className="external" href={from.href} rel="external" title={from.href}>Source: {from.host}</a>}
 							<span>{date(r.published)}</span>
 							{r.subject ? <code>{String(r.subject)}</code> : null}
-							{r.origin === 'ai-generated' && <span className="pill muted">AI-generated</span>}
-							{r.verified ? <span className="pill accent">machine-checked</span> : r.formalized ? <span className="pill accent">Lean</span> : null}
-							{r.disputed ? <span className="pill warn">disputed</span> : null}
-							{r.withdrawn ? <span className="pill warn">withdrawn</span> : null}
+							<RecordBadges record={r} />
 							<span>{tally(r)}</span>
 						</p>
 					</li>

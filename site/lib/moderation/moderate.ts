@@ -1,8 +1,7 @@
 // The DeepSeek quality check that every post must pass before it is stored.
 import type { Db } from '#lib/db.ts';
-import { ModerationError } from '#lib/errors.ts';
+import { ModerationError, QueryError } from '#lib/errors.ts';
 import type { Voter } from '#lib/accounts/keys.ts';
-import { QueryError } from '#lib/errors.ts';
 import { notationVerdict } from './math-notation.ts';
 
 export type Decision = 'ACCEPT' | 'REQUEST_REVISION' | 'REJECT' | 'REVIEW_NEEDED';

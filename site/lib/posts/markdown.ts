@@ -21,9 +21,12 @@ type Node = {
 const VERBATIM = ['code', 'inlineCode', 'html', 'definition', 'image', 'imageReference', 'math', 'inlineMath'];
 type Prepared = { markdown: string; tokens: { marker: string; value: string; display: boolean }[] };
 
+const mathParser = unified().use(remarkParse).use(remarkGfm).use(remarkMath).freeze();
+
 /** Replaces \\(…\\) and \\[…\\] math with markers, outside code, URLs and escaped backslashes. */
 function prepareMath(text: string): Prepared {
-	const tree = unified().use(remarkParse).use(remarkGfm).use(remarkMath).parse(text) as Node;
+	if (!text.includes('\\(') && !text.includes('\\[')) return { markdown: text, tokens: [] };
+	const tree = mathParser.parse(text) as Node;
 	const protectedRanges: [number, number][] = [];
 	function visit(node: Node) {
 		const start = node.position?.start.offset;
@@ -76,9 +79,6 @@ function prepareMath(text: string): Prepared {
 	}
 	return { markdown: out, tokens };
 }
-
-/** The Markdown as rendered, with backslash math replaced by markers; for tests. */
-export const mathDelimiters = (text: string) => prepareMath(text).markdown;
 
 /** Turns the markers back into math nodes (not $ strings, so literal dollars and containers stay intact). */
 function restoreBackslashMath(prepared: Prepared) {

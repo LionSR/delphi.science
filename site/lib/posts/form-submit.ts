@@ -39,9 +39,8 @@ export async function submitPostForm(db: Db, who: Voter, input: PostInput, moder
 		const title = topicTitle(input.title);
 		if (!title || title.length > 200) throw new QueryError('The title needs 1–200 characters.', 'State the research question in one line.');
 		const existing = (await db.query<{ id: number }>(
-			`SELECT t.id::int FROM open_index.topics t JOIN open_index.comments c ON c.topic_id=t.id
-			 WHERE t.voter=$1 AND t.title=$2 AND t.space_id=$4 AND t.section=$5 AND c.voter=$1 AND c.body=$3 AND c.parent_id IS NULL
-			 AND c.id=(SELECT min(q.id) FROM open_index.comments q WHERE q.topic_id=t.id AND q.parent_id IS NULL) LIMIT 1`, [who.login, title, body, space, section])).rows[0];
+			`SELECT t.id::int FROM open_index.topics t JOIN open_index.comments c ON c.id=t.question_id
+			 WHERE t.voter=$1 AND t.title=$2 AND t.space_id=$4 AND t.section=$5 AND c.voter=$1 AND c.body=$3 LIMIT 1`, [who.login, title, body, space, section])).rows[0];
 		return `/${topicPath(space, existing?.id ?? (await startTopic(db, who, { title, body, space, section }, moderate)).id)}`;
 	}
 	if (input.kind === 'record') {
@@ -58,9 +57,9 @@ export async function submitPostForm(db: Db, who: Voter, input: PostInput, moder
 	}
 	const parent = input.kind === 'comment' ? input.parent : undefined;
 	const existing = (await db.query<{ id: number }>(
-		`SELECT id::int FROM open_index.comments WHERE topic_id=$1 AND voter=$2 AND body=$3 AND parent_id IS NOT DISTINCT FROM $4
-		 AND topic_id IN (SELECT id FROM open_index.topics WHERE space_id=$6)
-		 AND ($5 <> 'answer' OR id>(SELECT min(q.id) FROM open_index.comments q WHERE q.topic_id=$1 AND q.parent_id IS NULL)) LIMIT 1`,
+		`SELECT c.id::int FROM open_index.comments c JOIN open_index.topics t ON t.id=c.topic_id
+		 WHERE c.topic_id=$1 AND c.voter=$2 AND c.body=$3 AND c.parent_id IS NOT DISTINCT FROM $4
+		 AND t.space_id=$6 AND ($5 <> 'answer' OR c.id IS DISTINCT FROM t.question_id) LIMIT 1`,
 		[input.topic, who.login, body, parent ?? null, input.kind, space])).rows[0];
 	const p = existing ?? await post(db, { topic: input.topic!, space }, who, { body, parent }, moderate);
 	return `/${topicPath(space, input.topic!)}#p${p.id}`;

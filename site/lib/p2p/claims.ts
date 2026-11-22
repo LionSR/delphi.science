@@ -23,14 +23,34 @@ export function canRelay(who: Voter | null | undefined, configured = process.env
 	return !!who && bridges.includes(who.login.toLowerCase());
 }
 
-/** The record a publish claim's source names: the one the index lists under that link, or the id the link would get. */
-async function recordOf(db: Db, source: unknown): Promise<string | null> {
-	if (typeof source !== 'string' || !looksLikeLink(source)) return null;
-	const hit = detect(source);
-	const id = hit ? `${hit.source.name}/${hit.key}` : '';
-	const listed = (await db.query<{ id: string }>(
-		"SELECT id FROM open_index.records WHERE id = $1 OR lower(url) = lower($2) OR lower(record->>'repo') = lower($2) LIMIT 1", [id, source.trim()])).rows[0]?.id;
-	return listed ?? (id || null);
+/** Resolves each publish claim's source link to an indexed record id (or its detected id) in one query. */
+async function resolveRecords(db: Db, entries: readonly ClaimEntry[]): Promise<Map<string, string | null>> {
+	const detected = new Map<string, string>();
+	for (const { claim } of entries) {
+		if (claim.kind !== 'publish' || typeof claim.data.source !== 'string' || !looksLikeLink(claim.data.source)) continue;
+		const src = claim.data.source.trim();
+		if (detected.has(src)) continue;
+		const hit = detect(src);
+		detected.set(src, hit ? `${hit.source.name}/${hit.key}` : '');
+	}
+	const out = new Map<string, string | null>();
+	if (!detected.size) return out;
+	const ids = [...new Set([...detected.values()].filter(Boolean))];
+	const urls = [...new Set([...detected.keys()].map((s) => s.toLowerCase()))];
+	const listed = (await db.query<{ id: string; url: string | null; repo: string | null }>(
+		"SELECT id, lower(url) AS url, lower(record->>'repo') AS repo FROM open_index.records WHERE id = ANY($1::text[]) OR lower(url) = ANY($2::text[]) OR lower(record->>'repo') = ANY($2::text[])",
+		[ids, urls])).rows;
+	const byId = new Set(listed.map((r) => r.id));
+	const byUrl = new Map<string, string>(), byRepo = new Map<string, string>();
+	for (const r of listed) {
+		if (r.url && !byUrl.has(r.url)) byUrl.set(r.url, r.id);
+		if (r.repo && !byRepo.has(r.repo)) byRepo.set(r.repo, r.id);
+	}
+	for (const [src, id] of detected) {
+		const lower = src.toLowerCase();
+		out.set(src, (id && byId.has(id) ? id : null) ?? byUrl.get(lower) ?? byRepo.get(lower) ?? (id || null));
+	}
+	return out;
 }
 
 const MAX_WANTED = 50;
@@ -41,14 +61,12 @@ const MAX_WANTED = 50;
  * versions whose list is still missing, for the bridge to send if its client holds them.
  */
 export async function store(db: Db, { entries, snapshots = [] }: Batch, by: Voter) {
-	const rows = [];
-	for (const { id, author, micros, claim } of entries) {
-		rows.push({
-			id, author, micros, kind: claim.kind, agent: claim.agent ?? null, refs: claim.refs, data: claim.data,
-			snapshot: typeof claim.data.snapshot === 'string' ? claim.data.snapshot : null,
-			record_id: claim.kind === 'publish' ? await recordOf(db, claim.data.source) : null,
-		});
-	}
+	const records = await resolveRecords(db, entries);
+	const rows = entries.map(({ id, author, micros, claim }) => ({
+		id, author, micros, kind: claim.kind, agent: claim.agent ?? null, refs: claim.refs, data: claim.data,
+		snapshot: typeof claim.data.snapshot === 'string' ? claim.data.snapshot : null,
+		record_id: claim.kind === 'publish' && typeof claim.data.source === 'string' ? (records.get(claim.data.source.trim()) ?? null) : null,
+	}));
 	const added = (await db.query(
 		`INSERT INTO open_index.claims (id, author, at_micros, kind, agent, refs, data, snapshot, record_id, received_from)
 		 SELECT e->>'id', e->>'author', (e->>'micros')::bigint, e->>'kind', e->>'agent', ARRAY(SELECT jsonb_array_elements_text(e->'refs')),
@@ -97,9 +115,9 @@ export type Listing = { after: string | null; files: FileLine[]; more: number; u
 export type Artifact = { id: string; author: string; versions: Version[] };
 
 /** A publish claim of one artifact, in the order (time, id) the client sorts by. */
-export type PublishRow = { id: string; author: string; at: Date; refs: string[]; root: string; snapshot: string | null; files: unknown; bytes: unknown };
+type PublishRow = { id: string; author: string; at: Date; refs: string[]; root: string; snapshot: string | null; files: unknown; bytes: unknown };
 /** A check claim, in the same order. */
-export type CheckRow = { author: string; refs: string[]; snapshot: string | null; result: string | null; toolchain: string | null };
+type CheckRow = { author: string; refs: string[]; snapshot: string | null; result: string | null; toolchain: string | null };
 
 const HEX64 = /^[0-9a-f]{64}$/;
 const LEAN = /^leanprover\/lean4:(v[0-9][0-9A-Za-z.-]{0,30})$/;
@@ -126,13 +144,14 @@ function listing(files: readonly FileEntry[], before?: { id: string; files: read
  * record's current version is its first author's newest that none of that author's versions follows, and each
  * key counts once per snapshot, with its newest verdict. `lists` holds the file lists the site has, by snapshot.
  */
-export function shape(publishes: readonly PublishRow[], checks: readonly CheckRow[], holders: ReadonlyMap<string, number>,
+function shape(publishes: readonly PublishRow[], checks: readonly CheckRow[], holders: ReadonlyMap<string, number>,
 	lists: ReadonlyMap<string, readonly FileEntry[]> = new Map()): Artifact[] {
 	const sound = publishes.filter((p) => p.snapshot && HEX64.test(p.snapshot) && count(p.files) && count(p.bytes));
 	const order = new Map(sound.map((p, i) => [p, i]));
 	const byRoot = Map.groupBy(sound, (p) => p.root);
 	return [...byRoot].flatMap(([root, rows]) => {
-		const first = rows.find((p) => p.id === root);
+		const byId = new Map(rows.map((q) => [q.id, q]));
+		const first = byId.get(root);
 		if (!first) return [];
 		const own = rows.filter((p) => p.author === first.author);
 		const followed = new Set(own.flatMap((p) => p.refs));
@@ -144,11 +163,11 @@ export function shape(publishes: readonly PublishRow[], checks: readonly CheckRo
 			const results = [...verdicts.values()];
 			const mine = lists.get(p.snapshot!);
 			// The version it follows, if the site has that one's list too.
-			const parent = p.refs.map((ref) => rows.find((q) => q.id === ref)).find((q) => q && lists.has(q.snapshot!));
+			const parent = p.refs.map((ref) => byId.get(ref)).find((q) => q && lists.has(q.snapshot!));
 			return {
 				id: p.id, author: p.author, at: p.at, snapshot: p.snapshot!, files: p.files as number, bytes: p.bytes as number,
 				state: p === head ? 'current' : p.author !== first.author ? 'fork' : followed.has(p.id) ? 'earlier' : 'open',
-				after: p.refs.find((ref) => rows.some((q) => q.id === ref)) ?? null,
+				after: p.refs.find((ref) => byId.has(ref)) ?? null,
 				holders: holders.get(p.snapshot!) ?? 0,
 				pass: results.filter((c) => c.result === 'pass').length, fail: results.filter((c) => c.result === 'fail').length,
 				lean: [...new Set(results.flatMap((c) => c.toolchain?.match(LEAN)?.[1] ?? []))].sort(),
@@ -175,15 +194,17 @@ export async function artifacts(db: Db, recordId: string): Promise<Artifact[]> {
 		 SELECT id, author, to_timestamp(at_micros / 1000000.0) AS at, refs, root, snapshot, files, bytes
 		 FROM tree ORDER BY at_micros, id LIMIT ${MAX_VERSIONS}`, [recordId])).rows;
 	if (!publishes.length) return [];
-	const checks = (await db.query<CheckRow>(
-		`SELECT author, refs, snapshot, data->>'result' AS result, data->>'toolchain' AS toolchain FROM open_index.claims
-		 WHERE kind = 'check' AND refs && $1::text[] ORDER BY at_micros, id LIMIT ${MAX_CHECKS}`, [publishes.map((p) => p.id)])).rows;
 	const snapshots = publishes.flatMap((p) => p.snapshot ?? []);
-	const held = (await db.query<{ snapshot: string; n: number }>(
-		`SELECT snapshot, count(DISTINCT author)::int AS n FROM open_index.claims WHERE kind = 'have' AND snapshot = ANY ($1::text[]) GROUP BY snapshot`,
-		[snapshots])).rows;
-	const lists = (await db.query<{ hash: string; files: FileEntry[] }>(
-		'SELECT hash, files FROM open_index.snapshots WHERE hash = ANY ($1::text[])', [snapshots])).rows;
+	const [checks, held, lists] = await Promise.all([
+		db.query<CheckRow>(
+			`SELECT author, refs, snapshot, data->>'result' AS result, data->>'toolchain' AS toolchain FROM open_index.claims
+			 WHERE kind = 'check' AND refs && $1::text[] ORDER BY at_micros, id LIMIT ${MAX_CHECKS}`, [publishes.map((p) => p.id)]).then((r) => r.rows),
+		snapshots.length ? db.query<{ snapshot: string; n: number }>(
+			`SELECT snapshot, count(DISTINCT author)::int AS n FROM open_index.claims WHERE kind = 'have' AND snapshot = ANY ($1::text[]) GROUP BY snapshot`,
+			[snapshots]).then((r) => r.rows) : [],
+		snapshots.length ? db.query<{ hash: string; files: FileEntry[] }>(
+			'SELECT hash, files FROM open_index.snapshots WHERE hash = ANY ($1::text[])', [snapshots]).then((r) => r.rows) : [],
+	]);
 	return shape(publishes, checks, new Map(held.map((h) => [h.snapshot, h.n])), new Map(lists.map((l) => [l.hash, l.files])));
 }
 

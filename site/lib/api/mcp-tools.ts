@@ -15,11 +15,11 @@ import { comment, post } from '#lib/posts/comments.ts';
 import { editPost } from '#lib/posts/edit.ts';
 import { accept, startTopic, topics, topicWithPosts, votePost, type Topic } from '#lib/posts/forum.ts';
 import { addMember, createSpace, members, mySpaces, noSpace, removeMember, space as spaceOf, privateOverMcp, topicPath, type Member } from '#lib/posts/spaces.ts';
-import { FORUM, reader } from '#lib/posts/visibility.ts';
+import { FORUM, READABLE, reader } from '#lib/posts/visibility.ts';
 import { log, logEntry, NeedsReader, type LogEntry, type Scope } from '#lib/posts/log.ts';
 import { unvote, vote } from '#lib/records/votes.ts';
 import { submit } from '#lib/records/submit.ts';
-import { PATH_HELP, resolve, SPACE_HELP } from './paths.ts';
+import { PATH_HELP, resolve, SPACE_HELP, type Target } from './paths.ts';
 import { addQueries, QUERIES_PATH, queryLines, replaceQueries, savedQueries } from '#lib/accounts/queries.ts';
 
 // ---- Records as the tools show them ----
@@ -57,7 +57,7 @@ const signedIn = (who: Caller): Voter => who ?? (() => { throw new SignIn(); })(
 /** The door a call came through: the REST API (and with it the command line and the site's own text forms), or the MCP
  * server. They do the same things, but for one: while spaces are closed to MCP (privateOverMcp), an MCP caller finds
  * no ws path and reads public things only, whoever they are. */
-export type Door = 'rest' | 'mcp';
+type Door = 'rest' | 'mcp';
 const open = (door: Door) => door === 'rest' || privateOverMcp();
 /** How a path is read through this door. The saved queries (me/queries) are closed to MCP with spaces, by the same
  * switch: the reviewed descriptions of post and edit say public and moderated, and of get and log name neither path,
@@ -95,7 +95,8 @@ export async function searchTool(db: Db, { in: where = 'records', q = '', ...opt
 async function getRecord(db: Db, id: string) {
 	const rec = await get(db, id);
 	if (!rec) throw new NotFoundError(`no record ${JSON.stringify(id)}`, 'Use an id that search returns, e.g. openai-math/The-Quasi-Riemann-Hypothesis.');
-	return { ...shown(rec), discussion: links(rec).map(response), discusses: Array.isArray(rec.discusses) ? rec.discusses : [] };
+	const out = shown(rec);
+	return { ...out, discussion: out.discussion ?? [], discusses: Array.isArray(rec.discusses) ? rec.discusses : [] };
 }
 
 type ThreadPost = { id: number; parent: number | null; comments?: ThreadPost[] } & Record<string, unknown>;
@@ -104,12 +105,17 @@ const threadPost = (thread: string, { comments, ...p }: ThreadPost): Record<stri
 	...p, id: postPath(thread, p.id), parent: postPath(thread, p.parent), ...(comments ? { comments: comments.map((c) => threadPost(thread, c)) } : {}),
 });
 
-async function getTopic(db: Db, id: number, space: string, who: Caller) {
-	const t = await topicWithPosts(db, id, reader(who), space);
-	const thread = topicPath(space, id);
-	if (!t) throw new NotFoundError(`no ${thread}`, 'Find topics with search, in=forum.');
+type FullTopic = NonNullable<Awaited<ReturnType<typeof topicWithPosts>>>;
+function formatTopic(t: FullTopic, space: string) {
+	const thread = topicPath(space, t.id);
 	const { accepted_id, answers, question, ...line } = t;
 	return { ...topicLine({ ...line, accepted_id, answers: answers.length }), question: threadPost(thread, question), answers: answers.map((a) => threadPost(thread, a)) };
+}
+
+async function getTopic(db: Db, id: number, space: string, who: Caller) {
+	const t = await topicWithPosts(db, id, reader(who), space);
+	if (!t) throw new NotFoundError(`no ${topicPath(space, id)}`, 'Find topics with search, in=forum.');
+	return formatTopic(t, space);
 }
 
 const account = (who: Voter) => ({
@@ -150,10 +156,12 @@ async function getMembers(db: Db, id: string, who: Caller, login?: string) {
 	const [s, people] = await Promise.all([spaceOf(db, id, reader(who)), members(db, id, reader(who))]);
 	if (!s || !people) {
 		// A person invited reads their own invitation, and nothing else of the space.
-		const own = who && (login === undefined || login.toLowerCase() === who.login.toLowerCase()) ? (await mySpaces(db, who.login)).find((m) => m.id === id) : undefined;
-		if (!own || login === undefined) throw noSpace(id);
-		return { id: `ws/${id}/members/${who!.login.toLowerCase()}`, kind: 'invitation', title: own.title, voter: own.invited_by, agent: own.agent, at: own.at,
-			body: `${tabbed(`ws/${id}/members/${who!.login.toLowerCase()}`, 'invited', `by @${own.invited_by}`, day(own.at), own.note)}\n\nTo accept, post your login to ws/${id}/members. To decline, vote 0 on this path.` };
+		if (login === undefined || !who || login.toLowerCase() !== who.login.toLowerCase()) throw noSpace(id);
+		const own = (await mySpaces(db, who.login)).find((m) => m.id === id);
+		if (!own) throw noSpace(id);
+		const path = `ws/${id}/members/${who.login.toLowerCase()}`;
+		return { id: path, kind: 'invitation', title: own.title, voter: own.invited_by, agent: own.agent, at: own.at,
+			body: `${tabbed(path, 'invited', `by @${own.invited_by}`, day(own.at), own.note)}\n\nTo accept, post your login to ws/${id}/members. To decline, vote 0 on this path.` };
 	}
 	if (login === undefined) {
 		return { id: `ws/${id}/members`, kind: 'members', title: `Members of ${s.title}`, page: pageOf(`ws/${id}`),
@@ -164,12 +172,14 @@ async function getMembers(db: Db, id: string, who: Caller, login?: string) {
 	return { id: `ws/${id}/members/${m.login}`, kind: m.accepted_at ? 'member' : 'invitation', title: s.title, voter: m.invited_by, agent: m.agent, at: m.at, body: memberLine(id, m) };
 }
 
-export async function getTool(db: Db, { id }: { id: string }, who: Caller, door: Door) {
-	const t = await resolve(db, id, sees(who, door), at(door));
+export async function getResolved(db: Db, t: Target, id: string, who: Caller, door: Door) {
 	if (t.kind === 'record') return getRecord(db, t.record);
 	if (t.kind === 'topic') return getTopic(db, t.topic, t.space, who);
 	if (t.kind === 'me') return account(signedIn(who));
-	if (t.kind === 'queries') return savedText(signedIn(who), await savedQueries(db, signedIn(who).login));
+	if (t.kind === 'queries') {
+		const user = signedIn(who);
+		return savedText(user, await savedQueries(db, user.login));
+	}
 	if (t.kind === 'spaces') return getSpaces(db, signedIn(who));
 	if (t.kind === 'space') return getSpace(db, t.space, who);
 	if (t.kind === 'members') return getMembers(db, t.space, who);
@@ -181,12 +191,18 @@ export async function getTool(db: Db, { id }: { id: string }, who: Caller, door:
 	throw new QueryError(`${JSON.stringify(id)} is a list, not one thing`, 'Use log for its posts, or search for its records (in=forum for topics).');
 }
 
+export async function getTool(db: Db, { id }: { id: string }, who: Caller, door: Door) {
+	return getResolved(db, await resolve(db, id, sees(who, door), at(door)), id, who, door);
+}
+
+export const topicScope = (topic: number, space: string): Scope => ({ topic, ...(space === FORUM ? { forum: true as const } : { space }) });
+
 /** A log entry as the tools return it: its text on one line and cut short (get its path for the whole). */
 export const logLine = ({ body, revision: _, ...e }: LogEntry) => ({ ...e, text: truncate(body.replace(/\s+/g, ' ').trim(), 280) });
 
 /** The entries under a path that the caller can read, narrowed by a query. Without a path: everything public, and for
  * a member the posts of their spaces and the invitations sent to them. ws: only those of their spaces. */
-export type LogArgs = { path?: string; q?: string; since?: number; limit?: number };
+type LogArgs = { path?: string; q?: string; since?: number; limit?: number };
 export async function logTool(db: Db, { path = '', q, since, limit }: LogArgs, who: Caller, door: Door) {
 	const t = await resolve(db, path, sees(who, door), at(door));
 	if (t.kind === 'spaces') signedIn(who);
@@ -196,7 +212,7 @@ export async function logTool(db: Db, { path = '', q, since, limit }: LogArgs, w
 	const scope: Scope | undefined = t.kind === 'all' || t.kind === 'queries' ? {} : t.kind === 'forum' ? { forum: true, section: t.section } : t.kind === 'source' ? { source: t.source }
 		: t.kind === 'record' ? { record: t.record } : t.kind === 'spaces' ? { spaces: true } : t.kind === 'space' ? { space: t.space }
 			// A topic's number alone names it; the space in its path was checked when the path was read, and is checked again here.
-			: t.kind === 'topic' ? { topic: t.topic, ...(t.space === FORUM ? { forum: true as const } : { space: t.space }) } : undefined;
+			: t.kind === 'topic' ? topicScope(t.topic, t.space) : undefined;
 	if (!scope) throw new QueryError(`${JSON.stringify(path)} has no log`, t.kind === 'post' ? 'It names one post: get it, or log its thread.' : `Leave path out for everything, or send one of: ${PATH_HELP}`);
 	const page = await log(db, reader(who), scope, { since, limit, q, any, publicOnly: !open(door) }).catch((e) => { throw e instanceof NeedsReader ? new SignIn() : e; });
 	return { path: path.trim().replace(/^\/+|\/+$/g, ''), since: page.since, entries: page.entries.map(logLine) };
@@ -228,8 +244,7 @@ export async function postTool(db: Db, a: PostArgs, who: Voter, door: Door): Pro
 	if (t.kind === 'forum' || t.kind === 'space') {
 		const space = t.kind === 'space' ? t.space : FORUM;
 		if (!a.title?.trim()) throw new QueryError('a new topic needs a title', 'Send title: the question or topic in one line, with the text in body.');
-		const topic = await startTopic(db, who, { title: a.title, body: a.body, space, section: t.kind === 'forum' ? t.section : undefined });
-		return getTopic(db, topic.id, space, who);
+		return formatTopic(await startTopic(db, who, { title: a.title, body: a.body, space, section: t.kind === 'forum' ? t.section : undefined }), space);
 	}
 	if (t.kind === 'spaces') {
 		if (!a.title?.trim()) throw new QueryError('a new space needs a title', 'Send title: what the space is for in one line, with a few words about it in body.');
@@ -300,8 +315,10 @@ export async function voteTool(db: Db, a: VoteArgs, who: Voter, door: Door): Pro
 	}
 	if (a.value === undefined) throw new QueryError('the vote is empty', 'Send value: 1 (up), -1 (down) or 0 (take it back).');
 	// A topic is voted on through its opening post.
-	const id = t.kind === 'post' ? t.post : (await topicWithPosts(db, topic, who.login, space))?.question.id;
-	if (id === undefined) throw new NotFoundError(`no ${thread}`, 'Find topics with search, in=forum.');
+	const id = t.kind === 'post' ? t.post : (await db.query<{ id: number | null }>(
+		`SELECT t.question_id::int AS id FROM open_index.topics t WHERE t.id = $1 AND ${READABLE('t.space_id', '$2')} AND t.space_id = $3`,
+		[topic, who.login, space])).rows[0]?.id;
+	if (id == null) throw new NotFoundError(`no ${thread}`, 'Find topics with search, in=forum.');
 	const r = await votePost(db, topic, id, who, a.value, space);
 	return { id: postPath(thread, r.post), score: r.score };
 }

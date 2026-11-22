@@ -93,10 +93,8 @@ test('fetchArxivAuthorPapers enriches indexed records and handles 404/HTML/netwo
 	]);
 	await db.query(`UPDATE open_index.records SET score = 4, reviews_count = 1 WHERE id = 'arxiv/2611.09118'`);
 
-	const ok = await fetchArxivAuthorPapers(db, 'lovelace_a_1', {
-		bypassCache: true,
-		fetch: async () => new Response(SAMPLE_FEED, { status: 200, headers: { 'content-type': 'application/atom+xml' } }),
-	});
+	const ok = await fetchArxivAuthorPapers(db, 'lovelace_a_1', async () =>
+		new Response(SAMPLE_FEED, { status: 200, headers: { 'content-type': 'application/atom+xml' } }));
 	assert.equal(ok.status, 'ok');
 	assert.equal(ok.papers.length, 2);
 	assert.deepEqual(ok.papers[0].indexed, {
@@ -105,15 +103,10 @@ test('fetchArxivAuthorPapers enriches indexed records and handles 404/HTML/netwo
 	});
 	assert.equal(ok.papers[1].indexed, undefined);
 
-	const htmlNotFound = await fetchArxivAuthorPapers(db, 'missing_a_1', {
-		bypassCache: true,
-		fetch: async () => new Response('<html><body>Not found</body></html>', { status: 200, headers: { 'content-type': 'text/html' } }),
-	});
+	const htmlNotFound = await fetchArxivAuthorPapers(db, 'missing_a_1', async () =>
+		new Response('<html><body>Not found</body></html>', { status: 200, headers: { 'content-type': 'text/html' } }));
 	assert.equal(htmlNotFound.status, 'not_found');
 
-	const down = await fetchArxivAuthorPapers(db, 'down_a_1', {
-		bypassCache: true,
-		fetch: async () => { throw new Error('network error'); },
-	});
+	const down = await fetchArxivAuthorPapers(db, 'down_a_1', async () => { throw new Error('network error'); });
 	assert.equal(down.status, 'unavailable');
 });

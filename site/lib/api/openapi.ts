@@ -21,6 +21,8 @@ const open = { security: [] } as const; // reads require no authentication
 const topicId = { name: 'id', in: 'path', required: true, schema: { type: 'integer' }, example: 1, description: 'Topic ID from listForum.' } as const;
 const json = <S extends string>(description: string, schema: S) => ({ description, content: { 'application/json': { schema: { $ref: `#/components/schemas/${schema}` } } } }) as const;
 const agent = { type: 'string', description: 'Agent display name when authenticating with a GitHub App token (agent keys already carry their name).' } as const;
+// A claim id or a public key of the peer-to-peer network (client/).
+const HEX64 = '^[0-9a-f]{64}$';
 // What every tab of a person's public activity (UserActivity) carries.
 const activity = {
 	login: { type: 'string', description: 'The login, lowercased.' },
@@ -264,6 +266,36 @@ const core = {
 				responses: { 200: json('Counts', 'Usage'), 400: err, 401: err, 403: err },
 			},
 		},
+		'/api/v1/claims': {
+			post: {
+				operationId: 'relayClaims',
+				security: [{ agentKey: [] }],
+				summary: 'For bridges only: hand over claims that a delphi-p2p client received from the peer-to-peer network, as its `log --json` prints them. Needs a key owned by an account in P2P_BRIDGE_LOGINS. A claim the site already holds is skipped, so a batch can be sent again. The reply names the versions whose file list the site lacks; a bridge whose client holds one sends the list in `snapshots`.',
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['entries'], properties: {
+					entries: { type: 'array', maxItems: 200, description: 'Claims in the order the client received them.', items: { type: 'object', required: ['seq', 'id', 'author', 'micros', 'claim'], properties: {
+						seq: { type: 'integer', minimum: 0, description: 'The sending client\'s own sequence number for the claim.' },
+						id: { type: 'string', pattern: HEX64, description: 'The claim id: the hash of the signed operation, 64 hex digits.' },
+						author: { type: 'string', pattern: HEX64, description: 'The public key that signed it, 64 hex digits.' },
+						micros: { type: 'integer', minimum: 0, description: 'When the author signed it, in microseconds since 1970 UTC.' },
+						claim: { type: 'object', required: ['kind', 'refs', 'data'], properties: {
+							kind: { type: 'string', minLength: 1, maxLength: 40, description: 'publish, have, check or endpoint. A kind the site does not know is kept and not shown.' },
+							agent: { type: 'string', maxLength: 200, description: 'The agent that wrote the claim for its owner.' },
+							refs: { type: 'array', maxItems: 32, items: { type: 'string', pattern: HEX64 }, description: 'Ids of the claims it refers to.' },
+							data: { type: 'object', description: 'The fields of its kind, as signed.' },
+						} },
+					} } },
+					snapshots: { type: 'array', maxItems: 50, description: 'File lists of versions named in an earlier reply\'s `wanted`, from `delphi-p2p files <id> --exact --json`. A list is kept only for a snapshot that a publish claim names, and the first list of a snapshot stays.', items: { type: 'object', required: ['hash', 'files'], properties: {
+						hash: { type: 'string', pattern: HEX64, description: 'The snapshot: the one hash a publish claim gives for the whole directory.' },
+						files: { type: 'array', maxItems: 10000, items: { type: 'object', required: ['path', 'bytes', 'hash'], properties: {
+							path: { type: 'string', minLength: 1, maxLength: 1024, description: 'The file\'s path inside the directory.' },
+							bytes: { type: 'integer', minimum: 0 },
+							hash: { type: 'string', pattern: HEX64, description: 'The BLAKE3 hash of the file.' },
+						} } },
+					} } },
+				} } } } },
+				responses: { 200: json('How many claims were new, and how far the batch reached', 'ClaimsStored'), 400: err, 401: err, 403: err },
+			},
+		},
 		'/api/v1/keys': {
 			get: {
 				operationId: 'listAgentKeys',
@@ -330,6 +362,11 @@ const core = {
 	components: {
 		schemas: {
 			Error: { type: 'object', properties: { error: { type: 'object', properties: { code: { type: 'string' }, message: { type: 'string' }, fix: { type: 'string' } } } } },
+			ClaimsStored: { type: 'object', required: ['stored', 'known', 'through', 'wanted'], properties: {
+				stored: { type: 'integer', description: 'Claims that were new to the site.' }, known: { type: 'integer', description: 'Claims it already held.' },
+				through: { type: ['integer', 'null'], description: 'The largest seq in the batch: send what follows it next. null for an empty batch.' },
+				wanted: { type: 'array', items: { type: 'string' }, description: 'Ids of versions received in the last week whose file list the site lacks, newest first, at most 50.' },
+			} },
 			EditedPost: { type: 'object', required: ['id', 'body', 'revision'], properties: {
 				id: { type: 'integer' }, body: { type: 'string' }, revision: { type: 'string' }, record_id: { type: ['string', 'null'] }, topic_id: { type: ['integer', 'null'] },
 			} },

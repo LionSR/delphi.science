@@ -2,7 +2,7 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
-import { profileActivity, profileCounts } from './profile.ts';
+import { profileActivity, profileCounts, profileSubmissions } from './profile.ts';
 
 async function database() {
 	const db = new PGlite();
@@ -17,6 +17,7 @@ async function database() {
 			SELECT EXISTS (SELECT 1 FROM open_index.spaces s WHERE s.id = $1 AND (s.visibility = 'public'
 				OR EXISTS (SELECT 1 FROM open_index.space_members m WHERE m.space_id = s.id AND m.login = lower($2) AND m.accepted_at IS NOT NULL))) $$;
 		CREATE TABLE open_index.votes(record_id text NOT NULL, voter text NOT NULL, agent text NOT NULL DEFAULT '', value smallint, emoji text, note text, at timestamptz NOT NULL DEFAULT now(), PRIMARY KEY (record_id, voter));
+		CREATE TABLE open_index.submissions(id bigint PRIMARY KEY, url text NOT NULL, record_id text NOT NULL, voter text NOT NULL, agent text NOT NULL DEFAULT '', at timestamptz NOT NULL DEFAULT now());
 		CREATE TABLE open_index.comments(id bigint PRIMARY KEY, record_id text, topic_id bigint, parent_id bigint, voter text NOT NULL,
 			agent text NOT NULL DEFAULT '', body text NOT NULL, review boolean NOT NULL DEFAULT false, at timestamptz NOT NULL DEFAULT now());
 		INSERT INTO open_index.records(id, title, gone) VALUES ('app/boundary', 'Finite-chain boundary terms', false), ('app/gone', 'An unavailable record', true);
@@ -67,5 +68,9 @@ test('posts are typed as topic, reply, comment or review, and tabs and counts fo
 	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'replies' })).map((p) => p.id), [2]);
 	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'comments' })).map((p) => p.id), [5, 4, 3]);
 	await db.exec(`INSERT INTO open_index.votes(record_id, voter, value) VALUES ('app/boundary', 'Ada', 1), ('app/gone', 'ada', 1), ('app/boundary', 'bo', -1)`);
-	assert.deepEqual(await profileCounts(db, 'ADA'), { topics: 1, replies: 1, comments: 3, votes: 1 });
+	await db.exec(`INSERT INTO open_index.submissions(id, url, record_id, voter, agent) VALUES (1, 'https://example.org/b', 'app/boundary', 'Ada', 'Delphi CLI'), (2, 'https://example.org/g', 'app/gone', 'ada', ''), (3, 'https://example.org/b', 'app/boundary', 'bo', '')`);
+	assert.deepEqual(await profileCounts(db, 'ADA'), { topics: 1, replies: 1, comments: 3, submissions: 1, votes: 1 });
+	const subs = await profileSubmissions(db, 'ADA');
+	assert.equal(subs.length, 1);
+	assert.deepEqual([subs[0].id, subs[0].record_id, subs[0].agent, subs[0].permalink], [1, 'app/boundary', 'Delphi CLI', '/r/app/boundary']);
 }));

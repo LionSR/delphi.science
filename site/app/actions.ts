@@ -214,12 +214,18 @@ export async function dropKey(form: FormData) {
 	redirect('/keys');
 }
 
-/** The signed-in person's own public name and affiliation, from their profile page. */
+/** The signed-in person's own public profile fields, from their profile page. */
 export async function savePublicName(form: FormData) {
 	const back = profilePath(String(form.get('login') ?? ''));
 	const who = await signedIn(back);
 	await thenBack(profilePath(who.login.toLowerCase()), async () => {
-		await editPublicName(await db(), who.login, { name: form.get('name') ?? '', affiliation: form.get('affiliation') ?? '' });
+		await editPublicName(await db(), who.login, {
+			name: form.get('name') ?? '',
+			affiliation: form.get('affiliation') ?? '',
+			bio: form.get('bio') ?? '',
+			url: form.get('url') ?? '',
+			arxiv_id: form.get('arxiv_id') ?? '',
+		});
 		revalidatePath('/', 'layout');
 	});
 }

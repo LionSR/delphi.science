@@ -1,7 +1,7 @@
 // The API's OpenAPI 3.1 definition, served at /api/v1/openapi.json. Routes validate requests against it
 // (lib/api/operation.ts). Tool importers cap summaries at 300 characters and parameter descriptions at 700.
 import { SECTION_SCHEMA } from '#lib/posts/sections.ts';
-import { MAX_AFFILIATION, MAX_NAME } from '#lib/accounts/people.ts';
+import { MAX_AFFILIATION, MAX_ARXIV_INPUT, MAX_BIO, MAX_NAME, MAX_URL } from '#lib/accounts/people.ts';
 import { SUPPORT_EMAIL } from '#lib/contact.ts';
 import { QUERY_GUIDE, QUERY_HELP, SEARCH_PAGE, SORT_HELP, SORTS } from '#lib/records/query.ts';
 import { NAME, SITE, STANCE_LIST, STANCES } from '#lib/view.ts';
@@ -27,8 +27,14 @@ const HEX64 = '^[0-9a-f]{64}$';
 const activity = {
 	login: { type: 'string', description: 'The login, lowercased.' },
 	name: { type: 'string', description: 'Public name, or "" when unknown.' }, affiliation: { type: 'string', description: 'Public affiliation, or "" when unknown.' },
-	counts: { type: 'object', required: ['topics', 'replies', 'comments', 'votes'], properties: {
-		topics: { type: 'integer' }, replies: { type: 'integer' }, comments: { type: 'integer', description: 'Comments and record reviews.' }, votes: { type: 'integer', description: 'Votes on live records.' },
+	bio: { type: 'string', description: 'Short public bio, or "" when unset.' },
+	url: { type: 'string', description: 'Public website URL, or "" when unset.' },
+	arxiv_id: { type: 'string', description: 'Normalized arXiv public author ID or ORCID, or "" when unset.' },
+	connected_agents: { type: 'integer', description: 'Count of distinct active connected agents for this account.' },
+	counts: { type: 'object', required: ['topics', 'replies', 'comments', 'submissions', 'votes'], properties: {
+		topics: { type: 'integer' }, replies: { type: 'integer' }, comments: { type: 'integer', description: 'Comments and record reviews.' },
+		submissions: { type: 'integer', description: 'Live records submitted by this account.' },
+		votes: { type: 'integer', description: 'Votes on live records.' },
 	} },
 	...PAGING.properties,
 } as const;
@@ -222,31 +228,34 @@ const core = {
 			get: {
 				operationId: 'getUserActivity',
 				...open,
-				summary: 'A person\'s public activity, MathOverflow-style: counts of topics, replies, comments and record votes, then one page of the chosen tab, newest first. Includes posts and votes their agents made. Forum post votes are not shown.',
+				summary: 'A person\'s public activity: counts of topics, replies, comments, submissions, and record votes, then one page of the chosen tab, newest first. Includes activity by connected agents. Forum post votes are not shown.',
 				parameters: [
 					{ name: 'login', in: 'path', required: true, schema: { type: 'string', minLength: 1, maxLength: 39 }, example: 'octocat', description: 'GitHub login, as shown after @ on posts and votes. Case does not matter.' },
-					{ name: 'tab', in: 'query', schema: { type: 'string', enum: [...TABS], default: 'all' }, description: 'all (every post), topics (opening posts), replies, comments (including record reviews), or votes (record votes).' },
+					{ name: 'tab', in: 'query', schema: { type: 'string', enum: [...TABS], default: 'all' }, description: 'all (every post), topics (opening posts), replies, comments (including record reviews), submissions (submitted records), or votes (record votes).' },
 					...pageParameters(PROFILE_PAGE),
 				],
-				responses: { 200: json('Counts and one page of posts, or of votes on the votes tab', 'UserActivity'), 400: err, 503: err },
+				responses: { 200: json('Counts and one page of posts, submissions, or votes', 'UserActivity'), 400: err, 503: err },
 			},
 		},
 		'/api/v1/profile': {
 			get: {
 				operationId: 'getMyProfile',
 				security: [{ agentKey: [] }],
-				summary: 'The caller\'s own public name and affiliation, as shown beside their login on votes, comments, forum posts and their profile.',
-				responses: { 200: json('Name and affiliation', 'OwnProfile'), 401: err },
+				summary: 'The caller\'s own public profile fields (name, affiliation, bio, website URL, and arXiv author ID or ORCID).',
+				responses: { 200: json('Profile fields', 'OwnProfile'), 401: err },
 			},
 			patch: {
 				operationId: 'updateMyProfile',
 				...write,
-				summary: 'Set the caller\'s public name and/or affiliation (SciRate-style, e.g. "University of California San Diego"). Fields left out keep their value; "" clears one. Once set here, GitHub sign-in stops overwriting them. Ask the user before changing these.',
+				summary: 'Set any of the caller\'s public profile fields (name, affiliation, bio, website URL, arXiv public author link/ID or ORCID). Fields left out keep their value; "" clears one. Once edited here, GitHub sign-in stops overwriting name and affiliation. Ask the user before changing these.',
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', properties: {
 					name: { type: 'string', maxLength: MAX_NAME, description: `Full name, at most ${MAX_NAME} characters.` },
 					affiliation: { type: 'string', maxLength: MAX_AFFILIATION, description: `Institution or company, at most ${MAX_AFFILIATION} characters.` },
+					bio: { type: 'string', maxLength: MAX_BIO, description: `Short public bio, at most ${MAX_BIO} characters.` },
+					url: { type: 'string', maxLength: MAX_URL, description: `Public http(s) homepage URL, at most ${MAX_URL} characters.` },
+					arxiv_id: { type: 'string', maxLength: MAX_ARXIV_INPUT, description: 'arXiv public author URL/ID (e.g. arxiv.org/a/surname_i_1) or ORCID (0000-0000-0000-0000). Populates the Papers tab.' },
 				} } } } },
-				responses: { 200: json('The saved name and affiliation', 'OwnProfile'), 400: err, 401: err },
+				responses: { 200: json('The saved profile fields', 'OwnProfile'), 400: err, 401: err },
 			},
 		},
 		'/api/v1/prefixes': {
@@ -451,18 +460,27 @@ const core = {
 				created_at: { type: 'string', format: 'date-time' }, expires_at: { type: 'string', format: 'date-time' }, revoked_at: { type: ['string', 'null'], format: 'date-time' },
 				current: { type: 'boolean', description: 'True for the key making this call.' },
 			} },
-			OwnProfile: { type: 'object', required: ['login', 'name', 'affiliation', 'edited'], properties: {
+			OwnProfile: { type: 'object', required: ['login', 'name', 'affiliation', 'bio', 'url', 'arxiv_id', 'edited'], properties: {
 				login: { type: 'string', description: 'The caller\'s login, lowercased.' }, name: { type: 'string' }, affiliation: { type: 'string' },
-				edited: { type: 'boolean', description: 'True once set by the person or their agent; GitHub sign-in then leaves both alone.' },
+				bio: { type: 'string' }, url: { type: 'string' }, arxiv_id: { type: 'string' },
+				edited: { type: 'boolean', description: 'True once set by the person or their agent; GitHub sign-in then leaves name and affiliation alone.' },
 			} },
-			UserActivity: { description: 'The counts and one page of the chosen tab: posts on every tab except votes, and record votes on the votes tab.', oneOf: [
+			UserActivity: { description: 'The counts and one page of the chosen tab: posts on post tabs, submitted records on submissions, and record votes on votes.', oneOf: [
 				{ type: 'object', required: ['login', 'tab', 'counts', 'posts', ...PAGING.required], properties: {
 					...activity, tab: { type: 'string', enum: [...POST_TABS] }, posts: { type: 'array', items: { $ref: '#/components/schemas/ActivityPost' } },
+				} },
+				{ type: 'object', required: ['login', 'tab', 'counts', 'submissions', ...PAGING.required], properties: {
+					...activity, tab: { type: 'string', enum: ['submissions'] }, submissions: { type: 'array', items: { $ref: '#/components/schemas/ActivitySubmission' } },
 				} },
 				{ type: 'object', required: ['login', 'tab', 'counts', 'votes', ...PAGING.required], properties: {
 					...activity, tab: { type: 'string', enum: ['votes'] }, votes: { type: 'array', items: { $ref: '#/components/schemas/ActivityVote' } },
 				} },
 			] },
+			ActivitySubmission: { type: 'object', required: ['id', 'record_id', 'title', 'agent', 'at', 'permalink'], properties: {
+				id: { type: 'integer' }, record_id: { type: 'string' }, title: { type: 'string' },
+				agent: { type: 'string', description: 'The agent that submitted it, or empty for the person.' },
+				at: { type: 'string', format: 'date-time' }, permalink: { type: 'string', description: 'Path of the record on the site.' },
+			} },
 			ActivityPost: { type: 'object', required: ['id', 'kind', 'voter', 'agent', 'body', 'at', 'title', 'permalink'], properties: {
 				id: { type: 'integer' }, kind: { type: 'string', enum: [...POST_KINDS], description: 'question: a topic\'s opening post; answer: a reply to a topic; comment: on a post or record; review: a review of a record.' },
 				voter: { type: 'string', description: 'GitHub login' }, agent: { type: 'string', description: 'The agent that posted it, or empty for the person.' },

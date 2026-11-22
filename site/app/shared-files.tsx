@@ -1,4 +1,4 @@
-// A record's "Files and checks": what the peer-to-peer network (client/) holds for it. One row per version of each
+// A record's "Files and checks": what the peer-to-peer network (github.com/LionSR/delphi-p2p) holds for it. One row per version of each
 // artifact; a row opens to the version's files and what changed in them. The data and its rules: #lib/p2p/claims.ts.
 import { CopyBlock } from './copy-block.tsx';
 import { date } from '#lib/view.ts';
@@ -75,7 +75,7 @@ export function SharedFiles({ artifacts }: { artifacts: Artifact[] }) {
 	return (
 		<section className="record-section" aria-label="Files and checks">
 			<h2>Files and checks</h2>
-			<p className="count">Peer-shared files and independent Lean verification checks linked to this record via <code>delphi-p2p</code> (<a href="https://github.com/LionSR/delphi.science/tree/main/client">client guide</a>). Files are hosted by peers and each check is signed by the verifying client’s key.</p>
+			<p className="count">Peer-shared files and independent Lean verification checks linked to this record via <code>delphi-p2p</code> (<a href="https://github.com/LionSR/delphi-p2p">client guide</a>). Files are hosted by peers and each check is signed by the verifying client’s key.</p>
 			{artifacts.map((a) => {
 				// The current version first, then the others, newest first.
 				const versions = [...a.versions].sort((x, y) => Number(y.state === 'current') - Number(x.state === 'current') || +new Date(y.at) - +new Date(x.at));

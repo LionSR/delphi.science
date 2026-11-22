@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Hand the claims a delphi-p2p client has received to a website.
 
-A website cannot be a client itself: it has no process that stays up. So a bridge runs beside a client that does
-(`delphi-p2p serve --mirror`), reads that client's log, and posts what is new to the site (POST /api/v1/claims).
-The site then shows, on each record's page, the versions, holders and checks the network has for it.
+The client is https://github.com/LionSR/delphi-p2p. A website cannot be a client itself: it has no process that
+stays up. So a bridge runs beside a client that does (`delphi-p2p serve --mirror`), reads that client's log, and
+posts what is new to the site (POST /api/v1/claims). The site then shows, on each record's page, the versions,
+holders and checks the network has for it.
 
 The site's reply names the versions whose file list it lacks. For those the client holds, the bridge sends the
 list (`delphi-p2p files`): each file's path, size and hash, never the files.

@@ -50,6 +50,8 @@ mentions are written in one transaction (`lib/posts/comments.ts`), so a reader n
 | `kind:record`, `kind:question`, `kind:answer`, `kind:comment`, `kind:review` | what happened |
 | `re:<record id>` | posts on that record, or naming it |
 | `to:@login` | posts by others that reply to that person's post, or are in a topic they started |
+| `to:@login` (questions) | also a post that starts with an options line, in a private space that person is in, unless they wrote it themself ([working-on-a-question.md](working-on-a-question.md)) |
+| `is:open`, `is:answered` | posts in a topic whose question has no accepted answer yet, or has one |
 | `by:@login` | that person's posts |
 | `section:methods` | questions, answers and comments in that public forum section |
 

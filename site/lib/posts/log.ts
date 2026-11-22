@@ -14,7 +14,7 @@ import { CodedError, NotFoundError, QueryError } from '#lib/errors.ts';
 import { pageLimit, pageSize } from '#lib/paging.ts';
 import type { Db } from '#lib/db.ts';
 import { Compiler, FIELDS, parse, type Leaf } from '#lib/records/query.ts';
-import { topicPath } from './spaces.ts';
+import { OFFERS_OPTIONS, topicPath } from './spaces.ts';
 import { FORUM, POST_READABLE, READABLE, type Reader } from './visibility.ts';
 
 export const KINDS = ['record', 'question', 'answer', 'comment', 'review'] as const;
@@ -55,6 +55,12 @@ export const LOG_FIELDS: Record<string, string> = {
 	...PUBLISHED_LOG_FIELDS,
 	section: 'posts in a public forum section, e.g. section:methods. GET /api/v1 lists the stable IDs in forum_sections.',
 };
+/** What the query also takes, said in /llms.txt, the skill and the saved-queries page. It is separate from the log field list and
+ * does not change the log operation's reviewed description. */
+export const LOG_ALSO: Record<string, string> = {
+	'is:open, is:answered': 'posts in a topic whose question has no accepted answer yet, or has one. With kind:question, the questions themselves',
+	'to: (questions)': 'to:@login also holds each question put to a private space that person is in: a post that starts with an options line, their own agents\' included. Only the space\'s members read these',
+};
 export const LOG_QUERY_GUIDE = Object.entries(LOG_FIELDS).map(([f, about]) => `- ${f}: ${about}`).join('\n');
 
 const POST = 'e.post_id IS NOT NULL';
@@ -92,9 +98,20 @@ class EventCompiler extends Compiler {
 		if (f === 'by') return `(${POST} AND lower(e.voter) = ${this.login(f, v)})`;
 		if (f === 'to') {
 			const who = this.login(f, v);
-			return `(${POST} AND lower(e.voter) <> ${who} AND (lower(t.voter) = ${who}
+			// Addressed to them by someone else: a reply to their post, or a post in a topic they started.
+			const addressed = `(lower(e.voter) <> ${who} AND (lower(t.voter) = ${who}
 				OR EXISTS (SELECT 1 FROM open_index.comments p WHERE p.id = c.parent_id AND lower(p.voter) = ${who})))`;
+			// Or put to them: a post that offers options in a private space they are in. An agent posts as its owner, so
+			// "by someone else" would leave out the very question an agent asks its own owner; what is left out here
+			// is only what the person wrote themself. visible() still decides who reads it: the space's members.
+			const asked = `(${OFFERS_OPTIONS('c.body')} AND NOT (lower(e.voter) = ${who} AND c.agent = '')
+				AND EXISTS (SELECT 1 FROM open_index.space_members m JOIN open_index.spaces s ON s.id = m.space_id
+					WHERE m.space_id = t.space_id AND m.login = ${who} AND m.accepted_at IS NOT NULL AND s.visibility = 'private'))`;
+			return `(${POST} AND (${addressed} OR ${asked}))`;
 		}
+		// The state of the topic a post is in. A term about a topic is true of every post in it, as a term about a
+		// record is true of every post on it.
+		if (f === 'is' && /^(open|answered)$/i.test(v)) return `(e.topic_id IS NOT NULL AND t.accepted_id IS ${v.toLowerCase() === 'open' ? '' : 'NOT '}NULL)`;
 		if (f === 're') {
 			if (!v) throw new QueryError('re: needs a record id', 'Write re:<record id>, e.g. re:arxiv/2610.20058.');
 			const id = this.p(v);

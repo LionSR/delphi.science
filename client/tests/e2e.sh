@@ -71,6 +71,8 @@ out=$(client ann publish "$root/proof" --title "Two plus two" --author "Ann")
 echo "$out"
 v1=$(field Id "$out")
 [ -n "$v1" ] || fail "publish printed no id"
+# Publish returns once the seed has the files, so they outlast this command.
+expect "$out" "Other-Holders: 1"
 
 step "Cy lists its files while Ann is offline, without fetching them"
 out=$(client cy files "$v1")

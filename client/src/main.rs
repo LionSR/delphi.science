@@ -19,6 +19,8 @@ use std::time::{Duration, Instant};
 
 use anyhow::{Context, Result, bail};
 use clap::{Parser, Subcommand};
+use iroh_blobs::Hash;
+use tokio::sync::Semaphore;
 
 use crate::home::{Bootstrap, Config, Home};
 use crate::node::Node;
@@ -200,10 +202,27 @@ async fn serve(home: Home, mirror: bool) -> Result<()> {
     Ok(())
 }
 
+/// How many versions a mirror fetches at once: those whose claim just arrived, and those it tries
+/// again. The two do not share slots, so versions whose holders are gone never keep a new one
+/// waiting while its author is still there.
+const MIRROR_NEW: usize = 8;
+const MIRROR_AGAIN: usize = 4;
+
+struct Slots {
+    new: Semaphore,
+    again: Semaphore,
+}
+
 /// Fetches the files of every version as its claim arrives, and says so.
 async fn mirror_all(node: Arc<Node>) {
+    let slots = Arc::new(Slots {
+        new: Semaphore::new(MIRROR_NEW),
+        again: Semaphore::new(MIRROR_AGAIN),
+    });
     let mut arrivals = node.index.arrivals();
     let mut seen = 0;
+    // Versions known before this client started are tried like those tried again.
+    let mut started = false;
     loop {
         let versions = match node.index.since(seen, Some("publish"), 500).await {
             Ok(versions) => versions,
@@ -218,18 +237,57 @@ async fn mirror_all(node: Arc<Node>) {
                 continue;
             };
             let Ok(hash) = publish.snapshot.parse() else { continue };
-            let fetched = node.fetch(hash, Duration::from_secs(120)).await;
-            match fetched {
-                Ok(()) => {
-                    if let Err(err) = node.announce_holding(&stored.id, &publish.snapshot, None).await {
-                        eprintln!("delphi-p2p: mirror: {err}");
-                    }
-                }
-                Err(err) => eprintln!("delphi-p2p: mirror: {err}"),
+            tokio::spawn(mirror(
+                node.clone(),
+                slots.clone(),
+                started,
+                stored.id.clone(),
+                publish.snapshot,
+                hash,
+            ));
+        }
+        if versions.is_empty() {
+            started = true;
+            if arrivals.changed().await.is_err() {
+                return;
             }
         }
-        if versions.is_empty() && arrivals.changed().await.is_err() {
-            return;
+    }
+}
+
+/// Fetches the files of one version and says that this client holds them. The author may run one
+/// command and be gone before the files are across, so a fetch that fails is tried again: after a
+/// minute, then at twice the interval each time up to an hour, for a week.
+async fn mirror(node: Arc<Node>, slots: Arc<Slots>, new: bool, version: String, snapshot: String, hash: Hash) {
+    let begun = Instant::now();
+    let mut pause = Duration::from_secs(60);
+    let mut first = true;
+    loop {
+        let (slot, patience) = if first && new {
+            (&slots.new, Duration::from_secs(120))
+        } else {
+            (&slots.again, Duration::from_secs(20))
+        };
+        let fetched = match slot.acquire().await {
+            Ok(_held) => node.fetch(hash, patience).await,
+            Err(_) => return,
+        };
+        match fetched {
+            Ok(()) => {
+                if let Err(err) = node.announce_holding(&version, &snapshot, None).await {
+                    eprintln!("delphi-p2p: mirror: {err}");
+                }
+                return;
+            }
+            Err(err) if begun.elapsed() > Duration::from_secs(7 * 24 * 3600) => {
+                eprintln!("delphi-p2p: mirror: gave up on version {version}: {err}");
+                return;
+            }
+            Err(err) if first => eprintln!("delphi-p2p: mirror: {err}; it will be tried again"),
+            Err(_) => {}
         }
+        first = false;
+        tokio::time::sleep(pause).await;
+        pause = (pause * 2).min(Duration::from_secs(3600));
     }
 }

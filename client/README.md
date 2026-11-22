@@ -41,6 +41,12 @@ delphi-p2p status
 A command starts the client, does its work and stops it. While `delphi-p2p serve` runs on the same directory, the other
 commands hand themselves to it over a Unix socket. `delphi-p2p serve` starts no agent.
 
+The author's files leave with the author's client, so `publish` waits until another client says it holds them (up to
+`--wait` seconds, 120 by default) and prints how many do as `Other-Holders`. The time a command waits is for a holder
+to be found: a transfer that has started runs to its end, and one that brings nothing for a minute is dropped. A
+client that mirrors tries a version it could not fetch again, after a minute and then at doubling intervals up to an
+hour, for a week.
+
 ## Claims
 
 A claim is the body of one p2panda operation. p2panda's header carries the author's key, the signature and the time.

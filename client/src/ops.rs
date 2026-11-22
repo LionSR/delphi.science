@@ -45,6 +45,10 @@ pub enum Command {
         /// The agent doing this, written into the claim.
         #[arg(long)]
         agent: Option<String>,
+        /// Seconds to wait for another client to take the files, so that they can be fetched
+        /// after this command ends. 0 does not wait.
+        #[arg(long, default_value_t = 120)]
+        wait: u64,
     },
     /// Fetch the files of a record into a directory.
     Get {
@@ -146,7 +150,11 @@ pub async fn run(node: &Node, command: Command) -> Result<String> {
             after,
             comparator,
             agent,
-        } => publish(node, &dir, title, authors, source, note, after, comparator, agent).await,
+            wait,
+        } => {
+            let wait = Duration::from_secs(wait);
+            publish(node, &dir, title, authors, source, note, after, comparator, agent, wait).await
+        }
         Command::Get {
             id,
             files,
@@ -189,6 +197,7 @@ async fn publish(
     after: Option<String>,
     comparator: Option<String>,
     agent: Option<String>,
+    wait: Duration,
 ) -> Result<String> {
     if let Some(config) = &comparator
         && !dir.join(files::checked(config)?).is_file()
@@ -244,6 +253,18 @@ async fn publish(
     out.put("Title", &body.title);
     out.put("Snapshot", &hash);
     out.put("Files", format!("{} ({} bytes)", body.files, body.bytes));
+    // A client that stays up serves the files itself. One that stops with this command waits for
+    // another client to take them.
+    if !node.serving {
+        let others = node.other_holders(&hash, wait).await?;
+        out.put("Other-Holders", others);
+        if others == 0 {
+            out.put(
+                "Note",
+                "no other client holds the files yet; they can be fetched only while `delphi-p2p serve` runs here",
+            );
+        }
+    }
     Ok(out.text())
 }
 

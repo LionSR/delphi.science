@@ -11,7 +11,7 @@ use iroh::address_lookup::MemoryLookup;
 use iroh::endpoint::presets;
 use iroh::protocol::Router;
 use iroh::{EndpointAddr, EndpointId, RelayMode, RelayUrl};
-use iroh_blobs::api::downloader::Shuffled;
+use iroh_blobs::api::downloader::{DownloadProgress, DownloadProgressItem, Shuffled};
 use iroh_blobs::protocol::GetRequest;
 use iroh_blobs::store::fs::FsStore;
 use iroh_blobs::{BlobsProtocol, Hash};
@@ -37,6 +37,9 @@ const MAX_CLAIM_BYTES: usize = 3000;
 
 /// How many always-on clients, learned from their claims, a client starts its search from.
 const MAX_LEARNED_BOOTSTRAPS: i64 = 32;
+
+/// A transfer that brings nothing for this long is given up.
+const STALLED: Duration = Duration::from_secs(60);
 
 pub struct Node {
     pub home: Home,
@@ -232,30 +235,48 @@ impl Node {
     }
 
     /// One round of asking the clients that say they hold the snapshot for `request`. The caller
-    /// looks in the store again afterwards. Fails once `deadline` has passed.
+    /// looks in the store again afterwards. Fails once `deadline` has passed. The deadline is for
+    /// a holder to be found and reached: a transfer that has started runs to its end, and after
+    /// the deadline no client is asked.
     async fn ask(&self, snapshot: Hash, request: GetRequest, deadline: Instant) -> Result<()> {
         let mut problem = None;
         let holders = self.holders(snapshot).await?;
-        if !holders.is_empty() {
+        let known = holders.len();
+        if known > 0 && Instant::now() < deadline {
             let download = self
                 .store
                 .downloader(self.files.endpoint())
                 .download(request, Shuffled::new(holders));
-            match timeout(deadline - Instant::now(), download).await {
-                Ok(Ok(_)) => return Ok(()),
-                Ok(Err(err)) => problem = Some(err.to_string()),
-                Err(_) => {}
+            match transfer(download).await {
+                Ok(()) => return Ok(()),
+                Err(err) => problem = Some(err.to_string()),
             }
         }
         if Instant::now() >= deadline {
             match problem {
                 Some(err) => bail!("could not fetch snapshot {snapshot}: {err}"),
+                None if known > 0 => bail!("snapshot {snapshot} is not in the local store"),
                 None => bail!("no client that holds snapshot {snapshot} is known yet"),
             }
         }
         // A holder's claims may still be on their way, or it may be starting up.
         sleep(Duration::from_millis(500)).await;
         Ok(())
+    }
+
+    /// How many other clients say they hold the snapshot, waiting up to `patience` for the first.
+    /// The author of a version runs one command and stops, so its files outlive that command only
+    /// once another client has them.
+    pub async fn other_holders(&self, snapshot: &str, patience: Duration) -> Result<usize> {
+        let deadline = Instant::now() + patience;
+        let mut arrivals = self.index.arrivals();
+        loop {
+            let holders = self.index.holders(snapshot).await?;
+            let others = holders.iter().filter(|author| **author != self.me).count();
+            if others > 0 || timeout(deadline - Instant::now(), arrivals.changed()).await.is_err() {
+                return Ok(others);
+            }
+        }
     }
 
     /// Says "I hold this snapshot and serve it", once.
@@ -373,6 +394,21 @@ async fn consume(mut subscription: StreamSubscription<Claim>, index: Index, ende
             }
             StreamEvent::SyncEnded { .. } => ended.send_modify(|n| *n += 1),
             _ => {}
+        }
+    }
+}
+
+/// Runs a download to its end. A transfer that moves is left to finish however long it takes; one
+/// that brings nothing for a minute is dropped, and what it brought stays in the store.
+async fn transfer(download: DownloadProgress) -> Result<()> {
+    let mut items = download.stream().await.map_err(|err| anyhow::anyhow!("{err}"))?;
+    loop {
+        match timeout(STALLED, items.next()).await {
+            Ok(Some(DownloadProgressItem::Error(err))) => bail!("{err}"),
+            Ok(Some(DownloadProgressItem::DownloadError)) => bail!("no client that holds it could send it"),
+            Ok(Some(_)) => {}
+            Ok(None) => return Ok(()),
+            Err(_) => bail!("the transfer stalled"),
         }
     }
 }

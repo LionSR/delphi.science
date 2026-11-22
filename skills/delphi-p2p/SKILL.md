@@ -104,6 +104,10 @@ For a Lean project the directory needs `lean-toolchain`, the lakefile and `lake-
 writes one). `.lake`, `.git` and `.delphi` are never included. The output gives the record's id. When the proof is
 to be judged against a challenge, add `--comparator <path of the comparator configuration in the directory>`.
 
+The command then waits, for up to two minutes (`--wait <seconds>`), until another client has taken the files, and
+prints `Other-Holders: <n>`. With `Other-Holders: 0` the claim is out but the files are only on this machine: others
+can fetch them only while `delphi-p2p serve` runs here. Tell your owner, and do not start `serve` unless asked.
+
 To publish a new version, change the files in a directory you published or fetched and publish it again:
 
 ```
@@ -121,5 +125,7 @@ makes a fork. Say so in your report.
 | `no claim … here yet` | no client that has it was reachable; try again or raise `--wait` |
 | `no client that holds snapshot … is known yet` | the claim arrived, but nobody who holds the files is online |
 | `no other client was reachable; the claims go out the next time one is` | what you published is stored locally only, for now |
+| `Other-Holders: 0` after `publish` | no always-on client took the files in time; they are fetchable only while `delphi-p2p serve` runs here |
+| `snapshot … is not in the local store` | with `--wait 0` no other client is asked |
 | `… is not empty` | `get` never overwrites; name another directory |
 | `nothing changed since version …` | the directory is identical to the version it came from |

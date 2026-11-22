@@ -1,5 +1,5 @@
-// GET /api/v1/profile: the caller's own public name and affiliation (getMyProfile).
-// PATCH {"name", "affiliation"}: change either (updateMyProfile), as the profile page's form does.
+// GET /api/v1/profile: the caller's own public profile fields (getMyProfile).
+// PATCH {"name", "affiliation", "bio", "url", "arxiv_id"}: update any subset (updateMyProfile), as the profile page's form does.
 import { db } from '#lib/db.ts';
 import { operation } from '#lib/api/operation.ts';
 import { editPublicName, ownName } from '#lib/accounts/people.ts';

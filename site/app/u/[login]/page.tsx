@@ -1,9 +1,10 @@
 import { notFound } from 'next/navigation';
 import { db } from '#lib/db.ts';
+import { fetchArxivAuthorPapers } from '#lib/accounts/arxiv-author.ts';
 import { connectedAgentCount } from '#lib/accounts/keys.ts';
-import { MAX_AFFILIATION, MAX_NAME, ownName, publicName } from '#lib/accounts/people.ts';
+import { MAX_AFFILIATION, MAX_ARXIV_INPUT, MAX_BIO, MAX_NAME, MAX_URL, ownName, publicName, publicProfile } from '#lib/accounts/people.ts';
 import { normalizeProfileLogin, profile, TABS, type Tab } from '#lib/accounts/profile.ts';
-import { ProfileView } from '#lib/accounts/profile-view.ts';
+import { ProfileView, type ProfileTab } from '#lib/accounts/profile-view.ts';
 import { me } from '#lib/accounts/session.ts';
 import { savePublicName } from '#app/actions.ts';
 import { pageParam } from '#lib/pager.ts';
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: Context) {
 	try {
 		const login = normalizeProfileLogin((await params).login);
 		const { name } = await publicName(await db(), login);
-		return { title: `${name ? `${name} (@${login})` : `@${login}`} — Public activity` };
+		return { title: `${name ? `${name} (@${login})` : `@${login}`} — Profile` };
 	} catch {
 		return {};
 	}
@@ -29,29 +30,40 @@ export default async function Profile({ params, searchParams }: Context) {
 		notFound();
 	}
 	const { page: rawPage, tab: rawTab, notice } = await searchParams;
-	const tab: Tab = (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
+	const tab: ProfileTab = rawTab === 'papers'
+		? 'papers'
+		: (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
 	const d = await db();
 	// A failure to load the activity shows "temporarily unavailable" with a retry link.
 	const [who, page, viewer, connectedAgents] = await Promise.all([
-		publicName(d, login),
-		profile(d, login, { tab, page: pageParam(rawPage) }).catch(() => null),
+		publicProfile(d, login),
+		profile(d, login, { tab: tab === 'papers' ? 'all' : tab, page: tab === 'papers' ? 1 : pageParam(rawPage) }).catch(() => null),
 		me(),
 		connectedAgentCount(d, login).catch(() => undefined),
 	]);
 	const owner = viewer?.login.toLowerCase() === login.toLowerCase();
-	const own = owner ? await ownName(d, login).catch(() => null) : null;
+	const [own, papers] = await Promise.all([
+		owner ? ownName(d, login).catch(() => null) : Promise.resolve(null),
+		tab === 'papers' && who.arxiv_id ? fetchArxivAuthorPapers(d, who.arxiv_id) : Promise.resolve(null),
+	]);
+	const emptyProfile = Boolean(own && !own.name && !own.affiliation && !own.bio && !own.url && !own.arxiv_id);
 	const editor = own ? (
-		<details className="profile-edit" open={!own.name && !own.affiliation}>
-			<summary>Edit name and affiliation</summary>
-			{notice && <p className="count">{notice}</p>}
+		<details className="profile-edit" open={Boolean(notice) || emptyProfile}>
+			<summary>Edit profile</summary>
+			{notice && <p className="count" role="alert">{notice}</p>}
 			<form action={savePublicName}>
 				<input type="hidden" name="login" value={login} />
-				<label>Name <input name="name" defaultValue={own.name} maxLength={MAX_NAME} autoComplete="name" /></label>
-				<label>Affiliation <input name="affiliation" defaultValue={own.affiliation} maxLength={MAX_AFFILIATION} autoComplete="organization" placeholder="e.g. University of California San Diego" /></label>
-				<button className="btn-primary">Save</button>
+				<div className="profile-edit-grid">
+					<label>Name <input name="name" defaultValue={own.name} maxLength={MAX_NAME} autoComplete="name" /></label>
+					<label>Affiliation <input name="affiliation" defaultValue={own.affiliation} maxLength={MAX_AFFILIATION} autoComplete="organization" placeholder="e.g. University of California San Diego" /></label>
+					<label>Website <input name="url" defaultValue={own.url} maxLength={MAX_URL} autoComplete="url" placeholder="https://example.edu/~you" /></label>
+					<label>arXiv author link or ORCID <input name="arxiv_id" defaultValue={own.arxiv_id} maxLength={MAX_ARXIV_INPUT} placeholder="arxiv.org/a/surname_i_1 or 0000-0000-0000-0000" /></label>
+					<label className="full">Bio <textarea name="bio" defaultValue={own.bio} maxLength={MAX_BIO} rows={3} placeholder="Research interests, current projects, or a short note." /></label>
+				</div>
+				<button className="btn-primary">Save profile</button>
 			</form>
-			<p className="meta"><span>Shown publicly beside your username. Saving here overrides the values imported from GitHub.</span></p>
+			<p className="meta"><span>Shown publicly on your profile. Saving overrides name and affiliation imported from GitHub; an arXiv public author link or ORCID populates the Papers tab.</span></p>
 		</details>
 	) : null;
-	return <ProfileView login={login} tab={tab} page={page} who={who} connectedAgents={connectedAgents} owner={owner} editor={editor} />;
+	return <ProfileView login={login} tab={tab} page={page} who={who} papers={papers} connectedAgents={connectedAgents} owner={owner} editor={editor} />;
 }

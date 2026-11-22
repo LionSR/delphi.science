@@ -9,8 +9,8 @@ export function CopyButton({ label = 'Copy' }: { label?: string }) {
 		const t = setTimeout(() => setCopied(false), 2000);
 		return () => clearTimeout(t);
 	}, [copied]);
-	return <button type="button" onClick={async (e) => {
+	return <button type="button" aria-label={label} title={label} onClick={async (e) => {
 		await navigator.clipboard.writeText(e.currentTarget.previousElementSibling?.textContent ?? '');
 		setCopied(true);
-	}}>{copied ? 'Copied' : label}</button>;
+	}}>{copied ? 'Copied' : 'Copy'}</button>;
 }

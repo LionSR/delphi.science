@@ -1,5 +1,6 @@
 // A person's public activity, for /u/<login>: posts by type, MathOverflow-style, and record votes (already public on
 // each record). Forum post votes stay private. Reads only rows that are already public.
+import { agentDisplayName } from './keys.ts';
 import { reviewLogin } from './review.ts';
 import { CodedError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
@@ -15,9 +16,9 @@ export const PROFILE_PAGE = pageSize('Items', 50, 20);
  * reply to it an answer. The profile shows them as Topic and Reply. */
 export const POST_KINDS = ['question', 'answer', 'comment', 'review'] as const;
 export type PostKind = (typeof POST_KINDS)[number];
-/** Profile tabs: all posts, one group of kinds (comments include record reviews), or record votes. */
+/** Profile tabs: all posts, one group of kinds (comments include record reviews), submitted records, or record votes. */
 export const POST_TABS = ['all', 'topics', 'replies', 'comments'] as const;
-export const TABS = [...POST_TABS, 'votes'] as const;
+export const TABS = [...POST_TABS, 'submissions', 'votes'] as const;
 export type Tab = (typeof TABS)[number];
 type PostTab = (typeof POST_TABS)[number];
 const TAB_KINDS: Record<Exclude<PostTab, 'all'>, PostKind[]> = { topics: ['question'], replies: ['answer'], comments: ['comment', 'review'] };
@@ -26,14 +27,16 @@ const KIND_TABS = TABS.filter((t): t is keyof typeof TAB_KINDS => t in TAB_KINDS
 
 // The types are the API's schemas (lib/api/openapi.ts), so what this module returns is what the API documents.
 export type ProfilePost = FromSchema<Schemas['ActivityPost']>;
+export type ProfileSubmission = FromSchema<Schemas['ActivitySubmission']>;
 export type ProfileVote = FromSchema<Schemas['ActivityVote']>;
-/** A profile page: the counts, then one page (lib/paging.ts) of the tab's posts, or of its votes on the votes tab. */
+/** A profile page: the counts, then one page (lib/paging.ts) of the tab's posts, submissions, or votes. */
 export type Profile = FromSchema<Schemas['UserActivity']>;
 type ProfileCounts = Profile['counts'];
 type Row = {
 	id: string; kind: PostKind; voter: string; agent: string; body: string; at: string | Date; title: string;
 	record_id: string | null; topic_id: string | null; parent: string | null;
 };
+type SubmissionRow = { id: string; record_id: string; title: string; agent: string; at: string | Date };
 type VoteRow = { record_id: string; title: string; agent: string; value: 1 | -1 | null; emoji: string | null; note: string | null; at: string | Date };
 
 const badLogin = () => new QueryError('Use a valid GitHub login.', 'Use 1–39 ASCII letters/digits or single internal hyphens; account paths and display names are not handles.');
@@ -78,6 +81,7 @@ const ACTIVITY = `SELECT c.id AS pid, c.id::text AS id, c.voter, c.agent, c.body
 			OR (c.topic_id IS NOT NULL AND c.record_id IS NULL AND t.id IS NOT NULL AND ${READABLE('t.space_id', 'NULL')}
 				AND EXISTS (SELECT 1 FROM open_index.comments q WHERE q.topic_id = c.topic_id AND q.parent_id IS NULL AND q.record_id IS NULL)))
 		AND (c.parent_id IS NULL OR p.id IS NOT NULL)`;
+const SUBMISSIONS = `FROM open_index.submissions s JOIN open_index.records r ON r.id = s.record_id AND NOT r.gone WHERE lower(s.voter) = $1`;
 const VOTES = `FROM open_index.votes v JOIN open_index.records r ON r.id = v.record_id AND NOT r.gone WHERE lower(v.voter) = $1`;
 
 // A slice of a login's list, as profile() pages it.
@@ -94,7 +98,7 @@ export async function profileActivity(db: Db, handle: unknown, { tab = 'all', of
 	}
 }
 
-/** How many public posts of each kind, and record votes, a login has. */
+/** How many public posts of each kind, submitted records, and record votes a login has. */
 export async function profileCounts(db: Db, handle: unknown): Promise<ProfileCounts> {
 	const login = normalizeProfileLogin(handle);
 	try {
@@ -103,9 +107,24 @@ export async function profileCounts(db: Db, handle: unknown): Promise<ProfileCou
 				count(*) FILTER (WHERE a.kind = ANY($2::text[])) AS topics,
 				count(*) FILTER (WHERE a.kind = ANY($3::text[])) AS replies,
 				count(*) FILTER (WHERE a.kind = ANY($4::text[])) AS comments,
+				(SELECT count(*) ${SUBMISSIONS}) AS submissions,
 				(SELECT count(*) ${VOTES}) AS votes
 			FROM (${ACTIVITY}) a`, [login, TAB_KINDS.topics, TAB_KINDS.replies, TAB_KINDS.comments])).rows[0];
-		return { topics: Number(row.topics), replies: Number(row.replies), comments: Number(row.comments), votes: Number(row.votes) };
+		return { topics: Number(row.topics), replies: Number(row.replies), comments: Number(row.comments), submissions: Number(row.submissions), votes: Number(row.votes) };
+	} catch {
+		throw unavailable();
+	}
+}
+
+/** A slice of a login's submitted live records, newest first. */
+export async function profileSubmissions(db: Db, handle: unknown, { offset = 0, limit = PROFILE_PAGE.fallback }: Slice = {}): Promise<ProfileSubmission[]> {
+	const login = normalizeProfileLogin(handle);
+	try {
+		return (await db.query<SubmissionRow>(`SELECT s.id::text AS id, s.record_id, r.title, s.agent, s.at ${SUBMISSIONS}
+			ORDER BY s.at DESC, s.id DESC LIMIT $2 OFFSET $3`, [login, limit, offset])).rows.map((s): ProfileSubmission => ({
+			id: Number(s.id), record_id: s.record_id, title: s.title, agent: agentDisplayName(s.agent),
+			at: new Date(s.at).toISOString(), permalink: recordPath(s.record_id),
+		}));
 	} catch {
 		throw unavailable();
 	}
@@ -134,7 +153,9 @@ export async function profile(db: Db, handle: unknown, options: PageRequest & { 
 		profileCounts(db, login),
 		tab === 'votes'
 			? profileVotes(db, login, start).then((votes) => ({ tab, votes, count: votes.length }))
-			: profileActivity(db, login, { ...start, tab }).then((posts) => ({ tab, posts, count: posts.length })),
+			: tab === 'submissions'
+				? profileSubmissions(db, login, start).then((submissions) => ({ tab, submissions, count: submissions.length }))
+				: profileActivity(db, login, { ...start, tab }).then((posts) => ({ tab, posts, count: posts.length })),
 	]);
 	const { count, ...items } = list;
 	const total = tab === 'all' ? KIND_TABS.reduce((n, t) => n + counts[t], 0) : counts[tab];

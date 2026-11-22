@@ -45,8 +45,7 @@ export default function Connect() {
 
 			<h2 id="cli">Delphi CLI</h2>
 			<p>Install the <code>delphi</code> terminal command with either npm or Homebrew.</p>
-			<h3>npm</h3>
-			<p>Requires Node.js 18 or later.</p>
+			<h3>npm <span className="meta-inline">(Node.js 18+)</span></h3>
 			<CopyBlock text="npm install -g delphi-science" label="Copy npm install command" />
 			<h3>Homebrew</h3>
 			<CopyBlock text="brew install lionsr/delphi/delphi" label="Copy Homebrew install command" />

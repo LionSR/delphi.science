@@ -37,6 +37,8 @@ ul.plain li { margin: 0.2rem 0; }
 .pill.warn { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 35%, transparent); background: color-mix(in srgb, var(--warn) 9%, transparent); }
 .pill.accent { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 32%, transparent); background: color-mix(in srgb, var(--accent) 9%, transparent); }
 .pill.muted { color: var(--subtle); }
+a.pill { text-decoration: none; transition: border-color var(--motion), background-color var(--motion); }
+a.pill:hover { border-color: var(--accent); }
 
 /* Callouts, panels & card grids */
 .callout { margin: 1.1rem 0; padding: 0.85rem 1.05rem; border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: var(--radius); background: var(--surface); font-size: 0.94rem; }
@@ -85,15 +87,21 @@ input[name='q'], input.grow { flex: 1 1 16rem; min-width: 0; }
 .quick-start { display: flex; flex-direction: column; gap: 0.65rem; margin: 1rem 0; padding: 1rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); }
 .quick-start label { display: flex; flex-direction: column; gap: 0.25rem; font-size: var(--small); color: var(--muted); }
 .quick-start :is(input, textarea) { width: 100%; font-size: inherit; }
-.profile-edit { margin: 0.6rem 0 1rem; }
+.profile-edit { margin: 0.75rem 0 1.1rem; }
 .profile-edit summary { cursor: pointer; color: var(--muted); font-size: var(--small); }
-.profile-edit form { align-items: flex-end; }
-.profile-edit label { display: flex; flex-direction: column; gap: 0.25rem; flex: 1 1 14rem; min-width: 0; font-size: var(--small); color: var(--muted); }
-.profile-edit input { width: 100%; }
-.copy-block { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 0.45rem; width: 100%; margin: 0.55rem 0 1.1rem; }
-.copy-block pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; width: 100%; box-sizing: border-box; }
-.copy-block button { font-size: 0.8rem; padding: 0.28rem 0.65rem; color: var(--muted); }
-.copy-block button:hover { color: var(--ink); }
+.profile-edit form { flex-direction: column; align-items: flex-start; gap: 0.65rem; margin-top: 0.7rem; padding: 0.9rem 1rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); }
+.profile-edit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 0.85rem; width: 100%; }
+.profile-edit label { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; font-size: var(--small); color: var(--muted); }
+.profile-edit label.full { grid-column: 1 / -1; }
+.profile-edit :is(input, textarea) { width: 100%; }
+.profile-edit textarea { resize: vertical; font-size: var(--control-text); line-height: 1.5; }
+@media (max-width: 640px) { .profile-edit-grid { grid-template-columns: 1fr; } }
+.profile-bio { max-width: 68ch; margin: 0.65rem 0 0; line-height: 1.55; white-space: pre-line; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 0.3rem 0.9rem; margin: 0.45rem 0 0; font-size: var(--small); }
+.copy-block { position: relative; width: 100%; margin: 0.5rem 0 1rem; }
+.copy-block pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; padding: 0.68rem 4.8rem 0.68rem 0.95rem; width: 100%; box-sizing: border-box; }
+.copy-block button { position: absolute; top: 0.52rem; right: 0.48rem; font-size: 0.76rem; line-height: 1.2; padding: 0.24rem 0.55rem; color: var(--muted); background: var(--bg); border-color: var(--rule); }
+.copy-block button:hover { color: var(--ink); background: var(--surface-hover); }
 
 /* Header, Hero & Footer */
 main > header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; padding-bottom: 0.9rem; border-bottom: 1px solid var(--rule); font-size: var(--small); color: var(--muted); }

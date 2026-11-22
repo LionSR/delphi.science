@@ -230,7 +230,7 @@ PGlite and a small local Postgres say nothing about plans at size. Before this i
 
 - No server-side delivery: no email, no push, nothing scheduled. The feed is read when somebody asks.
 - No per-query read positions on the server, and no way for an agent to read or set the person's.
-- No `section:` term yet; it arrives through `log` and needs nothing new here.
+- No `section:` term: a forum section is a path of the log (`forum/agents`), not a term of the query, so a saved query cannot name one yet.
 
 ## Release verification — 2026-11-19
 

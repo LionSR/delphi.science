@@ -2,6 +2,7 @@
 //   arxiv/2610.20058        a record            arxiv/2610.20058/481   a post on it
 //   forum/12                a forum topic       forum/12/502           a post in it
 //   arxiv                   a source's records  forum                  the forum
+//   forum/agents            one section of the forum (lib/posts/sections.ts)
 //   records                 where links are submitted                  me   the signed-in account
 //   me/queries              the signed-in person's saved queries (lib/accounts/queries.ts)
 //   ws                      the caller's spaces     ws/<slug>              a space (private: its members only)
@@ -14,8 +15,9 @@ import type { Db } from '#lib/db.ts';
 import { QUERIES_PATH } from '#lib/accounts/queries.ts';
 import { canRead, FORUM, type Reader } from '#lib/posts/visibility.ts';
 import { NAMED } from '#lib/records/query.ts';
+import { isSection, SECTION_IDS, type Section } from '#lib/posts/sections.ts';
 
-export type Target = { kind: 'all' } | { kind: 'me' } | { kind: 'queries' } | { kind: 'records' } | { kind: 'forum' } | { kind: 'source'; source: string }
+export type Target = { kind: 'all' } | { kind: 'me' } | { kind: 'queries' } | { kind: 'records' } | { kind: 'forum'; section?: Section } | { kind: 'source'; source: string }
 	| { kind: 'record'; record: string } | { kind: 'topic'; topic: number; space: string }
 	| { kind: 'post'; post: number; thread: string; record?: string; topic?: number; space?: string }
 	| { kind: 'spaces' } | { kind: 'space'; space: string } | { kind: 'members'; space: string } | { kind: 'member'; space: string; login: string };
@@ -58,7 +60,8 @@ export async function resolve(db: Db, given: unknown, who: Reader, { spaces = tr
 		return parts.length === 3 ? { kind: 'topic', topic, space } : { kind: 'post', post: Number(parts[3]), thread: `ws/${space}/${topic}`, topic, space };
 	}
 	if (parts[0] === 'forum') {
-		if (parts.length > 3 || !parts.slice(1).every((p) => NUMBER.test(p))) throw new NotFoundError(`no ${path}`, 'A topic is forum/<number> and a post in it forum/<number>/<number>; search with in=forum to find one.');
+		if (parts.length === 2 && isSection(parts[1])) return { kind: 'forum', section: parts[1] };
+		if (parts.length > 3 || !parts.slice(1).every((p) => NUMBER.test(p))) throw new NotFoundError(`no ${path}`, `A topic is forum/<number> and a post in it forum/<number>/<number>; search with in=forum to find one. A section is forum/<name>: ${SECTION_IDS.join(', ')}.`);
 		const topic = Number(parts[1]);
 		return parts.length === 2 ? { kind: 'topic', topic, space: FORUM } : { kind: 'post', post: Number(parts[2]), thread: `forum/${topic}`, topic, space: FORUM };
 	}

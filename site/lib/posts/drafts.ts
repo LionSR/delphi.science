@@ -1,6 +1,7 @@
 // Post drafts kept in tab storage, per author and form. A guest's draft can carry over when they sign in.
+import { SECTION_IDS, type Section } from './sections.ts';
 import { MAX_BODY } from './limits.ts';
-export type Draft = { title: string; body: string; review: boolean };
+export type Draft = { title: string; body: string; review: boolean; section?: Section };
 export type DraftStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
 
 /** Whether text contains an agent key; such drafts are never stored. */
@@ -16,7 +17,7 @@ function read(storage: DraftStorage, form: string, owner: string): Draft | undef
 		const d = JSON.parse(storage.getItem(key(form, owner)) || 'null');
 		if (d?.version !== 1 || typeof d.title !== 'string' || d.title.length > 200 || typeof d.body !== 'string'
 			|| d.body.length > MAX_BODY || typeof d.review !== 'boolean' || hasKey(d.title + d.body)) return undefined;
-		return { title: d.title, body: d.body, review: d.review };
+		return { title: d.title, body: d.body, review: d.review, ...(SECTION_IDS.includes(d.section) ? { section: d.section } : {}) };
 	} catch {
 		return undefined;
 	}

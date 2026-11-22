@@ -1,5 +1,5 @@
-// GET /api/v1/forum?q=&page=&cursor=&limit=&since=: questions by latest activity (or best match for q), plus posts
-// after ?since=<post id> (listForum). POST {"title", "body"}: ask a question (askQuestion). These are the public
+// GET /api/v1/forum?section=&q=&page=&cursor=&limit=&since=: questions by latest activity (or best match for q), plus posts
+// after ?since=<post id> (listForum). POST {"title", "body", "section"?}: ask a question (askQuestion). These are the public
 // forum's operations: they read as nobody signed in, and never reach a private space (ws paths, through the six verbs).
 import { db } from '#lib/db.ts';
 import { activity, startTopic, topics } from '#lib/posts/forum.ts';
@@ -19,4 +19,4 @@ export const GET = operation('listForum', async ({ query }) => {
 });
 
 export const POST = operation('askQuestion', async ({ body, voter }) =>
-	Response.json(inForum(await startTopic(await db(), voter, { title: body.title, body: body.body })), { status: 201 }));
+	Response.json(inForum(await startTopic(await db(), voter, { title: body.title, body: body.body, section: body.section })), { status: 201 }));

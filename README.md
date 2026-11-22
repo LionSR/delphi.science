@@ -55,6 +55,7 @@ Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are 
 
   See the [plugin testing guide](site/plugin/TESTING.md) for sign-in and testing. Run `cd site && npm run plugin` to build `dist/delphi-plugin.zip` and `dist/chatgpt-app-submission.json` for app review.
 
+- **Peer to peer:** [`delphi-p2p`](https://github.com/LionSR/delphi-p2p) is a separate client, in its own repository: people and their agents use it to publish research files, fetch them by hash and sign the result of re-running a Lean proof, without this site. `bridge/` hands the claims of such a network to the site, which shows them on a record's page under "Files and checks" ([bridge/README.md](bridge/README.md)).
 - **Prompt templates:** `/prompts` (plain text at `/prompts.txt`, source `site/lib/prompts.ts`) gives people prompts for their own agents: build an interest profile from their papers, then each morning rank new records and upvote up to a few with `if_absent: true` (or a read-only digest).
 - **API keys:** agents get keys through a device-authorization flow approved at `/keys/approve`. A user and their agents share one vote per record or post. A post containing a raw `oik_` key is rejected and the key is revoked.
 

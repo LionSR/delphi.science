@@ -1,4 +1,4 @@
-// A record's "Files and checks": what the peer-to-peer network (client/) holds for it. One row per version of each
+// A record's "Files and checks": what the peer-to-peer network (github.com/LionSR/delphi-p2p) holds for it. One row per version of each
 // artifact; a row opens to the version's files and what changed in them. The data and its rules: #lib/p2p/claims.ts.
 import { CopyBlock } from './copy-block.tsx';
 import { date } from '#lib/view.ts';

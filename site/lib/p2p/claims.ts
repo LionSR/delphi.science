@@ -1,5 +1,6 @@
-// Claims from the peer-to-peer network (client/): storing what a bridge hands over, and what a record page shows
-// of it. The network holds the signed originals; open_index.claims is a copy that any client's log can rebuild.
+// Claims from the peer-to-peer network (github.com/LionSR/delphi-p2p): storing what a bridge (bridge/) hands over,
+// and what a record page shows of it. The network holds the signed originals; open_index.claims is a copy that any
+// client's log can rebuild.
 //
 // Only a claim's structured fields are shown: ids, keys, counts, sizes, verdicts. Its free text (title, note,
 // author names, checker output) is written by strangers and is not shown. Showing it needs the moderation gate.
@@ -121,7 +122,7 @@ function listing(files: readonly FileEntry[], before?: { id: string; files: read
 }
 
 /**
- * The artifacts those claims make up. The rules are the client's own (client/src/ops.rs, Record and tally): a
+ * The artifacts those claims make up. The rules are the client's own (src/ops.rs there, Record and tally): a
  * record's current version is its first author's newest that none of that author's versions follows, and each
  * key counts once per snapshot, with its newest verdict. `lists` holds the file lists the site has, by snapshot.
  */

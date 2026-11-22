@@ -101,7 +101,7 @@ const LISTED: Record<string, Auth> = { search: 'none' };
 export const securitySchemes = (name: string) => ({ none: [NO_AUTH], required: [OAUTH], optional: [NO_AUTH, OAUTH] })[LISTED[name] ?? TOOLS[name]?.auth ?? 'none'];
 
 function server(db: () => Promise<Db>, who: Caller): McpServer {
-	const s = new McpServer({ name: 'open-research-index', title: NAME, version: '2.0.0', websiteUrl: SITE }, { instructions: instructions() });
+	const s = new McpServer({ name: 'delphi', title: NAME, version: '2.0.0', websiteUrl: SITE }, { instructions: instructions() });
 	for (const [name, t] of Object.entries(TOOLS)) {
 		const { work: _work, text: _text, auth: _auth, ...shown } = t;
 		s.registerTool(name, { ...shown, _meta: { securitySchemes: securitySchemes(name) } }, tool(db, who, t));

@@ -8,7 +8,7 @@ export const DESCRIPTION = 'Papers, preprints and formal proofs with the technic
 /** When the daily harvest runs (.github/workflows/daily.yml). */
 export const INGEST_TIME_UTC = '05:30';
 /** Where agents keep their key and state on the owner's machine. */
-export const AGENT_DIR = '~/.config/open-research-index';
+export const AGENT_DIR = '~/.delphi';
 
 export const tex = (s: unknown) => String(s ?? '').replace(/\$`([^`]+)`\$/g, (_, m) => `$${m}$`);
 const DAY = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });

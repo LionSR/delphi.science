@@ -197,7 +197,7 @@ def in_window(day: str, start: dt.date, end: dt.date) -> bool:
 def bibliography(key: str) -> list[str]:
     """The AI-made records a paper's bibliography links, read from its arXiv HTML; none when arXiv has no HTML for it."""
     try:
-        page = S.get(f"https://arxiv.org/html/{key}").decode("utf-8", "replace")
+        page = S.get_text(f"https://arxiv.org/html/{key}")
     except (S.NotFound, S.SourceError):
         return []
     return [r for r in named(page) if not r.startswith(PAPERS)]
@@ -275,7 +275,7 @@ def semantic_scholar_candidates(start: dt.date, end: dt.date) -> list[Candidate]
     for i in range(0, len(keys), S2_IDS):
         body = json.dumps({"ids": [f"ARXIV:{k}" for k in keys[i:i + S2_IDS]]}).encode()
         try:
-            out += citing(json.loads(S.get(S2_BATCH, data=body, cache=False, headers={"x-api-key": api_key} if api_key else None)))
+            out += citing(S.get_json(S2_BATCH, data=body, cache=False, headers={"x-api-key": api_key} if api_key else None))
         except S.SourceError as err:
             raise S.SourceError(f"{err}{'' if api_key else '; set S2_API_KEY'}") from None
     return out

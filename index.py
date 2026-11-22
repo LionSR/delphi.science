@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Open Research Index harvester, classifier, and static build CLI.
+"""Delphi.science harvester, classifier, and static build CLI.
 
 Entries are stored in Postgres (open_index.entries, via store.py) keyed by <source>/<key>.
 APP papers are read from the published APP registry index at build time.

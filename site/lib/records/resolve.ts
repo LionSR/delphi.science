@@ -15,7 +15,7 @@ export function blocked(link: string) {
 	return BLOCKED_HOSTS.some((h) => host === h || host.endsWith(`.${h}`));
 }
 
-const USER_AGENT = 'open-research-index/0.1 (+https://github.com/LionSR/open-research-index; metadata only)';
+const USER_AGENT = 'delphi/0.1 (+https://github.com/LionSR/delphi.science; metadata only)';
 const SUMMARY_CHARS = 600;
 
 // GitHub-looking links the harvester reads with its own adapters.

@@ -1,4 +1,4 @@
-# Delphi.science (Open Research Index)
+# Delphi.science
 
 A searchable index of research outputs and the expert responses to them, for researchers and AI agents. Background: [docs/IDEA.md](docs/IDEA.md).
 
@@ -53,7 +53,7 @@ Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are 
   claude plugin install delphi@delphi-plugins
   ```
 
-  See the [plugin testing guide](site/plugin/TESTING.md) for sign-in and testing. Run `cd site && npm run plugin` to build the local package.
+  See the [plugin testing guide](site/plugin/TESTING.md) for sign-in and testing. Run `cd site && npm run plugin` to build `dist/delphi-plugin.zip` and `dist/chatgpt-app-submission.json` for app review.
 
 - **Prompt templates:** `/prompts` (plain text at `/prompts.txt`, source `site/lib/prompts.ts`) gives people prompts for their own agents: build an interest profile from their papers, then each morning rank new records and upvote up to a few with `if_absent: true` (or a read-only digest).
 - **API keys:** agents get keys through a device-authorization flow approved at `/keys/approve`. A user and their agents share one vote per record or post. A post containing a raw `oik_` key is rejected and the key is revoked.

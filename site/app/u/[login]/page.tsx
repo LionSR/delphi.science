@@ -1,8 +1,9 @@
+import { cache } from 'react';
 import { notFound } from 'next/navigation';
 import { db } from '#lib/db.ts';
 import { fetchArxivAuthorPapers } from '#lib/accounts/arxiv-author.ts';
 import { connectedAgentCount } from '#lib/accounts/keys.ts';
-import { MAX_AFFILIATION, MAX_ARXIV_INPUT, MAX_BIO, MAX_NAME, MAX_URL, ownName, publicName, publicProfile, type OwnProfile } from '#lib/accounts/people.ts';
+import { MAX_AFFILIATION, MAX_ARXIV_INPUT, MAX_BIO, MAX_NAME, MAX_URL, ownName, toPublicProfile, type OwnProfile } from '#lib/accounts/people.ts';
 import { normalizeProfileLogin, profile, TABS, type Tab } from '#lib/accounts/profile.ts';
 import { ProfileView, type ProfileTab } from '#lib/accounts/profile-view.ts';
 import { me } from '#lib/accounts/session.ts';
@@ -12,10 +13,14 @@ import { pageParam } from '#lib/pager.ts';
 export const dynamic = 'force-dynamic';
 type Context = { params: Promise<{ login: string }>; searchParams: Promise<{ page?: string | string[]; tab?: string | string[]; notice?: string }> };
 
+// Read once per request: metadata, public profile header, and owner edit form all share this row.
+const readProfile = cache(async (login: string) => ownName(await db(), login).catch(() => null));
+
 export async function generateMetadata({ params }: Context) {
 	try {
 		const login = normalizeProfileLogin((await params).login);
-		const { name } = await publicName(await db(), login);
+		const row = await readProfile(login);
+		const name = row ? toPublicProfile(row).name : '';
 		return { title: `${name ? `${name} (@${login})` : `@${login}`} — Profile` };
 	} catch {
 		return {};
@@ -51,17 +56,15 @@ export default async function Profile({ params, searchParams }: Context) {
 	const tab: ProfileTab = rawTab === 'papers' ? 'papers' : (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
 	const d = await db();
 	// A failure to load the activity shows "temporarily unavailable" with a retry link.
-	const [who, page, viewer, connectedAgents] = await Promise.all([
-		publicProfile(d, login),
+	const [row, page, viewer, connectedAgents] = await Promise.all([
+		readProfile(login),
 		profile(d, login, { tab: tab === 'papers' ? 'all' : tab, page: tab === 'papers' ? 1 : pageParam(rawPage) }).catch(() => null),
 		me(),
 		connectedAgentCount(d, login).catch(() => undefined),
 	]);
+	const who = row ? toPublicProfile(row) : undefined;
 	const owner = viewer?.login.toLowerCase() === login.toLowerCase();
-	const [own, papers] = await Promise.all([
-		owner ? ownName(d, login).catch(() => null) : Promise.resolve(null),
-		tab === 'papers' && who.arxiv_id ? fetchArxivAuthorPapers(d, who.arxiv_id) : Promise.resolve(null),
-	]);
-	const editor = own ? <ProfileEditor login={login} own={own} notice={notice} /> : null;
+	const papers = tab === 'papers' && who?.arxiv_id ? await fetchArxivAuthorPapers(d, who.arxiv_id) : null;
+	const editor = owner && row ? <ProfileEditor login={login} own={row} notice={notice} /> : null;
 	return <ProfileView login={login} tab={tab} page={page} who={who} papers={papers} connectedAgents={connectedAgents} owner={owner} editor={editor} />;
 }

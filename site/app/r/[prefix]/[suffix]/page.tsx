@@ -18,6 +18,7 @@ import { publicNames } from '#lib/accounts/people.ts';
 import { myVotes, votes } from '#lib/records/votes.ts';
 import { artifacts } from '#lib/p2p/claims.ts';
 import { SharedFiles } from '#app/shared-files.tsx';
+import { RecordBadges } from '#app/record-badges.tsx';
 import { Vote } from '#app/vote.tsx';
 import { OwnerEdit } from '#app/owner-edit.tsx';
 import { PostText } from '#app/post-text.tsx';
@@ -98,10 +99,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 					<code>{id}</code>
 					<span>{date(r.published)}</span>
 					{r.subject ? <code>{String(r.subject)}</code> : null}
-					{r.origin === 'ai-generated' && <span className="pill muted">AI-generated</span>}
-					{r.verified ? <span className="pill accent">machine-checked</span> : r.formalized ? <span className="pill accent">Lean</span> : null}
-					{r.disputed ? <span className="pill warn">disputed</span> : null}
-					{r.withdrawn ? <span className="pill warn">withdrawn</span> : null}
+					<RecordBadges record={r} />
 					<span>{tally(r)}</span>
 					{reactions.filter(([k]) => k !== 'up' && k !== 'down').map(([k, n]) => <span key={k}>{k} {n}</span>)}
 				</p>

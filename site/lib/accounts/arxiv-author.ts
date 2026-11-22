@@ -2,7 +2,7 @@
 // Identifiers are validated against strict formats before building any outbound arXiv URL.
 import type { Db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
-import { recordPath } from '#lib/view.ts';
+import { decodeEntities, recordPath, xmlTags } from '#lib/view.ts';
 
 export const MAX_ARXIV_ID = 64;
 export const MAX_ARXIV_INPUT = 160;
@@ -45,28 +45,20 @@ export type IndexedPaperInfo = { permalink: string; score: number; discussed: nu
 export type ArxivAuthorPaper = { arxivId: string; recordId: string; title: string; authors: string[]; published: string; category: string; url: string; pdf: string; indexed?: IndexedPaperInfo };
 export type ArxivAuthorFeedResult = { status: 'ok'; papers: ArxivAuthorPaper[] } | { status: 'not_found' | 'unavailable'; papers: [] };
 
-const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" };
-const decodeXml = (text: string) => text.replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos);/gi, (full, e: string) => {
-	const lower = e.toLowerCase();
-	if (lower in ENTITIES) return ENTITIES[lower];
-	const code = lower.startsWith('#x') ? Number.parseInt(lower.slice(2), 16) : Number.parseInt(lower.slice(1), 10);
-	return code > 0 && code <= 0x10ffff ? String.fromCodePoint(code) : full;
-});
-const xmlAll = (s: string, tag: string) => [...s.matchAll(new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)</${tag}>`, 'gi'))].map((m) => m[1]);
-const cleanXml = (raw = '') => decodeXml(raw.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')).replace(/\s+/g, ' ').trim();
+const cleanXml = (raw = '') => decodeEntities(raw.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')).replace(/\s+/g, ' ').trim();
 
 /** Parses an arXiv public author Atom2 feed into papers, newest first as listed by arXiv. */
 export function parseArxivAuthorFeed(xml: string): ArxivAuthorPaper[] {
 	const papers: ArxivAuthorPaper[] = [];
 	const seen = new Set<string>();
-	for (const entry of xmlAll(xml, 'entry')) {
-		const arxivId = cleanXml(xmlAll(entry, 'id')[0]).match(/arxiv\.org\/abs\/([^?#\s]+)/i)?.[1].replace(/v\d+$/i, '') ?? '';
+	for (const entry of xmlTags(xml, 'entry')) {
+		const arxivId = cleanXml(xmlTags(entry, 'id')[0]).match(/arxiv\.org\/abs\/([^?#\s]+)/i)?.[1].replace(/v\d+$/i, '') ?? '';
 		if (!arxivId || seen.has(arxivId)) continue;
 		seen.add(arxivId);
-		const rawDate = cleanXml(xmlAll(entry, 'published')[0]) || cleanXml(xmlAll(entry, 'updated')[0]);
+		const rawDate = cleanXml(xmlTags(entry, 'published')[0]) || cleanXml(xmlTags(entry, 'updated')[0]);
 		// arXiv's .atom2 feed lists authors comma-separated in one <author><name>, while standard Atom uses one per author.
-		const authors = xmlAll(entry, 'author').flatMap((a) => cleanXml(xmlAll(a, 'name')[0]).split(',').map((s) => s.trim())).filter(Boolean);
-		const category = decodeXml(
+		const authors = xmlTags(entry, 'author').flatMap((a) => cleanXml(xmlTags(a, 'name')[0]).split(',').map((s) => s.trim())).filter(Boolean);
+		const category = decodeEntities(
 			entry.match(/<arxiv:primary_category\b[^>]*\bterm=["']([^"']+)["']/i)?.[1]
 			?? entry.match(/<category\b[^>]*\bterm=["']([^"']+)["']/i)?.[1]
 			?? '',
@@ -74,7 +66,7 @@ export function parseArxivAuthorFeed(xml: string): ArxivAuthorPaper[] {
 		papers.push({
 			arxivId,
 			recordId: `arxiv/${arxivId}`,
-			title: cleanXml(xmlAll(entry, 'title')[0]) || `arXiv:${arxivId}`,
+			title: cleanXml(xmlTags(entry, 'title')[0]) || `arXiv:${arxivId}`,
 			authors,
 			published: /^\d{4}-\d{2}-\d{2}/.test(rawDate) ? rawDate.slice(0, 10) : '',
 			category,

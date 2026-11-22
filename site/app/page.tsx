@@ -9,6 +9,7 @@ import { me } from '#lib/accounts/session.ts';
 import { date, original, recordPath, source, tally, tex } from '#lib/view.ts';
 import { myVotes } from '#lib/records/votes.ts';
 import { Hero } from './logo.tsx';
+import { RecordBadges } from './record-badges.tsx';
 import { Vote } from './vote.tsx';
 import { HomeOrder } from './home-order.ts';
 import { Pager, PAGE_SIZE, pageHref, pageParam } from '#lib/pager.ts';
@@ -90,16 +91,16 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	}
 	// The global list keeps its feed in its links once it was asked for by name, so paging and ordering stay in it.
 	const feed = params.feed === 'global' ? 'global' : '';
-	// A query error the reader can fix is shown with its fix. Source counts and the session load in parallel.
-	const [found, sources, who] = await Promise.all([
+	// A query error the reader can fix is shown with its fix. Source counts load in parallel with search.
+	const [found, sources] = await Promise.all([
 		search(d, q, { sort, page, limit: PAGE_SIZE }).then((res) => ({ res, error: '' }), (e) => {
 			if (!(e instanceof QueryError)) throw e;
 			return { res: null, error: `${e.message}. ${e.fix}` };
 		}),
-		sourceCounts(d), me(),
+		sourceCounts(d),
 	]);
 	const { res, error } = found;
-	const mine = who && res ? await myVotes(d, who.login, res.results.map((r) => String(r.id))) : new Map();
+	const mine = person && res ? await myVotes(d, person.login, res.results.map((r) => String(r.id))) : new Map();
 	const here = pageHref('/', { feed, q, sort }, page);
 	return (
 		<>
@@ -153,10 +154,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 							{from && <a className="external" href={from.href} rel="external" title={from.href}>Source: {from.host}</a>}
 							<span>{date(r.published)}</span>
 							{r.subject ? <code>{String(r.subject)}</code> : null}
-							{r.origin === 'ai-generated' && <span className="pill muted">AI-generated</span>}
-							{r.verified ? <span className="pill accent">machine-checked</span> : r.formalized ? <span className="pill accent">Lean</span> : null}
-							{r.disputed ? <span className="pill warn">disputed</span> : null}
-							{r.withdrawn ? <span className="pill warn">withdrawn</span> : null}
+							<RecordBadges record={r} />
 							<span>{tally(r)}</span>
 						</p>
 					</li>

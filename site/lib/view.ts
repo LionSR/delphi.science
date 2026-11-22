@@ -64,3 +64,14 @@ export const STANCE_LIST = Object.entries(STANCES).map(([s, d]) => `${s} (${d})`
 
 /** s cut to at most n characters at a word boundary, with an ellipsis if cut. */
 export const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…');
+
+const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
+/** Decodes XML/HTML named and numeric character references; invalid numeric references stay as-is (or become `invalid`). */
+export const decodeEntities = (text: string, invalid?: string) => text.replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos|nbsp);/gi, (full, e: string) => {
+	if (e[0] !== '#') return ENTITIES[e.toLowerCase()];
+	const n = e[1].toLowerCase() === 'x' ? Number.parseInt(e.slice(2), 16) : Number.parseInt(e.slice(1), 10);
+	return n > 0 && n <= 0x10ffff && !(n >= 0xd800 && n <= 0xdfff) ? String.fromCodePoint(n) : (invalid ?? full);
+});
+/** Inner contents of every `<tag>…</tag>` element in an XML string. */
+export const xmlTags = (xml: string, tag: string) =>
+	[...xml.matchAll(new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)</${tag}>`, 'gi'))].map((m) => m[1]);

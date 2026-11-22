@@ -137,7 +137,7 @@ export function ProfileView({ login, tab = 'all', page, who, papers, connectedAg
 	].filter(Boolean);
 
 	return h('article', null,
-		who?.name ? h('h1', null, who.name) : h('h1', { className: 'tex2jax_ignore' }, `@${login}`),
+		h('h1', who?.name ? null : { className: 'tex2jax_ignore' }, who?.name || `@${login}`),
 		who?.name || who?.affiliation || agentsBadge ? h('p', { className: 'meta' },
 			who?.name ? h('span', { className: 'tex2jax_ignore' }, `@${login}`) : null,
 			who?.affiliation ? h('span', null, who.affiliation) : null,

@@ -84,10 +84,14 @@ async function readPerson(db: Db, login: string): Promise<OwnProfile> {
 	}
 }
 
+/** Strips private row fields and drops a display name that only repeats the login. */
+export function toPublicProfile({ login, edited: _, name, ...rest }: OwnProfile): PublicProfile {
+	return { name: name.toLowerCase() === login ? '' : name, ...rest };
+}
+
 /** One person's public profile fields for /u/<login> and GET /api/v1/users/{login}. */
 export async function publicProfile(db: Db, login: string): Promise<PublicProfile> {
-	const { login: stored, edited: _, name, ...rest } = await readPerson(db, login).catch(() => ({ login: login.toLowerCase(), ...EMPTY_PROFILE, edited: false }));
-	return { name: name.toLowerCase() === stored ? '' : name, ...rest };
+	return toPublicProfile(await readPerson(db, login).catch(() => ({ login: login.toLowerCase(), ...EMPTY_PROFILE, edited: false })));
 }
 
 /** At sign-in: copy the public GitHub name and company, unless the person has edited theirs here. Never fails sign-in. */

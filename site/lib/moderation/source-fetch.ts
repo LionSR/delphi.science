@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { resolve4 } from 'node:dns/promises';
 import type { LookupFunction } from 'node:net';
 import { Agent, request, type RequestOptions } from 'node:https';
+import { decodeEntities } from '#lib/view.ts';
 
 export type SourceTarget = { canonical: string; requestUrl: string };
 type FailureStatus = 'unsupported' | 'not_found' | 'unavailable' | 'identity_mismatch' | 'unsupported_format';
@@ -269,16 +270,10 @@ function* htmlTokens(html: string): Generator<HtmlToken> {
 		yield token;
 	}
 }
-const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
 function inertText(html: string): string {
 	let at = 0, text = '';
 	for (const token of htmlTokens(html)) { text += html.slice(at, token.start) + ' '; at = token.end; }
-	text += html.slice(at);
-	text = text.replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos|nbsp);/gi, (_, entity: string) => {
-		if (entity[0] !== '#') return ENTITIES[entity.toLowerCase()];
-		const n = entity[1].toLowerCase() === 'x' ? parseInt(entity.slice(2), 16) : parseInt(entity.slice(1), 10);
-		return n > 0 && n <= 0x10ffff && !(n >= 0xd800 && n <= 0xdfff) ? String.fromCodePoint(n) : ' ';
-	}).replace(/\s+/g, ' ').trim();
+	text = decodeEntities(text + html.slice(at), ' ').replace(/\s+/g, ' ').trim();
 	if (Buffer.byteLength(text) > MAX_SOURCE_BYTES) fail('unsupported_format', 'The decoded public text exceeds the source text limit.');
 	rejectCredential(text);
 	return text;

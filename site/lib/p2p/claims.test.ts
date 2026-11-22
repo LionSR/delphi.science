@@ -5,6 +5,7 @@ import { after, before, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
 import { allowRouteImports, migratedDb, useDb } from '#lib/testing.ts';
 import { createAgentKey } from '#lib/accounts/keys.ts';
+import type { Db } from '#lib/db.ts';
 import { artifacts, canRelay, store, type ClaimEntry, type FileEntry } from './claims.ts';
 
 // Next's bundler resolves next/server for the routes; plain Node needs the file named.
@@ -99,4 +100,16 @@ test('only a key of a listed bridge account may hand over claims', async () => {
 	} finally {
 		delete process.env.P2P_BRIDGE_LOGINS;
 	}
+});
+
+// The production driver, postgres.js, encodes a string given for a jsonb parameter once more, as one jsonb string.
+// The in-process database takes either, so it cannot show the difference: this looks at what the driver is handed.
+test('JSON goes to the database as values, never as text', async () => {
+	const asText: string[] = [];
+	const watched = { query: (sql: string, params: unknown[] = []) => {
+		for (const [, n] of sql.matchAll(/\$(\d+)::jsonb/g)) if (typeof params[Number(n) - 1] === 'string') asText.push(sql.trim().slice(0, 40));
+		return pg.query(sql, params);
+	} } as Db;
+	await store(watched, { entries: [entry('c', ann, 'have', { snapshot: two })], snapshots: [{ hash: two, files: [file('A.lean', '7')] }] }, bridge);
+	assert.deepEqual(asText, []);
 });

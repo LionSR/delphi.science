@@ -53,12 +53,12 @@ export async function store(db: Db, { entries, snapshots = [] }: Batch, by: Vote
 		 SELECT e->>'id', e->>'author', (e->>'micros')::bigint, e->>'kind', e->>'agent', ARRAY(SELECT jsonb_array_elements_text(e->'refs')),
 		        e->'data', e->>'snapshot', e->>'record_id', $2
 		 FROM jsonb_array_elements($1::jsonb) e ON CONFLICT (id) DO NOTHING RETURNING id`,
-		[JSON.stringify(rows), by.login])).rows.length;
+		[rows, by.login])).rows.length; // the rows, not their JSON text: postgres.js would encode a string again, as one jsonb string
 	if (snapshots.length) await db.query(
 		`INSERT INTO open_index.snapshots (hash, files, received_from)
 		 SELECT s->>'hash', s->'files', $2 FROM jsonb_array_elements($1::jsonb) s
 		 WHERE EXISTS (SELECT 1 FROM open_index.claims c WHERE c.kind = 'publish' AND c.snapshot = s->>'hash')
-		 ON CONFLICT (hash) DO NOTHING`, [JSON.stringify(snapshots), by.login]);
+		 ON CONFLICT (hash) DO NOTHING`, [snapshots, by.login]);
 	// A list nobody can supply is asked for during a week, not for ever.
 	const wanted = (await db.query<{ id: string }>(
 		`SELECT c.id FROM open_index.claims c

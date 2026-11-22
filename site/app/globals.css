@@ -223,7 +223,10 @@ form.options button[aria-pressed='true'] { color: var(--accent); border-color: v
 .tabs.subtabs a:hover { background: var(--surface); color: var(--ink); }
 .tabs.subtabs a[aria-current='page'] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .tabs .n { font-size: var(--small); color: var(--subtle); }
-.profile-activity .kind { font-size: var(--small); text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+.profile-activity .kind { display: inline-block; padding: 0.04rem 0.45rem; border: 1px solid var(--rule); border-radius: var(--round); background: var(--surface); font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-right: 0.35rem; }
+.profile-activity li.comment { padding: 1.1rem 0; }
+.profile-activity li.comment > p:first-child a { font-weight: 600; font-size: 1.04rem; color: var(--ink); text-decoration: none; }
+.profile-activity li.comment > p:first-child a:hover { color: var(--accent); }
 
 /* Markdown (after .comment p, which it overrides) */
 .markdown { overflow-wrap: anywhere; }

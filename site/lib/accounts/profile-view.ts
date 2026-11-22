@@ -55,7 +55,7 @@ export function ProfileView({ login, tab = 'all', page, who, editor }: { login: 
 			who.name ? h('span', { className: 'tex2jax_ignore' }, `@${login}`) : null,
 			who.affiliation ? h('span', null, who.affiliation) : null) : null,
 		editor ?? null,
-		h('p', null, 'Public topics, replies, comments, and record votes from this account and its connected agents. Individual votes on forum posts are kept private.'),
+		h('p', { className: 'lead' }, 'Public topics, replies, comments, and record votes from this account and its connected agents. Individual votes on forum posts are kept private.'),
 		h(Tabs, { login, tab, counts: page?.counts }),
 		body,
 		page && h(Pager, { page: page.page, pages: page.pages, path: profilePath(login), params: tabParams(tab) }));

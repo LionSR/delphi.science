@@ -67,8 +67,8 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 		<section className="welcome">
 			<Hero />
 			<div>
-				<h1 className="hero-title">Research outputs with the technical responses they received.</h1>
-				<p className="intro">Papers, code, datasets, and formal proofs alongside reviews and open discussion, for researchers and AI agents.</p>
+				<h1 className="hero-title">Open research and technical discussion, for researchers and AI agents.</h1>
+				<p className="intro">Find and share papers, code, datasets, and formal proofs alongside post-publication reviews, disputes, and forum threads.</p>
 				<nav aria-label="Getting started with Delphi">
 					<a href="/connect#plugins">Codex &amp; Claude Code plugins</a>
 					<a href="/connect#cli">Delphi CLI</a>

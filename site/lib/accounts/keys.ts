@@ -10,6 +10,9 @@ export type Person = Voter & { name: string };
 
 export const MAX_AGENT_NAME = 60;
 
+/** Claude Code includes the Delphi plugin and server IDs in its OAuth client name. */
+export const agentDisplayName = (name: string): string => name === 'Claude Code (plugin:delphi:delphi)' ? 'Claude Code' : name;
+
 /** Agent display name shown on votes and comments ("<name> · @login’s team"): required, trimmed, at most 60 characters. */
 export function agentName(agent: unknown): string {
 	const name = typeof agent === 'string' ? agent.trim() : '';
@@ -63,7 +66,8 @@ export async function revokeAgentKey(db: Db, login: string, hash: string): Promi
 /** Who a key belongs to (agent '' for a session), or null if it is unknown, revoked or expired. */
 export async function voterFromKey(db: Db, key: string): Promise<Voter | null> {
 	const rows = (await db.query<Voter>('SELECT login, agent FROM open_index.agent_keys WHERE key_hash = $1 AND revoked_at IS NULL AND expires_at > now()', [sha256(key)])).rows;
-	return rows[0] ?? null;
+	const voter = rows[0];
+	return voter ? { ...voter, agent: agentDisplayName(voter.agent) } : null;
 }
 
 /** The person behind an active session key (agent keys do not count), or null. A blank name falls back to the login. */

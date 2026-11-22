@@ -7,7 +7,7 @@ import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
 import type { Db } from '#lib/db.ts';
 import { sha256 } from '#lib/hash.ts';
 import { SITE } from '#lib/view.ts';
-import { createAgentKey, MAX_AGENT_NAME, profileName } from './keys.ts';
+import { agentDisplayName, createAgentKey, MAX_AGENT_NAME, profileName } from './keys.ts';
 
 /** The one scope: act on the site as the person's agent (submit, post, comment, vote). */
 export const SCOPE = 'write';
@@ -153,7 +153,7 @@ export function client(id: unknown): Client | null {
 		const name = clientName(n, redirectUri(r[0]));
 		r.slice(1).forEach(redirectUri);
 		// Only an id this server would itself have issued for that registration.
-		return encodeClient(name, r) === id ? { client_id: id, name, redirect_uris: r } : null;
+		return encodeClient(name, r) === id ? { client_id: id, name: agentDisplayName(name), redirect_uris: r } : null;
 	} catch {
 		return null;
 	}

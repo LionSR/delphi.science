@@ -58,6 +58,17 @@ describe('authorization', () => {
 		assert.equal(row.days, 90);
 	});
 
+	test('a Claude Code plugin registration keeps its client ID and issues a key named Claude Code', async () => {
+		const { client_id } = await register('Claude Code (plugin:delphi:delphi)');
+		const approved = request(client_id);
+		assert.ok('client' in approved);
+		assert.equal(approved.client.name, 'Claude Code');
+		const code = await issueCode(pg, 'Ada', approved);
+		const { access_token } = await token(pg, { grant_type: 'authorization_code', code, client_id, redirect_uri: CHATGPT, code_verifier: VERIFIER });
+		const { rows } = await pg.query('SELECT agent FROM open_index.agent_keys WHERE key_hash = $1', [sha256(access_token)]);
+		assert.deepEqual(rows, [{ agent: 'Claude Code' }]);
+	});
+
 	test('the exchange needs the right verifier, client and return address, within five minutes', async () => {
 		const { client_id } = await register();
 		const other = (await register('Other')).client_id;

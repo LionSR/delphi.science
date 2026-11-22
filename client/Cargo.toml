@@ -1,0 +1,23 @@
+[package]
+name = "delphi-p2p"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+description = "Delphi client: publish, fetch and check research artifacts peer to peer."
+rust-version = "1.96"
+
+[[bin]]
+name = "delphi-p2p"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+futures-util = "0.3"
+iroh = "1.5.0"
+iroh-blobs = "0.105.0"
+p2panda = "0.8.1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sqlx = { version = "0.9", default-features = false, features = ["runtime-tokio", "sqlite"] }
+tokio = { version = "1", features = ["full"] }

@@ -1,4 +1,5 @@
-// One record: metadata, votes, comments and reviews, and external discussion.
+// One record: metadata, votes, the files and checks the peer-to-peer network holds for it, comments and reviews,
+// and external discussion.
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { notFound, permanentRedirect } from 'next/navigation';
@@ -15,6 +16,8 @@ import { me } from '#lib/accounts/session.ts';
 import { date, idPath, original, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams, voteMark } from '#lib/view.ts';
 import { publicNames } from '#lib/accounts/people.ts';
 import { myVotes, votes } from '#lib/records/votes.ts';
+import { artifacts } from '#lib/p2p/claims.ts';
+import { SharedFiles } from '#app/shared-files.tsx';
 import { Vote } from '#app/vote.tsx';
 import { OwnerEdit } from '#app/owner-edit.tsx';
 import { PostText } from '#app/post-text.tsx';
@@ -52,7 +55,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	if (!r) notFound();
 	if (r.id !== id) permanentRedirect(recordPath(r.id));
 	const d = await db();
-	const [thread, voters, who, { notice, new: carried }] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams]);
+	const [thread, voters, who, { notice, new: carried }, shared] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams, artifacts(d, id)]);
 	// The posts that came after the reader last opened My feed (docs/my-feed.md).
 	const fresh = await newInThread(d, who, { record: id }, seqParam(carried));
 	const stands = reception(r);
@@ -138,6 +141,8 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 					{discusses.map((d) => <a key={d.id} href={recordPath(d.id)}>{tex(d.title)}</a>)}
 				</p>
 			)}
+
+			<SharedFiles artifacts={shared} />
 
 			<h2>Comments and reviews</h2>
 			{thread.length === 0 && <p className="count">No comments yet.</p>}

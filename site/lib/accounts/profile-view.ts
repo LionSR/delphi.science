@@ -4,11 +4,12 @@ import { Markdown } from '#lib/posts/markdown.ts';
 import { arxivAuthorUrl, isOrcid, orcidUrl, type ArxivAuthorFeedResult, type ArxivAuthorPaper } from './arxiv-author.ts';
 import type { PostKind, Profile, ProfilePost, ProfileSubmission, ProfileVote, Tab } from './profile.ts';
 import { PublicAuthor, profilePath } from './public-author.ts';
-import type { PublicName, PublicProfile } from './people.ts';
+import type { PublicProfile } from './people.ts';
 import { date, original, source, tally, tex, voteMark } from '#lib/view.ts';
 import { Pager, pageHref } from '#lib/pager.ts';
 
 export type ProfileTab = Tab | 'papers';
+const BASE_TABS: Tab[] = ['all', 'topics', 'replies', 'comments', 'submissions', 'votes'];
 const TAB_NAMES: Record<ProfileTab, string> = {
 	all: 'All', topics: 'Topics', replies: 'Replies', comments: 'Comments', submissions: 'Submissions', votes: 'Votes', papers: 'Papers',
 };
@@ -20,9 +21,7 @@ const tabPath = (login: string, tab: ProfileTab) => pageHref(profilePath(login),
 function Tabs({ login, tab, counts, showPapers, papersCount }: {
 	login: string; tab: ProfileTab; counts?: Profile['counts']; showPapers: boolean; papersCount?: number;
 }) {
-	const tabs: ProfileTab[] = showPapers
-		? ['all', 'topics', 'replies', 'comments', 'submissions', 'votes', 'papers']
-		: ['all', 'topics', 'replies', 'comments', 'submissions', 'votes'];
+	const tabs: ProfileTab[] = showPapers ? [...BASE_TABS, 'papers'] : BASE_TABS;
 	return h('nav', { className: 'tabs', 'aria-label': 'Profile sections' }, ...tabs.map((t) => {
 		const count = t === 'papers' ? papersCount : (counts && t !== 'all' ? counts[t] : undefined);
 		return h('a', { key: t, href: tabPath(login, t), 'aria-current': t === tab ? 'page' : undefined },
@@ -30,7 +29,7 @@ function Tabs({ login, tab, counts, showPapers, papersCount }: {
 	}));
 }
 
-function Posts({ posts, who }: { posts: ProfilePost[]; who?: PublicName }) {
+function Posts({ posts, who }: { posts: ProfilePost[]; who?: Partial<PublicProfile> }) {
 	return h('ol', { className: 'profile-activity' }, ...posts.map((post) => h('li', { key: post.id, className: 'comment' },
 		h('p', null, h('span', { className: 'kind' }, KIND_NAMES[post.kind]), ' ', h('a', { href: post.permalink }, tex(post.title))),
 		h('p', { className: 'meta' },
@@ -40,7 +39,7 @@ function Posts({ posts, who }: { posts: ProfilePost[]; who?: PublicName }) {
 		h(Markdown, { text: post.body, postId: post.id }))));
 }
 
-function Submissions({ login, submissions, who }: { login: string; submissions: ProfileSubmission[]; who?: PublicName }) {
+function Submissions({ login, submissions, who }: { login: string; submissions: ProfileSubmission[]; who?: Partial<PublicProfile> }) {
 	return h('ol', { className: 'profile-activity' }, ...submissions.map((s) => {
 		const tag = source(s.record_id.split('/')[0]);
 		return h('li', { key: s.id, className: 'comment' },
@@ -54,7 +53,7 @@ function Submissions({ login, submissions, who }: { login: string; submissions: 
 	}));
 }
 
-function Votes({ login, votes, who }: { login: string; votes: ProfileVote[]; who?: PublicName }) {
+function Votes({ login, votes, who }: { login: string; votes: ProfileVote[]; who?: Partial<PublicProfile> }) {
 	return h('ol', { className: 'profile-activity' }, ...votes.map((v) => h('li', { key: v.record_id, className: 'comment' },
 		h('p', null, h('span', { className: 'kind' }, `${voteMark(v.value)} ${v.value === 1 ? 'Up' : v.value === -1 ? 'Down' : 'Reaction'}`),
 			v.emoji ? ` ${v.emoji}` : '', ' ', h('a', { href: v.permalink }, tex(v.title))),
@@ -64,21 +63,23 @@ function Votes({ login, votes, who }: { login: string; votes: ProfileVote[]; who
 		v.note ? h('p', null, v.note) : null)));
 }
 
-function formatAuthors(authors: string[]): string {
-	if (authors.length <= 8) return authors.join(', ');
-	return `${authors.slice(0, 8).join(', ')} +${authors.length - 8} more`;
-}
+const formatAuthors = (authors: string[]) => authors.length <= 8 ? authors.join(', ') : `${authors.slice(0, 8).join(', ')} +${authors.length - 8} more`;
 
-function PapersList({ arxivId, result }: { arxivId: string; result: ArxivAuthorFeedResult }) {
+function PapersTab({ arxivId, owner, result }: { arxivId: string; owner: boolean; result?: ArxivAuthorFeedResult | null }) {
+	if (!arxivId) {
+		return h('p', { className: 'count' }, owner
+			? 'Add your arXiv public author link or ORCID in Edit profile above to list your papers here.'
+			: 'No arXiv author link is set for this account.');
+	}
 	const authorHref = arxivAuthorUrl(arxivId);
+	if (!result || result.status === 'unavailable') {
+		return h('p', { role: 'alert' }, 'Could not load the arXiv author feed right now. ',
+			h('a', { className: 'external', href: authorHref, rel: 'noopener noreferrer' }, 'View on arXiv'));
+	}
 	if (result.status === 'not_found') {
 		return h('p', { className: 'count' },
 			'No public arXiv paper feed was found for ', h('code', { className: 'tex2jax_ignore' }, arxivId),
 			'. Make sure your public author identifier (or linked ORCID) is enabled in your arXiv account settings.');
-	}
-	if (result.status === 'unavailable') {
-		return h('p', { role: 'alert' }, 'Could not load the arXiv author feed right now. ',
-			h('a', { className: 'external', href: authorHref, rel: 'noopener noreferrer' }, 'View on arXiv'));
 	}
 	if (!result.papers.length) {
 		return h('p', { className: 'count' }, 'No papers listed on this arXiv author page yet. ',
@@ -89,8 +90,7 @@ function PapersList({ arxivId, result }: { arxivId: string; result: ArxivAuthorF
 		h('p', { className: 'count' },
 			`${result.papers.length} ${result.papers.length === 1 ? 'paper' : 'papers'} from arXiv`,
 			indexedCount ? ` (${indexedCount} indexed on Delphi)` : '',
-			' · ',
-			h('a', { className: 'external', href: authorHref, rel: 'noopener noreferrer' }, 'arXiv author page')),
+			' · ', h('a', { className: 'external', href: authorHref, rel: 'noopener noreferrer' }, 'arXiv author page')),
 		h('ol', { className: 'profile-papers' }, ...result.papers.map((p: ArxivAuthorPaper) => h('li', { key: p.arxivId, className: 'item' },
 			p.indexed
 				? h('a', { className: 'title', href: p.indexed.permalink }, tex(p.title))
@@ -106,6 +106,18 @@ function PapersList({ arxivId, result }: { arxivId: string; result: ArxivAuthorF
 				h('a', { className: 'external', href: p.pdf, rel: 'noopener noreferrer' }, 'PDF'))))));
 }
 
+function ActivityBody({ login, tab, page, who }: { login: string; tab: Tab; page: Profile | null; who?: Partial<PublicProfile> }) {
+	if (!page) return h('p', { role: 'alert' }, 'Public activity is temporarily unavailable. ', h('a', { href: tabPath(login, tab) }, 'Try again'));
+	const empty = tab === 'all' ? 'public posts or comments' : tab === 'votes' ? 'public votes' : tab === 'submissions' ? 'submitted records' : TAB_NAMES[tab].toLowerCase();
+	const list = page.tab === 'votes'
+		? page.votes.length > 0 && h(Votes, { login, votes: page.votes, who })
+		: page.tab === 'submissions'
+			? page.submissions.length > 0 && h(Submissions, { login, submissions: page.submissions, who })
+			: page.posts.length > 0 && h(Posts, { posts: page.posts, who });
+	const note = tab === 'votes' ? h('p', { className: 'count' }, 'Record votes only; votes on forum posts are private.') : null;
+	return h('div', null, note, list || h('p', { className: 'count' }, `No ${empty} on this page.`));
+}
+
 /** page is null when loading failed; who is the person's public profile fields when known; editor is the
  *  owner's form for changing them. */
 export function ProfileView({ login, tab = 'all', page, who, papers, connectedAgents, owner = false, editor }: {
@@ -114,46 +126,15 @@ export function ProfileView({ login, tab = 'all', page, who, papers, connectedAg
 }) {
 	const arxivId = who?.arxiv_id ?? '';
 	const website = who?.url ? original({ url: who.url }) : null;
-	const showPapers = Boolean(arxivId || owner || tab === 'papers');
-	const papersCount = papers?.status === 'ok' ? papers.papers.length : undefined;
-
-	let body: ReactNode;
-	if (tab === 'papers') {
-		if (!arxivId) {
-			body = h('p', { className: 'count' }, owner
-				? 'Add your arXiv public author link or ORCID in Edit profile above to list your papers here.'
-				: 'No arXiv author link is set for this account.');
-		} else if (!papers) {
-			body = h('p', { role: 'alert' }, 'Could not load the arXiv author feed right now. ',
-				h('a', { className: 'external', href: arxivAuthorUrl(arxivId), rel: 'noopener noreferrer' }, 'View on arXiv'));
-		} else {
-			body = h(PapersList, { arxivId, result: papers });
-		}
-	} else {
-		const empty = tab === 'all' ? 'public posts or comments' : tab === 'votes' ? 'public votes' : tab === 'submissions' ? 'submitted records' : TAB_NAMES[tab].toLowerCase();
-		const list = page && (page.tab === 'votes'
-			? page.votes.length > 0 && h(Votes, { login, votes: page.votes, who: who ? { name: who.name ?? '', affiliation: who.affiliation ?? '' } : undefined })
-			: page.tab === 'submissions'
-				? page.submissions.length > 0 && h(Submissions, { login, submissions: page.submissions, who: who ? { name: who.name ?? '', affiliation: who.affiliation ?? '' } : undefined })
-				: page.posts.length > 0 && h(Posts, { posts: page.posts, who: who ? { name: who.name ?? '', affiliation: who.affiliation ?? '' } : undefined }));
-		body = !page
-			? h('p', { role: 'alert' }, 'Public activity is temporarily unavailable. ', h('a', { href: tabPath(login, tab) }, 'Try again'))
-			: list || h('p', { className: 'count' }, `No ${empty} on this page.`);
-	}
-
 	const agentsLabel = typeof connectedAgents === 'number' ? `${connectedAgents} connected ${connectedAgents === 1 ? 'agent' : 'agents'}` : '';
 	const agentsBadge = agentsLabel && (owner
 		? h('a', { href: connectedAgents ? '/keys#connections' : '/connect', className: `pill ${connectedAgents ? 'accent' : 'muted'}` }, agentsLabel)
 		: h('span', { className: `pill ${connectedAgents ? 'accent' : 'muted'}` }, agentsLabel));
-
-	const links: ReactNode[] = [];
-	if (website) links.push(h('a', { key: 'url', className: 'external', href: website.href, rel: 'noopener noreferrer ugc' }, website.label));
-	if (arxivId) links.push(h('a', { key: 'arxiv', className: 'external', href: arxivAuthorUrl(arxivId), rel: 'noopener noreferrer' }, 'arXiv'));
-	if (arxivId && isOrcid(arxivId)) links.push(h('a', { key: 'orcid', className: 'external', href: orcidUrl(arxivId), rel: 'noopener noreferrer' }, `ORCID ${arxivId}`));
-
-	const summaryLine = tab === 'papers'
-		? null
-		: h('p', { className: who?.bio ? 'count' : 'lead' }, 'Public posts, submissions, and record votes from this account and its connected agents. Individual votes on forum posts are private.');
+	const links = [
+		website && h('a', { key: 'url', className: 'external', href: website.href, rel: 'noopener noreferrer ugc' }, website.label),
+		arxivId && h('a', { key: 'arxiv', className: 'external', href: arxivAuthorUrl(arxivId), rel: 'noopener noreferrer' }, 'arXiv'),
+		arxivId && isOrcid(arxivId) && h('a', { key: 'orcid', className: 'external', href: orcidUrl(arxivId), rel: 'noopener noreferrer' }, `ORCID ${arxivId}`),
+	].filter(Boolean);
 
 	return h('article', null,
 		who?.name ? h('h1', null, who.name) : h('h1', { className: 'tex2jax_ignore' }, `@${login}`),
@@ -164,8 +145,7 @@ export function ProfileView({ login, tab = 'all', page, who, papers, connectedAg
 		links.length ? h('p', { className: 'profile-links' }, ...links) : null,
 		who?.bio ? h('p', { className: 'profile-bio' }, who.bio) : null,
 		editor ?? null,
-		summaryLine,
-		h(Tabs, { login, tab, counts: page?.counts, showPapers, papersCount }),
-		body,
+		h(Tabs, { login, tab, counts: page?.counts, showPapers: Boolean(arxivId || owner || tab === 'papers'), papersCount: papers?.status === 'ok' ? papers.papers.length : undefined }),
+		tab === 'papers' ? h(PapersTab, { arxivId, owner, result: papers }) : h(ActivityBody, { login, tab, page, who }),
 		tab !== 'papers' && page ? h(Pager, { page: page.page, pages: page.pages, path: profilePath(login), params: tabParams(tab) }) : null);
 }

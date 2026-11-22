@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { db } from '#lib/db.ts';
 import { fetchArxivAuthorPapers } from '#lib/accounts/arxiv-author.ts';
 import { connectedAgentCount } from '#lib/accounts/keys.ts';
-import { MAX_AFFILIATION, MAX_ARXIV_INPUT, MAX_BIO, MAX_NAME, MAX_URL, ownName, publicName, publicProfile } from '#lib/accounts/people.ts';
+import { MAX_AFFILIATION, MAX_ARXIV_INPUT, MAX_BIO, MAX_NAME, MAX_URL, ownName, publicName, publicProfile, type OwnProfile } from '#lib/accounts/people.ts';
 import { normalizeProfileLogin, profile, TABS, type Tab } from '#lib/accounts/profile.ts';
 import { ProfileView, type ProfileTab } from '#lib/accounts/profile-view.ts';
 import { me } from '#lib/accounts/session.ts';
@@ -22,33 +22,10 @@ export async function generateMetadata({ params }: Context) {
 	}
 }
 
-export default async function Profile({ params, searchParams }: Context) {
-	let login: string;
-	try {
-		login = normalizeProfileLogin((await params).login);
-	} catch {
-		notFound();
-	}
-	const { page: rawPage, tab: rawTab, notice } = await searchParams;
-	const tab: ProfileTab = rawTab === 'papers'
-		? 'papers'
-		: (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
-	const d = await db();
-	// A failure to load the activity shows "temporarily unavailable" with a retry link.
-	const [who, page, viewer, connectedAgents] = await Promise.all([
-		publicProfile(d, login),
-		profile(d, login, { tab: tab === 'papers' ? 'all' : tab, page: tab === 'papers' ? 1 : pageParam(rawPage) }).catch(() => null),
-		me(),
-		connectedAgentCount(d, login).catch(() => undefined),
-	]);
-	const owner = viewer?.login.toLowerCase() === login.toLowerCase();
-	const [own, papers] = await Promise.all([
-		owner ? ownName(d, login).catch(() => null) : Promise.resolve(null),
-		tab === 'papers' && who.arxiv_id ? fetchArxivAuthorPapers(d, who.arxiv_id) : Promise.resolve(null),
-	]);
-	const emptyProfile = Boolean(own && !own.name && !own.affiliation && !own.bio && !own.url && !own.arxiv_id);
-	const editor = own ? (
-		<details className="profile-edit" open={Boolean(notice) || emptyProfile}>
+function ProfileEditor({ login, own, notice }: { login: string; own: OwnProfile; notice?: string }) {
+	const empty = ![own.name, own.affiliation, own.bio, own.url, own.arxiv_id].some(Boolean);
+	return (
+		<details className="profile-edit" open={Boolean(notice) || empty}>
 			<summary>Edit profile</summary>
 			{notice && <p className="count" role="alert">{notice}</p>}
 			<form action={savePublicName}>
@@ -64,6 +41,27 @@ export default async function Profile({ params, searchParams }: Context) {
 			</form>
 			<p className="meta"><span>Shown publicly on your profile. Saving overrides name and affiliation imported from GitHub; an arXiv public author link or ORCID populates the Papers tab.</span></p>
 		</details>
-	) : null;
+	);
+}
+
+export default async function Profile({ params, searchParams }: Context) {
+	let login: string;
+	try { login = normalizeProfileLogin((await params).login); } catch { notFound(); }
+	const { page: rawPage, tab: rawTab, notice } = await searchParams;
+	const tab: ProfileTab = rawTab === 'papers' ? 'papers' : (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
+	const d = await db();
+	// A failure to load the activity shows "temporarily unavailable" with a retry link.
+	const [who, page, viewer, connectedAgents] = await Promise.all([
+		publicProfile(d, login),
+		profile(d, login, { tab: tab === 'papers' ? 'all' : tab, page: tab === 'papers' ? 1 : pageParam(rawPage) }).catch(() => null),
+		me(),
+		connectedAgentCount(d, login).catch(() => undefined),
+	]);
+	const owner = viewer?.login.toLowerCase() === login.toLowerCase();
+	const [own, papers] = await Promise.all([
+		owner ? ownName(d, login).catch(() => null) : Promise.resolve(null),
+		tab === 'papers' && who.arxiv_id ? fetchArxivAuthorPapers(d, who.arxiv_id) : Promise.resolve(null),
+	]);
+	const editor = own ? <ProfileEditor login={login} own={own} notice={notice} /> : null;
 	return <ProfileView login={login} tab={tab} page={page} who={who} papers={papers} connectedAgents={connectedAgents} owner={owner} editor={editor} />;
 }

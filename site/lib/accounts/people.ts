@@ -18,10 +18,10 @@ export const MAX_BIO = 400;
 export const MAX_URL = 200;
 export { MAX_ARXIV_ID, MAX_ARXIV_INPUT };
 
+const EMPTY_PROFILE: PublicProfile = { name: '', affiliation: '', bio: '', url: '', arxiv_id: '' };
+
 /** A GitHub "company", shown but never used for identity: profileName rules, without GitHub's leading "@" on organization mentions. */
-export function profileAffiliation(value: unknown): string {
-	return profileName(value).replace(/^@(?=\S)/, '');
-}
+export const profileAffiliation = (value: unknown) => profileName(value).replace(/^@(?=\S)/, '');
 
 /** Multi-line bio text: strips control characters other than newlines, trims, and caps length. */
 export function normalizeBio(value: string): string {
@@ -30,24 +30,22 @@ export function normalizeBio(value: string): string {
 	return clean;
 }
 
-/** Public homepage/profile URL (http/https only, no credentials). Bare hostnames default to https://. */
+/** Public homepage URL (http/https only, no credentials). Bare hostnames default to https://. */
 export function normalizeProfileUrl(value: string): string {
 	const raw = value.trim();
 	if (!raw) return '';
 	if ([...raw].length > MAX_URL) throw new QueryError(`Website URL is longer than ${MAX_URL} characters.`, 'Use a shorter URL.');
-	const withScheme = /^[a-z][a-z0-9+.-]*:/i.test(raw) ? raw : `https://${raw}`;
 	let parsed: URL;
 	try {
-		parsed = new URL(withScheme);
+		parsed = new URL(/^[a-z][a-z0-9+.-]*:/i.test(raw) ? raw : `https://${raw}`);
 	} catch {
 		throw new QueryError('Website must be a valid http(s) URL.', 'Enter a URL such as https://example.edu/~you, or leave it blank.');
 	}
 	if ((parsed.protocol !== 'https:' && parsed.protocol !== 'http:') || parsed.username || parsed.password || !parsed.hostname.includes('.')) {
 		throw new QueryError('Website must be a public http(s) URL.', 'Enter a URL such as https://example.edu/~you, or leave it blank.');
 	}
-	const href = parsed.href;
-	if ([...href].length > MAX_URL) throw new QueryError(`Website URL is longer than ${MAX_URL} characters.`, 'Use a shorter URL.');
-	return href;
+	if ([...parsed.href].length > MAX_URL) throw new QueryError(`Website URL is longer than ${MAX_URL} characters.`, 'Use a shorter URL.');
+	return parsed.href;
 }
 
 /** Public names keyed by each login as given (GitHub logins ignore case). Logins with nothing to show are left out,
@@ -72,23 +70,24 @@ export async function publicName(db: Db, login: string): Promise<PublicName> {
 	return (await publicNames(db, [login])).get(login) ?? { name: '', affiliation: '' };
 }
 
-/** One person's public profile fields for /u/<login> and GET /api/v1/users/{login}. Falls back gracefully if newer columns are not yet migrated. */
-export async function publicProfile(db: Db, login: string): Promise<PublicProfile> {
+// Reads one row from open_index.people, falling back gracefully if the newer profile columns are not yet migrated.
+async function readPerson(db: Db, login: string): Promise<OwnProfile> {
 	const lower = login.toLowerCase();
 	try {
-		const row = (await db.query<{ login: string; name: string; affiliation: string; bio: string; url: string; arxiv_id: string }>(
-			'SELECT login, name, affiliation, bio, url, arxiv_id FROM open_index.people WHERE login = $1', [lower])).rows[0];
-		if (!row) return { name: '', affiliation: '', bio: '', url: '', arxiv_id: '' };
-		return {
-			name: row.name.toLowerCase() === row.login ? '' : row.name,
-			affiliation: row.affiliation,
-			bio: row.bio,
-			url: row.url,
-			arxiv_id: row.arxiv_id,
-		};
+		const row = (await db.query<OwnProfile>(
+			'SELECT login, name, affiliation, bio, url, arxiv_id, edited FROM open_index.people WHERE login = $1', [lower])).rows[0];
+		return row ?? { login: lower, ...EMPTY_PROFILE, edited: false };
 	} catch {
-		return { ...(await publicName(db, login)), bio: '', url: '', arxiv_id: '' };
+		const row = (await db.query<PublicName & { login: string; edited: boolean }>(
+			'SELECT login, name, affiliation, edited FROM open_index.people WHERE login = $1', [lower])).rows[0];
+		return row ? { ...EMPTY_PROFILE, ...row } : { login: lower, ...EMPTY_PROFILE, edited: false };
 	}
+}
+
+/** One person's public profile fields for /u/<login> and GET /api/v1/users/{login}. */
+export async function publicProfile(db: Db, login: string): Promise<PublicProfile> {
+	const { login: stored, edited: _, name, ...rest } = await readPerson(db, login).catch(() => ({ login: login.toLowerCase(), ...EMPTY_PROFILE, edited: false }));
+	return { name: name.toLowerCase() === stored ? '' : name, ...rest };
 }
 
 /** At sign-in: copy the public GitHub name and company, unless the person has edited theirs here. Never fails sign-in. */
@@ -100,18 +99,7 @@ export async function rememberGitHubProfile(db: Db, login: string, github: { nam
 }
 
 /** The person's own profile fields, for their profile form and their agents. */
-export async function ownName(db: Db, login: string): Promise<OwnProfile> {
-	const lower = login.toLowerCase();
-	try {
-		const row = (await db.query<OwnProfile>(
-			'SELECT login, name, affiliation, bio, url, arxiv_id, edited FROM open_index.people WHERE login = $1', [lower])).rows[0];
-		return row ?? { login: lower, name: '', affiliation: '', bio: '', url: '', arxiv_id: '', edited: false };
-	} catch {
-		const row = (await db.query<PublicName & { login: string; edited: boolean }>(
-			'SELECT login, name, affiliation, edited FROM open_index.people WHERE login = $1', [lower])).rows[0];
-		return row ? { ...row, bio: '', url: '', arxiv_id: '' } : { login: lower, name: '', affiliation: '', bio: '', url: '', arxiv_id: '', edited: false };
-	}
-}
+export const ownName = (db: Db, login: string): Promise<OwnProfile> => readPerson(db, login);
 
 type ProfileEdit = { name?: unknown; affiliation?: unknown; bio?: unknown; url?: unknown; arxiv_id?: unknown };
 
@@ -123,12 +111,14 @@ export async function editPublicName(db: Db, login: string, input: ProfileEdit):
 		if ([...v.trim()].length > max) throw new QueryError(`${what} is longer than ${max} characters.`, `Shorten the ${what.toLowerCase()}.`);
 		return profileName(v);
 	};
-	const name = given(input.name, MAX_NAME, 'Name');
-	const affiliation = given(input.affiliation, MAX_AFFILIATION, 'Affiliation');
-	const bio = typeof input.bio === 'string' ? normalizeBio(input.bio) : null;
-	const url = typeof input.url === 'string' ? normalizeProfileUrl(input.url) : null;
-	const arxiv_id = typeof input.arxiv_id === 'string' ? normalizeArxivAuthor(input.arxiv_id) : null;
-	if (name === null && affiliation === null && bio === null && url === null && arxiv_id === null) {
+	const fields = [
+		given(input.name, MAX_NAME, 'Name'),
+		given(input.affiliation, MAX_AFFILIATION, 'Affiliation'),
+		typeof input.bio === 'string' ? normalizeBio(input.bio) : null,
+		typeof input.url === 'string' ? normalizeProfileUrl(input.url) : null,
+		typeof input.arxiv_id === 'string' ? normalizeArxivAuthor(input.arxiv_id) : null,
+	] as const;
+	if (fields.every((v) => v === null)) {
 		throw new QueryError('Nothing to change.', 'Send at least one of "name", "affiliation", "bio", "url", or "arxiv_id"; "" clears a field.');
 	}
 	return (await db.query<OwnProfile>(`INSERT INTO open_index.people (login, name, affiliation, bio, url, arxiv_id, edited)
@@ -140,5 +130,5 @@ export async function editPublicName(db: Db, login: string, input: ProfileEdit):
 			url = coalesce($5, open_index.people.url),
 			arxiv_id = coalesce($6, open_index.people.arxiv_id),
 			edited = true, updated_at = now()
-		RETURNING login, name, affiliation, bio, url, arxiv_id, edited`, [login.toLowerCase(), name, affiliation, bio, url, arxiv_id])).rows[0];
+		RETURNING login, name, affiliation, bio, url, arxiv_id, edited`, [login.toLowerCase(), ...fields])).rows[0];
 }

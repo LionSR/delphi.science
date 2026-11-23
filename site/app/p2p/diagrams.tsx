@@ -6,74 +6,109 @@ export function NetworkDiagram() {
 		<figure className="diagram">
 			<svg
 				role="img"
-				aria-label="How delphi-p2p works: an author hashes a directory and publishes a signed claim to the peer-to-peer network; a mirror peer holds the snapshot; a verifier fetches the snapshot by hash, checks the Lean proof in a sandbox, and signs a verdict; an optional one-way bridge mirrors metadata to delphi.science."
-				viewBox="0 0 760 318"
+				aria-label="Decentralized peer-to-peer mesh in delphi-p2p: four independent peers (author, mirror, and two verifiers) exchange files and signed claims directly with each other with no central server. Delphi.science and any other website sit outside the mesh as optional one-way mirrors of claim metadata."
+				viewBox="0 0 760 344"
 				xmlns="http://www.w3.org/2000/svg"
 			>
 				<defs>
-					<marker id="p2p-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+					<marker id="p2p-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
 						<path d="M1 1.5L8.5 5L1 8.5" fill="none" stroke="var(--muted)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-					</marker>
-					<marker id="p2p-arrow-accent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-						<path d="M1 1.5L8.5 5L1 8.5" fill="none" stroke="var(--accent)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
 					</marker>
 				</defs>
 
-				{/* Author box */}
-				<rect x="14" y="48" width="174" height="146" rx="8" fill="var(--surface)" stroke="var(--rule)" strokeWidth="1.3" />
-				<text x="28" y="72" fontSize="13" fontWeight="600" fill="var(--ink)">Author (Key A)</text>
-				<rect x="28" y="84" width="146" height="38" rx="5" fill="var(--bg)" stroke="var(--rule)" strokeWidth="1" />
-				<text x="38" y="101" fontSize="11" fontWeight="500" fill="var(--ink)">Project directory</text>
-				<text x="38" y="115" fontSize="9.8" fontFamily="var(--mono)" fill="var(--muted)">Proof.lean, lakefile</text>
-				<line x1="101" y1="122" x2="101" y2="137" stroke="var(--muted)" strokeWidth="1.3" markerEnd="url(#p2p-arrow)" />
-				<rect x="28" y="141" width="146" height="40" rx="5" fill="var(--bg)" stroke="var(--accent)" strokeWidth="1.2" />
-				<text x="38" y="158" fontSize="10.5" fontFamily="var(--mono)" fontWeight="600" fill="var(--accent)">hash 8f3a…</text>
-				<text x="38" y="173" fontSize="10" fill="var(--muted)">signed publish claim</text>
+				{/* Dashed P2P mesh container */}
+				<rect x="14" y="12" width="526" height="320" rx="10" fill="none" stroke="var(--subtle)" strokeWidth="1.2" strokeDasharray="5 4" />
+				<text x="30" y="33" fontSize="11" fontWeight="600" fill="var(--muted)">PEER-TO-PEER MESH (NO CENTRAL SERVER)</text>
 
-				{/* Dashed P2P network container */}
-				<rect x="242" y="14" width="504" height="196" rx="10" fill="none" stroke="var(--subtle)" strokeWidth="1.2" strokeDasharray="5 4" />
-				<text x="258" y="34" fontSize="11" fontWeight="600" fill="var(--muted)">PEER-TO-PEER NETWORK (NO CENTRAL SERVER)</text>
+				{/* Diagonal mesh connections (behind cards & center pill) */}
+				<line x1="232" y1="146" x2="324" y2="220" stroke="var(--rule)" strokeWidth="1.3" strokeDasharray="3 3" />
+				<line x1="232" y1="220" x2="324" y2="146" stroke="var(--rule)" strokeWidth="1.3" strokeDasharray="3 3" />
+				<rect x="242" y="173" width="72" height="20" rx="10" fill="var(--bg)" stroke="var(--rule)" strokeWidth="1" />
+				<text x="278" y="186.5" textAnchor="middle" fontSize="9.8" fill="var(--muted)">peer mesh</text>
 
-				{/* Arrow: Author -> Mirror */}
-				<line x1="188" y1="121" x2="256" y2="121" stroke="var(--muted)" strokeWidth="1.4" markerEnd="url(#p2p-arrow)" />
-				<text x="215" y="112" textAnchor="middle" fontSize="10.5" fill="var(--muted)">publish</text>
+				{/* Top horizontal bidirectional: Peer A <-> Peer B */}
+				<line x1="236" y1="103" x2="320" y2="103" stroke="var(--muted)" strokeWidth="1.3" markerStart="url(#p2p-arrow)" markerEnd="url(#p2p-arrow)" />
+				<text x="278" y="94" textAnchor="middle" fontSize="9.8" fill="var(--muted)">files + claims</text>
 
-				{/* Mirror peer */}
-				<rect x="260" y="48" width="186" height="146" rx="8" fill="var(--surface)" stroke="var(--rule)" strokeWidth="1.3" />
-				<text x="274" y="72" fontSize="13" fontWeight="600" fill="var(--ink)">Mirror peer</text>
-				<text x="274" y="89" fontSize="9.8" fontFamily="var(--mono)" fill="var(--muted)">delphi-p2p serve --mirror</text>
-				<rect x="274" y="104" width="158" height="32" rx="5" fill="var(--bg)" stroke="var(--rule)" strokeWidth="1" />
-				<text x="284" y="124" fontSize="10.8" fill="var(--ink)">Holds snapshot <tspan fontFamily="var(--mono)" fill="var(--accent)">8f3a…</tspan></text>
-				<rect x="274" y="145" width="158" height="32" rx="5" fill="var(--bg)" stroke="var(--rule)" strokeWidth="1" />
-				<text x="284" y="165" fontSize="10.8" fill="var(--muted)">Syncs signed claims</text>
+				{/* Bottom horizontal bidirectional: Peer C <-> Peer D */}
+				<line x1="236" y1="263" x2="320" y2="263" stroke="var(--muted)" strokeWidth="1.3" markerStart="url(#p2p-arrow)" markerEnd="url(#p2p-arrow)" />
+				<text x="278" y="279" textAnchor="middle" fontSize="9.8" fill="var(--muted)">files + claims</text>
 
-				{/* Arrows: Mirror <-> Verifier */}
-				<line x1="446" y1="96" x2="518" y2="96" stroke="var(--muted)" strokeWidth="1.4" markerEnd="url(#p2p-arrow)" />
-				<text x="482" y="87" textAnchor="middle" fontSize="10" fill="var(--muted)">fetch 8f3a…</text>
-				<line x1="518" y1="154" x2="446" y2="154" stroke="var(--accent)" strokeWidth="1.5" markerEnd="url(#p2p-arrow-accent)" />
-				<text x="482" y="172" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="var(--accent)">check: pass ✓</text>
+				{/* Left vertical bidirectional: Peer A <-> Peer C */}
+				<line x1="131" y1="164" x2="131" y2="204" stroke="var(--muted)" strokeWidth="1.3" markerStart="url(#p2p-arrow)" markerEnd="url(#p2p-arrow)" />
+				<text x="140" y="188" fontSize="9.8" fill="var(--muted)">mirror + sync</text>
 
-				{/* Verifier peer */}
-				<rect x="522" y="48" width="208" height="146" rx="8" fill="var(--surface)" stroke="var(--rule)" strokeWidth="1.3" />
-				<text x="536" y="72" fontSize="13" fontWeight="600" fill="var(--ink)">Verifier (Key B)</text>
-				<text x="536" y="89" fontSize="9.8" fontFamily="var(--mono)" fill="var(--muted)">delphi-p2p check</text>
-				<rect x="536" y="103" width="180" height="46" rx="5" fill="var(--bg)" stroke="var(--accent)" strokeWidth="1.2" strokeDasharray="3 2" />
-				<text x="546" y="122" fontSize="11" fontWeight="600" fill="var(--ink)">Sandbox (no network)</text>
-				<text x="546" y="139" fontSize="9.8" fontFamily="var(--mono)" fill="var(--muted)">lake check · Lean kernel</text>
-				<text x="536" y="173" fontSize="10.5" fontWeight="500" fill="var(--accent)">Signs verdict for hash 8f3a…</text>
+				{/* Right vertical bidirectional: Peer B <-> Peer D */}
+				<line x1="425" y1="164" x2="425" y2="204" stroke="var(--muted)" strokeWidth="1.3" markerStart="url(#p2p-arrow)" markerEnd="url(#p2p-arrow)" />
+				<text x="434" y="188" fontSize="9.8" fill="var(--muted)">claims + files</text>
 
-				{/* Optional bridge down to delphi.science */}
-				<line x1="353" y1="194" x2="353" y2="243" stroke="var(--subtle)" strokeWidth="1.3" strokeDasharray="4 3" markerEnd="url(#p2p-arrow)" />
-				<text x="366" y="232" fontSize="10.5" fill="var(--muted)">optional bridge: claims &amp; file lists only (files stay on peers)</text>
+				{/* Peer A (Author) */}
+				<rect x="30" y="48" width="202" height="112" rx="8" fill="var(--surface)" stroke="var(--rule)" strokeWidth="1.3" />
+				<text x="42" y="70" fontSize="12.5" fontWeight="600" fill="var(--ink)">Peer A</text>
+				<rect x="88" y="57" width="46" height="18" rx="9" fill="var(--bg)" stroke="var(--rule)" strokeWidth="1" />
+				<text x="111" y="69.5" textAnchor="middle" fontSize="9.6" fill="var(--muted)">author</text>
+				<text x="220" y="70" textAnchor="end" fontSize="9.8" fontFamily="var(--mono)" fill="var(--subtle)">Key A</text>
+				<text x="42" y="94" fontSize="10.8" fill="var(--ink)">Hashes files → <tspan fontFamily="var(--mono)" fontWeight="600" fill="var(--accent)">8f3a…</tspan></text>
+				<text x="42" y="114" fontSize="10.5" fill="var(--muted)">Signs publish claim</text>
+				<text x="42" y="144" fontSize="9.8" fill="var(--subtle)">Can go offline once mirrored</text>
 
-				{/* delphi.science box */}
-				<rect x="260" y="247" width="470" height="58" rx="8" fill="var(--surface)" stroke="var(--rule)" strokeWidth="1.3" />
-				<text x="276" y="270" fontSize="12.5" fontWeight="600" fill="var(--ink)">Delphi.science record page</text>
-				<rect x="598" y="255" width="116" height="22" rx="11" fill="var(--bg)" stroke="var(--accent)" strokeWidth="1" />
-				<text x="656" y="269.5" textAnchor="middle" fontSize="10.5" fontWeight="500" fill="var(--accent)">Files and checks</text>
-				<text x="276" y="291" fontSize="10.8" fill="var(--muted)">Displays versions, file diffs, holder counts, and signed checks (optional mirror).</text>
+				{/* Peer B (Verifier) */}
+				<rect x="324" y="48" width="202" height="112" rx="8" fill="var(--surface)" stroke="var(--rule)" strokeWidth="1.3" />
+				<text x="336" y="70" fontSize="12.5" fontWeight="600" fill="var(--ink)">Peer B</text>
+				<rect x="382" y="57" width="50" height="18" rx="9" fill="var(--bg)" stroke="var(--rule)" strokeWidth="1" />
+				<text x="407" y="69.5" textAnchor="middle" fontSize="9.6" fill="var(--muted)">verifier</text>
+				<text x="514" y="70" textAnchor="end" fontSize="9.8" fontFamily="var(--mono)" fill="var(--subtle)">Key B</text>
+				<text x="336" y="92" fontSize="10.5" fill="var(--muted)">Fetches <tspan fontFamily="var(--mono)" fill="var(--ink)">8f3a…</tspan> by hash</text>
+				<rect x="336" y="101" width="178" height="24" rx="5" fill="var(--bg)" stroke="var(--accent)" strokeWidth="1.1" strokeDasharray="3 2" />
+				<text x="425" y="116.5" textAnchor="middle" fontSize="10" fontFamily="var(--mono)" fill="var(--ink)">Sandbox · lake check</text>
+				<text x="336" y="146" fontSize="10.5" fontWeight="600" fill="var(--accent)">Signs check: pass ✓</text>
+
+				{/* Peer C (Mirror) */}
+				<rect x="30" y="208" width="202" height="112" rx="8" fill="var(--surface)" stroke="var(--rule)" strokeWidth="1.3" />
+				<text x="42" y="230" fontSize="12.5" fontWeight="600" fill="var(--ink)">Peer C</text>
+				<rect x="88" y="217" width="44" height="18" rx="9" fill="var(--bg)" stroke="var(--rule)" strokeWidth="1" />
+				<text x="110" y="229.5" textAnchor="middle" fontSize="9.6" fill="var(--muted)">mirror</text>
+				<text x="220" y="230" textAnchor="end" fontSize="9.8" fontFamily="var(--mono)" fill="var(--subtle)">Key C</text>
+				<text x="42" y="254" fontSize="10.8" fill="var(--ink)">Holds snapshot <tspan fontFamily="var(--mono)" fill="var(--accent)">8f3a…</tspan></text>
+				<text x="42" y="274" fontSize="10.5" fill="var(--muted)">Syncs all signed claims</text>
+				<text x="42" y="304" fontSize="9.8" fill="var(--subtle)">Serves peers if A is offline</text>
+
+				{/* Peer D (Verifier) */}
+				<rect x="324" y="208" width="202" height="112" rx="8" fill="var(--surface)" stroke="var(--rule)" strokeWidth="1.3" />
+				<text x="336" y="230" fontSize="12.5" fontWeight="600" fill="var(--ink)">Peer D</text>
+				<rect x="382" y="217" width="50" height="18" rx="9" fill="var(--bg)" stroke="var(--rule)" strokeWidth="1" />
+				<text x="407" y="229.5" textAnchor="middle" fontSize="9.6" fill="var(--muted)">verifier</text>
+				<text x="514" y="230" textAnchor="end" fontSize="9.8" fontFamily="var(--mono)" fill="var(--subtle)">Key D</text>
+				<text x="336" y="252" fontSize="10.5" fill="var(--muted)">Fetches <tspan fontFamily="var(--mono)" fill="var(--ink)">8f3a…</tspan> from B or C</text>
+				<rect x="336" y="261" width="178" height="24" rx="5" fill="var(--bg)" stroke="var(--accent)" strokeWidth="1.1" strokeDasharray="3 2" />
+				<text x="425" y="276.5" textAnchor="middle" fontSize="10" fontFamily="var(--mono)" fill="var(--ink)">Sandbox · lake check</text>
+				<text x="336" y="306" fontSize="10.5" fontWeight="600" fill="var(--accent)">Signs check: pass ✓</text>
+
+				{/* Optional one-way bridges to independent websites */}
+				<line x1="526" y1="104" x2="584" y2="104" stroke="var(--subtle)" strokeWidth="1.3" strokeDasharray="4 3" markerEnd="url(#p2p-arrow)" />
+				<text x="564" y="95" textAnchor="middle" fontSize="9.5" fill="var(--muted)">bridge</text>
+
+				<rect x="588" y="56" width="158" height="96" rx="8" fill="var(--surface)" stroke="var(--rule)" strokeWidth="1.3" />
+				<text x="600" y="79" fontSize="12" fontWeight="600" fill="var(--ink)">Delphi.science</text>
+				<rect x="600" y="88" width="90" height="18" rx="9" fill="var(--bg)" stroke="var(--accent)" strokeWidth="1" />
+				<text x="645" y="100.5" textAnchor="middle" fontSize="9.5" fontWeight="500" fill="var(--accent)">optional viewer</text>
+				<text x="600" y="123" fontSize="10.2" fill="var(--muted)">Shows Files and checks</text>
+				<text x="600" y="139" fontSize="9.8" fill="var(--subtle)">Files stay on peers</text>
+
+				<text x="667" y="179" textAnchor="middle" fontSize="9.8" fill="var(--muted)">Websites are optional;</text>
+				<text x="667" y="193" textAnchor="middle" fontSize="9.8" fill="var(--muted)">peers work without them</text>
+
+				<line x1="526" y1="264" x2="584" y2="264" stroke="var(--subtle)" strokeWidth="1.3" strokeDasharray="4 3" markerEnd="url(#p2p-arrow)" />
+				<text x="564" y="255" textAnchor="middle" fontSize="9.5" fill="var(--muted)">bridge</text>
+
+				<rect x="588" y="216" width="158" height="96" rx="8" fill="var(--bg)" stroke="var(--subtle)" strokeWidth="1.2" strokeDasharray="4 3" />
+				<text x="600" y="239" fontSize="12" fontWeight="600" fill="var(--ink)">Any other site</text>
+				<rect x="600" y="248" width="90" height="18" rx="9" fill="var(--surface)" stroke="var(--rule)" strokeWidth="1" />
+				<text x="645" y="260.5" textAnchor="middle" fontSize="9.5" fill="var(--muted)">optional viewer</text>
+				<text x="600" y="283" fontSize="10.2" fill="var(--muted)">Runs its own bridge</text>
+				<text x="600" y="299" fontSize="9.8" fill="var(--subtle)">Reads the same claims</text>
 			</svg>
-			<figcaption>Files and signed claims move directly between peers. Delphi.science is an optional read-only mirror of claim metadata and file lists.</figcaption>
+			<figcaption>Peers exchange files and signed claims directly in a mesh with no central server. Delphi.science and any other site are optional one-way mirrors of claim metadata.</figcaption>
 		</figure>
 	);
 }

@@ -44,8 +44,8 @@ export class RetrievalError extends Error {
 }
 const inputError = () => new SourceInputError();
 const fail = (status: FailureStatus, reason: string): never => { throw new RetrievalError(status, reason); };
-/** A readable, deterministic key for a web URL: `<host>__<path-slug>` (matching sources.py Web). */
-export function webKey(canonical: string): string {
+/** A readable, deterministic key for a web URL: `<host>__<path-slug>` (matching sources.py Web). Pass `disambiguate` to append a short URL hash on slug collision. */
+export function webKey(canonical: string, disambiguate = false): string {
 	const url = new URL(canonical);
 	const host = url.hostname.toLowerCase().replace(/^www\./, '');
 	const raw = url.pathname.replace(/\/+$/, '').replace(/\.(?:html?|pdf)$/i, '');
@@ -53,7 +53,7 @@ export function webKey(canonical: string): string {
 	const normalized = `${url.protocol}//${url.host.toLowerCase()}${url.pathname || '/'}${url.search}`;
 	const hash = createHash('sha1').update(normalized).digest('hex').slice(0, 6);
 	if (!slug) return `${host}__${hash}`;
-	if (url.search || slug.length > 64) return `${host}__${slug.slice(0, 57).replace(/-+$/, '')}-${hash}`;
+	if (disambiguate || url.search || slug.length > 64) return `${host}__${slug.slice(0, 57).replace(/-+$/, '')}-${hash}`;
 	return `${host}__${slug}`;
 }
 const rejectCredential = (text: string) => { if (CREDENTIAL.test(text)) fail('unsupported_format', 'The public response contains credential-shaped text and was not retained.'); };

@@ -794,7 +794,8 @@ def crosslink(all_items: list[dict[str, Any]]) -> None:
             target = None
             try:
                 src, key = S.detect(link["url"])
-                target = by_id.get(f"{src.name}/{key}")
+                if src.name != "web":
+                    target = by_id.get(f"{src.name}/{key}")
             except ValueError:
                 pass
             target = target or by_url.get(S.identity(link["url"]))

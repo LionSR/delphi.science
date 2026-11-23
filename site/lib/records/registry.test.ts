@@ -113,6 +113,24 @@ describe('submitting and the forum, on Postgres', () => {
 		assert.equal((await submit(db, 'https://github.com/someone/paper', bo, SOURCES)).status, 'already_listed');
 	});
 
+	test('distinct web URLs sharing a readable slug do not collide on submit', async () => {
+		const page = (title: string) => new TextEncoder().encode(
+			`<html><head><title>${title}</title><meta name="description" content="Summary of ${title}."></head></html>`,
+		);
+		const webTransport = async ({ requestUrl }: { requestUrl: string }) => ({
+			status: 200, url: requestUrl, headers: { 'content-type': 'text/html; charset=utf-8' },
+			body: page(requestUrl.endsWith('/a-b') ? 'Paper A-B' : 'Paper A/B'),
+		});
+		const first = await submit(db, 'https://example.org/papers/a-b', ada, SOURCES, yes, webTransport);
+		const second = await submit(db, 'https://example.org/papers/a/b', ada, SOURCES, yes, webTransport);
+		assert.equal(first.status, 'listed');
+		assert.equal(first.id, 'web/example.org__papers-a-b');
+		assert.equal(second.status, 'listed');
+		assert.match(second.id, /^web\/example\.org__papers-a-b-[0-9a-f]{6}$/);
+		assert.equal((await submit(db, 'https://example.org/papers/a/b', bo, SOURCES, yes, webTransport)).id, second.id);
+		assert.equal((await submit(db, 'https://example.org/papers/a/b', bo, SOURCES, yes, webTransport)).status, 'already_listed');
+	});
+
 	test('links the site cannot read, blocked venues and missing records are refused; 20 a day', async () => {
 		await assert.rejects(submit(db, 'https://github.com/owner', bo, SOURCES), /cannot read this link/);
 		await assert.rejects(submit(db, 'https://jaigp.org/paper/105', bo, SOURCES), /venue is not listed/);

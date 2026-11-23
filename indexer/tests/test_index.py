@@ -264,10 +264,16 @@ class Discussion(unittest.TestCase):
 
     def test_crosslink_matches_custom_or_legacy_web_keys_by_url(self) -> None:
         paper = {"id": "web/custom-slug", "title": "Remark", "url": "https://alpo.ge/remark.pdf"}
-        reply = {"id": "github/o__r", "title": "Verification", "discussion": [{"kind": "web", "url": "https://alpo.ge/remark.pdf"}]}
-        index.crosslink([paper, reply])
+        collide = {"id": "web/example.org__papers-a-b", "title": "A-B", "url": "https://example.org/papers/a-b"}
+        reply = {"id": "github/o__r", "title": "Verification", "discussion": [
+            {"kind": "web", "url": "https://alpo.ge/remark.pdf"},
+            {"kind": "web", "url": "https://example.org/papers/a/b"},
+        ]}
+        index.crosslink([paper, collide, reply])
         self.assertEqual(reply["discussion"][0]["record"], "web/custom-slug")
+        self.assertNotIn("record", reply["discussion"][1])
         self.assertEqual(paper["discusses"], [{"id": "github/o__r", "title": "Verification"}])
+        self.assertNotIn("discusses", collide)
 
     def test_discussion_is_served_without_x_text(self) -> None:
         x = {"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a", "text": "hi", "date": "2026-10-08", "added": "2026-10-09"}

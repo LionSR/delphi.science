@@ -27,7 +27,7 @@ export default function P2P() {
 			<h2>Getting started</h2>
 			<p>Requires Rust 1.96+ on Linux or macOS:</p>
 			<CopyBlock text={`git clone ${P2P_REPO}.git\ncd delphi-p2p\ncargo install --locked --path .`} label="Copy install commands" />
-			<p>Join a network with the operator’s relay URL and seed key (or run <code>delphi-p2p init</code> with no flags on a local network):</p>
+			<p>Join a network with the operator’s iroh relay URL and seed key (or run <code>delphi-p2p init</code> with no flags on a local network):</p>
 			<CopyBlock text="delphi-p2p init --relay <relay-URL> --bootstrap <seed-key>@<relay-URL>" label="Copy init command" />
 
 			<h3>Fetch and check</h3>
@@ -43,7 +43,8 @@ delphi-p2p check <id>                # check Lean proof in a sandbox and sign ve
 
 			<h2>More</h2>
 			<ul>
-				<li><a href={P2P_REPO}>Full guide &amp; hosting</a>: mirroring (<code>serve --mirror</code>), running a relay and seed peer, and the agent skill (<code>skills/delphi-p2p/SKILL.md</code>).</li>
+				<li><strong>Built on:</strong> <a href="https://github.com/n0-computer/iroh-blobs">iroh-blobs</a> (file transfer over <a href="https://github.com/n0-computer/iroh">iroh</a>), <a href="https://github.com/p2panda/p2panda">p2panda</a> (signed claim sync), and Lean’s <code>lake check</code> / <code>lake comparator</code>.</li>
+				<li><a href={P2P_REPO}>Full guide &amp; hosting</a>: mirroring (<code>serve --mirror</code>), running an <code>iroh-relay</code> and seed peer, and the agent skill (<code>skills/delphi-p2p/SKILL.md</code>).</li>
 				<li><a href={`${REPO}/tree/main/bridge`}>Website bridge</a>: relay claims and file lists from a mirroring peer to a site.</li>
 			</ul>
 		</article>

@@ -47,6 +47,11 @@ const SOURCES = fake({
 	'https://api.github.com/repos/someone/tiny/contents/': [{ name: 'README.md' }],
 	'https://api.github.com/repos/someone/cited': { ...REPO, full_name: 'someone/cited', html_url: 'https://github.com/someone/cited', name: 'cited', stargazers_count: 3 },
 	'https://api.github.com/repos/someone/cited/contents/': [{ name: 'CITATION.cff' }],
+	'https://api.github.com/repos/leanprover-community/riemann-hypothesis': {
+		...REPO, full_name: 'leanprover-community/riemann-hypothesis', html_url: 'https://github.com/leanprover-community/riemann-hypothesis',
+		name: 'riemann-hypothesis', owner: { login: 'leanprover-community' }, stargazers_count: 500,
+	},
+	'https://api.github.com/repos/leanprover-community/riemann-hypothesis/contents/': [{ name: 'README.md' }],
 });
 
 describe('reading a link', () => {
@@ -71,6 +76,8 @@ describe('reading a link', () => {
 		assert.deepEqual([it.id, it.subject, it.division, it.category, 'key' in it], ['arxiv/1706.03762', 'cs.CL', 'cs', 'research', false]);
 		const repo = itemOf((await resolve('karpathy/nanoGPT', SOURCES))!);
 		assert.deepEqual([repo.id, repo.title, repo.repo, repo.agent_ready], ['github/karpathy__nanoGPT', 'nanoGPT', REPO.html_url, true]);
+		const lower = itemOf((await resolve('leanprover-community/riemann-hypothesis', SOURCES))!);
+		assert.equal(lower.title, 'Riemann Hypothesis');
 		await assert.rejects(resolve('https://arxiv.org/abs/2999.99999', SOURCES), /2999/);
 	});
 });
@@ -104,6 +111,24 @@ describe('submitting and the forum, on Postgres', () => {
 		assert.deepEqual(await submit(db, 'arXiv:1706.03762', bo, SOURCES), { status: 'already_listed', id: 'arxiv/1706.03762', message: 'already listed as arxiv/1706.03762' });
 		assert.equal(SOURCES.calls, calls);
 		assert.equal((await submit(db, 'https://github.com/someone/paper', bo, SOURCES)).status, 'already_listed');
+	});
+
+	test('distinct web URLs sharing a readable slug do not collide on submit', async () => {
+		const page = (title: string) => new TextEncoder().encode(
+			`<html><head><title>${title}</title><meta name="description" content="Summary of ${title}."></head></html>`,
+		);
+		const webTransport = async ({ requestUrl }: { requestUrl: string }) => ({
+			status: 200, url: requestUrl, headers: { 'content-type': 'text/html; charset=utf-8' },
+			body: page(requestUrl.endsWith('/a-b') ? 'Paper A-B' : 'Paper A/B'),
+		});
+		const first = await submit(db, 'https://example.org/papers/a-b', ada, SOURCES, yes, webTransport);
+		const second = await submit(db, 'https://example.org/papers/a/b', ada, SOURCES, yes, webTransport);
+		assert.equal(first.status, 'listed');
+		assert.equal(first.id, 'web/example.org__papers-a-b');
+		assert.equal(second.status, 'listed');
+		assert.match(second.id, /^web\/example\.org__papers-a-b-[0-9a-f]{6}$/);
+		assert.equal((await submit(db, 'https://example.org/papers/a/b', bo, SOURCES, yes, webTransport)).id, second.id);
+		assert.equal((await submit(db, 'https://example.org/papers/a/b', bo, SOURCES, yes, webTransport)).status, 'already_listed');
 	});
 
 	test('links the site cannot read, blocked venues and missing records are refused; 20 a day', async () => {

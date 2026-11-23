@@ -142,14 +142,15 @@ LINK = re.compile(r"""href=["']([^"']+)|\barXiv:\s?(\d{4}\.\d{4,5})""", re.I)
 
 
 def linked_ids(urls: Iterable[str]) -> list[str]:
-    """The ids of the records the URLs or arXiv ids point at, as far as an adapter recognizes them."""
+    """The ids of the records the URLs or arXiv ids point at (or canonical URL for plain web pages so custom and legacy web keys resolve by URL)."""
     ids = []
     for url in urls:
+        clean = urllib.parse.urldefrag(url.strip())[0]  # a section link names its paper
         try:
-            src, key = S.detect(urllib.parse.urldefrag(url.strip())[0])  # a section link names its paper
+            src, key = S.detect(clean)
         except ValueError:
             continue
-        ids.append(f"{src.name}/{key}")
+        ids.append(S.identity(clean) if src.name == "web" else f"{src.name}/{key}")
     return list(dict.fromkeys(ids))
 
 
@@ -436,8 +437,12 @@ def main(argv: Iterable[str] | None = None) -> int:
             candidates += find(start, end)
         except Exception as err:  # a source that is down or changed its replies costs its own items, not the report
             errors.append(f"{name} ({type(err).__name__}: {err})")
-    ids = sorted({r for c in candidates for r in c["records"]})
+    ids = sorted({r for c in candidates for r in c["records"] if not r.startswith("https://")})
     linked = {I.rid(e): e for e in live("id = ANY(%s)", [ids])} if ids else {}
+    if any(r.startswith("https://") for c in candidates for r in c["records"]):
+        for e in live("source = 'web'", []):
+            if e.get("url"):
+                linked[S.identity(e["url"])] = e
     known = attached([*entries, *linked.values()]) | (reported(a.out.parent, start, end) if a.out else set())
     text = report(candidates, Matcher(entries), linked, known, start, end, errors)
     if a.out:

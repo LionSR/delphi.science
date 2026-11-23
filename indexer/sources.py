@@ -347,6 +347,17 @@ class Source:
         return e
 
 
+MINOR_WORDS = frozenset({"a", "an", "and", "as", "at", "by", "for", "from", "in", "of", "on", "or", "the", "to", "via", "with"})
+
+
+def repo_title(name: str) -> str:
+    """Turns an all-lowercase slug like 'riemann-hypothesis' into 'Riemann Hypothesis'; keeps mixed-case names like 'nanoGPT' as-is."""
+    words = re.sub(r"[-_]+", " ", name).strip()
+    if words != words.lower():
+        return words
+    return " ".join(w if i > 0 and w in MINOR_WORDS else w[:1].upper() + w[1:] for i, w in enumerate(words.split()))
+
+
 class GitHub(Source):
     name, label = "github", "GitHub"
     patterns = [r"^(?:https?://)?github\.com/([\w.-]+/[\w.-]+?)(?:\.git)?(?:/.*)?$", r"^(?!10\.\d)([\w.-]+/[\w.-]+)$"]
@@ -371,7 +382,7 @@ class GitHub(Source):
             repo.replace("/", "__"),
             url=d["html_url"],
             repo=d["html_url"],
-            title=d["name"].replace("-", " ").replace("_", " "),
+            title=repo_title(d["name"]),
             authors=[d["owner"]["login"]],
             summary=trim(d.get("description")),
             tags=d.get("topics") or [],
@@ -493,7 +504,7 @@ class HuggingFace(Source):
         return self.entry(
             key,
             url=f"https://huggingface.co/{page}{repo}",
-            title=repo.split("/")[-1].replace("-", " "),
+            title=repo_title(repo.split("/")[-1]),
             authors=[d.get("author") or repo.split("/")[0]],
             summary=trim(card.get("description") or (d.get("description") if isinstance(d.get("description"), str) else "")),
             tags=[t for t in d.get("tags", []) if ":" not in t][:12],
@@ -874,6 +885,21 @@ class Doi(Source):
         )
 
 
+def web_key(url: str) -> str:
+    """Readable, deterministic key for a web URL: '<host>__<path-slug>' (matching source-fetch.ts webKey)."""
+    u = urllib.parse.urlsplit(url.strip())
+    host = (u.hostname or "").lower().removeprefix("www.")
+    raw = re.sub(r"\.(?:html?|pdf)$", "", u.path.rstrip("/"), flags=re.I)
+    slug = re.sub(r"[^a-z0-9]+", "-", raw.lower()).strip("-")
+    normalized = f"{u.scheme.lower()}://{u.netloc.lower()}{u.path or '/'}{('?' + u.query) if u.query else ''}"
+    h = hashlib.sha1(normalized.encode()).hexdigest()[:6]
+    if not slug:
+        return f"{host}__{h}"
+    if u.query or len(slug) > 64:
+        return f"{host}__{slug[:57].rstrip('-')}-{h}"
+    return f"{host}__{slug}"
+
+
 class Web(Source):
     """Anything else: the page's own citation_* or Open Graph tags."""
 
@@ -881,7 +907,7 @@ class Web(Source):
     patterns = [r"^(https?://\S+)$"]
 
     def key_of(self, m: re.Match[str]) -> str:
-        return hashlib.sha1(m.group(1).encode()).hexdigest()[:12]
+        return web_key(m.group(1))
 
     def fetch_url(self, url: str) -> dict[str, Any]:
         try:

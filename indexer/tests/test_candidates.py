@@ -74,6 +74,14 @@ class Finding(unittest.TestCase):
         self.assertEqual([entry["link"], entry["author"], entry["date"], C.named(entry["body"])],
                          ["https://karagila.org/2026/choice/", "Asaf Karagila", "2026-11-02", ["arxiv/2610.09093"]])
 
+    def test_web_links_resolve_custom_and_legacy_web_records_by_url(self):
+        self.assertEqual(C.linked_ids(["https://alpo.ge/remark.pdf#page=1"]), ["https://alpo.ge/remark.pdf"])
+        cand = C.candidate("https://blog.example.org/note", "On the proof", ["A. Author"], "2026-11-21", "Details.", "Blog",
+                           records=C.linked_ids(["https://alpo.ge/remark.pdf"]))
+        web_rec = rec("web", "alpoge-riemann-hypothesis", "Proof of the Riemann Hypothesis", url="https://alpo.ge/remark.pdf")
+        text = C.report([cand], self.m if hasattr(self, "m") else C.Matcher([]), {"https://alpo.ge/remark.pdf": web_rec}, set(), *WEEK, [])
+        self.assertIn("discuss web/alpoge-riemann-hypothesis https://blog.example.org/note", text)
+
     def test_a_citing_paper_counts_when_its_abstract_names_the_cited_work_but_not_its_own(self):
         ref = lambda arxiv, *names: {"reference": {"arxiv_eprint": arxiv, "authors": [{"full_name": n} for n in names]}}  # noqa: E731
         witten = {"arxiv_eprints": [{"value": "2611.05051"}], "titles": [{"title": "A Note On Lattice Definition"}], "authors": [{"full_name": "Witten, Edward"}],

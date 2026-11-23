@@ -34,6 +34,13 @@ type Get = (url: string, accept?: string) => Promise<Response>;
 const clean = (text: unknown) => decodeEntities(String(text ?? '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 const summarize = (text: unknown) => truncate(clean(text), SUMMARY_CHARS);
 const isoDate = (text: unknown) => String(text ?? '').match(/(\d{4})[-/](\d{2})[-/](\d{2})/)?.slice(1).join('-') ?? '';
+const MINOR = new Set(['a', 'an', 'and', 'as', 'at', 'by', 'for', 'from', 'in', 'of', 'on', 'or', 'the', 'to', 'via', 'with']);
+/** Turns an all-lowercase slug like `riemann-hypothesis` into `Riemann Hypothesis`; keeps mixed-case names like `nanoGPT` as-is. */
+const repoTitle = (name: string) => {
+	const words = name.replace(/[-_]+/g, ' ').trim();
+	if (words !== words.toLowerCase()) return words;
+	return words.split(' ').map((w, i) => (i > 0 && MINOR.has(w) ? w : w.slice(0, 1).toUpperCase() + w.slice(1))).join(' ');
+};
 const subject = (domain: string) => (isNamedSubject(domain) ? { subject: domain, division: divisionOf(domain) } : {});
 
 // Drops missing fields (index.py _drop_empty).
@@ -103,7 +110,7 @@ const SOURCES: Source[] = [
 			const files = await get(`https://api.github.com/repos/${d.full_name}/contents/`, 'application/vnd.github+json')
 				.then(async (r) => new Set<string>((await r.json()).map((f: { name: string }) => f.name)), () => new Set<string>());
 			return entry('github', d.full_name.replace('/', '__'), {
-				url: d.html_url, repo: d.html_url, title: String(d.name).replace(/[-_]/g, ' '), authors: [d.owner?.login],
+				url: d.html_url, repo: d.html_url, title: repoTitle(String(d.name)), authors: [d.owner?.login],
 				summary: summarize(d.description), tags: d.topics ?? [], published: isoDate(d.created_at), stars: d.stargazers_count ?? 0,
 				agent_ready: files.has('AGENTS.md') || files.has('CLAUDE.md'),
 			});

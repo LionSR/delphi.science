@@ -475,7 +475,10 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
         except S.SourceError as err:
             print(f"skipped  {rid(e)}: {err}", file=sys.stderr)
             continue
-        keep = pick(e, ("added", "added_by", "review"))
+        keep_fields = ["added", "added_by", "review"]
+        if e.get("source") == "github" and e.get("title") and fresh.get("title") and e["title"].lower() != fresh["title"].lower():
+            keep_fields.extend(["title", "authors"])
+        keep = pick(e, keep_fields)
         updated = {**e, **_drop_empty(fresh), **keep, "refreshed": S.today()}
         updated.pop("gone", None)
         if e.get("discussion"):
@@ -785,13 +788,17 @@ def crosslink(all_items: list[dict[str, Any]]) -> None:
     """Links indexed records to each other: a discussion link to a paper that is also in the index gets a
     "record" field, and that record lists the item under "discusses"."""
     by_id = {it["id"]: it for it in all_items}
+    by_url = {S.identity(it["url"]): it for it in all_items if it.get("url")}
     for it in all_items:
         for link in it.get("discussion") or []:
+            target = None
             try:
                 src, key = S.detect(link["url"])
+                if src.name != "web":
+                    target = by_id.get(f"{src.name}/{key}")
             except ValueError:
-                continue
-            target = by_id.get(f"{src.name}/{key}")
+                pass
+            target = target or by_url.get(S.identity(link["url"]))
             if not target or target is it:
                 continue
             link["record"] = target["id"]

@@ -63,6 +63,8 @@ class Detect(unittest.TestCase):
         "10.1038/nature14539": ("doi", "10.1038__nature14539"),
         "https://huggingface.co/datasets/openai/gsm8k": ("huggingface", "datasets__openai__gsm8k"),
         "PALOMAR-2026-10-23-000018": ("palomar", "PALOMAR-2026-10-23-000018"),
+        "https://blog.example.org/posts/open-chains/": ("web", "blog.example.org__posts-open-chains"),
+        "https://www.alpo.ge/remark.pdf": ("web", "alpo.ge__remark"),
     }
 
     def test_known_sources(self) -> None:
@@ -172,6 +174,36 @@ class Store(Stored):
             S.BY_NAME["web"] = saved
         self.assertEqual(read, ["b", "c"])
 
+    def test_repo_title_capitalizes_lowercase_slugs_and_refresh_keeps_curated_github_titles(self) -> None:
+        self.assertEqual(S.repo_title("riemann-hypothesis"), "Riemann Hypothesis")
+        self.assertEqual(S.repo_title("proof-of-the-riemann-hypothesis"), "Proof of the Riemann Hypothesis")
+        self.assertEqual(S.repo_title("nanoGPT"), "nanoGPT")
+        self.assertEqual(S.repo_title("QECLean"), "QECLean")
+
+        index.save(Ref("github/o__riemann-hypothesis"), {
+            "key": "o__riemann-hypothesis", "source": "github", "url": "https://github.com/o/riemann-hypothesis",
+            "title": "Riemann Hypothesis (Lean verification repository)", "authors": ["o"], "refreshed": "2026-01-01",
+        })
+        index.save(Ref("github/o__qec-lab"), {
+            "key": "o__qec-lab", "source": "github", "url": "https://github.com/o/qec-lab",
+            "title": "qec lab", "authors": ["o"], "refreshed": "2026-01-01",
+        })
+
+        class GH:
+            def refetch(_, e: dict) -> dict:  # noqa: N805
+                slug = e["key"].split("__", 1)[1]
+                return {"key": e["key"], "source": "github", "url": e["url"], "title": S.repo_title(slug), "authors": ["o"], "stars": 10}
+
+        saved = S.BY_NAME["github"]
+        S.BY_NAME["github"] = GH()
+        try:
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                index.refresh(7, 10, False)
+        finally:
+            S.BY_NAME["github"] = saved
+        self.assertEqual(store.get("github/o__riemann-hypothesis")[1]["title"], "Riemann Hypothesis (Lean verification repository)")
+        self.assertEqual(store.get("github/o__qec-lab")[1]["title"], "Qec Lab")
+
 
 class DeepSeekContracts(unittest.TestCase):
     """The DeepSeek request, its failures and the run budget, with the network stubbed."""
@@ -229,6 +261,19 @@ class Discussion(unittest.TestCase):
         self.assertEqual(paper["discussion"][0]["record"], "arxiv/2610.20058")
         self.assertNotIn("record", paper["discussion"][1])
         self.assertEqual(reply["discusses"], [{"id": "openai-math/P", "title": "P"}])
+
+    def test_crosslink_matches_custom_or_legacy_web_keys_by_url(self) -> None:
+        paper = {"id": "web/custom-slug", "title": "Remark", "url": "https://alpo.ge/remark.pdf"}
+        collide = {"id": "web/example.org__papers-a-b", "title": "A-B", "url": "https://example.org/papers/a-b"}
+        reply = {"id": "github/o__r", "title": "Verification", "discussion": [
+            {"kind": "web", "url": "https://alpo.ge/remark.pdf"},
+            {"kind": "web", "url": "https://example.org/papers/a/b"},
+        ]}
+        index.crosslink([paper, collide, reply])
+        self.assertEqual(reply["discussion"][0]["record"], "web/custom-slug")
+        self.assertNotIn("record", reply["discussion"][1])
+        self.assertEqual(paper["discusses"], [{"id": "github/o__r", "title": "Verification"}])
+        self.assertNotIn("discusses", collide)
 
     def test_discussion_is_served_without_x_text(self) -> None:
         x = {"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a", "text": "hi", "date": "2026-10-08", "added": "2026-10-09"}

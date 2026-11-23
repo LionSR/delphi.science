@@ -11,6 +11,14 @@ const wire = (status: number, headers: Record<string, string>, chunks: Uint8Arra
 	({ status, headers, body: (async function* () { yield* chunks; })() });
 const dns = async () => ['8.8.8.8'];
 
+test('webKey builds readable slugs from URLs and keeps long or root URLs collision-safe', () => {
+	assert.equal(webKey('https://blog.example.org/posts/open-chains/'), 'blog.example.org__posts-open-chains');
+	assert.equal(webKey('https://www.alpo.ge/remark.pdf'), 'alpo.ge__remark');
+	assert.match(webKey('https://example.org/'), /^example\.org__[0-9a-f]{6}$/);
+	const longUrl = 'https://example.org/a-very-long-article-slug-that-exceeds-sixty-four-characters-in-total-length/';
+	assert.match(webKey(longUrl), /^example\.org__[a-z0-9-]{1,57}-[0-9a-f]{6}$/);
+});
+
 test('an HTML page is read into title, summary, authors and date', async () => {
 	const html = `<html><head><title>Fallback &amp; title</title>
 		<meta name="citation_title" content="Open chains">

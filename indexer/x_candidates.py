@@ -46,7 +46,7 @@ QUERIES: list[tuple[str, list[str]]] = [
     ('(3SUM OR APSP) (Claude OR Anthropic OR subquadratic OR subcubic)', ["lean/anthropics__formal-math__3sum-apsp"]),
     ('("zeta zeros" OR "critical line") (Claude OR Anthropic)', ["anthropic-science/riemann-zeta", "lean/anthropics__formal-math__zeta23"]),
     ('("nine loops" OR "nine-loop" OR "9-loop") (amplitude OR Claude)', ["anthropic-science/yes-claude-can-do-nine-loops"]),
-    ('"Navier-Stokes" (OpenAI OR blowup OR "blow-up")', ["web/f2802beee000"]),
+    ('"Navier-Stokes" (OpenAI OR blowup OR "blow-up")', ["web/openai-navier-stokes"]),
     ('"Haldane gap" (OpenAI OR proof)', ["openai-math/The-periodic-spin-one-Haldane-gap"]),
 ]
 # Words in a bio that suggest a researcher; the reviewer still decides, as the README asks.

@@ -63,6 +63,10 @@ details.panel summary { cursor: pointer; font-weight: 500; font-size: var(--smal
 details.panel[open] summary { margin-bottom: 0.6rem; }
 details.panel pre { background: var(--bg); }
 
+figure.diagram { margin: 1.2rem 0 1.4rem; padding: 0.9rem 1rem 0.75rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--bg); }
+figure.diagram svg { display: block; width: 100%; height: auto; font-family: var(--sans); }
+figure.diagram figcaption { margin-top: 0.65rem; font-size: var(--small); color: var(--muted); line-height: 1.45; }
+
 /* Forms & Buttons */
 form { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.2rem 0 0.4rem; }
 form.inline { display: inline; margin: 0; }

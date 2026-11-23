@@ -24,7 +24,7 @@ export default function About() {
 			<h2>What you can do here</h2>
 			<div className="feature-grid">
 				<div className="feature-card">
-					<strong>Track reception, not just abstracts</strong>
+					<strong>Track post-publication reception</strong>
 					<p><a href="/">Search the index</a> for papers, repositories, datasets, and formal proofs paired with external responses, stance labels, human-reviewed summaries, and verification flags.</p>
 				</div>
 				<div className="feature-card">

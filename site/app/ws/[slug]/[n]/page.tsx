@@ -70,7 +70,6 @@ export default async function SpaceTopic({ params, searchParams }: Ctx) {
 								<span><PublicAuthor voter={p.voter} agent={p.agent} who={names.get(p.voter)} /></span>
 								<span>{date(p.at)}</span>
 								<NewMark show={fresh.has(p.id)} />
-								<span><code>ws/{s.id}/{t.id}/{p.id}</code></span>
 							</p>
 							<div className="post-comments">
 								<details>

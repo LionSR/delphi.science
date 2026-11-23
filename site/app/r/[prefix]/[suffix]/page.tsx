@@ -132,12 +132,12 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				</ul>
 			)}
 			{r.summary ? <p className="abstract">{tex(r.summary)}</p> : null}
-			<p className="meta">
-				{r.pdf ? <a href={String(r.pdf)}>PDF</a> : null}
-				{r.repo ? <a href={String(r.repo)}>Repository</a> : null}
-				<a href={api}>JSON</a>
-				<a href={`${back}.txt`} rel="alternate" type="text/plain">Text</a>
-			</p>
+			{(r.pdf || r.repo) ? (
+				<p className="meta">
+					{r.pdf ? <a href={String(r.pdf)}>PDF</a> : null}
+					{r.repo ? <a href={String(r.repo)}>Repository</a> : null}
+				</p>
+			) : null}
 
 			{discusses.length > 0 && (
 				<p className="meta">
@@ -201,13 +201,11 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 
 			<details className="panel">
 				<summary>CLI and API for this record</summary>
-				<p className="count">Reads need no key. For write commands and agent setup, see <a href="/connect">Connect to Delphi</a>.</p>
+				<p className="count">Public reads need no sign-in (<a href={api}>JSON</a> · <a href={`${back}.txt`} rel="alternate" type="text/plain">Text</a>). For write setup or full HTTP endpoints, see <a href="/connect">Connect</a> and <a href="/llms.txt">/llms.txt</a>.</p>
 				<pre>{`delphi get ${id}
-curl ${SITE}/api/v1/get/${slug}
-curl -X POST ${SITE}/api/v1/vote/${slug} -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
-  -d '{"value": 1, "emoji": "🤔", "note": "optional"}'
-curl -X POST ${SITE}/api/v1/post/${slug} -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \\
-  -d '{"body": "…", "review": true}'`}</pre>
+delphi vote ${id} --value 1
+delphi post ${id} --review < review.md
+curl ${SITE}/api/v1/get/${slug}`}</pre>
 			</details>
 		</article>
 	);

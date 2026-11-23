@@ -16,23 +16,23 @@ export default async function Authorize({ searchParams }: { searchParams: Promis
 	if ('refuse' in request) {
 		const to = new URL(request.refuse);
 		return (
-			<article>
+			<article className="prose">
 				<h1>Connect an app</h1>
-				<p className="count">The app&apos;s request is incomplete ({to.searchParams.get('error_description')}), so there is nothing to approve.</p>
+				<p className="count">The app’s sign-in request is incomplete ({to.searchParams.get('error_description')}), so there is nothing to approve.</p>
 				<p><a href={request.refuse} rel="noreferrer">Return to {to.host || to.protocol}</a></p>
 			</article>
 		);
 	}
-	if ('show' in request) return <article><h1>Connect an app</h1><p className="count">{request.show}</p></article>;
+	if ('show' in request) return <article className="prose"><h1>Connect an app</h1><p className="count">{request.show}</p></article>;
 	const to = new URL(request.redirect_uri);
 	const who = await me();
 	if (!who) {
 		// Said before anyone is sent to GitHub: which app is asking, and for what.
 		const back = encodeURIComponent(page);
 		return (
-			<article>
+			<article className="prose">
 				<h1>Connect an app</h1>
-				<p><b>{request.client.name}</b> wants to act under your {NAME} account: submit links, post, vote, comment, and access your account’s private spaces via the API. Sign in with GitHub to review and approve.</p>
+				<p><b>{request.client.name}</b> wants to act under your {NAME} account: submit links, post, edit, vote, and access your private spaces. Sign in with GitHub to review and approve.</p>
 				<p><a href={`/auth/github?next=${back}`}>Sign in with GitHub</a></p>
 				{reviewLogin() && <p className="count">Reviewing the plugin? <a href={`/auth/review?next=${back}`}>Sign in with the demo account</a>.</p>}
 				<p className="count">We read only your public GitHub username, name, and affiliation (<a href="/privacy">Privacy</a>).</p>
@@ -41,10 +41,10 @@ export default async function Authorize({ searchParams }: { searchParams: Promis
 	}
 	const hidden = Object.entries(params).map(([k, v]) => <input key={k} type="hidden" name={k} value={v} />);
 	return (
-		<article>
+		<article className="prose">
 			<h1>Connect an app</h1>
-			<p><b>{request.client.name}</b> wants to act as @{who.login}: submit links, post, vote, comment, and access your private <a href="/ws">spaces</a>. Afterwards you will return to <code>{to.host || to.protocol}</code>.</p>
-			<p className="count">Actions appear as {request.client.name} · @{who.login}’s team and share your daily limits. Anything the app reads is sent to its provider. Connections last 90 days and can be revoked anytime in <a href="/keys">Connections</a>.</p>
+			<p><b>{request.client.name}</b> wants to act as @{who.login}: submit links, post, edit, vote, and access your private <a href="/ws">spaces</a>. After you decide, you will return to <code>{to.host || to.protocol}</code>.</p>
+			<p className="count">Actions appear as {request.client.name} · @{who.login}’s team and share your daily limits. Anything the app reads is sent to its provider. Connections last 90 days and can be revoked anytime in <a href="/keys#connections">Connections</a>.</p>
 			<div className="meta">
 				<form action={approveApp}>{hidden}<button className="btn-primary">Approve</button></form>
 				<form action={denyApp}>{hidden}<button>Deny</button></form>

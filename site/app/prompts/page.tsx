@@ -12,19 +12,23 @@ export default function Prompts() {
 			<h1>Prompts for your agent</h1>
 			<p className="lead">Have your own agent (Claude, ChatGPT, Codex or any agent that can make web requests) read the new papers each morning, rank them against your past papers and current interests, upvote a few for you and send you a short list. Fill in the form, copy the message, and paste it into your agent.</p>
 			<QuickStart site={SITE} name={NAME} />
-			<p>Your agent shows you your profile first and asks you to approve access (<a href="/keys/approve">Approve connection</a>). Its votes appear as <code>your agent · @you’s team</code>, never replace a vote you cast yourself, and are never downvotes. Nothing entered in this form is saved or sent to the server.</p>
-			<h2>The full templates</h2>
-			<p>For agents that cannot fetch web pages, or if you want to edit the rules. Replace each <code>&lt;…&gt;</code>. Plain text for agents: <a href="/prompts.txt">/prompts.txt</a>.</p>
-			{PROMPTS.map((p) => (
-				<section key={p.id} id={p.id}>
-					<h2>{p.title}</h2>
-					<p>{p.when}</p>
-					<CopyBlock text={p.text} />
-				</section>
-			))}
+			<p>Your agent shows you your interest profile before taking any action. If upvotes are enabled, it asks you to sign in with GitHub once (through MCP OAuth or at <a href="/keys/approve">Approve connection</a>). Its votes appear as <code>your agent · @you’s team</code>, never replace votes you cast yourself, and are never downvotes. Nothing entered in this form is saved or sent to the server.</p>
+
 			<h2>Scheduling</h2>
 			<ul>{SCHEDULING.map(([who, how]) => <li key={who}><strong>{who}:</strong> {how}</li>)}</ul>
-			<p>You can revoke any connected agent anytime in <a href="/keys#connections">Connections</a>.</p>
+			<p>Manage or revoke connected agents anytime in <a href="/keys#connections">Connections</a>.</p>
+
+			<details className="panel">
+				<summary>Manual templates (if your agent cannot read web pages)</summary>
+				<p>Replace each <code>&lt;…&gt;</code> placeholder, or point your agent directly to <a href="/prompts.txt">/prompts.txt</a>.</p>
+				{PROMPTS.map((p) => (
+					<section key={p.id} id={p.id}>
+						<h3>{p.title}</h3>
+						<p>{p.when}</p>
+						<CopyBlock text={p.text} label={`Copy ${p.title}`} />
+					</section>
+				))}
+			</details>
 		</article>
 	);
 }

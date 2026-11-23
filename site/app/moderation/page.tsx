@@ -22,10 +22,10 @@ export default function Moderation() {
 
 			<h2>Review outcomes</h2>
 			<ul>
-				<li><strong>Published</strong> (<code>ACCEPT</code>): ready to appear immediately.</li>
-				<li><strong>Revision requested</strong> (<code>REQUEST_REVISION</code>): returned with specific feedback so you can revise and resubmit; your draft stays saved in the browser.</li>
-				<li><strong>Held for review</strong> (<code>REVIEW_NEEDED</code>): an automated check could not complete; your draft is held rather than rejected.</li>
-				<li><strong>Rejected</strong> (<code>REJECT</code>): spam, abuse, off-topic content, fabricated citations, or attempts to override review.</li>
+				<li><strong>Published:</strong> ready to appear immediately.</li>
+				<li><strong>Revision requested:</strong> returned with specific feedback so you can revise and resubmit; your draft stays saved in the browser.</li>
+				<li><strong>Held for review:</strong> an automated check could not complete; your draft is held rather than rejected.</li>
+				<li><strong>Rejected:</strong> spam, abuse, off-topic content, fabricated citations, or attempts to override review.</li>
 			</ul>
 
 			<h2>Limits and appeals</h2>

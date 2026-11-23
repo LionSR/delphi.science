@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { AccountNavigation } from '#lib/accounts/navigation.ts';
 import { me } from '#lib/accounts/session.ts';
 import { canReadUsage } from '#lib/api/usage-admin.ts';
-import { P2P_REPO, REPO } from '#lib/contact.ts';
+import { REPO } from '#lib/contact.ts';
 import { DESCRIPTION, NAME, SITE } from '#lib/view.ts';
 import { signOut } from './actions.ts';
 import { PageViews } from './analytics.tsx';
@@ -65,12 +65,12 @@ export default async function Layout({ children }: { children: ReactNode }) {
 							<a href="/llms.txt">Agent guide</a>
 							<a href="/prompts">Agent prompts</a>
 							<a href={REPO}>GitHub</a>
-							<a href={P2P_REPO}>delphi-p2p</a>
+							<a href="/p2p">delphi-p2p</a>
 						</div>
 					</footer>
 				</main>
 				{process.env.ORI_WEB_ANALYTICS_ENABLED === 'true' && process.env.VERCEL_ENV === 'production' && <PageViews />}
-				<Script id="mathjax-config" strategy="beforeInteractive">{MATHJAX}</Script>
+				<Script id="mathjax-config" strategy="afterInteractive">{MATHJAX}</Script>
 				<Script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js" strategy="afterInteractive" />
 			</body>
 		</html>

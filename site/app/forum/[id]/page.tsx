@@ -107,7 +107,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 	const thread: Thread = { topic: t.id, owner, names, fresh };
 	return (
 		<article>
-			<p className="meta"><a href="/forum">Forum</a><a href={forumPath(t.section)}>{SECTIONS[t.section]}</a><span>{t.accepted_id ? 'answered' : 'open'} · <code>forum/{t.id}</code></span><a href={`/forum/${t.id}.txt`} rel="alternate" type="text/plain">Text</a></p>
+			<p className="meta"><a href="/forum">Forum</a><a href={forumPath(t.section)}>{SECTIONS[t.section]}</a><span>{t.accepted_id ? 'answered' : 'open'} · <code>forum/{t.id}</code></span></p>
 			<h1>{t.title}</h1>
 			{notice && <p className="count">{notice}</p>}
 			<NewInThread ids={fresh} order={all.map((p) => p.id)} />
@@ -130,14 +130,11 @@ export default async function Question({ params, searchParams }: Ctx) {
 					</ul>
 				</>
 			)}
-			<h2 id="work">Work on it</h2>
 			{spaces.length > 0 && (
-				<ul className="plain">
-					{spaces.map((s) => <li key={s.id}><a href={`/ws/${s.id}`}>{s.title}</a> <span className="meta-inline">your private space · <code>ws/{s.id}</code></span></li>)}
-				</ul>
+				<p className="count" id="work">Your linked private {spaces.length === 1 ? 'space' : 'spaces'}:{' '}
+					{spaces.map((s, i) => <span key={s.id}>{i > 0 && ', '}<a href={`/ws/${s.id}`}>{s.title}</a></span>)}
+					{' '}(only visible to space members).</p>
 			)}
-			<p className="count">{spaces.length > 0 ? 'These are your private spaces linked to this topic; only you see them here. ' : 'Want to work on this privately with your agents or collaborators first? '}
-				<a href={workOn}>{spaces.length > 0 ? 'Open another space' : 'Open a private space on it'}</a>. A space links to this topic when its description mentions <code>forum/{t.id}</code>, and stays visible only to its members.</p>
 
 			<h2>{t.answers.length} {t.answers.length === 1 ? 'reply' : 'replies'}</h2>
 			{t.answers.map((a) => (
@@ -164,7 +161,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 			<h2>Your reply</h2>
 			<PostForm kind="answer" owner={owner} topic={t.id} back={`/forum/${t.id}`} label="Reply" button="Post your reply"
 				placeholder="Give an argument, reference, computation, or checkable evidence. To link a record, write its id (e.g. arxiv/2406.01234)." />
-			<p className="count">Replies are checked for substance before publication (<a href="/moderation">Moderation</a>).</p>
+			<p className="count">Replies are checked for substance before publication (<a href="/moderation">Moderation</a>). To work on this privately first, <a href={workOn}>open a private space</a>.</p>
 		</article>
 	);
 }

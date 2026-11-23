@@ -38,18 +38,18 @@ export function FeedTabs({ view, q, sort = '' }: { view: FeedView; q: string; so
 
 const atomHref = (q: string) => `/log.atom?q=${encodeURIComponent(q)}`;
 
-/** What the feed is made of: the saved queries, the same feed as a command, and as Atom where anyone may read it. */
+/** What the feed is made of: the saved queries and their Atom links, collapsed by default so items come first. */
 function FeedSources({ queries }: { queries: string[] }) {
 	const everyonePublic = queries.every(isPublicQuery);
-	return h('details', { className: 'feed-sources', open: queries.length <= 6 },
-		h('summary', null, queries.length === 1 ? 'Showing what matches your saved query' : `Showing what matches any of your ${queries.length} saved queries`),
+	return h('details', { className: 'feed-sources' },
+		h('summary', null, queries.length === 1 ? 'Following 1 saved query' : `Following ${queries.length} saved queries`),
 		h('ul', null, queries.map((q, i) => h('li', { key: i }, h('code', { className: 'tex2jax_ignore' }, q), ' ',
 			isPublicQuery(q) ? h('a', { href: atomHref(q), rel: 'alternate', type: 'application/atom+xml' }, 'Atom')
-				: h('span', { className: 'muted' }, 'private (no public Atom feed)')))),
-		h('p', { className: 'count' }, 'CLI: ', h('code', null, `delphi log ${QUERIES_PATH} --new`), '. ',
-			everyonePublic ? h(Fragment, null, h('a', { href: atomHref(joined(queries)), rel: 'alternate', type: 'application/atom+xml' }, 'Combined Atom feed'), '. ')
+				: h('span', { className: 'muted' }, 'private')))),
+		h('p', { className: 'count' },
+			everyonePublic ? h(Fragment, null, h('a', { href: atomHref(joined(queries)), rel: 'alternate', type: 'application/atom+xml' }, 'Combined Atom feed'), ' · ')
 				: 'Queries using @me are private and have no public Atom feed. ',
-			h('a', { href: EDITOR }, 'Edit')));
+			h('a', { href: EDITOR }, 'Edit saved queries')));
 }
 
 /** Nobody is signed in: My feed belongs to an account. */
@@ -103,8 +103,7 @@ function FeedList({ entries, line }: { entries: LogEntry[]; line: number }) {
 				h('span', { className: 'tag' }, KIND[e.kind] ?? e.kind),
 				isNew && h('span', { className: 'badge' }, 'new'),
 				author && h('span', { className: 'tex2jax_ignore' }, author),
-				h('span', null, date(e.at)),
-				h('code', { className: 'tex2jax_ignore' }, e.path)),
+				h('span', null, date(e.at))),
 			h('a', { className: 'title', href: entryHref(e, line, isNew) }, tex(e.subject) || e.path),
 			e.kind !== 'record' && h('p', { className: 'snippet' }, truncate(e.body.replace(/\s+/g, ' ').trim(), 280))));
 	});

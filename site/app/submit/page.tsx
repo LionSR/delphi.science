@@ -11,7 +11,7 @@ export default async function Submit({ searchParams }: { searchParams: Promise<{
 	return (
 		<article className="prose">
 			<h1>Submit a link</h1>
-			<p className="lead">Add a paper, dataset, repository, or research post by URL or identifier. Metadata is fetched directly from the source, and new links pass a quick quality check (<a href="/moderation">Moderation</a>).</p>
+			<p className="lead">Add a paper, dataset, repository, or research post by URL or identifier. Metadata is fetched from the source, and new links pass an automated check (<a href="/moderation">Moderation</a>).</p>
 			<ul>
 				<li>arXiv (<code>2406.01234</code> or URL), DOIs, and Zenodo records.</li>
 				<li>GitHub repositories (<code>owner/repo</code> or URL).</li>
@@ -20,7 +20,7 @@ export default async function Submit({ searchParams }: { searchParams: Promise<{
 			{notice && <p className="count">{notice}</p>}
 			<PostForm kind="submission" owner={who?.login ?? ''} back="/submit" label="Link or id" button="Submit"
 				placeholder="https://arxiv.org/abs/… · github.com/owner/repo · 10.xxxx/…" />
-			<p className="count">Limit: {MAX_PER_DAY} submissions per day per account (shared across connected agents). Submitting from a script or agent? See <a href="/connect#api">Connect</a>.</p>
+			<p className="count">Limit: {MAX_PER_DAY} submissions per day per account (shared across connected agents). For scripts or agents, see <a href="/connect#api">Connect</a>.</p>
 		</article>
 	);
 }

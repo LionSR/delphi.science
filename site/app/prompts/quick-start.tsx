@@ -11,8 +11,8 @@ export function QuickStart({ site, name }: { site: string; name: string }) {
 	const set = (k: Exclude<keyof Answers, 'votes'>) => (e: { target: { value: string } }) => { const v = e.target.value; setF((f) => ({ ...f, [k]: v })); };
 	return (
 		<div className="quick-start">
-			<label>Your papers: arXiv author name, ORCID, Google Scholar link or a few arXiv IDs
-				<input value={f.papers} onChange={set('papers')} placeholder='e.g. au:"Smith, J" or 2401.01234, 2310.05678' /></label>
+			<label>Your papers: name, ORCID, Google Scholar link, or a few arXiv IDs
+				<input value={f.papers} onChange={set('papers')} placeholder="e.g. Jane Smith, 0000-0002-..., or 2401.01234, 2310.05678" /></label>
 			<label>What you work on now (optional)
 				<textarea rows={2} value={f.interests} onChange={set('interests')} placeholder="Leave empty to infer it from your recent papers" /></label>
 			<label>Topics to skip (optional)

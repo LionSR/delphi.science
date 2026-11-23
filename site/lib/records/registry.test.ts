@@ -47,6 +47,11 @@ const SOURCES = fake({
 	'https://api.github.com/repos/someone/tiny/contents/': [{ name: 'README.md' }],
 	'https://api.github.com/repos/someone/cited': { ...REPO, full_name: 'someone/cited', html_url: 'https://github.com/someone/cited', name: 'cited', stargazers_count: 3 },
 	'https://api.github.com/repos/someone/cited/contents/': [{ name: 'CITATION.cff' }],
+	'https://api.github.com/repos/leanprover-community/riemann-hypothesis': {
+		...REPO, full_name: 'leanprover-community/riemann-hypothesis', html_url: 'https://github.com/leanprover-community/riemann-hypothesis',
+		name: 'riemann-hypothesis', owner: { login: 'leanprover-community' }, stargazers_count: 500,
+	},
+	'https://api.github.com/repos/leanprover-community/riemann-hypothesis/contents/': [{ name: 'README.md' }],
 });
 
 describe('reading a link', () => {
@@ -71,6 +76,8 @@ describe('reading a link', () => {
 		assert.deepEqual([it.id, it.subject, it.division, it.category, 'key' in it], ['arxiv/1706.03762', 'cs.CL', 'cs', 'research', false]);
 		const repo = itemOf((await resolve('karpathy/nanoGPT', SOURCES))!);
 		assert.deepEqual([repo.id, repo.title, repo.repo, repo.agent_ready], ['github/karpathy__nanoGPT', 'nanoGPT', REPO.html_url, true]);
+		const lower = itemOf((await resolve('leanprover-community/riemann-hypothesis', SOURCES))!);
+		assert.equal(lower.title, 'Riemann Hypothesis');
 		await assert.rejects(resolve('https://arxiv.org/abs/2999.99999', SOURCES), /2999/);
 	});
 });

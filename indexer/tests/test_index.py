@@ -172,6 +172,36 @@ class Store(Stored):
             S.BY_NAME["web"] = saved
         self.assertEqual(read, ["b", "c"])
 
+    def test_repo_title_capitalizes_lowercase_slugs_and_refresh_keeps_curated_github_titles(self) -> None:
+        self.assertEqual(S.repo_title("riemann-hypothesis"), "Riemann Hypothesis")
+        self.assertEqual(S.repo_title("proof-of-the-riemann-hypothesis"), "Proof of the Riemann Hypothesis")
+        self.assertEqual(S.repo_title("nanoGPT"), "nanoGPT")
+        self.assertEqual(S.repo_title("QECLean"), "QECLean")
+
+        index.save(Ref("github/o__riemann-hypothesis"), {
+            "key": "o__riemann-hypothesis", "source": "github", "url": "https://github.com/o/riemann-hypothesis",
+            "title": "Riemann Hypothesis (Lean verification repository)", "authors": ["o"], "refreshed": "2026-01-01",
+        })
+        index.save(Ref("github/o__qec-lab"), {
+            "key": "o__qec-lab", "source": "github", "url": "https://github.com/o/qec-lab",
+            "title": "qec lab", "authors": ["o"], "refreshed": "2026-01-01",
+        })
+
+        class GH:
+            def refetch(_, e: dict) -> dict:  # noqa: N805
+                slug = e["key"].split("__", 1)[1]
+                return {"key": e["key"], "source": "github", "url": e["url"], "title": S.repo_title(slug), "authors": ["o"], "stars": 10}
+
+        saved = S.BY_NAME["github"]
+        S.BY_NAME["github"] = GH()
+        try:
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                index.refresh(7, 10, False)
+        finally:
+            S.BY_NAME["github"] = saved
+        self.assertEqual(store.get("github/o__riemann-hypothesis")[1]["title"], "Riemann Hypothesis (Lean verification repository)")
+        self.assertEqual(store.get("github/o__qec-lab")[1]["title"], "Qec Lab")
+
 
 class DeepSeekContracts(unittest.TestCase):
     """The DeepSeek request, its failures and the run budget, with the network stubbed."""

@@ -347,6 +347,17 @@ class Source:
         return e
 
 
+MINOR_WORDS = frozenset({"a", "an", "and", "as", "at", "by", "for", "from", "in", "of", "on", "or", "the", "to", "via", "with"})
+
+
+def repo_title(name: str) -> str:
+    """Turns an all-lowercase slug like 'riemann-hypothesis' into 'Riemann Hypothesis'; keeps mixed-case names like 'nanoGPT' as-is."""
+    words = re.sub(r"[-_]+", " ", name).strip()
+    if words != words.lower():
+        return words
+    return " ".join(w if i > 0 and w in MINOR_WORDS else w[:1].upper() + w[1:] for i, w in enumerate(words.split()))
+
+
 class GitHub(Source):
     name, label = "github", "GitHub"
     patterns = [r"^(?:https?://)?github\.com/([\w.-]+/[\w.-]+?)(?:\.git)?(?:/.*)?$", r"^(?!10\.\d)([\w.-]+/[\w.-]+)$"]
@@ -371,7 +382,7 @@ class GitHub(Source):
             repo.replace("/", "__"),
             url=d["html_url"],
             repo=d["html_url"],
-            title=d["name"].replace("-", " ").replace("_", " "),
+            title=repo_title(d["name"]),
             authors=[d["owner"]["login"]],
             summary=trim(d.get("description")),
             tags=d.get("topics") or [],
@@ -493,7 +504,7 @@ class HuggingFace(Source):
         return self.entry(
             key,
             url=f"https://huggingface.co/{page}{repo}",
-            title=repo.split("/")[-1].replace("-", " "),
+            title=repo_title(repo.split("/")[-1]),
             authors=[d.get("author") or repo.split("/")[0]],
             summary=trim(card.get("description") or (d.get("description") if isinstance(d.get("description"), str) else "")),
             tags=[t for t in d.get("tags", []) if ":" not in t][:12],

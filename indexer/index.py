@@ -475,7 +475,10 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
         except S.SourceError as err:
             print(f"skipped  {rid(e)}: {err}", file=sys.stderr)
             continue
-        keep = pick(e, ("added", "added_by", "review"))
+        keep_fields = ["added", "added_by", "review"]
+        if e.get("source") == "github" and e.get("title") and fresh.get("title") and e["title"].lower() != fresh["title"].lower():
+            keep_fields.extend(["title", "authors"])
+        keep = pick(e, keep_fields)
         updated = {**e, **_drop_empty(fresh), **keep, "refreshed": S.today()}
         updated.pop("gone", None)
         if e.get("discussion"):

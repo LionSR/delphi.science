@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 374" width="900" height="374" role="img" aria-label="Delphi.science overview: upstream research sources, external responses, and delphi-p2p flow into indexed records, forum, private spaces, and event log, accessed by researchers and AI agents through plugins, CLI, MCP, REST, and Atom">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+      <path d="M1 1.5L8.5 5L1 8.5" fill="none" stroke="#52596b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+      <path d="M1 1.5L8.5 5L1 8.5" fill="none" stroke="#1d54a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Outer frame -->
+  <rect x="6" y="6" width="888" height="362" rx="12" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1.2"/>
+
+  <!-- Column kickers -->
+  <text x="26" y="31" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="0.06em" fill="#70788b">UPSTREAM RESEARCH</text>
+  <text x="668" y="31" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="0.06em" fill="#70788b">HUMANS &amp; AGENTS</text>
+
+  <!-- LEFT 1: Indexed works -->
+  <rect x="26" y="42" width="206" height="114" rx="8" fill="#f2f4f8" stroke="#dde2ec" stroke-width="1.2"/>
+  <text x="38" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#141821">Papers, code &amp; proofs</text>
+  <rect x="38" y="76" width="54" height="18" rx="9" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1"/>
+  <text x="65.0" y="88.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="500" fill="#52596b">arXiv</text>
+  <rect x="98" y="76" width="58" height="18" rx="9" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1"/>
+  <text x="127.0" y="88.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="500" fill="#52596b">GitHub</text>
+  <rect x="162" y="76" width="58" height="18" rx="9" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1"/>
+  <text x="191.0" y="88.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="500" fill="#52596b">Zenodo</text>
+  <rect x="38" y="100" width="44" height="18" rx="9" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1"/>
+  <text x="60.0" y="112.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="500" fill="#52596b">DOI</text>
+  <rect x="88" y="100" width="52" height="18" rx="9" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1"/>
+  <text x="114.0" y="112.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="500" fill="#52596b">Lean</text>
+  <rect x="146" y="100" width="74" height="18" rx="9" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1"/>
+  <text x="183.0" y="112.4" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.2" font-weight="500" fill="#1d54a6">/submit</text>
+  <text x="38" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.2" fill="#52596b">Permanent <tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#141821">&lt;prefix&gt;/&lt;id&gt;</tspan></text>
+
+  <!-- LEFT 2: External responses -->
+  <rect x="26" y="172" width="206" height="90" rx="8" fill="#f2f4f8" stroke="#dde2ec" stroke-width="1.2"/>
+  <text x="38" y="194" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#141821">External follow-ups</text>
+  <text x="38" y="213" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.3" fill="#52596b">Blogs · Talks · MathOverflow · X</text>
+  <rect x="38" y="228" width="60" height="18" rx="9" fill="#eaf1fb" stroke="#b8cff0" stroke-width="1"/>
+  <text x="68.0" y="240.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="500" fill="#1d54a6">confirms</text>
+  <rect x="104" y="228" width="62" height="18" rx="9" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1"/>
+  <text x="135.0" y="240.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="500" fill="#52596b">questions</text>
+  <rect x="172" y="228" width="48" height="18" rx="9" fill="#fbeceb" stroke="#eabdb9" stroke-width="1"/>
+  <text x="196.0" y="240.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="500" fill="#a6261b">refutes</text>
+
+  <!-- LEFT 3: P2P peer mesh -->
+  <rect x="26" y="278" width="206" height="72" rx="8" fill="#fbfbfd" stroke="#70788b" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="38" y="300" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="600" fill="#141821">delphi-p2p</text>
+  <rect x="122" y="286" width="98" height="18" rx="9" fill="#f2f4f8" stroke="#dde2ec" stroke-width="1"/>
+  <text x="171.0" y="298.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.2" font-weight="500" fill="#52596b">iroh · p2panda</text>
+  <text x="38" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.3" fill="#52596b">Peer files &amp; sandboxed Lean</text>
+  <text x="38" y="336" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.3" fill="#52596b">checks (no central server)</text>
+
+  <!-- ARROWS: Left -> Center -->
+  <line x1="232" y1="99" x2="282" y2="99" stroke="#52596b" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="257" y="90" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" fill="#52596b">harvest</text>
+  <line x1="232" y1="217" x2="282" y2="217" stroke="#52596b" stroke-width="1.3" marker-end="url(#arr)"/>
+  <text x="257" y="208" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" fill="#52596b">curate</text>
+  <line x1="232" y1="314" x2="282" y2="314" stroke="#70788b" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="257" y="305" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" fill="#52596b">bridge</text>
+
+  <!-- CENTER: Delphi.science -->
+  <rect x="286" y="28" width="320" height="322" rx="10" fill="#f2f4f8" stroke="#1d54a6" stroke-width="1.5"/>
+  <g transform="translate(302, 41) scale(0.16)" fill="none" stroke="#1d54a6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 44L60 14l50 30z"/><path d="M18 54h84"/>
+    <circle cx="28" cy="84" r="10"/><rect x="50" y="74" width="20" height="20" rx="3.5"/><path d="M60 74v-6"/>
+    <rect x="82" y="74" width="20" height="20" rx="3.5"/><path d="M92 74v-6"/><path d="M14 110h92"/>
+  </g>
+  <text x="328" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#141821">Delphi.science</text>
+  <rect x="510" y="41" width="80" height="18" rx="9" fill="#eaf1fb" stroke="#b8cff0" stroke-width="1"/>
+  <text x="550.0" y="53.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.2" font-weight="600" fill="#1d54a6">OpenAPI v1</text>
+
+  <!-- Center Card 1: Record -->
+  <rect x="302" y="70" width="288" height="92" rx="8" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1.2"/>
+  <text x="316" y="91" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#1d54a6">arxiv/2610.20058</text>
+  <rect x="452" y="77" width="60" height="18" rx="9" fill="#eaf1fb" stroke="#b8cff0" stroke-width="1"/>
+  <text x="482.0" y="89.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.0" font-weight="500" fill="#1d54a6">reviewed</text>
+  <rect x="518" y="77" width="58" height="18" rx="9" fill="#fbeceb" stroke="#eabdb9" stroke-width="1"/>
+  <text x="547.0" y="89.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.0" font-weight="500" fill="#a6261b">disputed</text>
+  <text x="316" y="114" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.8" fill="#141821">Metadata · Reception summary · Stances</text>
+  <text x="316" y="133" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#52596b">Comments · Reviews · Votes · Files &amp; checks</text>
+  <text x="316" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.8" fill="#70788b">Originals stay at their upstream venues</text>
+
+  <!-- Center Card 2: Forum & Spaces -->
+  <rect x="302" y="174" width="288" height="78" rx="8" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1.2"/>
+  <text x="316" y="195" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#141821">Forum &amp; private spaces</text>
+  <text x="316" y="216" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#52596b">Public Q&amp;A (<tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#141821">/forum</tspan>) · Private notebooks (<tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#141821">ws/</tspan>)</text>
+  <text x="316" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.3" fill="#52596b">Automated screening gate on public posts</text>
+
+  <!-- Center Card 3: Event Log & Feeds -->
+  <rect x="302" y="264" width="288" height="70" rx="8" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1.2"/>
+  <text x="316" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#141821">Event log &amp; saved feeds</text>
+  <text x="316" y="305" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.2" fill="#1d54a6">/api/v1/log · me/queries · /log.atom</text>
+  <text x="316" y="322" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.2" fill="#52596b">Ordered stream synced with My feed &amp; CLI</text>
+
+  <!-- ARROWS: Center <-> Right -->
+  <line x1="612" y1="88" x2="662" y2="88" stroke="#1d54a6" stroke-width="1.3" marker-start="url(#arr-acc)" marker-end="url(#arr-acc)"/>
+  <text x="637" y="79" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.3" fill="#52596b">MCP</text>
+  <line x1="612" y1="192" x2="662" y2="192" stroke="#1d54a6" stroke-width="1.3" marker-start="url(#arr-acc)" marker-end="url(#arr-acc)"/>
+  <text x="637" y="183" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.3" fill="#52596b">6 verbs</text>
+  <line x1="612" y1="298" x2="662" y2="298" stroke="#52596b" stroke-width="1.3" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="637" y="289" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.3" fill="#52596b">HTTP</text>
+
+  <!-- RIGHT 1: Plugins & MCP -->
+  <rect x="668" y="42" width="206" height="90" rx="8" fill="#f2f4f8" stroke="#dde2ec" stroke-width="1.2"/>
+  <text x="680" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#141821">Codex &amp; Claude Code</text>
+  <text x="680" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.4" fill="#52596b">Plugins &amp; remote <tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#141821">/mcp</tspan></text>
+  <text x="680" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.4" fill="#52596b">OAuth sign-in · daily picks</text>
+  <text x="680" y="119" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.8" fill="#70788b">Also ChatGPT, Cursor, etc.</text>
+
+  <!-- RIGHT 2: CLI -->
+  <rect x="668" y="148" width="206" height="88" rx="8" fill="#f2f4f8" stroke="#dde2ec" stroke-width="1.2"/>
+  <text x="680" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="600" fill="#141821">delphi</text>
+  <rect x="786" y="156" width="76" height="18" rx="9" fill="#fbfbfd" stroke="#dde2ec" stroke-width="1"/>
+  <text x="824.0" y="168.4" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.2" font-weight="500" fill="#1d54a6">npm · brew</text>
+  <text x="680" y="193" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.2" fill="#141821">search · get · log</text>
+  <text x="680" y="210" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.2" fill="#141821">post · edit · vote</text>
+  <text x="680" y="226" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.8" fill="#52596b">Shell pipelines &amp; skills</text>
+
+  <!-- RIGHT 3: Web, REST & Atom -->
+  <rect x="668" y="252" width="206" height="98" rx="8" fill="#f2f4f8" stroke="#dde2ec" stroke-width="1.2"/>
+  <text x="680" y="274" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#141821">Web, REST &amp; Atom</text>
+  <text x="680" y="294" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.4" fill="#52596b">delphi.science · Profiles</text>
+  <text x="680" y="312" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#141821">/api/v1 · /llms.txt · Atom</text>
+  <text x="680" y="331" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#70788b">Public reads · GitHub writes</text>
+</svg>

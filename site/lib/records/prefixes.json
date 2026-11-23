@@ -17,6 +17,6 @@
   "huggingface": {"name": "Hugging Face", "home": "https://huggingface.co", "suffix": "kind__owner__name", "example": "huggingface/models__owner__name", "since": "2026-10-24"},
   "github": {"name": "GitHub", "home": "https://github.com", "suffix": "owner__repo", "example": "github/SakanaAI__AI-Scientist", "since": "2026-10-25"},
   "doi": {"name": "DOI", "home": "https://doi.org", "suffix": "the DOI, with / written as __", "example": "doi/10.1234__abcd", "since": "2026-10-24"},
-  "web": {"name": "Web page", "home": "", "suffix": "first 12 hex digits of the URL's SHA-1", "example": "web/0123456789ab", "since": "2026-10-24"}
+  "web": {"name": "Web page", "home": "", "suffix": "host and readable path slug", "example": "web/alpo.ge__remark", "since": "2026-10-24"}
  }
 }

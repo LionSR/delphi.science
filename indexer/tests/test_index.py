@@ -63,6 +63,8 @@ class Detect(unittest.TestCase):
         "10.1038/nature14539": ("doi", "10.1038__nature14539"),
         "https://huggingface.co/datasets/openai/gsm8k": ("huggingface", "datasets__openai__gsm8k"),
         "PALOMAR-2026-10-23-000018": ("palomar", "PALOMAR-2026-10-23-000018"),
+        "https://blog.example.org/posts/open-chains/": ("web", "blog.example.org__posts-open-chains"),
+        "https://www.alpo.ge/remark.pdf": ("web", "alpo.ge__remark"),
     }
 
     def test_known_sources(self) -> None:
@@ -259,6 +261,13 @@ class Discussion(unittest.TestCase):
         self.assertEqual(paper["discussion"][0]["record"], "arxiv/2610.20058")
         self.assertNotIn("record", paper["discussion"][1])
         self.assertEqual(reply["discusses"], [{"id": "openai-math/P", "title": "P"}])
+
+    def test_crosslink_matches_custom_or_legacy_web_keys_by_url(self) -> None:
+        paper = {"id": "web/custom-slug", "title": "Remark", "url": "https://alpo.ge/remark.pdf"}
+        reply = {"id": "github/o__r", "title": "Verification", "discussion": [{"kind": "web", "url": "https://alpo.ge/remark.pdf"}]}
+        index.crosslink([paper, reply])
+        self.assertEqual(reply["discussion"][0]["record"], "web/custom-slug")
+        self.assertEqual(paper["discusses"], [{"id": "github/o__r", "title": "Verification"}])
 
     def test_discussion_is_served_without_x_text(self) -> None:
         x = {"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a", "text": "hi", "date": "2026-10-08", "added": "2026-10-09"}

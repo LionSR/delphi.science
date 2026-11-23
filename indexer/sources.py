@@ -885,6 +885,21 @@ class Doi(Source):
         )
 
 
+def web_key(url: str) -> str:
+    """Readable, deterministic key for a web URL: '<host>__<path-slug>' (matching source-fetch.ts webKey)."""
+    u = urllib.parse.urlsplit(url.strip())
+    host = (u.hostname or "").lower().removeprefix("www.")
+    raw = re.sub(r"\.(?:html?|pdf)$", "", u.path.rstrip("/"), flags=re.I)
+    slug = re.sub(r"[^a-z0-9]+", "-", raw.lower()).strip("-")
+    normalized = f"{u.scheme.lower()}://{u.netloc.lower()}{u.path or '/'}{('?' + u.query) if u.query else ''}"
+    h = hashlib.sha1(normalized.encode()).hexdigest()[:6]
+    if not slug:
+        return f"{host}__{h}"
+    if u.query or len(slug) > 64:
+        return f"{host}__{slug[:57].rstrip('-')}-{h}"
+    return f"{host}__{slug}"
+
+
 class Web(Source):
     """Anything else: the page's own citation_* or Open Graph tags."""
 
@@ -892,7 +907,7 @@ class Web(Source):
     patterns = [r"^(https?://\S+)$"]
 
     def key_of(self, m: re.Match[str]) -> str:
-        return hashlib.sha1(m.group(1).encode()).hexdigest()[:12]
+        return web_key(m.group(1))
 
     def fetch_url(self, url: str) -> dict[str, Any]:
         try:

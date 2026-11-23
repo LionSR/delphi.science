@@ -44,8 +44,18 @@ export class RetrievalError extends Error {
 }
 const inputError = () => new SourceInputError();
 const fail = (status: FailureStatus, reason: string): never => { throw new RetrievalError(status, reason); };
-/** A web record's key: the first 12 hex digits of its canonical URL's SHA-1 (sources.py Web). */
-export const webKey = (canonical: string) => createHash('sha1').update(canonical).digest('hex').slice(0, 12);
+/** A readable, deterministic key for a web URL: `<host>__<path-slug>` (matching sources.py Web). */
+export function webKey(canonical: string): string {
+	const url = new URL(canonical);
+	const host = url.hostname.toLowerCase().replace(/^www\./, '');
+	const raw = url.pathname.replace(/\/+$/, '').replace(/\.(?:html?|pdf)$/i, '');
+	const slug = raw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+	const normalized = `${url.protocol}//${url.host.toLowerCase()}${url.pathname || '/'}${url.search}`;
+	const hash = createHash('sha1').update(normalized).digest('hex').slice(0, 6);
+	if (!slug) return `${host}__${hash}`;
+	if (url.search || slug.length > 64) return `${host}__${slug.slice(0, 57).replace(/-+$/, '')}-${hash}`;
+	return `${host}__${slug}`;
+}
 const rejectCredential = (text: string) => { if (CREDENTIAL.test(text)) fail('unsupported_format', 'The public response contains credential-shaped text and was not retained.'); };
 const plainUrl = (url: URL) => url.protocol === 'https:' && !url.username && !url.password && !url.port && !url.hash;
 

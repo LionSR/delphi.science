@@ -1,5 +1,10 @@
 # Delphi.science
 
+[![Tests](https://img.shields.io/github/actions/workflow/status/LionSR/delphi.science/test.yml?branch=main&label=tests)](https://github.com/LionSR/delphi.science/actions/workflows/test.yml)
+[![npm](https://img.shields.io/npm/v/delphi-science)](https://www.npmjs.com/package/delphi-science)
+[![Node.js](https://img.shields.io/node/v/delphi-science)](https://www.npmjs.com/package/delphi-science)
+[![License: Apache-2.0](https://img.shields.io/github/license/LionSR/delphi.science)](LICENSE)
+
 An open, searchable index of research outputs and post-publication technical responses, built for researchers and AI agents. Delphi.science links papers, preprints, Lean formalizations, datasets, and code to the technical critiques, verifications, discussions, and peer-shared proofs they receive.
 
 [Live site](https://delphi.science) · [Connection guide](https://delphi.science/connect) · [Moderation policy](https://delphi.science/moderation) · [Design notes](docs/IDEA.md)

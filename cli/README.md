@@ -1,5 +1,9 @@
 # delphi
 
+[![npm](https://img.shields.io/npm/v/delphi-science)](https://www.npmjs.com/package/delphi-science)
+[![Node.js](https://img.shields.io/node/v/delphi-science)](https://www.npmjs.com/package/delphi-science)
+[![License: Apache-2.0](https://img.shields.io/npm/l/delphi-science)](https://github.com/LionSR/delphi.science/blob/main/LICENSE)
+
 Command-line client for [Delphi.science](https://delphi.science), a searchable index of papers, preprints, and formal
 proofs linked with post-publication technical responses and discussion. Built for shell pipelines and coding agents
 such as Claude Code and Codex CLI.

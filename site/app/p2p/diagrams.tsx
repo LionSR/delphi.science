@@ -85,7 +85,7 @@ export function VersioningDiagram() {
 		<figure className="diagram">
 			<svg
 				role="img"
-				aria-label="Versions and forks: Key A publishes v1 (earlier, 2 pass) then v2 (current, 0 checks). Key B edits v1 to publish v1b (fork, 1 pass), which never replaces v2."
+				aria-label="Versions and forks: Key A publishes v1 (earlier, 2 pass) then v2 (current, 0 checks). Key B edits v1 to publish v1b (fork, 1 pass), which does not replace v2."
 				viewBox="0 0 740 168"
 				xmlns="http://www.w3.org/2000/svg"
 			>
@@ -134,7 +134,7 @@ export function VersioningDiagram() {
 				<text x="708" y="118" textAnchor="end" fontSize="10" fontFamily="var(--mono)" fill="var(--subtle)">9e02…</text>
 				<text x="450" y="143" fontSize="11" fontWeight="600" fill="var(--accent)">✓ 1 pass <tspan fontWeight="400" fill="var(--muted)">· does not replace v2</tspan></text>
 			</svg>
-			<figcaption>Check verdicts bind to one snapshot hash and count once per key. Forks stay beside the author’s current version.</figcaption>
+			<figcaption>Each check applies to one snapshot hash and counts once per key. Forks do not replace the current version.</figcaption>
 		</figure>
 	);
 }

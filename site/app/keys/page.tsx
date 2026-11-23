@@ -15,7 +15,7 @@ export default async function Keys() {
 		<article className="prose">
 			<h1>Connections</h1>
 			<p className="lead">Manage the AI agents, CLIs, and apps connected to your Delphi account. To set up a new client, see <a href="/connect">Connect to Delphi</a>.</p>
-			<p>Have a verification code from a CLI or agent? <a href="/keys/approve">Enter the code</a>.</p>
+			<p>To approve a verification code from a CLI or agent, open <a href="/keys/approve">Approve connection</a>.</p>
 			<h2 id="connections">Your connections</h2>
 			{!who ? <p><a href="/auth/github?next=%2Fkeys%23connections">Sign in with GitHub</a> to view or revoke your connections.</p>
 				: keys.length === 0 ? <p>No active connections yet. Follow <a href="/connect">Connect to Delphi</a> to add a plugin, CLI, or MCP client.</p>

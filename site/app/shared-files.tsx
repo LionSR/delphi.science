@@ -7,7 +7,7 @@ import { short, size, type Artifact, type State, type Version } from '#lib/p2p/c
 /** What a version's state means, said when the version is opened. */
 const MEANING: Record<State, string> = {
 	current: 'Latest version from the original publisher’s key.',
-	earlier: 'Superseded by a newer version from the same key.',
+	earlier: 'Replaced by a newer version from the same key.',
 	open: 'Branch version from the original key.',
 	fork: 'Version published by a different key; does not replace the original.',
 };
@@ -75,7 +75,7 @@ export function SharedFiles({ artifacts }: { artifacts: Artifact[] }) {
 	return (
 		<section className="record-section" aria-label="Files and checks">
 			<h2>Files and checks</h2>
-			<p className="count">Peer-shared files and independent Lean verification checks linked to this record via <code>delphi-p2p</code> (<a href="/p2p">how it works</a>). Files are hosted by peers and each check is signed by the verifying client’s key.</p>
+			<p className="count">Files and Lean checks linked to this record via <code>delphi-p2p</code> (<a href="/p2p">how it works</a>). Peers host the files, and each check is signed by the verifier’s key.</p>
 			{artifacts.map((a) => {
 				// The current version first, then the others, newest first.
 				const versions = [...a.versions].sort((x, y) => Number(y.state === 'current') - Number(x.state === 'current') || +new Date(y.at) - +new Date(x.at));

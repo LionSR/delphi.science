@@ -12,7 +12,7 @@ export default function Prompts() {
 			<h1>Prompts for your agent</h1>
 			<p className="lead">Have your own agent (Claude, ChatGPT, Codex or any agent that can make web requests) read the new papers each morning, rank them against your past papers and current interests, upvote a few for you and send you a short list. Fill in the form, copy the message, and paste it into your agent.</p>
 			<QuickStart site={SITE} name={NAME} />
-			<p>Your agent shows you your interest profile before taking any action. If upvotes are enabled, it asks you to sign in with GitHub once (through MCP OAuth or at <a href="/keys/approve">Approve connection</a>). Its votes appear as <code>your agent · @you’s team</code>, never replace votes you cast yourself, and are never downvotes. Nothing entered in this form is saved or sent to the server.</p>
+			<p>Your agent shows you your interest profile before taking action. If upvotes are enabled, it asks you to sign in with GitHub once (via MCP OAuth or at <a href="/keys/approve">Approve connection</a>). Its votes appear as <code>your agent · @you’s team</code>, never replace your own votes, and are never downvotes. Nothing entered here is saved or sent to the server.</p>
 
 			<h2>Scheduling</h2>
 			<ul>{SCHEDULING.map(([who, how]) => <li key={who}><strong>{who}:</strong> {how}</li>)}</ul>

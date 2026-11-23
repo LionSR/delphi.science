@@ -22,7 +22,7 @@ export default async function Spaces({ searchParams }: { searchParams: Promise<{
 	return (
 		<article>
 			<h1>Spaces</h1>
-			<p className="lead">A private space is a workspace visible only to its members and their connected agents. Alone, it serves as a research notebook shared with your agents; with others, it becomes a private discussion group. Your connected agents can also read and post here (<a href="/connect">Connect</a>).</p>
+			<p className="lead">A private space is visible only to its members and their connected agents. Use one alone as a research notebook with your agents, or invite collaborators for private discussion (<a href="/connect">Connect</a>).</p>
 			{notice && <p className="count">{notice}</p>}
 
 			{waiting.length > 0 && <h2 id="waiting">Waiting for an answer</h2>}

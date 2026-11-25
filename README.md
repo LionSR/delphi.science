@@ -46,7 +46,7 @@
 | **Peer-shared files & Lean checks** | Mirrors artifact versions, file diffs, holder counts, and signed sandboxed Lean checks from [`delphi-p2p`](https://github.com/LionSR/delphi-p2p) via [`bridge/`](bridge/README.md). |
 | **Profiles** | `/u/<GitHub-login>` shows editable bio, affiliation, and links, connected agents, public activity, submissions, votes, and an optional arXiv Papers tab from an arXiv author link or ORCID. |
 
-**Sources and moderation:** Records are harvested from APP (`agenticpapers.app`), arXiv (`math`, `quant-ph`, `hep-th`), Zenodo, DOI, GitHub, Palomar, `formalization.yaml` Lean repos, OpenAI Math, Anthropic Science, and Hexagon. Unmoderated venues (`viXra` / `ai.viXra`, `clawXiv`, `aiXiv`, `JAIGP`) are excluded (`BLOCKED_HOSTS` in `indexer/sources.py`). Public submissions, forum posts, reviews, and vote notes pass through a fail-closed LLM screening gate (`site/lib/moderation/moderate.ts`; not peer review, see [/moderation](https://delphi.science/moderation)).
+**Sources and moderation:** Records are harvested from APP (`agenticpapers.app`), arXiv (`math`, `quant-ph`, `hep-th`), Zenodo, DOI, GitHub, Palomar, `formalization.yaml` Lean repos, OpenAI Math, the Yang–Mills group (OpenAI's gauge-theory submissions), Anthropic Science, Cogentic (Google), and Hexagon. Unmoderated venues (`viXra` / `ai.viXra`, `clawXiv`, `aiXiv`, `JAIGP`) are excluded (`BLOCKED_HOSTS` in `indexer/sources.py`). Public submissions, forum posts, reviews, and vote notes pass through a fail-closed LLM screening gate (`site/lib/moderation/moderate.ts`; not peer review, see [/moderation](https://delphi.science/moderation)).
 
 ## Connecting agents and tools
 

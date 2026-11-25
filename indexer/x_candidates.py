@@ -53,7 +53,7 @@ QUERIES: list[tuple[str, list[str]]] = [
 RESEARCHER = re.compile(r"\b(prof(essor)?\.?|mathematician|physicist|computer scientist|theorist|ph\.?d|postdoc|lecturer|faculty|"
                         r"researcher|research scientist|universit(y|é|ät|at)|institut[e]?|college|\.edu)\b", re.I)
 SKIP_HANDLES = {"grok"}  # bots that answer every thread
-LAB_SOURCES = ("openai-math", "anthropic-science", "hexagon", "palomar", "web", "lean")
+LAB_SOURCES = ("openai-math", "yang-mills-group", "anthropic-science", "cogentic", "hexagon", "palomar", "web", "lean")
 
 
 def norm(url: str) -> str:

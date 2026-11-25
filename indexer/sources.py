@@ -365,6 +365,14 @@ class Source:
         return e
 
 
+def owner_name(login: str) -> str:
+    """A GitHub account's display name (Anthropic for anthropics), or its login when it has none."""
+    try:
+        return clean(get_json(f"https://api.github.com/users/{login}").get("name")) or login
+    except (NotFound, SourceError):
+        return login
+
+
 MINOR_WORDS = frozenset({"a", "an", "and", "as", "at", "by", "for", "from", "in", "of", "on", "or", "the", "to", "via", "with"})
 
 
@@ -401,7 +409,7 @@ class GitHub(Source):
             url=d["html_url"],
             repo=d["html_url"],
             title=repo_title(d["name"]),
-            authors=[d["owner"]["login"]],
+            authors=[owner_name(d["owner"]["login"])],
             summary=trim(d.get("description")),
             tags=d.get("topics") or [],
             published=iso_date(d.get("created_at")),
@@ -750,7 +758,7 @@ class Formalization(Source):
             key,
             url=f"https://github.com/{repo}/tree/{branch}/{folder}".rstrip("/"),
             title=clean(proj.get("name")) or folder or repo,
-            authors=authors or [repo.split("/")[0]],
+            authors=authors or [owner_name(repo.split("/")[0])],
             summary=trim(proj.get("description")),
             published=iso_date(info.get("created_at")),
             updated=iso_date(info.get("pushed_at")),

@@ -344,6 +344,10 @@ export async function get(db: Db, id: string) {
 	return rows[0]?.record ?? null;
 }
 
+/** How many records each subject division has, most first. Records with no subject are left out. */
+export const divisionCounts = async (d: Db) => (await d.query<{ division: string; n: number }>(
+	"SELECT division, count(*)::int AS n FROM open_index.records WHERE division <> '' GROUP BY division ORDER BY n DESC")).rows;
+
 /** How many records each source has, most first. */
 export const sourceCounts = async (d: Db) => (await d.query<{ source: string; n: number }>(
 	'SELECT source, count(*)::int AS n FROM open_index.records GROUP BY source ORDER BY n DESC')).rows;

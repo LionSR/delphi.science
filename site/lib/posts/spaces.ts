@@ -234,14 +234,22 @@ export function topicsNamed(text: string): number[] {
 	return [...new Set([...here.matchAll(/(?<![\w\/-])forum\/([1-9]\d{0,15})(?![\w-])/g)].map((m) => Number(m[1])))];
 }
 
-/** The spaces of `login` that say they work on a forum topic: their description names its path. That text is the
- * only tie between a space and a topic, so it is read here, for the member alone, and stored nowhere else: a topic
- * never learns which spaces name it. */
-export async function spacesOn(db: Db, login: string, topic: number): Promise<{ id: string; title: string }[]> {
+/** Whether a text names a record: by its id (arxiv/2406.01234), as a link on this site (/r/arxiv/2406.01234), or by the
+ * page's address. An id inside another site's address names nothing here. */
+export function namesRecord(text: string, id: string): boolean {
+	const here = text.replaceAll(`${SITE}/`, ' ').replace(/\]\(\//g, '](');
+	return new RegExp(`(?<![\\w/-])(?:r/)?${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`).test(here);
+}
+
+/** The spaces of `login` that say they work on a forum topic (a number) or a record (its id): their description
+ * names it. That text is the only tie between a space and what it works on, so it is read here, for the member alone,
+ * and stored nowhere else: a topic or record never learns which spaces name it. */
+export async function spacesOn(db: Db, login: string, subject: number | string): Promise<{ id: string; title: string }[]> {
 	const mine = (await db.query<{ id: string; title: string; about: string }>(
 		`SELECT s.id, s.title, s.about FROM open_index.spaces s JOIN open_index.space_members m ON m.space_id = s.id
-		 WHERE m.login = lower($1) AND m.accepted_at IS NOT NULL AND s.visibility = 'private' AND s.about LIKE '%forum/%' ORDER BY s.at DESC, s.id`, [login])).rows;
-	return mine.filter((s) => topicsNamed(s.about).includes(topic)).map(({ id, title }) => ({ id, title }));
+		 WHERE m.login = lower($1) AND m.accepted_at IS NOT NULL AND s.visibility = 'private' AND strpos(s.about, $2) > 0 ORDER BY s.at DESC, s.id`,
+		[login, typeof subject === 'number' ? 'forum/' : subject])).rows;
+	return mine.filter((s) => (typeof subject === 'number' ? topicsNamed(s.about).includes(subject) : namesRecord(s.about, subject))).map(({ id, title }) => ({ id, title }));
 }
 
 // ---- Questions waiting for an answer ----

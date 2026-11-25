@@ -758,7 +758,7 @@ def reception(record: str | None, draft: bool, text: str | None, reviewed_by: st
 # Entry fields served as they are; to_item adds id, tags, published, category and subject.
 PASSTHROUGH = ("source", "url", "title", "authors", "summary", "domain", "origin", "agent_ready", "gone", "stars", "pdf",
                "family", "family_title", "formalized", "withdrawn", "withdrawn_on", "verified", "trust", "ai_models",
-               "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json")
+               "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json", "problem")
 PREFIXES = json.loads((ROOT / "site" / "lib" / "records" / "prefixes.json").read_text())["prefixes"]
 # An X post's text is shown by X's own embed, so it is never served.
 X_FIELDS = ("kind", "url", "author", "handle", "date", "added", "stance")
@@ -776,35 +776,49 @@ def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
     subject = TX.subject_of(e.get("domain"), r.get("subject"))
     links = e.get("discussion") or []
     return _drop_empty({
+        # A problem has no publication date, so it sorts after dated work instead of taking the day it was added.
         "id": rid(e), **{k: e.get(k) for k in PASSTHROUGH}, "discussion": [served_link(d) for d in links],
         "disputed": disputed(links) or None, "reception": published_reception(e),
         "tags": list(dict.fromkeys([*(e.get("tags") or []), *(r.get("tags") or [])]))[:10],
-        "published": e.get("published") or e.get("added"), "category": r.get("category", "research"),
+        "published": e.get("published") or (None if e.get("problem") else e.get("added")), "category": r.get("category", "research"),
         "subject": subject, "division": TX.division_of(subject) if subject else None,
     })
 
 
 def crosslink(all_items: list[dict[str, Any]]) -> None:
     """Links indexed records to each other: a discussion link to a paper that is also in the index gets a
-    "record" field, and that record lists the item under "discusses"."""
+    "record" field, and that record lists the item under "discusses". A record's "formalizes" target is linked
+    the same way, and the target lists the record under "formalized_by"."""
     by_id = {it["id"]: it for it in all_items}
     by_url = {S.identity(it["url"]): it for it in all_items if it.get("url")}
+
+    def indexed(url: str) -> dict[str, Any] | None:
+        try:
+            src, key = S.detect(url)
+            if src.name != "web" and (found := by_id.get(f"{src.name}/{key}")):
+                return found
+        except ValueError:
+            pass
+        return by_url.get(S.identity(url))
+
     for it in all_items:
         for link in it.get("discussion") or []:
-            target = None
-            try:
-                src, key = S.detect(link["url"])
-                if src.name != "web":
-                    target = by_id.get(f"{src.name}/{key}")
-            except ValueError:
-                pass
-            target = target or by_url.get(S.identity(link["url"]))
+            target = indexed(link["url"])
             if not target or target is it:
                 continue
             link["record"] = target["id"]
             discusses = target.setdefault("discusses", [])
             if all(d["id"] != it["id"] for d in discusses):
                 discusses.append({"id": it["id"], "title": it["title"]})
+        for f in it.get("formalizes") or []:
+            target = indexed(f.get("identifier") or "")
+            if not target or target is it:
+                continue
+            f["record"] = target["id"]
+            f.setdefault("title", target["title"])
+            by = target.setdefault("formalized_by", [])
+            if all(b["id"] != it["id"] for b in by):
+                by.append({"id": it["id"], "title": it["title"]})
 
 
 def items(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:

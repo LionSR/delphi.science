@@ -63,6 +63,7 @@ class Detect(unittest.TestCase):
         "10.1038/nature14539": ("doi", "10.1038__nature14539"),
         "https://huggingface.co/datasets/openai/gsm8k": ("huggingface", "datasets__openai__gsm8k"),
         "PALOMAR-2026-10-23-000018": ("palomar", "PALOMAR-2026-10-23-000018"),
+        "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Kourovka/1_40.lean": ("formal-conjectures", "Kourovka__1_40"),
         "https://blog.example.org/posts/open-chains/": ("web", "blog.example.org__posts-open-chains"),
         "https://www.alpo.ge/remark.pdf": ("web", "alpo.ge__remark"),
     }
@@ -78,6 +79,37 @@ class Detect(unittest.TestCase):
         for url in ["https://ai.vixra.org/abs/2610.0054", "https://vixra.org/abs/2401.0001"]:
             with self.subTest(url=url), self.assertRaises(ValueError):
                 S.detect(url)
+
+
+class Problems(unittest.TestCase):
+    LEAN = """/-!
+# Conjecture 1.40
+-/
+/-- A helper. -/
+def helper := 1
+
+/-- A partial result. -/
+@[category research solved, AMS 20]
+theorem partial_result : True := by sorry
+
+/-- Is every such group a nilgroup? -/
+set_option linter.x false in
+@[category research open, question, AMS 20]
+theorem main : True := by sorry
+"""
+
+    def test_a_lean_file_becomes_an_open_problem_with_its_own_docstring(self) -> None:
+        src = S.BY_NAME["formal-conjectures"]
+        e = src._entry("Kourovka/1_40", self.LEAN)
+        self.assertEqual((e["title"], e["summary"], e["domain"]), ("Kourovka Notebook 1.40", "Is every such group a nilgroup?", "math.GR"))
+        self.assertEqual(e["problem"], {"status": "open", "collection": "kourovka", "number": "1.40"})
+        posed = src._entry("Arxiv/2602.05192/First", self.LEAN.replace("AMS 20]", 'AMS 20, formal_proof using lean4 at "https://github.com/o/r/blob/main/P.lean"]', 1))
+        self.assertEqual((posed["summary"], posed["formalizations"]), ("", ["https://github.com/o/r/blob/main/P.lean"]))
+        paper = {"id": "arxiv/2602.05192", "title": "First Proof", "url": "https://arxiv.org/abs/2602.05192"}
+        problem = {"id": "formal-conjectures/Arxiv__2602.05192__First", "title": posed["title"], "url": posed["url"], "formalizes": posed["formalizes"]}
+        index.crosslink([paper, problem])
+        self.assertEqual((posed["formalizes"][0]["record"], posed["formalizes"][0]["title"], paper["formalized_by"]), ("arxiv/2602.05192", "First Proof", [{"id": problem["id"], "title": posed["title"]}]))
+        self.assertIsNone(src._entry("Other/Helpers", "@[category test, AMS 11]\ntheorem t : True := by sorry"))
 
 
 class BoundedWeb(unittest.TestCase):

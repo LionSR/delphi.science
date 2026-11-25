@@ -41,7 +41,7 @@
 						"schema": {
 							"type": "string",
 							"maxLength": 2000,
-							"description": "For records: arXiv-style query. ti: au: abs: all: title, author, abstract, every text field (a bare word searches all); cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes; source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000; is: formalized, verified, withdrawn, agent-ready, ai-generated, app, gone, discussed, disputed; published: published:[2026-10-01 TO *], published:2026-09. AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed. Empty lists everything. For the forum (in=forum): plain words to find in topics and replies (\"quoted phrases\", -excluded words)."
+							"description": "For records: arXiv-style query. ti: au: abs: all: title, author, abstract, every text field (a bare word searches all); cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes; source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000; is: formalized, verified, withdrawn, agent-ready, ai-generated, app, gone, problem, open, solved, discussed, disputed; published: published:[2026-10-01 TO *], published:2026-09. AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed. Empty lists everything. For the forum (in=forum): plain words to find in topics and replies (\"quoted phrases\", -excluded words)."
 						}
 					},
 					{

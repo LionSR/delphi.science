@@ -21,7 +21,7 @@ import store  # noqa: E402
 
 PER_SOURCE = 40  # the first, by id, of each source
 PER_FIELD = 20  # entries that carry each of these fields
-FIELDS = ("review", "withdrawn", "formalizes", "ai_models", "authorship")
+FIELDS = ("review", "withdrawn", "formalizes", "ai_models", "authorship", "problem")
 # What search.test.ts searches for: titles with "lattice", Claude as an author, "zero-free" in an abstract.
 NAMED = ("entry->>'title' ILIKE '%%lattice%%'", "entry->>'authors' ILIKE '%%claude%%'", "entry->>'summary' ILIKE '%%zero-free%%'")
 

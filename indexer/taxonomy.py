@@ -73,6 +73,15 @@ FROM_NAME = {
     "condensed-matter physics": "cond-mat", "mechanistic-interpretability": "cs.LG", "scientific-publication": "cs.DL",
 }
 
+# Mathematics Subject Classification areas (two digits) that sources tag problems with, mapped to codes.
+FROM_MSC = {
+    3: "math.LO", 5: "math.CO", 11: "math.NT", 13: "math.AC", 14: "math.AG", 15: "math.RA", 16: "math.RA", 17: "math.RA", 18: "math.CT",
+    19: "math.KT", 20: "math.GR", 26: "math.CA", 28: "math.CA", 30: "math.CV", 32: "math.CV", 33: "math.CA", 34: "math.CA", 35: "math.AP",
+    37: "math.DS", 40: "math.CA", 41: "math.CA", 42: "math.CA", 46: "math.FA", 47: "math.FA", 49: "math.OC", 51: "math.MG", 52: "math.MG",
+    53: "math.DG", 54: "math.GN", 55: "math.AT", 57: "math.GT", 60: "math.PR", 62: "math.ST", 65: "math.NA", 81: "quant-ph", 83: "gr-qc",
+    90: "math.OC", 94: "math.IT",
+}
+
 CODE = re.compile(r"^(?:[a-z]+(?:-[a-z]+)?)(?:\.[A-Za-z-]+)?$")
 # The site's search (site/lib/records/query.ts) reads these rules from this file.
 JSON_PATH = Path(__file__).resolve().parent.parent / "site" / "lib" / "records" / "taxonomy.json"

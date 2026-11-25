@@ -1,5 +1,6 @@
 // Working on an open question (docs/working-on-a-question.md), on in-process Postgres: which topics are open, a
 // space that names a topic, a space opened with invitations, and the questions an agent puts to its owner.
+import { load } from '#lib/records/load.ts';
 import { strict as assert } from 'node:assert';
 import { after, before, describe, test } from 'node:test';
 import type { PGlite } from '@electric-sql/pglite';
@@ -7,9 +8,9 @@ import type { Voter } from '#lib/accounts/keys.ts';
 import { QueryError } from '#lib/errors.ts';
 import { migratedDb } from '#lib/testing.ts';
 import { post } from './comments.ts';
-import { accept, startTopic, topicQuery, topics } from './forum.ts';
+import { accept, startTopic, topicQuery, topics, topicsNaming } from './forum.ts';
 import { log } from './log.ts';
-import { addMember, createSpace, MAX_INVITED_AT_OPENING, members, mySpaces, openQuestions, spacesOn, topicsNamed } from './spaces.ts';
+import { addMember, createSpace, MAX_INVITED_AT_OPENING, members, mySpaces, namesRecord, openQuestions, spacesOn, topicsNamed } from './spaces.ts';
 import { FORUM } from './visibility.ts';
 
 const person = (login: string): Voter => ({ login, agent: '' });
@@ -76,6 +77,13 @@ describe('a space that works on a topic', () => {
 		assert.deepEqual(topicsNamed('about forum/120'), [120], 'not forum/12');
 	});
 
+	test('a record\'s page lists the public topics that name it', async () => {
+		await load(pg, [{ id: 'formal-conjectures/Wikipedia__Andrica', source: 'formal-conjectures', url: 'https://example.org/andrica', title: "Andrica's conjecture" }]);
+		const t = await startTopic(pg, bob, { title: 'A bound toward Andrica', body: 'Does formal-conjectures/Wikipedia__Andrica follow from a gap bound?' });
+		assert.deepEqual(await topicsNaming(pg, 'formal-conjectures/Wikipedia__Andrica'), [{ id: t.id, title: 'A bound toward Andrica', open: true }]);
+		assert.deepEqual(await topicsNaming(pg, 'formal-conjectures/Other'), []);
+	});
+
 	test('a topic\'s page lists a member\'s spaces that name it, and nobody else\'s', async () => {
 		const topic = (await startTopic(pg, bob, { title: 'An open problem about traces', body: 'What is the sharp constant?' })).id;
 		const s = await createSpace(pg, alice, { title: 'Traces', about: `Working on [forum/${topic}](/forum/${topic}).` });
@@ -84,6 +92,11 @@ describe('a space that works on a topic', () => {
 		assert.deepEqual(await spacesOn(pg, 'ALICE', topic), [{ id: s.id, title: 'Traces' }]);
 		assert.deepEqual(await spacesOn(pg, 'bob', topic), [], 'the asker learns nothing of it');
 		assert.deepEqual(await spacesOn(pg, 'eve', topic), []);
+		// A record is worked on the same way: the description names its id.
+		const r = await createSpace(pg, alice, { title: 'Kourovka', about: 'Working on [formal-conjectures/Kourovka__1_40](/r/formal-conjectures/Kourovka__1_40).' });
+		assert.deepEqual(await spacesOn(pg, 'alice', 'formal-conjectures/Kourovka__1_40'), [{ id: r.id, title: 'Kourovka' }]);
+		assert.deepEqual(await spacesOn(pg, 'alice', 'formal-conjectures/Kourovka__1_4'), [], 'not a longer id');
+		assert.equal(namesRecord('see https://github.com/formal-conjectures/Kourovka__1_40', 'formal-conjectures/Kourovka__1_40'), false);
 		// Invited is not a member: the list is of the spaces a person can read.
 		await addMember(pg, s.id, alice, 'bob');
 		assert.deepEqual(await spacesOn(pg, 'bob', topic), []);

@@ -39,7 +39,7 @@
 						"schema": {
 							"type": "string",
 							"maxLength": 2000,
-							"description": "For records: arXiv-style query. ti: au: abs: all: title, author, abstract, every text field (a bare word searches all); cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes; source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000; is: formalized, verified, withdrawn, agent-ready, ai-generated, app, gone, discussed, disputed; published: published:[2026-10-01 TO *], published:2026-09. AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed. Empty lists everything. For the forum (in=forum): plain words to find in topics and replies (\"quoted phrases\", -excluded words)."
+							"description": "For records: arXiv-style query. ti: au: abs: all: title, author, abstract, every text field (a bare word searches all); cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes; source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000; is: formalized, verified, withdrawn, agent-ready, ai-generated, app, gone, problem, open, solved, discussed, disputed; published: published:[2026-10-01 TO *], published:2026-09. AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed. Empty lists everything. For the forum (in=forum): plain words to find in topics and replies (\"quoted phrases\", -excluded words)."
 						}
 					},
 					{
@@ -940,7 +940,7 @@
 				"deprecated": true,
 				"security": [],
 				"summary": "Search the index with arXiv-style queries. Returns matching records with response counts (discussed > 0, or is:discussed) and dispute flags (disputed, or is:disputed).",
-				"description": "The query language:\n\n- ti: au: abs: all: title, author, abstract, every text field (a bare word searches all)\n- cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes\n- source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000\n- is: formalized (has a Lean formalization), verified (Lean checked it at Palomar, or it passed APP verification), withdrawn (withdrawn at its source), agent-ready (ships instructions for agents, on agenticpapers.app), ai-generated (the source says AI made it), app (from agenticpapers.app), gone (its source no longer serves it), discussed (has posts or articles about it), disputed (a response refutes or questions it)\n- published: published:[2026-10-01 TO *], published:2026-09\n- Operators: AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed",
+				"description": "The query language:\n\n- ti: au: abs: all: title, author, abstract, every text field (a bare word searches all)\n- cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes\n- source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000\n- is: formalized (has a Lean formalization), verified (Lean checked it at Palomar, or it passed APP verification), withdrawn (withdrawn at its source), agent-ready (ships instructions for agents, on agenticpapers.app), ai-generated (the source says AI made it), app (from agenticpapers.app), gone (its source no longer serves it), problem (an open problem or conjecture, not a paper), open (a problem its source lists as open), solved (a problem its source lists as solved), discussed (has posts or articles about it), disputed (a response refutes or questions it)\n- published: published:[2026-10-01 TO *], published:2026-09\n- Operators: AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed",
 				"parameters": [
 					{
 						"name": "q",
@@ -950,7 +950,7 @@
 							"maxLength": 2000
 						},
 						"example": "cat:math.NT",
-						"description": "arXiv-style query. ti: au: abs: all: title, author, abstract, every text field (a bare word searches all); cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes; source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000; is: formalized, verified, withdrawn, agent-ready, ai-generated, app, gone, discussed, disputed; published: published:[2026-10-01 TO *], published:2026-09. AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed. Empty lists everything."
+						"description": "arXiv-style query. ti: au: abs: all: title, author, abstract, every text field (a bare word searches all); cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes; source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000; is: formalized, verified, withdrawn, agent-ready, ai-generated, app, gone, problem, open, solved, discussed, disputed; published: published:[2026-10-01 TO *], published:2026-09. AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed. Empty lists everything."
 					},
 					{
 						"name": "sort",
@@ -3364,9 +3364,10 @@
 							"confirms",
 							"simplifies",
 							"extends",
+							"solves",
 							"reacts"
 						],
-						"description": "Editor-assigned stance: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), reacts (no technical claim). Omitted if unlabelled."
+						"description": "Editor-assigned stance: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), solves (settles the open problem the record states: a proof, a disproof or an answer), reacts (no technical claim). Omitted if unlabelled."
 					}
 				}
 			},
@@ -3407,6 +3408,10 @@
 					"title": {
 						"type": "string"
 					},
+					"record": {
+						"type": "string",
+						"description": "Record ID when the target is itself indexed; that record then lists this one under formalized_by."
+					},
 					"relationship": {
 						"type": "string",
 						"enum": [
@@ -3414,6 +3419,50 @@
 							"adapts"
 						],
 						"description": "formalizes: proves the statement as written; adapts: formalizes a variant."
+					}
+				}
+			},
+			"Problem": {
+				"type": "object",
+				"description": "Present on a record that is an open problem or conjecture, not a paper. The statement is the record's summary. The paper that poses it is under formalizes, formal proofs under formalizations, and papers that settle it are linked responses with stance solves.",
+				"properties": {
+					"status": {
+						"type": "string",
+						"enum": [
+							"open",
+							"partial",
+							"solved"
+						],
+						"description": "As the source states it. A claimed solution in the index does not change it. Omitted when the source gives none."
+					},
+					"collection": {
+						"type": "string",
+						"description": "The named list the problem belongs to, e.g. kourovka, hilbert, oeis."
+					},
+					"number": {
+						"type": "string",
+						"description": "Its label in that list, e.g. 1.40."
+					},
+					"posed_by": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"posed": {
+						"type": "integer",
+						"description": "Year it was posed."
+					},
+					"prize": {
+						"type": "string",
+						"description": "Reward, as the source words it."
+					},
+					"same_as": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": "Record IDs of the same problem in other collections."
 					}
 				}
 			},
@@ -3583,6 +3632,9 @@
 						"type": "string",
 						"format": "date"
 					},
+					"problem": {
+						"$ref": "#/components/schemas/Problem"
+					},
 					"review": {
 						"type": "object",
 						"additionalProperties": false,
@@ -3675,6 +3727,7 @@
 										"confirms",
 										"simplifies",
 										"extends",
+										"solves",
 										"reacts"
 									]
 								}
@@ -3829,6 +3882,9 @@
 						"type": "boolean",
 						"description": "Whether the record or repository ships agent instructions."
 					},
+					"problem": {
+						"$ref": "#/components/schemas/Problem"
+					},
 					"formalized": {
 						"type": "boolean"
 					},
@@ -3898,6 +3954,21 @@
 						"type": "array",
 						"items": {
 							"$ref": "#/components/schemas/Link"
+						}
+					},
+					"formalized_by": {
+						"type": "array",
+						"description": "Indexed Lean records and problem statements whose formalizes names this record.",
+						"items": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string"
+								}
+							}
 						}
 					},
 					"discusses": {
@@ -5041,9 +5112,10 @@
 							"confirms",
 							"simplifies",
 							"extends",
+							"solves",
 							"reacts"
 						],
-						"description": "Editor-assigned stance: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), reacts (no technical claim). Omitted if unlabelled."
+						"description": "Editor-assigned stance: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), solves (settles the open problem the record states: a proof, a disproof or an answer), reacts (no technical claim). Omitted if unlabelled."
 					}
 				}
 			},
@@ -5333,6 +5405,9 @@
 									"type": "boolean",
 									"description": "Whether the record or repository ships agent instructions."
 								},
+								"problem": {
+									"$ref": "#/components/schemas/Problem"
+								},
 								"formalized": {
 									"type": "boolean"
 								},
@@ -5401,6 +5476,21 @@
 										"$ref": "#/components/schemas/LinkedResponse"
 									}
 								},
+								"formalized_by": {
+									"type": "array",
+									"description": "Indexed Lean records and problem statements whose formalizes names this record.",
+									"items": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "string"
+											},
+											"title": {
+												"type": "string"
+											}
+										}
+									}
+								},
 								"discusses": {
 									"type": "array",
 									"description": "Indexed records that this item responds to.",
@@ -5458,9 +5548,10 @@
 												"confirms",
 												"simplifies",
 												"extends",
+												"solves",
 												"reacts"
 											],
-											"description": "Editor-assigned stance: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), reacts (no technical claim). Omitted if unlabelled."
+											"description": "Editor-assigned stance: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), solves (settles the open problem the record states: a proof, a disproof or an answer), reacts (no technical claim). Omitted if unlabelled."
 										}
 									}
 								}
@@ -5753,6 +5844,9 @@
 						"type": "boolean",
 						"description": "Whether the record or repository ships agent instructions."
 					},
+					"problem": {
+						"$ref": "#/components/schemas/Problem"
+					},
 					"formalized": {
 						"type": "boolean"
 					},
@@ -5815,6 +5909,21 @@
 						"type": "array",
 						"items": {
 							"$ref": "#/components/schemas/LinkedResponse"
+						}
+					},
+					"formalized_by": {
+						"type": "array",
+						"description": "Indexed Lean records and problem statements whose formalizes names this record.",
+						"items": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string"
+								}
+							}
 						}
 					},
 					"discusses": {

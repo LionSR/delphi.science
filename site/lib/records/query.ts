@@ -26,8 +26,9 @@ const IS_FLAGS: Record<string, [sql: string, meaning: string]> = {
 	app: ["r.source = 'app'", 'from agenticpapers.app'],
 	gone: ['r.gone', 'its source no longer serves it'],
 	problem: ["r.record ? 'problem'", 'an open problem or conjecture, not a paper'],
-	open: ["r.record->'problem'->>'status' = 'open'", 'a problem its source lists as open'],
-	solved: ["r.record->'problem'->>'status' = 'solved'", 'a problem its source lists as solved'],
+	// The test for a problem comes first in each, so the partial index records_problem serves them.
+	open: ["(r.record ? 'problem' AND r.record->'problem'->>'status' = 'open')", 'a problem its source lists as open'],
+	solved: ["(r.record ? 'problem' AND r.record->'problem'->>'status' = 'solved')", 'a problem its source lists as solved'],
 	discussed: ['r.discussed > 0', 'has posts or articles about it'],
 	disputed: ['r.disputed', 'a response refutes or questions it'],
 };

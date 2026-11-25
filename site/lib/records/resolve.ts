@@ -21,6 +21,7 @@ const SUMMARY_CHARS = 600;
 const DAILY = [
 	/^(?:https?:\/\/)?github\.com\/SakanaAI\/AI-Scientist\/(?:blob|tree)\/main\/example_papers\//i,
 	/^(?:https?:\/\/)?github\.com\/openai\/math\/(?:blob|tree)\/main\/preprints\//i,
+	/^(?:https?:\/\/)?github\.com\/google-research\/google-research\/(?:blob|tree)\/[^/]+\/cogentic_research_papers\//i,
 	/^(?:https?:\/\/)?github\.com\/[\w.-]+\/[\w.-]+\/blob\/[^/]+\/(?:[\w./-]+?\/)?formalization\.yaml$/i,
 ];
 

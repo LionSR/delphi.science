@@ -914,6 +914,55 @@ class UnsolvedMath(Source):
                 yield self._entry(p)
 
 
+class Qiqc(Source):
+    """qiqc-op.com: the Quantum Information and Quantum Computation Open Problem Zoo, a catalog kept by named researchers.
+
+    Its catalog text is CC BY 4.0 only for the records its LICENSING.md lists as confirmed by their authors; earlier
+    text waits for that. So a record keeps its statement only when the file lists it, and is otherwise title, status,
+    fields and link.
+    """
+
+    name, label = "qiqc", "QIQCOP Zoo"
+    HOME = "https://qiqc-op.com"
+    LICENSING = "https://raw.githubusercontent.com/Naixu-Guo/quantum-open-problems/main/LICENSING.md"
+    patterns = [r"^(?:https?://)?qiqc-op\.com/problem/(op_[0-9a-f]{16})(?:/.*)?$", r"^(op_[0-9a-f]{16})$"]
+    STATUS = {"Unsolved": "open", "Solved": "solved"}
+
+    @functools.cache
+    def _catalog(self) -> tuple[dict[str, dict[str, Any]], frozenset[str]]:
+        """Every problem by id, and the ids whose text the licensing file says is confirmed CC BY 4.0."""
+        problems = {p["id"]: p for p in get_json(f"{self.HOME}/api/index.json")["problems"]}
+        return problems, frozenset(re.findall(r"problems_json/(op_[0-9a-f]{16})\.json", get_text(self.LICENSING)))
+
+    def _entry(self, p: dict[str, Any], licensed: bool) -> dict[str, Any]:
+        posed = (p.get("metadata") or {}).get("posed")
+        return self.entry(
+            p["id"],
+            url=p.get("url") or f"{self.HOME}/problem/{p['id']}/",
+            json=p.get("json") or "",
+            title=clean(p.get("title")),
+            summary=trim(p.get("statement")) if licensed else "",
+            domain="quant-ph",
+            tags=[*(p.get("fields") or []), *(p.get("topics") or [])][:10],
+            updated=iso_date(p.get("updated")),
+            license="CC-BY-4.0" if licensed else "",
+            problem={k: v for k, v in (("status", self.STATUS.get(p.get("status") or "")), ("collection", "qiqc"),
+                                       ("posed", int(posed) if str(posed or "").isdigit() else None)) if v},
+        )
+
+    def fetch(self, key: str) -> dict[str, Any]:
+        problems, licensed = self._catalog()
+        if key not in problems:
+            raise NotFound(key)
+        return self._entry(problems[key], key in licensed)
+
+    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
+        problems, licensed = self._catalog()
+        for key, p in problems.items():
+            if clean(p.get("title")):
+                yield self._entry(p, key in licensed)
+
+
 class AnthropicScience(Source):
     """anthropic.com/science: Anthropic's posts on research done with Claude."""
 
@@ -1080,7 +1129,7 @@ class Web(Source):
 
 
 # The first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
-SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), UnsolvedMath(), GitHub(), Doi(), Web()]
+SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), Qiqc(), UnsolvedMath(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 

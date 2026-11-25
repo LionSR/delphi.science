@@ -39,7 +39,7 @@ import sources as S
 
 # The AI labs, by the names that mark a text as being about their work, with the sources that hold their records. Names
 # match whole and with their case, so "hexagonal" and "the hexagon of exponents" are not mentions.
-LABS: dict[str, tuple[str, ...]] = {"OpenAI": ("openai-math",), "GPT": ("openai-math",),
+LABS: dict[str, tuple[str, ...]] = {"OpenAI": ("openai-math", "yang-mills-group"), "GPT": ("openai-math", "yang-mills-group"),
                                     "Anthropic": ("anthropic-science", "lean"), "Claude": ("anthropic-science", "lean"),
                                     "Cogentic": ("cogentic",)}
 MENTIONS = re.compile(rf"\b(?:{'|'.join(LABS)})\b")

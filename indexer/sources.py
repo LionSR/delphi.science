@@ -130,6 +130,20 @@ def trim(text: str | None, n: int = SUMMARY_CHARS) -> str:
     return text if len(text) <= n else text[: n - 1].rsplit(" ", 1)[0] + "…"
 
 
+def markdown_text(markdown: str) -> str:
+    """Markdown as text for clean(): links become their text, emphasis and code marks go, and < and > in formulas stay."""
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", markdown).replace("**", "").replace("`", "")
+    text = re.sub(r"(?<![\w*\\^])\*(?=\S)([^*\n]+?)(?<=\S)\*(?![\w*])", r"\1", text)  # *italic*, not a^* or x*y
+    return html.escape(text, quote=False)
+
+
+def readme_lead(readme: str) -> tuple[str, str]:
+    """A README's first heading, and its first paragraph of prose."""
+    head = re.search(r"^#\s+(.+)$", readme, re.M)
+    para = next((b for b in re.split(r"\n\s*\n", readme) if b.strip() and not b.lstrip().startswith(("#", "!", "[!", "<", "|", "```"))), "")
+    return (head[1].strip() if head else "", para)
+
+
 def iso_date(text: str | None) -> str:
     """Accepts 2026-10-22T…, 2026/10/22, or 2026-10-22; returns YYYY-MM-DD or ''."""
     m = re.search(r"(\d{4})[-/](\d{2})[-/](\d{2})", text or "")
@@ -723,9 +737,8 @@ class Formalization(Source):
                 readme = get_text(raw + "README.md")
             except NotFound:
                 return None
-            head = re.search(r"^#\s+(.+)$", readme, re.M)
-            para = next((b for b in re.split(r"\n\s*\n", readme) if b.strip() and not b.lstrip().startswith(("#", "!", "[!", "<", "|", "```"))), "")
-            doc = {"project": {"name": head[1] if head else folder, "description": para}}
+            head, para = readme_lead(readme)
+            doc = {"project": {"name": head or folder, "description": para}}
         proj = doc.get("project") or {}
         models = sorted({str(m) for meth in (doc.get("automation") or {}).get("methods", []) or [] for m in meth.get("models", []) or []})
         authors = [str(a) for a in proj.get("authors", []) or []]
@@ -892,11 +905,6 @@ class Cogentic(Source):
     PAPER = re.compile(r"^\*\s+\[\*?(.+?)\*?\]\(([\w.-]+)/?\)\s*\(\[PDF\]\(([^)]+)\)\)")
     MODEL = re.compile(r"using (Gemini[\w .-]*?) as the base model")
 
-    @staticmethod
-    def _plain(markdown: str) -> str:
-        """Markdown to one line of text: links become their text, bold and code marks go, and < and > in formulas stay."""
-        return html.escape(re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", markdown).replace("**", "").replace("`", ""), quote=False)
-
     def _entry(self, folder: str, title: str, pdf: str, published: str) -> dict[str, Any]:
         readme = get_text(f"{self.RAW}/{folder}/README.md", max_age=3600)
         abstract = re.search(r"^## Abstract\s*$(.*?)(?=^## |\Z)", readme, re.M | re.S)
@@ -908,7 +916,7 @@ class Cogentic(Source):
             pdf=f"https://github.com/{self.REPO}/blob/master/{self.DIR}/{pdf}",
             title=clean(title),
             authors=["Google"],
-            summary=trim(self._plain(abstract[1] if abstract else lead)),
+            summary=trim(markdown_text(abstract[1] if abstract else lead)),
             published=published,
             ai_models=[model[1]] if model else [],
             license="CC-BY-4.0" if "(CC-BY-4.0)" in readme else "Apache-2.0",  # the folder's own, else the repository's
@@ -934,6 +942,69 @@ class Cogentic(Source):
         rec = self.catalogue.get(key)
         if not rec:
             raise NotFound(f"{self.REPO}/{self.DIR}: {key}")
+        return rec
+
+    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
+        yield from list(self.catalogue.values())[:limit]
+
+
+class YangMillsGroup(Source):
+    """github.com/yang-mills-group: the proofs submitted to the Yang–Mills group, which David Gross chairs at KITP to check
+    claimed constructions of four-dimensional gauge theories. One record per original-submission repository.
+
+    Read from the group's index, submissions/README.md: a section heading names the submitter ("## OpenAI submissions"),
+    and each table row gives the date received and links the submission. The repository gives the title (its README
+    heading, else the index's link text), the summary (its description, else its README's first paragraph), a PDF at
+    its root, and whether it holds Lean code. The group's assessments are responses, attached with index.py discuss.
+    """
+
+    name, label = "yang-mills-group", "Yang–Mills group"
+    ORG = "yang-mills-group"
+    patterns = [rf"^(?:https?://)?github\.com/{ORG}/([\w.-]+?)(?:\.git)?(?:/.*)?$"]
+    SECTION = re.compile(r"^##\s+(.+?)\s+submissions\s*$")
+    ROW = re.compile(rf"^\|\s*([^|]*?)\s*\|\s*\[([^\]]+)\]\(https://github\.com/{ORG}/([\w.-]+)/?\)")
+    DAY = re.compile(r"(\d{1,2}) ([A-Z][a-z]+) (\d{4})")
+
+    def _entry(self, repo: str, link_text: str, received: str, submitter: str) -> dict[str, Any]:
+        api = f"https://api.github.com/repos/{self.ORG}/{repo}"
+        info = get_json(api, max_age=3600)
+        files = get_json(f"{api}/contents/", max_age=3600)
+        readme = next((f for f in files if f["name"].lower() == "readme.md"), None)
+        head, lead = readme_lead(get_text(readme["download_url"], max_age=3600)) if readme else ("", "")
+        pdf = next((f["html_url"] for f in files if f["name"].lower().endswith(".pdf")), "")
+        day = self.DAY.findall(received)
+        return self.entry(
+            repo,
+            url=info["html_url"],
+            repo=info["html_url"],
+            pdf=pdf,
+            title=clean(markdown_text(head or link_text)),
+            authors=[submitter],
+            summary=trim(info.get("description") or markdown_text(lead)),
+            published=dt.datetime.strptime(" ".join(day[-1]), "%d %B %Y").date().isoformat() if day else "",
+            updated=iso_date(info.get("pushed_at")),
+            formalized="Lean" in get_json(f"{api}/languages", max_age=3600),
+            license=(info.get("license") or {}).get("spdx_id") or "",
+        )
+
+    @functools.cached_property
+    def catalogue(self) -> dict[str, dict[str, Any]]:
+        index = get_text(f"https://raw.githubusercontent.com/{self.ORG}/submissions/main/README.md", max_age=3600)
+        records: dict[str, dict[str, Any]] = {}
+        submitter = ""
+        for line in index.splitlines():
+            if s := self.SECTION.match(line):
+                submitter = s[1]
+            elif (row := self.ROW.match(line)) and submitter and row[3] not in records:
+                records[row[3]] = self._entry(row[3], row[2], row[1], submitter)
+        if not records:
+            raise SourceError(f"github.com/{self.ORG}/submissions: no submissions found; the README layout may have changed")
+        return records
+
+    def fetch(self, key: str) -> dict[str, Any]:
+        rec = self.catalogue.get(key)
+        if not rec:
+            raise NotFound(f"github.com/{self.ORG}/{key} is not listed as a submission")
         return rec
 
     def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
@@ -1082,7 +1153,7 @@ class Web(Source):
 
 
 # The first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
-SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Cogentic(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), GitHub(), Doi(), Web()]
+SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Cogentic(), YangMillsGroup(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 

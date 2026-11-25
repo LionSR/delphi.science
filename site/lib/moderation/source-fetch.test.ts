@@ -30,6 +30,8 @@ test('an HTML page is read into title, summary, authors and date', async () => {
 		source: 'web', key: webKey(url), url, title: 'Open chains', authors: ['Ada Example', 'Bo Sample'],
 		summary: 'Which endpoint terms remain.', published: '2026-02-03',
 	});
+	const unquoted = await readPublicWeb(url, page('<title>T</title><meta content="Agents verify Signal." name=description><meta content=article property=og:type>'));
+	assert.equal(unquoted.summary, 'Agents verify Signal.');
 	const plain = await readPublicWeb(url, page('<title>Fallback &amp; title</title><p>Body text.</p>'));
 	assert.equal(plain.title, 'Fallback & title');
 	assert.equal(plain.summary, 'Fallback & title Body text.');

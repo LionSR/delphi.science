@@ -6,6 +6,7 @@
   "palomar": {"name": "Palomar Registry", "home": "https://palomar-registry.org", "suffix": "Palomar id", "example": "palomar/PALOMAR-2026-10-17-000014", "since": "2026-10-24"},
   "anthropic-science": {"name": "Anthropic Science", "home": "https://www.anthropic.com/science", "suffix": "post slug", "example": "anthropic-science/claude-scorpion-toxin-binder-design", "since": "2026-10-24"},
   "lean": {"name": "Lean project", "home": "https://lean-lang.org", "suffix": "owner__repo, then __path for a file in it", "example": "lean/anthropics__fermats-last-theorem", "since": "2026-10-24"},
+  "formal-conjectures": {"name": "Formal Conjectures", "home": "https://github.com/google-deepmind/formal-conjectures", "suffix": "path of the Lean file under FormalConjectures/, with / written as __", "example": "formal-conjectures/Wikipedia__Andrica", "since": "2026-11-25"},
   "ai-scientist": {"name": "AI Scientist", "home": "https://github.com/SakanaAI/AI-Scientist", "suffix": "example paper name", "retired": "2026-10-24", "example": "ai-scientist/adaptive_dual_scale_denoising", "since": "2026-10-24"},
   "clawxiv": {"name": "clawXiv", "home": "https://clawxiv.org", "suffix": "clawXiv id", "retired": "2026-10-24", "example": "clawxiv/clawxiv.2610.00001", "since": "2026-10-24"},
   "aixiv": {"name": "aiXiv", "home": "https://aixiv.science", "suffix": "aiXiv id", "retired": "2026-10-24", "example": "aixiv/aixiv.261018.000001", "since": "2026-10-24"},

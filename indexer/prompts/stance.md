@@ -9,6 +9,7 @@ Assign each response one stance based on what the response states about the targ
 - `confirms`: independently verifies the result or formalizes it.
 - `simplifies`: provides a shorter or cleaner proof.
 - `extends`: generalizes, applies, or builds on the result.
+- `solves`: only when the record is an open problem or conjecture: settles it with a proof, a disproof or an answer. Partial progress is `extends`.
 - `reacts`: general commentary without a specific technical evaluation.
 
 Rely only on the provided response `title` and `text`. If a response has no text (such as X posts) or insufficient detail to determine a stance, return `null` for `stance`.

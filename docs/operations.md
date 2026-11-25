@@ -17,6 +17,7 @@ set -a; . site/.env.local; set +a
 - **Metadata:** Title, authors, abstract (truncated to ~600 characters), date, and URLs are fetched from upstream APIs with per-host rate limiting and disk caching in `.cache/`. General HTTPS pages are fetched through `site/scripts/read-web.ts` with size and timeout limits, so reading or refreshing web URLs from Python requires Node.js.
 - **Refresh:** `indexer/index.py refresh` re-fetches the 200 stalest entries older than 7 days, relabels entries whose title or abstract changed, and marks HTTP 404 responses as `gone`.
 - **Classification:** `indexer/index.py label` uses DeepSeek (`indexer/prompts/label.md`) to assign a category (`research`, `non-research`, `fiction`, `low-info`, or `harmful`), an arXiv subject code, and up to 4 topic tags. Search defaults to `research`. Entries labeled `harmful` remain in `open_index.entries` but are omitted from `dist/index.json` and search. Classification is optional metadata, not peer review.
+- **Open problems:** A record with a `problem` object is an open problem or conjecture, not a paper (`is:problem`, `is:open`, `is:solved`). Its summary is the statement and `problem.status` is what the source states. Formal Conjectures (`google-deepmind/formal-conjectures`) is read from the repository tarball, one record per Lean file that tags a statement `research open` or `research solved`. Its Erdős folder is skipped until erdosproblems.com agrees, and arXiv-based files keep no statement text. The harvest job is off in `indexer/harvest.json` until enabled. The paper or MathOverflow question a file is named after goes in `formalizes` (shown as "Posed in"; the paper's page lists the problem under "Stated in Lean"), and its formal-proof links in `formalizations`. A paper that settles a problem is attached with `discuss --stance solves`. A problem has no publication date, so it sorts after dated records. Its page lists the public forum topics that name it and, for the reader alone, their private spaces whose description names its id.
 - **Tracked source details:** APP (`agenticpapers.app`) is harvested from `https://agenticpapers.app/papers/index.json`. Hexagon tracks `authorship` and `human_understanding` (`none`, `some`, `all`). Unmoderated venues (`vixra.org`, `aixiv.science`, `clawxiv.org`, `jaigp.org`) are blocked in `BLOCKED_HOSTS` in `indexer/sources.py`.
 
 ## External responses and candidate discovery
@@ -45,6 +46,7 @@ Editors tag external responses with `discuss --stance`:
 | `confirms` | Independently verifies or formalizes the result | Contributes to popularity |
 | `simplifies` | Provides a shorter or cleaner proof | Contributes to popularity |
 | `extends` | Builds on the result | Contributes to popularity |
+| `solves` | Settles the open problem a problem record states (proof, disproof or answer) | Neutral; the source's `problem.status` stays as it is |
 | `reacts` | Commentary without a specific technical claim | Neutral |
 
 Unlabeled links also contribute to popularity. `discuss --propose-stances` generates suggested stance commands via an LLM (`indexer/prompts/stance.md`) for editor review.

@@ -5,6 +5,8 @@ import Script from 'next/script';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { cache, Fragment } from 'react';
 import { comments } from '#lib/posts/comments.ts';
+import { topicsNaming } from '#lib/posts/forum.ts';
+import { spacesOn } from '#lib/posts/spaces.ts';
 import { newInThread } from '#lib/accounts/queries.ts';
 import { NewInThread, NewMark, seqParam } from '#lib/feed-view.ts';
 import { PublicAuthor } from '#lib/accounts/public-author.ts';
@@ -13,12 +15,13 @@ import { PostForm } from '#app/post-form.tsx';
 import { db } from '#lib/db.ts';
 import { get } from '#lib/records/query.ts';
 import { me } from '#lib/accounts/session.ts';
-import { date, idPath, original, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams, voteMark } from '#lib/view.ts';
+import { date, identifierUrl, idPath, original, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams, voteMark } from '#lib/view.ts';
 import { publicNames } from '#lib/accounts/people.ts';
 import { votes } from '#lib/records/votes.ts';
 import { artifacts } from '#lib/p2p/claims.ts';
 import { SharedFiles } from '#app/shared-files.tsx';
 import { RecordBadges } from '#app/record-badges.tsx';
+import type { Item } from '#lib/api/schema.ts';
 import { Vote } from '#app/vote.tsx';
 import { OwnerEdit } from '#app/owner-edit.tsx';
 import { PostText } from '#app/post-text.tsx';
@@ -57,7 +60,11 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	if (!r) notFound();
 	if (r.id !== id) permanentRedirect(recordPath(r.id));
 	const d = await db();
-	const [thread, voters, who, { notice, new: carried }, shared] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams, artifacts(d, id)]);
+	const [thread, voters, who, { notice, new: carried }, shared, asked] = await Promise.all([comments(d, id), votes(d, id), me(), ctx.searchParams, artifacts(d, id), topicsNaming(d, id)]);
+	// The reader's own spaces that name this record. Shown to them alone.
+	const spaces = who ? await spacesOn(d, who.login, id) : [];
+	// A new space's form, filled in to say what it works on: the record's id in its description is the only tie between them.
+	const workOn = `/ws?${new URLSearchParams({ title: String(r.title), about: `Working on [${id}](${recordPath(id)}).` })}#open`;
 	const stands = reception(r);
 	const owner = who?.login ?? '';
 	const mine = who ? voters.find((v) => v.voter === who.login) : undefined;
@@ -72,6 +79,9 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string; stance?: string }[];
 	// Records whose discussion links this one, set at build time.
 	const discusses = (Array.isArray(r.discusses) ? r.discusses : []) as { id: string; title: string }[];
+	// What a Lean record formalizes (for a problem: the paper or question that poses it), and a record's Lean formalizations.
+	const formalizedBy = (r.formalized_by ?? []) as NonNullable<Item['formalized_by']>;
+	const formalizes = (r.formalizes ?? []) as NonNullable<Item['formalizes']>, formalizations = (r.formalizations ?? []) as NonNullable<Item['formalizations']>;
 	// Label for a reception link: its author, site, or host.
 	const cite = (url: string) => {
 		const l = links.find((x) => x.url === url);
@@ -139,12 +149,44 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				</p>
 			) : null}
 
+			{formalizes.length > 0 && (
+				<p className="meta">
+					<span>{r.problem ? 'Posed in' : 'Formalizes'}</span>
+					{formalizes.map((f) => <a key={f.identifier} href={f.record ? recordPath(f.record) : identifierUrl(f.identifier)}>{tex(f.title || f.identifier)}</a>)}
+				</p>
+			)}
+			{formalizedBy.length > 0 && (
+				<p className="meta">
+					<span>Stated in Lean</span>
+					{formalizedBy.map((b) => <a key={b.id} href={recordPath(b.id ?? '')}>{tex(b.title ?? '')}</a>)}
+				</p>
+			)}
+			{formalizations.length > 0 && (
+				<p className="meta">
+					<span>{r.problem ? 'Formal proofs of its statements' : 'Lean formalizations'}</span>
+					{formalizations.map((u) => <a key={u} href={u}>{u.replace(/^https?:\/\/(www\.)?/, '').split('/').slice(0, 3).join('/')}</a>)}
+				</p>
+			)}
+
 			{discusses.length > 0 && (
 				<p className="meta">
 					<span>Discusses</span>
 					{discusses.map((d) => <a key={d.id} href={recordPath(d.id)}>{tex(d.title)}</a>)}
 				</p>
 			)}
+
+			{asked.length > 0 && (
+				<p className="meta">
+					<span>Asked about in the forum</span>
+					{asked.map((t) => <a key={t.id} href={`/forum/${t.id}`}>{tex(t.title)} ({t.open ? 'open' : 'answered'})</a>)}
+				</p>
+			)}
+			{spaces.length > 0 && (
+				<p className="count">Your linked private {spaces.length === 1 ? 'space' : 'spaces'}:{' '}
+					{spaces.map((s, i) => <span key={s.id}>{i > 0 && ', '}<a href={`/ws/${s.id}`}>{s.title}</a></span>)}
+					{' '}(only visible to space members).</p>
+			)}
+			{r.problem ? <p className="count">To work on this problem privately first, <a href={workOn}>open a private space</a>.</p> : null}
 
 			<SharedFiles artifacts={shared} />
 

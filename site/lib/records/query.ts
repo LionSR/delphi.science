@@ -25,6 +25,9 @@ const IS_FLAGS: Record<string, [sql: string, meaning: string]> = {
 	'ai-generated': ["r.origin = 'ai-generated'", 'the source says AI made it'],
 	app: ["r.source = 'app'", 'from agenticpapers.app'],
 	gone: ['r.gone', 'its source no longer serves it'],
+	problem: ["r.record ? 'problem'", 'an open problem or conjecture, not a paper'],
+	open: ["r.record->'problem'->>'status' = 'open'", 'a problem its source lists as open'],
+	solved: ["r.record->'problem'->>'status' = 'solved'", 'a problem its source lists as solved'],
 	discussed: ['r.discussed > 0', 'has posts or articles about it'],
 	disputed: ['r.disputed', 'a response refutes or questions it'],
 };
@@ -49,7 +52,7 @@ export const QUERY_HELP = `arXiv-style query. ${Object.entries(QUERY_FIELDS).map
 export const QUERY_GUIDE = [...Object.entries(QUERY_FIELDS).map(([f, about]) => `- ${fieldNames(f)} ${about}`), `- Operators: ${OPERATORS}`].join('\n');
 export const SORT_HELP = 'relevance (default with a query), newest (default without), oldest, title, score (votes plus linked responses that confirm, simplify or extend it or have no stance yet, all time), day, week, month (votes and such responses published in that window), mentions (most cited in comments: how many people\'s comments name the record by id, then the newest; not linked posts, which count in score), responded (the newest expert response first, whatever its stance).';
 const COMPACT = ['id', 'source', 'title', 'authors', 'url', 'pdf', 'published', 'subject', 'division', 'category', 'origin',
-	'agent_ready', 'formalized', 'verified', 'withdrawn', 'disputed', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions', 'discussed'];
+	'agent_ready', 'formalized', 'verified', 'withdrawn', 'disputed', 'problem', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions', 'discussed'];
 
 // The stored record plus its live counts.
 const SERVED = `r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count, 'discussed', r.discussed, 'disputed', r.disputed)`;

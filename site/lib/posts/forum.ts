@@ -100,6 +100,14 @@ export async function namedRecords(db: Db, posts: Pick<Post, 'mentions'>[]): Pro
 	return ids.filter((id) => titles.has(id)).map((id) => ({ id, title: titles.get(id)! }));
 }
 
+/** The public forum topics with a post that names a record, the most recently active first. */
+export async function topicsNaming(db: Db, record: string, limit = 20): Promise<{ id: number; title: string; open: boolean }[]> {
+	return (await db.query<{ id: number; title: string; open: boolean }>(
+		`SELECT t.id::int, t.title, t.accepted_id IS NULL AS open FROM open_index.topics t
+		 WHERE t.space_id = $2 AND EXISTS (SELECT 1 FROM open_index.mentions m JOIN open_index.comments c ON c.id = m.comment_id WHERE m.record_id = $1 AND c.topic_id = t.id)
+		 ORDER BY t.last_at DESC, t.id DESC LIMIT $3`, [record, FORUM, limit])).rows;
+}
+
 /** A question with its comments, then its answers (the accepted one first, then by score), each with its comments. */
 export async function topicWithPosts(db: Db, id: number, who: Reader, space?: string) {
 	const t = await topic(db, id, who, space);

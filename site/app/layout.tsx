@@ -41,6 +41,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 						<nav aria-label="Primary">
 							<a href="/about">About</a>
 							<a href="/submit">Submit</a>
+							<a href="/?q=is%3Aproblem+is%3Aopen">Problems</a>
 							<a href="/forum">Forum</a>
 							{who && <a href="/ws">Spaces</a>}
 							<a href="/connect">Connect</a>

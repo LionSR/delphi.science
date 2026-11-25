@@ -11,9 +11,11 @@ import datetime as dt
 import functools
 import hashlib
 import html
+import io
 import json
 import re
 import subprocess
+import tarfile
 import time
 import urllib.error
 import urllib.parse
@@ -21,7 +23,9 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any, Callable, Iterator
+
+import taxonomy as TX
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -763,6 +767,91 @@ class Formalization(Source):
                     yield rec
 
 
+class FormalConjectures(Source):
+    """Open problems and conjectures stated in Lean at google-deepmind/formal-conjectures, one record per file.
+
+    A file is taken when it holds a statement tagged `@[category research open]` or `research solved`; the
+    record is open while any such statement is. The statement text is the docstring of the first open one.
+    Docstrings are CC BY 4.0, or CC BY-SA 4.0 where they come from Wikipedia, MathOverflow or the OEIS (README,
+    Licensing). arXiv-based files follow each paper's own licence, so their text is not stored.
+
+    The paper or MathOverflow question a file is named after goes under formalizes, and formal_proof links under
+    formalizations: each proves one statement of the file, which settles the problem only when its status is solved.
+    """
+
+    name, label = "formal-conjectures", "Formal Conjectures"
+    REPO = "google-deepmind/formal-conjectures"
+    patterns = [r"^(?:https?://)?github\.com/google-deepmind/formal-conjectures/blob/[^/]+/FormalConjectures/([\w./-]+)\.lean$"]
+    # Not taken: Erdős problems (erdosproblems.com reserves its content; needs its owner's permission) and Subsets (lists of other files).
+    SKIP = ("ErdosProblems", "Subsets")
+    SHARE_ALIKE = ("Wikipedia", "Mathoverflow", "OEIS")
+    # Folder: the collection it holds, and how a file name gives the problem's number there.
+    COLLECTIONS: dict[str, tuple[str, Callable[[str], str]]] = {
+        "GreensOpenProblems": ("green", str), "HilbertProblems": ("hilbert", str), "LittProblems": ("litt", str),
+        "Kourovka": ("kourovka", lambda s: s.replace("_", ".")), "OEIS": ("oeis", lambda s: f"A{s}"), "Mathoverflow": ("mathoverflow", str),
+        "OpenQuantumProblems": ("open-quantum-problems", str), "OptimizationConstants": ("tao-optimization-constants", str),
+        "WrittenOnTheWallII": ("written-on-the-wall-ii", lambda s: s.removeprefix("GraphConjecture")), "Millennium": ("millennium", lambda s: ""),
+    }
+    PREFIX = {"kourovka": "Kourovka Notebook", "oeis": "OEIS"}  # collections whose file headings do not name them
+    STATEMENT = re.compile(r"@\[category research (open|solved)\b([^\]]*)\]")
+    PROOF = re.compile(r'formal_proof using \w+ at\s+"([^"]+)"')
+    DOC = re.compile(r"/--((?:(?!-/).)*)-/\s*(?:set_option [^\n]* in\s*)*$", re.S)  # the docstring that ends right before a statement
+
+    def key_of(self, m: re.Match[str]) -> str:
+        return m[1].replace("/", "__")
+
+    def _entry(self, path: str, lean: str) -> dict[str, Any] | None:
+        """The record for FormalConjectures/<path>.lean, or None when it states no research problem."""
+        found = list(self.STATEMENT.finditer(lean))
+        if not found:
+            return None
+        folder, stem = path.split("/")[0], path.rsplit("/", 1)[-1]
+        first = next((m for m in found if m[1] == "open"), found[0])
+        doc = self.DOC.search(lean[:first.start()])
+        head = re.search(r"^# (.+)$", lean, re.M)
+        collection, number = "", ""
+        if folder in self.COLLECTIONS:
+            collection, number = self.COLLECTIONS[folder][0], self.COLLECTIONS[folder][1](stem)
+        title = clean(head[1]) if head else stem
+        if collection in self.PREFIX:
+            title = f"{self.PREFIX[collection]} {number}" + ("" if number in title else f": {title}")
+        msc = next((int(n) for m in found for n in re.findall(r"\d+", m[2].partition("AMS")[2]) if int(n) in TX.FROM_MSC), None)
+        problem = {"status": first[1], "collection": collection, "number": number}
+        # The paper or question that poses the problem, where the folder names it.
+        poses = {"Arxiv": f"arXiv:{path.split('/')[1]}" if path.count("/") > 1 else "", "Mathoverflow": f"https://mathoverflow.net/questions/{stem}"}.get(folder)
+        return self.entry(
+            path.replace("/", "__"),
+            url=f"https://github.com/{self.REPO}/blob/main/FormalConjectures/{path}.lean",
+            title=title,
+            summary="" if folder == "Arxiv" else trim(doc[1] if doc else ""),
+            domain=TX.FROM_MSC[msc] if msc else "",
+            license="" if folder == "Arxiv" else "CC-BY-SA-4.0" if folder in self.SHARE_ALIKE else "CC-BY-4.0",
+            repo=f"https://github.com/{self.REPO}",
+            formalized=True,
+            formalizes=[{"identifier": poses, "relationship": "formalizes"}] if poses else [],
+            formalizations=list(dict.fromkeys(url for m in found for url in self.PROOF.findall(m[2]))),
+            problem={k: v for k, v in problem.items() if v},
+        )
+
+    def fetch(self, key: str) -> dict[str, Any]:
+        path = key.replace("__", "/")
+        rec = self._entry(path, get_text(f"https://raw.githubusercontent.com/{self.REPO}/main/FormalConjectures/{path}.lean"))
+        if not rec:
+            raise NotFound(f"{key} states no research problem")
+        return rec
+
+    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
+        """Reads the whole repository in one request (its tarball)."""
+        with tarfile.open(fileobj=io.BytesIO(get(f"https://api.github.com/repos/{self.REPO}/tarball/main")), mode="r:gz") as tar:
+            for member in tar:
+                m = re.match(r"[^/]+/FormalConjectures/(.+)\.lean$", member.name)
+                if not m or m[1].split("/")[0] in self.SKIP:
+                    continue
+                rec = self._entry(m[1], tar.extractfile(member).read().decode())  # type: ignore[union-attr]
+                if rec:
+                    yield rec
+
+
 class AnthropicScience(Source):
     """anthropic.com/science: Anthropic's posts on research done with Claude."""
 
@@ -929,7 +1018,7 @@ class Web(Source):
 
 
 # The first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
-SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), GitHub(), Doi(), Web()]
+SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 

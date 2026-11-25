@@ -43,6 +43,8 @@ export const source = (s: unknown) => {
 	return { name, href: `/?q=source:${String(s)}`, title: `All ${name} records on ${NAME}` };
 };
 /** The original work at its upstream site (the record's canonical url), to show as an external "Source" link; null without one. */
+/** Where a formalizes identifier (arXiv:…, doi:…, or a URL) leads. */
+export const identifierUrl = (id: string) => /^https?:/.test(id) ? id : /^arxiv:/i.test(id) ? `https://arxiv.org/abs/${id.slice(6)}` : /^doi:/i.test(id) ? `https://doi.org/${id.slice(4)}` : `https://doi.org/${id}`;
 export const original = (r: Record<string, unknown>) => {
 	const href = typeof r.url === 'string' && /^https?:\/\//i.test(r.url) ? r.url : '';
 	if (!href) return null;

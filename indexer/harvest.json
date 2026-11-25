@@ -4,6 +4,7 @@
     { "name": "anthropic-lean", "source": "lean", "query": "anthropics/formal-math anthropics/fermats-last-theorem", "limit": 20 },
     { "name": "anthropic-science", "source": "anthropic-science", "limit": 50 },
     { "name": "cogentic", "source": "cogentic", "limit": 200 },
+    { "name": "yang-mills-group", "source": "yang-mills-group", "limit": 100 },
     { "name": "deepmind-lean", "source": "lean", "query": "google-deepmind/formal-quantum-computation", "limit": 20 },
     { "name": "openai-math", "source": "openai-math", "limit": 1000 },
     { "name": "arxiv-quant-ph-2026q1", "source": "arxiv", "query": "cat:quant-ph AND submittedDate:[202601010000 TO 202603312359]", "limit": 10000 },

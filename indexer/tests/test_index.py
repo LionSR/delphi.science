@@ -66,6 +66,7 @@ class Detect(unittest.TestCase):
         "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Kourovka/1_40.lean": ("formal-conjectures", "Kourovka__1_40"),
         "https://github.com/google-research/google-research/blob/master/cogentic_research_papers/logrank_conjecture/paper.pdf": ("cogentic", "logrank_conjecture"),
         "https://github.com/google-research/google-research": ("github", "google-research__google-research"),
+        "https://github.com/yang-mills-group/OpenAI-QCD-20261104/tree/main/proof": ("yang-mills-group", "OpenAI-QCD-20261104"),
         "https://blog.example.org/posts/open-chains/": ("web", "blog.example.org__posts-open-chains"),
         "https://www.alpo.ge/remark.pdf": ("web", "alpo.ge__remark"),
     }
@@ -132,6 +133,32 @@ class Cogentic(unittest.TestCase):
         self.assertTrue(f["summary"].startswith("This paper factors every $N$ with $p_1 < p_2$."))
         self.assertEqual((g["summary"], g["published"], g["ai_models"], g["license"], g["origin"]), ("We show CE is hard 1.", "2026-10-30", [], "Apache-2.0", "ai-generated"))
         self.assertTrue(g["pdf"].endswith("/cogentic_research_papers/games/Games.pdf"))
+
+
+class YangMillsGroup(unittest.TestCase):
+    INDEX = ("# Gauge-theory submissions\n\n## OpenAI submissions\n\n| Date received | Original submission | Summary or group assessment |\n|---|---|---|\n"
+             "| 21–26 October 2026 | [October informal manuscript](https://github.com/yang-mills-group/Informal) | Covers all three |\n"
+             "| 4 November 2026 | [Massive QCD](https://github.com/yang-mills-group/QCD-1104) | [Summary](https://github.com/yang-mills-group/QCD/blob/main/a.pdf) |\n")
+    API = "https://api.github.com/repos/yang-mills-group/"
+    JSON = {
+        "Informal": {"html_url": "https://github.com/yang-mills-group/Informal", "pushed_at": "2026-11-24T00:00:00Z"},
+        "Informal/contents/": [{"name": "README.md", "download_url": "raw/Informal/README.md"}, {"name": "m.pdf", "html_url": "https://github.com/yang-mills-group/Informal/blob/main/m.pdf"}],
+        "Informal/languages": {},
+        "QCD-1104": {"html_url": "https://github.com/yang-mills-group/QCD-1104", "description": "Original massive-QCD Lean proof.", "license": {"spdx_id": "Apache-2.0"}},
+        "QCD-1104/contents/": [{"name": "proof", "html_url": ""}],
+        "QCD-1104/languages": {"Lean": 100},
+    }
+    TEXT = {"raw/Informal/README.md": "# OpenAI informal manuscript\n\nOriginal PDF of *A Euclidean construction*, received [here](x).\n"}
+
+    def test_each_listed_submission_is_a_record_with_its_submitter_date_and_lean_flag(self) -> None:
+        with patch.object(S, "get_json", lambda url, **kw: self.JSON[url.removeprefix(self.API)]), \
+             patch.object(S, "get_text", lambda url, **kw: self.INDEX if url.endswith("/submissions/main/README.md") else self.TEXT[url]):
+            subs = S.YangMillsGroup().catalogue
+        m, q = subs["Informal"], subs["QCD-1104"]
+        self.assertEqual((m["title"], m["summary"], m["published"], m["formalized"], m["pdf"]),
+                         ("OpenAI informal manuscript", "Original PDF of A Euclidean construction, received here.", "2026-10-26", False, self.JSON["Informal/contents/"][1]["html_url"]))
+        self.assertEqual((q["title"], q["summary"], q["authors"], q["published"], q["formalized"], q["license"]),
+                         ("Massive QCD", "Original massive-QCD Lean proof.", ["OpenAI"], "2026-11-04", True, "Apache-2.0"))
 
 
 class BoundedWeb(unittest.TestCase):

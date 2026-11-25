@@ -112,6 +112,20 @@ theorem main : True := by sorry
         self.assertIsNone(src._entry("Other/Helpers", "@[category test, AMS 11]\ntheorem t : True := by sorry"))
 
 
+class Aggregated(unittest.TestCase):
+    def test_a_dataset_problem_keeps_its_original_link_and_yields_to_a_listing_from_an_earlier_source(self) -> None:
+        row = {"problem_number": "KOU-1.40", "title": "Kourovka Notebook Problem 1.40", "statement": "Is it a nilgroup?", "status": "partially_solved",
+               "proposed_by": "Sh. S. Kemkhadze", "proposed_year": 1965, "source_url": "https://arxiv.org/abs/1401.0300",
+               "set": {"name": "kourovka_new_problems_21"}, "category": {"display_name": "Group Theory"}, "background": "notes that are not taken"}
+        e = S.BY_NAME["unsolvedmath"]._entry(row)
+        self.assertEqual(e["problem"], {"status": "partial", "collection": "kourovka", "number": "1.40", "posed_by": ["Sh. S. Kemkhadze"], "posed": 1965,
+                                        "source": "https://arxiv.org/abs/1401.0300"})
+        self.assertEqual(S.detect(e["url"])[1], "KOU-1.40")
+        ours, lean = index.to_item(e), {"id": "formal-conjectures/Kourovka__1_40", "source": "formal-conjectures", "problem": {"collection": "kourovka", "number": "1.40"}}
+        other = {"id": "unsolvedmath/KOU-1.41", "source": "unsolvedmath", "problem": {"collection": "kourovka", "number": "1.41"}}
+        self.assertEqual(index.one_per_problem([ours, other, lean]), [other, lean])
+
+
 class BoundedWeb(unittest.TestCase):
 
     def test_web_refresh_uses_the_bridge_without_renaming_existing_records(self) -> None:

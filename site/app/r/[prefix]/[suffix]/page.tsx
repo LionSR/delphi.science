@@ -80,6 +80,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	// Records whose discussion links this one, set at build time.
 	const discusses = (Array.isArray(r.discusses) ? r.discusses : []) as { id: string; title: string }[];
 	// What a Lean record formalizes (for a problem: the paper or question that poses it), and a record's Lean formalizations.
+	const problem = r.problem as Item['problem'];
 	const formalizedBy = (r.formalized_by ?? []) as NonNullable<Item['formalized_by']>;
 	const formalizes = (r.formalizes ?? []) as NonNullable<Item['formalizes']>, formalizations = (r.formalizations ?? []) as NonNullable<Item['formalizations']>;
 	// Label for a reception link: its author, site, or host.
@@ -149,6 +150,12 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				</p>
 			) : null}
 
+			{problem?.posed_by?.length || problem?.source ? (
+				<p className="meta">
+					{problem.posed_by?.length ? <span>Posed by {problem.posed_by.join(', ')}{problem.posed ? `, ${problem.posed}` : ''}</span> : null}
+					{problem.source ? <a href={problem.source} rel="external">Original statement</a> : null}
+				</p>
+			) : null}
 			{formalizes.length > 0 && (
 				<p className="meta">
 					<span>{r.problem ? 'Posed in' : 'Formalizes'}</span>

@@ -35,6 +35,7 @@
     { "name": "arxiv-math-2026-11b", "source": "arxiv", "query": "cat:math* AND submittedDate:[202611160000 TO 202611302359]", "limit": 10000 },
     { "name": "arxiv-math-2026-12a", "source": "arxiv", "query": "cat:math* AND submittedDate:[202612010000 TO 202612152359]", "limit": 10000 },
     { "name": "arxiv-math-2026-12b", "source": "arxiv", "query": "cat:math* AND submittedDate:[202612160000 TO 202612312359]", "limit": 10000 },
+    { "name": "unsolvedmath", "source": "unsolvedmath", "limit": 20000 },
     { "name": "formal-conjectures", "source": "formal-conjectures", "limit": 2000 },
     { "enabled": false, "name": "arxiv-ai-scientist", "source": "arxiv", "query": "abs:\"AI scientist\" AND (abs:autonomous OR abs:end-to-end)", "limit": 40 },
     { "enabled": false, "name": "arxiv-research-agents", "source": "arxiv", "query": "abs:\"research agent\" AND abs:\"scientific discovery\"", "limit": 40 },

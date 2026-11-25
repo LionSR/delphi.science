@@ -418,7 +418,7 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
         todo = load(limit=limit)
     else:
         # Bulk-harvested arXiv papers are shown as research without a label.
-        todo = load("NOT entry ? 'review' AND coalesce(entry->>'added_by', '') NOT LIKE 'harvest:arxiv-%%'", limit=limit)
+        todo = load("NOT entry ? 'review' AND NOT entry ? 'problem' AND coalesce(entry->>'added_by', '') NOT LIKE 'harvest:arxiv-%%'", limit=limit)
     done, failed = 0, False
     for i in range(0, len(todo), BATCH):
         chunk = todo[i : i + BATCH]
@@ -821,9 +821,23 @@ def crosslink(all_items: list[dict[str, Any]]) -> None:
                 by.append({"id": it["id"], "title": it["title"]})
 
 
+def one_per_problem(all_items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Two sources may list one problem: the same collection and number. The source that comes first in S.SOURCES is
+    served and the other listings are left out."""
+    rank = {s.name: i for i, s in enumerate(S.SOURCES)}
+    first: dict[tuple[str, str], dict[str, Any]] = {}
+    for it in all_items:
+        p = it.get("problem") or {}
+        if p.get("collection") and p.get("number"):
+            key = (p["collection"], p["number"])
+            if key not in first or rank.get(it["source"], len(rank)) < rank.get(first[key]["source"], len(rank)):
+                first[key] = it
+    return [it for it in all_items if not ((p := it.get("problem") or {}).get("collection") and p.get("number")) or first[(p["collection"], p["number"])] is it]
+
+
 def items(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """APP papers (oldest first), then every other entry, newest first."""
-    kept = [it for e in [*map(app_entry, load_entries()), *entries] if (it := to_item(e))]
+    kept = one_per_problem([it for e in [*map(app_entry, load_entries()), *entries] if (it := to_item(e))])
     crosslink(kept)
     apps = sorted((it for it in kept if it["source"] == "app"), key=lambda it: it.get("published", ""))
     rest = sorted((it for it in kept if it["source"] != "app"), key=lambda it: it.get("published", ""), reverse=True)

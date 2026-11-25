@@ -876,6 +876,70 @@ class AnthropicScience(Source):
             yield self.fetch(key)
 
 
+class Cogentic(Source):
+    """google-research/google-research/cogentic_research_papers: papers written by Cogentic (arXiv:2609.40324),
+    Google's agent harness for proof discovery, one folder each.
+
+    The directory's README lists the papers under date headings; each folder's README gives the abstract, either
+    under "## Abstract" or as the text before the first heading, and may name the base model.
+    """
+
+    name, label, origin = "cogentic", "Cogentic", "ai-generated"
+    REPO, DIR = "google-research/google-research", "cogentic_research_papers"
+    RAW = f"https://raw.githubusercontent.com/{REPO}/master/{DIR}"
+    patterns = [rf"^(?:https?://)?(?:github\.com/{REPO}/(?:blob|tree)/[^/]+|raw\.githubusercontent\.com/{REPO}/[^/]+)/{DIR}/([\w.-]+)(?:/.*)?$"]
+    DATE = re.compile(r"^###\s+([A-Z][a-z]+ \d{1,2}, \d{4})\s*$")
+    PAPER = re.compile(r"^\*\s+\[\*?(.+?)\*?\]\(([\w.-]+)/?\)\s*\(\[PDF\]\(([^)]+)\)\)")
+    MODEL = re.compile(r"using (Gemini[\w .-]*?) as the base model")
+
+    @staticmethod
+    def _plain(markdown: str) -> str:
+        """Markdown to one line of text: links become their text, bold and code marks go, and < and > in formulas stay."""
+        return html.escape(re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", markdown).replace("**", "").replace("`", ""), quote=False)
+
+    def _entry(self, folder: str, title: str, pdf: str, published: str) -> dict[str, Any]:
+        readme = get_text(f"{self.RAW}/{folder}/README.md", max_age=3600)
+        abstract = re.search(r"^## Abstract\s*$(.*?)(?=^## |\Z)", readme, re.M | re.S)
+        lead = re.sub(r"^# .*$", "", re.split(r"^## ", readme, maxsplit=1, flags=re.M)[0], count=1, flags=re.M)
+        model = self.MODEL.search(readme)
+        return self.entry(
+            folder,
+            url=f"https://github.com/{self.REPO}/tree/master/{self.DIR}/{folder}",
+            pdf=f"https://github.com/{self.REPO}/blob/master/{self.DIR}/{pdf}",
+            title=clean(title),
+            authors=["Google"],
+            summary=trim(self._plain(abstract[1] if abstract else lead)),
+            published=published,
+            ai_models=[model[1]] if model else [],
+            license="CC-BY-4.0" if "(CC-BY-4.0)" in readme else "Apache-2.0",  # the folder's own, else the repository's
+            repo=f"https://github.com/{self.REPO}",
+        )
+
+    @functools.cached_property
+    def catalogue(self) -> dict[str, dict[str, Any]]:
+        records: dict[str, dict[str, Any]] = {}
+        listed, published = 0, ""
+        for line in get_text(f"{self.RAW}/README.md", max_age=3600).splitlines():
+            if d := self.DATE.match(line):
+                published = dt.datetime.strptime(d[1], "%B %d, %Y").date().isoformat()
+            elif line.startswith("*   ["):
+                listed += 1
+                if (p := self.PAPER.match(line)) and published:
+                    records[p[2]] = self._entry(p[2], p[1], p[3], published)
+        if not records or len(records) != listed:
+            raise SourceError(f"{self.RAW}/README.md lists {listed} papers but {len(records)} were parsed; the layout may have changed")
+        return records
+
+    def fetch(self, key: str) -> dict[str, Any]:
+        rec = self.catalogue.get(key)
+        if not rec:
+            raise NotFound(f"{self.REPO}/{self.DIR}: {key}")
+        return rec
+
+    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
+        yield from list(self.catalogue.values())[:limit]
+
+
 class Hexagon(Source):
     """hexagonmath.org: an arXiv-style archive for LLM-assisted mathematics, with a JSON API.
 
@@ -1018,7 +1082,7 @@ class Web(Source):
 
 
 # The first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
-SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), GitHub(), Doi(), Web()]
+SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Cogentic(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 

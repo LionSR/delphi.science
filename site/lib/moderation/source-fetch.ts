@@ -289,7 +289,7 @@ function inertText(html: string): string {
 	rejectCredential(text);
 	return text;
 }
-/** The quoted value of an attribute that appears exactly once in the tag. */
+/** The value of an attribute that appears exactly once in the tag, quoted or not (deepmind.google writes name=description). */
 function attr(tag: string, wanted: string): string | undefined {
 	let at = 1, result: string | undefined, count = 0;
 	while (at < tag.length && !/[\s>]/.test(tag[at])) at++;
@@ -304,11 +304,19 @@ function attr(tag: string, wanted: string): string | undefined {
 		at++;
 		while (at < tag.length && /\s/.test(tag[at])) at++;
 		const quote = tag[at];
-		if (quote !== '"' && quote !== "'") return;
-		const end = tag.indexOf(quote, ++at);
-		if (end < 0) return;
-		if (key === wanted) { count++; result = tag.slice(at, end).replaceAll('&amp;', '&'); }
-		at = end + 1;
+		let value: string;
+		if (quote === '"' || quote === "'") {
+			const end = tag.indexOf(quote, ++at);
+			if (end < 0) return;
+			value = tag.slice(at, end);
+			at = end + 1;
+		} else {
+			const start = at;
+			while (at < tag.length && !/[\s>]/.test(tag[at])) at++;
+			value = tag.slice(start, at);
+			if (!value || /["'=<`]/.test(value)) return; // not a valid unquoted value
+		}
+		if (key === wanted) { count++; result = value.replaceAll('&amp;', '&'); }
 	}
 	return count === 1 ? result : undefined;
 }

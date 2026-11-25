@@ -65,6 +65,7 @@ describe('reading a link', () => {
 		assert.equal(id('10.5281/zenodo.123456'), 'zenodo/123456');
 		// The harvester's own adapters read these, so the site does not.
 		assert.equal(id('https://github.com/openai/math/blob/main/preprints/X/paper.pdf'), null);
+		assert.equal(id('https://github.com/google-research/google-research/tree/master/cogentic_research_papers/logrank_conjecture'), null);
 		assert.equal(id('PALOMAR-2026-10-17-000014'), null);
 	});
 	test('metadata comes from the source', async () => {

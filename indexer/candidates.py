@@ -40,7 +40,8 @@ import sources as S
 # The AI labs, by the names that mark a text as being about their work, with the sources that hold their records. Names
 # match whole and with their case, so "hexagonal" and "the hexagon of exponents" are not mentions.
 LABS: dict[str, tuple[str, ...]] = {"OpenAI": ("openai-math",), "GPT": ("openai-math",),
-                                    "Anthropic": ("anthropic-science", "lean"), "Claude": ("anthropic-science", "lean")}
+                                    "Anthropic": ("anthropic-science", "lean"), "Claude": ("anthropic-science", "lean"),
+                                    "Cogentic": ("cogentic",)}
 MENTIONS = re.compile(rf"\b(?:{'|'.join(LABS)})\b")
 # arXiv categories whose papers name the labs as vendors of the models they study, not as authors of a result.
 VENDOR_CATEGORIES = ("cs.AI", "cs.CL", "cs.LG", "cs.SE", "cs.CR", "cs.HC", "cs.CY", "cs.MA", "cs.IR", "cs.RO", "cs.CV")

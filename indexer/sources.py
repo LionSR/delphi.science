@@ -45,7 +45,7 @@ class SourceError(Exception):
 # ---- HTTP: cached, with a per-host delay ----
 
 _last_hit: dict[str, float] = {}
-DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "export.arxiv.org": 3.0, "arxiv.org": 1.0, "hexagonmath.org": 0.5}
+DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "export.arxiv.org": 3.0, "arxiv.org": 1.0, "hexagonmath.org": 0.5, "www.openproblemgarden.org": 0.5}
 TOKEN: str | None = None  # GitHub token, set by index.py
 
 
@@ -332,6 +332,7 @@ class Source:
     label = ""  # shown on the page
     origin = ""  # "ai-generated" when the venue declares its papers are
     patterns: list[str] = []
+    stored: frozenset[str] | set[str] = frozenset()  # record ids already indexed, set by harvest, for a source that pays one request per record
 
     def match(self, url: str) -> str | None:
         for p in self.patterns:
@@ -887,6 +888,72 @@ class FormalConjectures(Source):
                     yield rec
 
 
+class OpenProblemGarden(Source):
+    """openproblemgarden.org: a wiki of open problems, mostly graph theory and combinatorics, one record per problem page.
+
+    Its footer distributes the content under the GNU Free Documentation License. The site states no status, so a
+    record is open: it is a garden of open problems. About half of what its listings hold is spam posted as problems;
+    a page is taken only when it names an author or its statement holds a formula, and the spam has neither.
+    """
+
+    name, label = "open-problem-garden", "Open Problem Garden"
+    HOME = "https://www.openproblemgarden.org"
+    patterns = [r"^(?:https?://)?(?:www\.)?openproblemgarden\.org/op/([\w-]+)/?$"]
+    LISTS = ("category/algebra", "category/analysis", "category/combinatorics", "category/geometry", "category/graph_theory", "category/group_theory",
+             "category/logic", "category/number_theory_0", "category/pdes", "category/probability", "category/theoretical_computer_science", "topology", "category/unsorted")
+    SUBJECT = {"Algebra": "math.RA", "Analysis": "math.CA", "Combinatorics": "math.CO", "Geometry": "math.MG", "Graph Theory": "math.CO", "Group Theory": "math.GR",
+               "Logic": "math.LO", "Number Theory": "math.NT", "PDEs": "math.AP", "Probability": "math.PR", "Theoretical Comp. Sci.": "cs.CC", "Topology": "math.GT"}
+    ROW = re.compile(r'view-field-node-title"><a href="/op/([\w-]+)">[^<]*</a></td><td[^>]*>(.*?)</td>', re.S)
+
+    @staticmethod
+    def _cell(page: str, label: str) -> list[str]:
+        """The values in the page's table under a label such as Author(s)."""
+        m = re.search(rf'<span class="label">{re.escape(label)}</span>(.*?)</table>', page, re.S)
+        return [t for t in (clean(c).strip(" »") for c in re.findall(r"<td>(.*?)</td>", m[1], re.S)) if t] if m else []
+
+    def fetch(self, key: str) -> dict[str, Any]:
+        page = get_text(f"{self.HOME}/op/{key}")
+        node, title = re.search(r'<div class="node" id="node-(\d+)"', page), re.search(r'<h1 class="title">(.*?)</h1>', page, re.S)
+        body = re.search(r'<div class="problem">(.*?)<div class="(?:discussion|related|bibliography|links)">', page, re.S)
+        authors = self._cell(page, "Author(s):")
+        if not (node and title and body and (authors or "teximage" in body[1])):
+            raise NotFound(f"{key} is not a problem page")
+        # A formula is an image whose alt text is its TeX, written "$ G $".
+        tex = re.sub(r'<img class="teximage"[^>]*alt="\$\s*(.*?)\s*\$"[^>]*>', lambda m: html.escape(f"${html.unescape(m[1])}$"), body[1], flags=re.S)
+        prize = re.search(r'<span class="label">Prize:</span>\s*([^<]*)', page)
+        problem = {"status": "open", "collection": "open-problem-garden", "number": node[1], "posed_by": [" ".join(reversed(a.split(", ", 1))) for a in authors],
+                   "prize": "" if not prize or clean(prize[1]).lower() in ("none", "no") else clean(prize[1])}
+        return self.entry(
+            key,
+            url=f"{self.HOME}/op/{key}",
+            title=clean(title[1]),
+            summary=trim(tex),
+            domain=self.SUBJECT.get((self._cell(page, "Subject:") or [""])[0], ""),
+            tags=self._cell(page, "Keywords:")[:12],
+            license="GFDL-1.3-or-later",
+            problem={k: v for k, v in problem.items() if v},
+        )
+
+    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
+        """Every listed page that is a problem and not yet indexed. A listing row with neither author nor formula may
+        still be a problem, so it is read; a row already indexed is not."""
+        seen: set[str] = set()
+        for path in self.LISTS:
+            for n in range(100):
+                rows = [key for key, _ in self.ROW.findall(get_text(f"{self.HOME}/{path}?page={n}"))]
+                if not set(rows) - seen:  # past the last page the site serves the first again
+                    break
+                for key in dict.fromkeys(rows):
+                    if key in seen or f"{self.name}/{key}" in self.stored:
+                        continue
+                    seen.add(key)
+                    try:
+                        yield self.fetch(key)
+                    except NotFound:
+                        continue
+                seen.update(rows)
+
+
 class UnsolvedMath(Source):
     """Open problems from the UnsolvedMath dataset (ulamai/UnsolvedMath on Hugging Face), one record per published problem.
 
@@ -1286,7 +1353,7 @@ class Web(Source):
 
 
 # The first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
-SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Cogentic(), YangMillsGroup(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), Qiqc(), UnsolvedMath(), GitHub(), Doi(), Web()]
+SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Cogentic(), YangMillsGroup(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), Qiqc(), OpenProblemGarden(), UnsolvedMath(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 

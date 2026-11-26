@@ -12,6 +12,7 @@ import atexit
 import contextlib
 import io
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -68,6 +69,7 @@ class Detect(unittest.TestCase):
         "https://github.com/google-research/google-research/blob/master/cogentic_research_papers/logrank_conjecture/paper.pdf": ("cogentic", "logrank_conjecture"),
         "https://github.com/google-research/google-research": ("github", "google-research__google-research"),
         "https://github.com/yang-mills-group/OpenAI-QCD-20261104/tree/main/proof": ("yang-mills-group", "OpenAI-QCD-20261104"),
+        "http://www.openproblemgarden.org/op/5_flow_conjecture": ("open-problem-garden", "5_flow_conjecture"),
         "https://blog.example.org/posts/open-chains/": ("web", "blog.example.org__posts-open-chains"),
         "https://www.alpo.ge/remark.pdf": ("web", "alpo.ge__remark"),
     }
@@ -119,6 +121,26 @@ theorem main : True := by sorry
         index.crosslink([paper, problem])
         self.assertEqual((posed["formalizes"][0]["record"], posed["formalizes"][0]["title"], paper["formalized_by"]), ("arxiv/2602.05192", "First Proof", [{"id": problem["id"], "title": posed["title"]}]))
         self.assertIsNone(src._entry("Other/Helpers", "@[category test, AMS 11]\ntheorem t : True := by sorry"))
+
+
+
+class Garden(unittest.TestCase):
+    PAGE = """<h1 class="title"> 5-flow conjecture </h1><div class="node" id="node-126">
+<table><tr><td><span class="label">Author(s):</span></td><td><a href="/category/tutte">Tutte, William T.</a></td></tr></table>
+<table><tr><td><span class="label">Subject:</span></td><td><a href="/category/graph_theory">Graph Theory</a></td></tr><tr><td></td><td> » <a href="/c">Coloring</a></td></tr></table>
+<table><tr><td><span class="label">Prize:</span> none </td></tr></table>
+<div class="problem"><div class="envtheorem"><b>Conjecture</b>&nbsp; Every bridgeless graph <img class="teximage" src="/f.png" alt="$ G $" /> with <img class="teximage" src="/g.png" alt="$ |G| &gt; 1 $" /> has a nowhere-zero 5-flow.</div></div>
+<div class="discussion">Known for 6.</div>"""
+
+    def test_a_problem_page_is_read_and_spam_is_not(self) -> None:
+        src = S.BY_NAME["open-problem-garden"]
+        with patch.object(S, "get_text", return_value=self.PAGE):
+            e = src.fetch("5_flow_conjecture")
+        self.assertEqual((e["summary"], e["domain"], e["license"]), ("Conjecture Every bridgeless graph $G$ with $|G| > 1$ has a nowhere-zero 5-flow.", "math.CO", "GFDL-1.3-or-later"))
+        self.assertEqual(e["problem"], {"status": "open", "collection": "open-problem-garden", "number": "126", "posed_by": ["William T. Tutte"]})
+        spam = re.sub(r"<img[^>]*>", "", self.PAGE).replace("Tutte, William T.", "")
+        with patch.object(S, "get_text", return_value=spam), self.assertRaises(S.NotFound):
+            src.fetch("free_gems")
 
 
 class Aggregated(unittest.TestCase):

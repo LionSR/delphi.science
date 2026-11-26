@@ -88,9 +88,14 @@ class Detect(unittest.TestCase):
 class Problems(unittest.TestCase):
     LEAN = """/-!
 # Conjecture 1.40
+
+On groups of exponent $n < 5$.
+
+*References:*
+- [a book](https://example.org)
 -/
-/-- A helper. -/
-def helper := 1
+/-- Call a group small when it is finite. -/
+noncomputable def small := 1
 
 /-- A partial result. -/
 @[category research solved, AMS 20]
@@ -102,13 +107,13 @@ set_option linter.x false in
 theorem main : True := by sorry
 """
 
-    def test_a_lean_file_becomes_an_open_problem_with_its_own_docstring(self) -> None:
+    def test_a_lean_file_becomes_an_open_problem_stated_with_its_context(self) -> None:
         src = S.BY_NAME["formal-conjectures"]
         e = src._entry("Kourovka/1_40", self.LEAN)
-        self.assertEqual((e["title"], e["summary"], e["domain"]), ("Kourovka Notebook 1.40", "Is every such group a nilgroup?", "math.GR"))
+        self.assertEqual((e["title"], e["summary"], e["domain"]), ("Kourovka Notebook 1.40", "On groups of exponent $n < 5$. Call a group small when it is finite. Is every such group a nilgroup?", "math.GR"))
         self.assertEqual(e["problem"], {"status": "open", "collection": "kourovka", "number": "1.40"})
         posed = src._entry("Arxiv/2602.05192/First", self.LEAN.replace("AMS 20]", 'AMS 20, formal_proof using lean4 at "https://github.com/o/r/blob/main/P.lean"]', 1))
-        self.assertEqual((posed["summary"], posed["formalizations"]), ("", ["https://github.com/o/r/blob/main/P.lean"]))
+        self.assertEqual((posed["summary"], posed["license"], posed["formalizations"]), (e["summary"], "", ["https://github.com/o/r/blob/main/P.lean"]))
         paper = {"id": "arxiv/2602.05192", "title": "First Proof", "url": "https://arxiv.org/abs/2602.05192"}
         problem = {"id": "formal-conjectures/Arxiv__2602.05192__First", "title": posed["title"], "url": posed["url"], "formalizes": posed["formalizes"]}
         index.crosslink([paper, problem])

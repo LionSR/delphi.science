@@ -119,8 +119,8 @@ def _join_pair(m: re.Match[str]) -> str:
 
 
 def clean(text: str | None) -> str:
-    """Collapse whitespace and HTML entities; drop tags."""
-    text = SURROGATE_PAIR.sub(_join_pair, text or "")
+    """Collapse whitespace and HTML entities; drop tags and NUL characters, which Postgres text cannot hold."""
+    text = SURROGATE_PAIR.sub(_join_pair, text or "").replace("\x00", " ")
     text = re.sub(r"<[^>]+>", " ", text)
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
@@ -784,9 +784,11 @@ class FormalConjectures(Source):
     """Open problems and conjectures stated in Lean at google-deepmind/formal-conjectures, one record per file.
 
     A file is taken when it holds a statement tagged `@[category research open]` or `research solved`; the
-    record is open while any such statement is. The statement text is the docstring of the first open one.
+    record is open while any such statement is. The statement text is the docstring of the first open one, after
+    what it relies on: the file's introduction and the docstrings of the definitions above it.
     Docstrings are CC BY 4.0, or CC BY-SA 4.0 where they come from Wikipedia, MathOverflow or the OEIS (README,
-    Licensing). arXiv-based files follow each paper's own licence, so their text is not stored.
+    Licensing). arXiv-based files follow each paper's own licence, so their records name no licence; the statement
+    kept is the file's docstring, a sentence or two that credits and links the paper.
 
     The paper or MathOverflow question a file is named after goes under formalizes, and formal_proof links under
     formalizations: each proves one statement of the file, which settles the problem only when its status is solved.
@@ -809,6 +811,19 @@ class FormalConjectures(Source):
     STATEMENT = re.compile(r"@\[category research (open|solved)\b([^\]]*)\]")
     PROOF = re.compile(r'formal_proof using \w+ at\s+"([^"]+)"')
     DOC = re.compile(r"/--((?:(?!-/).)*)-/\s*(?:set_option [^\n]* in\s*)*$", re.S)  # the docstring that ends right before a statement
+    INTRO = re.compile(r"/-!\s*#[^\n]*\n((?:(?!-/|\*References?:?\*|^#).)*)", re.S | re.M)  # the file's opening text, up to its references
+    DEFINED = re.compile(r"/--((?:(?!-/).)*)-/\s*(?:@\[[^\]]*\]\s*)*(?:(?:noncomputable|private|protected|public)\s+)*(?:def|abbrev|structure|class|inductive)\b", re.S)
+
+    def _statement(self, lean: str, at: int) -> str:
+        """The problem in words: the docstring before position `at`, led by as much of its context as fits a summary."""
+        doc, intro = self.DOC.search(lean[:at]), self.INTRO.search(lean)
+        said = markdown_text(doc[1]) if doc else ""
+        # Escaped text, so < and > in formulas outlast clean(); lengths are close enough for the budget.
+        texts = {clean(t): t for t in map(markdown_text, [intro[1] if intro else "", *self.DEFINED.findall(lean[:at])])}
+        context = [t for c, t in texts.items() if c and c not in clean(said)]
+        while context and sum(len(clean(t)) + 1 for t in context) + len(clean(said)) > SUMMARY_CHARS:
+            context.pop(0)
+        return trim(" ".join([*context, said]))
 
     def key_of(self, m: re.Match[str]) -> str:
         return m[1].replace("/", "__")
@@ -820,7 +835,6 @@ class FormalConjectures(Source):
             return None
         folder, stem = path.split("/")[0], path.rsplit("/", 1)[-1]
         first = next((m for m in found if m[1] == "open"), found[0])
-        doc = self.DOC.search(lean[:first.start()])
         head = re.search(r"^# (.+)$", lean, re.M)
         collection, number = "", ""
         if folder in self.COLLECTIONS:
@@ -836,7 +850,7 @@ class FormalConjectures(Source):
             path.replace("/", "__"),
             url=f"https://github.com/{self.REPO}/blob/main/FormalConjectures/{path}.lean",
             title=title,
-            summary="" if folder == "Arxiv" else trim(doc[1] if doc else ""),
+            summary=self._statement(lean, first.start()),
             domain=TX.FROM_MSC[msc] if msc else "",
             license="" if folder == "Arxiv" else "CC-BY-SA-4.0" if folder in self.SHARE_ALIKE else "CC-BY-4.0",
             repo=f"https://github.com/{self.REPO}",

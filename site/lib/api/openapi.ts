@@ -407,6 +407,7 @@ const core = {
 				number: { type: 'string', description: 'Its label in that list, e.g. 1.40.' },
 				posed_by: { type: 'array', items: { type: 'string' } }, posed: { type: 'integer', description: 'Year it was posed.' },
 				prize: { type: 'string', description: 'Reward, as the source words it.' },
+				source: { type: 'string', description: 'Where the problem is stated in its own collection, when the record comes from a dataset that gathers several.' },
 				same_as: { type: 'array', items: { type: 'string' }, description: 'Record IDs of the same problem in other collections.' },
 			} },
 			Entry: { type: 'object', additionalProperties: false, required: ['key', 'source', 'url', 'title'],

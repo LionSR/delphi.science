@@ -63,6 +63,7 @@ class Detect(unittest.TestCase):
         "10.1038/nature14539": ("doi", "10.1038__nature14539"),
         "https://huggingface.co/datasets/openai/gsm8k": ("huggingface", "datasets__openai__gsm8k"),
         "PALOMAR-2026-10-23-000018": ("palomar", "PALOMAR-2026-10-23-000018"),
+        "https://qiqc-op.com/problem/op_39721600d81c6992/": ("qiqc", "op_39721600d81c6992"),
         "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Kourovka/1_40.lean": ("formal-conjectures", "Kourovka__1_40"),
         "https://github.com/google-research/google-research/blob/master/cogentic_research_papers/logrank_conjecture/paper.pdf": ("cogentic", "logrank_conjecture"),
         "https://github.com/google-research/google-research": ("github", "google-research__google-research"),
@@ -113,6 +114,29 @@ theorem main : True := by sorry
         index.crosslink([paper, problem])
         self.assertEqual((posed["formalizes"][0]["record"], posed["formalizes"][0]["title"], paper["formalized_by"]), ("arxiv/2602.05192", "First Proof", [{"id": problem["id"], "title": posed["title"]}]))
         self.assertIsNone(src._entry("Other/Helpers", "@[category test, AMS 11]\ntheorem t : True := by sorry"))
+
+
+class Aggregated(unittest.TestCase):
+    def test_a_dataset_problem_keeps_its_original_link_and_yields_to_a_listing_from_an_earlier_source(self) -> None:
+        row = {"problem_number": "KOU-1.40", "title": "Kourovka Notebook Problem 1.40", "statement": "Is it a nilgroup?", "status": "partially_solved",
+               "proposed_by": "Sh. S. Kemkhadze", "proposed_year": 1965, "source_url": "https://arxiv.org/abs/1401.0300",
+               "set": {"name": "kourovka_new_problems_21"}, "category": {"display_name": "Group Theory"}, "background": "notes that are not taken"}
+        e = S.BY_NAME["unsolvedmath"]._entry(row)
+        self.assertEqual(e["problem"], {"status": "partial", "collection": "kourovka", "number": "1.40", "posed_by": ["Sh. S. Kemkhadze"], "posed": 1965,
+                                        "source": "https://arxiv.org/abs/1401.0300"})
+        self.assertEqual(S.detect(e["url"])[1], "KOU-1.40")
+        ours, lean = index.to_item(e), {"id": "formal-conjectures/Kourovka__1_40", "source": "formal-conjectures", "problem": {"collection": "kourovka", "number": "1.40"}}
+        other = {"id": "unsolvedmath/KOU-1.41", "source": "unsolvedmath", "problem": {"collection": "kourovka", "number": "1.41"}}
+        self.assertEqual(index.one_per_problem([ours, other, lean]), [other, lean])
+
+
+class Licensed(unittest.TestCase):
+    def test_a_qiqc_statement_is_kept_only_when_its_licence_is_confirmed(self) -> None:
+        p = {"id": "op_39721600d81c6992", "title": "Graph Collision", "status": "Unsolved", "statement": "Does it take fewer queries?", "fields": ["Quantum algorithm"]}
+        src = S.BY_NAME["qiqc"]
+        self.assertEqual((src._entry(p, True)["summary"], src._entry(p, True)["license"]), ("Does it take fewer queries?", "CC-BY-4.0"))
+        bare = src._entry(p, False)
+        self.assertEqual((bare["summary"], bare["license"], bare["problem"]), ("", "", {"status": "open", "collection": "qiqc"}))
 
 
 class Cogentic(unittest.TestCase):

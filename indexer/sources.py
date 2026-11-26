@@ -865,6 +865,117 @@ class FormalConjectures(Source):
                     yield rec
 
 
+class UnsolvedMath(Source):
+    """Open problems from the UnsolvedMath dataset (ulamai/UnsolvedMath on Hugging Face), one record per published problem.
+
+    The dataset gathers named lists (Oberwolfach reports, AIM workshop lists, the Kourovka Notebook, Kirby's list, Open
+    Problem Garden and others). Its statuses and its reworded statements are partly machine-made (README, "machine-generated
+    research aids"), so a record says it comes from UnsolvedMath and links the original where the dataset names one. The
+    dataset's notes and literature reviews are not taken. Its card licenses the curation CC BY 4.0; source material
+    keeps its own terms.
+    """
+
+    name, label = "unsolvedmath", "UnsolvedMath"
+    DATA = "https://huggingface.co/datasets/ulamai/UnsolvedMath"
+    # The dataset has no page per problem, so a record's address is the dataset's with the problem's number.
+    patterns = [r"^(?:https?://)?huggingface\.co/datasets/ulamai/UnsolvedMath\?problem=([\w.+-]+)$"]
+    SKIP = ("erdos_problems",)  # erdosproblems.com reserves its content; needs its owner's permission
+    STATUS = {"open": "open", "partially_solved": "partial", "solved": "solved"}
+    # The dataset's sets, under the collection names other sources use for the same lists.
+    COLLECTIONS = {
+        "green_problems": "green", "hilbert_problems": "hilbert", "kourovka_new_problems_21": "kourovka", "millennium_prize": "millennium",
+        "aim_workshop_problem_lists": "aim", "oberwolfach_reports_open_problems": "oberwolfach", "amr_open_problem_lists": "amr",
+        "kirby_low_dimensional_topology": "kirby", "opengarden": "open-problem-garden", "smale_problems": "smale", "landau_problems": "landau",
+        "darpa_challenges": "darpa", "guy_prime_numbers": "guy", "hardy_littlewood_conjectures": "hardy-littlewood",
+    }
+
+    @functools.cache
+    def _problems(self) -> dict[str, dict[str, Any]]:
+        """Every published problem by its number, from one file of about 80 MB."""
+        rows = get_json(f"{self.DATA}/resolve/main/problems.json")
+        return {p["problem_number"]: p for p in rows if p.get("published") and (p.get("set") or {}).get("name") not in self.SKIP}
+
+    def _entry(self, p: dict[str, Any]) -> dict[str, Any]:
+        number = p["problem_number"]
+        collection = self.COLLECTIONS.get((p.get("set") or {}).get("name") or "", "")
+        label = number.partition("-")[2]
+        by = clean(p.get("proposed_by"))
+        problem = {
+            "status": self.STATUS.get(p.get("status") or ""), "collection": collection,
+            "number": (label.lstrip("0") or "0" if label.isdigit() else label) if collection else "",
+            "posed_by": [by] if by and "\\" not in by else [], "posed": p.get("proposed_year") if isinstance(p.get("proposed_year"), int) else None,
+            "source": p.get("source_url") or "",
+        }
+        return self.entry(
+            number,
+            url=f"{self.DATA}?problem={number}",
+            title=clean(p.get("title")),
+            summary=trim(p.get("statement")),
+            domain=((p.get("category") or {}).get("display_name") or "").lower(),
+            license="CC-BY-4.0",
+            problem={k: v for k, v in problem.items() if v},
+        )
+
+    def fetch(self, key: str) -> dict[str, Any]:
+        if key not in self._problems():
+            raise NotFound(key)
+        return self._entry(self._problems()[key])
+
+    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
+        for p in self._problems().values():
+            if clean(p.get("title")):
+                yield self._entry(p)
+
+
+class Qiqc(Source):
+    """qiqc-op.com: the Quantum Information and Quantum Computation Open Problem Zoo, a catalog kept by named researchers.
+
+    Its catalog text is CC BY 4.0 only for the records its LICENSING.md lists as confirmed by their authors; earlier
+    text waits for that. So a record keeps its statement only when the file lists it, and is otherwise title, status,
+    fields and link.
+    """
+
+    name, label = "qiqc", "QIQCOP Zoo"
+    HOME = "https://qiqc-op.com"
+    LICENSING = "https://raw.githubusercontent.com/Naixu-Guo/quantum-open-problems/main/LICENSING.md"
+    patterns = [r"^(?:https?://)?qiqc-op\.com/problem/(op_[0-9a-f]{16})(?:/.*)?$", r"^(op_[0-9a-f]{16})$"]
+    STATUS = {"Unsolved": "open", "Solved": "solved"}
+
+    @functools.cache
+    def _catalog(self) -> tuple[dict[str, dict[str, Any]], frozenset[str]]:
+        """Every problem by id, and the ids whose text the licensing file says is confirmed CC BY 4.0."""
+        problems = {p["id"]: p for p in get_json(f"{self.HOME}/api/index.json")["problems"]}
+        return problems, frozenset(re.findall(r"problems_json/(op_[0-9a-f]{16})\.json", get_text(self.LICENSING)))
+
+    def _entry(self, p: dict[str, Any], licensed: bool) -> dict[str, Any]:
+        posed = (p.get("metadata") or {}).get("posed")
+        return self.entry(
+            p["id"],
+            url=p.get("url") or f"{self.HOME}/problem/{p['id']}/",
+            json=p.get("json") or "",
+            title=clean(p.get("title")),
+            summary=trim(p.get("statement")) if licensed else "",
+            domain="quant-ph",
+            tags=[*(p.get("fields") or []), *(p.get("topics") or [])][:10],
+            updated=iso_date(p.get("updated")),
+            license="CC-BY-4.0" if licensed else "",
+            problem={k: v for k, v in (("status", self.STATUS.get(p.get("status") or "")), ("collection", "qiqc"),
+                                       ("posed", int(posed) if str(posed or "").isdigit() else None)) if v},
+        )
+
+    def fetch(self, key: str) -> dict[str, Any]:
+        problems, licensed = self._catalog()
+        if key not in problems:
+            raise NotFound(key)
+        return self._entry(problems[key], key in licensed)
+
+    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
+        problems, licensed = self._catalog()
+        for key, p in problems.items():
+            if clean(p.get("title")):
+                yield self._entry(p, key in licensed)
+
+
 class AnthropicScience(Source):
     """anthropic.com/science: Anthropic's posts on research done with Claude."""
 
@@ -1153,7 +1264,7 @@ class Web(Source):
 
 
 # The first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
-SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Cogentic(), YangMillsGroup(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), GitHub(), Doi(), Web()]
+SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Cogentic(), YangMillsGroup(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), Qiqc(), UnsolvedMath(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 

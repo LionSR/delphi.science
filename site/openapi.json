@@ -3457,6 +3457,10 @@
 						"type": "string",
 						"description": "Reward, as the source words it."
 					},
+					"source": {
+						"type": "string",
+						"description": "Where the problem is stated in its own collection, when the record comes from a dataset that gathers several."
+					},
 					"same_as": {
 						"type": "array",
 						"items": {

@@ -69,6 +69,8 @@ FROM_NAME = {
     "climate research": "physics.ao-ph", "education and didactics": "physics.ed-ph", "history and philosophy of physics": "physics.hist-ph",
     "thermodynamics and energy": "physics.class-ph", "nuclear and atomic physics": "nucl-th", "functions and analysis": "math.CA",
     "set theory and logic": "math.LO", "mind science": "q-bio.NC", "linguistics": "cs.CL", "physics of biology": "physics.bio-ph",
+    "analysis": "math.CA", "graph theory": "math.CO", "set theory": "math.LO", "logic": "math.LO", "dynamical systems": "math.DS",
+    "computer science": "cs.CC", "algebraic geometry": "math.AG", "probability": "math.PR",
     "high-energy-theory": "hep-th", "quantum-information": "quant-ph", "condensed-matter-physics": "cond-mat",
     "condensed-matter physics": "cond-mat", "mechanistic-interpretability": "cs.LG", "scientific-publication": "cs.DL",
 }

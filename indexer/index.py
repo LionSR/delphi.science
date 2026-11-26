@@ -187,6 +187,7 @@ def harvest(only: str | None, limit: int | None, dry_run: bool) -> int:
         if (only and job["source"] != only) or not job.get("enabled", True):
             continue
         name, src = job["name"], S.BY_NAME[job["source"]]
+        src.stored = known  # for a source that pays one request per record
         new: list[tuple[str, dict[str, Any]]] = []
         n_seen = 0
         try:

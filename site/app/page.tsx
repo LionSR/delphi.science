@@ -3,7 +3,7 @@
 // newest first, with a line where they left off.
 import { db } from '#lib/db.ts';
 import { QueryError } from '#lib/errors.ts';
-import { search, sourceCounts } from '#lib/records/query.ts';
+import { divisionCounts, search, sourceCounts } from '#lib/records/query.ts';
 import { DIVISIONS } from '#lib/records/taxonomy.ts';
 import { me } from '#lib/accounts/session.ts';
 import { date, original, recordPath, source, tally, tex } from '#lib/view.ts';
@@ -95,13 +95,17 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	// The global list keeps its feed in its links once it was asked for by name, so paging and ordering stay in it.
 	const feed = params.feed === 'global' ? 'global' : '';
 	// A query error the reader can fix is shown with its fix. Source counts load in parallel with search.
-	const [found, sources] = await Promise.all([
+	const [found, sources, divisions] = await Promise.all([
 		search(d, q, { sort, page, limit: PAGE_SIZE }).then((res) => ({ res, error: '' }), (e) => {
 			if (!(e instanceof QueryError)) throw e;
 			return { res: null, error: `${e.message}. ${e.fix}` };
 		}),
 		sourceCounts(d),
+		divisionCounts(d),
 	]);
+	// The subjects the index really covers: a division with under 1% of the classified records is not offered as a filter.
+	const classified = divisions.reduce((n, r) => n + r.n, 0);
+	const subjects = divisions.filter((r) => r.n * 100 >= classified).flatMap((r) => DIVISIONS.filter((d) => d.key === r.division).map((d) => ({ ...d, n: r.n })));
 	const { res, error } = found;
 	const mine = person && res?.results.length ? await myVotes(d, person.login, res.results.map((r) => String(r.id))) : new Map();
 	const here = pageHref('/', { feed, q, sort }, page);
@@ -128,7 +132,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 				<div className="filter-row">
 					<span className="filter-label">Subjects</span>
 					<nav className="subjects" aria-label="Subjects">
-						{DIVISIONS.map((d) => <a key={d.key} href={`/?q=cat:${d.key}`}>{d.name}</a>)}
+						{subjects.map((d) => <a key={d.key} href={`/?q=cat:${d.key}`}>{d.name} <span className="n">{d.n.toLocaleString('en')}</span></a>)}
 					</nav>
 				</div>
 				<div className="filter-row">

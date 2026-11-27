@@ -1,7 +1,7 @@
 // Votes on records: up/down, an emoji, or both, with an optional note.
 import { refuseKeys, type Voter } from '#lib/accounts/keys.ts';
 import { screen, type Moderator } from '#lib/moderation/moderate.ts';
-import { NotFoundError, QueryError } from '#lib/errors.ts';
+import { CodedError, NotFoundError, QueryError } from '#lib/errors.ts';
 import type { Db } from '#lib/db.ts';
 
 export type Vote = { value?: 1 | -1; emoji?: string; note?: string; ifAbsent?: boolean };
@@ -38,7 +38,12 @@ export async function vote(db: Db, recordId: string, voter: Voter, v: Vote, mode
 		 ON CONFLICT (record_id, voter) ${ifAbsent ? 'DO NOTHING' : `DO UPDATE SET agent = excluded.agent, value = excluded.value,
 		   emoji = excluded.emoji, note = excluded.note, at = now()`} RETURNING record_id`,
 		[recordId, voter.login, voter.agent, v.value ?? null, v.emoji ?? null, note || null],
-	);
+	).catch((error: unknown) => {
+		if (error instanceof Error && 'code' in error && error.code === 'DV001') {
+			throw new CodedError(429, 'daily_vote_budget_reached', 'This account has reached its daily record upvote limit.', 'Try again after midnight in your voting timezone.');
+		}
+		throw error;
+	});
 	const result = await tally(db, recordId);
 	return ifAbsent ? { ...result, created: inserted.rows.length === 1 } : result;
 }

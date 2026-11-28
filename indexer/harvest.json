@@ -39,6 +39,7 @@
     { "name": "arxiv-math-2026-12a", "source": "arxiv", "query": "cat:math* AND submittedDate:[202612010000 TO 202612152359]", "limit": 10000 },
     { "name": "arxiv-math-2026-12b", "source": "arxiv", "query": "cat:math* AND submittedDate:[202612160000 TO 202612312359]", "limit": 10000 },
     { "name": "qiqc", "source": "qiqc", "limit": 1000 },
+    { "name": "iqoqi-oqp", "source": "iqoqi-oqp", "limit": 250 },
     { "name": "open-problem-garden", "source": "open-problem-garden", "limit": 2000 },
     { "name": "unsolvedmath", "source": "unsolvedmath", "limit": 20000 },
     { "name": "formal-conjectures", "source": "formal-conjectures", "limit": 2000 },

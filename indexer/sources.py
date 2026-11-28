@@ -1016,6 +1016,66 @@ class UnsolvedMath(Source):
                 yield self._entry(p)
 
 
+class IqoqiOqp(Source):
+    """IQOQI Vienna's Open Quantum Problems. Only listing metadata is indexed."""
+
+    name, label = "iqoqi-oqp", "IQOQI Vienna Open Quantum Problems"
+    HOME = "https://oqp.iqoqi.oeaw.ac.at"
+    LISTS = (("open", "open-quantum-problems", 1), ("solved", "solved-quantum-problems", 2))
+    patterns = [r"^(?:https?://)?oqp\.iqoqi\.oeaw\.ac\.at/([a-z0-9-]+)/?(?:[?#].*)?$"]
+
+    def match(self, url: str) -> str | None:
+        key = super().match(url)
+        return None if key in ("open-quantum-problems", "solved-quantum-problems", "contact", "team", "forum", "forums", "register") else key
+
+    def _listing(self, status: str, path: str, table_id: int) -> Iterator[dict[str, Any]]:
+        page = get_text(f"{self.HOME}/{path}")
+        table = re.search(rf'<table\b[^>]*\bid="tablepress-{table_id}"[^>]*>(.*?)</table>', page, re.S)
+        if not table:
+            raise SourceError(f"{self.name}: cannot find the {status} problem table")
+        for row in re.findall(r"<tr\b[^>]*>(.*?)</tr>", table[1], re.S):
+            cells = re.findall(r"<td\b[^>]*>(.*?)</td>", row, re.S)
+            if not cells:  # column headings
+                continue
+            if len(cells) != (6 if status == "open" else 7):
+                raise SourceError(f"{self.name}: unexpected columns in the {status} problem table")
+            number, title = map(clean, cells[:2])
+            link = re.search(r'<a\b[^>]*\bhref="([^"]+)"', cells[1])
+            url = urllib.parse.urljoin(self.HOME, html.unescape(link[1])) if link else ""
+            key = self.match(url)
+            if not number.isascii() or not number.isdecimal() or not title or not key:
+                raise SourceError(f"{self.name}: malformed row in the {status} problem table")
+            yield self.entry(
+                key, url=f"{self.HOME}/{key}/", title=title, summary="", license="", domain="quant-ph",
+                tags=[clean(cells[-1])] if clean(cells[-1]) else [],
+                problem={"status": status, "collection": self.name, "number": number},
+            )
+
+    @functools.cache
+    def _catalog(self) -> dict[str, dict[str, Any]]:
+        records, numbers = {}, set()
+        for status, path, table_id in self.LISTS:
+            rows = list(self._listing(status, path, table_id))
+            if not rows:
+                raise SourceError(f"{self.name}: empty {status} problem table")
+            for rec in rows:
+                key, number = rec["key"], rec["problem"]["number"]
+                if key in records or number in numbers:
+                    raise SourceError(f"{self.name}: duplicate problem {number} ({key})")
+                records[key] = rec
+                numbers.add(number)
+        return records
+
+    def fetch(self, key: str) -> dict[str, Any]:
+        entry = self._catalog().get(key)
+        if entry is None:
+            raise NotFound(key)
+        return entry
+
+    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
+        yield from list(self._catalog().values())[:limit]
+
+
 class Qiqc(Source):
     """qiqc-op.com: the Quantum Information and Quantum Computation Open Problem Zoo, a catalog kept by named researchers.
 
@@ -1353,7 +1413,7 @@ class Web(Source):
 
 
 # The first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
-SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Cogentic(), YangMillsGroup(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), Qiqc(), OpenProblemGarden(), UnsolvedMath(), GitHub(), Doi(), Web()]
+SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Cogentic(), YangMillsGroup(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), FormalConjectures(), Qiqc(), IqoqiOqp(), OpenProblemGarden(), UnsolvedMath(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 

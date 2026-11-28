@@ -64,6 +64,7 @@ class Detect(unittest.TestCase):
         "10.1038/nature14539": ("doi", "10.1038__nature14539"),
         "https://huggingface.co/datasets/openai/gsm8k": ("huggingface", "datasets__openai__gsm8k"),
         "PALOMAR-2026-10-23-000018": ("palomar", "PALOMAR-2026-10-23-000018"),
+        "https://oqp.iqoqi.oeaw.ac.at/undistillability-implies-ppt/?ref=example": ("iqoqi-oqp", "undistillability-implies-ppt"),
         "https://qiqc-op.com/problem/op_39721600d81c6992/": ("qiqc", "op_39721600d81c6992"),
         "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Kourovka/1_40.lean": ("formal-conjectures", "Kourovka__1_40"),
         "https://github.com/google-research/google-research/blob/master/cogentic_research_papers/logrank_conjecture/paper.pdf": ("cogentic", "logrank_conjecture"),
@@ -155,6 +156,47 @@ class Aggregated(unittest.TestCase):
         ours, lean = index.to_item(e), {"id": "formal-conjectures/Kourovka__1_40", "source": "formal-conjectures", "problem": {"collection": "kourovka", "number": "1.40"}}
         other = {"id": "unsolvedmath/KOU-1.41", "source": "unsolvedmath", "problem": {"collection": "kourovka", "number": "1.41"}}
         self.assertEqual(index.one_per_problem([ours, other, lean]), [other, lean])
+
+
+class IqoqiOpenProblems(unittest.TestCase):
+    @staticmethod
+    def list_page(table: int, *rows: tuple[str, str, str]) -> str:
+        body = "".join(f'<tr><td>{num}</td><td><a href="/{slug}/">{title}</a></td>'
+                       '<td>A Contact</td><td>2000/03/02</td><td>-</td>'
+                       + ('<td>A Solver</td>' if table == 2 else '')
+                       + '<td>Quantum information</td></tr>' for num, slug, title in rows)
+        return f'<table id="tablepress-{table}"><tr><th>Nr</th></tr>{body}</table><p>Not indexed</p>'
+
+    def setUp(self) -> None:
+        self.source = S.IqoqiOqp()
+        self.pages = {
+            S.IqoqiOqp.HOME + "/open-quantum-problems": self.list_page(1, ("2", "test-open", "A &amp; B")),
+            S.IqoqiOqp.HOME + "/solved-quantum-problems": self.list_page(2, ("3", "test-solved", "Solved example")),
+        }
+
+    def test_listing_metadata_only_and_status_refresh_keeps_id(self) -> None:
+        with patch.object(S, "get_text", side_effect=self.pages.__getitem__) as read:
+            records = list(self.source.harvest(None, 50))
+            self.assertEqual(self.source.fetch("test-open"), records[0])
+            self.assertEqual(list(self.source.harvest(None, 1)), records[:1])
+        self.assertEqual(read.call_count, 2)
+        e = records[0]
+        self.assertEqual((e["title"], e["domain"], e["summary"], e["license"], e["tags"]),
+                         ("A & B", "quant-ph", "", "", ["Quantum information"]))
+        self.assertEqual(e["problem"], {"status": "open", "collection": "iqoqi-oqp", "number": "2"})
+        self.assertEqual(records[1]["problem"]["status"], "solved")
+        self.assertIsNone(self.source.match(S.IqoqiOqp.HOME + "/open-quantum-problems"))
+        self.pages[S.IqoqiOqp.HOME + "/open-quantum-problems"] = self.list_page(1, ("4", "new-open", "New"))
+        self.pages[S.IqoqiOqp.HOME + "/solved-quantum-problems"] = self.list_page(2, ("2", "test-open", "A &amp; B"))
+        with patch.object(S, "get_text", side_effect=self.pages.__getitem__):
+            updated = S.IqoqiOqp().refetch(e)
+        self.assertEqual(index.rid(updated), index.rid(e))
+        self.assertEqual(updated["problem"]["status"], "solved")
+
+    def test_missing_listing_is_not_treated_as_missing_problem(self) -> None:
+        self.pages[S.IqoqiOqp.HOME + "/open-quantum-problems"] = "<html>Service unavailable</html>"
+        with patch.object(S, "get_text", side_effect=self.pages.__getitem__), self.assertRaises(S.SourceError):
+            self.source.fetch("test-open")
 
 
 class Licensed(unittest.TestCase):
